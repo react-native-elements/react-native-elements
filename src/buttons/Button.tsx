@@ -33,7 +33,6 @@ export type ButtonProps = TouchableOpacityProps &
   TouchableNativeFeedbackProps & {
     title?: string | React.ReactElement<{}>;
     titleStyle?: StyleProp<TextStyle>;
-
     titleProps?: TextProps;
     buttonStyle?: StyleProp<ViewStyle>;
     type?: 'solid' | 'clear' | 'outline';
@@ -169,7 +168,8 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
             styles.button,
             styles.buttonOrientation,
             {
-              flexDirection: positionStyle[iconPosition] || 'row',
+              flexDirection:
+                positionStyle[iconRight ? 'right' : iconPosition] || 'row',
             },
             {
               backgroundColor:
@@ -199,10 +199,8 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
               {...loadingProps}
             />
           )}
-
           {!loading &&
             icon &&
-            !iconRight &&
             renderNode(Icon, icon, {
               containerStyle: StyleSheet.flatten([
                 styles.iconContainer,
@@ -215,16 +213,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
             renderNode(Text, title, {
               style: titleStyle,
               ...titleProps,
-            })}
-
-          {!loading &&
-            icon &&
-            (iconRight || iconPosition) &&
-            renderNode(Icon, icon, {
-              containerStyle: StyleSheet.flatten([
-                styles.iconContainer,
-                iconContainerStyle,
-              ]),
             })}
         </ViewComponent>
       </TouchableComponentInternal>
