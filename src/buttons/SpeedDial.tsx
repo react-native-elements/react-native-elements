@@ -32,6 +32,7 @@ export type SpeedDialProps = {
   onOpen: () => void;
   onClose: () => void;
   openIcon?: IconNode;
+  overlayColor?: string;
   children?: React.ReactChild[];
   transitionDuration?: number;
 } & FABProps;
@@ -46,6 +47,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   children,
   transitionDuration = 150,
   style,
+  overlayColor,
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
@@ -77,10 +79,9 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
             StyleSheet.absoluteFillObject,
             {
               opacity: animations.current[0],
-              backgroundColor: Color(theme?.colors?.black)
-                .alpha(0.6)
-                .rgb()
-                .toString(),
+              backgroundColor:
+                overlayColor ||
+                Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
             },
           ]}
           pointerEvents={isOpen ? 'auto' : 'none'}

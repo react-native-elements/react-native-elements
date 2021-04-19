@@ -4,7 +4,8 @@
 - [`color`](#color)
 - [`size`](#size)
 - [`visible`](#visible)
-- [`upperCase`](#upperCase)
+- [`upperCase`](#uppercase)
+- [`overlayColor`](#overlaycolor)
 
 ---
 
@@ -55,5 +56,15 @@ Transform Extended Label text to uppercase
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean | `false` |
+
+---
+
+### `overlayColor`
+
+Color of background overlay
+
+|     Type     |  Default  |
+| :----------: | :-------: |
+| color string | `#454545` |
 
 ---
