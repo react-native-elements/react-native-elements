@@ -75,11 +75,7 @@ const AvatarComponent: Avatar = ({
   ...attributes
 }: React.PropsWithChildren<AvatarProps>) => {
   let width = avatarSizes.small;
-  if (typeof size === 'number') {
-    width = size;
-  } else {
-    width = avatarSizes[size];
-  }
+  width = typeof size === 'number' ? size : avatarSizes[size];
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
