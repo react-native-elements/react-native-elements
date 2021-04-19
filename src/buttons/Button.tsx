@@ -135,13 +135,12 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     disabled: !!disabled,
     busy: !!loading,
   };
-  const positionStyle =
-    {
-      top: 'column',
-      bottom: 'column-reverse',
-      left: 'row',
-      right: 'row-reverse',
-    } || 'column';
+  const positionStyle = {
+    top: 'column',
+    bottom: 'column-reverse',
+    left: 'row',
+    right: 'row-reverse',
+  };
 
   return (
     <View
@@ -169,7 +168,11 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
           style={StyleSheet.flatten([
             styles.button,
             styles.buttonOrientation,
-            { flexDirection: positionStyle[iconPosition] },
+            {
+              flexDirection: iconPosition
+                ? positionStyle[iconPosition]
+                : 'column',
+            },
             {
               backgroundColor:
                 type === 'solid' ? theme?.colors?.primary : 'transparent',
