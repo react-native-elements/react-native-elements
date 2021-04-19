@@ -70,7 +70,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   }, [isOpen, animations, children, transitionDuration]);
 
   return (
-    <View style={[styles.container, style]}>
+    <View style={[styles.container, style]} pointerEvents="box-none">
       <TouchableWithoutFeedback onPress={onClose}>
         <Animated.View
           style={[
