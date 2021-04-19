@@ -51,6 +51,7 @@ export type ButtonProps = TouchableOpacityProps &
     disabledStyle?: StyleProp<ViewStyle>;
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
+    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
   };
 
 const Button: RneFunctionComponent<ButtonProps> = (props) => {
@@ -84,6 +85,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     linearGradientProps,
     ViewComponent = View,
     theme,
+    iconPosition = 'left',
     ...attributes
   } = props;
 
@@ -133,6 +135,12 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     disabled: !!disabled,
     busy: !!loading,
   };
+  const positionStyle = {
+    top: 'column',
+    bottom: 'column-reverse',
+    left: 'row',
+    right: 'row-reverse',
+  };
 
   return (
     <View
@@ -159,6 +167,10 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
           {...linearGradientProps}
           style={StyleSheet.flatten([
             styles.button,
+            styles.buttonOrientation,
+            {
+              flexDirection: positionStyle[iconPosition] || 'row',
+            },
             {
               backgroundColor:
                 type === 'solid' ? theme?.colors?.primary : 'transparent',
@@ -207,7 +219,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
 
           {!loading &&
             icon &&
-            iconRight &&
+            (iconRight || iconPosition) &&
             renderNode(Icon, icon, {
               containerStyle: StyleSheet.flatten([
                 styles.iconContainer,
@@ -223,6 +235,12 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
 const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 3,
+    padding: 8,
+  },
+  buttonOrientation: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,
