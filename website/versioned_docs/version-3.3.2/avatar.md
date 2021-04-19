@@ -163,7 +163,7 @@ import { Avatar, ListItem } from 'react-native-elements';
   />
   <ListItem.Content>
     <ListItem.Title>{name}</ListItem.Title>
-    <ListItem.SubTitle>{role}</ListItem.Subtitle>
+    <ListItem.SubTitle>{role}</ListItem.SubTitle>
   </ListItem.Content>
   <ListItem.Chevron/>
 />;
