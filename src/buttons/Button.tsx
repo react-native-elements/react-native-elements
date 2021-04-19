@@ -169,7 +169,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
             styles.button,
             styles.buttonOrientation,
             {
-              flexDirection: positionStyle[iconPosition],
+              flexDirection: positionStyle[iconPosition] || 'row',
             },
             {
               backgroundColor:
