@@ -9,6 +9,14 @@ module.exports = function () {
         module: {
           rules: [
             {
+              test: /\.(ttf)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                },
+              ],
+            },
+            {
               test: /\.m?js$/,
               use: [
                 getBabelLoader(isServer, {
