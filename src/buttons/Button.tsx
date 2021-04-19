@@ -135,12 +135,13 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     disabled: !!disabled,
     busy: !!loading,
   };
-  const positionStyle = {
-    top: 'column',
-    bottom: 'column-reverse',
-    left: 'row',
-    right: 'row-reverse',
-  };
+  const positionStyle =
+    {
+      top: 'column',
+      bottom: 'column-reverse',
+      left: 'row',
+      right: 'row-reverse',
+    } || 'column';
 
   return (
     <View
