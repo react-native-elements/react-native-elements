@@ -93,6 +93,40 @@ exports[`Avatar Component Placeholders renders using icon with defaults 1`] = `
 </View>
 `;
 
+exports[`Avatar Component Placeholders renders using image with imageProps 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
+    }
+  }
+>
+  <ForwardRef(Themed.Image)
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": undefined,
+        "width": undefined,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`Avatar Component Placeholders shouldn't show placeholder if not using source 1`] = `
 <View
   style={
@@ -386,6 +420,40 @@ exports[`Avatar Component Sizes accepts xlarge 1`] = `
       "backgroundColor": "transparent",
       "height": 150,
       "width": 150,
+    }
+  }
+>
+  <ForwardRef(Themed.Image)
+    ImageComponent={[Function]}
+    containerStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+    placeholderStyle={Object {}}
+    source={
+      Object {
+        "uri": "https://i.imgur.com/0y8Ftya.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": undefined,
+        "width": undefined,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Avatar Component Sizes default 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "height": 34,
+      "width": 34,
     }
   }
 >
