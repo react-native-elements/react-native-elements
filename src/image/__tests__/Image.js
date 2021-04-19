@@ -70,6 +70,10 @@ describe('Image Component', () => {
       <Image
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
         style={{ tintColor: 'red' }}
+        childrenContainerStyle={{
+          borderWidth: 1,
+          borderColor: 'red',
+        }}
       />
     );
     expect(component.find({ testID: 'RNE__Image' }).props().style).toEqual(
@@ -77,6 +81,17 @@ describe('Image Component', () => {
         tintColor: 'red',
       })
     );
+
+    expect(
+      component.find({ testID: 'RNE__Image__children__container' }).props()
+        .style
+    ).toEqual(
+      expect.objectContaining({
+        borderWidth: 1,
+        borderColor: 'red',
+      })
+    );
+
     expect(toJson(component)).toMatchSnapshot();
   });
 

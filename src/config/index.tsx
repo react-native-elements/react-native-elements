@@ -1,5 +1,5 @@
 import BackgroundImage from './BackgroundImage';
-import colors from './colors';
+import colors, { Colors } from './colors';
 import colorsDark from './colorsDark';
 import fonts from './fonts';
 import ThemeProvider, {
@@ -24,4 +24,4 @@ export {
   makeStyles,
 };
 
-export type { Theme, FullTheme, UpdateTheme, ReplaceTheme, ThemeProps };
+export type { Theme, FullTheme, UpdateTheme, ReplaceTheme, ThemeProps, Colors };

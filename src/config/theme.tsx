@@ -23,6 +23,12 @@ import { TextProps } from '../text/Text';
 import { TileProps } from '../tile/Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
 import { SwitchProps } from '../switch/switch';
+import { ListItemAccordionProps } from '../list/ListItemAccordion';
+import { TabItemProps, TabProps } from '../tab/tab';
+import { FABProps } from '../buttons/FAB';
+import { SpeedDialProps, SpeedDialActionProps } from '../buttons/SpeedDial';
+import { LinearProgressProps } from '../linearProgress';
+
 import colors, { Colors } from './colors';
 
 export default {
@@ -33,7 +39,7 @@ type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface FullTheme {
   Avatar: Partial<AvatarProps>;
-  Accessory: Partial<AccessoryProps>;
+  AvatarAccessory: Partial<AccessoryProps>;
   Badge: Partial<BadgeProps>;
   BottomSheet: Partial<BottomSheetProps>;
   Button: Partial<ButtonProps>;
@@ -51,6 +57,7 @@ export interface FullTheme {
   Image: Partial<ImageProps>;
   Input: Partial<InputProps>;
   ListItem: Partial<ListItemProps>;
+  ListItemAccordion: Partial<ListItemAccordionProps>;
   ListItemButtonGroup: Partial<ButtonGroupProps>;
   ListItemCheckBox: Partial<CheckBoxProps>;
   ListItemContent: Partial<ViewProps>;
@@ -70,6 +77,12 @@ export interface FullTheme {
   Switch: Partial<SwitchProps>;
   Tooltip: Partial<TooltipProps>;
   colors: RecursivePartial<Colors>;
+  Tab: Partial<TabProps>;
+  TabItem: Partial<TabItemProps>;
+  FAB: Partial<FABProps>;
+  SpeedDial: Partial<SpeedDialProps>;
+  SpeedDialAction: Partial<SpeedDialActionProps>;
+  LinearProgress: Partial<LinearProgressProps>;
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;
