@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   Platform,
   StyleProp,
@@ -111,37 +111,31 @@ type PadViewProps = {
   pad: number;
 };
 
-class PadView extends React.Component<PadViewProps> {
-  _root!: React.RefObject<PadView>;
+const PadView: React.FC<PadViewProps> = ({
+  children,
+  pad,
+  Component,
+  ...props
+}) => {
+  const _root = useRef(null);
 
-  constructor(props: PadViewProps) {
-    super(props);
-    this._root = React.createRef();
-  }
+  const childrens = React.Children.toArray(children);
+  const { length } = childrens;
+  const Container = Component || View;
 
-  setNativeProps = (nativeProps: any) => {
-    this._root.current!.setNativeProps(nativeProps);
-  };
-
-  render() {
-    const { children, pad, Component, ...props } = this.props;
-    const childrens = React.Children.toArray(children);
-    const { length } = childrens;
-    const Container = Component || View;
-    return (
-      <Container {...props} ref={this._root} testID="padView">
-        {React.Children.map(
-          childrens,
-          (child, index) =>
-            child && [
-              child,
-              index !== length - 1 && <View style={{ paddingLeft: pad }} />,
-            ]
-        )}
-      </Container>
-    );
-  }
-}
+  return (
+    <Container {...props} ref={_root} testID="padView">
+      {React.Children.map(
+        childrens,
+        (child, index) =>
+          child && [
+            child,
+            index !== length - 1 && <View style={{ paddingLeft: pad }} />,
+          ]
+      )}
+    </Container>
+  );
+};
 
 export { ListItem };
 
@@ -155,4 +149,5 @@ const ThemedListItem = Object.assign(withTheme(ListItem, 'ListItem'), {
   CheckBox: ListItemCheckBox,
   ButtonGroup: ListItemButtonGroup,
 });
+
 export default ThemedListItem;
