@@ -10,6 +10,7 @@ import {
   StyleProp,
   StyleSheet,
   ColorValue,
+  Platform,
 } from 'react-native';
 import { withTheme } from '../config';
 import { ThemeProps } from '../config';
@@ -279,7 +280,12 @@ class Tooltip extends React.Component<
               yOffset:
                 isIOS || skipAndroidStatusBar
                   ? pageOffsetY
-                  : pageOffsetY - (StatusBar.currentHeight || 28),
+                  : pageOffsetY -
+                    Platform.select({
+                      android: StatusBar.currentHeight,
+                      ios: 20,
+                      default: 0,
+                    }),
               elementWidth: width,
               elementHeight: height,
             });
