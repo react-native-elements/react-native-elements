@@ -73,6 +73,15 @@ describe('ThemeProvider', () => {
     });
   });
 
+  it('should contain useDark key with value true', () => {
+    const component = shallow(
+      <ThemeProvider useDark={true}>
+        <View />
+      </ThemeProvider>
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should retain custom theme when switching between light / dark mode', () => {
     const customTheme = { colors: { primary: 'cyan' } };
     const component = shallow(
