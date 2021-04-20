@@ -20,11 +20,16 @@ import { Tab } from 'react-native-elements';
 ```
 
 ```js
-<Tab>
-  <Tab.Item title="Recent" />
+<Tab value={0}>
+  <Tab.Item title="recent" />
   <Tab.Item title="favourite" />
   <Tab.Item title="cart" />
 </Tab>
+<Tab.Panel value={0}>
+  <Tab.View/>
+  <Tab.View/>
+  <Tab.View/>
+</Tab.Panel>
 ```
 
 ---
