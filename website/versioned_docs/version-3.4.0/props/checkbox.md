@@ -5,7 +5,7 @@
 - [`checkedColor`](#checkedcolor)
 - [`checkedIcon`](#checkedicon)
 - [`checkedTitle`](#checkedtitle)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`containerStyle`](#containerstyle)
 - [`fontFamily`](#fontfamily)
 - [`iconRight`](#iconright)

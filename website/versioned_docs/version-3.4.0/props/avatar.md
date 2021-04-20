@@ -2,7 +2,7 @@
 
 - [`activeOpacity`](#activeopacity)
 - [`avatarStyle`](#avatarstyle)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`containerStyle`](#containerstyle)
 - [`icon`](#icon)
 - [`iconStyle`](#iconstyle)
