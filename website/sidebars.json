@@ -15,7 +15,6 @@
       "button_group",
       "card",
       "checkbox",
-      "circularslider",
       "chip",
       "divider",
       "fab",
@@ -38,6 +37,7 @@
       "tile",
       "tooltip"
     ],
+    "Universal Components": ["circularslider"],
     "Repo": ["contributing", "testing", "labels"]
   }
 }
