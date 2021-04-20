@@ -7,7 +7,7 @@
 - [`buttonContainerStyle`](#buttoncontainerstyle)
 - [`buttons`](#buttons)
 - [`buttonStyle`](#buttonstyle)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`containerStyle`](#containerstyle)
 - [`disabled`](#disabled)
 - [`disabledSelectedStyle`](#disabledselectedstyle)

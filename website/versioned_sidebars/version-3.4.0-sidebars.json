@@ -1,0 +1,169 @@
+{
+  "version-3.4.0/docs": [
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "It Starts Basic",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-3.4.0/getting_started"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/customization"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/web_usage"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/troubleshooting"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Components",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-3.4.0/avatar"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/badge"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/bottomsheet"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/button"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/button_group"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/card"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/checkbox"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/chip"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/divider"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/fab"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/header"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/icon"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/image"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/input"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/linearProgress"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/listitem"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/overlay"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/pricing"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/rating"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/searchbar"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/slider"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/social_icon"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/speeddial"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/switch"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/tab"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/text"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/tile"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/tooltip"
+        }
+      ]
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Repo",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-3.4.0/contributing"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/testing"
+        },
+        {
+          "type": "doc",
+          "id": "version-3.4.0/labels"
+        }
+      ]
+    }
+  ]
+}
