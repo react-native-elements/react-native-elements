@@ -8,8 +8,9 @@ import {
   ImageProps as RNImageProps,
   ViewStyle,
   StyleProp,
+  ImageStyle,
 } from 'react-native';
-import { withTheme } from '../config';
+import { ThemeProps, withTheme } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
@@ -18,6 +19,7 @@ export type ImageProps = RNImageProps & {
   ImageComponent?: React.ComponentType<any>;
   PlaceholderContent?: React.ReactElement<any>;
   containerStyle?: StyleProp<ViewStyle>;
+  childrenContainerStyle?: StyleProp<ViewStyle>;
   placeholderStyle?: StyleProp<ViewStyle>;
   transition?: boolean;
   transitionDuration?: number;
@@ -27,7 +29,10 @@ type ImageState = {
   placeholderOpacity: Animated.Value;
 };
 
-class Image extends React.Component<ImageProps, ImageState> {
+class Image extends React.Component<
+  ImageProps & Partial<ThemeProps<ImageProps>>,
+  ImageState
+> {
   static getSize = ImageNative.getSize;
   static getSizeWithHeaders = ImageNative.getSizeWithHeaders;
   static prefetch = ImageNative.prefetch;
@@ -62,6 +67,7 @@ class Image extends React.Component<ImageProps, ImageState> {
       placeholderStyle,
       PlaceholderContent,
       containerStyle,
+      childrenContainerStyle = {},
       style = {},
       ImageComponent = ImageNative,
       children,
@@ -84,15 +90,12 @@ class Image extends React.Component<ImageProps, ImageState> {
           transitionDuration={360}
           {...attributes}
           onLoad={this.onLoad}
-          // @ts-ignore
           style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
-              // @ts-ignore
               width: width,
               height: height,
-            },
-            // @ts-ignore
+            } as StyleProp<ImageStyle>,
             styleProps,
           ])}
         />
@@ -120,7 +123,12 @@ class Image extends React.Component<ImageProps, ImageState> {
           </View>
         </Animated.View>
 
-        <View style={style}>{children}</View>
+        <View
+          testID="RNE__Image__children__container"
+          style={childrenContainerStyle}
+        >
+          {children}
+        </View>
       </Component>
     );
   }
@@ -143,5 +151,4 @@ const styles = StyleSheet.create({
 });
 
 export { Image };
-//@ts-ignore
 export default withTheme(Image, 'Image');

@@ -37,7 +37,7 @@ export default class ThemeProvider extends React.Component<
   };
   defaultTheme: Partial<FullTheme>;
 
-  constructor(props) {
+  constructor(props: { theme: Theme; useDark?: boolean }) {
     super(props);
     const defaultColors = props.useDark ? darkColors : colors;
     this.defaultTheme = deepmerge(
@@ -48,13 +48,27 @@ export default class ThemeProvider extends React.Component<
     );
     this.state = {
       theme: this.defaultTheme,
-      useDark: props.useDark,
+      useDark: Boolean(props.useDark),
     };
   }
 
-  static getDerivedStateFromProps(props, state) {
+  static getDerivedStateFromProps(
+    props: {
+      theme: Theme;
+      useDark?: boolean;
+    },
+    state: ThemeProviderState
+  ) {
     const { useDark } = props;
-    if (useDark !== state.useDark) {
+    const isTheme = (theme) => {
+      return !(Object.keys(theme).length === 0 && theme.constructor === Object);
+    };
+    //isTheme will check if the theme is provided by user and will update the theme only if its provided by user
+    //Not checking if the theme exist or not will always result in if statement getting executed as props.theme !== state.theme if theme is not provided
+    if (
+      useDark !== state.useDark ||
+      (isTheme(props.theme) && props.theme !== state.theme)
+    ) {
       const defaultColors = useDark ? darkColors : colors;
       return {
         theme: deepmerge(

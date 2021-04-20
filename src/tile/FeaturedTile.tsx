@@ -1,18 +1,29 @@
 import React from 'react';
-import { TouchableOpacity, View, StyleSheet, Dimensions } from 'react-native';
+import {
+  TouchableOpacity,
+  View,
+  StyleSheet,
+  Dimensions,
+  StyleProp,
+  TextStyle,
+} from 'react-native';
 import { BackgroundImage, withTheme } from '../config';
-import { renderNode } from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 import Text from '../text/Text';
 import Icon from '../icons/Icon';
 import { TileProps } from './Tile';
 
-const renderText = (content, defaultProps, style) =>
+const renderText = (
+  content: React.ReactNode,
+  defaultProps: any,
+  style: StyleProp<TextStyle>
+) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-const FeaturedTile: React.FunctionComponent<TileProps> = (props) => {
+const FeaturedTile: RneFunctionComponent<TileProps> = (props) => {
   const {
     title,
     icon,

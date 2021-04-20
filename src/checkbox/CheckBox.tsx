@@ -14,6 +14,7 @@ import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
 import { fonts, withTheme } from '../config';
 import { CheckBoxIconProps } from './CheckBoxIcon';
+import { RneFunctionComponent } from '../helpers';
 
 export type CheckBoxProps = TouchableOpacityProps &
   CheckBoxIconProps & {
@@ -30,7 +31,7 @@ export type CheckBoxProps = TouchableOpacityProps &
     fontFamily?: string;
   };
 
-const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
+const CheckBox: RneFunctionComponent<CheckBoxProps> = (props) => {
   const { theme, ...rest } = props;
   const {
     Component = TouchableOpacity,
@@ -47,7 +48,7 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
     onLongPress,
     checkedTitle,
     fontFamily,
-    checkedColor = theme.colors.primary,
+    checkedColor = theme?.colors?.primary,
     ...attributes
   } = rest;
   const accessibilityState = {
@@ -89,7 +90,7 @@ const CheckBox: React.FunctionComponent<CheckBoxProps> = (props) => {
                     {
                       marginLeft: 10,
                       marginRight: 10,
-                      color: theme.colors.grey1,
+                      color: theme?.colors?.grey1,
                       ...Platform.select({
                         android: {
                           ...fonts.android.bold,

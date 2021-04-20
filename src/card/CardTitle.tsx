@@ -3,8 +3,9 @@ import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
 import { fonts, withTheme } from '../config';
 import Text, { TextProps } from '../text/Text';
+import { RneFunctionComponent } from '../helpers';
 
-const CardTitle: React.FunctionComponent<TextProps> = ({
+const CardTitle: RneFunctionComponent<TextProps> = ({
   style,
   theme,
   ...props
@@ -16,7 +17,7 @@ const CardTitle: React.FunctionComponent<TextProps> = ({
         StyleSheet.flatten([
           {
             fontSize: normalize(14),
-            color: theme.colors.grey1,
+            color: theme?.colors?.grey1,
             ...Platform.select({
               android: {
                 ...fonts.android.black,

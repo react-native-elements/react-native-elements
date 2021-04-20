@@ -18,7 +18,7 @@ import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { RneFunctionComponent } from '../helpers';
 
 export type IconType =
   | 'material'
@@ -57,10 +57,9 @@ export type IconProps = IconButtonProps & {
   disabledStyle?: StyleProp<ViewStyle>;
   solid?: boolean;
   brand?: boolean;
-  theme?: Theme;
 };
 
-const Icon: React.FunctionComponent<IconProps> = (props) => {
+const Icon: RneFunctionComponent<IconProps> = (props) => {
   const {
     type = 'material',
     name,
@@ -87,8 +86,8 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
     theme,
     ...attributes
   } = props;
-  const color = colorProp || theme.colors.black;
-  const reverseColor = reverseColorProp || theme.colors.white;
+  const color = colorProp || theme?.colors?.black;
+  const reverseColor = reverseColorProp || theme?.colors?.white;
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
 
@@ -96,7 +95,7 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
     if (reverse) {
       return color;
     }
-    return raised ? theme.colors.white : 'transparent';
+    return raised ? theme?.colors?.white : 'transparent';
   };
 
   const buttonStyles = {
