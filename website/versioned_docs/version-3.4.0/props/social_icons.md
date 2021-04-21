@@ -1,5 +1,6 @@
 ## Props
 
+- [`activityIndicatorStyle`](#activityindicatorstyle)
 - [`button`](#button)
 - [`Component`](#component)
 - [`disabled`](#disabled)
@@ -19,11 +20,20 @@
 - [`title`](#title)
 - [`type`](#type)
 - [`underlayColor`](#underlaycolor)
-- [`activityIndicatorStyle`](#activityindicatorstyle)
 
 ---
 
 ## Reference
+
+### `activityIndicatorStyle`
+
+style to render when in loading state
+
+|  Type  | Default |
+| :----: | :-----: |
+| object |  none   |
+
+---
 
 ### `button`
 
@@ -213,13 +223,3 @@ underlay color (optional)
 |  Type  | Default |
 | :----: | :-----: |
 | string |  none   |
-
----
-
-### `activityIndicatorStyle`
-
-style to render when in loading state
-
-|  Type  | Default |
-| :----: | :-----: |
-| object |  none   |
