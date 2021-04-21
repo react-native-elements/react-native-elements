@@ -175,6 +175,7 @@ describe('ButtonGroup Component', () => {
         buttonStyle={{ backgroundColor: 'blue' }}
         textStyle={{ color: 'pink' }}
         vertical
+        innerBorderStyle={{}}
       />
     );
     expect(component.length).toBe(1);
