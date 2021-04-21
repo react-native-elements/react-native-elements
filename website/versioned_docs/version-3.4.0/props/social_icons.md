@@ -1,7 +1,7 @@
 ## Props
 
 - [`button`](#button)
-- [`Component`](#Component)
+- [`Component`](#component)
 - [`disabled`](#disabled)
 - [`fontFamily`](#fontfamily)
 - [`fontStyle`](#fontstyle)

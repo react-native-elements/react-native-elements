@@ -2,6 +2,7 @@
 
 exports[`Speed Dial Component should render without issues 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Array [
       Object {
@@ -98,7 +99,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
         title="Delete"
       />
     </ForwardRef(AnimatedComponentWrapper)>
-    <Themed.FloatingActionButton
+    <Themed.FAB
       icon={
         Object {
           "color": "#fff",

@@ -24,7 +24,7 @@ const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
       </View>
     );
   },
-  'SpeedDial.Action'
+  'SpeedDialAction'
 );
 
 export type SpeedDialProps = {
@@ -32,6 +32,7 @@ export type SpeedDialProps = {
   onOpen: () => void;
   onClose: () => void;
   openIcon?: IconNode;
+  overlayColor?: string;
   children?: React.ReactChild[];
   transitionDuration?: number;
 } & FABProps;
@@ -46,6 +47,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   children,
   transitionDuration = 150,
   style,
+  overlayColor,
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
@@ -70,17 +72,16 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   }, [isOpen, animations, children, transitionDuration]);
 
   return (
-    <View style={[styles.container, style]}>
+    <View style={[styles.container, style]} pointerEvents="box-none">
       <TouchableWithoutFeedback onPress={onClose}>
         <Animated.View
           style={[
             StyleSheet.absoluteFillObject,
             {
               opacity: animations.current[0],
-              backgroundColor: Color(theme?.colors?.black)
-                .alpha(0.6)
-                .rgb()
-                .toString(),
+              backgroundColor:
+                overlayColor ||
+                Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
             },
           ]}
           pointerEvents={isOpen ? 'auto' : 'none'}

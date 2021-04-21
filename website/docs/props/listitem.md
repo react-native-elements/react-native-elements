@@ -47,6 +47,19 @@
 
 > Receives all [Text](text.md#props) props.
 
+### ListItem.Accordion
+
+- [`isExpanded`](#isexpanded)
+- [`icon`](#icon)
+- [`expandIcon`](#expandicon)
+- [`content`](#content)
+- [`noAnimation`](#noanimation)
+- [`noIcon`](#noicon)
+- [`noRotation`](#norotation)
+- [`animationDuration`](#animationduration)
+
+> Also Receives all [ListItem](#props) props.
+
 ---
 
 ## Reference
@@ -148,5 +161,85 @@ Container for linear gradient (for non-expo user)
 |   Type    | Default |
 | :-------: | :-----: |
 | component |  View   |
+
+---
+
+### `isExpanded`
+
+Accordion Expanded
+
+|  Type   | Default |
+| :-----: | :-----: |
+| booleon |  false  |
+
+---
+
+### `icon`
+
+Icon for unexpanded Accordion
+
+|   Type   |   Default    |
+| :------: | :----------: |
+| IocnNode | chevron-down |
+
+---
+
+### `expandIcon`
+
+Icon when Accordion is expanded, if not provided `icon` will be rotated 180deg (optional)
+
+|   Type   | Default |
+| :------: | :-----: |
+| IconNode |  none   |
+
+---
+
+### `content`
+
+Similar to ListItem's child
+
+|   Type    |        Default         |
+| :-------: | :--------------------: |
+| ReactNode | Empty ListItem.Content |
+
+---
+
+### `noAnimation`
+
+Don't show animations to be played or not
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `noIcon`
+
+Don't show accordion icon
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `noRotation`
+
+Don't rotate when Accordion is expanded
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `animationDuration`
+
+Duration of accordion expansion
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |   350   |
 
 ---
