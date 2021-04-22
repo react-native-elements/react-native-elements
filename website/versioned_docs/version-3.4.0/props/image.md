@@ -7,6 +7,7 @@
 > [React Native Image](https://reactnative.dev/docs/image#methods) methods.
 
 - [`containerStyle`](#containerstyle)
+- [`childrenContainerStyle`](#childrencontainerstyle)
 - [`ImageComponent`](#imagecomponent)
 - [`onLongPress`](#onlongpress)
 - [`onPress`](#onpress)
@@ -21,6 +22,16 @@
 ### `containerStyle`
 
 Additional styling for the container (optional)
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `childrenContainerStyle`
+
+Additional styling for the children container (optional)
 
 |        Type         | Default |
 | :-----------------: | :-----: |

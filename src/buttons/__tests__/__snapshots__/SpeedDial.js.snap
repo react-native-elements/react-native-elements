@@ -2,6 +2,7 @@
 
 exports[`Speed Dial Component should render without issues 1`] = `
 <View
+  pointerEvents="box-none"
   style={
     Array [
       Object {

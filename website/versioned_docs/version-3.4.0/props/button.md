@@ -112,6 +112,16 @@ displays Icon to the right of title. Needs to be used along with `icon` prop
 
 ---
 
+### `iconPosition`
+
+displays Icon to the position mentioned. Needs to be used along with `icon` prop
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  left   |
+
+---
+
 ### `linearGradientProps`
 
 displays a linear gradient. See [usage](#lineargradient-usage).
