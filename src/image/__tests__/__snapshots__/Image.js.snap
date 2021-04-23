@@ -67,10 +67,15 @@ exports[`Image Component should apply value from style prop 1`] = `
   </ForwardRef(AnimatedComponentWrapper)>
   <View
     style={
-      Object {
-        "borderColor": "red",
-        "borderWidth": 1,
-      }
+      Array [
+        Object {
+          "borderColor": "red",
+          "borderWidth": 1,
+        },
+        Object {
+          "tintColor": "red",
+        },
+      ]
     }
     testID="RNE__Image__children__container"
   />
@@ -205,7 +210,12 @@ exports[`Image Component should apply values from theme 1`] = `
     />
   </View>
   <View
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        Object {},
+      ]
+    }
     testID="RNE__Image__children__container"
   />
 </View>
@@ -275,7 +285,12 @@ exports[`Image Component should render without the transition 1`] = `
     />
   </ForwardRef(AnimatedComponentWrapper)>
   <View
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        Object {},
+      ]
+    }
     testID="RNE__Image__children__container"
   />
 </View>

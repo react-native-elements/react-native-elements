@@ -125,7 +125,7 @@ class Image extends React.Component<
 
         <View
           testID="RNE__Image__children__container"
-          style={childrenContainerStyle}
+          style={[childrenContainerStyle, style]}
         >
           {children}
         </View>
