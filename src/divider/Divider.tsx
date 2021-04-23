@@ -8,13 +8,15 @@ export type DividerProps = ViewProps & {
   style?: object | any[];
   inset?: boolean;
   insetType?: 'left' | 'right' | 'middle';
+  orientation?: 'horizontal' | 'vertical';
 };
 
 const Divider: RneFunctionComponent<DividerProps> = ({
-  style,
-  theme,
   inset = false,
   insetType = 'left',
+  orientation = 'horizontal',
+  style,
+  theme,
   ...rest
 }) => (
   <View
@@ -27,6 +29,7 @@ const Divider: RneFunctionComponent<DividerProps> = ({
           : insetType === 'right'
           ? styles.rightInset
           : { ...styles.leftInset, ...styles.rightInset }),
+      orientation === 'vertical' && styles.vertical,
     ])}
     {...rest}
   />
@@ -42,6 +45,12 @@ const styles = StyleSheet.create({
   },
   rightInset: {
     marginRight: 72,
+  },
+  vertical: {
+    borderRightWidth: StyleSheet.hairlineWidth,
+    borderRightColor: theme?.colors?.divider,
+    height: 'auto',
+    alignSelf: 'stretch',
   },
 });
 

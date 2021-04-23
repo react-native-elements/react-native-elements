@@ -25,6 +25,57 @@ exports[`Divider Component should pass view properties 1`] = `
 />
 `;
 
+exports[`Divider Component should render with inset true and insetType left 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#bcbbc1",
+      "height": 0.5,
+      "marginLeft": 72,
+    }
+  }
+/>
+`;
+
+exports[`Divider Component should render with inset true and insetType middle 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#bcbbc1",
+      "height": 0.5,
+      "marginLeft": 72,
+      "marginRight": 72,
+    }
+  }
+/>
+`;
+
+exports[`Divider Component should render with inset true and insetType right 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#bcbbc1",
+      "height": 0.5,
+      "marginRight": 72,
+    }
+  }
+/>
+`;
+
+exports[`Divider Component should render with orientation vertical 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#bcbbc1",
+      "borderRightColor": "#bcbbc1",
+      "borderRightWidth": 0.5,
+      "height": "auto",
+    }
+  }
+/>
+`;
+
 exports[`Divider Component should render with style 1`] = `
 <View
   style={

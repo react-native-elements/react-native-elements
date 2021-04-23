@@ -22,6 +22,36 @@ describe('Divider Component', () => {
     expect(component.props().style.backgroundColor).toBe('blue');
   });
 
+  it('should render with orientation vertical', () => {
+    const component = shallow(<Divider theme={theme} orientation="vertical" />);
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with inset true and insetType left', () => {
+    const component = shallow(
+      <Divider theme={theme} inset={true} insetType="left" />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with inset true and insetType right', () => {
+    const component = shallow(
+      <Divider theme={theme} inset={true} insetType="right" />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with inset true and insetType middle', () => {
+    const component = shallow(
+      <Divider theme={theme} inset={true} insetType="middle" />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should pass view properties', () => {
     const component = shallow(<Divider theme={theme} testID="testing" />);
     expect(toJson(component)).toMatchSnapshot();
