@@ -85,7 +85,12 @@ describe('Image Component', () => {
     expect(
       component.find({ testID: 'RNE__Image__children__container' }).props()
         .style
-    ).toEqual([{ borderColor: 'red', borderWidth: 1 }, { tintColor: 'red' }]);
+    ).toEqual(
+      expect.objectContaining({
+        borderWidth: 1,
+        borderColor: 'red',
+      })
+    );
 
     expect(toJson(component)).toMatchSnapshot();
   });
