@@ -67,7 +67,7 @@ class Image extends React.Component<
       placeholderStyle,
       PlaceholderContent,
       containerStyle,
-      childrenContainerStyle = {},
+      childrenContainerStyle = null,
       style = {},
       ImageComponent = ImageNative,
       children,
@@ -125,7 +125,7 @@ class Image extends React.Component<
 
         <View
           testID="RNE__Image__children__container"
-          style={childrenContainerStyle}
+          style={childrenContainerStyle ?? style}
         >
           {children}
         </View>
