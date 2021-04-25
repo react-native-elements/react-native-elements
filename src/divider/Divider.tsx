@@ -1,14 +1,24 @@
 import React from 'react';
-import { View, StyleSheet, ViewProps } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ViewProps,
+  Text,
+  StyleProp,
+  TextStyle,
+} from 'react-native';
 import { withTheme } from '../config';
 import theme from '../config/theme';
 import { RneFunctionComponent } from '../helpers';
 
 export type DividerProps = ViewProps & {
-  style?: object | any[];
   inset?: boolean;
   insetType?: 'left' | 'right' | 'middle';
+  style?: object | any[];
+  subHeader?: string;
+  subHeaderStyle?: StyleProp<TextStyle>;
   orientation?: 'horizontal' | 'vertical';
+  width?: number;
 };
 
 const Divider: RneFunctionComponent<DividerProps> = ({
@@ -16,29 +26,49 @@ const Divider: RneFunctionComponent<DividerProps> = ({
   insetType = 'left',
   orientation = 'horizontal',
   style,
+  subHeader,
+  subHeaderStyle,
   theme,
+  width,
   ...rest
 }) => (
-  <View
-    style={StyleSheet.flatten([
-      styles.divider,
-      style,
-      inset &&
-        (insetType === 'left'
-          ? styles.leftInset
-          : insetType === 'right'
-          ? styles.rightInset
-          : { ...styles.leftInset, ...styles.rightInset }),
-      orientation === 'vertical' && styles.vertical,
-    ])}
-    {...rest}
-  />
+  <>
+    <View
+      style={StyleSheet.flatten([
+        styles.divider,
+        style,
+        inset &&
+          (insetType === 'left'
+            ? styles.leftInset
+            : insetType === 'right'
+            ? styles.rightInset
+            : { ...styles.leftInset, ...styles.rightInset }),
+        orientation === 'vertical' && styles.vertical,
+        width &&
+          (orientation === 'horizontal'
+            ? { borderBottomWidth: width }
+            : { borderRightWidth: width }),
+      ])}
+      {...rest}
+    />
+    {subHeader && (
+      <Text
+        style={StyleSheet.flatten([
+          styles.subHeader,
+          subHeaderStyle,
+          inset && styles.leftInset,
+        ])}
+      >
+        {subHeader}
+      </Text>
+    )}
+  </>
 );
 
 const styles = StyleSheet.create({
   divider: {
-    backgroundColor: theme?.colors?.divider,
-    height: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: theme?.colors?.divider,
   },
   leftInset: {
     marginLeft: 72,
@@ -51,6 +81,9 @@ const styles = StyleSheet.create({
     borderRightColor: theme?.colors?.divider,
     height: 'auto',
     alignSelf: 'stretch',
+  },
+  subHeader: {
+    includeFontPadding: false,
   },
 });
 
