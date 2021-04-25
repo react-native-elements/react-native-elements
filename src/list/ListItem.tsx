@@ -18,6 +18,7 @@ import ListItemCheckBox from './ListItemCheckBox';
 import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
+import ListItemSwipable from './ListItemSwipable';
 import ListItemAccordion from './ListItemAccordion';
 import { RneFunctionComponent } from '../helpers';
 
@@ -146,6 +147,7 @@ const ThemedListItem = Object.assign(withTheme(ListItem, 'ListItem'), {
   Input: ListItemInput,
   Title: ListItemTitle,
   Subtitle: ListItemSubtitle,
+  Swipable: ListItemSwipable,
   CheckBox: ListItemCheckBox,
   ButtonGroup: ListItemButtonGroup,
 });
