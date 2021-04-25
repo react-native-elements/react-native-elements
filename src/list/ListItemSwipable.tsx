@@ -12,8 +12,8 @@ import { RneFunctionComponent, ScreenWidth } from '../helpers';
 import { withTheme } from '../config';
 
 export type ListItemSwipeableProps = ListItemProps & {
-  leftContent?: any;
-  rightContent?: any;
+  leftContent?: React.ReactNode;
+  rightContent?: React.ReactNode;
   leftStyle?: StyleProp<ViewStyle>;
   rightStyle?: StyleProp<ViewStyle>;
   leftWidth?: number;

@@ -60,6 +60,17 @@
 
 > Also Receives all [ListItem](#props) props.
 
+### ListItem.Swipable
+
+> Also recieves all `ListItem` Props
+
+- [`leftContent`](#leftcontent)
+- [`rightContent`](#leftcontent)
+- [`leftStyle`](#leftstyle)
+- [`rightStyle`](#rightstyle)
+- [`leftWidth`](#leftwidth)
+- [`rightWidth`](#rightwidth)
+
 ---
 
 ## Reference
@@ -241,5 +252,65 @@ Duration of accordion expansion
 |  Type  | Default |
 | :----: | :-----: |
 | number |   350   |
+
+---
+
+### `leftContent`
+
+Left Content
+
+|   Type    | Default |
+| :-------: | :-----: |
+| ReactNode |  none   |
+
+---
+
+### `rightContent`
+
+Right Content
+
+|   Type    | Default |
+| :-------: | :-----: |
+| ReactNode |  none   |
+
+---
+
+### `leftStyle`
+
+Style of left container
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `rightStyle`
+
+Style of right container
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `leftWidth`
+
+Width to swipe left
+
+|  Type  |    Default    |
+| :----: | :-----------: |
+| number | ScreenWidth/3 |
+
+---
+
+### `rightWidth`
+
+Width to swipe right
+
+|  Type  |    Default    |
+| :----: | :-----------: |
+| number | ScreenWidth/3 |
 
 ---
