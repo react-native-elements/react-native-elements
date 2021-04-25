@@ -21,7 +21,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
     onPress={[Function]}
   >
     <ForwardRef(AnimatedComponentWrapper)
-      pointerEvents="none"
+      pointerEvents="auto"
       style={
         Array [
           Object {
@@ -33,7 +33,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
           },
           Object {
             "backgroundColor": "rgba(36, 36, 36, 0.6)",
-            "opacity": NaN,
+            "opacity": 1,
           },
         ]
       }
@@ -49,13 +49,13 @@ exports[`Speed Dial Component should render without issues 1`] = `
   >
     <ForwardRef(AnimatedComponentWrapper)
       key="0"
-      pointerEvents="none"
+      pointerEvents="auto"
       style={
         Object {
-          "opacity": NaN,
+          "opacity": 1,
           "transform": Array [
             Object {
-              "scale": NaN,
+              "scale": 1,
             },
           ],
         }
@@ -75,13 +75,13 @@ exports[`Speed Dial Component should render without issues 1`] = `
     </ForwardRef(AnimatedComponentWrapper)>
     <ForwardRef(AnimatedComponentWrapper)
       key="1"
-      pointerEvents="none"
+      pointerEvents="auto"
       style={
         Object {
-          "opacity": NaN,
+          "opacity": 1,
           "transform": Array [
             Object {
-              "scale": NaN,
+              "scale": 1,
             },
           ],
         }
@@ -103,11 +103,10 @@ exports[`Speed Dial Component should render without issues 1`] = `
       icon={
         Object {
           "color": "#fff",
-          "name": "edit",
+          "name": "close",
         }
       }
       onPress={[Function]}
-      open={true}
       style={
         Array [
           Object {

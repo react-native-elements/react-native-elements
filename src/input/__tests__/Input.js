@@ -39,6 +39,12 @@ describe('Input component', () => {
       expect(toJson(component)).toMatchSnapshot();
     });
 
+    it('disabled', () => {
+      const component = shallow(<Input theme={theme} disabled={true} />);
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
     describe('leftIcon and styles', () => {
       it('leftIcon', () => {
         const component = shallow(

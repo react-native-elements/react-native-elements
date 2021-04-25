@@ -8,6 +8,20 @@ import { ThemeProvider } from '../../config';
 import ThemedButton, { Button } from '../Button';
 
 describe('Button Component', () => {
+  beforeEach(() => {
+    let useEffect = jest.spyOn(React, 'useEffect');
+    useEffect.mockImplementation((f) => f());
+    const app = shallow(
+      <Button
+        theme={theme}
+        linearGradientProps={{
+          colors: ['#4c669f', '#3b5998', '#192f6a'],
+        }}
+        ViewComponent={null}
+      />
+    );
+    expect(app.length).toBe(1);
+  });
   it('should render without issues', () => {
     const component = shallow(<Button theme={theme} />);
     expect(component.length).toBe(1);
