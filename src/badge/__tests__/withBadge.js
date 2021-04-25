@@ -19,6 +19,13 @@ describe('withBadge HOC', () => {
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
+
+    it('should render when no value', () => {
+      const BadgedComponent = withBadge()(TouchableOpacity);
+      const component = shallow(<BadgedComponent />);
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
   });
 
   describe('with options', () => {

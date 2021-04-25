@@ -5,6 +5,13 @@ import toJson from 'enzyme-to-json';
 import theme from '../../config/theme';
 
 describe('LinearProgress Component', () => {
+  beforeEach(() => {
+    let useEffect = jest.spyOn(React, 'useEffect');
+    useEffect.mockImplementation((f) => f());
+    const app = shallow(<LinearProgress theme={theme} />);
+    expect(app.length).toBe(1);
+  });
+
   it('should render without issues', () => {
     const app = shallow(<LinearProgress theme={theme} />);
     expect(app.length).toBe(1);
