@@ -41,6 +41,7 @@ interface ListItem extends RneFunctionComponent<ListItemProps> {
   Input: typeof ListItemInput;
   Title: typeof ListItemTitle;
   Subtitle: typeof ListItemSubtitle;
+  Swipable: typeof ListItemSwipable;
   CheckBox: typeof ListItemCheckBox;
   ButtonGroup: typeof ListItemButtonGroup;
 }
