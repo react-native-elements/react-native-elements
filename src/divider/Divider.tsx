@@ -6,6 +6,7 @@ import {
   Text,
   StyleProp,
   TextStyle,
+  ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
 import theme from '../config/theme';
@@ -14,7 +15,7 @@ import { RneFunctionComponent } from '../helpers';
 export type DividerProps = ViewProps & {
   inset?: boolean;
   insetType?: 'left' | 'right' | 'middle';
-  style?: object | any[];
+  style?: StyleProp<ViewStyle>;
   subHeader?: string;
   subHeaderStyle?: StyleProp<TextStyle>;
   orientation?: 'horizontal' | 'vertical';
