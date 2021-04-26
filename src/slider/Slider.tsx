@@ -158,9 +158,6 @@ const Slider: RneFunctionComponent<SliderProps> = (props) => {
 
   const currentPropValue = useRef(props.value || 0);
   const prevPropValue = useRef(0);
-  useEffect(() => {
-    prevPropValue.current = props.value || 0;
-  });
 
   const didMountRef = useRef(false);
   useEffect(() => {
@@ -180,6 +177,7 @@ const Slider: RneFunctionComponent<SliderProps> = (props) => {
     } else {
       didMountRef.current = true;
     }
+    prevPropValue.current = props.value || 0;
   });
 
   const setCurrentValue = (value1: number) => {
