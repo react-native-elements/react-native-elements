@@ -93,6 +93,13 @@ export function commonTests(SearchBar) {
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
+    it('show placeholder', () => {
+      const component = shallow(
+        <SearchBar theme={theme} placeholder={'Test Placeholder'} />
+      );
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
 
     describe('searchIcon and without', () => {
       it('searchIcon', () => {

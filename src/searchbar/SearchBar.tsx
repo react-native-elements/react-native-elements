@@ -29,6 +29,8 @@ export type SearchBarBaseProps = React.ComponentPropsWithRef<
   searchIcon?: IconNode;
   inputStyle?: StyleProp<TextStyle>;
   loadingProps?: ActivityIndicatorProps;
+  placeholder?: string;
+  value?: string;
   showLoading?: boolean;
   leftIconContainerStyle?: StyleProp<ViewStyle>;
   rightIconContainerStyle?: StyleProp<ViewStyle>;

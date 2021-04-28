@@ -424,6 +424,80 @@ exports[`Default SearchBar component Props searchIcon and without searchIcon 1`]
 </View>
 `;
 
+exports[`Default SearchBar component Props show placeholder 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#393e42",
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+      "padding": 8,
+    }
+  }
+>
+  <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "backgroundColor": "#303337",
+        "borderBottomWidth": 0,
+        "borderRadius": 3,
+        "minHeight": 30,
+        "overflow": "hidden",
+      }
+    }
+    inputStyle={
+      Object {
+        "color": "#86939e",
+        "marginLeft": 10,
+      }
+    }
+    leftIcon={
+      <Themed.Icon
+        color="#86939e"
+        name="search"
+        size={18}
+        type="material"
+      />
+    }
+    leftIconContainerStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholder="Test Placeholder"
+    placeholderTextColor="#86939e"
+    renderErrorMessage={false}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    testID="searchInput"
+    value=""
+  />
+</View>
+`;
+
 exports[`Default SearchBar component Props showLoading, loadingProps 1`] = `
 <View
   style={

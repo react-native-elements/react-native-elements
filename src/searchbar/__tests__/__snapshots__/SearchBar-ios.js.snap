@@ -1172,6 +1172,124 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
 </View>
 `;
 
+exports[`iOS SearchBar component Props show placeholder 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ffffff",
+      "flexDirection": "row",
+      "overflow": "hidden",
+      "paddingBottom": 13,
+      "paddingTop": 13,
+    }
+  }
+>
+  <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "backgroundColor": "#dcdce1",
+        "borderBottomWidth": 0,
+        "borderRadius": 9,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "minHeight": 36,
+      }
+    }
+    inputStyle={
+      Object {
+        "marginLeft": 6,
+        "overflow": "hidden",
+      }
+    }
+    leftIcon={
+      <Themed.Icon
+        color="#7d7d7d"
+        name="ios-search"
+        size={20}
+        type="ionicon"
+      />
+    }
+    leftIconContainerStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholder="Test Placeholder"
+    placeholderTextColor="#7d7d7d"
+    renderErrorMessage={false}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    testID="searchInput"
+    value=""
+  />
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "opacity": 0,
+        "position": "absolute",
+        "right": -0,
+      }
+    }
+  >
+    <ForwardRef
+      accessibilityRole="button"
+      onPress={[Function]}
+    >
+      <View
+        style={
+          Array [
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+              undefined,
+              undefined,
+              undefined,
+            ]
+          }
+        >
+          Cancel
+        </Text>
+      </View>
+    </ForwardRef>
+  </View>
+</View>
+`;
+
 exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
 <View
   style={

@@ -676,6 +676,73 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
 </View>
 `;
 
+exports[`Android SearchBar component Props show placeholder 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "paddingBottom": 8,
+      "paddingTop": 8,
+    }
+  }
+>
+  <ForwardRef(Themed.Input)
+    containerStyle={
+      Object {
+        "paddingHorizontal": 0,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "borderBottomWidth": 0,
+        "width": "100%",
+      }
+    }
+    inputStyle={
+      Object {
+        "marginLeft": 24,
+        "marginRight": 8,
+      }
+    }
+    leftIcon={
+      <Themed.Icon
+        color="rgba(0, 0, 0, 0.54)"
+        name="search"
+        size={25}
+        type="material"
+      />
+    }
+    leftIconContainerStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    onBlur={[Function]}
+    onCancel={[Function]}
+    onChangeText={[Function]}
+    onClear={[Function]}
+    onFocus={[Function]}
+    placeholder="Test Placeholder"
+    renderErrorMessage={false}
+    rightIcon={
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      />
+    }
+    rightIconContainerStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    testID="searchInput"
+  />
+</View>
+`;
+
 exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
 <View
   style={
