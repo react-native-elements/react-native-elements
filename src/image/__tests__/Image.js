@@ -70,6 +70,21 @@ describe('Image Component', () => {
       <Image
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
         style={{ tintColor: 'red' }}
+      />
+    );
+    expect(component.find({ testID: 'RNE__Image' }).props().style).toEqual(
+      expect.objectContaining({
+        tintColor: 'red',
+      })
+    );
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should apply value from childrenContainerStyle prop', () => {
+    const component = shallow(
+      <Image
+        source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+        style={{ tintColor: 'red' }}
         childrenContainerStyle={{
           borderWidth: 1,
           borderColor: 'red',

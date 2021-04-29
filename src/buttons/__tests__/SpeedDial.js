@@ -5,11 +5,17 @@ import toJson from 'enzyme-to-json';
 import theme from '../../config/theme';
 
 describe('Speed Dial Component', () => {
+  beforeEach(() => {
+    let useEffect = jest.spyOn(React, 'useEffect');
+    useEffect.mockImplementation((f) => f());
+    const app = shallow(<SpeedDial open theme={theme} />);
+    expect(app.length).toBe(1);
+  });
   it('should render without issues', () => {
     const app = shallow(
       <SpeedDial
         theme={theme}
-        open={true}
+        isOpen={true}
         icon={{ name: 'edit', color: '#fff' }}
         openIcon={{ name: 'close', color: '#fff' }}
       >

@@ -13,6 +13,6 @@
 
 Style of the divider
 
-|     Type     |                Default                |
-| :----------: | :-----------------------------------: |
-| style object | {height: 1, backgroundColor: #e1e8ee} |
+|      Type      |                Default                |
+| :------------: | :-----------------------------------: |
+| style (object) | {height: 1, backgroundColor: #e1e8ee} |
