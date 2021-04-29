@@ -10,7 +10,6 @@ export type ListItemAccordionProps = ListItemProps & {
   icon?: IconNode;
   expandIcon?: IconNode;
   content?: React.ReactNode;
-  noAnimation?: boolean;
   noRotation?: boolean;
   noIcon?: boolean;
   animationDuration?: number;
@@ -22,7 +21,6 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   icon,
   expandIcon,
   content,
-  noAnimation,
   noRotation,
   noIcon,
   animationDuration = 350,
@@ -39,11 +37,8 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   }, [isExpanded, animation, animationDuration]);
 
   React.useEffect(() => {
-    if (noAnimation) {
-      return;
-    }
     startAnimation();
-  }, [isExpanded, startAnimation, noAnimation]);
+  }, [isExpanded, startAnimation]);
 
   const rotate = noRotation
     ? '0deg'
@@ -88,9 +83,6 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
               outputRange: ['0%', '100%'],
             }),
             opacity: animation,
-          },
-          noAnimation && {
-            maxHeight: isExpanded ? '100%' : '0%',
           },
         ]}
       >

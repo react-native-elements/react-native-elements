@@ -204,16 +204,6 @@ Similar to ListItem's child
 
 ---
 
-### `noAnimation`
-
-Don't show animations to be played or not
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
 ### `noIcon`
 
 Don't show accordion icon
