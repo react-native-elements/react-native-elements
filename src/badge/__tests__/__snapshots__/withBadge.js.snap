@@ -27,6 +27,32 @@ exports[`withBadge HOC just value should render when given a function as value 1
 </View>
 `;
 
+exports[`withBadge HOC just value should render when no value 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "position": "relative",
+    }
+  }
+>
+  <ForwardRef />
+  <Themed.Badge
+    containerStyle={
+      Object {
+        "bottom": undefined,
+        "left": undefined,
+        "position": "absolute",
+        "right": -3,
+        "top": 3,
+      }
+    }
+    status="error"
+  />
+</View>
+`;
+
 exports[`withBadge HOC just value should render with just a value 1`] = `
 <View
   style={

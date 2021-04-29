@@ -109,16 +109,27 @@ exports[`Switch Component should render with disabled true 1`] = `
 />
 `;
 
-exports[`Switch Component should render with props on web 1`] = `
+exports[`Switch Component should render with props on android with disabled true 1`] = `
 <Switch
-  disabled={false}
-  onValueChange={[MockFunction]}
+  disabled={true}
+  thumbColor="hsl(208, 8%, 90%)"
   trackColor={
     Object {
       "false": "",
-      "true": "#2089dc",
+      "true": "hsl(208, 8%, 90%)",
     }
   }
+  value={true}
+/>
+`;
+
+exports[`Switch Component should render with props on web 1`] = `
+<Switch
+  activeThumbColor="#2089dc"
+  activeTrackColor="#2089dc"
+  disabled={false}
+  onValueChange={[MockFunction]}
+  thumbColor="#2089dc"
   value={true}
 />
 `;
