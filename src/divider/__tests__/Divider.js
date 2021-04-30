@@ -21,6 +21,26 @@ describe('Divider Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with color and orientation horizontal', () => {
+    const component = shallow(
+      <Divider theme={theme} color={theme.colors.primary} />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with color and orientation vertical', () => {
+    const component = shallow(
+      <Divider
+        theme={theme}
+        color={theme.colors.primary}
+        orientation="vertical"
+      />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with inset true and insetType left', () => {
     const component = shallow(
       <Divider theme={theme} inset={true} insetType="left" />

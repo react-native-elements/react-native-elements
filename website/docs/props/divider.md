@@ -3,6 +3,7 @@
 > Also receives all
 > [View](https://reactnative.dev/docs/view#props) props
 
+- [`color`](#color)
 - [`inset`](#inset)
 - [`insetType`](#insettype)
 - [`style`](#style)
@@ -14,6 +15,16 @@
 ---
 
 ## Reference
+
+### `color`
+
+Adds color to the divider
+
+|  Type  |                             Default                              |
+| :----: | :--------------------------------------------------------------: |
+| string | StyleSheet.hairlineWidth < 1 ? '#bcbbc1' : 'rgba(0, 0, 0, 0.12)' |
+
+---
 
 ### `inset`
 
@@ -47,7 +58,7 @@ Style of the divider
 
 ### `subHeader`
 
-Displays sub-header text with the divider.
+Displays sub-header text with the divider. This applies only to Horizontal divider.
 
 |  Type  | Default |
 | :----: | :-----: |

@@ -28,6 +28,36 @@ exports[`Divider Component should pass view properties 1`] = `
 </Fragment>
 `;
 
+exports[`Divider Component should render with color and orientation horizontal 1`] = `
+<Fragment>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#2089dc",
+        "borderBottomWidth": 0.5,
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`Divider Component should render with color and orientation vertical 1`] = `
+<Fragment>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "borderBottomColor": "#bcbbc1",
+        "borderBottomWidth": 0.5,
+        "borderRightColor": "#2089dc",
+        "borderRightWidth": 0.5,
+        "height": "auto",
+      }
+    }
+  />
+</Fragment>
+`;
+
 exports[`Divider Component should render with inset true and insetType left 1`] = `
 <Fragment>
   <View

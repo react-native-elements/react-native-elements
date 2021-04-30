@@ -13,6 +13,7 @@ import theme from '../config/theme';
 import { RneFunctionComponent } from '../helpers';
 
 export type DividerProps = ViewProps & {
+  color?: string;
   inset?: boolean;
   insetType?: 'left' | 'right' | 'middle';
   style?: StyleProp<ViewStyle>;
@@ -23,6 +24,7 @@ export type DividerProps = ViewProps & {
 };
 
 const Divider: RneFunctionComponent<DividerProps> = ({
+  color,
   inset = false,
   insetType = 'left',
   orientation = 'horizontal',
@@ -49,10 +51,14 @@ const Divider: RneFunctionComponent<DividerProps> = ({
           (orientation === 'horizontal'
             ? { borderBottomWidth: width }
             : { borderRightWidth: width }),
+        color &&
+          (orientation === 'horizontal'
+            ? { borderBottomColor: color }
+            : { borderRightColor: color }),
       ])}
       {...rest}
     />
-    {subHeader && (
+    {subHeader && orientation === 'horizontal' ? (
       <Text
         style={StyleSheet.flatten([
           styles.subHeader,
@@ -62,7 +68,7 @@ const Divider: RneFunctionComponent<DividerProps> = ({
       >
         {subHeader}
       </Text>
-    )}
+    ) : null}
   </>
 );
 
