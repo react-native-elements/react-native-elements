@@ -12,7 +12,7 @@ export type ListItemAccordionProps = ListItemProps & {
   content?: React.ReactNode;
   noRotation?: boolean;
   noIcon?: boolean;
-  animationDuration?: number;
+  animation?: number;
 };
 
 const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
@@ -23,18 +23,18 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   content,
   noRotation,
   noIcon,
-  animationDuration = 350,
+  animation = 350,
   ...props
 }) => {
-  const { current: animation } = React.useRef(new Animated.Value(0));
+  const { current: transition } = React.useRef(new Animated.Value(0));
 
   const startAnimation = React.useCallback(() => {
-    Animated.timing(animation, {
+    Animated.timing(transition, {
       toValue: Number(isExpanded),
       useNativeDriver: false,
-      duration: animationDuration,
+      duration: animation,
     }).start();
-  }, [isExpanded, animation, animationDuration]);
+  }, [isExpanded, transition, animation]);
 
   React.useEffect(() => {
     startAnimation();
@@ -78,11 +78,11 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
       <Animated.View
         style={[
           {
-            maxHeight: animation.interpolate({
+            maxHeight: transition.interpolate({
               inputRange: [0, 1],
               outputRange: ['0%', '100%'],
             }),
-            opacity: animation,
+            opacity: transition,
           },
         ]}
       >
