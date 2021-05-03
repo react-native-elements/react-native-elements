@@ -53,6 +53,7 @@
     "@types/color": "^3.0.1",
     "@types/enzyme": "^3.10.8",
     "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/jest": "^26.0.23",
     "@types/lodash.isequal": "^4.5.5",
     "@types/react-native": "*",
     "@types/react-test-renderer": "^17.0.0",
@@ -74,6 +75,7 @@
     "react-native-vector-icons": "^7.0.0",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.5",
     "typescript": "^4.1.3",
     "utility-types": "^3.10.0"
   },
@@ -86,12 +88,12 @@
     "timers": "fake",
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js",
+      "./src/searchbar/__tests__/common.tsx",
       "<rootDir>/node_modules",
       "<rootDir>/dist"
     ],
     "coveragePathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js"
+      "./src/searchbar/__tests__/common.tsx"
     ],
     "collectCoverageFrom": [
       "src/**/*.tsx",
@@ -105,6 +107,7 @@
     "setupFilesAfterEnv": [
       "<rootDir>/.ci/setupTests.js"
     ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
