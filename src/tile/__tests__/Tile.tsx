@@ -7,7 +7,7 @@ import ThemedTile, { Tile } from '../Tile';
 
 describe('Tile component', () => {
   it('should render without issues', () => {
-    const component = shallow(<Tile imageSrc={{ url: 'http://google.com' }} />);
+    const component = shallow(<Tile imageSrc={{ uri: 'http://google.com' }} />);
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
@@ -15,7 +15,7 @@ describe('Tile component', () => {
   it('should render featured tile', () => {
     const component = shallow(
       <Tile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
         featured
         caption="Some Caption Text"
@@ -28,7 +28,7 @@ describe('Tile component', () => {
   it('should render featured tile with icon', () => {
     const component = shallow(
       <Tile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         icon={{ name: 'play-circle', type: 'font-awesome' }}
         featured
       />
@@ -40,7 +40,7 @@ describe('Tile component', () => {
   it('should render tile with icon', () => {
     const component = shallow(
       <Tile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         title="Lorem ipsum dolor sit amet, consectetur"
         icon={{ name: 'play-circle', type: 'font-awesome' }}
         contentContainerStyle={{ height: 70 }}
@@ -56,7 +56,7 @@ describe('Tile component', () => {
 
   it('should render with active opacity', () => {
     const component = shallow(
-      <Tile imageSrc={{ url: 'http://google.com' }} activeOpacity={0.9} />
+      <Tile imageSrc={{ uri: 'http://google.com' }} activeOpacity={0.9} />
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -65,7 +65,7 @@ describe('Tile component', () => {
   it('should apply custom image props', () => {
     const component = shallow(
       <Tile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         imageProps={{ resizeMode: 'contain' }}
       />
     );
@@ -81,7 +81,7 @@ describe('Tile component', () => {
     const component = create(
       <ThemeProvider theme={theme}>
         <ThemedTile
-          imageSrc={{ url: 'http://google.com' }}
+          imageSrc={{ uri: 'http://google.com' }}
           activeOpacity={0.9}
         />
       </ThemeProvider>

@@ -5,14 +5,13 @@ import {
   Platform,
 } from 'react-native';
 import { withTheme } from '../config';
-import { FullTheme } from '../config/theme';
+import { RneFunctionComponent } from '../helpers';
 
 export type SwitchProps = NativeSwitchProps & {
   color?: string;
-  theme?: FullTheme;
 };
 
-const Switch: React.FunctionComponent<SwitchProps> = ({
+const Switch: RneFunctionComponent<SwitchProps> = ({
   value = false,
   disabled = false,
   onValueChange,

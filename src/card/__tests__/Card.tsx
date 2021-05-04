@@ -26,7 +26,12 @@ describe('Card Component', () => {
       <Card theme={theme}>
         <Card.Title>HELLO WORLD</Card.Title>
         <Card.Divider />
-        <Card.Image uri="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg" />
+        <Card.Image
+          source={{
+            uri:
+              'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          }}
+        />
       </Card>
     );
     expect(component.length).toBe(1);
@@ -38,7 +43,12 @@ describe('Card Component', () => {
       <Card theme={theme}>
         <Card.FeaturedTitle>featured title</Card.FeaturedTitle>
         <Card.FeaturedSubtitle>featured sub title</Card.FeaturedSubtitle>
-        <Card.Image uri="https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg" />
+        <Card.Image
+          source={{
+            uri:
+              'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+          }}
+        />
       </Card>
     );
     expect(component.length).toBe(1);

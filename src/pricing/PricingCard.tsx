@@ -15,7 +15,7 @@ import Icon, { IconProps } from '../icons/Icon';
 
 type ButtonInformation = {
   title: string;
-  icon: string;
+  icon?: string;
   buttonStyle?: StyleProp<ViewStyle>;
   titleStyle?: StyleProp<TextStyle>;
 };
@@ -26,7 +26,7 @@ export type PricingCardProps = {
   title?: string;
   price?: string | number;
   info?: string[];
-  button?: ButtonInformation;
+  button?: ButtonProps | ButtonInformation;
   color?: string;
   onButtonPress?(): void;
   titleStyle?: StyleProp<TextStyle>;
