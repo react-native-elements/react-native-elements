@@ -12,7 +12,10 @@ export type ListItemAccordionProps = ListItemProps & {
   content?: React.ReactNode;
   noRotation?: boolean;
   noIcon?: boolean;
-  animation?: number;
+  animation?: {
+    type?: 'timing' | 'spring';
+    duration?: number;
+  };
 };
 
 const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
@@ -23,16 +26,16 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   content,
   noRotation,
   noIcon,
-  animation = 350,
+  animation,
   ...props
 }) => {
   const { current: transition } = React.useRef(new Animated.Value(0));
 
   const startAnimation = React.useCallback(() => {
-    Animated.timing(transition, {
+    Animated[animation.type || 'timing'](transition, {
       toValue: Number(isExpanded),
       useNativeDriver: false,
-      duration: animation,
+      duration: animation.duration || 350,
     }).start();
   }, [isExpanded, transition, animation]);
 
