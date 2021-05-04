@@ -42,7 +42,7 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
 
   const rotate = noRotation
     ? '0deg'
-    : animation.interpolate({
+    : transition.interpolate({
         inputRange: [0, 1],
         outputRange: ['0deg', '-180deg'],
       });
