@@ -28,6 +28,9 @@ import { TabItemProps, TabProps } from '../tab/tab';
 import { FABProps } from '../buttons/FAB';
 import { SpeedDialProps, SpeedDialActionProps } from '../buttons/SpeedDial';
 import { LinearProgressProps } from '../linearProgress';
+import { FloatingInputProps } from '../input/FloatingTextInput';
+
+
 
 import colors, { Colors } from './colors';
 
@@ -83,6 +86,7 @@ export interface FullTheme {
   SpeedDial: Partial<SpeedDialProps>;
   SpeedDialAction: Partial<SpeedDialActionProps>;
   LinearProgress: Partial<LinearProgressProps>;
+  FloatingInput: Partial<FloatingInputProps>;
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;
