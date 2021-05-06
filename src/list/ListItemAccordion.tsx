@@ -1,6 +1,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import { ListItem, ListItemProps } from './ListItem';
+import ListItemBase, { ListItemProps } from './ListItemBase';
+import ListItemContent from './ListItemContent';
 import { withTheme } from '../config';
 import { Icon, IconNode, IconProps } from '../icons/Icon';
 import { RneFunctionComponent } from '../helpers';
@@ -52,8 +53,8 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
 
   return (
     <>
-      <ListItem {...props}>
-        {React.isValidElement(content) ? content : <ListItem.Content />}
+      <ListItemBase {...props}>
+        {React.isValidElement(content) ? content : <ListItemContent />}
         {!noIcon && (
           <Animated.View
             style={{
@@ -77,7 +78,7 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
             )}
           </Animated.View>
         )}
-      </ListItem>
+      </ListItemBase>
       <Animated.View
         style={[
           {
