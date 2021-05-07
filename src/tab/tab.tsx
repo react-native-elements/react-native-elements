@@ -127,7 +127,11 @@ const TabContainer: RneFunctionComponent<TabProps> = ({
   );
 };
 
-const Tab = Object.assign(TabContainer, {
+interface Tab extends RneFunctionComponent<TabProps> {
+  Item: typeof TabItem;
+}
+
+const Tab: Tab = Object.assign(TabContainer, {
   Item: TabItem,
 });
 export { Tab };
