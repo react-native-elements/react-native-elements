@@ -6,10 +6,10 @@ import {
   StyleSheet,
   StyleProp,
   ViewStyle,
+  PanResponderGestureState,
 } from 'react-native';
-import { ListItem, ListItemProps } from './ListItem';
+import ListItem, { ListItemProps } from './ListItem';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
-import { withTheme } from '../config';
 
 export type ListItemSwipeableProps = ListItemProps & {
   leftContent?: React.ReactNode;
@@ -30,39 +30,65 @@ const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
   rightWidth = ScreenWidth / 3,
   ...props
 }) => {
-  const { current: translateX } = React.useRef(new Animated.Value(0));
+  const { current: panX } = React.useRef(new Animated.Value(0));
+  const currValue = React.useRef(0);
+  const prevValue = React.useRef(0);
+
+  React.useEffect(() => {
+    let subs = panX.addListener(({ value }) => {
+      currValue.current = value;
+    });
+    return () => {
+      panX.removeListener(subs);
+    };
+  }, [panX]);
 
   const slideAnimation = React.useCallback(
     (toValue: number) => {
-      Animated.timing(translateX, {
+      Animated.spring(panX, {
         toValue,
-        duration: 200,
         useNativeDriver: true,
       }).start();
+      prevValue.current = toValue;
     },
-    [translateX]
+    [panX]
   );
+
+  const onPanResponderMove = (_: any, { dx }: PanResponderGestureState) => {
+    if (!prevValue.current) {
+      prevValue.current = currValue.current;
+    }
+    let newDX = prevValue.current + dx;
+
+    if (Math.abs(newDX) > ScreenWidth / 2) {
+      return;
+    }
+    panX.setValue(newDX);
+  };
+
+  const onPanResponderRelease = (_: any, { dx }: PanResponderGestureState) => {
+    prevValue.current = currValue.current;
+
+    if (
+      (Math.sign(dx) > 0 && !leftContent) ||
+      (Math.sign(dx) < 0 && !rightContent)
+    ) {
+      return slideAnimation(0);
+    }
+
+    if (Math.abs(currValue.current) >= ScreenWidth / 3) {
+      slideAnimation(currValue.current > 0 ? rightWidth : -leftWidth);
+    } else {
+      slideAnimation(0);
+    }
+  };
 
   const { current: _panResponder } = React.useRef(
     PanResponder.create({
       onMoveShouldSetPanResponderCapture: () => true,
-      onMoveShouldSetPanResponder: (_, { dx }) => Math.abs(dx) > 2,
-      onPanResponderMove: Animated.event([null, { dx: translateX }], {
-        useNativeDriver: false,
-      }),
-      onPanResponderRelease: (_e, { dx, dy }) => {
-        const absDx = Math.abs(dx);
-        const absDy = Math.abs(dy);
-
-        if (absDy > absDx) {
-          return;
-        }
-        if (absDx >= ScreenWidth / 3) {
-          slideAnimation(dx > 0 ? rightWidth : -leftWidth);
-        } else {
-          slideAnimation(0);
-        }
-      },
+      onPanResponderGrant: () => false,
+      onPanResponderMove,
+      onPanResponderRelease,
     })
   );
   return (
@@ -109,7 +135,7 @@ const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
         style={{
           transform: [
             {
-              translateX,
+              translateX: panX,
             },
           ],
           zIndex: 2,
@@ -133,4 +159,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(ListItemSwipeable, 'ListItemSwipeable');
+export default ListItemSwipeable;
