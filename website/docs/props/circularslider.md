@@ -55,7 +55,7 @@ Minimum value of Slider
 
 ### `minAngle`
 
-Minimum angle of track (in radians)
+Minimum angle of arc (in radians)
 
 |  Type  | Default |
 | :----: | :-----: |
@@ -65,7 +65,7 @@ Minimum angle of track (in radians)
 
 ### `maxAngle`
 
-Maximum angle of track (in radians)
+Maximum angle of arc (in radians)
 
 |  Type  | Default |
 | :----: | :-----: |

@@ -18,6 +18,9 @@ Sliders allow users to make selections from a range of values.
     <img src="/img/circularSlider2.gif" alt="Circular Slider" />
     <figcaption>Without Thumb (as a Progress Indicator)</figcaption>
   </figure>
+  <figure>
+    <img src="/img/arcSlider.png" alt="Arc Slider" />
+  </figure>
 </div>
 
 ## Usage
@@ -28,6 +31,9 @@ import { CircularSlider } from 'react-native-elements-universe';
 <CircularSlider value={value} onChange={setValue} />;
 
 <CircularSlider value={value} noThumb />;
+
+// 90 deg Arc
+<CircularSlider maxAngle={90} />;
 ```
 
 > Either use percentage (0 to 100) in `value` or specify `maximumValue` & `minimumValue`
