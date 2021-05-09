@@ -34,6 +34,37 @@ describe('CheckBox Component', () => {
     );
   });
 
+  it('should render with wrapperStyle', () => {
+    const component = shallow(
+      <CheckBox
+        theme={theme}
+        title="Custom Text"
+        checked
+        wrapperStyle={{ backgroundColor: 'red' }}
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+    expect(component.props().children.props.children[1].props.children).toBe(
+      'Custom Text'
+    );
+  });
+
+  it('should render with textStyle and fontFamily', () => {
+    const component = shallow(
+      <CheckBox
+        theme={theme}
+        title="Custom Text"
+        checked
+        textStyle={{ color: 'red' }}
+        fontFamily="serif"
+      />
+    );
+    expect(toJson(component)).toMatchSnapshot();
+    expect(component.props().children.props.children[1].props.children).toBe(
+      'Custom Text'
+    );
+  });
+
   it('should allow title to be custom component', () => {
     shallow(
       <CheckBox

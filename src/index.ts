@@ -45,8 +45,8 @@ import Tab, { TabItemProps, TabProps } from './tab/tab';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
-  RatingProps,
-  AirbnbRatingProps,
+  TapRatingProps,
+  SwipeRatingProps,
 } from 'react-native-ratings';
 // helpers
 import Text, { TextProps } from './text/Text';
@@ -139,8 +139,8 @@ export type {
   PricingCardProps,
   TooltipProps,
   BottomSheetProps,
-  RatingProps,
-  AirbnbRatingProps,
+  TapRatingProps,
+  SwipeRatingProps,
   SwitchProps,
   TextProps,
   UpdateTheme,

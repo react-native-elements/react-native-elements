@@ -1,10 +1,16 @@
 import React from 'react';
-import { View, StyleSheet, ViewProps } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ViewProps,
+  StyleProp,
+  ViewStyle,
+} from 'react-native';
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type DividerProps = ViewProps & {
-  style?: object | any[];
+  style?: StyleProp<ViewStyle>;
 };
 
 const Divider: RneFunctionComponent<DividerProps> = ({

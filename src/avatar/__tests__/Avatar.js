@@ -118,6 +118,14 @@ describe('Avatar Component', () => {
       expect(component.length).toBe(1);
       expect(toJson(component)).toMatchSnapshot();
     });
+
+    it('default', () => {
+      const component = shallow(
+        <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
+      );
+      expect(component.length).toBe(1);
+      expect(toJson(component)).toMatchSnapshot();
+    });
   });
 
   describe('Placeholders', () => {
@@ -165,6 +173,19 @@ describe('Avatar Component', () => {
             backgroundColor: 'red',
           }}
           icon={{}}
+        />
+      );
+      expect(toJson(component)).toMatchSnapshot();
+    });
+
+    it('renders using image with imageProps', () => {
+      const component = shallow(
+        <Avatar
+          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+          iconStyle={{
+            backgroundColor: 'red',
+          }}
+          imageProps={{ containerStyle: {} }}
         />
       );
       expect(toJson(component)).toMatchSnapshot();

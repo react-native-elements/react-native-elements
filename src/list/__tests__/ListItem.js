@@ -35,6 +35,27 @@ describe('ListItem component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render with topDivider and bottomDivider', () => {
+    const component = shallow(
+      <ListItem theme={theme} topDivider={true} bottomDivider={true} />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should render with disabled true and styles', () => {
+    const component = shallow(
+      <ListItem
+        theme={theme}
+        disabled={true}
+        containerStyle={{ padding: 10 }}
+        disabledStyle={{ backgroundColor: 'gray' }}
+      />
+    );
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should render with title and subtitle', () => {
     const component = shallow(
       <ListItem theme={theme}>
