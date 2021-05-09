@@ -3,6 +3,8 @@
 - [`value`](#value)
 - [`maximumValue`](#minimumvalue)
 - [`minimumValue`](#maximumvalue)
+- [`maxAngle`](#minangle)
+- [`minAngle`](#maxangle)
 - [`trackRadius`](#trackadius)
 - [`thumbRadius`](#thumbradius)
 - [`trackWidth`](#trackwidth)
@@ -48,6 +50,26 @@ Minimum value of Slider
 |  Type  | Default |
 | :----: | :-----: |
 | number |    0    |
+
+---
+
+### `minAngle`
+
+Minimum angle of track (in radians)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |    0    |
+
+---
+
+### `maxAngle`
+
+Maximum angle of track (in radians)
+
+|  Type  | Default |
+| :----: | :-----: |
+| number |  359.9  |
 
 ---
 

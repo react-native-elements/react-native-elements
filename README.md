@@ -56,7 +56,6 @@ import { Button } from 'react-native-elements';
 - [x] [Button](https://reactnativeelements.com/docs/button)
 - [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
 - [x] [Card](https://reactnativeelements.com/docs/card)
-- [x] [Circular Slider](https://reactnativeelements.com/docs/)
 - [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
 - [x] [Divider](https://reactnativeelements.com/docs/divider)
 - [x] [FAB](https://reactnativeelements.com/docs/fab)
@@ -78,6 +77,10 @@ import { Button } from 'react-native-elements';
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
+
+## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+
+- [x] [Circular Slider](https://reactnativeelements.com/docs/)
 
 ## React Native Web support
 
