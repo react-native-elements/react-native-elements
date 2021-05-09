@@ -56,6 +56,7 @@ export type IconProps = IconButtonProps & {
   disabled?: boolean;
   disabledStyle?: StyleProp<ViewStyle>;
   solid?: boolean;
+  light?: boolean;
   brand?: boolean;
 };
 
@@ -82,6 +83,7 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
         })
       : View,
     solid = false,
+    light = false,
     brand = false,
     theme,
     ...attributes
@@ -89,7 +91,7 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
   const color = colorProp || theme?.colors?.black;
   const reverseColor = reverseColorProp || theme?.colors?.white;
   const IconComponent = getIconType(type);
-  const iconSpecificStyle = getIconStyle(type, { solid, brand });
+  const iconSpecificStyle = getIconStyle(type, { solid, light, brand });
 
   const getBackgroundColor = () => {
     if (reverse) {
