@@ -68,7 +68,7 @@ interface HeaderIcon extends IconObject {
 type HeaderSubComponent = React.ReactElement<{}> | TextProps | HeaderIcon;
 
 export type HeaderProps = ViewProps & {
-  ViewComponent?: typeof View | typeof ImageBackground;
+  ViewComponent?: typeof React.Component;
   linearGradientProps?: Object;
   statusBarProps?: StatusBarProps;
   barStyle?: StatusBarStyle;
