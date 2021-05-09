@@ -30,8 +30,6 @@ import { SpeedDialProps, SpeedDialActionProps } from '../buttons/SpeedDial';
 import { LinearProgressProps } from '../linearProgress';
 import { FloatingInputProps } from '../input/FloatingTextInput';
 
-
-
 import colors, { Colors } from './colors';
 
 export default {

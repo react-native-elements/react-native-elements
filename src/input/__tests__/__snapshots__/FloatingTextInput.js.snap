@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component Props attrName 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  />
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component Props title 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  >
+    My Title Name
+  </ForwardRef(AnimatedComponentWrapper)>
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component Props titleActiveColor 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  />
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component Props titleActiveSize 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  />
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component Props titleInActiveColor 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  />
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component Props titleInActiveSize 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  />
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component Props value 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  >
+    My Title Name
+  </ForwardRef(AnimatedComponentWrapper)>
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`Input component should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 3,
+      "borderStyle": "solid",
+      "borderWidth": 0.5,
+      "height": 50,
+      "marginVertical": 4,
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(AnimatedComponentWrapper)
+    style={
+      Array [
+        Object {
+          "fontFamily": "Avenir-Medium",
+          "left": 3,
+          "position": "absolute",
+        },
+        Object {
+          "color": "dimgrey",
+          "fontSize": 19,
+          "top": 14,
+        },
+      ]
+    }
+  />
+  <Component
+    allowFontScaling={true}
+    keyboardType="default"
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "Avenir-Medium",
+          "fontSize": 15,
+          "marginTop": 5,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
