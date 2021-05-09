@@ -1,0 +1,1080 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox Component should allow custom checked Icon 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
+  }
+  checkedIcon={
+    <Image
+      source={
+        Object {
+          "uri": "https://image.ibb.co/jcY95H/checked.png",
+        }
+      }
+      style={
+        Object {
+          "height": 30,
+          "width": 30,
+        }
+      }
+    />
+  }
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+  uncheckedIcon={
+    <Image
+      source={
+        Object {
+          "uri": "https://image.ibb.co/fda0Cx/no_check.png",
+        }
+      }
+      style={
+        Object {
+          "height": 30,
+          "width": 30,
+        }
+      }
+    />
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checked={true}
+      checkedColor="#2089dc"
+      checkedIcon={
+        <Image
+          source={
+            Object {
+              "uri": "https://image.ibb.co/jcY95H/checked.png",
+            }
+          }
+          style={
+            Object {
+              "height": 30,
+              "width": 30,
+            }
+          }
+        />
+      }
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      uncheckedIcon={
+        <Image
+          source={
+            Object {
+              "uri": "https://image.ibb.co/fda0Cx/no_check.png",
+            }
+          }
+          style={
+            Object {
+              "height": 30,
+              "width": 30,
+            }
+          }
+        />
+      }
+    />
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
+  }
+  checkedIcon={
+    <Image
+      source={
+        Object {
+          "uri": "https://image.ibb.co/jcY95H/checked.png",
+        }
+      }
+      style={
+        Object {
+          "height": 30,
+          "width": 30,
+        }
+      }
+    />
+  }
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+  uncheckedIcon={
+    <Image
+      source={
+        Object {
+          "uri": "https://image.ibb.co/fda0Cx/no_check.png",
+        }
+      }
+      style={
+        Object {
+          "height": 30,
+          "width": 30,
+        }
+      }
+    />
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checked={false}
+      checkedColor="#2089dc"
+      checkedIcon={
+        <Image
+          source={
+            Object {
+              "uri": "https://image.ibb.co/jcY95H/checked.png",
+            }
+          }
+          style={
+            Object {
+              "height": 30,
+              "width": 30,
+            }
+          }
+        />
+      }
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      uncheckedIcon={
+        <Image
+          source={
+            Object {
+              "uri": "https://image.ibb.co/fda0Cx/no_check.png",
+            }
+          }
+          style={
+            Object {
+              "height": 30,
+              "width": 30,
+            }
+          }
+        />
+      }
+    />
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should allow passing props to the title 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checked={true}
+      checkedColor="#2089dc"
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      title="Yea"
+      titleProps={
+        Object {
+          "numberOfLines": 2,
+        }
+      }
+    />
+    <Themed.Text
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+      testID="checkboxTitle"
+    >
+      Yea
+    </Themed.Text>
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should render title in Text 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checked={true}
+      checkedColor="#2089dc"
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      title="Custom Text"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+      testID="checkboxTitle"
+    >
+      Custom Text
+    </Themed.Text>
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should render with icon and checked 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
+  }
+  iconType="font-awesome"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checkedColor="red"
+      containerStyle={
+        Object {
+          "backgroundColor": "red",
+        }
+      }
+      iconType="font-awesome"
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+    />
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should render with icon and iconRight 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
+  }
+  iconType="font-awesome"
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+  uncheckedColor="blue"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <CheckBoxIcon
+      center={true}
+      checkedColor="#2089dc"
+      iconRight={true}
+      iconType="font-awesome"
+      right={true}
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      uncheckedColor="blue"
+    />
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should render with textStyle and fontFamily 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checked={true}
+      checkedColor="#2089dc"
+      fontFamily="serif"
+      textStyle={
+        Object {
+          "color": "red",
+        }
+      }
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      title="Custom Text"
+    />
+    <Themed.Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "serif",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+      testID="checkboxTitle"
+    >
+      Custom Text
+    </Themed.Text>
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should render with wrapperStyle 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": true,
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "borderColor": "#ededed",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checked={true}
+      checkedColor="#2089dc"
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+      title="Custom Text"
+      wrapperStyle={
+        Object {
+          "backgroundColor": "red",
+        }
+      }
+    />
+    <Themed.Text
+      style={
+        Object {
+          "color": "#43484d",
+          "fontWeight": "bold",
+          "marginLeft": 10,
+          "marginRight": 10,
+        }
+      }
+      testID="checkboxTitle"
+    >
+      Custom Text
+    </Themed.Text>
+  </View>
+</ForwardRef>
+`;
+
+exports[`CheckBox Component should render without issues 1`] = `
+<ForwardRef
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+    }
+  }
+  style={
+    Object {
+      "margin": 5,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "padding": 10,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <CheckBoxIcon
+      checkedColor="#2089dc"
+      theme={
+        Object {
+          "colors": Object {
+            "black": "#242424",
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "grey": "rgba(0, 0, 0, 0.54)",
+                "primary": "#2196f3",
+                "searchBg": "#dcdce1",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "default": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "grey": "#7d7d7d",
+                "primary": "#007aff",
+                "searchBg": "#dcdce1",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+              "web": Object {
+                "error": "#ff190c",
+                "grey": "#393e42",
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#ca71eb",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#ca71eb",
+            "success": "#52c41a",
+            "warning": "#faad14",
+            "white": "#ffffff",
+          },
+        }
+      }
+    />
+  </View>
+</ForwardRef>
+`;

@@ -16,6 +16,7 @@
 - [`reverseColor`](#reversecolor)
 - [`size`](#size)
 - [`solid`](#solid)
+- [`light`](#light)
 - [`type`](#type)
 - [`underlayColor`](#underlaycolor)
 
@@ -177,6 +178,16 @@ size of icon (optional)
 ### `solid`
 
 Uses the solid font (FontAwesome5 only)
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `light`
+
+Uses the light font (FontAwesome5Pro only)
 
 |  Type   | Default |
 | :-----: | :-----: |
