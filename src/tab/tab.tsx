@@ -24,6 +24,7 @@ const TabItem: RneFunctionComponent<TabItemProps> = ({
   containerStyle,
   buttonStyle,
   variant,
+  iconPosition = 'top',
   ...props
 }) => {
   return (
@@ -46,6 +47,7 @@ const TabItem: RneFunctionComponent<TabItemProps> = ({
         },
         containerStyle,
       ]}
+      iconPosition={iconPosition}
       {...props}
     />
   );
@@ -134,6 +136,7 @@ interface Tab extends RneFunctionComponent<TabProps> {
 const Tab: Tab = Object.assign(TabContainer, {
   Item: TabItem,
 });
+
 export { Tab };
 
 export default Object.assign(withTheme(TabContainer, 'Tab'), {
@@ -143,7 +146,6 @@ export default Object.assign(withTheme(TabContainer, 'Tab'), {
 const styles = StyleSheet.create({
   buttonStyle: {
     borderRadius: 0,
-    flexDirection: 'column',
     backgroundColor: 'transparent',
   },
   titleStyle: {
