@@ -1,5 +1,5 @@
 import { ViewProps } from 'react-native';
-import { AirbnbRatingProps, RatingProps } from 'react-native-ratings';
+import { TapRatingProps, SwipeRatingProps } from 'react-native-ratings';
 import { AccessoryProps } from '../avatar/Accessory';
 import { AvatarProps } from '../avatar/Avatar';
 import { BadgeProps } from '../badge/Badge';
@@ -67,8 +67,8 @@ export interface FullTheme {
   ListItemTitle: Partial<TextProps>;
   Overlay: Partial<OverlayProps>;
   PricingCard: Partial<PricingCardProps>;
-  Rating: Partial<RatingProps>;
-  AirbnbRating: Partial<AirbnbRatingProps>;
+  Rating: Partial<TapRatingProps>;
+  AirbnbRating: Partial<SwipeRatingProps>;
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;
