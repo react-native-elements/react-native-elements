@@ -10,6 +10,7 @@ import {
   StyleProp,
   StyleSheet,
   ColorValue,
+  Platform,
 } from 'react-native';
 import { withTheme } from '../config';
 import { ThemeProps } from '../config';
@@ -78,7 +79,7 @@ class Tooltip extends React.Component<
     elementWidth: 0,
     elementHeight: 0,
   };
-  renderedElement: View;
+  renderedElement?: View | null;
 
   toggleTooltip = () => {
     const { onClose } = this.props;
@@ -162,7 +163,7 @@ class Tooltip extends React.Component<
   renderPointer = (tooltipY: FlexStyle['top']) => {
     const { yOffset, xOffset, elementHeight, elementWidth } = this.state;
     const { backgroundColor, pointerColor } = this.props;
-    const pastMiddleLine = yOffset > tooltipY;
+    const pastMiddleLine = yOffset > (tooltipY || 0);
 
     return (
       <View
@@ -266,8 +267,8 @@ class Tooltip extends React.Component<
     this.renderedElement &&
       this.renderedElement.measure(
         (
-          frameOffsetX,
-          frameOffsetY,
+          _frameOffsetX,
+          _frameOffsetY,
           width,
           height,
           pageOffsetX,
@@ -279,7 +280,12 @@ class Tooltip extends React.Component<
               yOffset:
                 isIOS || skipAndroidStatusBar
                   ? pageOffsetY
-                  : pageOffsetY - StatusBar.currentHeight,
+                  : pageOffsetY -
+                    Platform.select({
+                      android: StatusBar.currentHeight,
+                      ios: 20,
+                      default: 0,
+                    }),
               elementWidth: width,
               elementHeight: height,
             });
