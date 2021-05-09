@@ -9,7 +9,7 @@ import ThemedFeaturedTile, { FeaturedTile } from '../FeaturedTile';
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {
     const component = shallow(
-      <FeaturedTile imageSrc={{ url: 'http://google.com' }} />
+      <FeaturedTile imageSrc={{ uri: 'http://google.com' }} />
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
@@ -18,7 +18,7 @@ describe('FeaturedTitle component', () => {
   it('should render with width and height', () => {
     const component = shallow(
       <FeaturedTile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         width={34}
         height={20}
       />
@@ -30,7 +30,7 @@ describe('FeaturedTitle component', () => {
   it('should render with Icon', () => {
     const component = shallow(
       <FeaturedTile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         icon={{ name: 'play-circle', type: 'font-awesome' }}
         imageContainerStyle={{ height: 70 }}
         containerStyle={{ height: 70 }}
@@ -52,7 +52,7 @@ describe('FeaturedTitle component', () => {
     };
     const component = create(
       <ThemeProvider theme={theme}>
-        <ThemedFeaturedTile imageSrc={{ url: 'http://google.com' }} />
+        <ThemedFeaturedTile imageSrc={{ uri: 'http://google.com' }} />
       </ThemeProvider>
     );
     expect(
@@ -64,7 +64,7 @@ describe('FeaturedTitle component', () => {
   it('should render component in caption', () => {
     const component = shallow(
       <FeaturedTile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         caption={<Avatar source={{ uri: 'http://google.com' }} />}
       />
     );
@@ -75,7 +75,7 @@ describe('FeaturedTitle component', () => {
   it('should apply custom image props', () => {
     const component = shallow(
       <FeaturedTile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         imageProps={{ resizeMode: 'contain' }}
       />
     );
@@ -85,7 +85,7 @@ describe('FeaturedTitle component', () => {
   it('should render string in caption', () => {
     const component = shallow(
       <FeaturedTile
-        imageSrc={{ url: 'http://google.com' }}
+        imageSrc={{ uri: 'http://google.com' }}
         caption="Caption text"
       />
     );

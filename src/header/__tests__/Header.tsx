@@ -13,7 +13,13 @@ const titleCfg = { text: 'This is a title' };
 describe('Header Component', () => {
   it('should render without issues', () => {
     const component = shallow(
-      <Header theme={theme} backgroundImage="image.png" />
+      <Header
+        theme={theme}
+        backgroundImage={{
+          uri:
+            'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
+        }}
+      />
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

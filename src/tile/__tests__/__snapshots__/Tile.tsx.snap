@@ -18,7 +18,7 @@ exports[`Tile component should apply custom image props 1`] = `
     resizeMode="contain"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -103,7 +103,7 @@ exports[`Tile component should apply styles from theme 1`] = `
       resizeMode="cover"
       source={
         Object {
-          "url": "http://google.com",
+          "uri": "http://google.com",
         }
       }
       style={
@@ -290,7 +290,7 @@ exports[`Tile component should render featured tile 1`] = `
   imageProps={Object {}}
   imageSrc={
     Object {
-      "url": "http://google.com",
+      "uri": "http://google.com",
     }
   }
   title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore exercitationem"
@@ -322,7 +322,7 @@ exports[`Tile component should render featured tile with icon 1`] = `
   imageProps={Object {}}
   imageSrc={
     Object {
-      "url": "http://google.com",
+      "uri": "http://google.com",
     }
   }
   width={750}
@@ -348,7 +348,7 @@ exports[`Tile component should render tile with icon 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -425,7 +425,7 @@ exports[`Tile component should render with active opacity 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -492,7 +492,7 @@ exports[`Tile component should render without issues 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={

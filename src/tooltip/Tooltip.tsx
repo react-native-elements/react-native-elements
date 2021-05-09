@@ -23,7 +23,7 @@ export type TooltipProps = {
   withPointer?: boolean;
   popover?: React.ReactElement<{}>;
   toggleOnPress?: boolean;
-  toggleAction?: 'onPress' | 'onLongPress';
+  toggleAction?: string | 'onPress' | 'onLongPress';
   height?: FlexStyle['height'];
   width?: FlexStyle['width'];
   containerStyle?: StyleProp<ViewStyle>;
@@ -45,7 +45,7 @@ const defaultProps = {
   highlightColor: 'transparent',
   withPointer: true,
   toggleOnPress: true,
-  toggleAction: 'onPress' as const,
+  toggleAction: 'onPress',
   height: 40,
   width: 150,
   containerStyle: {},

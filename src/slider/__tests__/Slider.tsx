@@ -58,7 +58,6 @@ describe('Slider component', () => {
         minimumValue={0}
         maximumValue={100}
         onValueChange={customFunction}
-        allMeasured
       />
     );
     expect(component.props().value).toBe(20);
@@ -74,12 +73,7 @@ describe('Slider component', () => {
     };
     const component = create(
       <ThemeProvider theme={theme}>
-        <ThemedSlider
-          value={20}
-          minimumValue={0}
-          maximumValue={100}
-          allMeasured
-        />
+        <ThemedSlider value={20} minimumValue={0} maximumValue={100} />
       </ThemeProvider>
     );
     expect(
