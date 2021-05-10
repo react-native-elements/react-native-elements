@@ -236,11 +236,11 @@ Don't rotate when Accordion is expanded
 
 ### `animation`
 
-Duration of accordion expansion
+Boolean to show animation,
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   350   |
+|       Type       |            Default             |
+| :--------------: | :----------------------------: |
+| Object or number | `{type:"timing",duration:350}` |
 
 ---
 
