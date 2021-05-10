@@ -7,8 +7,10 @@ import Button, { ButtonProps } from './buttons/Button';
 import Chip, { ChipProps } from './buttons/Chip';
 import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
-import ListItem, { ListItemProps } from './list/ListItem';
+import ListItem from './list/ListItem';
+import { ListItemProps } from './list/ListItemBase';
 import { ListItemAccordionProps } from './list/ListItemAccordion';
+import { ListItemSwipeableProps } from './list/ListItemSwipeable';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
@@ -44,8 +46,8 @@ import Tab, { TabItemProps, TabProps } from './tab/tab';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
-  RatingProps,
-  AirbnbRatingProps,
+  TapRatingProps,
+  SwipeRatingProps,
 } from 'react-native-ratings';
 // helpers
 import Text, { TextProps } from './text/Text';
@@ -138,8 +140,8 @@ export type {
   PricingCardProps,
   TooltipProps,
   BottomSheetProps,
-  RatingProps,
-  AirbnbRatingProps,
+  TapRatingProps,
+  SwipeRatingProps,
   SwitchProps,
   TextProps,
   UpdateTheme,
@@ -154,4 +156,5 @@ export type {
   TabItemProps,
   TabProps,
   ListItemAccordionProps,
+  ListItemSwipeableProps,
 };
