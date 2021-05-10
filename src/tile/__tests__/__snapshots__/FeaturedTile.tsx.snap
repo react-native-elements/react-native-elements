@@ -13,7 +13,7 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
     resizeMode="contain"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -104,7 +104,7 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
       resizeMode="cover"
       source={
         Object {
-          "url": "http://google.com",
+          "uri": "http://google.com",
         }
       }
       style={
@@ -184,7 +184,7 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -261,7 +261,7 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -343,7 +343,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -422,7 +422,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={
@@ -492,7 +492,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
     resizeMode="cover"
     source={
       Object {
-        "url": "http://google.com",
+        "uri": "http://google.com",
       }
     }
     style={

@@ -60,7 +60,7 @@ export default class ThemeProvider extends React.Component<
     state: ThemeProviderState
   ) {
     const { useDark } = props;
-    const isTheme = (theme) => {
+    const isTheme = (theme: Partial<FullTheme>) => {
       return !(Object.keys(theme).length === 0 && theme.constructor === Object);
     };
     //isTheme will check if the theme is provided by user and will update the theme only if its provided by user

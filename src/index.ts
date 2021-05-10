@@ -10,6 +10,7 @@ import Icon, { IconProps } from './icons/Icon';
 import ListItem from './list/ListItem';
 import { ListItemProps } from './list/ListItemBase';
 import { ListItemAccordionProps } from './list/ListItemAccordion';
+import { ListItemSwipeableProps } from './list/ListItemSwipeable';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
@@ -155,4 +156,5 @@ export type {
   TabItemProps,
   TabProps,
   ListItemAccordionProps,
+  ListItemSwipeableProps,
 };

@@ -33,7 +33,6 @@ describe('withBadge HOC', () => {
       const options = {
         top: 0,
         bottom: 5,
-        status: 'success',
       };
       const BadgedComponent = withBadge(1, options)(TouchableOpacity);
       const component = shallow(<BadgedComponent />);

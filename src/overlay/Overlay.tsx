@@ -18,7 +18,7 @@ export type OverlayProps = ModalProps & {
   overlayStyle?: StyleProp<ViewStyle>;
   onBackdropPress?(): void;
   fullScreen?: boolean;
-  ModalComponent?: React.ComponentClass;
+  ModalComponent?: typeof React.Component;
 };
 
 const Overlay: RneFunctionComponent<OverlayProps> = ({
@@ -27,7 +27,7 @@ const Overlay: RneFunctionComponent<OverlayProps> = ({
   overlayStyle,
   onBackdropPress,
   fullScreen,
-  ModalComponent,
+  ModalComponent = Modal,
   isVisible,
   ...rest
 }) => (

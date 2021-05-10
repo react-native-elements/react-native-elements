@@ -284,6 +284,35 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 </ListItem.Accordion>
 ```
 
+### ListItem Swipable
+
+<img src="/img/swipeable.gif" width="500" />
+
+```js
+<ListItem.Swipable
+  leftContent={
+    <Button
+      title="Info"
+      icon={{ name: 'info', color: 'white' }}
+      buttonStyle={{ minHeight: '100%' }}
+    />
+  }
+  rightContent={
+    <Button
+      title="Delete"
+      icon={{ name: 'delete', color: 'white' }}
+      buttonStyle={{ minHeight: '100%', backgroundColor: 'red' }}
+    />
+  }
+>
+  <Icon name="My Icon" />
+  <ListItem.Content>
+    <ListItem.Title>Hello Swiper</ListItem.Title>
+  </ListItem.Content>
+  <ListItem.Chevron />
+</ListItem.Swipable>
+```
+
 ---
 
 <Props />

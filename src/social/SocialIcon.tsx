@@ -98,47 +98,37 @@ export type SocialIconProps = {
   loading?: boolean;
   activityIndicatorStyle?: object | any[];
   small?: string;
-  iconSize?: string | number;
+  iconSize?: number;
   light?: boolean;
   fontWeight?: string;
   fontStyle?: StyleProp<TextStyle>;
   fontFamily?: string;
-} & typeof defaultProps;
-
-const defaultProps = {
-  raised: true,
-  iconType: 'font-awesome',
-  iconColor: 'white',
-  iconSize: 24,
-  button: false,
 };
 
-const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
-  const {
-    activityIndicatorStyle,
-    button,
-    disabled,
-    fontFamily,
-    fontStyle,
-    fontWeight,
-    iconType,
-    iconColor,
-    iconSize,
-    iconStyle,
-    light,
-    loading,
-    onLongPress,
-    onPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
-    raised,
-    small,
-    style,
-    title,
-    type,
-    underlayColor,
-    ...attributes
-  } = props;
-
+const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
+  activityIndicatorStyle,
+  button = false,
+  disabled,
+  fontFamily,
+  fontStyle,
+  fontWeight,
+  iconType = 'font-awesome',
+  iconColor = 'white',
+  iconSize = 24,
+  iconStyle,
+  light,
+  loading,
+  onLongPress,
+  onPress,
+  Component = onPress || onLongPress ? TouchableHighlight : View,
+  raised = true,
+  small,
+  style,
+  title,
+  type,
+  underlayColor,
+  ...attributes
+}) => {
   const shouldShowExpandedButton = button && title;
 
   return (
@@ -206,8 +196,6 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = (props) => {
     </Component>
   );
 };
-
-SocialIcon.defaultProps = defaultProps;
 
 const styles = StyleSheet.create({
   container: {
