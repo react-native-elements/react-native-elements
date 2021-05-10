@@ -13,7 +13,7 @@ import { HeaderProps } from '../header/Header';
 import { IconProps } from '../icons/Icon';
 import { ImageProps } from '../image/Image';
 import { InputProps } from '../input/Input';
-import { ListItemProps } from '../list/ListItem';
+import { ListItemProps } from '../list/ListItemBase';
 import { OverlayProps } from '../overlay/Overlay';
 import { PricingCardProps } from '../pricing/PricingCard';
 import { SearchBarProps } from '../searchbar/SearchBar';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import { ListItem, ListItemProps } from './ListItem';
+import ListItemBase, { ListItemProps } from './ListItemBase';
+import ListItemContent from './ListItemContent';
 import { withTheme } from '../config';
 import { Icon, IconNode, IconProps } from '../icons/Icon';
 import { RneFunctionComponent } from '../helpers';
@@ -10,10 +11,14 @@ export type ListItemAccordionProps = ListItemProps & {
   icon?: IconNode;
   expandIcon?: IconNode;
   content?: React.ReactNode;
-  noAnimation?: boolean;
   noRotation?: boolean;
   noIcon?: boolean;
-  animationDuration?: number;
+  animation?:
+    | {
+        type?: 'timing' | 'spring';
+        duration?: number;
+      }
+    | boolean;
 };
 
 const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
@@ -22,40 +27,42 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   icon,
   expandIcon,
   content,
-  noAnimation,
   noRotation,
   noIcon,
-  animationDuration = 350,
+  animation = {
+    duration: 350,
+    type: 'timing',
+  },
   ...props
 }) => {
-  const { current: animation } = React.useRef(new Animated.Value(0));
+  const { current: transition } = React.useRef(new Animated.Value(0));
 
   const startAnimation = React.useCallback(() => {
-    Animated.timing(animation, {
-      toValue: Number(isExpanded),
-      useNativeDriver: false,
-      duration: animationDuration,
-    }).start();
-  }, [isExpanded, animation, animationDuration]);
+    if (typeof animation !== 'boolean') {
+      Animated[animation.type || 'timing'](transition, {
+        toValue: Number(isExpanded),
+        useNativeDriver: false,
+        duration: animation.duration || 350,
+      }).start();
+    }
+  }, [isExpanded, transition, animation]);
 
   React.useEffect(() => {
-    if (noAnimation) {
-      return;
-    }
     startAnimation();
-  }, [isExpanded, startAnimation, noAnimation]);
+  }, [isExpanded, startAnimation]);
 
-  const rotate = noRotation
-    ? '0deg'
-    : animation.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['0deg', '-180deg'],
-      });
+  const rotate =
+    noRotation || (typeof animation === 'boolean' && animation)
+      ? '0deg'
+      : transition.interpolate({
+          inputRange: [0, 1],
+          outputRange: ['0deg', '-180deg'],
+        });
 
   return (
     <>
-      <ListItem {...props}>
-        {React.isValidElement(content) ? content : <ListItem.Content />}
+      <ListItemBase {...props}>
+        {React.isValidElement(content) ? content : <ListItemContent />}
         {!noIcon && (
           <Animated.View
             style={{
@@ -79,18 +86,15 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
             )}
           </Animated.View>
         )}
-      </ListItem>
+      </ListItemBase>
       <Animated.View
         style={[
-          {
-            maxHeight: animation.interpolate({
+          Boolean(animation) && {
+            maxHeight: transition.interpolate({
               inputRange: [0, 1],
               outputRange: ['0%', '100%'],
             }),
-            opacity: animation,
-          },
-          noAnimation && {
-            maxHeight: isExpanded ? '100%' : '0%',
+            opacity: transition,
           },
         ]}
       >
