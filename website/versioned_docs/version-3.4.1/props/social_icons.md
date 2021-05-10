@@ -1,6 +1,5 @@
 ## Props
 
-- [`activityIndicatorStyle`](#activityindicatorstyle)
 - [`button`](#button)
 - [`Component`](#component)
 - [`disabled`](#disabled)
@@ -24,16 +23,6 @@
 ---
 
 ## Reference
-
-### `activityIndicatorStyle`
-
-style to render when in loading state
-
-|  Type  | Default |
-| :----: | :-----: |
-| object |  none   |
-
----
 
 ### `button`
 
