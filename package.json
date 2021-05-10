@@ -24,7 +24,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog -p"
+    "changelog": "auto-changelog -p",
+    "docs": "cd website && yarn start"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -104,7 +105,7 @@
       "__DEV__": true
     },
     "setupFilesAfterEnv": [
-      "<rootDir>/.ci/setupTests.js"
+      "<rootDir>/.ci/setupTests.ts"
     ],
     "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
     "transform": {

@@ -19,5 +19,11 @@
     "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^2.0.0-alpha.75",
+    "@tsconfig/docusaurus": "^1.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.3"
   }
 }
