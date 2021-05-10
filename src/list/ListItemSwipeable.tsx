@@ -8,7 +8,7 @@ import {
   ViewStyle,
   PanResponderGestureState,
 } from 'react-native';
-import ListItem, { ListItemProps } from './ListItem';
+import ListItemBase, { ListItemProps } from './ListItemBase';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type ListItemSwipeableProps = ListItemProps & {
@@ -142,7 +142,7 @@ const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
         }}
         {..._panResponder.panHandlers}
       >
-        <ListItem {...props}>{children}</ListItem>
+        <ListItemBase {...props}>{children}</ListItemBase>
       </Animated.View>
     </View>
   );

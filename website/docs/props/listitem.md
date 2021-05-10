@@ -53,10 +53,9 @@
 - [`icon`](#icon)
 - [`expandIcon`](#expandicon)
 - [`content`](#content)
-- [`noAnimation`](#noanimation)
 - [`noIcon`](#noicon)
 - [`noRotation`](#norotation)
-- [`animationDuration`](#animationduration)
+- [`animation`](#animation)
 
 > Also Receives all [ListItem](#props) props.
 
@@ -215,16 +214,6 @@ Similar to ListItem's child
 
 ---
 
-### `noAnimation`
-
-Don't show animations to be played or not
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
 ### `noIcon`
 
 Don't show accordion icon
@@ -245,13 +234,13 @@ Don't rotate when Accordion is expanded
 
 ---
 
-### `animationDuration`
+### `animation`
 
-Duration of accordion expansion
+Boolean to show animation,
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   350   |
+|       Type       |            Default             |
+| :--------------: | :----------------------------: |
+| Object or number | `{type:"timing",duration:350}` |
 
 ---
 
