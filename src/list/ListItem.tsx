@@ -18,6 +18,7 @@ import ListItemCheckBox from './ListItemCheckBox';
 import ListItemButtonGroup from './ListItemButtonGroup';
 import ListItemTitle from './ListItemTitle';
 import ListItemSubtitle from './ListItemSubtitle';
+import ListItemSwipeable from './ListItemSwipeable';
 import ListItemAccordion from './ListItemAccordion';
 import { RneFunctionComponent } from '../helpers';
 
@@ -40,6 +41,7 @@ interface ListItem extends RneFunctionComponent<ListItemProps> {
   Input: typeof ListItemInput;
   Title: typeof ListItemTitle;
   Subtitle: typeof ListItemSubtitle;
+  Swipeable: typeof ListItemSwipeable;
   CheckBox: typeof ListItemCheckBox;
   ButtonGroup: typeof ListItemButtonGroup;
 }
@@ -146,6 +148,7 @@ const ThemedListItem = Object.assign(withTheme(ListItem, 'ListItem'), {
   Input: ListItemInput,
   Title: ListItemTitle,
   Subtitle: ListItemSubtitle,
+  Swipeable: ListItemSwipeable,
   CheckBox: ListItemCheckBox,
   ButtonGroup: ListItemButtonGroup,
 });

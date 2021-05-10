@@ -9,6 +9,7 @@ import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
 import ListItem, { ListItemProps } from './list/ListItem';
 import { ListItemAccordionProps } from './list/ListItemAccordion';
+import { ListItemSwipeableProps } from './list/ListItemSwipeable';
 import SocialIcon, { SocialIconProps } from './social/SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
@@ -154,4 +155,5 @@ export type {
   TabItemProps,
   TabProps,
   ListItemAccordionProps,
+  ListItemSwipeableProps,
 };
