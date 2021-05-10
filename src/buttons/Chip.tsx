@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 import Button, { ButtonProps } from './Button';
 
 export type ChipProps = Omit<
@@ -10,7 +11,7 @@ export type ChipProps = Omit<
   type?: 'solid' | 'outline';
 };
 
-const Chip: React.FunctionComponent<ChipProps> = (props: ChipProps) => {
+const Chip: RneFunctionComponent<ChipProps> = (props: ChipProps) => {
   const { titleStyle, buttonStyle, ...rest } = props;
 
   return (

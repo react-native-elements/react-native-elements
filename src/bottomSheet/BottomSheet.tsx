@@ -16,17 +16,12 @@ export type BottomSheetProps = {
   containerStyle?: StyleProp<ViewStyle>;
   modalProps?: ModalProps;
   isVisible?: boolean;
-} & typeof defaultProps;
-
-const defaultProps = {
-  modalProps: {},
-  isVisible: false,
 };
 
 const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   containerStyle,
-  isVisible,
-  modalProps,
+  isVisible = false,
+  modalProps = {},
   children,
   ...props
 }) => {
@@ -60,8 +55,6 @@ const styles = StyleSheet.create({
   },
   listContainer: { backgroundColor: 'white' },
 });
-
-BottomSheet.defaultProps = defaultProps;
 
 export { BottomSheet };
 export default withTheme(BottomSheet, 'BottomSheet');

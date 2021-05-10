@@ -11,6 +11,7 @@ import {
   TextStyle,
   ImageProps,
   ImageURISource,
+  ImageSourcePropType,
 } from 'react-native';
 import { withTheme } from '../config';
 import Image from '../image/Image';
@@ -24,7 +25,7 @@ export type TileProps = TouchableOpacityProps &
     title?: string;
     icon?: IconObject & IconProps;
     caption?: React.ReactNode;
-    imageSrc?: ImageURISource | string | number;
+    imageSrc?: ImageSourcePropType | string | number;
     activeOpacity?: number;
     containerStyle?: StyleProp<ViewStyle>;
     imageContainerStyle?: StyleProp<ViewStyle>;
