@@ -25,7 +25,6 @@ The current list of available icons sets are:
 - [feather](https://feathericons.com/)
 - [font-awesome](https://fontawesome.com/v4.7.0/)
 - [font-awesome-5](https://fontawesome.com/)
-- [font-awesome-5-pro](https://fontawesome.com/pro)
 - [fontisto](https://www.fontisto.com/icons)
 - [foundation](http://zurb.com/playground/foundation-icon-fonts-3)
 - [ionicon](http://ionicons.com/)
