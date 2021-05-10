@@ -23,14 +23,14 @@ const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
   size: 20,
   name: 'ios-search',
-  color: theme.colors.platform.ios.grey,
+  color: theme?.colors?.platform?.ios?.grey,
 });
 
 const defaultClearIcon = (theme: Theme) => ({
   type: 'ionicon',
   name: 'ios-close-circle',
   size: 20,
-  color: theme.colors.platform.ios.grey,
+  color: theme?.colors?.platform?.ios?.grey,
 });
 
 export type SearchBarIosProps = InputProps &
@@ -168,7 +168,7 @@ class SearchBar extends Component<
       <View
         style={StyleSheet.flatten([
           styles.container,
-          { backgroundColor: theme.colors.white },
+          { backgroundColor: theme?.colors?.white },
           containerStyle,
         ])}
       >
@@ -188,8 +188,12 @@ class SearchBar extends Component<
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
-            { backgroundColor: theme.colors.platform.ios.searchBg },
-            hasFocus && { marginRight: this.state.cancelButtonWidth },
+            { backgroundColor: theme?.colors?.platform?.ios?.searchBg },
+            hasFocus && {
+              marginRight: this.state.cancelButtonWidth
+                ? this.state.cancelButtonWidth
+                : 0,
+            },
             inputContainerStyle,
           ])}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon(theme))}
@@ -198,7 +202,7 @@ class SearchBar extends Component<
             leftIconContainerStyle,
           ])}
           placeholderTextColor={
-            placeholderTextColor || theme.colors.platform.ios.grey
+            placeholderTextColor || theme?.colors?.platform?.ios?.grey
           }
           rightIcon={
             <View style={{ flexDirection: 'row' }}>
@@ -228,7 +232,9 @@ class SearchBar extends Component<
             styles.cancelButtonContainer,
             {
               opacity: this.state.cancelButtonWidth === null ? 0 : 1,
-              right: hasFocus ? 0 : -this.state.cancelButtonWidth,
+              right: hasFocus
+                ? 0
+                : this.state.cancelButtonWidth && -this.state.cancelButtonWidth,
             },
           ])}
           onLayout={(event) =>

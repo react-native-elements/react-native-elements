@@ -78,7 +78,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -198,7 +198,7 @@ exports[`iOS SearchBar component Props cancel button Disabled cancelButtonProps 
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -320,7 +320,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonProps 1
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -443,7 +443,7 @@ exports[`iOS SearchBar component Props cancel button Enabled cancelButtonTitle 1
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -560,7 +560,7 @@ exports[`iOS SearchBar component Props clearIcon and without clearIcon 1`] = `
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -677,7 +677,7 @@ exports[`iOS SearchBar component Props clearIcon and without custom clearIcon 1`
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -794,7 +794,7 @@ exports[`iOS SearchBar component Props clearIcon and without no clearIcon 1`] = 
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -905,7 +905,7 @@ exports[`iOS SearchBar component Props searchIcon and without custom searchIcon 
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -1015,7 +1015,7 @@ exports[`iOS SearchBar component Props searchIcon and without no searchIcon 1`] 
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -1133,7 +1133,7 @@ exports[`iOS SearchBar component Props searchIcon and without searchIcon 1`] = `
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -1264,7 +1264,7 @@ exports[`iOS SearchBar component Props showLoading, loadingProps 1`] = `
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -1389,7 +1389,7 @@ exports[`iOS SearchBar component should render with a preset value 1`] = `
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
@@ -1506,7 +1506,7 @@ exports[`iOS SearchBar component should render without issues 1`] = `
       Object {
         "opacity": 0,
         "position": "absolute",
-        "right": -0,
+        "right": null,
       }
     }
   >
