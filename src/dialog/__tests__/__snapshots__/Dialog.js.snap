@@ -138,8 +138,37 @@ exports[`Dialog Component should apply values from theme 1`] = `
 </Modal>
 `;
 
-exports[`Dialog Component should render without issues 1`] = `
+exports[`Dialog Component should render with title 1`] = `
 <Themed.Overlay
+  isVisible={true}
+  overlayStyle={
+    Object {
+      "padding": 20,
+      "width": "75%",
+    }
+  }
+  testID="Internal__Overlay"
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Component
+      title="Dialog Title"
+    />
+    <Text>
+      This is a test dialog
+    </Text>
+  </View>
+</Themed.Overlay>
+`;
+
+exports[`Dialog Component should render without any children 1`] = `
+<Themed.Overlay
+  isVisible={true}
   overlayStyle={
     Object {
       "padding": 20,
@@ -155,5 +184,33 @@ exports[`Dialog Component should render without issues 1`] = `
       }
     }
   />
+</Themed.Overlay>
+`;
+
+exports[`Dialog Component should render without buttons 1`] = `
+<Themed.Overlay
+  isVisible={true}
+  overlayStyle={
+    Object {
+      "padding": 20,
+      "width": "75%",
+    }
+  }
+  testID="Internal__Overlay"
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 5,
+      }
+    }
+  >
+    <Text>
+      This is a test dialog
+    </Text>
+    <Component>
+      <Component />
+    </Component>
+  </View>
 </Themed.Overlay>
 `;
