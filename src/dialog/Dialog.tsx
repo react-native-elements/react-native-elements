@@ -6,6 +6,7 @@ import { withTheme } from '../config';
 import DialogLoading from './DialogLoading';
 import DialogTitle from './DialogTitle';
 import DialogButton from './DialogButton';
+import DialogActions from './DialogActions';
 
 export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
   theme?: Theme;
@@ -15,6 +16,7 @@ export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
 interface Dialog extends React.FunctionComponent<DialogProps> {
   Loading: typeof DialogLoading;
   Title: typeof DialogTitle;
+  Actions: typeof DialogActions;
   Button: typeof DialogButton;
 }
 
@@ -103,6 +105,7 @@ export { Dialog };
 const ThemedDialog = Object.assign(withTheme(Dialog, 'Dialog'), {
   Loading: DialogLoading,
   Title: DialogTitle,
+  Actions: DialogActions,
   Button: DialogButton,
 });
 
