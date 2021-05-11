@@ -36,7 +36,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   errorProps?: object;
   errorStyle?: object | any[];
   errorMessage?: string;
-  label?: React.ReactNode;
+  label?: string | React.ReactNode;
   labelStyle?: object | any[];
   labelProps?: object;
   renderErrorMessage?: boolean;
