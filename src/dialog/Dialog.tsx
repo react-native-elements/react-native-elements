@@ -102,7 +102,7 @@ export { Dialog };
 
 const ThemedDialog = Object.assign(withTheme(Dialog, 'Dialog'), {
   Loading: DialogLoading,
-  Tite: DialogTitle,
+  Title: DialogTitle,
   Button: DialogButton,
 });
 
