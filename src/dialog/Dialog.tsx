@@ -1,53 +1,16 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextStyle,
-  StyleProp,
-  ViewStyle,
-  ActivityIndicatorProps,
-  ActivityIndicator,
-  Platform,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Overlay, { OverlayProps } from '../overlay/Overlay';
-import Button, { ButtonProps } from '../buttons/Button';
 import { Theme } from '../config/theme';
 import { withTheme } from '../config';
-import { TextProps } from '../text/Text';
 
 export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
-  loading?: boolean;
-  loadingStyle?: StyleProp<ViewStyle>;
-  loadingProps?: ActivityIndicatorProps;
-  title?: string;
-  titleStyle?: StyleProp<TextStyle>;
-  titleProps?: TextProps;
-  noButtons?: boolean;
-  primary?: string;
-  primaryOnPress?(): void;
-  primaryButtonProps?: ButtonProps;
-  secondary?: string;
-  secondaryOnPress?(): void;
-  secondaryButtonProps?: ButtonProps;
   theme?: Theme;
+  children?: any;
 };
 
 const Dialog: React.FunctionComponent<DialogProps> = ({
   children,
-  loading,
-  loadingStyle,
-  loadingProps,
-  title,
-  titleStyle,
-  titleProps,
-  noButtons,
-  primary,
-  primaryOnPress,
-  primaryButtonProps,
-  secondary,
-  secondaryOnPress,
-  secondaryButtonProps,
   theme,
   overlayStyle,
   onBackdropPress,
@@ -60,7 +23,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
       overlayStyle={StyleSheet.flatten([styles.dialog, overlayStyle])}
       testID="Internal__Overlay"
     >
-      {loading && (
+      {/* {loading && (
         <View style={styles.loadingView}>
           <ActivityIndicator
             style={StyleSheet.flatten([styles.loading, loadingStyle])}
@@ -69,20 +32,20 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
             {...loadingProps}
           />
         </View>
-      )}
+      )} */}
 
-      {title && !loading && (
+      {/* {title && !loading && (
         <Text
           style={StyleSheet.flatten([styles.title, titleStyle])}
           {...titleProps}
         >
           {title}
         </Text>
-      )}
+      )} */}
 
       <View style={styles.childrenContainer}>{children}</View>
 
-      {!loading && !noButtons && (
+      {/* {!loading && !noButtons && (
         <View style={styles.buttonView} testID="Button__View">
           <Button
             style={{ marginLeft: 5 }}
@@ -108,32 +71,15 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
             />
           ) : null}
         </View>
-      )}
+      )} */}
     </Overlay>
   );
-};
-
-Dialog.defaultProps = {
-  loading: false,
-  noButtons: false,
-  primary: 'CLOSE',
-  secondary: null,
-  primaryOnPress: null,
-  secondaryOnPress: () => null,
-  primaryButtonProps: { type: 'clear' },
-  secondaryButtonProps: { type: 'clear' },
-  loadingProps: { size: 'large' },
 };
 
 const styles = StyleSheet.create({
   dialog: {
     width: '75%',
     padding: 20,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: Platform.OS === 'ios' ? '600' : '700',
-    marginBottom: 10,
   },
   childrenContainer: {
     marginBottom: 5,
@@ -143,18 +89,6 @@ const styles = StyleSheet.create({
     marginRight: -35,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
-  },
-  buttonTitle: {
-    fontSize: 15,
-    fontWeight: '500',
-  },
-  loading: {
-    marginVertical: 20,
-  },
-  loadingView: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 

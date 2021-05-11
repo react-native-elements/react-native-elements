@@ -133,90 +133,6 @@ exports[`Dialog Component should apply values from theme 1`] = `
           }
         }
       />
-      <View
-        style={
-          Object {
-            "flexDirection": "row-reverse",
-            "justifyContent": "flex-start",
-            "marginRight": -35,
-            "marginTop": 10,
-          }
-        }
-        testID="Button__View"
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "borderRadius": 3,
-                "overflow": "hidden",
-              },
-              Object {
-                "borderRadius": 3,
-              },
-              Object {
-                "width": "auto",
-              },
-              false,
-            ]
-          }
-        >
-          <View
-            accessibilityRole="button"
-            accessibilityState={
-              Object {
-                "busy": false,
-                "disabled": false,
-              }
-            }
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "marginLeft": 5,
-                "opacity": 1,
-              }
-            }
-            testID="Primary__Button"
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#2089dc",
-                  "borderRadius": 3,
-                  "borderWidth": 0,
-                  "flexDirection": "row",
-                  "justifyContent": "center",
-                  "padding": 8,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#2089dc",
-                    "fontSize": 15,
-                    "fontWeight": "500",
-                    "paddingVertical": 1,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                CLOSE
-              </Text>
-            </View>
-          </View>
-        </View>
-      </View>
     </View>
   </View>
 </Modal>
@@ -239,38 +155,5 @@ exports[`Dialog Component should render without issues 1`] = `
       }
     }
   />
-  <View
-    style={
-      Object {
-        "flexDirection": "row-reverse",
-        "justifyContent": "flex-start",
-        "marginRight": -35,
-        "marginTop": 10,
-      }
-    }
-    testID="Button__View"
-  >
-    <Themed.Button
-      containerStyle={
-        Object {
-          "width": "auto",
-        }
-      }
-      style={
-        Object {
-          "marginLeft": 5,
-        }
-      }
-      testID="Primary__Button"
-      title="CLOSE"
-      titleStyle={
-        Object {
-          "fontSize": 15,
-          "fontWeight": "500",
-        }
-      }
-      type="clear"
-    />
-  </View>
 </Themed.Overlay>
 `;
