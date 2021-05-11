@@ -61,40 +61,40 @@ const DialogExample = () => {
   return (
     <View>
       <Button title="Open Simple Dialog" onPress={toggleDialog1} />
-
       <Button
         title="Open Mutli Action Dialog"
         onPress={toggleDialog2}
         buttonStyle={styles.button}
       />
-
       <Button
         title="Open Loading Dialog"
         onPress={toggleDialog3}
         buttonStyle={styles.button}
       />
-
-      <Dialog
-        isVisible={visible1}
-        onBackdropPress={toggleDialog1}
-        title="Dialog Title"
-      >
+      // Simple Dialog
+      <Dialog isVisible={visible1} onBackdropPress={toggleDialog1}>
+        <Dialog.Title title="Dialog Title" />
         <Text>Dialog body text. Add relevant information here.</Text>
       </Dialog>
-
-      <Dialog
-        isVisible={visible2}
-        onBackdropPress={toggleDialog2}
-        primary="Action 1"
-        primaryOnPress={() => console.log('Primary Action Clicked!')}
-        secondary="Action 2"
-        secondaryOnPress={() => console.log('Secondary Action Clicked!')}
-        title="Dialog Title"
-      >
+      // Multi-Action Dialog
+      <Dialog isVisible={visible2} onBackdropPress={toggleDialog2}>
+        <Dialog.Title title="Dialog Title" />
         <Text>Dialog body text. Add relevant information here.</Text>
+        <Dialog.Actions>
+          <Dialog.Button
+            title="ACTION 1"
+            onPress={() => console.log('Primary Action Clicked!')}
+          />
+          <Dialog.Button
+            title="ACTION 2"
+            onPress={() => console.log('Secondary Action Clicked!')}
+          />
+        </Dialog.Actions>
       </Dialog>
-
-      <Dialog isVisible={visible3} onBackdropPress={toggleDialog3} loading />
+      // Loading Dialog
+      <Dialog isVisible={visible3} onBackdropPress={toggleDialog3}>
+        <Dialog.Loading />
+      </Dialog>
     </View>
   );
 };

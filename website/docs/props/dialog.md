@@ -4,21 +4,35 @@
 > [Overlay](https://reactnativeelements.com/docs/overlay#props) props except `fullscreen`
 
 - [`isVisible`](#isvisible)
-- [`loading`](#loading)
 - [`loadingStyle`](#loadingStyle)
 - [`loadingProps`](#loadingProps)
+- [`onBackdropPress`](#onBackdropPress)
+- [`overlayStyle`](#overlayStyle)
+- [`theme`](#theme)
+- [`children`](#children)
+
+---
+
+## Child Components
+
+### Dialog.Title
+
 - [`title`](#title)
 - [`titleStyle`](#titleStyle)
 - [`titleProps`](#titleProps)
-- [`noButtons`](#noButtons)
-- [`primary`](#primary)
-- [`primaryOnPress`](#primaryOnPress)
-- [`primaryButtonProps`](#primaryButtonProps)
-- [`secondary`](#secondary)
-- [`secondaryOnPress`](#secondaryOnPress)
-- [`secondaryButtonProps`](#secondaryButtonProps)
-- [`onBackdropPress`](#onBackdropPress)
-- [`overlayStyle`](#overlayStyle)
+
+### Dialog.Loading
+
+- [`loadingStyle`](#loadingStyle)
+- [`loadingProps`](#loadingProps)
+
+### Dialog.Actions
+
+- [`children`](#children)
+
+### Dialog.Button
+
+> Receives all [Button](button.md#props) props.
 
 ---
 
@@ -27,16 +41,6 @@
 ### `isVisible`
 
 If true, the dialog is visible
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `loading`
-
-If true, loading dialog is rendered (optional)
 
 |  Type   | Default |
 | :-----: | :-----: |
@@ -94,76 +98,6 @@ Add additional props for Text component (optional)
 
 ---
 
-### `noButtons`
-
-If true, Dialog is rendered without action buttons (optional)
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
-### `primary`
-
-Title for the primary action button
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  CLOSE  |
-
----
-
-### `primaryOnPress`
-
-Handler for the primary button press
-
-|   Type   |     Default     |
-| :------: | :-------------: |
-| function | onBackdropPress |
-
----
-
-### `primaryButtonProps`
-
-Add additional props for the primary Button component (optional)
-
-|                                  Type                                  | Default |
-| :--------------------------------------------------------------------: | :-----: |
-| {[...Button props](https://reactnativeelements.com/docs/button#props)} |  none   |
-
----
-
-### `secondary`
-
-Title for the secondary action button
-
-|  Type  | Default |
-| :----: | :-----: |
-| string |  none   |
-
----
-
-### `secondaryOnPress`
-
-Handler for the secondary button press
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
-
-### `secondaryButtonProps`
-
-Add additional props for the secondary Button component (optional)
-
-|                                  Type                                  | Default |
-| :--------------------------------------------------------------------: | :-----: |
-| {[...Button props](https://reactnativeelements.com/docs/button#props)} |  none   |
-
----
-
 ### `onBackdropPress`
 
 Handler for backdrop press
@@ -181,3 +115,25 @@ Add dditional styling to the internal Overlay component (optional)
 |        Type         |    Default     |
 | :-----------------: | :------------: |
 | View Style (object) | Internal Style |
+
+---
+
+### `theme`
+
+Provides a theme to the dialog. (optional)
+
+|  Type  |    Default     |
+| :----: | :------------: |
+| string | Theme(Primary) |
+
+---
+
+### `children`
+
+Enclosed components. (optional)
+
+|     Type      | Default |
+| :-----------: | :-----: |
+| React Element |  none   |
+
+---
