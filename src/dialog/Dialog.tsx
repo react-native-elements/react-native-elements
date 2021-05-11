@@ -3,27 +3,32 @@ import { View, StyleSheet } from 'react-native';
 import Overlay, { OverlayProps } from '../overlay/Overlay';
 import { Theme } from '../config/theme';
 import { withTheme } from '../config';
+import DialogLoading from './DialogLoading';
+import DialogTitle from './DialogTitle';
+import DialogButton from './DialogButton';
 
 export type DialogProps = Omit<OverlayProps, 'fullScreen'> & {
   theme?: Theme;
   children?: any;
 };
 
-const Dialog: React.FunctionComponent<DialogProps> = ({
-  children,
-  theme,
-  overlayStyle,
-  onBackdropPress,
-  ...rest
-}) => {
-  return (
-    <Overlay
-      {...rest}
-      onBackdropPress={onBackdropPress}
-      overlayStyle={StyleSheet.flatten([styles.dialog, overlayStyle])}
-      testID="Internal__Overlay"
-    >
-      {/* {loading && (
+interface Dialog extends React.FunctionComponent<DialogProps> {
+  Loading: typeof DialogLoading;
+  Title: typeof DialogTitle;
+  Button: typeof DialogButton;
+}
+
+const Dialog: Dialog = Object.assign(
+  ({ children, theme, overlayStyle, onBackdropPress, isVisible, ...rest }) => {
+    return (
+      <Overlay
+        isVisible={isVisible}
+        onBackdropPress={onBackdropPress}
+        overlayStyle={StyleSheet.flatten([styles.dialog, overlayStyle])}
+        testID="Internal__Overlay"
+        {...rest}
+      >
+        {/* {loading && (
         <View style={styles.loadingView}>
           <ActivityIndicator
             style={StyleSheet.flatten([styles.loading, loadingStyle])}
@@ -34,7 +39,7 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         </View>
       )} */}
 
-      {/* {title && !loading && (
+        {/* {title && !loading && (
         <Text
           style={StyleSheet.flatten([styles.title, titleStyle])}
           {...titleProps}
@@ -43,9 +48,9 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
         </Text>
       )} */}
 
-      <View style={styles.childrenContainer}>{children}</View>
+        <View style={styles.childrenContainer}>{children}</View>
 
-      {/* {!loading && !noButtons && (
+        {/* {!loading && !noButtons && (
         <View style={styles.buttonView} testID="Button__View">
           <Button
             style={{ marginLeft: 5 }}
@@ -72,9 +77,10 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
           ) : null}
         </View>
       )} */}
-    </Overlay>
-  );
-};
+      </Overlay>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   dialog: {
@@ -94,4 +100,10 @@ const styles = StyleSheet.create({
 
 export { Dialog };
 
-export default withTheme<DialogProps, {}>(Dialog, 'Dialog');
+const ThemedDialog = Object.assign(withTheme(Dialog, 'Dialog'), {
+  Loading: DialogLoading,
+  Tite: DialogTitle,
+  Button: DialogButton,
+});
+
+export default ThemedDialog;
