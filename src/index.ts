@@ -31,6 +31,8 @@ import SpeedDial, {
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Dialog, { DialogProps } from './dialog/Dialog';
+import { DialogLoadingProps } from './dialog/DialogLoading';
+import { DialogTitleProps } from './dialog/DialogTitle';
 import Tile, { TileProps } from './tile/Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
@@ -132,6 +134,8 @@ export type {
   ImageProps,
   CardProps,
   DialogProps,
+  DialogLoadingProps,
+  DialogTitleProps,
   TileProps,
   AccessoryProps,
   HeaderProps,
