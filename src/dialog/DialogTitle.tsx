@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(DialogTitle, 'Dialog.Title');
+export default withTheme(DialogTitle, 'DialogTitle');

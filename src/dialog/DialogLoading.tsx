@@ -49,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(DialogLoading, 'Dialog.Loading');
+export default withTheme(DialogLoading, 'DialogLoading');

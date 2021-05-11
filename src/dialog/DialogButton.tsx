@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(DialogButton, 'Dialog.Button');
+export default withTheme(DialogButton, 'DialogButton');
