@@ -479,6 +479,12 @@ const Slider: RneFunctionComponent<SliderProps> = (props) => {
         style,
       ])}
       onLayout={measureContainer}
+      accessibilityRole="adjustable"
+      accessibilityValue={{
+        min: minimumValue,
+        max: maximumValue,
+        now: props.value,
+      }}
     >
       <View
         style={StyleSheet.flatten([

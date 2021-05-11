@@ -4,6 +4,14 @@ exports[`Slider component should apply values from theme 1`] = `[Function]`;
 
 exports[`Slider component should bound the max value 1`] = `
 <View
+  accessibilityRole="adjustable"
+  accessibilityValue={
+    Object {
+      "max": 10,
+      "min": 5,
+      "now": 15,
+    }
+  }
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
@@ -81,6 +89,14 @@ exports[`Slider component should bound the max value 1`] = `
 
 exports[`Slider component should bound the min value 1`] = `
 <View
+  accessibilityRole="adjustable"
+  accessibilityValue={
+    Object {
+      "max": 10,
+      "min": 5,
+      "now": 2,
+    }
+  }
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
@@ -158,6 +174,14 @@ exports[`Slider component should bound the min value 1`] = `
 
 exports[`Slider component should pass down Thumb transform values 1`] = `
 <View
+  accessibilityRole="adjustable"
+  accessibilityValue={
+    Object {
+      "max": 1,
+      "min": 0,
+      "now": 0,
+    }
+  }
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
@@ -244,6 +268,14 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
 
 exports[`Slider component should render vertically 1`] = `
 <View
+  accessibilityRole="adjustable"
+  accessibilityValue={
+    Object {
+      "max": 1,
+      "min": 0,
+      "now": 0,
+    }
+  }
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
@@ -324,6 +356,14 @@ exports[`Slider component should render vertically 1`] = `
 
 exports[`Slider component should render with ThumbTouchRect 1`] = `
 <View
+  accessibilityRole="adjustable"
+  accessibilityValue={
+    Object {
+      "max": 100,
+      "min": 0,
+      "now": 0,
+    }
+  }
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
@@ -414,6 +454,14 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
 
 exports[`Slider component should render without issues 1`] = `
 <View
+  accessibilityRole="adjustable"
+  accessibilityValue={
+    Object {
+      "max": 1,
+      "min": 0,
+      "now": 0,
+    }
+  }
   allowTouchTrack={false}
   animationType="timing"
   onLayout={[Function]}
