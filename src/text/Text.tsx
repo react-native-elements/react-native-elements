@@ -48,7 +48,7 @@ const TextElement: RneFunctionComponent<TextProps> = (props) => {
               ...(fonts.android.regular as TextStyle),
             },
           }),
-          color: theme.colors.black,
+          color: theme?.colors?.black,
         },
         style,
         (h1 || h2 || h3 || h4) && (styles.bold as TextStyle),

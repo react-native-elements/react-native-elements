@@ -115,7 +115,7 @@ exports[`withBadge HOC with options should render without issue even with BadgeP
         "top": 0,
       }
     }
-    status="success"
+    status="error"
     top={0}
     value={1}
   />

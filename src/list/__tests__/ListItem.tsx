@@ -18,7 +18,7 @@ describe('ListItem component', () => {
   it('should render with avatar', () => {
     const component = shallow(
       <ListItem theme={theme} containerStyle={{ backgroundColor: 'peru' }}>
-        <Avatar source="avatar_uri" />
+        <Avatar source={{ uri: 'avatar_uri' }} />
       </ListItem>
     );
     expect(component.length).toBe(1);

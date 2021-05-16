@@ -16,7 +16,11 @@ exports[`ListItem component should render with avatar 1`] = `
     }
   >
     <Memo(AvatarComponent)
-      source="avatar_uri"
+      source={
+        Object {
+          "uri": "avatar_uri",
+        }
+      }
     />
   </PadView>
 </View>
