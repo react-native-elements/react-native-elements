@@ -43,6 +43,7 @@ import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
 import Tab, { TabItemProps, TabProps } from './tab/tab';
+import FloatingInput, { FloatingInputProps } from './input/floatingInput';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -113,6 +114,7 @@ export {
   FAB,
   SpeedDial,
   Tab,
+  FloatingInput,
 };
 export type {
   AvatarProps,
@@ -157,4 +159,5 @@ export type {
   TabProps,
   ListItemAccordionProps,
   ListItemSwipeableProps,
+  FloatingInputProps,
 };
