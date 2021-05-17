@@ -30,55 +30,7 @@ const Dialog: Dialog = Object.assign(
         testID="Internal__Overlay"
         {...rest}
       >
-        {/* {loading && (
-        <View style={styles.loadingView}>
-          <ActivityIndicator
-            style={StyleSheet.flatten([styles.loading, loadingStyle])}
-            color={loadingProps.color ?? theme.colors.primary}
-            size={loadingProps.size ?? 'large'}
-            {...loadingProps}
-          />
-        </View>
-      )} */}
-
-        {/* {title && !loading && (
-        <Text
-          style={StyleSheet.flatten([styles.title, titleStyle])}
-          {...titleProps}
-        >
-          {title}
-        </Text>
-      )} */}
-
         <View style={styles.childrenContainer}>{children}</View>
-
-        {/* {!loading && !noButtons && (
-        <View style={styles.buttonView} testID="Button__View">
-          <Button
-            style={{ marginLeft: 5 }}
-            title={primary.toUpperCase()}
-            titleStyle={styles.buttonTitle}
-            containerStyle={{
-              width: 'auto',
-            }}
-            onPress={primaryOnPress ?? onBackdropPress}
-            testID="Primary__Button"
-            {...primaryButtonProps}
-          />
-          {secondary !== null ? (
-            <Button
-              title={secondary.toUpperCase()}
-              titleStyle={styles.buttonTitle}
-              containerStyle={{
-                width: 'auto',
-              }}
-              onPress={secondaryOnPress}
-              testID="Secondary__Button"
-              {...secondaryButtonProps}
-            />
-          ) : null}
-        </View>
-      )} */}
       </Overlay>
     );
   }
