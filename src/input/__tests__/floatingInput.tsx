@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import theme from '../../config/theme';
-import { FloatingTextInput } from '../FloatingInput';
+import { FloatingTextInput } from '../floatingInput';
 import { Input } from '../Input';
 
 describe('Input component', () => {
