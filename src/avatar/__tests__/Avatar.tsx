@@ -5,6 +5,7 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
 import ThemedAvatar, { Avatar } from '../Avatar';
+
 import { Image } from '../../image/Image';
 
 describe('Avatar Component', () => {
