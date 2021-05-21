@@ -97,7 +97,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     [loading, onPress]
   );
 
-  // Refactor to Pressable
   const TouchableComponentInternal =
     TouchableComponent ||
     Platform.select({
