@@ -15,6 +15,7 @@
       "button_group",
       "card",
       "checkbox",
+      "chip",
       "divider",
       "fab",
       "header",
@@ -36,6 +37,7 @@
       "tile",
       "tooltip"
     ],
+    "Universe Components": ["circularslider"],
     "Repo": ["contributing", "testing", "labels"]
   }
 }

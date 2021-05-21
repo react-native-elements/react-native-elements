@@ -14,6 +14,7 @@
 - [`icon`](#icon)
 - [`iconContainerStyle`](#iconcontainerstyle)
 - [`iconRight`](#iconright)
+- [`iconPosition`](#iconposition)
 - [`linearGradientProps`](#lineargradientprops)
 - [`loading`](#loading)
 - [`loadingProps`](#loadingprops)
@@ -109,6 +110,16 @@ displays Icon to the right of title. Needs to be used along with `icon` prop
 |  Type   | Default |
 | :-----: | :-----: |
 | boolean |  false  |
+
+---
+
+### `iconPosition`
+
+displays Icon to the position mentioned. Needs to be used along with `icon` prop
+
+|  Type  | Default |
+| :----: | :-----: |
+| string |  left   |
 
 ---
 

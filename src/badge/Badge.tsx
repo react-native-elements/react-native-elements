@@ -7,6 +7,7 @@ import {
   TextProps,
   StyleProp,
   ViewStyle,
+  TextStyle,
 } from 'react-native';
 import { withTheme } from '../config';
 import { renderNode, RneFunctionComponent } from '../helpers';
@@ -15,7 +16,7 @@ export type BadgeProps = {
   containerStyle?: StyleProp<ViewStyle>;
   badgeStyle?: StyleProp<ViewStyle>;
   textProps?: TextProps;
-  textStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
   value?: React.ReactNode;
   onPress?: (...args: any[]) => any;
   Component?: typeof React.Component;

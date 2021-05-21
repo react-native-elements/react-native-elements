@@ -78,6 +78,10 @@ import { Button } from 'react-native-elements';
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
+## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+
+- [x] [Circular Slider](https://reactnativeelements.com/docs/)
+
 ## React Native Web support
 
 As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
