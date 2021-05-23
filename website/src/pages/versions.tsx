@@ -12,7 +12,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import versions from '../../versions.json';
 
-const VersionItem = props => {
+type VersionItemTypes = {
+  version: string;
+  baseUrl: string;
+};
+
+const VersionItem: React.FunctionComponent<VersionItemTypes> = (props) => {
   const version = props.version;
   const versionName = version === 'next' ? 'Next' : version;
 
@@ -47,7 +52,7 @@ const VersionItem = props => {
       <td>{releaseNotesLink}</td>
     </tr>
   );
-}
+};
 
 function docUrl(version) {
   if (versions[0] === version) {
@@ -56,7 +61,9 @@ function docUrl(version) {
   return useBaseUrl(`docs/${version}/overview`);
 }
 
-const ReleaseNotes = ({ version }) => (
+const ReleaseNotes: React.FunctionComponent<{ version: string }> = ({
+  version,
+}) => (
   <a
     href={`https://github.com/react-native-elements/react-native-elements/releases/tag/v${version}`}
     target="_blank"
@@ -65,12 +72,14 @@ const ReleaseNotes = ({ version }) => (
   </a>
 );
 
-const Documentation = ({ version }) => <a href={docUrl(version)}>Components</a>;
+const Documentation: React.FunctionComponent<{ version: string }> = ({
+  version,
+}) => <a href={docUrl(version)}>Components</a>;
 
-const Versions = props => {
-  const {siteConfig} = useDocusaurusContext();
-  const preReleaseVersions = versions.filter(a => a.includes('beta'));
-  let stableVersions = versions.filter(a => !a.includes('beta'));
+const Versions: React.FunctionComponent<{}> = (props) => {
+  const { siteConfig } = useDocusaurusContext();
+  const preReleaseVersions = versions.filter((a) => a.includes('beta'));
+  let stableVersions = versions.filter((a) => !a.includes('beta'));
   const pastVersions =
     stableVersions.length > 1 ? stableVersions.splice(1) : [];
 
@@ -82,17 +91,16 @@ const Versions = props => {
         </header>
 
         <p style={{ maxWidth: 640 }}>
-          New versions of this project are released ever so often. You will
-          see versions here for releases that either contain features or
-          breaking changes. Since patch releases have no changes to the api,
-          they aren't posted here.
+          New versions of this project are released ever so often. You will see
+          versions here for releases that either contain features or breaking
+          changes. Since patch releases have no changes to the api, they aren't
+          posted here.
         </p>
 
         <section>
           <h3>Latest versions</h3>
           <p>
-            Contains changes that are up and coming in the next feature
-            release.
+            Contains changes that are up and coming in the next feature release.
           </p>
 
           <table className="versions">
@@ -108,26 +116,26 @@ const Versions = props => {
         </section>
 
         {stableVersions && stableVersions.length > 0 && (
-        <section>
-          <h3>Current version (Stable)</h3>
-          <p>
-            This is the version that is configured automatically when you
-            first install this project.
-          </p>
-          <table className="versions">
-            <tbody>
-              {stableVersions.map(function(version,index) {
-                return (
-                  <VersionItem
-                    key={index}
-                    version={version}
-                    baseUrl={siteConfig.baseUrl}
-                  />
-                );
-              })}
-            </tbody>
-          </table>
-        </section>
+          <section>
+            <h3>Current version (Stable)</h3>
+            <p>
+              This is the version that is configured automatically when you
+              first install this project.
+            </p>
+            <table className="versions">
+              <tbody>
+                {stableVersions.map(function (version, index) {
+                  return (
+                    <VersionItem
+                      key={index}
+                      version={version}
+                      baseUrl={siteConfig.baseUrl}
+                    />
+                  );
+                })}
+              </tbody>
+            </table>
+          </section>
         )}
 
         {preReleaseVersions && preReleaseVersions.length > 0 && (
@@ -140,7 +148,7 @@ const Versions = props => {
 
             <table className="versions">
               <tbody>
-                {preReleaseVersions.map((a,index) => (
+                {preReleaseVersions.map((a, index) => (
                   <tr key={index}>
                     <th>{a}</th>
                     <td>
@@ -167,7 +175,7 @@ const Versions = props => {
 
             <table className="versions">
               <tbody>
-                {pastVersions.map(version => (
+                {pastVersions.map((version) => (
                   <tr key={version}>
                     <th>{version}</th>
                     <td>
@@ -185,6 +193,6 @@ const Versions = props => {
       </div>
     </Layout>
   );
-}
+};
 
 export default Versions;
