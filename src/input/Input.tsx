@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts, withTheme } from '../config';
-import Icon from '../icons/Icon';
+import Icon, { IconNode } from '../icons/Icon';
 import { ThemeProps } from '../config';
 const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
   renderNode(Text, content, {
@@ -27,17 +27,17 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   disabled?: boolean;
   disabledInputStyle?: StyleProp<TextStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
-  leftIcon?: any;
+  leftIcon?: IconNode;
   leftIconContainerStyle?: StyleProp<ViewStyle>;
-  rightIcon?: any;
+  rightIcon?: IconNode;
   rightIconContainerStyle?: StyleProp<ViewStyle>;
-  inputStyle?: object | any[];
+  inputStyle?: StyleProp<TextStyle>;
   InputComponent?: typeof React.Component;
   errorProps?: object;
-  errorStyle?: object | any[];
+  errorStyle?: StyleProp<TextStyle>;
   errorMessage?: string;
-  label?: React.ReactNode;
-  labelStyle?: object | any[];
+  label?: string | React.ReactNode;
+  labelStyle?: StyleProp<TextStyle>;
   labelProps?: object;
   renderErrorMessage?: boolean;
 };
@@ -163,7 +163,6 @@ class Input extends React.Component<
             }}
             style={StyleSheet.flatten([
               {
-                alignSelf: 'center',
                 color: theme?.colors?.black,
                 fontSize: 18,
                 flex: 1,
