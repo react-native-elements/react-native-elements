@@ -23,6 +23,7 @@ export type ImageProps = RNImageProps & {
   placeholderStyle?: StyleProp<ViewStyle>;
   transition?: boolean;
   transitionDuration?: number;
+  round?: boolean;
 };
 
 type ImageState = {
@@ -71,6 +72,7 @@ class Image extends React.Component<
       style = {},
       ImageComponent = ImageNative,
       children,
+      round = false,
       ...attributes
     } = this.props;
 
@@ -90,6 +92,7 @@ class Image extends React.Component<
           transitionDuration={360}
           {...attributes}
           onLoad={this.onLoad}
+          borderRadius={round ? Number(width) / 2 : undefined}
           style={StyleSheet.flatten([
             StyleSheet.absoluteFill,
             {
