@@ -95,6 +95,21 @@ describe('Image Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render a round image', () => {
+    const component = shallow(
+      <Image
+        source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+        round={true}
+        style={{ width: 100, height: 100 }}
+      />
+    );
+    expect(
+      component.find({ testID: 'RNE__Image' }).props().borderRadius
+    ).toEqual(component.find({ testID: 'RNE__Image' }).props().style.width / 2);
+
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('static methods should be present', () => {
     expect(Image.getSize).toBe(RNImage.getSize);
     expect(Image.getSizeWithHeaders).toBe(RNImage.getSizeWithHeaders);
