@@ -629,6 +629,53 @@ exports[`Button Component should apply values from theme 1`] = `
 </View>
 `;
 
+exports[`Button Component should render a round button 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 3,
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 3,
+      },
+      undefined,
+      false,
+    ]
+  }
+>
+  <ForwardRef
+    accessibilityRole="button"
+    accessibilityState={
+      Object {
+        "busy": false,
+        "disabled": false,
+      }
+    }
+    activeOpacity={0.3}
+    delayPressIn={0}
+    disabled={false}
+    onPress={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#2089dc",
+          "borderColor": "#2089dc",
+          "borderRadius": 30,
+          "borderWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "padding": 8,
+        }
+      }
+    />
+  </ForwardRef>
+</View>
+`;
+
 exports[`Button Component should render without issues 1`] = `
 <View
   style={

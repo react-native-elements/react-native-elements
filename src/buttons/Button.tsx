@@ -51,6 +51,7 @@ export type ButtonProps = TouchableOpacityProps &
     disabledTitleStyle?: StyleProp<TextStyle>;
     raised?: boolean;
     iconPosition?: 'left' | 'right' | 'top' | 'bottom';
+    round?: boolean;
   };
 
 const Button: RneFunctionComponent<ButtonProps> = (props) => {
@@ -85,6 +86,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     ViewComponent = View,
     theme,
     iconPosition = 'left',
+    round = false,
     ...attributes
   } = props;
 
@@ -178,6 +180,9 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
               borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
             },
             buttonStyle,
+            round && {
+              borderRadius: 30,
+            },
             disabled &&
               type === 'solid' && {
                 backgroundColor: theme?.colors?.disabled,

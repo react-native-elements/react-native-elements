@@ -28,6 +28,12 @@ describe('Button Component', () => {
     expect(toJson(component)).toMatchSnapshot();
   });
 
+  it('should render a round button', () => {
+    const component = shallow(<Button theme={theme} round={true} />);
+    expect(component.length).toBe(1);
+    expect(toJson(component)).toMatchSnapshot();
+  });
+
   it('should be call onPress events', () => {
     const onPress = jest.fn();
     console.log = jest.fn();
