@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
 export type DialogActionsProps = {
-  children?: any;
+  children?: ReactNode;
 };
 
-const DialogActions: React.FunctionComponent<DialogActionsProps> = ({
+const DialogActions: RneFunctionComponent<DialogActionsProps> = ({
   children,
 }) => {
   return (
