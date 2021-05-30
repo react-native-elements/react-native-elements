@@ -40,7 +40,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   );
 
   React.useEffect(() => {
-    if (isEqual(themeState, theme)) {
+    if (!isEqual(themeState, theme)) {
       setThemeState((prevState) =>
         deepmerge(
           prevState,
@@ -53,7 +53,8 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
         )
       );
     }
-  }, [theme, defaultColors, themeState]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [theme, useDark]);
 
   const updateTheme = (newTheme: RecursivePartial<FullTheme>) => {
     setThemeState(deepmerge(themeState, newTheme));
