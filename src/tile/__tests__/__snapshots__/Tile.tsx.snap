@@ -54,7 +54,6 @@ exports[`Tile component should apply custom image props 1`] = `
     }
   >
     <Themed.Text
-      h4={true}
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -62,6 +61,7 @@ exports[`Tile component should apply custom image props 1`] = `
         }
       }
       testID="tileTitle"
+      variant="h4"
     />
   </View>
 </ForwardRef>
@@ -255,6 +255,7 @@ exports[`Tile component should apply styles from theme 1`] = `
     }
   >
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -391,7 +392,6 @@ exports[`Tile component should render tile with icon 1`] = `
     }
   >
     <Themed.Text
-      h4={true}
       style={
         Object {
           "backgroundColor": "yellow",
@@ -399,6 +399,7 @@ exports[`Tile component should render tile with icon 1`] = `
         }
       }
       testID="tileTitle"
+      variant="h4"
     >
       Lorem ipsum dolor sit amet, consectetur
     </Themed.Text>
@@ -461,7 +462,6 @@ exports[`Tile component should render with active opacity 1`] = `
     }
   >
     <Themed.Text
-      h4={true}
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -469,6 +469,7 @@ exports[`Tile component should render with active opacity 1`] = `
         }
       }
       testID="tileTitle"
+      variant="h4"
     />
   </View>
 </ForwardRef>
@@ -528,7 +529,6 @@ exports[`Tile component should render without issues 1`] = `
     }
   >
     <Themed.Text
-      h4={true}
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
@@ -536,6 +536,7 @@ exports[`Tile component should render without issues 1`] = `
         }
       }
       testID="tileTitle"
+      variant="h4"
     />
   </View>
 </ForwardRef>

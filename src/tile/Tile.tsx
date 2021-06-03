@@ -136,7 +136,9 @@ const Tile: RneFunctionComponent<TileProps> = (props) => {
       >
         <Text
           testID="tileTitle"
-          h4={!titleStyle || !('fontSize' in titleStyle)}
+          variant={
+            !titleStyle || !('fontSize' in titleStyle) ? 'h4' : undefined
+          }
           style={StyleSheet.flatten([styles.text, titleStyle && titleStyle])}
           numberOfLines={titleNumberOfLines}
         >

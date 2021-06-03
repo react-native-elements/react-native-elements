@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet, TextStyle } from 'react-native';
+import { Platform, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
 import { fonts, withTheme } from '../config';
 import Text, { TextProps } from '../text/Text';
@@ -14,7 +14,7 @@ const CardTitle: RneFunctionComponent<TextProps> = ({
     <Text
       testID="cardTitle"
       style={
-        StyleSheet.flatten([
+        [
           {
             fontSize: normalize(14),
             color: theme?.colors?.grey1,
@@ -30,7 +30,7 @@ const CardTitle: RneFunctionComponent<TextProps> = ({
             marginBottom: 15,
           },
           style,
-        ]) as TextStyle
+        ] as TextStyle
       }
       {...props}
     />

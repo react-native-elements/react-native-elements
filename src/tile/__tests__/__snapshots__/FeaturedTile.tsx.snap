@@ -54,7 +54,6 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
         }
       />
       <Themed.Text
-        h4={true}
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -64,6 +63,7 @@ exports[`FeaturedTitle component should apply custom image props 1`] = `
           }
         }
         testID="featuredTileTitle"
+        variant="h4"
       />
     </View>
   </ImageBackground>
@@ -153,6 +153,7 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
         }
       />
       <Text
+        accessibilityRole="text"
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -225,7 +226,6 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
         }
       />
       <Themed.Text
-        h4={true}
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -235,6 +235,7 @@ exports[`FeaturedTitle component should render component in caption 1`] = `
           }
         }
         testID="featuredTileTitle"
+        variant="h4"
       />
       <Themed.Avatar
         source={
@@ -302,7 +303,6 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
         }
       />
       <Themed.Text
-        h4={true}
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -312,6 +312,7 @@ exports[`FeaturedTitle component should render string in caption 1`] = `
           }
         }
         testID="featuredTileTitle"
+        variant="h4"
       />
       <Themed.Text
         style={
@@ -391,7 +392,6 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
         />
       </View>
       <Themed.Text
-        h4={true}
         style={
           Object {
             "backgroundColor": "yellow",
@@ -401,6 +401,7 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
           }
         }
         testID="featuredTileTitle"
+        variant="h4"
       />
     </View>
   </ImageBackground>
@@ -463,7 +464,6 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
         }
       />
       <Themed.Text
-        h4={true}
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -473,6 +473,7 @@ exports[`FeaturedTitle component should render with width and height 1`] = `
           }
         }
         testID="featuredTileTitle"
+        variant="h4"
       />
     </View>
   </ImageBackground>
@@ -533,7 +534,6 @@ exports[`FeaturedTitle component should render without issues 1`] = `
         }
       />
       <Themed.Text
-        h4={true}
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
@@ -543,6 +543,7 @@ exports[`FeaturedTitle component should render without issues 1`] = `
           }
         }
         testID="featuredTileTitle"
+        variant="h4"
       />
     </View>
   </ImageBackground>

@@ -213,6 +213,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
     }
   >
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "color": "#2089dc",
@@ -226,6 +227,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       ALL YOU CAN EAT
     </Text>
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "color": "#242424",
@@ -240,6 +242,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       $0
     </Text>
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "color": "#86939e",
@@ -253,6 +256,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       1 User
     </Text>
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "color": "#86939e",
@@ -266,6 +270,7 @@ exports[`PricingCard component should apply values from theme 1`] = `
       Basic Support
     </Text>
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "color": "#86939e",
