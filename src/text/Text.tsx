@@ -17,6 +17,7 @@ export type TextProps = TextProperties & {
   h2?: boolean;
   h3?: boolean;
   h4?: boolean;
+
   h1Style?: StyleProp<TextStyle>;
   h2Style?: StyleProp<TextStyle>;
   h3Style?: StyleProp<TextStyle>;
