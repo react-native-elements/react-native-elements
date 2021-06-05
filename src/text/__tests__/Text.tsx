@@ -1,7 +1,7 @@
 import React from 'react';
 import Text from '../Text';
 import { renderWithTheme } from '../../../.ci/helper';
-import { FullTheme } from '../../config';
+import { FullTheme, colors } from '../../config';
 
 describe('Text Component', () => {
   it('should render without issues', () => {
@@ -32,6 +32,11 @@ describe('Text Component', () => {
     const { props } = getByRole('text');
     expect(props.style.fontSize).toBeCloseTo(28.3, 0);
   });
+  it('should render caption variant', () => {
+    const { getByRole } = renderWithTheme(<Text variant="caption" />);
+    const { props } = getByRole('text');
+    expect(props.style.color).not.toBe(colors.black);
+  });
 
   it('should have text as children', () => {
     const { getByRole } = renderWithTheme(<Text>Children Text</Text>);
@@ -55,9 +60,7 @@ describe('Text Component', () => {
       Text: {
         variant: 'h4',
         style: {
-          h1: {
-            opacity: 0.5,
-          },
+          opacity: 0.5,
         },
       },
     };
@@ -66,7 +69,7 @@ describe('Text Component', () => {
       localTheme
     );
     const { props } = getByTestId('test-id');
-    expect(props.style.h1.opacity).toBe(0.5);
+    expect(props.style.opacity).toBe(0.5);
   });
 
   it('local props should override style props on theme', () => {
