@@ -56,6 +56,7 @@ import {
 // helpers
 import Text, { TextProps } from './text/Text';
 import {
+  Colors,
   colors,
   ThemeProvider,
   ThemeConsumer,
@@ -123,6 +124,7 @@ export {
 export type {
   AvatarProps,
   ButtonProps,
+  Colors,
   ChipProps,
   InputProps,
   IconProps,
