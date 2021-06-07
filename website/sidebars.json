@@ -1,11 +1,11 @@
 {
   "docs": {
     "It Starts Basic": [
-      "getting_started",
-      "overview",
-      "customization",
-      "web_usage",
-      "troubleshooting"
+      "basic/getting_started",
+      "basic/overview",
+      "basic/customization",
+      "basic/web_usage",
+      "basic/troubleshooting"
     ],
     "Components": [
       "avatar",
@@ -37,7 +37,7 @@
       "tile",
       "tooltip"
     ],
-    "Universe Components": ["circularslider"],
-    "Repo": ["contributing", "testing", "labels"]
+    "Universe Components": ["universe/circularslider"],
+    "Repo": ["repo/contributing", "repo/testing", "repo/labels"]
   }
 }
