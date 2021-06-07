@@ -24,7 +24,7 @@ import { TileProps } from '../tile/Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
 import { SwitchProps } from '../switch/switch';
 import { ListItemAccordionProps } from '../list/ListItemAccordion';
-import { TabItemProps, TabProps } from '../tab/tab';
+import { TabItemProps, TabProps } from '../tab/Tab';
 import { FABProps } from '../buttons/FAB';
 import { SpeedDialProps, SpeedDialActionProps } from '../buttons/SpeedDial';
 import { LinearProgressProps } from '../linearProgress';

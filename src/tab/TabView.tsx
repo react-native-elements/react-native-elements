@@ -4,17 +4,17 @@ import {
   PanResponder,
   View,
   StyleSheet,
-  Text,
   StyleProp,
   ViewStyle,
+  PanResponderGestureState,
+  GestureResponderEvent,
 } from 'react-native';
-import {
-  RneFunctionComponent,
-  ScreenWidth,
-} from 'react-native-elements/dist/helpers';
+import { withTheme } from '../config';
+import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type TabViewItemProps = { containerStyle?: StyleProp<ViewStyle> };
-export const TabViewItem: RneFunctionComponent<TabViewItemProps> = ({
+
+const TabViewItem: RneFunctionComponent<TabViewItemProps> = ({
   children,
   containerStyle,
 }) => {
@@ -26,41 +26,38 @@ export type TabViewProps = {
   onChange?: (value: number) => any;
 };
 
-export const TabView: RneFunctionComponent<TabViewProps> = ({
+const TabView: RneFunctionComponent<TabViewProps> = ({
   children,
   onChange,
   value = 0,
 }) => {
   const { current: translateX } = React.useRef(new Animated.Value(0));
-  const { current: panX } = React.useRef(new Animated.Value(0));
+  const currentIndex = React.useRef(value);
   const length = React.Children.count(children);
+
+  const onPanResponderRelease = (
+    _: GestureResponderEvent,
+    { dx, dy }: PanResponderGestureState
+  ) => {
+    if (
+      (dx > 0 && currentIndex.current <= 0) ||
+      (dx < 0 && currentIndex.current >= length - 1)
+    ) {
+      return;
+    }
+    if (Math.abs(dy) > Math.abs(dx)) {
+      return;
+    }
+    const position = dx / -ScreenWidth;
+    const next = position > value ? Math.ceil(position) : Math.floor(position);
+    onChange?.(currentIndex.current + next);
+  };
 
   const { current: panResponder } = React.useRef(
     PanResponder.create({
       onMoveShouldSetPanResponder: () => true,
       onPanResponderGrant: () => true,
-      onPanResponderMove(_, gestureState) {
-        if (
-          // swiping left
-          (gestureState.dx > 0 && value <= 0) ||
-          // swiping right
-          (gestureState.dx < 0 && value >= length - 1)
-        ) {
-          return;
-        }
-
-        // @ts-expect-error:
-        const position = (panX._offset + gestureState.dx) / -ScreenWidth;
-        const next =
-          position > value ? Math.ceil(position) : Math.floor(position);
-        console.log({ value, next, position });
-        onChange?.(value + next);
-        panX.setValue(gestureState.dx);
-      },
-      onPanResponderRelease(_, {}) {
-        panX.flattenOffset();
-        console.log('saf');
-      },
+      onPanResponderRelease,
     })
   );
 
@@ -76,6 +73,7 @@ export const TabView: RneFunctionComponent<TabViewProps> = ({
 
   React.useEffect(() => {
     animate();
+    currentIndex.current = value;
   }, [animate, value]);
 
   return (
@@ -110,4 +108,18 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     width: ScreenWidth,
   },
+});
+
+interface TabView extends RneFunctionComponent<TabViewProps> {
+  Item: typeof TabViewItem;
+}
+
+const Tab: TabView = Object.assign(TabView, {
+  Item: TabViewItem,
+});
+
+export { Tab };
+
+export default Object.assign(withTheme(TabView, 'Tab'), {
+  Item: withTheme(TabViewItem, 'TabItem'),
 });
