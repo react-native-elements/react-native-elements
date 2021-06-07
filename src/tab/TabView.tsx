@@ -4,32 +4,38 @@ import {
   PanResponder,
   View,
   StyleSheet,
-  StyleProp,
-  ViewStyle,
   PanResponderGestureState,
   GestureResponderEvent,
+  ViewProps,
 } from 'react-native';
-import { withTheme } from '../config';
+import { withTheme } from '..';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
-export type TabViewItemProps = { containerStyle?: StyleProp<ViewStyle> };
-
-const TabViewItem: RneFunctionComponent<TabViewItemProps> = ({
+// TabView.Item
+const TabViewItem: RneFunctionComponent<ViewProps> = ({
   children,
-  containerStyle,
+  ...props
 }) => {
-  return <View style={[styles.container, containerStyle]}>{children}</View>;
+  return <View {...props}>{React.isValidElement(children) && children}</View>;
 };
 
+// TabView
 export type TabViewProps = {
   value?: number;
   onChange?: (value: number) => any;
+  animationType?: 'spring' | 'timing';
+  animationConfig?: Omit<
+    Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,
+    'toValue'
+  >;
 };
 
 const TabView: RneFunctionComponent<TabViewProps> = ({
   children,
   onChange,
   value = 0,
+  animationType = 'spring',
+  animationConfig = {},
 }) => {
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
@@ -61,15 +67,13 @@ const TabView: RneFunctionComponent<TabViewProps> = ({
     })
   );
 
-  const animate = React.useCallback(
-    (index?: number) => {
-      Animated.spring(translateX, {
-        toValue: index || value,
-        useNativeDriver: true,
-      }).start();
-    },
-    [translateX, value]
-  );
+  const animate = React.useCallback(() => {
+    Animated[animationType](translateX, {
+      toValue: value,
+      useNativeDriver: true,
+      ...animationConfig,
+    }).start();
+  }, [translateX, value, animationType, animationConfig]);
 
   React.useEffect(() => {
     animate();
@@ -78,6 +82,7 @@ const TabView: RneFunctionComponent<TabViewProps> = ({
 
   return (
     <Animated.View
+      testID="tabView-test"
       style={[
         styles.container,
         {
@@ -95,7 +100,7 @@ const TabView: RneFunctionComponent<TabViewProps> = ({
       {...panResponder.panHandlers}
     >
       {React.Children.map(children, (child) => (
-        <View>{child}</View>
+        <View style={styles.container}>{child}</View>
       ))}
     </Animated.View>
   );
@@ -114,12 +119,8 @@ interface TabView extends RneFunctionComponent<TabViewProps> {
   Item: typeof TabViewItem;
 }
 
-const Tab: TabView = Object.assign(TabView, {
-  Item: TabViewItem,
+const TabViewComponent: TabView = Object.assign(withTheme(TabView, 'TabView'), {
+  Item: withTheme(TabViewItem, 'TabViewItem'),
 });
 
-export { Tab };
-
-export default Object.assign(withTheme(TabView, 'Tab'), {
-  Item: withTheme(TabViewItem, 'TabItem'),
-});
+export default TabViewComponent;

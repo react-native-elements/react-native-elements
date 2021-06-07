@@ -22,14 +22,21 @@ import { Tab } from 'react-native-elements';
 ```js
 <Tab value={0}>
   <Tab.Item title="recent" />
-  <Tab.Item title="favourite" />
+  <Tab.Item title="favorite" />
   <Tab.Item title="cart" />
 </Tab>
-<Tab.Panel value={0}>
-  <Tab.View/>
-  <Tab.View/>
-  <Tab.View/>
-</Tab.Panel>
+
+ <TabView value={index} onChange={setIndex} >
+  <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
+    <Text h1>Recent</Text>
+  </TabView.Item>
+  <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
+    <Text h1>Favorite</Text>
+  </TabView.Item>
+  <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
+    <Text h1>Cart</Text>
+  </TabView.Item>
+</TabView>
 ```
 
 ---

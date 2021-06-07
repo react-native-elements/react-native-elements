@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { Tab } from '../tab';
+import { Tab } from '../Tab';
 import theme from '../../config/theme';
 import { render } from '@testing-library/react-native';
 
