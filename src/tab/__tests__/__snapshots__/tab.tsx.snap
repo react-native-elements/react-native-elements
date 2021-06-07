@@ -3,6 +3,7 @@
 exports[`Tab Component should render without issues 1`] = `
 <Fragment>
   <View
+    accessibilityRole="tablist"
     onLayout={[Function]}
     style={
       Array [

@@ -4,6 +4,7 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
 import ThemedSlider, { Slider } from '../Slider';
+import { render } from '@testing-library/react-native';
 
 describe('Slider component', () => {
   it('should render without issues', () => {
@@ -82,5 +83,17 @@ describe('Slider component', () => {
       backgroundColor: 'blue',
     });
     expect(component.toJSON).toMatchSnapshot();
+  });
+
+  it('should contain the required accessibility props', () => {
+    const component = render(
+      <Slider value={15} maximumValue={10} minimumValue={5} />
+    );
+    const slider = component.getByA11yRole('adjustable');
+    expect(slider.props.accessibilityValue).toMatchObject({
+      min: 5,
+      max: 10,
+      now: 15,
+    });
   });
 });

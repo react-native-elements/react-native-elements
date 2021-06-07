@@ -25,10 +25,16 @@ const TabItem: RneFunctionComponent<TabItemProps> = ({
   buttonStyle,
   variant,
   iconPosition = 'top',
+  title,
   ...props
 }) => {
   return (
     <Button
+      accessibilityRole="tab"
+      accessibilityState={{ selected: active }}
+      accessibilityValue={
+        typeof title === 'string' ? { text: title } : undefined
+      }
       buttonStyle={[styles.buttonStyle, buttonStyle]}
       titleStyle={[
         styles.titleStyle,
@@ -88,6 +94,7 @@ const TabContainer: RneFunctionComponent<TabProps> = ({
     <>
       <View
         {...props}
+        accessibilityRole="tablist"
         style={[
           styles.viewStyle,
           variant === 'primary' && {
