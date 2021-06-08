@@ -1,11 +1,11 @@
 {
   "docs": {
     "It Starts Basic": [
-      "basic/getting_started",
-      "basic/overview",
-      "basic/customization",
-      "basic/web_usage",
-      "basic/troubleshooting"
+      "getting_started",
+      "overview",
+      "customization",
+      "web_usage",
+      "troubleshooting"
     ],
     "Components": [
       "main/avatar",
