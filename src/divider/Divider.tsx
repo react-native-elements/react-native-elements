@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import Theme from '../config/theme'
+import Theme from '../config/theme';
 import { RneFunctionComponent } from '../helpers';
 
 export type DividerProps = ViewProps & {

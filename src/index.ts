@@ -46,7 +46,7 @@ import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
 import Tab, { TabItemProps, TabProps } from './tab/Tab';
-import TabView, { TabViewProps, TabViewItemProps } from './tab/TabView';
+import TabView, { TabViewProps } from './tab/TabView';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -168,6 +168,5 @@ export type {
   TabProps,
   ListItemAccordionProps,
   ListItemSwipeableProps,
-  TabViewItemProps,
   TabViewProps,
 };
