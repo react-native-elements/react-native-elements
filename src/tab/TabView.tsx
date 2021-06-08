@@ -8,7 +8,7 @@ import {
   GestureResponderEvent,
   ViewProps,
 } from 'react-native';
-import { withTheme } from '..';
+import { withTheme } from '../config';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 // TabView.Item
