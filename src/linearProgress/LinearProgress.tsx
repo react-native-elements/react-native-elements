@@ -70,6 +70,13 @@ const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
 
   return (
     <View
+      accessible
+      accessibilityRole="progressbar"
+      accessibilityValue={{
+        now: value,
+        min: 0,
+        max: 1,
+      }}
       {...props}
       onLayout={(e) => {
         setWidth(e.nativeEvent.layout.width);

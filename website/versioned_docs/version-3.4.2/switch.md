@@ -23,7 +23,7 @@ import { Switch } from 'react-native-elements';
 ```js
 <Switch value={true} />
 
-<Switch value={false} color="orange">
+<Switch value={false} color="orange" />
 
 ```
 
