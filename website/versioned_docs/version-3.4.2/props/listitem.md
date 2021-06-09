@@ -53,12 +53,22 @@
 - [`icon`](#icon)
 - [`expandIcon`](#expandicon)
 - [`content`](#content)
-- [`noAnimation`](#noanimation)
 - [`noIcon`](#noicon)
 - [`noRotation`](#norotation)
-- [`animationDuration`](#animationduration)
+- [`animation`](#animation)
 
 > Also Receives all [ListItem](#props) props.
+
+### ListItem.Swipable
+
+> Also recieves all `ListItem` Props
+
+- [`leftContent`](#leftcontent)
+- [`rightContent`](#leftcontent)
+- [`leftStyle`](#leftstyle)
+- [`rightStyle`](#rightstyle)
+- [`leftWidth`](#leftwidth)
+- [`rightWidth`](#rightwidth)
 
 ---
 
@@ -204,16 +214,6 @@ Similar to ListItem's child
 
 ---
 
-### `noAnimation`
-
-Don't show animations to be played or not
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
-
----
-
 ### `noIcon`
 
 Don't show accordion icon
@@ -234,12 +234,72 @@ Don't rotate when Accordion is expanded
 
 ---
 
-### `animationDuration`
+### `animation`
 
-Duration of accordion expansion
+Boolean to show animation,
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   350   |
+|       Type       |            Default             |
+| :--------------: | :----------------------------: |
+| Object or number | `{type:"timing",duration:350}` |
+
+---
+
+### `leftContent`
+
+Left Content
+
+|   Type    | Default |
+| :-------: | :-----: |
+| ReactNode |  none   |
+
+---
+
+### `rightContent`
+
+Right Content
+
+|   Type    | Default |
+| :-------: | :-----: |
+| ReactNode |  none   |
+
+---
+
+### `leftStyle`
+
+Style of left container
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `rightStyle`
+
+Style of right container
+
+|      Type      | Default |
+| :------------: | :-----: |
+| object (style) |  none   |
+
+---
+
+### `leftWidth`
+
+Width to swipe left
+
+|  Type  |    Default    |
+| :----: | :-----------: |
+| number | ScreenWidth/3 |
+
+---
+
+### `rightWidth`
+
+Width to swipe right
+
+|  Type  |    Default    |
+| :----: | :-----------: |
+| number | ScreenWidth/3 |
 
 ---
