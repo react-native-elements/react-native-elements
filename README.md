@@ -76,7 +76,12 @@ import { Button } from 'react-native-elements';
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
+- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
+
+## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+
+- [x] [Circular Slider](https://reactnativeelements.com/docs/)
 
 ## React Native Web support
 

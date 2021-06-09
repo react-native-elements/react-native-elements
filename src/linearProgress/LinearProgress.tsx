@@ -7,7 +7,6 @@ import {
   Platform,
   ViewProps,
 } from 'react-native';
-import { FullTheme } from '../config';
 import Color from 'color';
 import { RneFunctionComponent } from '../helpers';
 
@@ -17,7 +16,6 @@ export type LinearProgressProps = {
   color?: 'primary' | 'secondary' | string;
   trackColor?: string;
   style?: StyleProp<ViewStyle>;
-  theme?: FullTheme;
 } & ViewProps;
 
 const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
@@ -72,6 +70,13 @@ const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
 
   return (
     <View
+      accessible
+      accessibilityRole="progressbar"
+      accessibilityValue={{
+        now: value,
+        min: 0,
+        max: 1,
+      }}
       {...props}
       onLayout={(e) => {
         setWidth(e.nativeEvent.layout.width);

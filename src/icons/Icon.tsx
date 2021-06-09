@@ -40,7 +40,7 @@ export interface IconObject extends TouchableHighlightProps {
   color?: string;
   size?: number;
   type?: IconType;
-  style?: StyleProp<TextStyle>;
+  iconStyle?: StyleProp<TextStyle>;
 }
 
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;

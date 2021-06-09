@@ -158,12 +158,22 @@ const Slider: RneFunctionComponent<SliderProps> = (props) => {
 
   const currentPropValue = useRef(props.value || 0);
   const prevPropValue = useRef(0);
-  useEffect(() => {
-    prevPropValue.current = props.value || 0;
-  });
 
   const didMountRef = useRef(false);
+
+  const setCurrentValue = React.useCallback(
+    (value1: number) => {
+      value.setValue(value1);
+    },
+    [value]
+  );
+
+  React.useEffect(() => {
+    setCurrentValue(props.value || 0);
+  }, [props.value, setCurrentValue]);
+
   useEffect(() => {
+    prevPropValue.current = props.value || 0;
     if (didMountRef.current) {
       const newValue = getBoundedValue(
         props.value || 0,
@@ -181,10 +191,6 @@ const Slider: RneFunctionComponent<SliderProps> = (props) => {
       didMountRef.current = true;
     }
   });
-
-  const setCurrentValue = (value1: number) => {
-    value.setValue(value1);
-  };
 
   const setCurrentValueAnimated = (value1: Animated.Value) => {
     const { animationType } = props;
@@ -473,6 +479,12 @@ const Slider: RneFunctionComponent<SliderProps> = (props) => {
         style,
       ])}
       onLayout={measureContainer}
+      accessibilityRole="adjustable"
+      accessibilityValue={{
+        min: minimumValue,
+        max: maximumValue,
+        now: props.value,
+      }}
     >
       <View
         style={StyleSheet.flatten([

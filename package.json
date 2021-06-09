@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "3.4.1",
+  "version": "3.4.2",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog -p"
+    "changelog": "auto-changelog -p",
+    "docs": "cd website && yarn start"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -44,7 +45,7 @@
     "hoist-non-react-statics": "^3.3.2",
     "lodash.isequal": "^4.5.0",
     "opencollective-postinstall": "^2.0.3",
-    "react-native-ratings": "^7.3.0",
+    "react-native-ratings": "8.0.4",
     "react-native-size-matters": "^0.3.1"
   },
   "devDependencies": {
@@ -53,6 +54,7 @@
     "@types/color": "^3.0.1",
     "@types/enzyme": "^3.10.8",
     "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/jest": "^26.0.23",
     "@types/lodash.isequal": "^4.5.5",
     "@types/react-native": "*",
     "@types/react-test-renderer": "^17.0.0",
@@ -86,12 +88,12 @@
     "timers": "fake",
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js",
+      "./src/searchbar/__tests__/common.tsx",
       "<rootDir>/node_modules",
       "<rootDir>/dist"
     ],
     "coveragePathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.js"
+      "./src/searchbar/__tests__/common.tsx"
     ],
     "collectCoverageFrom": [
       "src/**/*.tsx",
@@ -103,8 +105,9 @@
       "__DEV__": true
     },
     "setupFilesAfterEnv": [
-      "<rootDir>/.ci/setupTests.js"
+      "<rootDir>/.ci/setupTests.ts"
     ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },

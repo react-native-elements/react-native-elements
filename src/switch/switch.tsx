@@ -3,16 +3,16 @@ import {
   Switch as NativeSwitch,
   SwitchProps as NativeSwitchProps,
   Platform,
+  ColorValue,
 } from 'react-native';
 import { withTheme } from '../config';
-import { FullTheme } from '../config/theme';
+import { RneFunctionComponent } from '../helpers';
 
 export type SwitchProps = NativeSwitchProps & {
   color?: string;
-  theme?: FullTheme;
 };
 
-const Switch: React.FunctionComponent<SwitchProps> = ({
+const Switch: RneFunctionComponent<SwitchProps> = ({
   value = false,
   disabled = false,
   onValueChange,
@@ -22,18 +22,25 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
   ...rest
 }) => {
   // switchedOnColor deals with picking up a color provided as props by user or picks up default theme
-  const switchedOnColor = color === 'primary' ? theme.colors[color] : color;
+  const switchedOnColor: ColorValue =
+    color === 'primary'
+      ? theme?.colors?.primary
+        ? theme.colors.primary
+        : ''
+      : color;
 
-  const onTintColor =
+  const onTintColor: ColorValue =
     Platform.OS === 'ios' || !disabled
       ? switchedOnColor
-      : theme.colors.disabled;
+      : theme?.colors?.disabled
+      ? theme.colors.disabled
+      : '';
 
   const thumbTintColor =
     Platform.OS === 'ios'
       ? undefined
       : disabled || !value
-      ? theme.colors.disabled
+      ? theme?.colors?.disabled
       : switchedOnColor;
 
   const props =
@@ -54,6 +61,10 @@ const Switch: React.FunctionComponent<SwitchProps> = ({
   return (
     <NativeSwitch
       value={value}
+      accessibilityState={{
+        checked: value,
+        disabled,
+      }}
       disabled={disabled}
       onValueChange={disabled ? undefined : onValueChange}
       style={style}
