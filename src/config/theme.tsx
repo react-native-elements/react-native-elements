@@ -24,7 +24,8 @@ import { TileProps } from '../tile/Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
 import { SwitchProps } from '../switch/switch';
 import { ListItemAccordionProps } from '../list/ListItemAccordion';
-import { TabItemProps, TabProps } from '../tab/tab';
+import { TabItemProps, TabProps } from '../tab/Tab';
+import { TabViewProps } from '../tab/TabView';
 import { FABProps } from '../buttons/FAB';
 import { SpeedDialProps, SpeedDialActionProps } from '../buttons/SpeedDial';
 import { LinearProgressProps } from '../linearProgress';
@@ -79,6 +80,8 @@ export interface FullTheme {
   colors: RecursivePartial<Colors>;
   Tab: Partial<TabProps>;
   TabItem: Partial<TabItemProps>;
+  TabView: Partial<TabViewProps>;
+  TabViewItem: Partial<ViewProps>;
   FAB: Partial<FABProps>;
   SpeedDial: Partial<SpeedDialProps>;
   SpeedDialAction: Partial<SpeedDialActionProps>;

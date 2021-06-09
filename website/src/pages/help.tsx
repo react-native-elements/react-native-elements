@@ -1,12 +1,15 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 
-import clsx from 'clsx';
+const Help: React.FunctionComponent<{}> = (props) => {
+  type SupportLinkTypes = {
+    content: string;
+    title: string;
+    link: string;
+    href: string;
+  };
 
-import styles from '../../static/css/modules.css';
-
-const Help = (props) => {
-  const supportLinks = [
+  const supportLinks: SupportLinkTypes[] = [
     {
       content: 'Learn more using the ',
       title: 'Browse Docs',
@@ -28,13 +31,13 @@ const Help = (props) => {
     },
   ];
 
-  const FeatureHeading = (props) => {
+  const FeatureHeading: React.FunctionComponent<{}> = (props) => {
     return (
       <div className="row">
         {supportLinks.map((link) => {
           return (
             <div className="col">
-              <h2 className={clsx(styles.featureHeading)}>{link.title}</h2>
+              <h2>{link.title}</h2>
               <p className="padding-horiz--md">
                 {link.content} <a href={link.href}>{link.link}</a>
               </p>
@@ -73,7 +76,7 @@ const Help = (props) => {
           </a>{' '}
           before opening and a new one.
         </p>
-        <div className={styles.section}>
+        <div>
           <div className="container text--center margin-bottom--xl">
             <FeatureHeading />
           </div>

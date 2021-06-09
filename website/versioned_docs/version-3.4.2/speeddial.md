@@ -21,10 +21,11 @@ import { SpeedDial } from 'react-native-elements';
 
 ```js
 <SpeedDial
-  open={open}
+  isOpen={open}
   icon={{ name: 'edit', color: '#fff' }}
   openIcon={{ name: 'close', color: '#fff' }}
-  onChange={() => setOpen(!open)}
+  onOpen={() => setOpen(!open)}
+  onClose={() => setOpen(!open)}
 >
   <SpeedDial.Action
     icon={{ name: 'add', color: '#fff' }}

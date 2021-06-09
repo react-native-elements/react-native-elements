@@ -13,7 +13,17 @@ distinction between sections of content.
 ```js
 import { Divider } from 'react-native-elements';
 
-<Divider style={{ backgroundColor: 'blue' }} />;
+<Divider orientation="horizontal" />;
+
+<Divider orientation="vertical" width={5} />;
+
+<Divider inset={true} insetType="middle" />;
+
+<Divider
+  orientation="horizontal"
+  subHeader="Test"
+  subHeaderStyle={{ color: 'blue' }}
+/>;
 ```
 
 ---

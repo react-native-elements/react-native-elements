@@ -106,7 +106,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         rejectResponderTermination={true}
         style={
           Object {
-            "alignSelf": "center",
             "color": "#242424",
             "flex": 1,
             "fontSize": 18,
