@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
-import { TextProps } from '../text/Text';
+import { TextProps } from '../Text';
 
 type ItemContentProps = TextProps & { right?: boolean };
 

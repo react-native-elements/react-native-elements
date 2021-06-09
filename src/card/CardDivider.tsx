@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { withTheme } from '../config';
-import Divider, { DividerProps } from '../divider/Divider';
+import Divider, { DividerProps } from '../Divider';
 import { RneFunctionComponent } from '../helpers';
 
 const CardDivider: RneFunctionComponent<DividerProps> = ({

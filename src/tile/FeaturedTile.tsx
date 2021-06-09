@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { BackgroundImage, withTheme } from '../config';
 import { renderNode, RneFunctionComponent } from '../helpers';
-import Text from '../text/Text';
+import Text from '../Text';
 import Icon from '../icons/Icon';
 import { TileProps } from './Tile';
 

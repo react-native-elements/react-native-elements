@@ -10,7 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 import Icon from '../icons/Icon';
-import Text from '../text/Text';
+import Text from '../Text';
 import fonts from '../config/fonts';
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';

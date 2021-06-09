@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { normalizeText, RneFunctionComponent } from '../helpers';
 import { fonts, withTheme } from '../config';
-import Text from '../text/Text';
+import Text from '../Text';
 import Button, { ButtonProps } from '../buttons/Button';
 import Icon, { IconProps } from '../icons/Icon';
 

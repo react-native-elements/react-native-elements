@@ -19,7 +19,7 @@ import { withTheme } from '../config';
 import { renderNode, color, RneFunctionComponent } from '../helpers';
 import Icon, { IconNode } from '../icons/Icon';
 import { Theme } from '../config/theme';
-import { TextProps } from '../text/Text';
+import { TextProps } from '../Text';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',

@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import { withTheme } from '../config';
 import Image from '../image/Image';
-import Text from '../text/Text';
+import Text from '../Text';
 import Icon, { IconObject, IconProps } from '../icons/Icon';
 import FeaturedTile from './FeaturedTile';
 import { RneFunctionComponent } from '../helpers';

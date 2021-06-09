@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { Switch } from '../switch';
+import { Switch } from '../index';
 import theme from '../../config/theme';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';

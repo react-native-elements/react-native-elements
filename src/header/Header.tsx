@@ -20,7 +20,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { withTheme } from '../config';
 import { renderNode, RneFunctionComponent } from '../helpers';
 
-import Text from '../text/Text';
+import Text from '../Text';
 import Icon, { IconObject } from '../icons/Icon';
 
 type Placement = 'left' | 'center' | 'right';

@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-import ThemedDivider, { Divider } from '../Divider';
+import ThemedDivider, { Divider } from '../index';
 
 describe('Divider Component', () => {
   it('should render without issues', () => {

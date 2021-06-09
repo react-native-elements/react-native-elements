@@ -22,7 +22,7 @@ import { SearchBarIosProps } from './searchbar/SearchBar-ios';
 import Badge, { BadgeProps } from './badge/Badge';
 import withBadge from './badge/withBadge';
 import CheckBox, { CheckBoxProps } from './checkbox/CheckBox';
-import Divider, { DividerProps } from './divider/Divider';
+import Divider, { DividerProps } from './Divider';
 import Slider, { SliderProps } from './slider/Slider';
 import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
 import Image, { ImageProps } from './image/Image';
@@ -44,7 +44,7 @@ import PricingCard, { PricingCardProps } from './pricing/PricingCard';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
-import Switch, { SwitchProps } from './switch/switch';
+import Switch, { SwitchProps } from './Switch';
 import Tab, { TabItemProps, TabProps } from './tab/Tab';
 import TabView, { TabViewProps } from './tab/TabView';
 import {
@@ -54,7 +54,7 @@ import {
   SwipeRatingProps,
 } from 'react-native-ratings';
 // helpers
-import Text, { TextProps } from './text/Text';
+import Text, { TextProps } from './Text';
 import {
   Colors,
   colors,

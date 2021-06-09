@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, TextStyle, StyleProp, Platform } from 'react-native';
 import { withTheme } from '../config';
-import { TextProps } from '../text/Text';
+import { TextProps } from '../Text';
 
 export type DialogTitleProps = {
   title?: string;

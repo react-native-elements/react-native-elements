@@ -6,7 +6,7 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 import ThemedButtonGroup, { ButtonGroup } from '../ButtonGroup';
-import Text from '../../text/Text';
+import Text from '../../Text';
 
 const buttons = ['Button 1', 'Button 2', 'Button 3'];
 

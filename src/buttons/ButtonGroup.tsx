@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { withTheme } from '../config';
 import { normalizeText, color, RneFunctionComponent } from '../helpers';
-import Text from '../text/Text';
+import Text from '../Text';
 
 export type ButtonGroupProps = {
   button?: object;

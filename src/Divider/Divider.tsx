@@ -8,7 +8,6 @@ import {
   TextStyle,
   ViewStyle,
 } from 'react-native';
-import { withTheme } from '../config';
 import Theme from '../config/theme';
 import { RneFunctionComponent } from '../helpers';
 
@@ -23,7 +22,7 @@ export type DividerProps = ViewProps & {
   width?: number;
 };
 
-const Divider: RneFunctionComponent<DividerProps> = ({
+export const Divider: RneFunctionComponent<DividerProps> = ({
   color,
   inset = false,
   insetType = 'left',
@@ -93,6 +92,3 @@ const styles = StyleSheet.create({
     includeFontPadding: false,
   },
 });
-
-export { Divider };
-export default withTheme(Divider, 'Divider');

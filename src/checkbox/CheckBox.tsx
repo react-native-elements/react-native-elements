@@ -10,7 +10,7 @@ import {
   StyleProp,
   TouchableOpacityProps,
 } from 'react-native';
-import TextElement from '../text/Text';
+import TextElement from '../Text';
 import CheckBoxIcon from './CheckBoxIcon';
 import { fonts, withTheme } from '../config';
 import { CheckBoxIconProps } from './CheckBoxIcon';

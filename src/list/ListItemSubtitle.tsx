@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Platform, TextProps } from 'react-native';
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
-import Text from '../text/Text';
+import Text from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
