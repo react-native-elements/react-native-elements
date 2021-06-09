@@ -143,9 +143,7 @@ const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
         styles.container,
         button && styles.button,
         !button && raised && styles.icon,
-        !button &&
-          !light &&
-          !raised && {
+        !button && {
             width: iconSize * 2 + 4,
             height: iconSize * 2 + 4,
             borderRadius: iconSize * 2,
