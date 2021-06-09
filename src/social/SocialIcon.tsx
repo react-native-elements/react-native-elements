@@ -96,7 +96,7 @@ export type SocialIconProps = {
   raised?: boolean;
   disabled?: boolean;
   loading?: boolean;
-  activityIndicatorStyle?: object | any[];
+  activityIndicatorStyle?: StyleProp<ViewStyle>;
   small?: string;
   iconSize?: number;
   light?: boolean;

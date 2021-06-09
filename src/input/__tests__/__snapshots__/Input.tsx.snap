@@ -31,7 +31,6 @@ exports[`Input component Props containerStyle 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -85,7 +84,6 @@ exports[`Input component Props disabled 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -140,7 +138,6 @@ exports[`Input component Props errorMessage and style errorMessage 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -196,7 +193,6 @@ exports[`Input component Props errorMessage and style errorStyle 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -251,7 +247,6 @@ exports[`Input component Props inputComponent 1`] = `
       placeholderTextColor="#86939e"
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -306,7 +301,6 @@ exports[`Input component Props inputContainerStyle 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -360,7 +354,6 @@ exports[`Input component Props inputStyle 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -426,7 +419,6 @@ exports[`Input component Props label and styles label 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -487,7 +479,6 @@ exports[`Input component Props label and styles label as component 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -553,7 +544,6 @@ exports[`Input component Props label and styles labelStyle 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -623,7 +613,6 @@ exports[`Input component Props leftIcon and styles leftIcon 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -694,7 +683,6 @@ exports[`Input component Props leftIcon and styles leftIconContainerStyle 1`] = 
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -749,7 +737,6 @@ exports[`Input component Props placeholder 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -803,7 +790,6 @@ exports[`Input component Props rightIcon and styles rightIcon 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -873,7 +859,6 @@ exports[`Input component Props rightIcon and styles rightIconContainerStyle 1`] 
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -945,7 +930,6 @@ exports[`Input component should apply values from theme 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,
@@ -999,7 +983,6 @@ exports[`Input component should match snapshot 1`] = `
       rejectResponderTermination={true}
       style={
         Object {
-          "alignSelf": "center",
           "color": "#242424",
           "flex": 1,
           "fontSize": 18,

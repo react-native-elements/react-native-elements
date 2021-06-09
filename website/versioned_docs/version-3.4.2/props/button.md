@@ -14,6 +14,7 @@
 - [`icon`](#icon)
 - [`iconContainerStyle`](#iconcontainerstyle)
 - [`iconRight`](#iconright)
+- [`iconPosition`](#iconposition)
 - [`linearGradientProps`](#lineargradientprops)
 - [`loading`](#loading)
 - [`loadingProps`](#loadingprops)
