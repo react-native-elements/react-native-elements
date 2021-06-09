@@ -33,6 +33,9 @@ import SpeedDial, {
 } from './buttons/SpeedDial';
 // Productivity
 import Card, { CardProps } from './card/Card';
+import Dialog, { DialogProps } from './dialog/Dialog';
+import { DialogLoadingProps } from './dialog/DialogLoading';
+import { DialogTitleProps } from './dialog/DialogTitle';
 import Tile, { TileProps } from './tile/Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
@@ -42,7 +45,8 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
-import Tab, { TabItemProps, TabProps } from './tab/tab';
+import Tab, { TabItemProps, TabProps } from './tab/Tab';
+import TabView, { TabViewProps } from './tab/TabView';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -52,6 +56,7 @@ import {
 // helpers
 import Text, { TextProps } from './text/Text';
 import {
+  Colors,
   colors,
   ThemeProvider,
   ThemeConsumer,
@@ -87,6 +92,7 @@ export {
   SocialIcon,
   Text,
   Divider,
+  Dialog,
   CheckBox,
   SearchBar,
   Icon,
@@ -113,10 +119,12 @@ export {
   FAB,
   SpeedDial,
   Tab,
+  TabView,
 };
 export type {
   AvatarProps,
   ButtonProps,
+  Colors,
   ChipProps,
   InputProps,
   IconProps,
@@ -134,6 +142,9 @@ export type {
   ButtonGroupProps,
   ImageProps,
   CardProps,
+  DialogProps,
+  DialogLoadingProps,
+  DialogTitleProps,
   TileProps,
   AccessoryProps,
   HeaderProps,
@@ -157,4 +168,5 @@ export type {
   TabProps,
   ListItemAccordionProps,
   ListItemSwipeableProps,
+  TabViewProps,
 };
