@@ -54,6 +54,7 @@ const TabItem: RneFunctionComponent<TabItemProps> = ({
         containerStyle,
       ]}
       iconPosition={iconPosition}
+      title={title}
       {...props}
     />
   );

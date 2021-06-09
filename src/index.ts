@@ -45,7 +45,8 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
-import Tab, { TabItemProps, TabProps } from './tab/tab';
+import Tab, { TabItemProps, TabProps } from './tab/Tab';
+import TabView, { TabViewProps } from './tab/TabView';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -118,6 +119,7 @@ export {
   FAB,
   SpeedDial,
   Tab,
+  TabView,
 };
 export type {
   AvatarProps,
@@ -166,4 +168,5 @@ export type {
   TabProps,
   ListItemAccordionProps,
   ListItemSwipeableProps,
+  TabViewProps,
 };
