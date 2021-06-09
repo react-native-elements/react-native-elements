@@ -13,23 +13,32 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import '../../static/css/components.css';
 
-class Button extends React.Component {
-  render() {
-    return (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
-          {this.props.children}
-        </a>
-      </div>
-    );
-  }
-}
+type ButtonTypes = {
+  href: string;
+  target: string;
+  children: React.ReactNode;
+};
+
+const Button: React.FunctionComponent<ButtonTypes> = (props) => {
+  return (
+    <div className="pluginWrapper buttonWrapper">
+      <a className="button" href={props.href} target={props.target}>
+        {props.children}
+      </a>
+    </div>
+  );
+};
 
 Button.defaultProps = {
   target: '_self',
 };
 
-const Block = (props) => (
+type BlockTypes = {
+  children: React.ReactNode;
+  align: string;
+};
+
+const Block: React.FunctionComponent<BlockTypes> = (props) => (
   <section className="margin-vert--xl">
     <div className="container">
       <div className="row">{props.children}</div>
@@ -41,7 +50,7 @@ Block.defaultProps = {
   align: 'center',
 };
 
-const OpenCollective = () => (
+const OpenCollective: React.FunctionComponent<{}> = () => (
   <div className="container">
     <div className="backers-section text--center">
       <h1>Open Collective</h1>
@@ -86,7 +95,12 @@ const OpenCollective = () => (
   </div>
 );
 
-const features = [
+type FeatureTypes = {
+  title: string;
+  description: string;
+};
+
+const features: FeatureTypes[] = [
   {
     title: 'Cross-Platform',
     description: 'Consistent design across android, iOS, and web',
@@ -106,7 +120,7 @@ const features = [
   },
 ];
 
-function Home() {
+const Home: React.FunctionComponent<{}> = () => {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
@@ -146,7 +160,9 @@ function Home() {
             <div className="row">
               {features.map(({ title, description }, index) => (
                 <div key={index} className="col col--3">
-                  <h3>{index+1}. {title}</h3>
+                  <h3>
+                    {index + 1}. {title}
+                  </h3>
                   <p className="check">{description}</p>
                 </div>
               ))}
@@ -161,6 +177,6 @@ function Home() {
       <OpenCollective />
     </Layout>
   );
-}
+};
 
 export default Home;

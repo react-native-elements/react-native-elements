@@ -55,3 +55,7 @@ import Modal from 'modal-react-native-web';
 <Props />
 
 ---
+
+## Also See
+
+[Dialog](https://reactnative.dev/docs/dialog)

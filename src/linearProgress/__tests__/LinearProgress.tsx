@@ -2,6 +2,7 @@ import React from 'react';
 import LinearProgress from '../LinearProgress';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { render } from '@testing-library/react-native';
 import theme from '../../config/theme';
 
 describe('LinearProgress Component', () => {
@@ -37,5 +38,17 @@ describe('LinearProgress Component', () => {
     );
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should contain the required accessibility properties', () => {
+    const component = render(<LinearProgress value={0.4} />);
+    const progressBar = component.getByA11yRole('progressbar');
+    expect(progressBar.props).toMatchObject({
+      accessibilityValue: {
+        now: 0.4,
+        min: 0,
+        max: 1,
+      },
+    });
   });
 });

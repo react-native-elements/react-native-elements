@@ -4,6 +4,7 @@ import { Switch } from '../switch';
 import theme from '../../config/theme';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import { render } from '@testing-library/react-native';
 
 describe('Switch Component', () => {
   it('should render without issues', () => {
@@ -115,5 +116,21 @@ describe('Switch Component', () => {
       />
     );
     expect(toJson(component)).toMatchSnapshot();
+  });
+
+  it('should contain the required accessibility properties', () => {
+    const enabledComponent = render(<Switch value />);
+    const enabledSwitch = enabledComponent.getByA11yRole('switch');
+    expect(enabledSwitch.props.accessibilityState).toMatchObject({
+      checked: true,
+      disabled: false,
+    });
+
+    const disabledComponent = render(<Switch value={false} disabled />);
+    const disabledSwitch = disabledComponent.getByA11yRole('switch');
+    expect(disabledSwitch.props.accessibilityState).toMatchObject({
+      checked: false,
+      disabled: true,
+    });
   });
 });

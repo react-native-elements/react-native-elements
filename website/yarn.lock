@@ -1988,6 +1988,11 @@
     url-loader "^4.1.1"
     webpack "^4.44.1"
 
+"@docusaurus/module-type-aliases@^2.0.0-alpha.75":
+  version "2.0.0-alpha.75"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-alpha.75.tgz#fa1f7f8f50ac5e77b7bf5a575e2458993c9efcff"
+  integrity sha512-9OWDcQ6JpgCsD/ihFhVC9JuOuxcJ1AeHnFSThVb7/5tINx5sTkxPy5Ee1c0xbvCxvxz7EADufZTX03JJQdcrHg==
+
 "@docusaurus/plugin-client-redirects@^2.0.0-alpha.69":
   version "2.0.0-alpha.69"
   resolved "https://registry.npmjs.org/@docusaurus/plugin-client-redirects/-/plugin-client-redirects-2.0.0-alpha.69.tgz#a31c1f4b11d98b362803d8878dafb952d4a3508e"
@@ -2449,6 +2454,11 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@tsconfig/docusaurus@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/docusaurus/-/docusaurus-1.0.2.tgz#400ef146d3e7da2f78bf9749c943d123dce5fd97"
+  integrity sha512-x4rRVb346vjyym6QbeB1Tv01XXwhbkujOmvDmtf0bT20oc2gbDhbmwpskKqZ5Of2Q/Vk4jNk1WMiLsZdJ9t7Dw==
+
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://registry.npmjs.org/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
@@ -2526,6 +2536,13 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
+"@types/react-dom@^17.0.3":
+  version "17.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.3.tgz#7fdf37b8af9d6d40127137865bb3fff8871d7ee1"
+  integrity sha512-4NnJbCeWE+8YBzupn/YrJxZ8VnjcJq5iR1laqQ1vkpQgBiA7bwk0Rp24fxsdNinzJY2U+HHS4dJJDPdoMjdJ7w==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-toggle@^4.0.2":
   version "4.0.2"
   resolved "https://registry.npmjs.org/@types/react-toggle/-/react-toggle-4.0.2.tgz#46ffa5af1a55de5f25d0aa78ef0b557b5c8bf276"
@@ -2540,6 +2557,20 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
+
+"@types/react@^17.0.5":
+  version "17.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.5.tgz#3d887570c4489011f75a3fc8f965bf87d09a1bea"
+  integrity sha512-bj4biDB9ZJmGAYTWSKJly6bMr4BLUiBrx9ujiJEoP9XIDY9CTaPGxE5QWN/1WjpPLzYF7/jRNnV2nNxNe970sw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
+  integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
 
 "@types/source-list-map@*":
   version "0.1.2"
