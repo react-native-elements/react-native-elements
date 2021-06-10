@@ -45,7 +45,8 @@ import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './switch/switch';
-import Tab, { TabItemProps, TabProps } from './tab/tab';
+import Tab, { TabItemProps, TabProps } from './tab/Tab';
+import TabView, { TabViewProps } from './tab/TabView';
 import {
   AirbnbRating as BaseAirbnbRating,
   Rating as BaseRating,
@@ -55,6 +56,7 @@ import {
 // helpers
 import Text, { TextProps } from './text/Text';
 import {
+  Colors,
   colors,
   ThemeProvider,
   ThemeConsumer,
@@ -117,10 +119,12 @@ export {
   FAB,
   SpeedDial,
   Tab,
+  TabView,
 };
 export type {
   AvatarProps,
   ButtonProps,
+  Colors,
   ChipProps,
   InputProps,
   IconProps,
@@ -163,4 +167,5 @@ export type {
   TabProps,
   ListItemAccordionProps,
   ListItemSwipeableProps,
+  TabViewProps,
 };

@@ -61,6 +61,10 @@ const Switch: RneFunctionComponent<SwitchProps> = ({
   return (
     <NativeSwitch
       value={value}
+      accessibilityState={{
+        checked: value,
+        disabled,
+      }}
       disabled={disabled}
       onValueChange={disabled ? undefined : onValueChange}
       style={style}

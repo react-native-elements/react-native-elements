@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { withTheme } from '../config';
-import theme from '../config/theme';
+import Theme from '../config/theme';
 import { RneFunctionComponent } from '../helpers';
 
 export type DividerProps = ViewProps & {
@@ -75,7 +75,7 @@ const Divider: RneFunctionComponent<DividerProps> = ({
 const styles = StyleSheet.create({
   divider: {
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: theme?.colors?.divider,
+    borderBottomColor: Theme?.colors?.divider,
   },
   leftInset: {
     marginLeft: 72,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   vertical: {
     borderRightWidth: StyleSheet.hairlineWidth,
-    borderRightColor: theme?.colors?.divider,
+    borderRightColor: Theme?.colors?.divider,
     height: 'auto',
     alignSelf: 'stretch',
   },
