@@ -7,7 +7,7 @@ exports[`SocialIcon component should apply values from theme 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#4267B2",
-      "borderRadius": 30,
+      "borderRadius": 48,
       "flexDirection": "row",
       "height": 52,
       "justifyContent": "center",
@@ -188,10 +188,12 @@ exports[`SocialIcon component should render light social icon 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "white",
-      "borderRadius": 30,
+      "borderRadius": 48,
       "flexDirection": "row",
+      "height": 52,
       "justifyContent": "center",
       "margin": 7,
+      "width": 52,
     }
   }
   underlayColor="white"
@@ -276,7 +278,7 @@ exports[`SocialIcon component should render without issues 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#00aced",
-      "borderRadius": 30,
+      "borderRadius": 48,
       "flexDirection": "row",
       "height": 52,
       "justifyContent": "center",
