@@ -92,3 +92,5 @@ const styles = StyleSheet.create({
     includeFontPadding: false,
   },
 });
+
+Divider.displayName = 'Divider';

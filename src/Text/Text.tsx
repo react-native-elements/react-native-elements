@@ -23,7 +23,7 @@ export type TextProps = TextProperties & {
   h4Style?: StyleProp<TextStyle>;
 };
 
-const Text: RneFunctionComponent<TextProps> = ({
+export const Text: RneFunctionComponent<TextProps> = ({
   style = {},
   h1 = false,
   h2 = false,
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Text };
+Text.displayName = 'Text';

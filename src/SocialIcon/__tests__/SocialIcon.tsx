@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
-import ThemedSocialIcon, { SocialIcon } from '../SocialIcon';
+import ThemedSocialIcon, { SocialIcon } from '../index';
 
 describe('SocialIcon component', () => {
   it('should render without issues', () => {

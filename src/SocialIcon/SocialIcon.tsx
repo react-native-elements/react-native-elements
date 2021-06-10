@@ -12,7 +12,6 @@ import {
 import Icon from '../icons/Icon';
 import Text from '../Text';
 import fonts from '../config/fonts';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 const colors = {
@@ -105,7 +104,7 @@ export type SocialIconProps = {
   fontFamily?: string;
 };
 
-const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
+export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   activityIndicatorStyle,
   button = false,
   disabled,
@@ -249,5 +248,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { SocialIcon };
-export default withTheme(SocialIcon, 'SocialIcon');
+SocialIcon.displayName = 'SocialIcon';

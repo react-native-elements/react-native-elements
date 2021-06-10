@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
-import ThemedHeader, { Header } from '../Header';
+import ThemedHeader, { Header } from '../index';
 
 const btnCfg = { icon: 'home' };
 const titleCfg = { text: 'This is a title' };

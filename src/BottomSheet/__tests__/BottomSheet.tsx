@@ -1,5 +1,5 @@
 import React from 'react';
-import { BottomSheet } from '../BottomSheet';
+import { BottomSheet } from '../index';
 import { Modal } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';

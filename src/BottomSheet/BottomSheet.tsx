@@ -9,7 +9,6 @@ import {
   ModalProps,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type BottomSheetProps = {
@@ -18,7 +17,7 @@ export type BottomSheetProps = {
   isVisible?: boolean;
 };
 
-const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
+export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   containerStyle,
   isVisible = false,
   modalProps = {},
@@ -56,5 +55,4 @@ const styles = StyleSheet.create({
   listContainer: { backgroundColor: 'white' },
 });
 
-export { BottomSheet };
-export default withTheme(BottomSheet, 'BottomSheet');
+BottomSheet.displayName = 'BottomSheet';

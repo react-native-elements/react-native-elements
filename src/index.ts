@@ -11,7 +11,7 @@ import ListItem from './list/ListItem';
 import { ListItemProps } from './list/ListItemBase';
 import { ListItemAccordionProps } from './list/ListItemAccordion';
 import { ListItemSwipeableProps } from './list/ListItemSwipeable';
-import SocialIcon, { SocialIconProps } from './social/SocialIcon';
+import SocialIcon, { SocialIconProps } from './SocialIcon';
 import Overlay, { OverlayProps } from './overlay/Overlay';
 
 // Utilities
@@ -39,10 +39,10 @@ import { DialogTitleProps } from './dialog/DialogTitle';
 import Tile, { TileProps } from './tile/Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
-import Header, { HeaderProps } from './header/Header';
+import Header, { HeaderProps } from './Header';
 import PricingCard, { PricingCardProps } from './pricing/PricingCard';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
-import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
+import BottomSheet, { BottomSheetProps } from './BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
 import Switch, { SwitchProps } from './Switch';
 import Tab, { TabItemProps, TabProps } from './tab/Tab';

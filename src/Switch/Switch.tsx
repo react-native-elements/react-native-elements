@@ -72,3 +72,5 @@ export const Switch: RneFunctionComponent<SwitchProps> = ({
     />
   );
 };
+
+Switch.displayName = 'Switch';
