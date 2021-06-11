@@ -9,6 +9,7 @@ import {
   StyleProp,
   StyleSheet,
   ColorValue,
+  Dimensions,
   TouchableWithoutFeedback,
 } from 'react-native';
 import { Animated, Text, SafeAreaView } from 'react-native';
@@ -16,7 +17,7 @@ import Triangle from './Triangle';
 import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight } from '../helpers';
 
-export type TooltipProps = {
+export type ToolTip2Props = {
   withPointer?: boolean;
   title?: string;
   popover?: React.ReactElement<{}>;
@@ -32,7 +33,7 @@ export type TooltipProps = {
   closeOnlyOnBackdropPress?: boolean;
 };
 
-const Tooltip: React.FunctionComponent<TooltipProps> = ({
+const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
   children,
   title,
   popover,
@@ -65,14 +66,24 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
     width: 0,
   });
 
-  const toggleToolTip = () => {
+  const toggleToolTip = React.useCallback(() => {
     if (visible) {
       onDismiss();
     } else {
       onShow();
     }
-  };
+  }, [visible, onShow, onDismiss]);
 
+  const calcDim = () => {
+    requestAnimationFrame(() => {
+      containerElement.current?.measure((_x, _y, width, height, px, py) => {
+        setContainerDimensions({ width, height, px, py });
+      });
+      tooltipElement.current?.measure((_x, _y, width, height) => {
+        setTooltipDimension({ width, height });
+      });
+    });
+  };
   React.useEffect(() => {
     Animated.timing(animation, {
       toValue: Number(visible),
@@ -82,23 +93,14 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
   }, [visible, animation]);
 
   React.useEffect(() => {
-    let subs = true;
-    requestAnimationFrame(() => {
-      containerElement.current?.measure((_x, _y, width, height, px, py) => {
-        if (subs) {
-          setContainerDimensions({ width, height, px, py });
-        }
-      });
-      tooltipElement.current?.measure((_x, _y, width, height) => {
-        if (subs) {
-          setTooltipDimension({ width, height });
-        }
-      });
-    });
-
+    Dimensions.addEventListener('change', calcDim);
     return () => {
-      subs = false;
+      Dimensions.removeEventListener('change', calcDim);
     };
+  }, []);
+
+  React.useEffect(() => {
+    calcDim();
   }, [visible]);
 
   const ToolTipStyle = () => {
@@ -139,7 +141,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
               style={[
                 StyleSheet.absoluteFillObject,
                 {
-                  backgroundColor: overlayColor || '#f1f1f188',
+                  backgroundColor: overlayColor || '#b4b0b087',
                   opacity: animation,
                 },
               ]}
@@ -152,10 +154,7 @@ const Tooltip: React.FunctionComponent<TooltipProps> = ({
               style={[
                 styles.tooltip,
                 {
-                  opacity: animation.interpolate({
-                    inputRange: [0, 0.4, 0.8, 1, 1],
-                    outputRange: [0, 0, 0, 1, 1],
-                  }),
+                  opacity: animation,
                 },
               ]}
             >
@@ -219,6 +218,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Tooltip };
+export { ToolTip2 };
 
-export default withTheme(Tooltip, 'Tooltip');
+export default React.memo(withTheme(ToolTip2, 'ToolTip2'));
