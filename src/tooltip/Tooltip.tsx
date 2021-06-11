@@ -16,7 +16,7 @@ import Triangle from './Triangle';
 import { withTheme } from '../config';
 import { ScreenWidth, ScreenHeight } from '../helpers';
 
-export type ToolTip2Props = {
+export type TooltipProps = {
   withPointer?: boolean;
   title?: string;
   popover?: React.ReactElement<{}>;
@@ -32,7 +32,7 @@ export type ToolTip2Props = {
   closeOnlyOnBackdropPress?: boolean;
 };
 
-const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
+const Tooltip: React.FunctionComponent<TooltipProps> = ({
   children,
   title,
   popover,
@@ -219,6 +219,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export { ToolTip2 };
+export { Tooltip };
 
-export default withTheme(ToolTip2, 'ToolTip2');
+export default withTheme(Tooltip, 'Tooltip');
