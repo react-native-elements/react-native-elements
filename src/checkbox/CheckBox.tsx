@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   StyleSheet,
-  TouchableOpacity,
   View,
   Platform,
   TextProps,
   TextStyle,
   ViewStyle,
   StyleProp,
-  TouchableOpacityProps,
+  Pressable,
+  PressableProps,
 } from 'react-native';
 import TextElement from '../text/Text';
 import CheckBoxIcon from './CheckBoxIcon';
@@ -16,7 +16,7 @@ import { fonts, withTheme } from '../config';
 import { CheckBoxIconProps } from './CheckBoxIcon';
 import { RneFunctionComponent } from '../helpers';
 
-export type CheckBoxProps = TouchableOpacityProps &
+export type CheckBoxProps = PressableProps &
   CheckBoxIconProps & {
     Component?: typeof React.Component;
     iconRight?: boolean;
@@ -34,7 +34,7 @@ export type CheckBoxProps = TouchableOpacityProps &
 const CheckBox: RneFunctionComponent<CheckBoxProps> = (props) => {
   const { theme, ...rest } = props;
   const {
-    Component = TouchableOpacity,
+    Component = Pressable,
     checked = false,
     iconRight = false,
     title,
@@ -64,8 +64,11 @@ const CheckBox: RneFunctionComponent<CheckBoxProps> = (props) => {
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
+        {
+          backgroundColor: theme.colors.white,
+          borderColor: theme.colors.white,
+        },
         styles.container,
-        title && styles.containerHasTitle,
         containerStyle && containerStyle,
       ])}
     >

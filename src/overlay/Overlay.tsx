@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
+import Color from 'color';
 
 export type OverlayProps = ModalProps & {
   isVisible: boolean;
@@ -29,6 +30,7 @@ const Overlay: RneFunctionComponent<OverlayProps> = ({
   fullScreen,
   ModalComponent = Modal,
   isVisible,
+  theme,
   ...rest
 }) => (
   <ModalComponent
@@ -53,6 +55,12 @@ const Overlay: RneFunctionComponent<OverlayProps> = ({
           styles.overlay,
           fullScreen && styles.fullscreen,
           overlayStyle,
+          {
+            backgroundColor: Color(theme?.colors?.white)
+              .lighten(10)
+              .rgb()
+              .toString(),
+          },
         ])}
       >
         {children}
