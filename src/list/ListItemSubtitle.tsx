@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
       },
       default: {
-        color: ANDROID_SECONDARY,
         fontSize: 14,
       },
     }),
