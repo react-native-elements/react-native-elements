@@ -24,7 +24,6 @@ export type SpeedDialProps = {
 } & FABProps;
 
 const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
-  theme,
   isOpen,
   onOpen = () => {},
   onClose = () => {},
@@ -34,6 +33,7 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   transitionDuration = 150,
   style,
   overlayColor,
+  theme,
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(

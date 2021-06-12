@@ -9,7 +9,6 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
-import { withTheme } from '../config';
 import { renderNode, RneFunctionComponent } from '../helpers';
 
 export type BadgeProps = {
@@ -23,19 +22,18 @@ export type BadgeProps = {
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
 
-const Badge: RneFunctionComponent<BadgeProps> = (props) => {
-  const {
-    containerStyle,
-    textStyle,
-    textProps,
-    badgeStyle,
-    onPress,
-    Component = onPress ? TouchableOpacity : View,
-    value,
-    theme,
-    status = 'primary',
-    ...attributes
-  } = props;
+export const Badge: RneFunctionComponent<BadgeProps> = ({
+  containerStyle,
+  textStyle,
+  textProps,
+  badgeStyle,
+  onPress,
+  Component = onPress ? TouchableOpacity : View,
+  value,
+  theme,
+  status = 'primary',
+  ...attributes
+}) => {
   const element = renderNode(Text, value, {
     style: StyleSheet.flatten([styles.text, textStyle && textStyle]),
     ...textProps,
@@ -85,5 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Badge };
-export default withTheme(Badge, 'Badge');
+Badge.displayName = 'Badge';

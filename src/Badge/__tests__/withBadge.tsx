@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import withBadge from '../withBadge';
+import { withBadge } from '../index';
 
 describe('withBadge HOC', () => {
   describe('just value', () => {
