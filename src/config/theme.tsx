@@ -20,7 +20,7 @@ import { SearchBarProps } from '../searchbar/SearchBar';
 import { SliderProps } from '../Slider';
 import { SocialIconProps } from '../SocialIcon';
 import { TextProps } from '../Text';
-import { TileProps } from '../tile/Tile';
+import { TileProps } from '../Tile';
 import { TooltipProps } from '../tooltip/Tooltip';
 import { SwitchProps } from '../Switch';
 import { ListItemAccordionProps } from '../list/ListItemAccordion';

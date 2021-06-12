@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
-import ThemedTile, { Tile } from '../Tile';
+import ThemedTile, { Tile } from '../index';
 
 describe('Tile component', () => {
   it('should render without issues', () => {

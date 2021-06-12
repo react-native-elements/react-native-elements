@@ -32,7 +32,7 @@ import Card, { CardProps } from './card/Card';
 import Dialog, { DialogProps } from './dialog/Dialog';
 import { DialogLoadingProps } from './dialog/DialogLoading';
 import { DialogTitleProps } from './dialog/DialogTitle';
-import Tile, { TileProps } from './tile/Tile';
+import Tile, { TileProps } from './Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
 import Header, { HeaderProps } from './Header';

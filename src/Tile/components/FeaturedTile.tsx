@@ -7,11 +7,11 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import { BackgroundImage, withTheme } from '../config';
-import { renderNode, RneFunctionComponent } from '../helpers';
-import Text from '../Text';
-import Icon from '../icons/Icon';
-import { TileProps } from './Tile';
+import { BackgroundImage, withTheme } from '../../config';
+import { renderNode, RneFunctionComponent } from '../../helpers';
+import Text from '../../Text';
+import Icon from '../../icons/Icon';
+import { TileProps } from '../Tile';
 
 const renderText = (
   content: React.ReactNode,
@@ -127,5 +127,6 @@ const FeaturedTile: RneFunctionComponent<TileProps> = (props) => {
   );
 };
 
-export { FeaturedTile };
-export default withTheme(FeaturedTile, 'FeaturedTile');
+const ThemedFeaturedTile = withTheme(FeaturedTile, 'FeaturedTile');
+
+export { FeaturedTile, ThemedFeaturedTile };

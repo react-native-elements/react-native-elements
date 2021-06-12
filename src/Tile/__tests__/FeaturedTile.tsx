@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
 import Avatar from '../../avatar/Avatar';
-import ThemedFeaturedTile, { FeaturedTile } from '../FeaturedTile';
+import { ThemedFeaturedTile, FeaturedTile } from '../components/FeaturedTile';
 
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {

@@ -13,11 +13,10 @@ import {
   ImageURISource,
   ImageSourcePropType,
 } from 'react-native';
-import { withTheme } from '../config';
 import Image from '../image/Image';
 import Text from '../Text';
 import Icon, { IconObject, IconProps } from '../icons/Icon';
-import FeaturedTile from './FeaturedTile';
+import { ThemedFeaturedTile } from './components/FeaturedTile';
 import { RneFunctionComponent } from '../helpers';
 
 export type TileProps = TouchableOpacityProps &
@@ -42,34 +41,29 @@ export type TileProps = TouchableOpacityProps &
     ImageComponent?: typeof React.Component;
   };
 
-const Tile: RneFunctionComponent<TileProps> = (props) => {
-  const {
-    featured,
-    imageSrc,
-    icon,
-    title,
-    children,
-    caption,
-    titleStyle,
-    onPress,
-    activeOpacity,
-    overlayContainerStyle,
-    captionStyle,
-    iconContainerStyle,
-    imageContainerStyle,
-    containerStyle,
-    contentContainerStyle,
-    titleNumberOfLines,
-    ImageComponent = Image,
-    imageProps = {},
-    ...attributes
-  } = props;
-
-  const {
-    width = Dimensions.get('window').width,
-    height = width * 0.8,
-  } = props;
-
+export const Tile: RneFunctionComponent<TileProps> = ({
+  featured,
+  imageSrc,
+  icon,
+  title,
+  children,
+  caption,
+  titleStyle,
+  onPress,
+  activeOpacity,
+  overlayContainerStyle,
+  captionStyle,
+  iconContainerStyle,
+  imageContainerStyle,
+  containerStyle,
+  contentContainerStyle,
+  titleNumberOfLines,
+  ImageComponent = Image,
+  imageProps = {},
+  width = Dimensions.get('window').width,
+  height = width * 0.8,
+  ...attributes
+}) => {
   if (featured) {
     const featuredProps = {
       title,
@@ -88,7 +82,7 @@ const Tile: RneFunctionComponent<TileProps> = (props) => {
       imageProps,
       ImageComponent,
     };
-    return <FeaturedTile {...(featuredProps as TileProps)} />;
+    return <ThemedFeaturedTile {...(featuredProps as TileProps)} />;
   }
 
   return (
@@ -169,5 +163,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Tile };
-export default withTheme(Tile, 'Tile');
+Tile.displayName = 'Tile';
