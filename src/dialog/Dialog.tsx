@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Overlay, { OverlayProps } from '../overlay/Overlay';
+import Overlay, { OverlayProps } from '../Overlay';
 import { Theme } from '../config/theme';
 import { withTheme } from '../config';
 import DialogLoading from './DialogLoading';

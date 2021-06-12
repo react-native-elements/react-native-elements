@@ -8,10 +8,10 @@ import {
   StyleProp,
 } from 'react-native';
 import { normalizeText, RneFunctionComponent } from '../helpers';
-import { fonts, withTheme } from '../config';
+import { fonts } from '../config';
 import Text from '../Text';
-import Button, { ButtonProps } from '../Button';
-import Icon, { IconProps } from '../icons/Icon';
+import { ButtonProps } from '../Button';
+import { PricingButton } from './components/PricingButton';
 
 type ButtonInformation = {
   title: string;
@@ -34,25 +34,24 @@ export type PricingCardProps = {
   infoStyle?: StyleProp<TextStyle>;
 };
 
-const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
-  const { theme, ...rest } = props;
-  const {
-    containerStyle,
-    wrapperStyle,
-    title,
-    price,
-    info,
-    button,
-    color = theme?.colors?.primary,
-    titleStyle,
-    pricingStyle,
-    infoStyle,
-    onButtonPress,
-    ...attributes
-  } = rest;
+export const PricingCard: RneFunctionComponent<PricingCardProps> = ({
+  containerStyle,
+  wrapperStyle,
+  title,
+  price,
+  info = [],
+  button,
+  theme,
+  color = theme?.colors?.primary,
+  titleStyle,
+  pricingStyle,
+  infoStyle,
+  onButtonPress,
+  ...rest
+}) => {
   return (
     <View
-      {...attributes}
+      {...rest}
       style={StyleSheet.flatten([
         {
           margin: 15,
@@ -138,49 +137,6 @@ const PricingCard: RneFunctionComponent<PricingCardProps> = (props) => {
   );
 };
 
-const PricingButton = (
-  props: ButtonProps & {
-    color?: string;
-    onButtonPress?: () => void;
-  }
-) => {
-  const {
-    title,
-    buttonStyle,
-    color,
-    titleStyle,
-    onButtonPress,
-    icon,
-    ...buttonProps
-  } = props;
-  return (
-    <Button
-      title={title}
-      buttonStyle={StyleSheet.flatten([
-        styles.button,
-        buttonStyle,
-        { backgroundColor: color },
-      ])}
-      titleStyle={titleStyle}
-      onPress={onButtonPress}
-      icon={
-        React.isValidElement(icon) ? (
-          icon
-        ) : typeof icon === 'string' ? (
-          <Icon name={icon} size={15} color="white" />
-        ) : (
-          <Icon {...(icon as IconProps)} />
-        )
-      }
-      {...buttonProps}
-    />
-  );
-};
-
-PricingCard.defaultProps = {
-  info: [],
-};
-
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: 'transparent',
@@ -211,11 +167,6 @@ const styles = StyleSheet.create({
       } as TextStyle,
     }),
   },
-  button: {
-    marginTop: 15,
-    marginBottom: 10,
-  },
 });
 
-export { PricingCard, PricingButton };
-export default withTheme(PricingCard, 'PricingCard');
+PricingCard.displayName = 'PricingCard';

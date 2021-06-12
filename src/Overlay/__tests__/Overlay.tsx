@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
-import ThemedOverlay, { Overlay } from '../Overlay';
+import ThemedOverlay, { Overlay } from '../index';
 
 describe('Overlay', () => {
   it('should render without issues', () => {

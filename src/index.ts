@@ -12,7 +12,7 @@ import { ListItemProps } from './list/ListItemBase';
 import { ListItemAccordionProps } from './list/ListItemAccordion';
 import { ListItemSwipeableProps } from './list/ListItemSwipeable';
 import SocialIcon, { SocialIconProps } from './SocialIcon';
-import Overlay, { OverlayProps } from './overlay/Overlay';
+import Overlay, { OverlayProps } from './Overlay';
 
 // Utilities
 import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
@@ -37,7 +37,7 @@ import Tile, { TileProps } from './tile/Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
 import Header, { HeaderProps } from './Header';
-import PricingCard, { PricingCardProps } from './pricing/PricingCard';
+import PricingCard, { PricingCardProps } from './Pricing';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './BottomSheet';
 import LinearProgress, { LinearProgressProps } from './linearProgress';
