@@ -1,5 +1,5 @@
 import React from 'react';
-import LinearProgress from '../LinearProgress';
+import LinearProgress from '../index';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { render } from '@testing-library/react-native';

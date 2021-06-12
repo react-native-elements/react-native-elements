@@ -28,7 +28,7 @@ import { TabItemProps, TabProps } from '../tab/Tab';
 import { TabViewProps } from '../tab/TabView';
 import { FABProps } from '../FAB';
 import { SpeedDialProps, SpeedDialActionProps } from '../SpeedDial';
-import { LinearProgressProps } from '../linearProgress';
+import { LinearProgressProps } from '../LinearProgress';
 import { ChipProps } from '../Chip';
 
 import colors, { Colors } from './colors';

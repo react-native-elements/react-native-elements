@@ -39,7 +39,7 @@ import Header, { HeaderProps } from './Header';
 import PricingCard, { PricingCardProps } from './Pricing';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './BottomSheet';
-import LinearProgress, { LinearProgressProps } from './linearProgress';
+import LinearProgress, { LinearProgressProps } from './LinearProgress';
 import Switch, { SwitchProps } from './Switch';
 import Tab, { TabItemProps, TabProps } from './tab/Tab';
 import TabView, { TabViewProps } from './tab/TabView';
