@@ -6,7 +6,7 @@ import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 import ThemedPricingCard, { PricingCard, PricingButton } from '../PricingCard';
 import Icon from '../../icons/Icon';
-import Button from '../../buttons/Button';
+import Button from '../../Button';
 
 describe('PricingCard component', () => {
   it('should render without issues', () => {

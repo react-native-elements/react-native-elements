@@ -3,8 +3,8 @@
 // https://material.io/guidelines/components/buttons.html#buttons-raised-buttons
 // https://material.angularjs.org/latest/demo/button
 // Core
-import Button, { ButtonProps } from './buttons/Button';
-import Chip, { ChipProps } from './buttons/Chip';
+import Button, { ButtonProps } from './Button';
+import Chip, { ChipProps } from './Chip';
 import Input, { InputProps } from './input/Input';
 import Icon, { IconProps } from './icons/Icon';
 import ListItem from './list/ListItem';
@@ -21,16 +21,13 @@ import { SearchBarDefaultProps } from './searchbar/SearchBar-default';
 import { SearchBarIosProps } from './searchbar/SearchBar-ios';
 import Badge, { BadgeProps } from './badge/Badge';
 import withBadge from './badge/withBadge';
-import CheckBox, { CheckBoxProps } from './checkbox/CheckBox';
+import CheckBox, { CheckBoxProps } from './Checkbox';
 import Divider, { DividerProps } from './Divider';
-import Slider, { SliderProps } from './slider/Slider';
-import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
+import Slider, { SliderProps } from './Slider';
+import ButtonGroup, { ButtonGroupProps } from './ButtonGroup';
 import Image, { ImageProps } from './image/Image';
-import FAB, { FABProps } from './buttons/FAB';
-import SpeedDial, {
-  SpeedDialActionProps,
-  SpeedDialProps,
-} from './buttons/SpeedDial';
+import FAB, { FABProps } from './FAB';
+import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 // Productivity
 import Card, { CardProps } from './card/Card';
 import Dialog, { DialogProps } from './dialog/Dialog';

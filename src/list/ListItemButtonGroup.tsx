@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { withTheme } from '../config';
-import ButtonGroup, { ButtonGroupProps } from '../buttons/ButtonGroup';
+import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
 import { RneFunctionComponent } from '../helpers';
 
 const ListItemButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({

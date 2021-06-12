@@ -7,7 +7,7 @@ import {
   ViewProps,
   StyleSheet,
 } from 'react-native';
-import Button, { ButtonProps } from '../buttons/Button';
+import Button, { ButtonProps } from '../Button';
 import { RneFunctionComponent } from '../helpers';
 import { withTheme } from '../config';
 import Color from 'color';

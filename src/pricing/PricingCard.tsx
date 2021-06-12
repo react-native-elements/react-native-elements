@@ -10,7 +10,7 @@ import {
 import { normalizeText, RneFunctionComponent } from '../helpers';
 import { fonts, withTheme } from '../config';
 import Text from '../Text';
-import Button, { ButtonProps } from '../buttons/Button';
+import Button, { ButtonProps } from '../Button';
 import Icon, { IconProps } from '../icons/Icon';
 
 type ButtonInformation = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Button, { ButtonProps } from '../buttons/Button';
+import Button, { ButtonProps } from '../Button';
 import { withTheme } from '../config';
 
 const DialogButton: React.FunctionComponent<ButtonProps> = ({
