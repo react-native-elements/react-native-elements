@@ -2,11 +2,10 @@ import React from 'react';
 import { Image, View, Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-// import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import theme from '../../config/theme';
-// import { ThemeProvider } from '../../config';
-// import ThemedCheckBox, { CheckBox } from '../index';
-import { CheckBox } from '../index';
+import { ThemeProvider } from '../../config';
+import ThemedCheckBox, { CheckBox } from '../index';
 
 describe('CheckBox Component', () => {
   it('should render without issues', () => {
@@ -145,9 +144,9 @@ describe('CheckBox Component', () => {
       />
     );
     expect(toJson(component)).toMatchSnapshot();
-    // expect(
-    //   component.find({ testID: 'checkboxTitle' }).props().numberOfLines
-    // ).toBe(2);
+    expect(
+      component.find({ testID: 'checkboxTitle' }).props().numberOfLines
+    ).toBe(2);
   });
 
   it('should allow custom checked Icon when unchecked', () => {
@@ -174,18 +173,18 @@ describe('CheckBox Component', () => {
   });
 
   it('should use values from theme', () => {
-    // const testTheme = {
-    //   CheckBox: {
-    //     title: 'George is Cool',
-    //   },
-    // };
-    // const component = renderer.create(
-    //   <ThemeProvider theme={testTheme}>
-    //     <ThemedCheckBox />
-    //   </ThemeProvider>
-    // );
-    // expect(
-    //   component.root.findByProps({ testID: 'checkboxTitle' }).props.children
-    // ).toBe('George is Cool');
+    const testTheme = {
+      CheckBox: {
+        title: 'George is Cool',
+      },
+    };
+    const component = renderer.create(
+      <ThemeProvider theme={testTheme}>
+        <ThemedCheckBox title="George is Cool" />
+      </ThemeProvider>
+    );
+    expect(
+      component.root.findByProps({ testID: 'checkboxTitle' }).props.children
+    ).toBe('George is Cool');
   });
 });
