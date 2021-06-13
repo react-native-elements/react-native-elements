@@ -11,6 +11,7 @@ import {
   ColorValue,
   Dimensions,
   TouchableWithoutFeedback,
+  Platform,
 } from 'react-native';
 import { Animated, Text, SafeAreaView } from 'react-native';
 import Triangle from './Triangle';
@@ -31,6 +32,7 @@ export type ToolTip2Props = {
   overlayColor?: ColorValue;
   backgroundColor?: ColorValue;
   closeOnlyOnBackdropPress?: boolean;
+  statusBarHeight?: number;
 };
 
 const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
@@ -48,6 +50,10 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
   width: propWidth = 200,
   closeOnlyOnBackdropPress = false,
   containerStyle,
+  statusBarHeight = Platform.select({
+    ios: 20,
+    default: 0,
+  }),
 }) => {
   const { current: animation } = React.useRef<Animated.Value>(
     new Animated.Value(0)
@@ -119,7 +125,10 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
     if (horizontal > ScreenWidth - tooltipWidth) {
       horizontal = ScreenWidth - (tooltipWidth || 0);
     }
-    let top = py + (ScreenHeight / 2 < py ? -toolTipHeight - height - 28 : 0);
+    let top =
+      py +
+      (ScreenHeight / 2 < py ? -toolTipHeight - height - 28 : 0) +
+      statusBarHeight;
     return { top, [I18nManager.isRTL ? 'right' : 'left']: horizontal };
   };
 
@@ -165,6 +174,7 @@ const ToolTip2: React.FunctionComponent<ToolTip2Props> = ({
                     position: 'absolute',
                     borderBottomColor: pointerColor || backgroundColor,
                     top:
+                      statusBarHeight +
                       containerDimensions.py -
                       containerDimensions.height *
                         (ScreenHeight / 2 < containerDimensions.py ? 2 : 0) -
