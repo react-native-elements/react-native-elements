@@ -1,7 +1,6 @@
 import { ViewProps } from 'react-native';
 import { TapRatingProps, SwipeRatingProps } from 'react-native-ratings';
-import { AccessoryProps } from '../avatar/Accessory';
-import { AvatarProps } from '../avatar/Avatar';
+import { AvatarProps, AccessoryProps } from '../Avatar';
 import { BadgeProps } from '../Badge';
 import { BottomSheetProps } from '../BottomSheet';
 import { ButtonProps } from '../Button';

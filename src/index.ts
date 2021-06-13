@@ -33,8 +33,7 @@ import Dialog, { DialogProps } from './dialog/Dialog';
 import { DialogLoadingProps } from './dialog/DialogLoading';
 import { DialogTitleProps } from './dialog/DialogTitle';
 import Tile, { TileProps } from './Tile';
-import Avatar, { AvatarProps } from './avatar/Avatar';
-import Accessory, { AccessoryProps } from './avatar/Accessory';
+import Avatar, { AvatarProps } from './Avatar';
 import Header, { HeaderProps } from './Header';
 import PricingCard, { PricingCardProps } from './Pricing';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
@@ -99,7 +98,6 @@ export {
   Tile,
   Slider,
   Avatar,
-  Accessory,
   Rating,
   AirbnbRating,
   Header,
@@ -142,7 +140,6 @@ export type {
   DialogLoadingProps,
   DialogTitleProps,
   TileProps,
-  AccessoryProps,
   HeaderProps,
   PricingCardProps,
   TooltipProps,
