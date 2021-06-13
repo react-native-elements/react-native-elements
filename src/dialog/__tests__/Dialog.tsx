@@ -50,7 +50,7 @@ describe('Dialog Component', () => {
 
   it('should not show when isVisible is false', () => {
     const component = shallow(
-      <Dialog>
+      <Dialog isVisible={false}>
         <Text>This is a test dialog</Text>
       </Dialog>
     );
@@ -69,7 +69,7 @@ describe('Dialog Component', () => {
     };
     const component = create(
       <ThemeProvider theme={testTheme}>
-        <ThemedDialog />
+        <ThemedDialog isVisible />
       </ThemeProvider>
     );
     expect(component.toJSON()).toMatchSnapshot();

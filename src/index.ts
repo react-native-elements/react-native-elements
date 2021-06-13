@@ -29,7 +29,7 @@ import FAB, { FABProps } from './FAB';
 import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 // Productivity
 import Card, { CardProps } from './card/Card';
-import Dialog, { DialogProps } from './dialog/Dialog';
+import Dialog from './dialog/Dialog';
 import { DialogLoadingProps } from './dialog/DialogLoading';
 import { DialogTitleProps } from './dialog/DialogTitle';
 import Tile, { TileProps } from './Tile';
@@ -138,7 +138,6 @@ export type {
   ButtonGroupProps,
   ImageProps,
   CardProps,
-  DialogProps,
   DialogLoadingProps,
   DialogTitleProps,
   TileProps,
