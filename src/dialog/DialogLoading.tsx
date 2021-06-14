@@ -8,15 +8,14 @@ import {
   View,
 } from 'react-native';
 import { withTheme } from '../config';
-import { Theme } from '../config/theme';
+import { RneFunctionComponent } from '../helpers';
 
 export type DialogLoadingProps = {
   loadingStyle?: StyleProp<ViewStyle>;
   loadingProps?: ActivityIndicatorProps;
-  theme?: Theme;
 };
 
-const DialogLoading: React.FunctionComponent<DialogLoadingProps> = ({
+const DialogLoading: RneFunctionComponent<DialogLoadingProps> = ({
   loadingStyle,
   loadingProps,
   theme,
@@ -25,8 +24,8 @@ const DialogLoading: React.FunctionComponent<DialogLoadingProps> = ({
     <View style={styles.loadingView}>
       <ActivityIndicator
         style={StyleSheet.flatten([styles.loading, loadingStyle])}
-        color={loadingProps.color ?? theme.colors.primary}
-        size={loadingProps.size ?? 'large'}
+        color={loadingProps?.color ?? theme?.colors?.primary}
+        size={loadingProps?.size ?? 'large'}
         testID="Dialog__Loading"
         {...loadingProps}
       />

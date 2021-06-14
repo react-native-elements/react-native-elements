@@ -2,8 +2,9 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import Button, { ButtonProps } from '../buttons/Button';
 import { withTheme } from '../config';
+import { RneFunctionComponent } from '../helpers';
 
-const DialogButton: React.FunctionComponent<ButtonProps> = ({
+const DialogButton: RneFunctionComponent<ButtonProps> = ({
   titleStyle,
   ...rest
 }) => {

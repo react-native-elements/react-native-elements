@@ -33,7 +33,7 @@ import SpeedDial, {
 } from './buttons/SpeedDial';
 // Productivity
 import Card, { CardProps } from './card/Card';
-import Dialog, { DialogProps } from './dialog/Dialog';
+import Dialog from './dialog/Dialog';
 import { DialogLoadingProps } from './dialog/DialogLoading';
 import { DialogTitleProps } from './dialog/DialogTitle';
 import Tile, { TileProps } from './tile/Tile';
@@ -142,7 +142,6 @@ export type {
   ButtonGroupProps,
   ImageProps,
   CardProps,
-  DialogProps,
   DialogLoadingProps,
   DialogTitleProps,
   TileProps,
