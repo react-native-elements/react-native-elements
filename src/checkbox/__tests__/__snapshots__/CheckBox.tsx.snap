@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckBox Component should allow custom checked Icon 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -152,11 +152,11 @@ exports[`CheckBox Component should allow custom checked Icon 1`] = `
       }
     />
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -307,11 +307,11 @@ exports[`CheckBox Component should allow custom checked Icon when unchecked 1`] 
       }
     />
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should allow passing props to the title 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -426,11 +426,11 @@ exports[`CheckBox Component should allow passing props to the title 1`] = `
       Yea
     </Themed.Text>
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should render title in Text 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -539,11 +539,11 @@ exports[`CheckBox Component should render title in Text 1`] = `
       Custom Text
     </Themed.Text>
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should render with icon and checked 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -641,11 +641,11 @@ exports[`CheckBox Component should render with icon and checked 1`] = `
       }
     />
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should render with icon and iconRight 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -743,11 +743,11 @@ exports[`CheckBox Component should render with icon and iconRight 1`] = `
       uncheckedColor="blue"
     />
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should render with textStyle and fontFamily 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -863,11 +863,11 @@ exports[`CheckBox Component should render with textStyle and fontFamily 1`] = `
       Custom Text
     </Themed.Text>
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should render with wrapperStyle 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -982,11 +982,11 @@ exports[`CheckBox Component should render with wrapperStyle 1`] = `
       Custom Text
     </Themed.Text>
   </View>
-</ForwardRef>
+</Pressable>
 `;
 
 exports[`CheckBox Component should render without issues 1`] = `
-<ForwardRef
+<Pressable
   accessibilityRole="checkbox"
   accessibilityState={
     Object {
@@ -1076,5 +1076,5 @@ exports[`CheckBox Component should render without issues 1`] = `
       }
     />
   </View>
-</ForwardRef>
+</Pressable>
 `;

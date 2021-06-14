@@ -4,7 +4,7 @@ import {
   Text,
   Image as RNImage,
   StyleSheet,
-  TouchableOpacity,
+  Pressable,
   StyleProp,
   ViewStyle,
   TextStyle,
@@ -51,12 +51,10 @@ export type AvatarProps = {
   ImageComponent?: React.ComponentClass;
 };
 
-interface Avatar extends RneFunctionComponent<AvatarProps> {}
-
-const AvatarComponent: Avatar = ({
+const AvatarComponent: RneFunctionComponent<AvatarProps> = ({
   onPress,
   onLongPress,
-  Component = onPress || onLongPress ? TouchableOpacity : View,
+  Component = onPress || onLongPress ? Pressable : View,
   containerStyle,
   icon,
   iconStyle,
@@ -73,7 +71,7 @@ const AvatarComponent: Avatar = ({
   ImageComponent = RNImage,
   children,
   ...attributes
-}: React.PropsWithChildren<AvatarProps>) => {
+}) => {
   let width = avatarSizes.small;
   width = typeof size === 'number' ? size : avatarSizes[size];
   const height = width;

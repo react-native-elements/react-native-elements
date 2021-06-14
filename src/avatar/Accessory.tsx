@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  TouchableHighlight,
+  Pressable,
   View,
   Platform,
   StyleSheet,
@@ -29,7 +29,7 @@ const Accessory: RneFunctionComponent<AccessoryProps> = ({
   ...props
 }: AccessoryProps) => {
   return (
-    <TouchableHighlight
+    <Pressable
       style={[
         styles.accessory,
         {
@@ -39,7 +39,11 @@ const Accessory: RneFunctionComponent<AccessoryProps> = ({
         },
         style,
       ]}
-      underlayColor={underlayColor}
+      android_ripple={{
+        color: underlayColor,
+        borderless: false,
+        radius: -5,
+      }}
       onPress={onPress}
       onLongPress={onLongPress}
     >
@@ -64,7 +68,7 @@ const Accessory: RneFunctionComponent<AccessoryProps> = ({
           />
         )}
       </View>
-    </TouchableHighlight>
+    </Pressable>
   );
 };
 
