@@ -36,7 +36,7 @@ import Tile, { TileProps } from './Tile';
 import Avatar, { AvatarProps } from './avatar/Avatar';
 import Accessory, { AccessoryProps } from './avatar/Accessory';
 import Header, { HeaderProps } from './Header';
-import PricingCard, { PricingCardProps } from './Pricing';
+import PricingCard, { PricingCardProps } from './PricingCard';
 import Tooltip, { TooltipProps } from './tooltip/Tooltip';
 import BottomSheet, { BottomSheetProps } from './BottomSheet';
 import LinearProgress, { LinearProgressProps } from './LinearProgress';

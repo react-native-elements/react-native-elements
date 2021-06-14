@@ -15,7 +15,7 @@ import { ImageProps } from '../image/Image';
 import { InputProps } from '../input/Input';
 import { ListItemProps } from '../list/ListItemBase';
 import { OverlayProps } from '../Overlay';
-import { PricingCardProps } from '../Pricing';
+import { PricingCardProps } from '../PricingCard';
 import { SearchBarProps } from '../searchbar/SearchBar';
 import { SliderProps } from '../Slider';
 import { SocialIconProps } from '../SocialIcon';

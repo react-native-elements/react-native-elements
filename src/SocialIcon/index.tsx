@@ -1,6 +1,6 @@
 import { withTheme } from '../config';
-import { SocialIcon, SocialIconProps, SocialMediaType } from './SocialIcon';
+import { SocialIcon, SocialIconProps } from './SocialIcon';
 
 export { SocialIcon };
-export type { SocialIconProps, SocialMediaType };
+export type { SocialIconProps };
 export default withTheme(SocialIcon, 'SocialIcon');
