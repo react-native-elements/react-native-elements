@@ -2,17 +2,15 @@ import React, { useCallback, useEffect } from 'react';
 import {
   View,
   Text,
-  TouchableNativeFeedback,
-  TouchableOpacity,
   ActivityIndicator,
   Platform,
   StyleSheet,
-  TouchableOpacityProps,
-  TouchableNativeFeedbackProps,
   StyleProp,
   ViewStyle,
   ActivityIndicatorProps,
   TextStyle,
+  PressableProps,
+  Pressable,
 } from 'react-native';
 import Color from 'color';
 import { withTheme } from '../config';
@@ -29,29 +27,28 @@ const defaultLoadingProps = (
   size: 'small',
 });
 
-export type ButtonProps = TouchableOpacityProps &
-  TouchableNativeFeedbackProps & {
-    title?: string | React.ReactElement<{}>;
-    titleStyle?: StyleProp<TextStyle>;
-    titleProps?: TextProps;
-    buttonStyle?: StyleProp<ViewStyle>;
-    type?: 'solid' | 'clear' | 'outline';
-    loading?: boolean;
-    loadingStyle?: StyleProp<ViewStyle>;
-    loadingProps?: ActivityIndicatorProps;
-    containerStyle?: StyleProp<ViewStyle>;
-    icon?: IconNode;
-    iconContainerStyle?: StyleProp<ViewStyle>;
-    iconRight?: boolean;
-    linearGradientProps?: object;
-    TouchableComponent?: typeof React.Component;
-    ViewComponent?: typeof React.Component;
-    disabled?: boolean;
-    disabledStyle?: StyleProp<ViewStyle>;
-    disabledTitleStyle?: StyleProp<TextStyle>;
-    raised?: boolean;
-    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
-  };
+export type ButtonProps = PressableProps & {
+  title?: string | React.ReactElement<{}>;
+  titleStyle?: StyleProp<TextStyle>;
+  titleProps?: TextProps;
+  buttonStyle?: StyleProp<ViewStyle>;
+  type?: 'solid' | 'clear' | 'outline';
+  loading?: boolean;
+  loadingStyle?: StyleProp<ViewStyle>;
+  loadingProps?: ActivityIndicatorProps;
+  containerStyle?: StyleProp<ViewStyle>;
+  icon?: IconNode;
+  iconContainerStyle?: StyleProp<ViewStyle>;
+  iconRight?: boolean;
+  linearGradientProps?: object;
+  Component?: typeof React.Component;
+  ViewComponent?: typeof React.Component;
+  disabled?: boolean;
+  disabledStyle?: StyleProp<ViewStyle>;
+  disabledTitleStyle?: StyleProp<TextStyle>;
+  raised?: boolean;
+  iconPosition?: 'left' | 'right' | 'top' | 'bottom';
+};
 
 const Button: RneFunctionComponent<ButtonProps> = (props) => {
   useEffect(() => {
@@ -63,7 +60,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
   });
 
   const {
-    TouchableComponent,
+    Component = Pressable,
     containerStyle,
     onPress = () => console.log('Please attach a method to this component'),
     buttonStyle,
@@ -97,13 +94,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     [loading, onPress]
   );
 
-  const TouchableComponentInternal =
-    TouchableComponent ||
-    Platform.select({
-      android: linearGradientProps ? TouchableOpacity : TouchableNativeFeedback,
-      default: TouchableOpacity,
-    });
-
   const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
     {
       color: type === 'solid' ? 'white' : theme?.colors?.primary,
@@ -115,14 +105,6 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
     },
     disabled && disabledTitleStyle,
   ]);
-
-  const background =
-    Platform.OS === 'android' && Platform.Version >= 21
-      ? TouchableNativeFeedback.Ripple(
-          Color(titleStyle?.color?.toString()).alpha(0.32).rgb().string(),
-          true
-        )
-      : undefined;
 
   const loadingProps: ActivityIndicatorProps = {
     ...defaultLoadingProps(type, theme),
@@ -151,14 +133,21 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
         raised && !disabled && type !== 'clear' && styles.raised,
       ]}
     >
-      <TouchableComponentInternal
+      <Component
         onPress={handleOnPress}
         delayPressIn={0}
         activeOpacity={0.3}
         accessibilityRole="button"
         accessibilityState={accessibilityState}
         disabled={disabled}
-        background={background}
+        android_ripple={{
+          color: Color(titleStyle?.color?.toString())
+            .alpha(0.32)
+            .rgb()
+            .string(),
+          borderless: false,
+          radius: -5,
+        }}
         {...attributes}
       >
         <ViewComponent
@@ -214,7 +203,7 @@ const Button: RneFunctionComponent<ButtonProps> = (props) => {
               ...titleProps,
             })}
         </ViewComponent>
-      </TouchableComponentInternal>
+      </Component>
     </View>
   );
 };

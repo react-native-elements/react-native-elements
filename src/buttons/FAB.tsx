@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Animated } from 'react-native';
+import { StyleSheet, Animated, StyleProp, ViewStyle } from 'react-native';
 import Button, { ButtonProps } from './Button';
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
@@ -10,6 +10,7 @@ export type FABProps = ButtonProps & {
   placement?: 'left' | 'right';
   visible?: boolean;
   upperCase?: boolean;
+  style?: StyleProp<ViewStyle>;
 };
 
 const FAB: RneFunctionComponent<FABProps> = ({

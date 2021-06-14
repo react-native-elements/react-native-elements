@@ -5,7 +5,7 @@ import {
   Animated,
   StyleSheet,
   SafeAreaView,
-  TouchableWithoutFeedback,
+  Pressable,
 } from 'react-native';
 import FAB, { FABProps } from './FAB';
 import { withTheme } from '../config';
@@ -73,7 +73,11 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
 
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
-      <TouchableWithoutFeedback onPress={onClose}>
+      <Pressable
+        onPress={onClose}
+        style={[StyleSheet.absoluteFillObject]}
+        pointerEvents={isOpen ? 'auto' : 'none'}
+      >
         <Animated.View
           style={[
             StyleSheet.absoluteFillObject,
@@ -84,9 +88,8 @@ const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
                 Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
             },
           ]}
-          pointerEvents={isOpen ? 'auto' : 'none'}
         />
-      </TouchableWithoutFeedback>
+      </Pressable>
 
       <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
         {React.Children.toArray(children).map((ChildAction, i: number) => (

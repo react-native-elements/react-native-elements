@@ -1,14 +1,13 @@
 import React from 'react';
 import {
   Platform,
-  TouchableHighlight,
   View,
   StyleSheet,
-  TouchableNativeFeedback,
   ViewStyle,
   StyleProp,
   TextStyle,
-  TouchableHighlightProps,
+  Pressable,
+  PressableProps,
 } from 'react-native';
 import {
   IconButtonProps,
@@ -35,7 +34,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject extends TouchableHighlightProps {
+export interface IconObject extends PressableProps {
   name?: string;
   color?: string;
   size?: number;
@@ -75,12 +74,7 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
     disabled = false,
     disabledStyle,
     onPress,
-    Component = onPress
-      ? Platform.select<typeof React.Component>({
-          android: TouchableNativeFeedback,
-          default: TouchableHighlight,
-        })
-      : View,
+    Component = onPress ? Pressable : View,
     solid = false,
     brand = false,
     theme,
@@ -104,15 +98,6 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
     width: size * 2 + 4,
   };
 
-  if (Platform.OS === 'android' && !attributes.background) {
-    if (Platform.Version >= 21) {
-      attributes.background = TouchableNativeFeedback.Ripple(
-        Color(color).alpha(0.2).rgb().string(),
-        true
-      );
-    }
-  }
-
   return (
     <View
       style={StyleSheet.flatten([
@@ -133,9 +118,15 @@ const Icon: RneFunctionComponent<IconProps> = (props) => {
         {...(onPress && {
           onPress,
           disabled,
-          underlayColor: reverse ? color : underlayColor,
-          activeOpacity: 0.3,
         })}
+        android_ripple={{
+          color: Color(reverse ? color : (underlayColor as string))
+            .alpha(0.3)
+            .rgb()
+            .string(),
+          borderless: false,
+          radius: -5,
+        }}
       >
         <View
           style={StyleSheet.flatten([

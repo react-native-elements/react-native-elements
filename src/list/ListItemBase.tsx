@@ -3,8 +3,8 @@ import {
   Platform,
   StyleProp,
   StyleSheet,
-  TouchableHighlight,
-  TouchableHighlightProps,
+  Pressable,
+  PressableProps,
   View,
   ViewStyle,
 } from 'react-native';
@@ -12,7 +12,7 @@ import {
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
-export type ListItemProps = TouchableHighlightProps & {
+export type ListItemProps = PressableProps & {
   containerStyle?: StyleProp<ViewStyle>;
   disabledStyle?: StyleProp<ViewStyle>;
   topDivider?: boolean;
@@ -29,7 +29,7 @@ const ListItemBase: RneFunctionComponent<ListItemProps> = (props) => {
     containerStyle,
     onPress,
     onLongPress,
-    Component = onPress || onLongPress ? TouchableHighlight : View,
+    Component = onPress || onLongPress ? Pressable : View,
     disabled,
     disabledStyle,
     bottomDivider,
@@ -99,14 +99,14 @@ const PadView: React.FC<PadViewProps> = ({
 }) => {
   const _root = useRef(null);
 
-  const childrens = React.Children.toArray(children);
-  const { length } = childrens;
+  const AllChildren = React.Children.toArray(children);
+  const { length } = AllChildren;
   const Container = Component || View;
 
   return (
     <Container {...props} ref={_root} testID="padView">
       {React.Children.map(
-        childrens,
+        AllChildren,
         (child, index) =>
           child && [
             child,

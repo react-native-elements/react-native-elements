@@ -4,7 +4,7 @@ import {
   Image as ImageNative,
   StyleSheet,
   View,
-  TouchableOpacity,
+  Pressable,
   ImageProps as RNImageProps,
   ViewStyle,
   StyleProp,
@@ -63,7 +63,7 @@ class Image extends React.Component<
     const {
       onPress,
       onLongPress,
-      Component = onPress || onLongPress ? TouchableOpacity : View,
+      Component = onPress || onLongPress ? Pressable : View,
       placeholderStyle,
       PlaceholderContent,
       containerStyle,

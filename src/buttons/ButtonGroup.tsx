@@ -1,13 +1,13 @@
+import Color from 'color';
 import React from 'react';
 import {
   View,
-  TouchableNativeFeedback,
-  TouchableOpacity,
   Platform,
   StyleSheet,
   ViewStyle,
   StyleProp,
   TextStyle,
+  Pressable,
 } from 'react-native';
 import { withTheme } from '../config';
 import { normalizeText, color, RneFunctionComponent } from '../helpers';
@@ -47,10 +47,7 @@ export type ButtonGroupProps = {
 const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
   const { theme, ...rest } = props;
   const {
-    Component = Platform.select<typeof React.Component>({
-      android: TouchableNativeFeedback,
-      default: TouchableOpacity,
-    }),
+    Component = Pressable,
     buttons,
     onPress = () => null,
     selectedIndex = null,
@@ -126,7 +123,14 @@ const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = (props) => {
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
-              underlayColor={underlayColor}
+              android_ripple={{
+                color: Color(underlayColor)
+                  .alpha(activeOpacity)
+                  .rgb()
+                  .toString(),
+                borderless: false,
+                radius: -5,
+              }}
               disabled={isDisabled}
               onPress={() => {
                 if (selectMultiple) {
