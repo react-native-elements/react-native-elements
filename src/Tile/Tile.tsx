@@ -13,9 +13,9 @@ import {
   ImageURISource,
   ImageSourcePropType,
 } from 'react-native';
-import Image from '../image/Image';
+import Image from '../Image';
 import Text from '../Text';
-import Icon, { IconObject, IconProps } from '../icons/Icon';
+import Icon, { IconObject, IconProps } from '../Icon';
 import { ThemedFeaturedTile } from './components/FeaturedTile';
 import { RneFunctionComponent } from '../helpers';
 

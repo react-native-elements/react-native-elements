@@ -9,8 +9,8 @@ import {
   ColorValue,
 } from 'react-native';
 import { withTheme } from '../config';
-import Image, { ImageProps } from '../image/Image';
-import Icon, { IconProps } from '../icons/Icon';
+import Image, { ImageProps } from '../Image';
+import Icon, { IconProps } from '../Icon';
 import { RneFunctionComponent } from '../helpers';
 
 export type AccessoryProps = Partial<IconProps> &
@@ -90,4 +90,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(Accessory, 'AvatarAccessory');
+const ThemedAccessory = withTheme(Accessory, 'AvatarAccessory');
+export { ThemedAccessory };

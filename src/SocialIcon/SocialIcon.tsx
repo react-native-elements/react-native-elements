@@ -9,7 +9,7 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import Icon from '../icons/Icon';
+import Icon from '../Icon';
 import Text from '../Text';
 import fonts from '../config/fonts';
 import { RneFunctionComponent } from '../helpers';

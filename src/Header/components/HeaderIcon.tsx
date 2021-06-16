@@ -1,4 +1,4 @@
-import { IconObject } from '../../icons/Icon';
+import { IconObject } from '../../Icon';
 import { StyleProp, TextStyle } from 'react-native';
 
 export type HeaderIcon = IconObject & {

@@ -10,7 +10,7 @@ import {
 import { BackgroundImage, withTheme } from '../../config';
 import { renderNode, RneFunctionComponent } from '../../helpers';
 import Text from '../../Text';
-import Icon from '../../icons/Icon';
+import Icon from '../../Icon';
 import { TileProps } from '../Tile';
 
 const renderText = (

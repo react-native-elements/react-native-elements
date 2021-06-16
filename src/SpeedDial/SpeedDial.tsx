@@ -7,7 +7,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import FAB, { FABProps } from '../FAB';
-import { IconNode } from '../icons/Icon';
+import { IconNode } from '../Icon';
 import Color from 'color';
 import { RneFunctionComponent } from '../helpers';
 

@@ -8,7 +8,7 @@ import {
   FlexAlignType,
 } from 'react-native';
 import { renderNode } from '../../helpers';
-import Icon from '../../icons/Icon';
+import Icon from '../../Icon';
 
 const ALIGN_STYLE: Record<Placement, FlexAlignType> = {
   left: 'flex-start',

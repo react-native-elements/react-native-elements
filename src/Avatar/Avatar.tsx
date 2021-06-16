@@ -13,8 +13,8 @@ import {
   ImageStyle,
 } from 'react-native';
 import { renderNode, RneFunctionComponent } from '../helpers';
-import Icon, { IconObject } from '../icons/Icon';
-import Image, { ImageProps } from '../image/Image';
+import Icon, { IconObject } from '../Icon';
+import Image, { ImageProps } from '../Image';
 
 const avatarSizes = {
   small: 34,

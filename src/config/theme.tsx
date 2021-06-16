@@ -1,5 +1,6 @@
 import { ViewProps } from 'react-native';
-import { TapRatingProps, SwipeRatingProps } from 'react-native-ratings';
+import { SwipeRatingProps } from '../Rating';
+import { TapRatingProps } from '../AirbnbRating';
 import { AvatarProps, AccessoryProps } from '../Avatar';
 import { BadgeProps } from '../Badge';
 import { BottomSheetProps } from '../BottomSheet';
@@ -9,10 +10,11 @@ import { CardProps } from '../card/Card';
 import { CheckBoxProps } from '../Checkbox';
 import { DividerProps } from '../Divider';
 import { HeaderProps } from '../Header';
-import { IconProps } from '../icons/Icon';
-import { ImageProps } from '../image/Image';
-import { InputProps } from '../input/Input';
-import { ListItemProps } from '../list/ListItemBase';
+import { IconProps } from '../Icon';
+import { ImageProps } from '../Image';
+import { InputProps } from '../Input';
+import { ListItemProps } from '../ListItem';
+import { ListItemAccordionProps } from '../ListItem';
 import { OverlayProps } from '../Overlay';
 import { PricingCardProps } from '../PricingCard';
 import { SearchBarProps } from '../searchbar/SearchBar';
@@ -20,15 +22,20 @@ import { SliderProps } from '../Slider';
 import { SocialIconProps } from '../SocialIcon';
 import { TextProps } from '../Text';
 import { TileProps } from '../Tile';
-import { TooltipProps } from '../tooltip/Tooltip';
+import { TooltipProps } from '../Tooltip';
 import { SwitchProps } from '../Switch';
-import { ListItemAccordionProps } from '../list/ListItemAccordion';
 import { TabItemProps, TabProps } from '../tab/Tab';
 import { TabViewProps } from '../tab/TabView';
 import { FABProps } from '../FAB';
 import { SpeedDialProps, SpeedDialActionProps } from '../SpeedDial';
 import { LinearProgressProps } from '../LinearProgress';
 import { ChipProps } from '../Chip';
+import {
+  DialogActionsProps,
+  DialogLoadingProps,
+  DialogProps,
+  DialogTitleProps,
+} from '../Dialog';
 
 import colors, { Colors } from './colors';
 
@@ -54,6 +61,11 @@ export interface FullTheme {
   CardTitle: Partial<TextProps>;
   CheckBox: Partial<CheckBoxProps>;
   Divider: Partial<DividerProps>;
+  Dialog: Partial<DialogProps>;
+  DialogActions: Partial<DialogActionsProps>;
+  DialogButton: Partial<ButtonProps>;
+  DialogLoading: Partial<DialogLoadingProps>;
+  DialogTitle: Partial<DialogTitleProps>;
   Header: Partial<HeaderProps>;
   Icon: Partial<IconProps>;
   Image: Partial<ImageProps>;
@@ -69,8 +81,8 @@ export interface FullTheme {
   ListItemTitle: Partial<TextProps>;
   Overlay: Partial<OverlayProps>;
   PricingCard: Partial<PricingCardProps>;
-  Rating: Partial<TapRatingProps>;
-  AirbnbRating: Partial<SwipeRatingProps>;
+  Rating: Partial<SwipeRatingProps>;
+  AirbnbRating: Partial<TapRatingProps>;
   SearchBar: Partial<SearchBarProps>;
   Slider: Partial<SliderProps>;
   SocialIcon: Partial<SocialIconProps>;

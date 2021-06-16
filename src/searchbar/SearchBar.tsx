@@ -10,7 +10,7 @@ import {
   ViewStyle,
   TextInput,
 } from 'react-native';
-import { IconNode } from '../icons/Icon';
+import { IconNode } from '../Icon';
 import { ThemeProps } from '../config';
 
 const SEARCHBAR_COMPONENTS = {

@@ -7,8 +7,8 @@ import {
   View,
 } from 'react-native';
 import { renderNode } from '../helpers';
-import Input from '../input/Input';
-import Icon from '../icons/Icon';
+import Input from '../Input';
+import Icon from '../Icon';
 import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../config/theme';
 import { ThemeProps } from '../config';

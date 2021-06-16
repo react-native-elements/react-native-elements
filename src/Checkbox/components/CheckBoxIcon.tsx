@@ -1,7 +1,7 @@
 import React from 'react';
 import { RneFunctionComponent } from '../../helpers';
 import getIconType from '../../helpers/getIconType';
-import { IconType } from '../../icons/Icon';
+import { IconType } from '../../Icon';
 
 export type CheckBoxIconProps = {
   checked?: boolean;

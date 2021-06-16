@@ -12,8 +12,8 @@ import {
   TextStyle,
   TextInput,
 } from 'react-native';
-import Input, { InputProps } from '../input/Input';
-import Icon from '../icons/Icon';
+import Input, { InputProps } from '../Input';
+import Icon from '../Icon';
 import { renderNode } from '../helpers';
 import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../config/theme';

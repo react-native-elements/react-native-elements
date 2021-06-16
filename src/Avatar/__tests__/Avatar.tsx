@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
 import ThemedAvatar, { AvatarBase as Avatar } from '../index';
-import { Image } from '../../image/Image';
+import { Image } from '../../Image';
 
 describe('Avatar Component', () => {
   jest.useFakeTimers();

@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import Color from 'color';
 import { renderNode, color, RneFunctionComponent } from '../helpers';
-import Icon, { IconNode } from '../icons/Icon';
+import Icon, { IconNode } from '../Icon';
 import { Theme } from '../config/theme';
 import { TextProps } from '../Text';
 
