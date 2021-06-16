@@ -7,11 +7,9 @@ import { RneFunctionComponent } from '../helpers';
 const CardDivider: RneFunctionComponent<DividerProps> = ({
   style,
   ...props
-}) => {
-  return (
-    <Divider style={StyleSheet.flatten([styles.divider, style])} {...props} />
-  );
-};
+}) => (
+  <Divider style={StyleSheet.flatten([styles.divider, style])} {...props} />
+);
 
 const styles = StyleSheet.create({
   divider: {

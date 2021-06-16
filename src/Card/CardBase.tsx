@@ -1,29 +1,20 @@
 import React from 'react';
 import { View, Platform, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import { withTheme } from '../config';
-import CardTitle from './CardTitle';
-import CardDivider from './CardDivider';
-import CardImage from './CardImage';
-import CardFeaturedTitle from './CardFeaturedTitle';
-import CardFeaturedSubtitle from './CardFeaturedSubtitle';
 import { RneFunctionComponent } from '../helpers';
 
-export type CardProps = {
+export type CardBaseProps = {
   containerStyle?: StyleProp<ViewStyle>;
   wrapperStyle?: StyleProp<ViewStyle>;
 };
 
-interface Card extends RneFunctionComponent<CardProps> {}
-
-const Card: Card = (props) => {
-  const {
-    children,
-    containerStyle,
-    wrapperStyle,
-    theme,
-    ...attributes
-  } = props;
-
+export const CardBase: RneFunctionComponent<CardBaseProps> = ({
+  children,
+  containerStyle,
+  wrapperStyle,
+  theme,
+  ...attributes
+}) => {
   return (
     <View
       {...attributes}
@@ -68,13 +59,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { Card };
-
-const ThemedCard = Object.assign(withTheme(Card, 'Card'), {
-  Divider: CardDivider,
-  Image: CardImage,
-  Title: CardTitle,
-  FeaturedTitle: CardFeaturedTitle,
-  FeaturedSubtitle: CardFeaturedSubtitle,
-});
-export default ThemedCard;
+export default withTheme(CardBase, 'Card');

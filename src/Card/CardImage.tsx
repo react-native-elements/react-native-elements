@@ -4,9 +4,9 @@ import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import Image, { ImageProps } from '../Image';
 
-const CardImage: RneFunctionComponent<ImageProps> = ({ style, ...props }) => {
-  return <Image style={StyleSheet.flatten([styles.image, style])} {...props} />;
-};
+const CardImage: RneFunctionComponent<ImageProps> = ({ style, ...props }) => (
+  <Image style={StyleSheet.flatten([styles.image, style])} {...props} />
+);
 
 const styles = StyleSheet.create({
   image: {

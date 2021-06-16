@@ -28,7 +28,7 @@ import Image, { ImageProps } from './Image';
 import FAB, { FABProps } from './FAB';
 import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 // Productivity
-import Card, { CardProps } from './card/Card';
+import Card, { CardProps } from './Card';
 import Dialog from './Dialog';
 import { DialogLoadingProps } from './Dialog/DialogLoading';
 import { DialogTitleProps } from './Dialog/DialogTitle';

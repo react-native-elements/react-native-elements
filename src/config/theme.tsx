@@ -6,7 +6,7 @@ import { BadgeProps } from '../Badge';
 import { BottomSheetProps } from '../BottomSheet';
 import { ButtonProps } from '../Button';
 import { ButtonGroupProps } from '../ButtonGroup';
-import { CardProps } from '../card/Card';
+import { CardProps } from '../Card';
 import { CheckBoxProps } from '../Checkbox';
 import { DividerProps } from '../Divider';
 import { HeaderProps } from '../Header';
