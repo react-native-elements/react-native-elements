@@ -284,12 +284,12 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
 </ListItem.Accordion>
 ```
 
-### ListItem Swipable
+### ListItem Swipeable
 
 <img src="/img/swipeable.gif" width="500" />
 
 ```js
-<ListItem.Swipable
+<ListItem.Swipeable
   leftContent={
     <Button
       title="Info"
@@ -310,7 +310,7 @@ import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
     <ListItem.Title>Hello Swiper</ListItem.Title>
   </ListItem.Content>
   <ListItem.Chevron />
-</ListItem.Swipable>
+</ListItem.Swipeable>
 ```
 
 ---
