@@ -12,12 +12,9 @@ import {
   ImageURISource,
   ImageStyle,
 } from 'react-native';
-import isEqual from 'lodash.isequal';
-import { withTheme } from '../config';
 import { renderNode, RneFunctionComponent } from '../helpers';
 import Icon, { IconObject } from '../icons/Icon';
 import Image, { ImageProps } from '../image/Image';
-import Accessory from './Accessory';
 
 const avatarSizes = {
   small: 34,
@@ -30,7 +27,7 @@ interface AvatarIcon extends IconObject {
   iconStyle?: StyleProp<TextStyle>;
 }
 
-export type AvatarProps = {
+export type AvatarBaseProps = {
   Component?: typeof React.Component;
   onPress?(): void;
   onLongPress?(): void;
@@ -51,9 +48,7 @@ export type AvatarProps = {
   ImageComponent?: React.ComponentClass;
 };
 
-interface Avatar extends RneFunctionComponent<AvatarProps> {}
-
-const AvatarComponent: Avatar = ({
+export const AvatarBase: RneFunctionComponent<AvatarBaseProps> = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,
@@ -73,12 +68,14 @@ const AvatarComponent: Avatar = ({
   ImageComponent = RNImage,
   children,
   ...attributes
-}: React.PropsWithChildren<AvatarProps>) => {
+}) => {
   let width = avatarSizes.small;
   width = typeof size === 'number' ? size : avatarSizes[size];
+
   const height = width;
   const titleSize = width / 2;
   const iconSize = width / 2;
+
   const PlaceholderContent =
     (renderPlaceholderContent &&
       renderNode(undefined, renderPlaceholderContent)) ||
@@ -114,6 +111,7 @@ const AvatarComponent: Avatar = ({
   if (imageProps && imageProps.containerStyle) {
     delete imageProps.containerStyle;
   }
+
   return (
     <Component
       onPress={onPress}
@@ -170,9 +168,4 @@ const styles = StyleSheet.create({
   },
 });
 
-const Avatar = React.memo(AvatarComponent, isEqual);
-export { Avatar };
-const ThemedAvatar = Object.assign(withTheme(Avatar, 'Avatar'), {
-  Accessory: Accessory,
-});
-export default ThemedAvatar;
+AvatarBase.displayName = 'AvatarBase';

@@ -5,7 +5,7 @@ import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
 import { ThemeProvider } from '../../config';
 import ThemedListItem, { ListItem } from '../ListItem';
-import { Avatar } from '../../avatar/Avatar';
+import { AvatarBase as Avatar } from '../../Avatar';
 import { Icon } from '../../icons/Icon';
 
 describe('ListItem component', () => {

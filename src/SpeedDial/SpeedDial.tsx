@@ -7,11 +7,9 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import FAB, { FABProps } from '../FAB';
-import { withTheme } from '../config';
 import { IconNode } from '../icons/Icon';
 import Color from 'color';
 import { RneFunctionComponent } from '../helpers';
-import { SpeedDialAction } from './components/SpeedDialAction';
 
 export type SpeedDialProps = {
   isOpen: boolean;
@@ -23,7 +21,7 @@ export type SpeedDialProps = {
   transitionDuration?: number;
 } & FABProps;
 
-const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
+export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   isOpen,
   onOpen = () => {},
   onClose = () => {},
@@ -110,10 +108,4 @@ const styles = StyleSheet.create({
     margin: 16,
     marginTop: 0,
   },
-});
-
-export { SpeedDial };
-
-export default Object.assign(withTheme(SpeedDial, 'SpeedDial'), {
-  Action: SpeedDialAction,
 });

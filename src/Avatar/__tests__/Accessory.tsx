@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Accessory from '../Accessory';
+import Accessory from '../index';
 
 describe('Accessory Component', () => {
   jest.useFakeTimers();
