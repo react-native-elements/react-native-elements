@@ -34,13 +34,13 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export interface IconObject extends TouchableHighlightProps {
+export type IconObject = TouchableHighlightProps & {
   name?: string;
   color?: string;
   size?: number;
   type?: IconType;
   iconStyle?: StyleProp<TextStyle>;
-}
+};
 
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 

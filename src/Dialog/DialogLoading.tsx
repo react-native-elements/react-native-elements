@@ -7,7 +7,6 @@ import {
   StyleProp,
   View,
 } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type DialogLoadingProps = {
@@ -49,5 +48,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-export default withTheme(DialogLoading, 'DialogLoading');

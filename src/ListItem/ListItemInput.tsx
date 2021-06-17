@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import Input, { InputProps } from '../Input';
 
-const ListItemInput: RneFunctionComponent<InputProps> = ({
+export const ListItemInput: RneFunctionComponent<InputProps> = ({
   inputStyle,
   inputContainerStyle,
   containerStyle,
@@ -43,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(ListItemInput, 'ListItemInput');
+ListItemInput.displayName = 'ListItemInput';

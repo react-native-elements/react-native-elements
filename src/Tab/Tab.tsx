@@ -7,60 +7,10 @@ import {
   ViewProps,
   StyleSheet,
 } from 'react-native';
-import Button, { ButtonProps } from '../Button';
 import { RneFunctionComponent } from '../helpers';
-import { withTheme } from '../config';
-import Color from 'color';
+import { TabItemProps } from './TabItem';
 
-export type TabItemProps = ButtonProps & {
-  active?: boolean;
-  variant?: 'primary' | 'default';
-};
-
-const TabItem: RneFunctionComponent<TabItemProps> = ({
-  active,
-  theme,
-  titleStyle,
-  containerStyle,
-  buttonStyle,
-  variant,
-  iconPosition = 'top',
-  title,
-  ...props
-}) => {
-  return (
-    <Button
-      accessibilityRole="tab"
-      accessibilityState={{ selected: active }}
-      accessibilityValue={
-        typeof title === 'string' ? { text: title } : undefined
-      }
-      buttonStyle={[styles.buttonStyle, buttonStyle]}
-      titleStyle={[
-        styles.titleStyle,
-        {
-          color: variant === 'primary' ? 'white' : theme?.colors?.secondary,
-          paddingVertical: !props.icon ? 8 : 2,
-        },
-        titleStyle,
-      ]}
-      containerStyle={[
-        styles.containerStyle,
-        {
-          backgroundColor: active
-            ? Color(theme?.colors?.secondary).alpha(0.2).rgb().toString()
-            : 'transparent',
-        },
-        containerStyle,
-      ]}
-      iconPosition={iconPosition}
-      title={title}
-      {...props}
-    />
-  );
-};
-
-export type TabProps = ViewProps & {
+export type TabBaseProps = ViewProps & {
   value?: number;
   onChange?: (value: number) => void;
   disableIndicator?: boolean;
@@ -68,7 +18,7 @@ export type TabProps = ViewProps & {
   variant?: 'primary' | 'default';
 };
 
-const TabContainer: RneFunctionComponent<TabProps> = ({
+export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   theme,
   children,
   value,
@@ -137,20 +87,6 @@ const TabContainer: RneFunctionComponent<TabProps> = ({
   );
 };
 
-interface Tab extends RneFunctionComponent<TabProps> {
-  Item: typeof TabItem;
-}
-
-const Tab: Tab = Object.assign(TabContainer, {
-  Item: TabItem,
-});
-
-export { Tab };
-
-export default Object.assign(withTheme(TabContainer, 'Tab'), {
-  Item: withTheme(TabItem, 'TabItem'),
-});
-
 const styles = StyleSheet.create({
   buttonStyle: {
     borderRadius: 0,
@@ -176,3 +112,5 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
 });
+
+TabBase.displayName = 'TabBase';

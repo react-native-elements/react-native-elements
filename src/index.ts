@@ -9,16 +9,18 @@ import Input, { InputProps } from './Input';
 import Icon, { IconProps } from './Icon';
 import ListItem from './ListItem';
 import { ListItemProps } from './ListItem';
-import { ListItemAccordionProps } from './ListItem/ListItemAccordion';
-import { ListItemSwipeableProps } from './ListItem/ListItemSwipeable';
+import { ListItemAccordionProps } from './ListItem';
+import { ListItemSwipeableProps } from './ListItem';
 import SocialIcon, { SocialIconProps } from './SocialIcon';
 import Overlay, { OverlayProps } from './Overlay';
 
 // Utilities
-import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
-import { SearchBarAndroidProps } from './searchbar/SearchBar-android';
-import { SearchBarDefaultProps } from './searchbar/SearchBar-default';
-import { SearchBarIosProps } from './searchbar/SearchBar-ios';
+import SearchBar, {
+  SearchBarProps,
+  SearchBarAndroidProps,
+  SearchBarDefaultProps,
+  SearchBarIosProps,
+} from './SearchBar';
 import Badge, { BadgeProps, withBadge } from './Badge';
 import CheckBox, { CheckBoxProps } from './Checkbox';
 import Divider, { DividerProps } from './Divider';
@@ -29,9 +31,7 @@ import FAB, { FABProps } from './FAB';
 import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 // Productivity
 import Card, { CardProps } from './Card';
-import Dialog from './Dialog';
-import { DialogLoadingProps } from './Dialog/DialogLoading';
-import { DialogTitleProps } from './Dialog/DialogTitle';
+import Dialog, { DialogLoadingProps, DialogTitleProps } from './Dialog';
 import Tile, { TileProps } from './Tile';
 import Avatar, { AvatarProps } from './Avatar';
 import Header, { HeaderProps } from './Header';
@@ -40,8 +40,8 @@ import Tooltip, { TooltipProps } from './Tooltip';
 import BottomSheet, { BottomSheetProps } from './BottomSheet';
 import LinearProgress, { LinearProgressProps } from './LinearProgress';
 import Switch, { SwitchProps } from './Switch';
-import Tab, { TabItemProps, TabProps } from './tab/Tab';
-import TabView, { TabViewProps } from './tab/TabView';
+import Tab, { TabItemProps, TabProps } from './Tab';
+import TabView, { TabViewProps } from './TabView';
 import Rating, { SwipeRatingProps } from './Rating';
 import AirbnbRating, { TapRatingProps } from './AirbnbRating';
 

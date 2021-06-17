@@ -1,12 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import { TextProps } from '../Text';
 
 type ItemContentProps = TextProps & { right?: boolean };
 
-const ListItemContent: RneFunctionComponent<ItemContentProps> = ({
+export const ListItemContent: RneFunctionComponent<ItemContentProps> = ({
   style,
   right,
   children,
@@ -33,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(ListItemContent, 'ListItemContent');
+ListItemContent.displayName = 'ListItemContent';

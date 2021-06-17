@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import Overlay, { OverlayProps } from '../Overlay';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type DialogBaseProps = Omit<OverlayProps, 'fullScreen'> & {
@@ -49,5 +48,3 @@ const styles = StyleSheet.create({
 });
 
 DialogBase.displayName = 'DialogBase';
-
-export default withTheme(DialogBase, 'Dialog');

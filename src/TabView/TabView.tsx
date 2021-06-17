@@ -6,21 +6,11 @@ import {
   StyleSheet,
   PanResponderGestureState,
   GestureResponderEvent,
-  ViewProps,
 } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
-// TabView.Item
-const TabViewItem: RneFunctionComponent<ViewProps> = ({
-  children,
-  ...props
-}) => {
-  return <View {...props}>{React.isValidElement(children) && children}</View>;
-};
-
 // TabView
-export type TabViewProps = {
+export type TabViewBaseProps = {
   value?: number;
   onChange?: (value: number) => any;
   animationType?: 'spring' | 'timing';
@@ -30,7 +20,7 @@ export type TabViewProps = {
   >;
 };
 
-const TabView: RneFunctionComponent<TabViewProps> = ({
+export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   children,
   onChange,
   value = 0,
@@ -115,12 +105,4 @@ const styles = StyleSheet.create({
   },
 });
 
-interface TabView extends RneFunctionComponent<TabViewProps> {
-  Item: typeof TabViewItem;
-}
-
-const TabViewComponent: TabView = Object.assign(withTheme(TabView, 'TabView'), {
-  Item: withTheme(TabViewItem, 'TabViewItem'),
-});
-
-export default TabViewComponent;
+TabViewBase.displayName = 'TabViewBase';

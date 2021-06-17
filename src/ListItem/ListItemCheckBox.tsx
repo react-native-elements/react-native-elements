@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { withTheme } from '../config';
 import CheckBox, { CheckBoxProps } from '../Checkbox';
 import { RneFunctionComponent } from '../helpers';
 
-const ListItemCheckBox: RneFunctionComponent<CheckBoxProps> = ({
+export const ListItemCheckBox: RneFunctionComponent<CheckBoxProps> = ({
   containerStyle,
   ...props
 }) => {
@@ -25,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(ListItemCheckBox, 'ListItemCheckBox');
+ListItemCheckBox.displayName = 'ListItemCheckBox';

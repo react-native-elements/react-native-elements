@@ -1,20 +1,22 @@
 import { AvatarBase, AvatarBaseProps } from './Avatar';
-import { ThemedAccessory as Accessory, AccessoryProps } from './Accessory';
+import { Accessory, AccessoryProps } from './Accessory';
 import { RneFunctionComponent } from '../helpers';
 import { withTheme } from '../config';
 
+const ThemedAccessory = withTheme(Accessory, 'Accessory');
+
 export type AvatarProps = RneFunctionComponent<AvatarBaseProps> & {
-  Accessory: typeof Accessory;
+  Accessory: typeof ThemedAccessory;
 };
 
-export { AvatarBase, Accessory };
+export { AvatarBase, ThemedAccessory };
 
 export const Avatar: AvatarProps = Object.assign(AvatarBase);
 
 export type { AccessoryProps };
 
 const ThemedAvatar = Object.assign(withTheme(Avatar, 'Avatar'), {
-  Accessory: Accessory,
+  Accessory: ThemedAccessory,
 });
 
 export default ThemedAvatar;

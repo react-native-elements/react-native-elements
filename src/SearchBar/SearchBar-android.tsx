@@ -35,7 +35,7 @@ const defaultClearIcon = (theme: Theme) => ({
 
 export type SearchBarAndroidProps = InputProps &
   SearchBarBaseProps &
-  typeof SearchBar.defaultProps & {
+  typeof SearchBarAndroid.defaultProps & {
     cancelIcon?: IconNode;
   };
 
@@ -44,7 +44,7 @@ type SearchBarState = {
   isEmpty: boolean;
 };
 
-class SearchBar extends Component<
+export class SearchBarAndroid extends Component<
   SearchBarAndroidProps & Partial<ThemeProps<SearchBarAndroidProps>>,
   SearchBarState
 > {
@@ -212,5 +212,3 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
 });
-
-export default SearchBar;

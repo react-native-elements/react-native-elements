@@ -27,7 +27,7 @@ const defaultClearIcon = (theme: Theme) => ({
   color: theme?.colors?.grey3,
 });
 
-export type SearchBarDefaultProps = typeof SearchBar.defaultProps &
+export type SearchBarDefaultProps = typeof SearchBarDefault.defaultProps &
   SearchBarBaseProps &
   TextInputProps;
 
@@ -35,7 +35,7 @@ type SearchBarState = {
   isEmpty: boolean;
 };
 
-class SearchBar extends React.Component<
+export class SearchBarDefault extends React.Component<
   SearchBarDefaultProps & Partial<ThemeProps<SearchBarDefaultProps>>,
   SearchBarState
 > {
@@ -211,5 +211,3 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
 });
-
-export default SearchBar;

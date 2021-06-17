@@ -8,7 +8,7 @@ import {
   ViewStyle,
   PanResponderGestureState,
 } from 'react-native';
-import ListItemBase, { ListItemBaseProps } from './ListItemBase';
+import { ListItemBase, ListItemBaseProps } from './ListItemBase';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type ListItemSwipeableProps = ListItemBaseProps & {
@@ -20,7 +20,7 @@ export type ListItemSwipeableProps = ListItemBaseProps & {
   rightWidth?: number;
 };
 
-const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
+export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
   children,
   leftStyle,
   rightStyle,
@@ -159,4 +159,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListItemSwipeable;
+ListItemSwipeable.displayName = 'ListItemSwipeable';

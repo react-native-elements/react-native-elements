@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, StyleSheet, TextStyle, StyleProp, Platform } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import { TextProps } from '../Text';
 
@@ -35,5 +34,3 @@ const styles = StyleSheet.create({
 });
 
 DialogTitle.displayName = 'DialogTitle';
-
-export default withTheme(DialogTitle, 'DialogTitle');

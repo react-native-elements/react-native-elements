@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from '../../config';
-import ThemedSearchBar, { SearchBar } from '../SearchBar';
+import ThemedSearchBar, { SearchBar } from '../index';
 
 describe('SearchBar wrapper component', () => {
   it('should render without issues', () => {

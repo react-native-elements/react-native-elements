@@ -35,7 +35,7 @@ const defaultClearIcon = (theme: Theme) => ({
 
 export type SearchBarIosProps = InputProps &
   SearchBarBaseProps &
-  typeof SearchBar.defaultProps & {
+  typeof SearchBarIOS.defaultProps & {
     cancelButtonProps?: Partial<TouchableOpacityProps> & {
       buttonStyle?: StyleProp<ViewStyle>;
       buttonTextStyle?: StyleProp<TextStyle>;
@@ -53,7 +53,7 @@ type SearchBarState = {
   cancelButtonWidth: number | null;
 };
 
-class SearchBar extends Component<
+export class SearchBarIOS extends Component<
   SearchBarIosProps & Partial<ThemeProps<SearchBarIosProps>>,
   SearchBarState
 > {
@@ -305,5 +305,3 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
 });
-
-export default SearchBar;

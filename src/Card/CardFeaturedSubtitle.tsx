@@ -1,11 +1,11 @@
 import React from 'react';
 import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
-import { fonts, withTheme } from '../config';
+import { fonts } from '../config';
 import Text, { TextProps } from '../Text';
 import { RneFunctionComponent } from '../helpers';
 
-const CardFeaturedSubtitle: RneFunctionComponent<TextProps> = ({
+export const CardFeaturedSubtitle: RneFunctionComponent<TextProps> = ({
   theme,
   style,
   ...props
@@ -33,4 +33,4 @@ const CardFeaturedSubtitle: RneFunctionComponent<TextProps> = ({
   />
 );
 
-export default withTheme(CardFeaturedSubtitle, 'CardFeaturedSubtitle');
+CardFeaturedSubtitle.displayName = 'CardFeaturedSubtitle';

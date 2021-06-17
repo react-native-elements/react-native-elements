@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Platform, StyleSheet, StyleProp, ViewStyle } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type CardBaseProps = {
@@ -59,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(CardBase, 'Card');
+CardBase.displayName = 'CardBase';

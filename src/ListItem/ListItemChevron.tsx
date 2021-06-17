@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import Icon, { IconProps } from '../Icon';
 
-const ListItemChevron: RneFunctionComponent<Partial<IconProps>> = ({
+export const ListItemChevron: RneFunctionComponent<Partial<IconProps>> = ({
   containerStyle,
   ...props
 }: Partial<IconProps>) => {
@@ -27,4 +26,4 @@ const ListItemChevron: RneFunctionComponent<Partial<IconProps>> = ({
   );
 };
 
-export default withTheme(ListItemChevron, 'ListItemChevron');
+ListItemChevron.displayName = 'ListItemChevron';

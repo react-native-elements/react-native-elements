@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import Button, { ButtonProps } from '../Button';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export const DialogButton: RneFunctionComponent<ButtonProps> = ({
@@ -34,5 +33,3 @@ const styles = StyleSheet.create({
 });
 
 DialogButton.displayName = 'DialogButton';
-
-export default withTheme(DialogButton, 'DialogButton');

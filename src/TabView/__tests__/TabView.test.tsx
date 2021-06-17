@@ -1,5 +1,5 @@
 import React from 'react';
-import TabView from '../TabView';
+import TabView from '../index';
 import { renderWithTheme } from '../../../.ci/testHelper';
 
 describe('Tab Component', () => {

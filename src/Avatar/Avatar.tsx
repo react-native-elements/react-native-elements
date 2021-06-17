@@ -23,9 +23,9 @@ const avatarSizes = {
   xlarge: 150,
 };
 
-interface AvatarIcon extends IconObject {
+type AvatarIcon = IconObject & {
   iconStyle?: StyleProp<TextStyle>;
-}
+};
 
 export type AvatarBaseProps = {
   Component?: typeof React.Component;

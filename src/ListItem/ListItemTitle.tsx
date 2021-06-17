@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Platform, TextProps } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import Text from '../Text';
 
@@ -8,7 +7,7 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 type TitleProps = TextProps & { right?: boolean };
 
-const ListItemTitle: RneFunctionComponent<TitleProps> = ({
+export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
   style,
   right,
   children,
@@ -46,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(ListItemTitle, 'ListItemTitle');
+ListItemTitle.displayName = 'ListItemTitle';

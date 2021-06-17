@@ -1,8 +1,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import ListItemBase, { ListItemBaseProps } from './ListItemBase';
-import ListItemContent from './ListItemContent';
-import { withTheme } from '../config';
+import { ListItemBase, ListItemBaseProps } from './ListItemBase';
+import { ListItemContent } from './ListItemContent';
 import { Icon, IconNode, IconProps } from '../Icon';
 import { RneFunctionComponent } from '../helpers';
 
@@ -21,7 +20,7 @@ export type ListItemAccordionProps = ListItemBaseProps & {
     | boolean;
 };
 
-const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
+export const ListItemAccordion: RneFunctionComponent<ListItemAccordionProps> = ({
   children,
   isExpanded,
   icon,
@@ -104,4 +103,4 @@ const Accordion: RneFunctionComponent<ListItemAccordionProps> = ({
   );
 };
 
-export default withTheme(Accordion, 'ListItemAccordion');
+ListItemAccordion.displayName = 'ListItemAccordion';

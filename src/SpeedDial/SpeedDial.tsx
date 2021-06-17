@@ -109,3 +109,5 @@ const styles = StyleSheet.create({
     marginTop: 0,
   },
 });
+
+SpeedDial.displayName = 'SpeedDial';

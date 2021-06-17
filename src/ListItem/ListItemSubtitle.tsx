@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Platform, TextProps } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import Text from '../Text';
 
@@ -8,7 +7,7 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 type SubtitleProps = TextProps & { right?: boolean };
 
-const ListItemSubtitle: RneFunctionComponent<SubtitleProps> = ({
+export const ListItemSubtitle: RneFunctionComponent<SubtitleProps> = ({
   style,
   right,
   children,
@@ -47,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(ListItemSubtitle, 'ListItemSubtitle');
+ListItemSubtitle.displayName = 'ListItemSubtitle';

@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type DialogActionsProps = {
@@ -27,5 +26,3 @@ const styles = StyleSheet.create({
 });
 
 DialogActions.displayName = 'DialogActions';
-
-export default withTheme(DialogActions, 'DialogActions');

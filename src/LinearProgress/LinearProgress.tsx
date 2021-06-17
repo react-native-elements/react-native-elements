@@ -128,3 +128,5 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
     </View>
   );
 };
+
+LinearProgress.displayName = 'LinearProgress';

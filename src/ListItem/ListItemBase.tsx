@@ -9,7 +9,6 @@ import {
   ViewStyle,
 } from 'react-native';
 import { PadView } from './components/PadView';
-import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 export type ListItemBaseProps = TouchableHighlightProps & {
@@ -88,4 +87,4 @@ export const ListItemBase: RneFunctionComponent<ListItemBaseProps> = (
   );
 };
 
-export default withTheme(ListItemBase, 'ListItem');
+ListItemBase.displayName = 'ListItemBase';

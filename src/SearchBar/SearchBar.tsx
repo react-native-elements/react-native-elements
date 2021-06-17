@@ -1,8 +1,7 @@
 import React from 'react';
-import { withTheme } from '../config';
-import IOSSearchBar, { SearchBarIosProps } from './SearchBar-ios';
-import AndroidSearchBar, { SearchBarAndroidProps } from './SearchBar-android';
-import DefaultSearchBar, { SearchBarDefaultProps } from './SearchBar-default';
+import { SearchBarIOS, SearchBarIosProps } from './SearchBar-ios';
+import { SearchBarAndroid, SearchBarAndroidProps } from './SearchBar-android';
+import { SearchBarDefault, SearchBarDefaultProps } from './SearchBar-default';
 import {
   ActivityIndicatorProps,
   StyleProp,
@@ -14,9 +13,9 @@ import { IconNode } from '../Icon';
 import { ThemeProps } from '../config';
 
 const SEARCHBAR_COMPONENTS = {
-  ios: IOSSearchBar,
-  android: AndroidSearchBar,
-  default: DefaultSearchBar,
+  ios: SearchBarIOS,
+  android: SearchBarAndroid,
+  default: SearchBarDefault,
 };
 
 export type SearchBarBaseProps = React.ComponentPropsWithRef<
@@ -44,10 +43,10 @@ export type SearchBarProps = SearchBarBaseProps &
   SearchBarAndroidProps &
   SearchBarIosProps;
 
-class SearchBar extends React.Component<
+export class SearchBar extends React.Component<
   SearchBarProps & Partial<ThemeProps<SearchBarProps>>
 > {
-  searchbar!: IOSSearchBar;
+  searchbar!: SearchBarIOS;
   static defaultProps = {
     platform: 'default' as const,
   };
@@ -70,11 +69,11 @@ class SearchBar extends React.Component<
 
   render() {
     const Component: typeof React.Component =
-      SEARCHBAR_COMPONENTS[this.props.platform] || DefaultSearchBar;
+      SEARCHBAR_COMPONENTS[this.props.platform] || SearchBarDefault;
 
     return (
       <Component
-        ref={(ref: IOSSearchBar) => {
+        ref={(ref: SearchBarIOS) => {
           this.searchbar = ref;
         }}
         {...this.props}
@@ -82,6 +81,3 @@ class SearchBar extends React.Component<
     );
   }
 }
-
-export { SearchBar };
-export default withTheme(SearchBar, 'SearchBar');

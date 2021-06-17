@@ -154,7 +154,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
 `;
 
 exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
-<SearchBar
+<SearchBarAndroid
   onBlur={[Function]}
   onCancel={[Function]}
   onChangeText={[Function]}
@@ -165,7 +165,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
 `;
 
 exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
-<SearchBar
+<SearchBarIOS
   cancelButtonProps={Object {}}
   cancelButtonTitle="Cancel"
   clearIcon={
@@ -192,7 +192,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 `;
 
 exports[`SearchBar wrapper component should render without issues 1`] = `
-<SearchBar
+<SearchBarDefault
   lightTheme={false}
   loadingProps={Object {}}
   onBlur={[Function]}
