@@ -20,7 +20,8 @@ import { Tab } from 'react-native-elements';
 ```
 
 ```js
-<Tab value={0}>
+
+<Tab value={index} onChange={setIndex}>
   <Tab.Item title="recent" />
   <Tab.Item title="favorite" />
   <Tab.Item title="cart" />

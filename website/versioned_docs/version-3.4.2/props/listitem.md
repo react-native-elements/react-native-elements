@@ -59,7 +59,7 @@
 
 > Also Receives all [ListItem](#props) props.
 
-### ListItem.Swipable
+### ListItem.Swipeable
 
 > Also recieves all `ListItem` Props
 
