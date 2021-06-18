@@ -18,6 +18,8 @@ export type ListItemSwipeableProps = ListItemBaseProps & {
   rightStyle?: StyleProp<ViewStyle>;
   leftWidth?: number;
   rightWidth?: number;
+  onLeftSwipe?: () => any;
+  onRightSwipe?: () => any;
 };
 
 export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
@@ -28,6 +30,8 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
   rightContent,
   leftWidth = ScreenWidth / 3,
   rightWidth = ScreenWidth / 3,
+  onLeftSwipe,
+  onRightSwipe,
   ...props
 }) => {
   const { current: panX } = React.useRef(new Animated.Value(0));
@@ -68,7 +72,11 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
 
   const onPanResponderRelease = (_: any, { dx }: PanResponderGestureState) => {
     prevValue.current = currValue.current;
-
+    if (Math.sign(dx) > 0) {
+      onLeftSwipe?.();
+    } else if (Math.sign(dx) < 0) {
+      onRightSwipe?.();
+    }
     if (
       (Math.sign(dx) > 0 && !leftContent) ||
       (Math.sign(dx) < 0 && !rightContent)
