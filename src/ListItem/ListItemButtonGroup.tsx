@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
 import { RneFunctionComponent } from '../helpers';
 
-export const ListItemButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
+export type ListItemButtonGroupProps = ButtonGroupProps;
+
+export const ListItemButtonGroup: RneFunctionComponent<ListItemButtonGroupProps> = ({
   containerStyle,
   ...props
 }) => {

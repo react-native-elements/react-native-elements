@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 import Divider, { DividerProps } from '../Divider';
 import { RneFunctionComponent } from '../helpers';
 
-export const CardDivider: RneFunctionComponent<DividerProps> = ({
+export type CardDividerProps = DividerProps;
+
+export const CardDivider: RneFunctionComponent<CardDividerProps> = ({
   style,
   ...props
 }) => (

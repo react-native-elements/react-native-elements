@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 import CheckBox, { CheckBoxProps } from '../Checkbox';
 import { RneFunctionComponent } from '../helpers';
 
-export const ListItemCheckBox: RneFunctionComponent<CheckBoxProps> = ({
+export type ListItemCheckBoxProps = CheckBoxProps;
+
+export const ListItemCheckBox: RneFunctionComponent<ListItemCheckBoxProps> = ({
   containerStyle,
   ...props
 }) => {

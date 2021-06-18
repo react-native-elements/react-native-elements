@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 import Button, { ButtonProps } from '../Button';
 import { RneFunctionComponent } from '../helpers';
 
-export const DialogButton: RneFunctionComponent<ButtonProps> = ({
+type DialogButtonProps = ButtonProps;
+
+export const DialogButton: RneFunctionComponent<DialogButtonProps> = ({
   titleStyle,
   ...rest
 }) => {

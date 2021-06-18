@@ -5,9 +5,9 @@ import Text from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-type SubtitleProps = TextProps & { right?: boolean };
+export type ListItemSubtitleProps = TextProps & { right?: boolean };
 
-export const ListItemSubtitle: RneFunctionComponent<SubtitleProps> = ({
+export const ListItemSubtitle: RneFunctionComponent<ListItemSubtitleProps> = ({
   style,
   right,
   children,

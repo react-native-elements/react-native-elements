@@ -5,7 +5,9 @@ import { fonts } from '../config';
 import Text, { TextProps } from '../Text';
 import { RneFunctionComponent } from '../helpers';
 
-export const CardFeaturedTitle: RneFunctionComponent<TextProps> = ({
+type CardFeaturedTitleProps = TextProps;
+
+export const CardFeaturedTitle: RneFunctionComponent<CardFeaturedTitleProps> = ({
   theme,
   style,
   ...props

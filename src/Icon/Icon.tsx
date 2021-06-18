@@ -58,33 +58,32 @@ export type IconProps = IconButtonProps & {
   brand?: boolean;
 };
 
-export const Icon: RneFunctionComponent<IconProps> = (props) => {
-  const {
-    type = 'material',
-    name,
-    size = 24,
-    color: colorProp,
-    iconStyle,
-    iconProps,
-    underlayColor = 'transparent',
-    reverse = false,
-    raised = false,
-    containerStyle,
-    reverseColor: reverseColorProp,
-    disabled = false,
-    disabledStyle,
-    onPress,
-    Component = onPress
-      ? Platform.select<typeof React.Component>({
-          android: TouchableNativeFeedback,
-          default: TouchableHighlight,
-        })
-      : View,
-    solid = false,
-    brand = false,
-    theme,
-    ...attributes
-  } = props;
+export const Icon: RneFunctionComponent<IconProps> = ({
+  type = 'material',
+  name,
+  size = 24,
+  color: colorProp,
+  iconStyle,
+  iconProps,
+  underlayColor = 'transparent',
+  reverse = false,
+  raised = false,
+  containerStyle,
+  reverseColor: reverseColorProp,
+  disabled = false,
+  disabledStyle,
+  onPress,
+  Component = onPress
+    ? Platform.select<typeof React.Component>({
+        android: TouchableNativeFeedback,
+        default: TouchableHighlight,
+      })
+    : View,
+  solid = false,
+  brand = false,
+  theme,
+  ...attributes
+}) => {
   const color = colorProp || theme?.colors?.black;
   const reverseColor = reverseColorProp || theme?.colors?.white;
   const IconComponent = getIconType(type);

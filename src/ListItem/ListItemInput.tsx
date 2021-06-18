@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import Input, { InputProps } from '../Input';
 
-export const ListItemInput: RneFunctionComponent<InputProps> = ({
+export type ListItemInputProps = InputProps;
+
+export const ListItemInput: RneFunctionComponent<ListItemInputProps> = ({
   inputStyle,
   inputContainerStyle,
   containerStyle,

@@ -3,9 +3,9 @@ import { StyleSheet, View } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import { TextProps } from '../Text';
 
-type ItemContentProps = TextProps & { right?: boolean };
+export type ListItemContentProps = TextProps & { right?: boolean };
 
-export const ListItemContent: RneFunctionComponent<ItemContentProps> = ({
+export const ListItemContent: RneFunctionComponent<ListItemContentProps> = ({
   style,
   right,
   children,
