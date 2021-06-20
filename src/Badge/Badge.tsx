@@ -8,6 +8,7 @@ import {
   StyleProp,
   ViewStyle,
   TextStyle,
+  PressableProps,
 } from 'react-native';
 import { renderNode, RneFunctionComponent } from '../helpers';
 
@@ -20,6 +21,7 @@ export type BadgeProps = {
   onPress?: (...args: any[]) => any;
   Component?: typeof React.Component;
   status?: 'primary' | 'success' | 'warning' | 'error';
+  pressableProps?: PressableProps;
 };
 
 export const Badge: RneFunctionComponent<BadgeProps> = ({
@@ -32,6 +34,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   value,
   theme,
   status = 'primary',
+  pressableProps,
   ...attributes
 }) => {
   const element = renderNode(Text, value, {
@@ -41,6 +44,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   return (
     <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
       <Component
+        {...pressableProps}
         {...attributes}
         style={StyleSheet.flatten([
           {

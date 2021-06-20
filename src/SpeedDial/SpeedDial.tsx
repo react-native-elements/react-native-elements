@@ -5,6 +5,7 @@ import {
   StyleSheet,
   SafeAreaView,
   Pressable,
+  PressableProps,
 } from 'react-native';
 import FAB, { FABProps } from '../FAB';
 import { IconNode } from '../Icon';
@@ -19,6 +20,7 @@ export type SpeedDialProps = {
   overlayColor?: string;
   children?: React.ReactChild[];
   transitionDuration?: number;
+  pressableProps?: PressableProps;
 } & FABProps;
 
 export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
@@ -32,6 +34,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme,
+  pressableProps,
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
@@ -58,6 +61,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
       <Pressable
+        {...pressableProps}
         onPress={onClose}
         style={[StyleSheet.absoluteFillObject]}
         pointerEvents={isOpen ? 'auto' : 'none'}

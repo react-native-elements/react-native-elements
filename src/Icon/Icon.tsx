@@ -33,7 +33,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export type IconObject = PressableProps & {
+export type IconObject = {
   name?: string;
   color?: string;
   size?: number;
@@ -55,6 +55,7 @@ export type IconProps = IconButtonProps & {
   disabledStyle?: StyleProp<ViewStyle>;
   solid?: boolean;
   brand?: boolean;
+  pressableProps?: PressableProps;
 };
 
 export const Icon: RneFunctionComponent<IconProps> = ({
@@ -76,6 +77,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   solid = false,
   brand = false,
   theme,
+  pressableProps,
   ...attributes
 }) => {
   const color = colorProp || theme?.colors?.black;
@@ -112,6 +114,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
       ])}
     >
       <Component
+        {...pressableProps}
         {...attributes}
         {...(onPress && {
           onPress,

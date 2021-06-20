@@ -7,6 +7,7 @@ import {
   StyleProp,
   ViewStyle,
   ColorValue,
+  PressableProps,
 } from 'react-native';
 import Image, { ImageProps } from '../Image';
 import Icon, { IconProps } from '../Icon';
@@ -16,6 +17,7 @@ export type AccessoryProps = Partial<IconProps> &
   Partial<ImageProps> & {
     underlayColor?: ColorValue;
     style?: StyleProp<ViewStyle>;
+    pressableProps?: PressableProps;
   };
 
 export const Accessory: RneFunctionComponent<AccessoryProps> = ({
@@ -25,10 +27,19 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
   onPress,
   onLongPress,
   source,
+  pressableProps,
   ...props
 }: AccessoryProps) => {
   return (
     <Pressable
+      android_ripple={
+        (onPress || onLongPress) && {
+          color: underlayColor,
+          borderless: false,
+          radius: -5,
+        }
+      }
+      {...pressableProps}
       style={[
         styles.accessory,
         {
@@ -38,11 +49,6 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
         },
         style,
       ]}
-      android_ripple={{
-        color: underlayColor,
-        borderless: false,
-        radius: -5,
-      }}
       onPress={onPress}
       onLongPress={onLongPress}
     >
