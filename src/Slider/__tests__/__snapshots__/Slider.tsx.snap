@@ -12,21 +12,11 @@ exports[`Slider component should bound the max value 1`] = `
       "now": 15,
     }
   }
-  allowTouchTrack={false}
-  animationType="timing"
   onLayout={[Function]}
-  orientation="horizontal"
-  step={0}
   style={
     Object {
       "height": 40,
       "justifyContent": "center",
-    }
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
     }
   }
   value={15}
@@ -97,21 +87,11 @@ exports[`Slider component should bound the min value 1`] = `
       "now": 2,
     }
   }
-  allowTouchTrack={false}
-  animationType="timing"
   onLayout={[Function]}
-  orientation="horizontal"
-  step={0}
   style={
     Object {
       "height": 40,
       "justifyContent": "center",
-    }
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
     }
   }
   value={2}
@@ -182,21 +162,11 @@ exports[`Slider component should pass down Thumb transform values 1`] = `
       "now": 0,
     }
   }
-  allowTouchTrack={false}
-  animationType="timing"
   onLayout={[Function]}
-  orientation="horizontal"
-  step={0}
   style={
     Object {
       "height": 40,
       "justifyContent": "center",
-    }
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
     }
   }
   value={0}
@@ -276,21 +246,11 @@ exports[`Slider component should render vertically 1`] = `
       "now": 0,
     }
   }
-  allowTouchTrack={false}
-  animationType="timing"
   onLayout={[Function]}
-  orientation="vertical"
-  step={0}
   style={
     Object {
       "alignItems": "center",
       "flexDirection": "column",
-      "width": 40,
-    }
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
       "width": 40,
     }
   }
@@ -364,21 +324,11 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       "now": 0,
     }
   }
-  allowTouchTrack={false}
-  animationType="timing"
   onLayout={[Function]}
-  orientation="horizontal"
-  step={0}
   style={
     Object {
       "height": 40,
       "justifyContent": "center",
-    }
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
     }
   }
   value={0}
@@ -462,21 +412,11 @@ exports[`Slider component should render without issues 1`] = `
       "now": 0,
     }
   }
-  allowTouchTrack={false}
-  animationType="timing"
   onLayout={[Function]}
-  orientation="horizontal"
-  step={0}
   style={
     Object {
       "height": 40,
       "justifyContent": "center",
-    }
-  }
-  thumbTouchSize={
-    Object {
-      "height": 40,
-      "width": 40,
     }
   }
   value={0}
