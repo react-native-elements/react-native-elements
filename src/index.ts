@@ -3,58 +3,47 @@
 // https://material.io/guidelines/components/buttons.html#buttons-raised-buttons
 // https://material.angularjs.org/latest/demo/button
 // Core
-import Button, { ButtonProps } from './buttons/Button';
-import Chip, { ChipProps } from './buttons/Chip';
-import Input, { InputProps } from './input/Input';
-import Icon, { IconProps } from './icons/Icon';
-import ListItem from './list/ListItem';
-import { ListItemProps } from './list/ListItemBase';
-import { ListItemAccordionProps } from './list/ListItemAccordion';
-import { ListItemSwipeableProps } from './list/ListItemSwipeable';
-import SocialIcon, { SocialIconProps } from './social/SocialIcon';
-import Overlay, { OverlayProps } from './overlay/Overlay';
+import AirbnbRating, { TapRatingProps } from './AirbnbRating';
+import Avatar, { AvatarProps } from './Avatar';
+import Badge, { BadgeProps, withBadge } from './Badge';
+import BottomSheet, { BottomSheetProps } from './BottomSheet';
+import Button, { ButtonProps } from './Button';
+import ButtonGroup, { ButtonGroupProps } from './ButtonGroup';
+import Card, { CardProps } from './Card';
+import CheckBox, { CheckBoxProps } from './Checkbox';
+import Chip, { ChipProps } from './Chip';
+import Dialog, { DialogLoadingProps, DialogTitleProps } from './Dialog';
+import Divider, { DividerProps } from './Divider';
+import FAB, { FABProps } from './FAB';
+import Header, { HeaderProps } from './Header';
+import Icon, { IconProps } from './Icon';
+import Image, { ImageProps } from './Image';
+import Input, { InputProps } from './Input';
+import LinearProgress, { LinearProgressProps } from './LinearProgress';
+import ListItem, {
+  ListItemProps,
+  ListItemAccordionProps,
+  ListItemSwipeableProps,
+} from './ListItem';
+import Overlay, { OverlayProps } from './Overlay';
+import PricingCard, { PricingCardProps } from './PricingCard';
+import Rating, { SwipeRatingProps } from './Rating';
+import SearchBar, {
+  SearchBarProps,
+  SearchBarAndroidProps,
+  SearchBarDefaultProps,
+  SearchBarIosProps,
+} from './SearchBar';
+import Slider, { SliderProps } from './Slider';
+import SocialIcon, { SocialIconProps } from './SocialIcon';
+import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
+import Switch, { SwitchProps } from './Switch';
+import Tab, { TabItemProps, TabProps } from './Tab';
+import TabView, { TabViewProps } from './TabView';
+import Text, { TextProps } from './Text';
+import Tile, { TileProps } from './Tile';
+import Tooltip, { TooltipProps } from './Tooltip';
 
-// Utilities
-import SearchBar, { SearchBarProps } from './searchbar/SearchBar';
-import { SearchBarAndroidProps } from './searchbar/SearchBar-android';
-import { SearchBarDefaultProps } from './searchbar/SearchBar-default';
-import { SearchBarIosProps } from './searchbar/SearchBar-ios';
-import Badge, { BadgeProps } from './badge/Badge';
-import withBadge from './badge/withBadge';
-import CheckBox, { CheckBoxProps } from './checkbox/CheckBox';
-import Divider, { DividerProps } from './divider/Divider';
-import Slider, { SliderProps } from './slider/Slider';
-import ButtonGroup, { ButtonGroupProps } from './buttons/ButtonGroup';
-import Image, { ImageProps } from './image/Image';
-import FAB, { FABProps } from './buttons/FAB';
-import SpeedDial, {
-  SpeedDialActionProps,
-  SpeedDialProps,
-} from './buttons/SpeedDial';
-// Productivity
-import Card, { CardProps } from './card/Card';
-import Dialog from './dialog/Dialog';
-import { DialogLoadingProps } from './dialog/DialogLoading';
-import { DialogTitleProps } from './dialog/DialogTitle';
-import Tile, { TileProps } from './tile/Tile';
-import Avatar, { AvatarProps } from './avatar/Avatar';
-import Accessory, { AccessoryProps } from './avatar/Accessory';
-import Header, { HeaderProps } from './header/Header';
-import PricingCard, { PricingCardProps } from './pricing/PricingCard';
-import Tooltip, { TooltipProps } from './tooltip/Tooltip';
-import BottomSheet, { BottomSheetProps } from './bottomSheet/BottomSheet';
-import LinearProgress, { LinearProgressProps } from './linearProgress';
-import Switch, { SwitchProps } from './switch/switch';
-import Tab, { TabItemProps, TabProps } from './tab/Tab';
-import TabView, { TabViewProps } from './tab/TabView';
-import {
-  AirbnbRating as BaseAirbnbRating,
-  Rating as BaseRating,
-  TapRatingProps,
-  SwipeRatingProps,
-} from 'react-native-ratings';
-// helpers
-import Text, { TextProps } from './text/Text';
 import {
   Colors,
   colors,
@@ -73,41 +62,47 @@ import {
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
-const AirbnbRating = withTheme(BaseAirbnbRating, 'AirbnbRating');
-const Rating = withTheme(BaseRating, 'Rating');
-
+// Components exports
 export {
+  AirbnbRating,
+  Avatar,
   Badge,
   BottomSheet,
   Button,
   ButtonGroup,
   Card,
-  Chip,
-  Input,
-  ListItem,
-  LinearProgress,
-  PricingCard,
-  Tooltip,
-  Switch,
-  SocialIcon,
-  Text,
-  Divider,
-  Dialog,
   CheckBox,
-  SearchBar,
+  Chip,
+  Dialog,
+  Divider,
+  FAB,
+  Header,
   Icon,
+  Image,
+  Input,
+  LinearProgress,
+  ListItem,
+  Overlay,
+  PricingCard,
+  Rating,
+  SearchBar,
+  Slider,
+  SocialIcon,
+  SpeedDial,
+  Switch,
+  Tab,
+  TabView,
+  Text,
+  Tile,
+  Tooltip,
+};
+
+// Theme utils exports
+export {
   colors,
   getIconType,
   registerCustomIconType,
   normalize,
-  Tile,
-  Slider,
-  Avatar,
-  Accessory,
-  Rating,
-  AirbnbRating,
-  Header,
-  Overlay,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
@@ -115,57 +110,51 @@ export {
   withTheme,
   useTheme,
   makeStyles,
-  Image,
-  FAB,
-  SpeedDial,
-  Tab,
-  TabView,
 };
+
+// Components Props exports
 export type {
   AvatarProps,
+  BadgeProps,
+  BottomSheetProps,
+  ButtonGroupProps,
   ButtonProps,
-  Colors,
+  CardProps,
+  CheckBoxProps,
   ChipProps,
-  InputProps,
+  Colors,
+  DialogLoadingProps,
+  DialogTitleProps,
+  DividerProps,
+  FABProps,
+  HeaderProps,
   IconProps,
+  ImageProps,
+  InputProps,
+  LinearProgressProps,
+  ListItemAccordionProps,
   ListItemProps,
-  SocialIconProps,
+  ListItemSwipeableProps,
   OverlayProps,
-  SearchBarProps,
+  PricingCardProps,
   SearchBarAndroidProps,
   SearchBarDefaultProps,
   SearchBarIosProps,
-  BadgeProps,
-  CheckBoxProps,
-  DividerProps,
+  SearchBarProps,
   SliderProps,
-  ButtonGroupProps,
-  ImageProps,
-  CardProps,
-  DialogLoadingProps,
-  DialogTitleProps,
-  TileProps,
-  AccessoryProps,
-  HeaderProps,
-  PricingCardProps,
-  TooltipProps,
-  BottomSheetProps,
-  TapRatingProps,
-  SwipeRatingProps,
-  SwitchProps,
-  TextProps,
-  UpdateTheme,
-  ReplaceTheme,
-  FullTheme,
-  Theme,
-  LinearProgressProps,
-  FABProps,
+  SocialIconProps,
   SpeedDialActionProps,
   SpeedDialProps,
-  ThemeProps,
+  SwipeRatingProps,
+  SwitchProps,
   TabItemProps,
   TabProps,
-  ListItemAccordionProps,
-  ListItemSwipeableProps,
   TabViewProps,
+  TapRatingProps,
+  TextProps,
+  TileProps,
+  TooltipProps,
 };
+
+// Theme props export
+export type { FullTheme, ReplaceTheme, Theme, ThemeProps, UpdateTheme };
