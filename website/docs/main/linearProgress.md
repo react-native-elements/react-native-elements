@@ -1,6 +1,7 @@
 ---
 id: linearProgress
 title: Linear Progress
+slug: /linearProgress
 ---
 
 import Props from './props/linearProgress.md'

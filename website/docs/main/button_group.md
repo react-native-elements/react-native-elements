@@ -1,6 +1,7 @@
 ---
 id: button_group
 title: ButtonGroup
+slug: /button_group
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

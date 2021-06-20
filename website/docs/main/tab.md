@@ -1,6 +1,7 @@
 ---
 id: tab
 title: Tabs
+slug: /tab
 ---
 
 import Props from './props/tab.md'

@@ -1,6 +1,7 @@
 ---
 id: fab
 title: Floating Action Button
+slug: /fab
 ---
 
 import Props from './props/fab.md'

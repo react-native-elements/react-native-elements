@@ -1,6 +1,7 @@
 ---
 id: icon
 title: Icon
+slug: /icon
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

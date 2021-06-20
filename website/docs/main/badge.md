@@ -1,6 +1,7 @@
 ---
 id: badge
 title: Badge
+slug: /badge
 ---
 
 import Props from './props/badge.md'

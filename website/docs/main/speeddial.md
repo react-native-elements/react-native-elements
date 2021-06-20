@@ -1,6 +1,7 @@
 ---
 id: speeddial
 title: Speed Dial
+slug: /speeddial
 ---
 
 import Props from './props/speeddial.md'

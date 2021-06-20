@@ -1,6 +1,7 @@
 ---
 id: avatar
 title: Avatar
+slug: /avatar
 ---
 
 import Props from './props/avatar.md'

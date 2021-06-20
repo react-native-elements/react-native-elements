@@ -1,6 +1,7 @@
 ---
 id: overlay
 title: Overlay
+slug: /overlay
 ---
 
 import Props from './props/overlay.md'

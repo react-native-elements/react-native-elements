@@ -1,6 +1,7 @@
 ---
 id: image
 title: Image
+slug: /image
 ---
 
 import Props from './props/image.md'

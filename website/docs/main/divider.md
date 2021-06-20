@@ -1,6 +1,7 @@
 ---
 id: divider
 title: Divider
+slug: /divider
 ---
 
 import Props from './props/divider.md'

@@ -1,6 +1,7 @@
 ---
 id: header
 title: Header
+slug: /header
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

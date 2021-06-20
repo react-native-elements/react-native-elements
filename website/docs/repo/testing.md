@@ -1,6 +1,7 @@
 ---
 id: testing
 title: Testing
+slug: /testing
 ---
 
 We are using tests to make sure components keep their functionality between versions and edits.

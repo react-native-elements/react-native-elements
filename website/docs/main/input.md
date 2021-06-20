@@ -1,6 +1,7 @@
 ---
 id: input
 title: Input
+slug: /input
 ---
 
 import Props from './props/input.md'

@@ -1,6 +1,7 @@
 ---
 id: text
 title: Text
+slug: /text
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

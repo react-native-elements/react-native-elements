@@ -1,6 +1,7 @@
 ---
 id: bottomsheet
 title: Bottom Sheet
+slug: /bottomsheet
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

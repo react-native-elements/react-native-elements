@@ -1,6 +1,7 @@
 ---
 id: tooltip
 title: Tooltip
+slug: /tooltip
 ---
 
 import Props from './props/tooltip.md'

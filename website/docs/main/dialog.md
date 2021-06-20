@@ -1,6 +1,7 @@
 ---
 id: dialog
 title: Dialog
+slug: /dialog
 ---
 
 import Props from './props/dialog.md'

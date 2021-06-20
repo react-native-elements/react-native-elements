@@ -1,6 +1,7 @@
 ---
 id: switch
 title: Switch
+slug: /switch
 ---
 
 import Props from './props/switch.md'

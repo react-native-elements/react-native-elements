@@ -1,6 +1,7 @@
 ---
 id: circularslider
 title: Circular Slider
+slug: /circularslider
 ---
 
 > This is a `react-native-elements-universe` component

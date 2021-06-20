@@ -1,6 +1,7 @@
 ---
 id: searchbar
 title: SearchBar
+slug: /searchbar
 ---
 
 import Props from './props/searchbar.md'

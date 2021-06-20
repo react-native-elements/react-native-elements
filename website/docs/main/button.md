@@ -1,6 +1,7 @@
 ---
 id: button
 title: Button
+slug: /button
 ---
 
 import Props from './props/button.md'

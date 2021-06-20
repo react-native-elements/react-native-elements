@@ -1,6 +1,7 @@
 ---
 id: labels
 title: Label Guide
+slug: /labels
 ---
 
 This page explains how we use labels throughout the repo to tag issues and pull

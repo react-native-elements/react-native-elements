@@ -1,6 +1,7 @@
 ---
 id: chip
 title: Chip
+slug: /chip
 ---
 
 import Props from './props/chip.md'

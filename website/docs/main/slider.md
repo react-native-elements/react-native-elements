@@ -1,6 +1,7 @@
 ---
 id: slider
 title: Slider
+slug: /slider
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -1,6 +1,7 @@
 ---
 id: social_icon
 title: SocialIcon
+slug: /social_icons
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

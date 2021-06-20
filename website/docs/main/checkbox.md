@@ -1,6 +1,7 @@
 ---
 id: checkbox
 title: CheckBox
+slug: /checkbox
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -1,6 +1,7 @@
 ---
 id: pricing
 title: Pricing
+slug: /pricing
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

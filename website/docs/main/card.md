@@ -1,6 +1,7 @@
 ---
 id: card
 title: Card
+slug: /card
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

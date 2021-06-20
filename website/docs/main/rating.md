@@ -1,6 +1,7 @@
 ---
 id: rating
 title: Rating
+slug: /rating
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -1,6 +1,7 @@
 ---
 id: listitem
 title: ListItem
+slug: /listitem
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -1,6 +1,7 @@
 ---
 id: tile
 title: Tile
+slug: /tile
 ---
 
 import Props from './props/tile.md'
