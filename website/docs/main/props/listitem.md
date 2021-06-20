@@ -59,7 +59,7 @@
 
 > Also Receives all [ListItem](#props) props.
 
-### ListItem.Swipable
+### ListItem.Swipeable
 
 > Also recieves all `ListItem` Props
 
@@ -69,6 +69,8 @@
 - [`rightStyle`](#rightstyle)
 - [`leftWidth`](#leftwidth)
 - [`rightWidth`](#rightwidth)
+- [`onLeftSwipe`](#onleftswipe)
+- [`onRightSwipe`](#onleftswipe)
 
 ---
 
@@ -301,5 +303,25 @@ Width to swipe right
 |  Type  |    Default    |
 | :----: | :-----------: |
 | number | ScreenWidth/3 |
+
+---
+
+### `onLeftSwipe`
+
+Function to call when user swipes left
+
+|   Type   | Default |
+| :------: | :-----: |
+| Function |  none   |
+
+---
+
+### `onRightSwipe`
+
+Function to call when user swipes right
+
+|   Type   | Default |
+| :------: | :-----: |
+| Function |  none   |
 
 ---
