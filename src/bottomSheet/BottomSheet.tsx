@@ -3,7 +3,7 @@ import {
   Modal,
   View,
   StyleSheet,
-  TouchableWithoutFeedback,
+  Pressable,
   ScrollView,
   StyleProp,
   ViewStyle,
@@ -38,7 +38,7 @@ const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
       visible={isVisible}
       {...modalProps}
     >
-      <TouchableWithoutFeedback
+      <Pressable
         onPress={onBackdropPress}
         testID="RNE__Overlay__backdrop"
       >
@@ -46,7 +46,7 @@ const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
           testID="backdrop"
           style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
         />
-      </TouchableWithoutFeedback>
+      </Pressable>
 
       <SafeAreaView
         style={StyleSheet.flatten([
