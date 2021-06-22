@@ -14,7 +14,6 @@ module.exports = {
   organizationName: 'react-native-elements',
   /* path to images for header/footer */
   favicon: 'img/favicon.png',
-  onBrokenLinks: 'warn',
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   scripts: ['https://buttons.github.io/buttons.js'],
   plugins: [
