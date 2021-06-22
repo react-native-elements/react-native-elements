@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import * as React from 'react';
 import {
   View,
   Text,
@@ -57,6 +57,7 @@ export const Button = React.forwardRef<
   (
     {
       Component = Pressable,
+      ViewComponent = View,
       containerStyle,
       onPress = () => console.log('Please attach a method to this component'),
       buttonStyle,
@@ -75,22 +76,20 @@ export const Button = React.forwardRef<
       disabledTitleStyle,
       raised = false,
       linearGradientProps,
-      ViewComponent = View,
       theme,
       iconPosition = 'left',
       ...attributes
     },
     ref: React.Ref<View>
   ) => {
-    useEffect(() => {
+    React.useEffect(() => {
       if (linearGradientProps && !ViewComponent) {
         console.error(
           "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
         );
       }
     });
-
-    const handleOnPress = useCallback(
+    const handleOnPress = React.useCallback(
       (evt) => {
         if (!loading) {
           onPress(evt);
@@ -98,7 +97,6 @@ export const Button = React.forwardRef<
       },
       [loading, onPress]
     );
-
     const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
       {
         color: type === 'solid' ? 'white' : theme?.colors?.primary,
@@ -110,12 +108,10 @@ export const Button = React.forwardRef<
       },
       disabled && disabledTitleStyle,
     ]);
-
     const loadingProps: ActivityIndicatorProps = {
       ...defaultLoadingProps(type, theme),
       ...passedLoadingProps,
     };
-
     const accessibilityState = {
       disabled: !!disabled,
       busy: !!loading,
@@ -126,7 +122,6 @@ export const Button = React.forwardRef<
       left: 'row',
       right: 'row-reverse',
     };
-
     return (
       <View
         style={[
@@ -201,7 +196,6 @@ export const Button = React.forwardRef<
                   iconContainerStyle,
                 ]),
               })}
-
             {!loading &&
               !!title &&
               renderNode(Text, title, {

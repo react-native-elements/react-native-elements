@@ -2,10 +2,9 @@ import React from 'react';
 import { ActivityIndicator, Platform } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { create } from 'react-test-renderer';
 import theme from '../../config/theme';
-import { ThemeProvider } from '../../config';
 import ThemedButton, { Button } from '../index';
+import { renderWithTheme } from '../../../.ci/testHelper';
 
 describe('Button Component', () => {
   beforeEach(() => {
@@ -23,11 +22,10 @@ describe('Button Component', () => {
     expect(app.length).toBe(1);
   });
   it('should render without issues', () => {
-    const component = shallow(<Button theme={theme} />);
+    const component = renderWithTheme(<Button theme={theme} />);
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
-
   it('should be call onPress events', () => {
     const onPress = jest.fn();
     console.log = jest.fn();
@@ -42,7 +40,6 @@ describe('Button Component', () => {
     wrapper.find('Pressable').props().onPress();
     expect(onPress).toHaveBeenCalled();
   });
-
   it('should not be call onPress events when loading is true', () => {
     const onPress = jest.fn();
     const wrapper = shallow(<Button theme={theme} loading onPress={onPress} />);
@@ -50,7 +47,6 @@ describe('Button Component', () => {
     wrapper.simulate('press');
     expect(onPress).not.toHaveBeenCalled();
   });
-
   it('should have ripple on android version 21 and higher', () => {
     Platform.OS = 'android';
     Platform.Version = 25;
@@ -58,7 +54,6 @@ describe('Button Component', () => {
     expect(wrapper.length).toBe(1);
     jest.resetModules();
   });
-
   it('should have normal ripple on android version 20 and lower', () => {
     Platform.OS = 'android';
     Platform.Version = 20;
@@ -66,7 +61,6 @@ describe('Button Component', () => {
     expect(wrapper.length).toBe(1);
     jest.resetModules();
   });
-
   describe('Button Types', () => {
     describe('Solid', () => {
       it('should display solid button', () => {
@@ -74,7 +68,6 @@ describe('Button Component', () => {
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
-
       it('should display raised solid button', () => {
         const component = shallow(
           <Button theme={theme} title="Solid" raised />
@@ -82,7 +75,6 @@ describe('Button Component', () => {
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
-
       it('should display solid button disabled', () => {
         const component = shallow(
           <Button theme={theme} title="Solid" disabled />
@@ -91,7 +83,6 @@ describe('Button Component', () => {
         expect(toJson(component)).toMatchSnapshot();
       });
     });
-
     describe('Outline', () => {
       it('should display outline button', () => {
         const component = shallow(
@@ -100,7 +91,6 @@ describe('Button Component', () => {
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
-
       it('should display raised outline button', () => {
         const component = shallow(
           <Button theme={theme} title="Outline" type="outline" raised />
@@ -108,7 +98,6 @@ describe('Button Component', () => {
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
-
       it('should display outline button disabled', () => {
         const component = shallow(
           <Button theme={theme} title="Outline" type="outline" disabled />
@@ -117,7 +106,6 @@ describe('Button Component', () => {
         expect(toJson(component)).toMatchSnapshot();
       });
     });
-
     describe('Clear', () => {
       it('should display clear button', () => {
         const component = shallow(
@@ -126,7 +114,6 @@ describe('Button Component', () => {
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
-
       it('should display raised clear button', () => {
         const component = shallow(
           <Button theme={theme} title="Clear" type="clear" raised />
@@ -134,7 +121,6 @@ describe('Button Component', () => {
         expect(component.length).toBe(1);
         expect(toJson(component)).toMatchSnapshot();
       });
-
       it('should display clear button disabled', () => {
         const component = shallow(
           <Button theme={theme} title="Clear" type="clear" disabled />
@@ -144,19 +130,15 @@ describe('Button Component', () => {
       });
     });
   });
-
   it('should apply values from theme', () => {
     const testTheme = {
       Button: {
         loading: true,
       },
     };
-    const component = create(
-      <ThemeProvider theme={testTheme}>
-        <ThemedButton />
-      </ThemeProvider>
-    );
-    // expect(component.root.findByType(ActivityIndicator)).toBeTruthy();
-    expect(component.toJSON()).toMatchSnapshot();
+    const { getByRole, toJSON } = renderWithTheme(<Button theme={theme} />);
+    const component = getByRole('button');
+    expect(component.findByType(ActivityIndicator)).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
   });
 });
