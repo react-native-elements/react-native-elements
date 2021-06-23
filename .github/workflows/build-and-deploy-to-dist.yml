@@ -59,12 +59,15 @@ jobs:
         id: rne-docs-deploy
         with:
           path: node_modules
-          key: ${{ runner.os }}-tests-${{ hashFiles('**/yarn.lock') }}
-      - name: Install and Build 🔧
+          key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
         if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
         run: |
           cd website
           yarn
+      - name: Build 🔧
+        run: |
+          cd website
           yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
