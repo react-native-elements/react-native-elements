@@ -29,4 +29,4 @@ jobs:
         run: |
           yarn lint
           yarn build
-          yarn test:ci && codecov --disable=gcov
+          yarn test:ci && npx codecov --disable=gcov
