@@ -1,4 +1,4 @@
-name: Build and Deploy next to dist
+name: Build and Deploy docs & dist 
 on:
   push:
     branches:
@@ -59,19 +59,21 @@ jobs:
         id: rne-docs-deploy
         with:
           path: node_modules
-          key: ${{ runner.os }}-tests-${{ hashFiles('**/yarn.lock') }}
-      - name: Install and Build 🔧
+          key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
         if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
         run: |
           cd website
           yarn
-          yarn build
-      - name: Commit files
+      - name: Build 🔧
         run: |
-          git config --local user.email "react-native-elements-ci@users.noreply.github.com"
-          git config --local user.name "React Native Elements CI"
+          cd website
+          yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./website/build
+          user_name: 'React Native Elements CI'
+          user_email: 'react-native-elements-ci@users.noreply.github.com'
+          cname: reactnativeelements.com
