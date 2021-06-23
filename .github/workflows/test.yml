@@ -1,12 +1,12 @@
 name: Test & Coverage
 
-on: 
+on:
   push:
   pull_request:
     branches-ignore: master
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,11 +14,19 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        id: rne-tests
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-tests-${{ hashFiles('**/yarn.lock') }}
       - name: Install
+        if: steps.rne-tests.outputs.cache-hit != 'true' # Over here!
         run: |
           yarn global add codecov
           yarn
       - name: Testing
+        run: |
           yarn lint
           yarn build
-          yarn test:ci && codecov --disable=gcov
+          yarn test:ci && npx codecov --disable=gcov
