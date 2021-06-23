@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build
+      - name: Build dist
       - uses: actions/checkout@v2
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
@@ -20,10 +20,6 @@ jobs:
         run: |
           yarn
           yarn build
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Create local changes
         run: |
           sed -i -e '/dist/d' .gitignore

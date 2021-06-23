@@ -6,7 +6,7 @@ on:
     branches-ignore: master
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,9 +15,15 @@ jobs:
         with:
           node-version: '14'
       - name: Install
+          if: steps.rne-tests.outputs.cache-hit != 'true' # Over here!
         run: |
           yarn global add codecov
           yarn
+      - uses: actions/cache@v2
+        id: rne-tests
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-tests-${{ hashFiles('**/yarn.lock') }}
       - name: Testing
         run: |
           yarn lint
