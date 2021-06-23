@@ -186,11 +186,28 @@ Uses the solid font (FontAwesome5 only)
 
 ### `type`
 
-type of icon set. [Supported sets here](#available-icon-sets).
+type of icon set.
 
 |  Type  | Default  |
 | :----: | :------: |
 | string | material |
+
+#### List of supported sets:
+  - `material`
+  - `material-community`
+  - `simple-line-icon`
+  - `zocial`
+  - `font-awesome`
+  - `octicon`
+  - `ionicon`
+  - `foundation`
+  - `evilicon`
+  - `entypo`
+  - `antdesign`
+  - `font-awesome-5`
+  
+Check [here](https://github.com/oblador/react-native-vector-icons#bundled-icon-sets) for reference.
+
 
 ---
 
