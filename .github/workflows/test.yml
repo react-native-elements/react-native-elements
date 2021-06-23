@@ -1,6 +1,9 @@
 name: Test & Coverage
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    branches-ignore: master
 
 jobs:
   build:
@@ -16,6 +19,7 @@ jobs:
           yarn global add codecov
           yarn
       - name: Testing
+        run: |
           yarn lint
           yarn build
           yarn test:ci && codecov --disable=gcov
