@@ -1,0 +1,21 @@
+name: Test & Coverage
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js Env
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install
+        run: |
+          yarn global add codecov
+          yarn
+      - name: Testing
+          yarn lint
+          yarn build
+          yarn test:ci && codecov --disable=gcov
