@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - next
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,27 +22,27 @@ jobs:
           yarn
           yarn build
   deploy:
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
-        - name: Create local changes
-          run: |
-            sed -i -e '/dist/d' .gitignore
-            git add .
-        - name: Commit files
-          run: |
-            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git config --local user.name "github-actions[bot]"
-            git commit -m "New build" -a
-        - name: Push changes
-          uses: ad-m/github-push-action@master
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            branch: dist
-            force: true
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create local changes
+        run: |
+          sed -i -e '/dist/d' .gitignore
+          git add .
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "New build" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dist
+          force: true
   docs:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Build & Deploy Docs
       - uses: actions/checkout@v2
         with:
@@ -51,7 +52,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Install and Build 🔧 
+      - name: Install and Build 🔧
         run: |
           cd website
           yarn
