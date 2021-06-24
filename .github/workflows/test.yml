@@ -4,7 +4,6 @@ on:
   pull_request:
     branches-ignore:
       - master
-      - next
 jobs:
   test:
     runs-on: ubuntu-latest
