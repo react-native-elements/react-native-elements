@@ -1,6 +1,4 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
-import toJson from 'enzyme-to-json';
 import SocialIcon from '..';
 import { renderWithTheme } from '../../../.ci/testHelper';
 import Text from '../../Text';
