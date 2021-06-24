@@ -84,7 +84,7 @@ yarn add react-native-safe-area-context
 > _Manual linking of react-native-safe-area-context is not necessary if you're using react-native@0.60.0 or above since it is done automatically. This will throw an error though it won't prevent the application from running. To fix this you'll simply have to run `react-native unlink react-native-safe-area-context` and the process will run as expected._
 
 ```bash
-react-native link react-native-safe-area-context
+npx react-native link react-native-safe-area-context
 ```
 
 It is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is
