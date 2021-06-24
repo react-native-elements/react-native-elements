@@ -21,7 +21,7 @@ const SEARCHBAR_COMPONENTS = {
 export type SearchBarBaseProps = React.ComponentPropsWithRef<
   typeof TextInput
 > & {
-  platform?: 'default' | 'ios' | 'android';
+  platform?:  'default' | 'ios' | 'android';
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
   clearIcon?: IconNode;
