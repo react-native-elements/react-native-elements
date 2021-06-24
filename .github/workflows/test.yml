@@ -1,10 +1,10 @@
 name: Test & Coverage
-
 on:
   push:
   pull_request:
-    branches-ignore: master
-
+    branches-ignore:
+      - master
+      - next
 jobs:
   test:
     runs-on: ubuntu-latest
