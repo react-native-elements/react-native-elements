@@ -18,7 +18,7 @@ export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
   onPress?(): void;
   onLongPress?(): void;
-  ImageComponent?: React.ComponentType<any>;
+  ImageComponent?: typeof React.Component;
   PlaceholderContent?: React.ReactElement<any>;
   containerStyle?: StyleProp<ViewStyle>;
   childrenContainerStyle?: StyleProp<ViewStyle>;
@@ -27,103 +27,114 @@ export type ImageProps = RNImageProps & {
   transitionDuration?: number;
 };
 
-const Image = React.forwardRef<
-  typeof ImageNative,
+type ImageType = React.ForwardRefExoticComponent<
+  ImageProps &
+    Partial<ThemeProps<ImageProps>> &
+    React.RefAttributes<ImageNative>
+> & {
+  getSize?: typeof ImageNative.getSize;
+  getSizeWithHeaders?: typeof ImageNative.getSizeWithHeaders;
+  prefetch?: typeof ImageNative.prefetch;
+  abortPrefetch?: typeof ImageNative.abortPrefetch;
+  queryCache?: typeof ImageNative.queryCache;
+  resolveAssetSource?: typeof ImageNative.resolveAssetSource;
+};
+
+export const Image: ImageType = React.forwardRef<
+  ImageNative,
   ImageProps & Partial<ThemeProps<ImageProps>>
 >(
-  ({
-    onPress,
-    onLongPress,
-    Component = onPress || onLongPress ? TouchableOpacity : View,
-    placeholderStyle,
-    PlaceholderContent,
-    containerStyle,
-    childrenContainerStyle = null,
-    style = {},
-    ImageComponent = ImageNative,
-    children,
-    ...attributes
-  }) =>
-    // ref
+  (
     {
-      const { current: placeholderOpacity } = React.useRef(
-        new Animated.Value(1)
-      );
+      onPress,
+      onLongPress,
+      Component = onPress || onLongPress ? TouchableOpacity : View,
+      placeholderStyle,
+      PlaceholderContent,
+      containerStyle,
+      childrenContainerStyle = null,
+      style = {},
+      ImageComponent = ImageNative,
+      children,
+      ...attributes
+    },
+    ref
+  ) => {
+    const { current: placeholderOpacity } = React.useRef(new Animated.Value(1));
 
-      const onLoadHandler = (
-        event: NativeSyntheticEvent<ImageLoadEventData>
-      ) => {
-        const { transition, onLoad, transitionDuration } = attributes;
-        if (!transition) {
-          placeholderOpacity.setValue(0);
-          return;
-        }
-        Animated.timing(placeholderOpacity, {
-          toValue: 0,
-          duration: transitionDuration,
-          useNativeDriver: true,
-        }).start();
-        onLoad?.(event);
-      };
+    const onLoadHandler = (event: NativeSyntheticEvent<ImageLoadEventData>) => {
+      const { transition, onLoad, transitionDuration } = attributes;
+      if (!transition) {
+        placeholderOpacity.setValue(0);
+        return;
+      }
+      Animated.timing(placeholderOpacity, {
+        toValue: 0,
+        duration: transitionDuration,
+        useNativeDriver: true,
+      }).start();
+      onLoad?.(event);
+    };
 
-      const hasImage = Boolean(attributes.source);
-      const { width, height, ...styleProps } = StyleSheet.flatten(style);
+    const hasImage = Boolean(attributes.source);
+    const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
-      return (
-        <Component
-          onPress={onPress}
-          onLongPress={onLongPress}
-          accessibilityIgnoresInvertColors={true}
-          style={StyleSheet.flatten([styles.container, containerStyle])}
+    return (
+      <Component
+        onPress={onPress}
+        onLongPress={onLongPress}
+        accessibilityIgnoresInvertColors={true}
+        style={StyleSheet.flatten([styles.container, containerStyle])}
+      >
+        <ImageComponent
+          ref={ref}
+          testID="RNE__Image"
+          transition={true}
+          transitionDuration={360}
+          {...attributes}
+          onLoad={onLoadHandler}
+          style={StyleSheet.flatten([
+            StyleSheet.absoluteFill,
+            {
+              width: width,
+              height: height,
+            } as StyleProp<ImageStyle>,
+            styleProps,
+          ])}
+        />
+
+        <Animated.View
+          pointerEvents={hasImage ? 'none' : 'auto'}
+          accessibilityElementsHidden={hasImage}
+          importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
+          style={[
+            styles.placeholderContainer,
+            {
+              opacity: hasImage ? placeholderOpacity : 1,
+            },
+          ]}
         >
-          <ImageComponent
-            testID="RNE__Image"
-            transition={true}
-            transitionDuration={360}
-            {...attributes}
-            onLoad={onLoadHandler}
-            style={StyleSheet.flatten([
-              StyleSheet.absoluteFill,
-              {
-                width: width,
-                height: height,
-              } as StyleProp<ImageStyle>,
-              styleProps,
-            ])}
-          />
-
-          <Animated.View
-            pointerEvents={hasImage ? 'none' : 'auto'}
-            accessibilityElementsHidden={hasImage}
-            importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
-            style={[
-              styles.placeholderContainer,
-              {
-                opacity: hasImage ? placeholderOpacity : 1,
-              },
-            ]}
-          >
-            <View
-              testID="RNE__Image__placeholder"
-              style={StyleSheet.flatten([
-                style,
-                styles.placeholder,
-                placeholderStyle,
-              ])}
-            >
-              {PlaceholderContent}
-            </View>
-          </Animated.View>
-
           <View
-            testID="RNE__Image__children__container"
-            style={childrenContainerStyle ?? style}
+            testID="RNE__Image__placeholder"
+            style={StyleSheet.flatten([
+              style,
+              styles.placeholder,
+              placeholderStyle,
+            ])}
           >
-            {children}
+            {PlaceholderContent}
           </View>
-        </Component>
-      );
-    }
+        </Animated.View>
+
+        <View
+          testID="RNE__Image__children__container"
+          style={childrenContainerStyle ?? style}
+        >
+          {children}
+        </View>
+      </Component>
+    );
+  }
 );
 
 const styles = StyleSheet.create({
@@ -144,4 +155,9 @@ const styles = StyleSheet.create({
 
 Image.displayName = 'Image';
 
-export default Image;
+Image.getSize = ImageNative.getSize;
+Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
+Image.prefetch = ImageNative.prefetch;
+Image.abortPrefetch = ImageNative.abortPrefetch;
+Image.queryCache = ImageNative.queryCache;
+Image.resolveAssetSource = ImageNative.resolveAssetSource;
