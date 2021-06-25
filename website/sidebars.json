@@ -8,35 +8,42 @@
       "troubleshooting"
     ],
     "Components": [
-      "main/avatar",
-      "main/badge",
-      "main/bottomsheet",
-      "main/button",
-      "main/button_group",
-      "main/card",
-      "main/checkbox",
-      "main/chip",
-      "main/divider",
-      "main/fab",
-      "main/header",
-      "main/icon",
-      "main/image",
-      "main/input",
-      "main/linearProgress",
-      "main/listitem",
-      "main/overlay",
-      "main/pricing",
-      "main/rating",
-      "main/searchbar",
-      "main/slider",
-      "main/social_icon",
-      "main/speeddial",
-      "main/switch",
-      "main/tab",
-      "main/text",
-      "main/tile",
-      "main/tooltip"
+      {
+        "Data Display": [
+          "main/avatar",
+          "main/card",
+          "main/chip",
+          "main/listitem",
+          "main/pricing"
+        ],
+        "Forms": [
+          "main/button",
+          "main/button_group",
+          "main/checkbox",
+          "main/input",
+          "main/slider",
+          "main/switch"
+        ],
+        "Feedback": [
+          "main/badge",
+          "main/bottomsheet",
+          "main/divider",
+          "main/linearProgress",
+          "main/rating"
+        ],
+        "Navigation": [
+          "main/header",
+          "main/fab",
+          "main/searchbar",
+          "main/speeddial",
+          "main/tab"
+        ],
+        "Overlay": ["main/overlay", "main/tooltip"],
+        "Media": ["main/icon", "main/image", "main/social_icon"],
+        "Typography": ["main/text", "main/tile"]
+      }
     ],
+
     "Universe Components": ["universe/circularslider"],
     "Repo": ["repo/contributing", "repo/testing", "repo/labels"]
   }
