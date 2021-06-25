@@ -159,7 +159,7 @@ describe('Input component', () => {
   describe('Instance methods', () => {
     it('should focus the input', () => {
       const focus = jest.fn();
-      const component = shallow(<Input theme={theme} />);
+      const component = shallow<typeof Input>(<Input theme={theme} />);
       const instance = component.instance();
       // Refs not available in shallow render
       instance.input = {

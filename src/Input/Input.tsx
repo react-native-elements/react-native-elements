@@ -10,14 +10,14 @@ import {
   ViewStyle,
   StyleProp,
   TextStyle,
-  TextInputProps,
+  TextProps,
 } from 'react-native';
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts } from '../config';
 import Icon, { IconNode } from '../Icon';
 import { ThemeProps } from '../config';
 
-const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
+const renderText = (content: any, defaultProps: TextProps, style: any) =>
   renderNode(Text, content, {
     ...defaultProps,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
@@ -43,48 +43,12 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   renderErrorMessage?: boolean;
 };
 
-export class Input extends React.Component<
+export const Input = React.forwardRef<
+  TextInput,
   InputProps & Partial<ThemeProps<InputProps>>
-> {
-  static displayName = 'Input';
-  input: any;
-  shakeAnimationValue = new Animated.Value(0);
-
-  focus(): void {
-    this.input.focus();
-  }
-
-  blur(): void {
-    this.input.blur();
-  }
-
-  clear(): void {
-    this.input.clear();
-  }
-
-  isFocused(): boolean {
-    return this.input.isFocused();
-  }
-
-  setNativeProps(nativeProps: Partial<TextInputProps>): void {
-    this.input.setNativeProps(nativeProps);
-  }
-
-  shake = () => {
-    const { shakeAnimationValue } = this;
-    shakeAnimationValue.setValue(0);
-    // Animation duration based on Material Design
-    // https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
-    Animated.timing(shakeAnimationValue, {
-      duration: 375,
-      toValue: 3,
-      easing: Easing.bounce,
-      useNativeDriver: true,
-    }).start();
-  };
-
-  render() {
-    const {
+>(
+  (
+    {
       containerStyle,
       disabled,
       disabledInputStyle,
@@ -105,9 +69,31 @@ export class Input extends React.Component<
       renderErrorMessage = true,
       style,
       ...attributes
-    } = this.props;
+    },
+    ref
+  ) => {
+    // const root = React.useRef<TextInput | null>(null);
+    const { current: shakeAnimationValue } = React.useRef(
+      new Animated.Value(0)
+    );
 
-    const translateX = this.shakeAnimationValue.interpolate({
+    const shake = () => {
+      shakeAnimationValue.setValue(0);
+      Animated.timing(shakeAnimationValue, {
+        duration: 375,
+        toValue: 3,
+        easing: Easing.bounce,
+        useNativeDriver: true,
+      }).start();
+    };
+
+    React.useImperativeHandle(ref, () =>
+      Object.assign((ref as React.MutableRefObject<TextInput>).current, {
+        shake,
+      })
+    );
+
+    const translateX = shakeAnimationValue.interpolate({
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
       outputRange: [0, -15, 0, 15, 0, -15, 0],
     });
@@ -160,9 +146,7 @@ export class Input extends React.Component<
             testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             editable={!disabled}
-            ref={(ref: any) => {
-              this.input = ref;
-            }}
+            ref={ref}
             style={StyleSheet.flatten([
               {
                 color: theme?.colors?.black,
@@ -212,7 +196,7 @@ export class Input extends React.Component<
       </View>
     );
   }
-}
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -230,3 +214,5 @@ const styles = StyleSheet.create({
     marginVertical: 4,
   },
 });
+
+Input.displayName = 'Input';
