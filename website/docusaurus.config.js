@@ -13,7 +13,8 @@ module.exports = {
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
   /* path to images for header/footer */
-  favicon: 'img/favicon.png',
+  favicon:
+    'https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default',
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   scripts: ['https://buttons.github.io/buttons.js'],
   plugins: [
@@ -47,20 +48,29 @@ module.exports = {
       title: 'React Native Elements',
       logo: {
         alt: 'React Native Elements Logo',
-        src: 'img/logo-icon.svg',
+        src:
+          'https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default',
       },
+      hideOnScroll: true,
       items: [
-        { to: 'docs/', label: 'Docs', position: 'right' },
-        { to: 'docs/overview', label: 'Components', position: 'right' },
-        { to: 'help', label: 'Help', position: 'right' },
+        { to: 'docs/', label: 'Documentation', position: 'right' },
         {
           href:
             'https://github.com/react-native-elements/react-native-elements',
           label: 'GitHub',
           position: 'right',
         },
+        { to: 'help', label: 'Help', position: 'right' },
         { to: 'blog', label: 'Blog', position: 'right' },
-        { to: 'versions', label: 'Versions' },
+        {
+          type: 'docsVersionDropdown',
+
+          position: 'left',
+          dropdownItemsAfter: [{ to: 'versions', label: 'All versions' }],
+          // Do not add the link active class when browsing docs.
+          dropdownActiveClassDisabled: true,
+          docsPluginId: 'default',
+        },
       ],
     },
     algolia: {
@@ -114,6 +124,16 @@ module.exports = {
               label: 'GitHub',
               to:
                 'https://github.com/react-native-elements/react-native-elements',
+            },
+            {
+              label: 'StackOverflow',
+              to:
+                'https://stackoverflow.com/questions/tagged/react-native-elements',
+            },
+            {
+              label: 'VS Code Extension',
+              to:
+                'https://marketplace.visualstudio.com/items?itemName=rne.snippets',
             },
           ],
         },

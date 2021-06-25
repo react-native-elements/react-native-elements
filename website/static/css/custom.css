@@ -1,4 +1,8 @@
 /* your custom css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
 
 :root {
   --ifm-color-primary: #2089dc;
@@ -9,11 +13,14 @@
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
 
-  --ifm-hero-background-color: #2089dc;
+  /* --ifm-hero-background-color: #292929; */
   --ifm-hero-text-color: #fff;
+
+  /* --ifm-navbar-background-color: #3f9be3;
+  --ifm-navbar-link-color: white; */
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --ifm-color-primary: #60ace8;
   --ifm-color-primary-dark: #439de4;
   --ifm-color-primary-darker: #3596e2;
@@ -39,7 +46,7 @@
   background-color: #b60205;
 }
 .label.help {
-  background-color: #128A0C;
+  background-color: #128a0c;
 }
 .label.question {
   background-color: #cc317c;
@@ -55,10 +62,10 @@
   background-color: #0052cc;
 }
 .label.first {
-  background-color: #464EBA;
+  background-color: #464eba;
 }
 .label.fixed {
-  background-color: #CEE3CE;
+  background-color: #cee3ce;
   color: #000;
 }
 .label.response {

@@ -125,51 +125,65 @@ const Home: React.FunctionComponent<{}> = () => {
   const { siteConfig = {} } = context;
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <header className="hero text--center">
+      <header className="hero ">
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className="row">
+            <div className="col col--3 col--offset-1">
+              <img src="https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default" />
+            </div>
+            <div className="col col--6 col--offset-1">
+              <h1 className="hero__title">{siteConfig.tagline}</h1>
+              <h1 className="hero__subtitle">
+                A React Native framework for making cross-platform applications
+              </h1>
+              <div>
+                <Link
+                  className={clsx(
+                    'button button--primary button--lg margin-right--sm '
+                  )}
+                  style={{ color: 'white' }}
+                  to={useBaseUrl('/docs')}
+                >
+                  Get Started
+                </Link>
 
-          <div>
-            <Link
-              className={clsx(
-                'button button--secondary button--outline button--lg margin-right--sm heroButton'
-              )}
-              style={{ color: 'white' }}
-              to={useBaseUrl('/docs')}
-            >
-              Read docs
-            </Link>
-
-            <Link
-              className={clsx(
-                'button button--secondary button--outline button--lg heroButton'
-              )}
-              style={{ color: 'white' }}
-              to={'https://react-native-elements.js.org/'}
-            >
-              Playground 🚀
-            </Link>
+                <Link
+                  className={clsx(
+                    'button button--secondary button--outline button--lg heroButton'
+                  )}
+                  to={'https://react-native-elements.js.org/'}
+                >
+                  Playground 🚀
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
-      {features && features.length && (
-        <section className="margin-vert--xl">
-          <div className="container">
-            <div className="row">
-              {features.map(({ title, description }, index) => (
-                <div key={index} className="col col--3">
-                  <h3>
-                    {index + 1}. {title}
-                  </h3>
-                  <p className="check">{description}</p>
+      <section className="margin-vert--xl">
+        <div className="container">
+          <div className="row">
+            {features.map(({ title, description }, index) => (
+              <div
+                key={index}
+                className="col col--3 "
+                style={{
+                  alignItems: 'stretch',
+                  display: 'flex',
+                }}
+              >
+                <div className="card shadow--md">
+                  <div className="card__body">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
       <div className="container">
         <img src="/img/app-preview.png" />
       </div>
