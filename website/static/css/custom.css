@@ -317,3 +317,7 @@ a.hash-link ~ code {
 a code {
   font-size: 100%;
 }
+
+.snack-player {
+  height: 500px;
+}

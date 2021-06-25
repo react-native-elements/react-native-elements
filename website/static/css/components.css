@@ -51,3 +51,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.snackPlayer {
+  overflow: hidden;
+  background: #212121;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  height: 505px;
+  width: 100%;
+}

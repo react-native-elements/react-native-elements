@@ -187,7 +187,15 @@ const Home: React.FunctionComponent<{}> = () => {
       <div className="container">
         <img src="/img/app-preview.png" />
       </div>
-
+      <div className="container">
+        <div
+          className="snackPlayer"
+          data-snack-id="@arpitbhalla/rne-demo"
+          data-snack-platform="web"
+          data-snack-preview="true"
+          data-snack-theme="dark"
+        />
+      </div>
       <OpenCollective />
     </Layout>
   );

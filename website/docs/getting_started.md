@@ -3,6 +3,8 @@ id: getting_started
 title: Getting Started
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating
@@ -13,12 +15,28 @@ and feel.
 
 ### Stable
 
+<Tabs
+defaultValue="npm"
+values={[
+{ label: 'NPM', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
+]
+}>
+<TabItem value="npm">
+
 ```bash
 npm install react-native-elements
+```
 
-# or with yarn
+</TabItem>
+<TabItem value="yarn">
+
+```bash
 yarn add react-native-elements
 ```
+
+</TabItem>
+</Tabs>
 
 ### Bleeding Edge
 

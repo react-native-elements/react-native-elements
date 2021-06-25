@@ -12,11 +12,15 @@ module.exports = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
+  clientModules: [require.resolve('./snackPlayerInitializer.js')],
   /* path to images for header/footer */
   favicon:
     'https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default',
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    { src: 'https://snack.expo.io/embed.js', defer: true },
+  ],
   plugins: [
     [
       '@docusaurus/plugin-client-redirects',
@@ -33,6 +37,7 @@ module.exports = {
           homePageId: 'getting_started',
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.json'),
+          remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
             'https://github.com/react-native-elements/react-native-elements/edit/next/website/',
         },
