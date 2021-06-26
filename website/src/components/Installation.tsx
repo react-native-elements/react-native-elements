@@ -14,13 +14,13 @@ const Home: React.FunctionComponent<{}> = () => {
             </div>
             <div className="col col--6 ">
               <p>
-                <b> 1.Install the React Native Elements package from the NPM</b>
+                <b>1. Install the React Native Elements package from the NPM</b>
                 <p className="margin-vert--md margin-horiz--md">
                   <pre>$ npm install react-native-elements</pre>
                 </p>
               </p>
               <p>
-                <b> 2.Import the component and use it in your project</b>
+                <b>2. Import the component and use it in your project</b>
                 <p className="margin-vert--md margin-horiz--md">
                   <pre>
                     {`import React from 'react';\nimport {Button} from 'react-native-elements';\n\nconst AwesomeButton = () => (<Button title='Welcome'/>)`}

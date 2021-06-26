@@ -14,12 +14,10 @@ const Home: React.FunctionComponent<{}> = () => {
             <div className="col col--8 text--center">
               <h1 className="hero__title gradient clip-text">The Demo App</h1>
               <p className="p--desc">
-                To see UI Kitten in action, download a live demo published on
-                both App Store and Google Play or run it by cloning a GitHub
-                repo. You can use it as a starter kit for your next mobile app
-                for any domain: e-commerce, social, fitness, etc. Compose the
-                application from available screens, add backend integration, and
-                you will end up with an A-grade cross-platform mobile
+                To see React Native Elements in action, play a live demo
+                published on Expo Go or run it by cloning a GitHub repo. Compose
+                the application from available screens, add backend integration,
+                and you will end up with an A-grade cross-platform mobile
                 application.
               </p>
               <Link

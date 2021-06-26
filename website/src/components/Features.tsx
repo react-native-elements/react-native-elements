@@ -47,13 +47,12 @@ const Home: React.FunctionComponent<{}> = () => {
           <div className="row">
             <div className="col col--10 col--offset-1">
               <p className="p--desc margin-vert--md text--center">
-                UI Kitten is a React Native implementation of the Eva Design
-                System. The framework contains a set of general-purpose UI
-                components styled in a similar way. The most awesome thing about
-                Ui Kitten is that the themes can be changed in the runtime
-                without reloading the application. This way, you may easily
-                focus on business logic, while UI Kitten takes care of the
-                visual appearance of your product.
+                React Native Elements implementation of Material Design System.
+                The framework contains a set of general-purpose UI components
+                styled in a similar way. The most awesome thing about is that
+                the themes can be changed in the runtime without reloading the
+                application. This way, you may easily focus on business logic,
+                while we takes care of the visual appearance of your product.
               </p>
             </div>
           </div>
