@@ -7,6 +7,7 @@ import {
   StyleProp,
   ViewStyle,
   ModalProps,
+  ScrollViewProps,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { RneFunctionComponent } from '../helpers';
@@ -15,6 +16,7 @@ export type BottomSheetProps = {
   containerStyle?: StyleProp<ViewStyle>;
   modalProps?: ModalProps;
   isVisible?: boolean;
+  scrollViewProps?: ScrollViewProps;
 };
 
 export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
@@ -22,6 +24,7 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   isVisible = false,
   modalProps = {},
   children,
+  scrollViewProps = {},
   ...props
 }) => {
   return (
@@ -39,7 +42,7 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
         {...props}
       >
         <View>
-          <ScrollView>{children}</ScrollView>
+          <ScrollView {...scrollViewProps}>{children}</ScrollView>
         </View>
       </SafeAreaView>
     </Modal>
