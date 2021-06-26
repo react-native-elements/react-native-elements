@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,700&display=swap');
 * {
-  font-family: 'Lato', sans-serif;
-  scrollbar-width: 5px;
-  scrollbar-color: #3f3f3f;
+  font-family: 'Ubuntu', sans-serif;
+  scrollbar-width: 8px;
+  scrollbar-color: var(--ifm-hero-background-color);
 }
 *::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #3f3f3f; /* color of the tracking area */
+  background: var(--ifm-hero-background-color); /* color of the tracking area */
 }
 
 *::-webkit-scrollbar-thumb {
