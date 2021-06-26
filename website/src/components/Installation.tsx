@@ -7,12 +7,10 @@ const Home: React.FunctionComponent<{}> = () => {
       <section className="margin-vert--xl">
         <div className="container ">
           <div className="row" style={{ alignItems: 'center' }}>
-            <div className="col col--6 text--center">
-              <h1 className="hero__title gradient clip-text">
-                How to use React Native Elements?
-              </h1>
+            <div className="col col--5 text--center">
+              <h1 className="hero__title gradient clip-text">How to use?</h1>
             </div>
-            <div className="col col--6 ">
+            <div className="col col--7 ">
               <p>
                 <b>1. Install the React Native Elements package from the NPM</b>
                 <p className="margin-vert--md margin-horiz--md">

@@ -1,6 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
 * {
-  font-family: 'Noto Sans JP', sans-serif !important;
+  font-family: 'Lato', sans-serif;
+  scrollbar-width: 5px;
+  scrollbar-color: #3f3f3f;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #3f3f3f; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100); /* color of the scroll thumb */
+  border-radius: 1px; /* roundness of the scroll thumb */
+  /* border: 1px solid #000066;  */ /* creates padding around scroll thumb */
 }
 
 :root {

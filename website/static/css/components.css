@@ -41,12 +41,7 @@
 }
 
 .gradient {
-  background: rgb(72, 72, 255);
-  background: linear-gradient(
-    135deg,
-    rgba(72, 72, 255, 1) 29%,
-    rgba(0, 212, 255, 1) 80%
-  );
+  background: linear-gradient(120deg, #0068ff, #00a2ff);
 }
 
 .clip-text {
