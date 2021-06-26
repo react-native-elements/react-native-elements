@@ -21,7 +21,9 @@ const Home: React.FunctionComponent<{}> = () => {
                 <b>2. Import the component and use it in your project</b>
                 <p className="margin-vert--md margin-horiz--md">
                   <pre>
-                    {`import React from 'react';\nimport {Button} from 'react-native-elements';\n\nconst AwesomeButton = () => (<Button title='Welcome'/>)`}
+                    {
+                      "import React from 'react';\nimport { Button } from 'react-native-elements';\n\nconst AwesomeButton = () => (<Button title='Welcome'/>)"
+                    }
                   </pre>
                 </p>
               </p>

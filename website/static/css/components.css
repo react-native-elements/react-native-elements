@@ -60,10 +60,6 @@
   width: 100%;
 }
 
-.rne-hero-logo {
-  /* transform: rotate3d(0.5, 0.5, 1, 45deg); */
-}
-
 @media only screen and (max-width: 996px) {
   .rne-hero-logo {
     display: none;
