@@ -47,12 +47,13 @@ const Home: React.FunctionComponent<{}> = () => {
           <div className="row">
             <div className="col col--10 col--offset-1">
               <p className="p--desc margin-vert--md text--center">
-                React Native Elements implementation of Material Design System.
-                The framework contains a set of general-purpose UI components
-                styled in a similar way. The most awesome thing about is that
-                the themes can be changed in the runtime without reloading the
-                application. This way, you may easily focus on business logic,
-                while we takes care of the visual appearance of your product.
+                React Native Elements is an implementation of the Material
+                Design System. The framework contains a set of general-purpose
+                UI components styled in a similar way. The most awesome thing
+                about is that the themes can be changed in the runtime without
+                reloading the application. This way, you may easily focus on
+                business logic, while we takes care of the visual appearance of
+                your product.
               </p>
             </div>
           </div>
@@ -65,10 +66,14 @@ const Home: React.FunctionComponent<{}> = () => {
                 className="col col--3 "
                 style={{
                   alignItems: 'stretch',
+                  justifyContent: 'center',
                   display: 'flex',
                 }}
               >
-                <div className="card margin-vert--lg text--center shadow--sm">
+                <div
+                  style={{ justifyContent: 'stretch' }}
+                  className="card margin-vert--lg text--center shadow--sm"
+                >
                   <div className="card__image padding-horiz--lg  margin-vert--lg ">
                     <img
                       height={'220px'}

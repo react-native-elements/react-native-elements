@@ -1,3 +1,4 @@
+//Kept for future
 module.exports = {
   componentsSidebar: [
     {

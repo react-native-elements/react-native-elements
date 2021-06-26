@@ -8,7 +8,9 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="container ">
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col col--5 text--center">
-              <h1 className="hero__title gradient clip-text">How to use?</h1>
+              <h1 className="hero__title gradient clip-text">
+                How to get started?
+              </h1>
             </div>
             <div className="col col--7 ">
               <p>
@@ -16,8 +18,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 <p className="margin-vert--md margin-horiz--md">
                   <pre>$ npm install react-native-elements</pre>
                 </p>
-              </p>
-              <p>
+
                 <b>2. Import the component and use it in your project</b>
                 <p className="margin-vert--md margin-horiz--md">
                   <pre>

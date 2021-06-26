@@ -15,10 +15,7 @@ const Home: React.FunctionComponent<{}> = () => {
               <h1 className="hero__title gradient clip-text">The Demo App</h1>
               <p className="p--desc">
                 To see React Native Elements in action, play a live demo
-                published on Expo Go or run it by cloning a GitHub repo. Compose
-                the application from available screens, add backend integration,
-                and you will end up with an A-grade cross-platform mobile
-                application.
+                published on Expo Go or run it by cloning the GitHub repo.
               </p>
               <Link
                 className={

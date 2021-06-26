@@ -36,7 +36,7 @@ module.exports = {
         docs: {
           homePageId: 'getting_started',
           path: 'docs',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
             'https://github.com/react-native-elements/react-native-elements/edit/next/website/',
@@ -62,7 +62,7 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark',
     },
-    sidebarCollapsible: true,
+    sidebarCollapsible: false,
     navbar: {
       title: 'React Native Elements',
       logo: {
