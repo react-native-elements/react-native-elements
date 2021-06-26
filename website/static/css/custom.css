@@ -1,7 +1,6 @@
-/* your custom css */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;900&display=swap');
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif !important;
 }
 
 :root {
@@ -13,11 +12,9 @@
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
 
-  /* --ifm-hero-background-color: #292929; */
-  --ifm-hero-text-color: #fff;
+  --ifm-hero-background-color: #e9e9e9;
 
-  /* --ifm-navbar-background-color: #3f9be3;
-  --ifm-navbar-link-color: white; */
+  --ifm-navbar-background-color: var(--ifm-hero-background-color);
 }
 
 :root[data-theme='dark'] {
@@ -28,6 +25,7 @@
   --ifm-color-primary-light: #7dbbec;
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
+  --ifm-hero-background-color: #273036;
 }
 
 .label {
