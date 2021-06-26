@@ -36,7 +36,7 @@ module.exports = {
         docs: {
           homePageId: 'getting_started',
           path: 'docs',
-          sidebarPath: require.resolve('./sidebars.json'),
+          sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
             'https://github.com/react-native-elements/react-native-elements/edit/next/website/',
@@ -48,7 +48,21 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    sidebarCollapsible: false,
+    announcementBar: {
+      id: 'support_us', // Any value that will identify this message.
+      content:
+        '⭐️ If you like Docusaurus, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐',
+      backgroundColor: 'var(--ifm-hero-background-color)', // Defaults to `#fff`.
+      textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/vsLight'),
+      darkTheme: require('prism-react-renderer/themes/nightOwl'),
+    },
+    colorMode: {
+      defaultMode: 'dark',
+    },
+    sidebarCollapsible: true,
     navbar: {
       title: 'React Native Elements',
       logo: {
