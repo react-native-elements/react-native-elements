@@ -12,27 +12,24 @@ const features: FeatureTypes[] = [
     title: 'Cross-Platform',
     description:
       'Consistent design across android, iOS, and web. 30+ components designed to save development time',
-    img: 'https://react-native-elements.js.org/static/media/tweak.eec9dd86.svg',
+    img: '/img/website/tweak.svg',
   },
   {
     title: 'Easy to use',
     description:
       'Built completely in TypeScript. Starting your react native app has never been easier. Supports Expo too! ',
-    img:
-      'https://react-native-elements.js.org/static/media/explore.60a99118.svg',
+    img: '/img/website/explore.svg',
   },
   {
     title: 'Customizable',
     description: 'Easily style any of our components just the way you want.',
-    img:
-      'https://react-native-elements.js.org/static/media/design.a8b58f54.svg',
+    img: '/img/website/design.svg',
   },
   {
     title: 'Community-Driven',
     description:
       "100% built by the community. We're here because we love open source.",
-    img:
-      'https://react-native-elements.js.org/static/media/bootstrap.ea450835.svg',
+    img: '/img/website/bootstrap.svg',
   },
 ];
 

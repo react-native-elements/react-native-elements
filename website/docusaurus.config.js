@@ -14,8 +14,7 @@ module.exports = {
   organizationName: 'react-native-elements',
   clientModules: [require.resolve('./snackPlayerInitializer.js')],
   /* path to images for header/footer */
-  favicon:
-    'https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default',
+  favicon: '/img/website/logo.png',
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   scripts: [
     'https://buttons.github.io/buttons.js',
@@ -67,8 +66,7 @@ module.exports = {
       title: 'React Native Elements',
       logo: {
         alt: 'React Native Elements Logo',
-        src:
-          'https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default',
+        src: '/img/website/logo.png',
       },
       hideOnScroll: true,
       items: [

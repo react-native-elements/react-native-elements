@@ -8,8 +8,8 @@ const Home: React.FunctionComponent<{}> = () => {
       <section className="margin-vert--xl">
         <div className="container ">
           <div className="row" style={{ alignItems: 'center' }}>
-            <div className="col col--3 col--offset-1">
-              <img src="/img/app-preview3.png" />
+            <div className="col col--3 col--offset-1 text--center">
+              <img src="/img/website/app-preview3.png" />
             </div>
             <div className="col col--8 text--center">
               <h1 className="hero__title gradient clip-text">The Demo App</h1>

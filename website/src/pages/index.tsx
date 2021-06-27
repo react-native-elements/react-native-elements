@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Installation from '../components/Installation';
 import RunOnExpo from '../components/RunOnExpo';
+import VSCodeExt from '../components/VSCodeExt';
 import OpenCollective from '../components/OpenCollective';
 import '../../static/css/components.css';
 
@@ -17,6 +18,7 @@ const Home: React.FunctionComponent<{}> = () => {
       <Installation />
       <Features />
       <RunOnExpo />
+      <VSCodeExt />
       <OpenCollective />
     </Layout>
   );

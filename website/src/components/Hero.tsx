@@ -13,7 +13,10 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="container">
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col col--3 col--offset-1">
-              <img className="rne-hero-logo" src="/img/app-preview2.png" />
+              <img
+                className="rne-hero-logo"
+                src="/img/website/app-preview2.png"
+              />
             </div>
             <div className="col col--6 col--offset-1">
               <h1 className="hero__title gradient clip-text">
