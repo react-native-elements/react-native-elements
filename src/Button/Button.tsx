@@ -11,6 +11,7 @@ import {
   TextStyle,
   PressableProps,
   Pressable,
+  GestureResponderEvent,
 } from 'react-native';
 import Color from 'color';
 import { renderNode, color } from '../helpers';
@@ -26,6 +27,13 @@ const defaultLoadingProps = (
   color: type === 'solid' ? 'white' : theme?.colors?.primary,
   size: 'small',
 });
+
+const positionStyle = {
+  top: 'column',
+  bottom: 'column-reverse',
+  left: 'row',
+  right: 'row-reverse',
+};
 
 export type ButtonProps = PressableProps & {
   title?: string | React.ReactElement<{}>;
@@ -89,14 +97,16 @@ export const Button = React.forwardRef<
         );
       }
     });
+
     const handleOnPress = React.useCallback(
-      (evt) => {
-        if (!loading) {
-          onPress(evt);
+      (event: GestureResponderEvent) => {
+        if (!loading && !disabled) {
+          onPress(event);
         }
       },
-      [loading, onPress]
+      [loading, disabled, onPress]
     );
+
     const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
       {
         color: type === 'solid' ? 'white' : theme?.colors?.primary,
@@ -108,31 +118,31 @@ export const Button = React.forwardRef<
       },
       disabled && disabledTitleStyle,
     ]);
+
     const loadingProps: ActivityIndicatorProps = {
       ...defaultLoadingProps(type, theme),
       ...passedLoadingProps,
     };
+
     const accessibilityState = {
       disabled: !!disabled,
       busy: !!loading,
     };
-    const positionStyle = {
-      top: 'column',
-      bottom: 'column-reverse',
-      left: 'row',
-      right: 'row-reverse',
-    };
+
     return (
       <View
+        testID="RNE_BUTTON_WRAPPER"
         style={[
           styles.container,
           {
+            // provide user's radius else 3
             borderRadius: 3 || styles.container.borderRadius,
           },
           containerStyle,
           raised && !disabled && type !== 'clear' && styles.raised,
         ]}
       >
+        {/* Custom Button Component -> Touchable or Pressable */}
         <Component
           ref={ref}
           onPress={handleOnPress}
@@ -141,6 +151,7 @@ export const Button = React.forwardRef<
           accessibilityRole="button"
           accessibilityState={accessibilityState}
           disabled={disabled}
+          // default ripple for pressable
           android_ripple={{
             color: Color(titleStyle?.color?.toString())
               .alpha(0.32)
@@ -151,14 +162,17 @@ export const Button = React.forwardRef<
           }}
           {...attributes}
         >
+          {/* Custom Provided View Component */}
           <ViewComponent
             {...linearGradientProps}
             style={StyleSheet.flatten([
               styles.button,
               styles.buttonOrientation,
+              // flex-direction based on iconPosition
               {
-                flexDirection:
-                  positionStyle[iconRight ? 'right' : iconPosition] || 'row',
+                flexDirection: (positionStyle[
+                  iconRight ? 'right' : iconPosition
+                ] || 'row') as ViewStyle['flexDirection'],
               },
               {
                 backgroundColor:
@@ -167,10 +181,12 @@ export const Button = React.forwardRef<
                 borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
               },
               buttonStyle,
+              // Set background color if disabled if solid type
               disabled &&
                 type === 'solid' && {
                   backgroundColor: theme?.colors?.disabled,
                 },
+              // Set background color if disabled if outlined type
               disabled &&
                 type === 'outline' && {
                   borderColor: color(theme?.colors?.disabled)
@@ -180,6 +196,7 @@ export const Button = React.forwardRef<
               disabled && disabledStyle,
             ])}
           >
+            {/**Show  ActivityIndicator on loading  */}
             {loading && (
               <ActivityIndicator
                 style={StyleSheet.flatten([styles.loading, loadingStyle])}
@@ -188,6 +205,7 @@ export const Button = React.forwardRef<
                 {...loadingProps}
               />
             )}
+            {/**hide icon(iff provided) on loading*/}
             {!loading &&
               icon &&
               renderNode(Icon, icon, {
@@ -196,6 +214,7 @@ export const Button = React.forwardRef<
                   iconContainerStyle,
                 ]),
               })}
+            {/**hide title text if provided on loading*/}
             {!loading &&
               !!title &&
               renderNode(Text, title, {

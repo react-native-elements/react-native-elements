@@ -1,144 +1,107 @@
 import React from 'react';
-import { ActivityIndicator, Platform } from 'react-native';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import theme from '../../config/theme';
-import ThemedButton, { Button } from '../index';
+import { ActivityIndicator, Pressable } from 'react-native';
+import { FullTheme } from '../../config/theme';
+import Button from '../index';
 import { renderWithTheme } from '../../../.ci/testHelper';
+import { fireEvent } from '@testing-library/react-native';
+import Icon from '../../Icon';
 
 describe('Button Component', () => {
-  beforeEach(() => {
-    let useEffect = jest.spyOn(React, 'useEffect');
-    useEffect.mockImplementation((f) => f());
-    const app = shallow(
-      <Button
-        theme={theme}
-        linearGradientProps={{
-          colors: ['#4c669f', '#3b5998', '#192f6a'],
-        }}
-        ViewComponent={null}
-      />
-    );
-    expect(app.length).toBe(1);
-  });
   it('should render without issues', () => {
-    const component = renderWithTheme(<Button theme={theme} />);
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    const TITLE = 'My Button';
+    const { queryByTestId, queryByText } = renderWithTheme(
+      <Button title={TITLE} />
+    );
+    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    expect(queryByText(TITLE)).toBeTruthy();
+    expect(wrapper).not.toBeNull();
+  });
+  it('should render icon', () => {
+    const ICON_NAME = 'edit';
+    const { queryByTestId } = renderWithTheme(
+      <Button icon={{ name: ICON_NAME }} />
+    );
+    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    const iconTree = wrapper.findByType(Icon);
+    expect(iconTree.props.name).toBe(ICON_NAME);
+    expect(iconTree).not.toBeNull();
   });
   it('should be call onPress events', () => {
     const onPress = jest.fn();
-    console.log = jest.fn();
-    const wrapper = shallow(<Button theme={theme} />);
-    // Call default onPress
-    wrapper.find('Pressable').props().onPress();
-    expect(console.log).toHaveBeenCalledWith(
-      'Please attach a method to this component'
-    );
-    wrapper.setProps({ onPress });
-    // Call our custom onPress
-    wrapper.find('Pressable').props().onPress();
+
+    const { queryByTestId } = renderWithTheme(<Button onPress={onPress} />);
+    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    const pressableTree = wrapper.findByType(Pressable);
+
+    fireEvent(pressableTree, 'press');
+
     expect(onPress).toHaveBeenCalled();
   });
-  it('should not be call onPress events when loading is true', () => {
+  it('should be NOT call onPress events while loading', () => {
     const onPress = jest.fn();
-    const wrapper = shallow(<Button theme={theme} loading onPress={onPress} />);
-    // Simulate press action
-    wrapper.simulate('press');
+
+    const { queryByTestId } = renderWithTheme(
+      <Button loading onPress={onPress} />
+    );
+    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    const pressableTree = wrapper.findByType(Pressable);
+
+    fireEvent(pressableTree, 'press');
+
     expect(onPress).not.toHaveBeenCalled();
   });
-  it('should have ripple on android version 21 and higher', () => {
-    Platform.OS = 'android';
-    Platform.Version = 25;
-    const wrapper = shallow(<Button theme={theme} />);
-    expect(wrapper.length).toBe(1);
-    jest.resetModules();
+  it('should be NOT call onPress events if disabled', () => {
+    const onPress = jest.fn();
+
+    const { queryByTestId } = renderWithTheme(
+      <Button disabled onPress={onPress} />
+    );
+    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    const pressableTree = wrapper.findByType(Pressable);
+
+    fireEvent(pressableTree, 'press');
+
+    expect(onPress).not.toHaveBeenCalled();
   });
-  it('should have normal ripple on android version 20 and lower', () => {
-    Platform.OS = 'android';
-    Platform.Version = 20;
-    const wrapper = shallow(<Button theme={theme} />);
-    expect(wrapper.length).toBe(1);
-    jest.resetModules();
-  });
-  describe('Button Types', () => {
-    describe('Solid', () => {
-      it('should display solid button', () => {
-        const component = shallow(<Button theme={theme} title="Solid" />);
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
+
+  describe('Button type', () => {
+    describe.each`
+      type
+      ${'solid'}
+      ${'outline'}
+      ${'clear'}
+    `('$type', ({ type }) => {
+      it(`should display ${type} button`, () => {
+        const { toJSON } = renderWithTheme(<Button title={type} />);
+        expect(toJSON()).toMatchSnapshot();
       });
-      it('should display raised solid button', () => {
-        const component = shallow(
-          <Button theme={theme} title="Solid" raised />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
+      it(`should display raised ${type} button`, () => {
+        const { toJSON } = renderWithTheme(<Button title={type} raised />);
+        expect(toJSON()).toMatchSnapshot();
       });
-      it('should display solid button disabled', () => {
-        const component = shallow(
-          <Button theme={theme} title="Solid" disabled />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
-    });
-    describe('Outline', () => {
-      it('should display outline button', () => {
-        const component = shallow(
-          <Button theme={theme} title="Outline" type="outline" />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
-      it('should display raised outline button', () => {
-        const component = shallow(
-          <Button theme={theme} title="Outline" type="outline" raised />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
-      it('should display outline button disabled', () => {
-        const component = shallow(
-          <Button theme={theme} title="Outline" type="outline" disabled />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
-    });
-    describe('Clear', () => {
-      it('should display clear button', () => {
-        const component = shallow(
-          <Button theme={theme} title="Clear" type="clear" />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
-      it('should display raised clear button', () => {
-        const component = shallow(
-          <Button theme={theme} title="Clear" type="clear" raised />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
-      });
-      it('should display clear button disabled', () => {
-        const component = shallow(
-          <Button theme={theme} title="Clear" type="clear" disabled />
-        );
-        expect(component.length).toBe(1);
-        expect(toJson(component)).toMatchSnapshot();
+      it(`should display disabled ${type} button`, () => {
+        const { toJSON } = renderWithTheme(<Button title={type} disabled />);
+        expect(toJSON()).toMatchSnapshot();
       });
     });
   });
   it('should apply values from theme', () => {
-    const testTheme = {
+    const testTheme: Partial<FullTheme> = {
       Button: {
         loading: true,
       },
     };
-    const { getByRole, toJSON } = renderWithTheme(<Button theme={theme} />);
-    const component = getByRole('button');
-    expect(component.findByType(ActivityIndicator)).toBeTruthy();
-    expect(toJSON()).toMatchSnapshot();
+    const { queryByTestId } = renderWithTheme(<Button />, testTheme);
+    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    expect(wrapper.findByType(ActivityIndicator)).toBeTruthy();
+  });
+  it('should apply title from theme', () => {
+    const testTheme: Partial<FullTheme> = {
+      Button: {
+        title: 'Custom Button',
+      },
+    };
+    const { queryByText } = renderWithTheme(<Button />, testTheme);
+    expect(queryByText(String(testTheme.Button.title))).toBeTruthy();
   });
 });
