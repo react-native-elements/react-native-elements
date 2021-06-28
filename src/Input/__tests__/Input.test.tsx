@@ -178,10 +178,11 @@ describe('Input component', () => {
       // it('should focus the input', () => {
       //   const focus = jest.fn();
       //   const ref = React.createRef<TextInput>();
-      //   const { queryByTestId } = renderWithTheme(
-      //     <TextInput ref={ref} onFocus={focus} />
-      //   );
-      //   const component = queryByTestId('RNE__Input__view-wrapper');
+      //   render(<TextInput ref={ref} onFocus={focus} />, {
+      //     createNodeMock: (element) => ({
+      //       focus,
+      //     }),
+      //   });
       //   ref.current.focus();
       //   expect(focus).toHaveBeenCalledTimes(1);
       // });
