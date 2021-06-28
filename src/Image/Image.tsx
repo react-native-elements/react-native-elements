@@ -27,20 +27,7 @@ export type ImageProps = RNImageProps & {
   transitionDuration?: number;
 };
 
-type ImageType = React.ForwardRefExoticComponent<
-  ImageProps &
-    Partial<ThemeProps<ImageProps>> &
-    React.RefAttributes<ImageNative>
-> & {
-  getSize?: typeof ImageNative.getSize;
-  getSizeWithHeaders?: typeof ImageNative.getSizeWithHeaders;
-  prefetch?: typeof ImageNative.prefetch;
-  abortPrefetch?: typeof ImageNative.abortPrefetch;
-  queryCache?: typeof ImageNative.queryCache;
-  resolveAssetSource?: typeof ImageNative.resolveAssetSource;
-};
-
-export const Image: ImageType = React.forwardRef<
+export const Image = React.forwardRef<
   ImageNative,
   ImageProps & Partial<ThemeProps<ImageProps>>
 >(
@@ -154,10 +141,3 @@ const styles = StyleSheet.create({
 });
 
 Image.displayName = 'Image';
-
-Image.getSize = ImageNative.getSize;
-Image.getSizeWithHeaders = ImageNative.getSizeWithHeaders;
-Image.prefetch = ImageNative.prefetch;
-Image.abortPrefetch = ImageNative.abortPrefetch;
-Image.queryCache = ImageNative.queryCache;
-Image.resolveAssetSource = ImageNative.resolveAssetSource;
