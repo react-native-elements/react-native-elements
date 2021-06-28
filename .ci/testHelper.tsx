@@ -1,11 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { ThemeProvider, FullTheme } from '../src/config';
+import { ThemeProvider, FullTheme, colors } from '../src/config';
 
 const theme = {
-  colors: {
-    black: 'black',
-  },
+  colors,
 };
 
 export const renderWithTheme = (

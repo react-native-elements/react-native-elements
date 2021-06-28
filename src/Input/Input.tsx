@@ -33,7 +33,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   rightIcon?: IconNode;
   rightIconContainerStyle?: StyleProp<ViewStyle>;
   inputStyle?: StyleProp<TextStyle>;
-  InputComponent?: typeof React.Component;
+  InputComponent?: React.ComponentType;
   errorProps?: object;
   errorStyle?: StyleProp<TextStyle>;
   errorMessage?: string;
@@ -101,7 +101,10 @@ export const Input = React.forwardRef<
     const hideErrorMessage = !renderErrorMessage && !errorMessage;
 
     return (
-      <View style={StyleSheet.flatten([styles.container, containerStyle])}>
+      <View
+        testID="RNE__Input__view-wrapper"
+        style={StyleSheet.flatten([styles.container, containerStyle])}
+      >
         {renderText(
           label,
           { style: labelStyle, ...labelProps },
