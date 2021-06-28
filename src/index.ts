@@ -10,7 +10,7 @@ import BottomSheet, { BottomSheetProps } from './BottomSheet';
 import Button, { ButtonProps } from './Button';
 import ButtonGroup, { ButtonGroupProps } from './ButtonGroup';
 import Card, { CardProps } from './Card';
-import CheckBox, { CheckBoxProps } from './CheckBox';
+import CheckBox, { CheckBoxProps } from './Checkbox';
 import Chip, { ChipProps } from './Chip';
 import Dialog, { DialogLoadingProps, DialogTitleProps } from './Dialog';
 import Divider, { DividerProps } from './Divider';
