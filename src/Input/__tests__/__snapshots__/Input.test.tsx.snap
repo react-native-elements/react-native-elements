@@ -15,7 +15,7 @@ exports[`Input component should match snapshot 1`] = `
       Object {
         "alignItems": "center",
         "borderBottomWidth": 1,
-        "borderColor": undefined,
+        "borderColor": "#86939e",
         "flexDirection": "row",
         "transform": Array [
           Object {
@@ -28,10 +28,11 @@ exports[`Input component should match snapshot 1`] = `
     <TextInput
       allowFontScaling={true}
       editable={true}
+      placeholderTextColor="#86939e"
       rejectResponderTermination={true}
       style={
         Object {
-          "color": undefined,
+          "color": "#242424",
           "flex": 1,
           "fontSize": 18,
           "minHeight": 40,
@@ -44,7 +45,7 @@ exports[`Input component should match snapshot 1`] = `
   <Text
     style={
       Object {
-        "color": undefined,
+        "color": "#ff190c",
         "fontSize": 12,
         "margin": 5,
       }

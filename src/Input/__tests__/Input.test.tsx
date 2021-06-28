@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, TextInput, Image, Animated } from 'react-native';
-import { Input } from '../index';
+import Input from '../index';
 import { renderWithTheme } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 import Icon from '../../Icon';
+import { FullTheme } from '../../config';
 
 describe('Input component', () => {
   it('should match snapshot', () => {
@@ -175,93 +176,26 @@ describe('Input component', () => {
     });
 
     describe('Instance methods', () => {
-      // it('should focus the input', () => {
-      //   const focus = jest.fn();
-      //   const ref = React.createRef<TextInput>();
-      //   render(<TextInput ref={ref} onFocus={focus} />, {
-      //     createNodeMock: (element) => ({
-      //       focus,
-      //     }),
-      //   });
-      //   ref.current.focus();
-      //   expect(focus).toHaveBeenCalledTimes(1);
-      // });
-      //   it('should clear the input', () => {
-      //     const clear = jest.fn();
-      //     const { queryByTestId } = renderWithTheme(
-      //       <Input defaultValue="My Text" />
-      //     );
-      //     const instance = component.instance();
-      //     // Refs not available in renderWithTheme render
-      //     instance.input = {
-      //       clear,
-      //     };
-      //     instance.clear();
-      //     expect(clear).toHaveBeenCalledTimes(1);
-      //   });
-      //   it('should blur the input', () => {
-      //     const blur = jest.fn();
-      //     const { queryByTestId } = renderWithTheme(<Input />);
-      //     const instance = component.instance();
-      //     // Refs not available in renderWithTheme render
-      //     instance.input = {
-      //       blur,
-      //     };
-      //     instance.blur();
-      //     expect(blur).toHaveBeenCalledTimes(1);
-      //   });
-      //   it('should call isFocused', () => {
-      //     const isFocused = () => true;
-      //     const { queryByTestId } = renderWithTheme(<Input />);
-      //     const instance = component.instance();
-      //     // Refs not available in renderWithTheme render
-      //     instance.input = {
-      //       isFocused,
-      //     };
-      //     expect(instance.isFocused()).toBe(true);
-      //   });
-      //   it('should call setNativeProps', () => {
-      //     const setNativeProps = jest.fn();
-      //     const { queryByTestId } = renderWithTheme(<Input />);
-      //     const instance = component.instance();
-      //     instance.input = {
-      //       setNativeProps,
-      //     };
-      //     instance.setNativeProps({ text: '' });
-      //     expect(setNativeProps).toHaveBeenCalledTimes(1);
-      //   });
-      //   it('should call shake', () => {
-      //     console.error = jest.fn();
-      //     const { queryByTestId } = renderWithTheme(<Input />);
-      //     jest.mock('react-native/Libraries/Animated/src/Animated', () => ({
-      //       timing: jest.fn(() => ({
-      //         start: jest.fn(),
-      //       })),
-      //       Value: jest.fn(() => ({
-      //         setValue: jest.fn(),
-      //         interpolate: jest.fn(),
-      //       })),
-      //     }));
-      //     const instance = component.instance();
-      //     instance.shake();
-      //     jest.dontMock('react-native/Libraries/Animated/src/Animated');
-      //   });
-      // });
-      // it('should apply values from theme', () => {
-      //   const testTheme = {
-      //     Input: {
-      //       placeholder: 'Enter text',
-      //     },
-      //   };
-      //   const component = create(
-      //     <ThemeProvider theme={testTheme}>
-      //       <ThemedInput />
-      //     </ThemeProvider>
-      //   );
-      //   expect(component.root.findByType(TextInput).props.placeholder).toBe(
-      //     'Enter text'
-      //   );
-      //   expect(component.toJSON()).toMatchSnapshot();
+      it('should focus the input', () => {
+        const focus = jest.fn();
+        const ref = React.createRef<TextInput>();
+        const { queryByTestId } = renderWithTheme(
+          <Input ref={ref} testID="demo" onFocus={focus} />
+        );
+        const component = queryByTestId('RNE__Input__view-wrapper');
+        fireEvent(component.findByType(TextInput), 'focus');
+        expect(focus).toHaveBeenCalledTimes(1);
+      });
+    });
+    it('should apply values from theme', () => {
+      const testTheme: Partial<FullTheme> = {
+        Input: {
+          placeholder: 'Enter text',
+        },
+      };
+      const { queryByTestId } = renderWithTheme(<Input />, testTheme);
+      const component = queryByTestId('RNE__Input__text-input');
+      expect(component.props.placeholder).toBe(testTheme.Input.placeholder);
     });
   });
 });
