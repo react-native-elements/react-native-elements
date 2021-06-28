@@ -5,7 +5,7 @@ import { TextProps } from '../Text';
 
 export type ListItemContentProps = TextProps & { right?: boolean };
 
-/**This allows adding content to the ListItem.
+/** This allows adding content to the ListItem.
  * This, Receives all [View](https://reactnative.dev/docs/view#props) props. */
 export const ListItemContent: RneFunctionComponent<ListItemContentProps> = ({
   style,

@@ -5,7 +5,7 @@ import Image, { ImageProps } from '../Image';
 
 type CardImageProps = ImageProps;
 
-/**Add information in the form of image to the card.
+/** Add information in the form of image to the card.
  * This, Receives all [Image](image.md#props) props. */
 export const CardImage: RneFunctionComponent<CardImageProps> = ({
   style,

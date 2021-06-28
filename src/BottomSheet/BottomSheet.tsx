@@ -12,17 +12,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { RneFunctionComponent } from '../helpers';
 
 export type BottomSheetProps = {
-  /**Style of the bottom sheet's container. Use this to change the color of the underlay. */
+  /** Style of the bottom sheet's container. Use this to change the color of the underlay. */
   containerStyle?: StyleProp<ViewStyle>;
 
-  /**Additional props handed to the `Modal`. */
+  /** Additional props handed to the `Modal`. */
   modalProps?: ModalProps;
 
-  /**Is the modal component shown. */
+  /** Is the modal component shown. */
   isVisible?: boolean;
 };
 
-/**Overlay Modal that displays content from the bottom of the screen.
+/** Overlay Modal that displays content from the bottom of the screen.
  * This opens from the bottom of the screen.
  * **Note:**
  * Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react-native-safe-area-context) in the setup guide before using `BottomSheet`.

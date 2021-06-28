@@ -7,7 +7,7 @@ import { RneFunctionComponent } from '../helpers';
 
 export type CardFeaturedSubtitleProps = TextProps;
 
-/**Add a featured subtitle to the Card.
+/** Add a featured subtitle to the Card.
  * This, Receives all [Text](text.md#props) props. */
 export const CardFeaturedSubtitle: RneFunctionComponent<CardFeaturedSubtitleProps> = ({
   theme,

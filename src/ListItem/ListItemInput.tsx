@@ -5,7 +5,7 @@ import Input, { InputProps } from '../Input';
 
 export type ListItemInputProps = InputProps;
 
-/**This allows adding an Text Input within the ListItem.
+/** This allows adding an Text Input within the ListItem.
  * This, Receives all [Input](input.md#props) props. */
 export const ListItemInput: RneFunctionComponent<ListItemInputProps> = ({
   inputStyle,

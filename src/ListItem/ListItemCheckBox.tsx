@@ -5,7 +5,7 @@ import { RneFunctionComponent } from '../helpers';
 
 export type ListItemCheckBoxProps = CheckBoxProps;
 
-/**This allows adding CheckBox to the ListItem.
+/** This allows adding CheckBox to the ListItem.
  * This, Receives all [CheckBox](checkbox.md#props) props. */
 export const ListItemCheckBox: RneFunctionComponent<ListItemCheckBoxProps> = ({
   containerStyle,

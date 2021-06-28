@@ -7,7 +7,7 @@ const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 export type ListItemSubtitleProps = TextProps & { right?: boolean };
 
-/**This allows adding SubTitle to the ListItem.
+/** This allows adding SubTitle to the ListItem.
  * This, Receives all [Text](text.md#props) props. */
 export const ListItemSubtitle: RneFunctionComponent<ListItemSubtitleProps> = ({
   style,

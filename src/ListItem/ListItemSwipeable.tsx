@@ -12,32 +12,32 @@ import { ListItemBase, ListItemBaseProps } from './ListItemBase';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type ListItemSwipeableProps = ListItemBaseProps & {
-  /**Left Content. */
+  /** Left Content. */
   leftContent?: React.ReactNode;
 
-  /**Right Content. */
+  /** Right Content. */
   rightContent?: React.ReactNode;
 
-  /**Style of left container. */
+  /** Style of left container. */
   leftStyle?: StyleProp<ViewStyle>;
 
-  /**Style of right container. */
+  /** Style of right container. */
   rightStyle?: StyleProp<ViewStyle>;
 
-  /**Width to swipe left. */
+  /** Width to swipe left. */
   leftWidth?: number;
 
-  /**Width to swipe right. */
+  /** Width to swipe right. */
   rightWidth?: number;
 
-  /**Function to call when user swipes left. */
+  /** Function to call when user swipes left. */
   onLeftSwipe?: () => any;
 
-  /**Function to call when user swipes right. */
+  /** Function to call when user swipes right. */
   onRightSwipe?: () => any;
 };
 
-/**We offer a special kind of ListItem which is swipeable from both ends and allows users select an event. */
+/** We offer a special kind of ListItem which is swipeable from both ends and allows users select an event. */
 export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = ({
   children,
   leftStyle,

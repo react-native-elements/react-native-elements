@@ -35,60 +35,60 @@ export type IconType =
   | string;
 
 export type IconObject = TouchableHighlightProps & {
-  /**Name of icon. */
+  /** Name of icon. */
   name?: string;
 
-  /**Color of icon. */
+  /** Color of icon. */
   color?: string;
 
-  /**Size of icon. */
+  /** Size of icon. */
   size?: number;
 
-  /**Type of icon */
+  /** Type of icon */
   type?: IconType;
 
-  /**Apply style to the icon using iconStyle. */
+  /** Apply style to the icon using iconStyle. */
   iconStyle?: StyleProp<TextStyle>;
 };
 
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
 export type IconProps = IconButtonProps & {
-  /**Type of icon set. [Supported sets here](#available-icon-sets). */
+  /** Type of icon set. [Supported sets here](#available-icon-sets). */
   type?: IconType;
 
-  /**Update React Native Component. */
+  /** Update React Native Component. */
   Component?: typeof React.Component;
 
-  /**Reverses color scheme. */
+  /** Reverses color scheme. */
   reverse?: boolean;
 
-  /**Adds box shadow to button. */
+  /** Adds box shadow to button. */
   raised?: boolean;
 
-  /**Add styling to container holding icon. */
+  /** Add styling to container holding icon. */
   containerStyle?: StyleProp<ViewStyle>;
 
-  /**Provide all props from react-native Icon component. */
+  /** Provide all props from react-native Icon component. */
   iconProps?: VectorIconProps;
 
-  /**Specify reverse icon color. */
+  /** Specify reverse icon color. */
   reverseColor?: string;
 
-  /**Disables onPress events. Only works when `onPress` has a handler. */
+  /** Disables onPress events. Only works when `onPress` has a handler. */
   disabled?: boolean;
 
-  /**Style for the button when disabled. Only works when `onPress` has a handler. */
+  /** Style for the button when disabled. Only works when `onPress` has a handler. */
   disabledStyle?: StyleProp<ViewStyle>;
 
-  /**Uses the solid font. */
+  /** Uses the solid font. */
   solid?: boolean;
 
-  /**Uses the brands font (FontAwesome5 only). */
+  /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
 };
 
-/**Icons are visual indicators usually used to describe action or intent.
+/** Icons are visual indicators usually used to describe action or intent.
  * They are also used for displaying information. */
 export const Icon: RneFunctionComponent<IconProps> = ({
   type = 'material',

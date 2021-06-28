@@ -10,23 +10,23 @@ import {
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type TabViewBaseProps = {
-  /**Child position index value. */
+  /** Child position index value. */
   value?: number;
 
-  /**On Index Change Callback. */
+  /** On Index Change Callback. */
   onChange?: (value: number) => any;
 
-  /**Choose the animation type among `spring` and `timing`. This is visible when there is tab change. */
+  /** Choose the animation type among `spring` and `timing`. This is visible when there is tab change. */
   animationType?: 'spring' | 'timing';
 
-  /**Define the animation configurations. */
+  /** Define the animation configurations. */
   animationConfig?: Omit<
     Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,
     'toValue'
   >;
 };
 
-/**Tabs organize content across different screens, data sets, and other interactions.
+/** Tabs organize content across different screens, data sets, and other interactions.
  * TabView enables swipeable tabs. */
 export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   children,
