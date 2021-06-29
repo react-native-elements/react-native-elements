@@ -48,6 +48,7 @@ const colors = {
   whatsapp: '#075e54',
   wordpress: '#21759b',
   youtube: '#bb0000',
+  microsoft: '#46A4F2',
 };
 
 export type SocialMediaType =
@@ -78,7 +79,8 @@ export type SocialMediaType =
   | 'angellist'
   | 'codepen'
   | 'weibo'
-  | 'vk';
+  | 'vk'
+  | 'microsoft';
 
 export type SocialIconProps = {
   Component?: typeof React.Component;
