@@ -1,0 +1,43 @@
+name: Build and Deploy docs
+on:
+  push:
+    branches:
+      - next
+    paths:
+      - 'website/**'
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build & Deploy Docs
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - name: Setup Node.js Env
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        id: rne-docs-deploy
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
+        if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
+        run: |
+          cd website
+          yarn
+      - name: Build 🔧
+        run: |
+          cd website
+          yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build
+          user_name: 'React Native Elements CI'
+          user_email: 'react-native-elements-ci@users.noreply.github.com'
+          cname: reactnativeelements.com

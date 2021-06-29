@@ -1,0 +1,46 @@
+name: Build and Deploy next version
+on:
+  push:
+    branches:
+      - next
+    paths-ignore:
+      - 'website/**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build dist
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - name: Setup Node.js Env
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        id: rne-dists-deploy
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-rne-dists-deploy-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
+        if: steps.rne-dists-deploy.outputs.cache-hit != 'true' # Over here!
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Create local changes
+        run: |
+          sed -i -e '/dist/d' .gitignore
+          git add .
+      - name: Commit files
+        run: |
+          git config --local user.email "react-native-elements-ci@users.noreply.github.com"
+          git config --local user.name "React Native Elements CI"
+          git commit -m "New build" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dist
+          force: true
