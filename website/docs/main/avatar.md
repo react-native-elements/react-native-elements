@@ -30,33 +30,36 @@ commonly used to represent a user and can contain photos, icons, or even text.
 
 ## Usage
 
-```js
+```SnackPlayer name=RNE Avatar
+import React from 'react';
+import { Text, View } from 'react-native';
 import { Avatar } from 'react-native-elements';
 
-// Standard Avatar
-<Avatar
-  rounded
-  source={{
-    uri:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-  }}
-/>
+const YourApp = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Avatar
+        rounded
+        source={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        }}
+      />
+      <Avatar rounded title="MD" />
+      <Avatar rounded icon={{ name: 'home' }} />
+      <Avatar
+        source={{
+          uri:
+            'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        }}
+      >
+        <Avatar.Accessory />
+      </Avatar>
+    </View>
+  );
+};
 
-// Avatar with Title
-<Avatar rounded title="MD" />
-
-// Avatar with Icon
-<Avatar rounded icon={{ name: 'home' }} />
-
-// Standard Avatar with accessory
-<Avatar
-  source={{
-    uri:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-  }}
-  >
-  <Avatar.Accessory {...accessoryProps} />
-</Avatar>
+export default YourApp;
 ```
 
 #### Avatar with initials

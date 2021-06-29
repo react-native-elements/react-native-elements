@@ -16,28 +16,34 @@ Tabs organize content across different screens, data sets, and other interaction
 
 ## Usage
 
-```js
-import { Tab } from 'react-native-elements';
-```
+```SnackPlayer name=RNE Tabs
+import React from 'react';
+import { Tab, TabView, Text } from 'react-native-elements';
 
-```js
-<Tab value={0}>
-  <Tab.Item title="recent" />
-  <Tab.Item title="favorite" />
-  <Tab.Item title="cart" />
-</Tab>
+export default () => {
+  const [index, setIndex] = React.useState(0);
+  return (
+    <>
+      <Tab value={index} onChange={setIndex}>
+        <Tab.Item title="recent" />
+        <Tab.Item title="favorite" />
+        <Tab.Item title="cart" />
+      </Tab>
 
- <TabView value={index} onChange={setIndex} >
-  <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
-    <Text h1>Recent</Text>
-  </TabView.Item>
-  <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
-    <Text h1>Favorite</Text>
-  </TabView.Item>
-  <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
-    <Text h1>Cart</Text>
-  </TabView.Item>
-</TabView>
+      <TabView value={index} onChange={setIndex}>
+        <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
+          <Text h1>Recent</Text>
+        </TabView.Item>
+        <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
+          <Text h1>Favorite</Text>
+        </TabView.Item>
+        <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
+          <Text h1>Cart</Text>
+        </TabView.Item>
+      </TabView>
+    </>
+  );
+};
 ```
 
 ---
