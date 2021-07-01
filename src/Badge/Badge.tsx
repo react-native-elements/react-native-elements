@@ -12,16 +12,32 @@ import {
 import { renderNode, RneFunctionComponent } from '../helpers';
 
 export type BadgeProps = {
+  /** Style for the container. */
   containerStyle?: StyleProp<ViewStyle>;
+
+  /** Additional styling for badge (background) view component. */
   badgeStyle?: StyleProp<ViewStyle>;
+
+  /** Extra props for text component. */
   textProps?: TextProps;
+
+  /** Extra styling for icon component. */
   textStyle?: StyleProp<TextStyle>;
+
+  /** Text value to be displayed by badge, defaults to empty. */
   value?: React.ReactNode;
+
+  /** Function called when pressed on the badge. */
   onPress?: (...args: any[]) => any;
+
+  /** Custom component to replace the badge outer component. */
   Component?: typeof React.Component;
+
+  /** Determines color of the indicator. */
   status?: 'primary' | 'success' | 'warning' | 'error';
 };
 
+/** Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user. */
 export const Badge: RneFunctionComponent<BadgeProps> = ({
   containerStyle,
   textStyle,
