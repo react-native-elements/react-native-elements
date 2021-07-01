@@ -5,16 +5,6 @@ import { Image, ImageProps } from './Image';
 export { Image };
 export type { ImageProps };
 
-/**
- * **React Native Elements Image Component**
- *
- * **Documentation** https://reactnativeelements.com/docs/image
- *
- * **Preview**
- *
- * ![Image](https://raw.githubusercontent.com/arpitBhalla/rne.snippets/next/img/rneImage.png)
- */
-
 const ThemedImage = Object.assign(withTheme(Image, 'Image'), {
   getSize: ImageNative.getSize,
   getSizeWithHeaders: ImageNative.getSizeWithHeaders,
