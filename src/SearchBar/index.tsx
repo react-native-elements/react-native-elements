@@ -11,4 +11,13 @@ export type {
   SearchBarDefaultProps,
   SearchBarIosProps,
 };
+/**
+ * RNE SearchBar
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/searchbar)
+ */
 export default withTheme(SearchBar, 'SearchBar');

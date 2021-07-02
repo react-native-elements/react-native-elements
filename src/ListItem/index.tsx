@@ -58,4 +58,13 @@ const ThemedListItem = Object.assign(withTheme(ListItem, 'ListItem'), {
   ButtonGroup: ThemedListItemButtonGroup,
 });
 
+/**
+ * RNE ListItem
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/listitem)
+ */
 export default ThemedListItem;

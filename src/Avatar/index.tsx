@@ -19,4 +19,13 @@ const ThemedAvatar = Object.assign(withTheme(Avatar, 'Avatar'), {
   Accessory: ThemedAccessory,
 });
 
+/**
+ * RNE Avatar
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/avatar)
+ */
 export default ThemedAvatar;

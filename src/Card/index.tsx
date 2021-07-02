@@ -37,4 +37,13 @@ const ThemedCard = Object.assign(withTheme(Card, 'Card'), {
   FeaturedSubtitle: ThemedCardFeaturedSubtitle,
 });
 
+/**
+ * RNE Card
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/card)
+ */
 export default ThemedCard;

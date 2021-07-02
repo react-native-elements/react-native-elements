@@ -17,4 +17,13 @@ export const ThemedTab = Object.assign(withTheme(Tab, 'Tab'), {
   Item: ThemedTabItem,
 });
 
+/**
+ * RNE Tab
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/tab)
+ */
 export default ThemedTab;

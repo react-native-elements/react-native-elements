@@ -18,4 +18,13 @@ export const ThemedTabView = Object.assign(withTheme(TabView, 'TabView'), {
   Item: ThemedTabViewItem,
 });
 
+/**
+ * RNE TabView
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/tabview)
+ */
 export default ThemedTabView;

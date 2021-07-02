@@ -29,4 +29,13 @@ const ThemedDialog = Object.assign(withTheme(Dialog, 'Dialog'), {
   Button: ThemedDialogButton,
 });
 
+/**
+ * RNE Dialog
+ *
+ * **Preview**
+ *
+ * ![URL](URL)
+ *
+ * [**Documentation**](https://reactnativeelements.com/docs/dialog)
+ */
 export default ThemedDialog;
