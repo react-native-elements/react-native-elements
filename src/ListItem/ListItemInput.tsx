@@ -1,20 +1,19 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { RneFunctionComponent } from '../helpers';
+import { StyleSheet, TextInput } from 'react-native';
+import { ThemeProps } from '../config';
 import Input, { InputProps } from '../Input';
 
 export type ListItemInputProps = InputProps;
 
 /** This allows adding an Text Input within the ListItem.
  * This, Receives all [Input](input.md#props) props. */
-export const ListItemInput: RneFunctionComponent<ListItemInputProps> = ({
-  inputStyle,
-  inputContainerStyle,
-  containerStyle,
-  ...props
-}) => {
+export const ListItemInput = React.forwardRef<
+  TextInput,
+  ListItemInputProps & Partial<ThemeProps<ListItemInputProps>>
+>(({ inputStyle, inputContainerStyle, containerStyle, ...props }, ref) => {
   return (
     <Input
+      ref={ref}
       renderErrorMessage={false}
       {...props}
       inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
@@ -25,7 +24,7 @@ export const ListItemInput: RneFunctionComponent<ListItemInputProps> = ({
       containerStyle={StyleSheet.flatten([styles.container, containerStyle])}
     />
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
