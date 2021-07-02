@@ -15,7 +15,6 @@ import { ThemeProps } from '../config';
 const SEARCHBAR_COMPONENTS = {
   ios: SearchBarIOS,
   android: SearchBarAndroid,
-
   default: SearchBarDefault,
 };
 
@@ -40,7 +39,6 @@ export type SearchBarBaseProps = React.ComponentPropsWithRef<
 };
 
 export type SearchBarProps =
-  | SearchBarBaseProps
   | SearchBarDefaultProps
   | SearchBarAndroidProps
   | SearchBarIosProps;
@@ -70,7 +68,7 @@ export class SearchBar extends React.Component<
   };
 
   render() {
-    const Component: typeof React.Component =
+    const Component: React.ComponentType =
       SEARCHBAR_COMPONENTS[this.props.platform] || SearchBarDefault;
 
     return (

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
@@ -33,87 +33,16 @@ const defaultClearIcon = (theme: Theme) => ({
   name: 'clear',
 });
 
-export type SearchBarAndroidProps = InputProps &
-  SearchBarBaseProps &
-  typeof SearchBarAndroid.defaultProps & {
-    cancelIcon?: IconNode;
-  };
-
-type SearchBarState = {
-  hasFocus: boolean;
-  isEmpty: boolean;
+export type SearchBarAndroidProps = SearchBarBaseProps & {
+  cancelIcon?: IconNode;
 };
 
-export class SearchBarAndroid extends Component<
-  SearchBarAndroidProps & Partial<ThemeProps<SearchBarAndroidProps>>,
-  SearchBarState
-> {
-  input!: TextInput;
-  static defaultProps = {
-    onClear: () => null,
-    onCancel: () => null,
-    onFocus: () => null,
-    onBlur: () => null,
-    onChangeText: () => null,
-  };
-
-  focus = () => {
-    this.input.focus();
-  };
-
-  blur = () => {
-    this.input.blur();
-  };
-
-  clear = () => {
-    this.input.clear();
-    this.onChangeText('');
-    this.props.onClear();
-  };
-
-  cancel = () => {
-    this.blur();
-    this.props.onCancel();
-  };
-
-  onFocus: InputProps['onFocus'] = (event) => {
-    this.props.onFocus(event);
-    this.setState({
-      hasFocus: true,
-      isEmpty: this.props.value === '',
-    });
-  };
-
-  onBlur: InputProps['onBlur'] = (event) => {
-    this.props.onBlur(event);
-    this.setState({ hasFocus: false });
-  };
-
-  onChangeText = (text: string) => {
-    this.props.onChangeText(text);
-    this.setState({ isEmpty: text === '' });
-  };
-
-  constructor(props: SearchBarAndroidProps) {
-    super(props);
-    const { value = '' } = props;
-    this.state = {
-      hasFocus: false,
-      isEmpty: value ? value === '' : true,
-    };
-    Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
-  }
-
-  _keyboardDidHide = () => {
-    this.cancel();
-  };
-
-  componentWillUnmount() {
-    Keyboard.removeListener('keyboardDidHide', this._keyboardDidHide);
-  }
-
-  render() {
-    const {
+export const SearchBarAndroid = React.forwardRef<
+  TextInput,
+  SearchBarAndroidProps & Partial<ThemeProps<SearchBarAndroidProps>>
+>(
+  (
+    {
       theme,
       clearIcon = { name: 'clear' },
       containerStyle,
@@ -125,9 +54,52 @@ export class SearchBarAndroid extends Component<
       cancelIcon = { name: 'arrow-back' },
       showLoading = false,
       loadingProps = {},
+      onClear,
+      onFocus,
+      onBlur,
+      onChangeText,
+      onCancel,
+      value,
       ...attributes
-    } = this.props;
-    const { hasFocus, isEmpty } = this.state;
+    },
+    ref: React.MutableRefObject<TextInput>
+  ) => {
+    const [hasFocus, setHasFocus] = React.useState(false);
+    const [isEmpty, setIsEmpty] = React.useState(value ? value === '' : true);
+
+    const clear = () => {
+      ref.current.clear();
+      onChangeTextHandler('');
+      onClear();
+    };
+
+    const cancel = () => {
+      ref.current.blur();
+      onCancel();
+    };
+
+    const onFocusHandler: InputProps['onFocus'] = (event) => {
+      onFocus(event);
+      setIsEmpty(value === '');
+      setHasFocus(true);
+    };
+
+    const onBlurHandler: InputProps['onBlur'] = (event) => {
+      onBlur(event);
+      setHasFocus(false);
+    };
+
+    const onChangeTextHandler = (text: string) => {
+      onChangeText(text);
+      setIsEmpty(text === '');
+    };
+
+    React.useEffect(() => {
+      Keyboard.addListener('keyboardDidHide', cancel);
+      () => Keyboard.removeListener('keyboardDidHide', cancel);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     return (
@@ -145,12 +117,10 @@ export class SearchBarAndroid extends Component<
           testID="searchInput"
           renderErrorMessage={false}
           {...attributes}
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
-          onChangeText={this.onChangeText}
-          ref={(input: TextInput) => {
-            this.input = input;
-          }}
+          onFocus={onFocusHandler}
+          onBlur={onBlurHandler}
+          onChangeText={onChangeTextHandler}
+          ref={ref}
           containerStyle={{ paddingHorizontal: 0 }}
           inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
           inputContainerStyle={StyleSheet.flatten([
@@ -161,7 +131,7 @@ export class SearchBarAndroid extends Component<
             hasFocus
               ? renderNode(Icon, cancelIcon, {
                   ...defaultCancelIcon(theme as Theme),
-                  onPress: this.cancel,
+                  onPress: cancel,
                 })
               : renderNode(Icon, searchIcon, defaultSearchIcon(theme as Theme))
           }
@@ -182,7 +152,7 @@ export class SearchBarAndroid extends Component<
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon(theme as Theme),
                   key: 'cancel',
-                  onPress: this.clear,
+                  onPress: clear,
                 })}
             </View>
           }
@@ -194,7 +164,7 @@ export class SearchBarAndroid extends Component<
       </View>
     );
   }
-}
+);
 
 const styles = StyleSheet.create({
   input: {

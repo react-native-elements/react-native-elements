@@ -64,7 +64,7 @@ export const SearchBarDefault = React.forwardRef<
 
     const clear = () => {
       ref.current.clear();
-      onChangeText('');
+      onChangeTextHandler('');
       onClear();
     };
 
