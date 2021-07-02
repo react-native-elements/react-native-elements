@@ -15,6 +15,7 @@ import { ThemeProps } from '../config';
 const SEARCHBAR_COMPONENTS = {
   ios: SearchBarIOS,
   android: SearchBarAndroid,
+
   default: SearchBarDefault,
 };
 
