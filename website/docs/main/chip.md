@@ -5,7 +5,7 @@ slug: /chip
 ---
 
 import Props from './props/chip.md'
-import Demos from './demos/Chip/Chip.md'
+import Usage from './usage/Chip/Chip.md'
 
 Chips are compact elements that represent an input, attribute, or action. They may
 display text, icons, or both.
@@ -23,7 +23,7 @@ display text, icons, or both.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

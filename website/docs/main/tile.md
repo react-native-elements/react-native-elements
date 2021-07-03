@@ -5,7 +5,7 @@ slug: /tile
 ---
 
 import Props from './props/tile.md'
-import Demos from './demos/Tile/Tile.md'
+import Usage from './usage/Tile/Tile.md'
 
 Tiles like Cards, are a convenient way to display related content about a single
 subject.
@@ -16,7 +16,7 @@ subject.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

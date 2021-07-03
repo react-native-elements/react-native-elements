@@ -5,7 +5,7 @@ slug: /overlay
 ---
 
 import Props from './props/overlay.md'
-import Demos from './demos/Overlay/Overlay.md'
+import Usage from './usage/Overlay/Overlay.md'
 
 The Overlay is a view that floats above an app’s content. Overlays are an easy
 way to inform or request information from the user.
@@ -14,7 +14,7 @@ way to inform or request information from the user.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

@@ -5,7 +5,7 @@ slug: /image
 ---
 
 import Props from './props/image.md'
-import Demos from './demos/Image/Image.md'
+import Usage from './usage/Image/Image.md'
 
 Drop-in replacement for the standard React Native Image component that displays
 images with a placeholder and smooth image load transitioning.
@@ -16,7 +16,7 @@ images with a placeholder and smooth image load transitioning.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

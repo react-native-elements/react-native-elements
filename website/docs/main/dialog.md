@@ -5,7 +5,7 @@ slug: /dialog
 ---
 
 import Props from './props/dialog.md'
-import Demos from './demos/Dialog/Dialog.md'
+import Usage from './usage/Dialog/Dialog.md'
 
 Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks. You can wrap any component with a simple Dialog component to display quick information to the user.
 
@@ -40,7 +40,7 @@ Dialogs inform users about a task and can contain critical information, require 
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

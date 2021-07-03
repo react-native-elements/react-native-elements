@@ -5,7 +5,7 @@ slug: /tooltip
 ---
 
 import Props from './props/tooltip.md'
-import Demos from './demos/Tooltip/Tooltip.md'
+import Usage from './usage/Tooltip/Tooltip.md'
 
 Tooltips display informative text when users tap on an element.
 
@@ -13,7 +13,7 @@ Tooltips display informative text when users tap on an element.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

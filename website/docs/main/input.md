@@ -5,7 +5,7 @@ slug: /input
 ---
 
 import Props from './props/input.md'
-import Demos from './demos/Input/Input.md'
+import Usage from './usage/Input/Input.md'
 
 Inputs allow users to enter text into a UI. They typically appear in forms and
 dialogs.
@@ -23,7 +23,7 @@ dialogs.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

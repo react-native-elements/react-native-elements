@@ -5,7 +5,7 @@ slug: /tab
 ---
 
 import Props from './props/tab.md'
-import Demos from './demos/Tab/Tab.md'
+import Usage from './usage/Tab/Tab.md'
 
 Tabs organize content across different screens, data sets, and other interactions.
 
@@ -17,7 +17,7 @@ Tabs organize content across different screens, data sets, and other interaction
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

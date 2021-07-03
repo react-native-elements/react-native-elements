@@ -5,7 +5,7 @@ slug: /badge
 ---
 
 import Props from './props/badge.md'
-import Demos from './demos/Badge/Badge.md'
+import Usage from './usage/Badge/Badge.md'
 
 Badges are small components typically used to communicate a numerical value or
 indicate the status of an item to the user.
@@ -27,7 +27,7 @@ indicate the status of an item to the user.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

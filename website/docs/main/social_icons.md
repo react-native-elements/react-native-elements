@@ -6,7 +6,7 @@ slug: /social_icons
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Props from './props/social_icons.md'
-import Demos from './demos/SocialIcon/SocialIcon.md'
+import Usage from './usage/SocialIcon/SocialIcon.md'
 
 SocialIcons are visual cues to online and social media networks.
 
@@ -14,7 +14,7 @@ SocialIcons are visual cues to online and social media networks.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

@@ -5,7 +5,7 @@ slug: /avatar
 ---
 
 import Props from './props/avatar.md'
-import Demos from './demos/Avatar/Avatar.md'
+import Usage from './usage/Avatar/Avatar.md'
 
 Avatars are found all over ui design from lists to profile screens. They are
 commonly used to represent a user and can contain photos, icons, or even text.
@@ -31,7 +31,7 @@ commonly used to represent a user and can contain photos, icons, or even text.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

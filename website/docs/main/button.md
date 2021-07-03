@@ -5,7 +5,7 @@ slug: /button
 ---
 
 import Props from './props/button.md'
-import Demos from './demos/Button/Button.md'
+import Usage from './usage/Button/Button.md'
 
 Buttons are touchable elements used to interact with the screen. They may
 display text, icons, or both. Buttons can be styled with several props to look a
@@ -28,7 +28,7 @@ specific way.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 

@@ -5,14 +5,14 @@ slug: /divider
 ---
 
 import Props from './props/divider.md'
-import Demos from './demos/Divider/Divider.md'
+import Usage from './usage/Divider/Divider.md'
 
 Dividers are visual separators of content. Use Divider when you want to make a
 distinction between sections of content.
 
 ## Usage
 
-<Demos />
+<Usage />
 
 ---
 
