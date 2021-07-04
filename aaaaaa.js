@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readdirSync('./src').forEach(function (filename, i) {
+fs.readdirSync('./src').forEach(function (filename) {
   if (['index.ts', 'ls.js', 'helpers', 'config'].includes(filename)) return;
   let content = fs.readFileSync('src/' + filename + '/index.tsx', 'utf-8');
   content = content.replace(
