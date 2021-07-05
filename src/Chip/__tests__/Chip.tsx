@@ -77,4 +77,12 @@ describe('Chip Component', () => {
       });
     });
   });
+
+  it('should pass the onPress function when specified', () => {
+    const handlePress = jest.fn();
+    const component = shallow(<Chip theme={theme} onPress={handlePress} />);
+    expect(component.length).toBe(1);
+    component.simulate('press');
+    expect(handlePress).toHaveBeenCalledTimes(1);
+  });
 });
