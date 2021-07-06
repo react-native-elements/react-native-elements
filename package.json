@@ -88,7 +88,7 @@
     "timers": "fake",
     "coverageDirectory": "./coverage/",
     "testPathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.tsx",
+      "./src/SearchBar/__tests__/common.tsx",
       "<rootDir>/node_modules",
       "<rootDir>/dist"
     ],

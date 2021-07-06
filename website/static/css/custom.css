@@ -1,4 +1,22 @@
-/* your custom css */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,700&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  scrollbar-width: 8px;
+  scrollbar-color: var(--ifm-hero-background-color);
+}
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--ifm-hero-background-color); /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100); /* color of the scroll thumb */
+  border-radius: 1px; /* roundness of the scroll thumb */
+  /* border: 1px solid #000066;  */ /* creates padding around scroll thumb */
+}
 
 :root {
   --ifm-color-primary: #2089dc;
@@ -9,11 +27,12 @@
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
 
-  --ifm-hero-background-color: #2089dc;
-  --ifm-hero-text-color: #fff;
+  --ifm-hero-background-color: #e9e9e9;
+
+  --ifm-navbar-background-color: var(--ifm-hero-background-color);
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --ifm-color-primary: #60ace8;
   --ifm-color-primary-dark: #439de4;
   --ifm-color-primary-darker: #3596e2;
@@ -21,6 +40,7 @@
   --ifm-color-primary-light: #7dbbec;
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
+  --ifm-hero-background-color: #273036;
 }
 
 .label {
@@ -39,7 +59,7 @@
   background-color: #b60205;
 }
 .label.help {
-  background-color: #128A0C;
+  background-color: #128a0c;
 }
 .label.question {
   background-color: #cc317c;
@@ -55,10 +75,10 @@
   background-color: #0052cc;
 }
 .label.first {
-  background-color: #464EBA;
+  background-color: #464eba;
 }
 .label.fixed {
-  background-color: #CEE3CE;
+  background-color: #cee3ce;
   color: #000;
 }
 .label.response {
@@ -309,4 +329,8 @@ a.hash-link ~ code {
 
 a code {
   font-size: 100%;
+}
+
+.snack-player {
+  height: 500px;
 }
