@@ -57,6 +57,7 @@ export const Text: RneFunctionComponent<TextProps> = ({
 }) => {
   return (
     <NativeText
+      accessibilityRole="text"
       style={StyleSheet.flatten([
         {
           ...Platform.select({
