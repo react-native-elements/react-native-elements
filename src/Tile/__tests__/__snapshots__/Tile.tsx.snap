@@ -255,6 +255,7 @@ exports[`Tile component should apply styles from theme 1`] = `
     }
   >
     <Text
+      accessibilityRole="text"
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0)",
