@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "ES6", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
-    "module": "ESNext", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "target": "ES2017", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": [
       "ES2017"
     ], /* Specify library files to be included in the compilation. */
@@ -14,7 +14,7 @@
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "removeComments": true,                /* Do not emit comments to output. */
     // "noEmit": true,                           /* Do not emit outputs. */
-    "isolatedModules": true, /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "isolatedModules": false, /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
     "outDir": "dist",
     /* Strict Type-Checking Options */
     "strict": false, /* Enable all strict type-checking options. */
@@ -46,7 +46,7 @@
   "include": [
     "src/**/*.tsx",
     "src/**/*.ts",
-    "src/index.ts"
+    "src/index.ts",
   ],
   "exclude": [
     ".ci",

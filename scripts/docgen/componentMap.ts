@@ -1,7 +1,15 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
+type ChildrenType = {
+  name: string;
+  path: string;
+};
+
+type ItemType = {
+  name: string;
+  base: string;
+  childrens: ChildrenType[];
+};
 
 const componentMap = {
   AirbnbRating: {
@@ -227,4 +235,4 @@ const componentMap = {
   },
 };
 
-export { componentMap };
+export { componentMap, ItemType };

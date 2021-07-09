@@ -1,6 +1,6 @@
-// import { ComponentDoc } from "react-docgen-typescript";
+import { ComponentDoc } from 'react-docgen-typescript';
 
-export function prepareDeclaration(declaration) {
+export function prepareDeclaration(declaration: ComponentDoc) {
   const data = { ...declaration };
   delete data.tags;
   delete data.methods;

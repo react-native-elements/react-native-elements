@@ -2,33 +2,16 @@ import fs from 'fs-extra';
 import path from 'path';
 // import glob from "fast-glob";
 import _ from 'lodash';
-import { generateDeclarations } from './generateDeclarations.mjs';
-import { extractFiles } from './serveFiles.mjs';
-
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { generateDeclarations } from './generateDeclarations';
+import { extractFiles, FileType } from './serveFiles';
 
 async function runFileScript() {
-  const files = extractFiles();
-  // const allFiles = await Promise.all(
-  //   [path.resolve(__dirname, "../src")].map((folderPath) => {
-  //     return glob("([a-z])*/+([a-z])*.*(d.ts|tsx|ts)", {
-  //       absolute: true,
-  //       cwd: folderPath,
-  //     });
-  //   })
-  // );
-
-  // const filesInDist = await _.flatten(allFiles);
-  // const files = filesInDist.filter(
-  //   (item) => !item.match("((config|helpers)/|index).*(d.ts|tsx|ts)")
-  // );
+  const files: FileType[] = extractFiles();
   return files;
 }
 
 runFileScript()
-  .then(async (result) => {
+  .then(async (result: FileType[]) => {
     const data = generateDeclarations(result);
     return data;
   })

@@ -1,9 +1,10 @@
-import { prepareDeclaration } from './preProcessData.mjs';
-import { docgenParser } from './docgenParser.mjs';
+import { prepareDeclaration } from './preProcessData';
+import { docgenParser } from './docgenParser';
+import { FileType } from './serveFiles';
 // import { formatJSON } from "../json-to-markdown/mdast";
 
-export function generateDeclarations(paths) {
-  const declarations = paths.reduce((acc, info) => {
+export function generateDeclarations(paths: FileType[]) {
+  const declarations: string[] = paths.reduce((acc, info) => {
     if (info.parent === undefined) {
       return [...acc, info.base];
     } else {
