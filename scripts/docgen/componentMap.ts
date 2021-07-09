@@ -5,7 +5,7 @@ type ChildrenType = {
   path: string;
 };
 
-type ItemType = {
+export type ItemType = {
   name: string;
   base: string;
   childrens: ChildrenType[];
@@ -235,4 +235,4 @@ const componentMap = {
   },
 };
 
-export { componentMap, ItemType };
+export { componentMap };

@@ -1,7 +1,5 @@
 import fs from 'fs-extra';
 import path from 'path';
-// import glob from "fast-glob";
-import _ from 'lodash';
 import { generateDeclarations } from './generateDeclarations';
 import { extractFiles, FileType } from './serveFiles';
 

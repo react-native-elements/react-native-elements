@@ -1,13 +1,13 @@
 import { componentMap, ItemType } from './componentMap';
 
-type FileType = {
+export type FileType = {
   name: string;
   base?: string;
   path?: string;
   parent?: string;
 };
 
-const extractFiles = () => {
+export const extractFiles = () => {
   const files: FileType[] = [];
   Object.values(componentMap).map((item: ItemType) => {
     files.push({ name: item.name, base: item.base });
@@ -19,5 +19,3 @@ const extractFiles = () => {
   });
   return files;
 };
-
-export { extractFiles, FileType };
