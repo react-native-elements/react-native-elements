@@ -123,4 +123,4 @@ const styles = StyleSheet.create({
   },
 });
 
-TabBase.displayName = 'TabBase';
+TabBase.displayName = 'Tab';

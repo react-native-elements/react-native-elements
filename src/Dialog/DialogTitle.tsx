@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-DialogTitle.displayName = 'DialogTitle';
+DialogTitle.displayName = 'Dialog.Title';

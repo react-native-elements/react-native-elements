@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemSubtitle.displayName = 'ListItemSubtitle';
+ListItemSubtitle.displayName = 'ListItem.Subtitle';

@@ -117,4 +117,4 @@ export const ListItemAccordion: RneFunctionComponent<ListItemAccordionProps> = (
   );
 };
 
-ListItemAccordion.displayName = 'ListItemAccordion';
+ListItemAccordion.displayName = 'ListItem.Accordion';

@@ -40,8 +40,6 @@ DialogLoading.defaultProps = {
   loadingProps: { size: 'large' },
 };
 
-DialogLoading.displayName = 'DialogLoading';
-
 const styles = StyleSheet.create({
   loading: {
     marginVertical: 20,
@@ -52,3 +50,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+DialogLoading.displayName = 'Dialog.Loading';

@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-TabItem.displayName = 'TabItem';
+TabItem.displayName = 'Tab.Item';

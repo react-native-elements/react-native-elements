@@ -183,4 +183,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemSwipeable.displayName = 'ListItemSwipeable';
+ListItemSwipeable.displayName = 'ListItem.Swipeable';
