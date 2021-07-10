@@ -5,21 +5,21 @@ type ChildrenType = {
   path: string;
 };
 
-export type ItemType = {
+export type ComponentType = {
   name: string;
-  base: string;
+  path: string;
   childrens: ChildrenType[];
 };
 
-const componentMap = {
+export const componentMap = {
   AirbnbRating: {
     name: 'AirbnbRating',
-    base: path.join(__dirname, '../../src/AirbnbRating/AirbnbRating.tsx'),
+    path: path.join(__dirname, '../../src/AirbnbRating/AirbnbRating.tsx'),
     childrens: [],
   },
   Avatar: {
     name: 'Avatar',
-    base: path.join(__dirname, '../../src/Avatar/Avatar.tsx'),
+    path: path.join(__dirname, '../../src/Avatar/Avatar.tsx'),
     childrens: [
       {
         name: 'Accessory',
@@ -29,28 +29,28 @@ const componentMap = {
   },
   Badge: {
     name: 'Badge',
-    base: path.join(__dirname, '../../src/Badge/Badge.tsx'),
+    path: path.join(__dirname, '../../src/Badge/Badge.tsx'),
     childrens: [],
   },
-  // WithBadge: {base:path.join(__dirname, "../../src/Badge/withBadge.tsx")}
+  // WithBadge: {path:path.join(__dirname, "../../src/Badge/withBadge.tsx")}
   BottomSheet: {
     name: 'BottomSheet',
-    base: path.join(__dirname, '../../src/BottomSheet/BottomSheet.tsx'),
+    path: path.join(__dirname, '../../src/BottomSheet/BottomSheet.tsx'),
     childrens: [],
   },
   Button: {
     name: 'Button',
-    base: path.join(__dirname, '../../src/Button/Button.tsx'),
+    path: path.join(__dirname, '../../src/Button/Button.tsx'),
     childrens: [],
   },
   ButtonGroup: {
     name: 'ButtonGroup',
-    base: path.join(__dirname, '../../src/ButtonGroup/ButtonGroup.tsx'),
+    path: path.join(__dirname, '../../src/ButtonGroup/ButtonGroup.tsx'),
     childrens: [],
   },
   Card: {
     name: 'Card',
-    base: path.join(__dirname, '../../src/Card/CardBase.tsx'),
+    path: path.join(__dirname, '../../src/Card/CardBase.tsx'),
     childrens: [
       {
         name: 'Divider',
@@ -76,17 +76,17 @@ const componentMap = {
   },
   CheckBox: {
     name: 'CheckBox',
-    base: path.join(__dirname, '../../src/Checkbox/CheckBox.tsx'),
+    path: path.join(__dirname, '../../src/Checkbox/CheckBox.tsx'),
     childrens: [],
   },
   Chip: {
     name: 'Chip',
-    base: path.join(__dirname, '../../src/Chip/Chip.tsx'),
+    path: path.join(__dirname, '../../src/Chip/Chip.tsx'),
     childrens: [],
   },
   Dialog: {
     name: 'Dialog',
-    base: path.join(__dirname, '../../src/Dialog/DialogBase.tsx'),
+    path: path.join(__dirname, '../../src/Dialog/DialogBase.tsx'),
     childrens: [
       {
         name: 'Actions',
@@ -108,32 +108,32 @@ const componentMap = {
   },
   Divider: {
     name: 'Divider',
-    base: path.join(__dirname, '../../src/Divider/Divider.tsx'),
+    path: path.join(__dirname, '../../src/Divider/Divider.tsx'),
     childrens: [],
   },
   FAB: {
     name: 'FAB',
-    base: path.join(__dirname, '../../src/FAB/FAB.tsx'),
+    path: path.join(__dirname, '../../src/FAB/FAB.tsx'),
     childrens: [],
   },
   Header: {
     name: 'Header',
-    base: path.join(__dirname, '../../src/Header/Header.tsx'),
+    path: path.join(__dirname, '../../src/Header/Header.tsx'),
     childrens: [],
   },
   Icon: {
     name: 'Icon',
-    base: path.join(__dirname, '../../src/Icon/Icon.tsx'),
+    path: path.join(__dirname, '../../src/Icon/Icon.tsx'),
     childrens: [],
   },
   LinearProgress: {
     name: 'LinearProgress',
-    base: path.join(__dirname, '../../src/LinearProgress/LinearProgress.tsx'),
+    path: path.join(__dirname, '../../src/LinearProgress/LinearProgress.tsx'),
     childrens: [],
   },
   ListItem: {
     name: 'ListItem',
-    base: path.join(__dirname, '../../src/ListItem/ListItemBase.tsx'),
+    path: path.join(__dirname, '../../src/ListItem/ListItemBase.tsx'),
     childrens: [
       {
         name: 'Accordion',
@@ -178,44 +178,44 @@ const componentMap = {
   },
   Overlay: {
     name: 'Overlay',
-    base: path.join(__dirname, '../../src/Overlay/Overlay.tsx'),
+    path: path.join(__dirname, '../../src/Overlay/Overlay.tsx'),
     childrens: [],
   },
   PricingCard: {
     name: 'PricingCard',
-    base: path.join(__dirname, '../../src/PricingCard/PricingCard.tsx'),
+    path: path.join(__dirname, '../../src/PricingCard/PricingCard.tsx'),
     childrens: [],
   },
   Slider: {
     name: 'Slider',
-    base: path.join(__dirname, '../../src/Slider/Slider.tsx'),
+    path: path.join(__dirname, '../../src/Slider/Slider.tsx'),
     childrens: [],
   },
   SocialIcon: {
     name: 'SocialIcon',
-    base: path.join(__dirname, '../../src/SocialIcon/SocialIcon.tsx'),
+    path: path.join(__dirname, '../../src/SocialIcon/SocialIcon.tsx'),
     childrens: [],
   },
   SpeedDial: {
     name: 'SpeedDial',
-    base: path.join(__dirname, '../../src/SpeedDial/SpeedDial.tsx'),
+    path: path.join(__dirname, '../../src/SpeedDial/SpeedDial.tsx'),
     childrens: [],
   },
   Switch: {
     name: 'Switch',
-    base: path.join(__dirname, '../../src/Switch/Switch.tsx'),
+    path: path.join(__dirname, '../../src/Switch/Switch.tsx'),
     childrens: [],
   },
   Tab: {
     name: 'Tab',
-    base: path.join(__dirname, '../../src/Tab/Tab.tsx'),
+    path: path.join(__dirname, '../../src/Tab/Tab.tsx'),
     childrens: [
       { name: 'Item', path: path.join(__dirname, '../../src/Tab/TabItem.tsx') },
     ],
   },
   TabView: {
     name: 'TabView',
-    base: path.join(__dirname, '../../src/TabView/TabView.tsx'),
+    path: path.join(__dirname, '../../src/TabView/TabView.tsx'),
     childrens: [
       {
         name: 'Item',
@@ -225,14 +225,12 @@ const componentMap = {
   },
   Text: {
     name: 'Text',
-    base: path.join(__dirname, '../../src/Text/Text.tsx'),
+    path: path.join(__dirname, '../../src/Text/Text.tsx'),
     childrens: [],
   },
   Tile: {
     name: 'Tile',
-    base: path.join(__dirname, '../../src/Tile/Tile.tsx'),
+    path: path.join(__dirname, '../../src/Tile/Tile.tsx'),
     childrens: [],
   },
 };
-
-export { componentMap };
