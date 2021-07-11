@@ -32,7 +32,6 @@ export const componentMap = {
     path: path.join(__dirname, '../../src/Badge/Badge.tsx'),
     childrens: [],
   },
-  // WithBadge: {path:path.join(__dirname, "../../src/Badge/withBadge.tsx")}
   BottomSheet: {
     name: 'BottomSheet',
     path: path.join(__dirname, '../../src/BottomSheet/BottomSheet.tsx'),

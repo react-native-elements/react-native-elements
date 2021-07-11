@@ -1,6 +1,8 @@
 import { componentMap, ComponentType } from './componentMap';
 import _ from 'lodash';
 
+// Function to generate the array of component files from componentMap.
+// Output - Array of component files.
 export const getComponentFiles = () => {
   const files: string[] = [];
   Object.values(componentMap).map((component: ComponentType) => {
