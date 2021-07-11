@@ -3,7 +3,7 @@ import path from 'path';
 import { generateComponentDocs } from './generateComponentDocs';
 import { getComponentFiles } from './getComponentFiles';
 
-const runFileScript = () => {
+const getAndStoreComponentDocs = () => {
   const filePaths: string[] = getComponentFiles();
   const componentDocs = generateComponentDocs(filePaths);
 
@@ -28,4 +28,4 @@ const runFileScript = () => {
   });
 };
 
-runFileScript();
+getAndStoreComponentDocs();
