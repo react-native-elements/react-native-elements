@@ -26,7 +26,7 @@
     "clean-install": "rimraf node_modules && yarn",
     "changelog": "auto-changelog -p",
     "docs": "cd website && yarn start",
-    "build:docs": "nodemon scripts/docgen/index.ts"
+    "build:docs": "ts-node scripts/docgen/index.ts"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -70,7 +70,6 @@
     "jest-transform-stub": "^2.0.0",
     "lint-staged": "^10.4.0",
     "metro-react-native-babel-preset": "^0.63.0",
-    "nodemon": "^2.0.10",
     "react": "16.13.1",
     "react-docgen-typescript": "^2.0.0",
     "react-dom": "16.13.1",
