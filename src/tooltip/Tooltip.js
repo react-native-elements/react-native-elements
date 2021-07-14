@@ -216,6 +216,7 @@ class Tooltip extends React.PureComponent {
           onDismiss={onClose}
           onShow={onOpen}
           onRequestClose={onClose}
+          supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}
         >
           <TouchableOpacity
             style={styles.container(withOverlay, overlayColor)}
