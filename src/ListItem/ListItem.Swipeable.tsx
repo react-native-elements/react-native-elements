@@ -8,7 +8,7 @@ import {
   ViewStyle,
   PanResponderGestureState,
 } from 'react-native';
-import { ListItemBase, ListItemBaseProps } from './ListItemBase';
+import { ListItemBase, ListItemBaseProps } from './ListItem';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type ListItemSwipeableProps = ListItemBaseProps & {

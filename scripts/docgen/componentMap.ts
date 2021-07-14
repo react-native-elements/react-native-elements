@@ -23,7 +23,7 @@ export const componentMap = {
     childrens: [
       {
         name: 'Accessory',
-        path: path.join(__dirname, '../../src/Avatar/Accessory.tsx'),
+        path: path.join(__dirname, '../../src/Avatar/Avatar.Accessory.tsx'),
       },
     ],
   },
@@ -49,27 +49,27 @@ export const componentMap = {
   },
   Card: {
     name: 'Card',
-    path: path.join(__dirname, '../../src/Card/CardBase.tsx'),
+    path: path.join(__dirname, '../../src/Card/Card.tsx'),
     childrens: [
       {
         name: 'Divider',
-        path: path.join(__dirname, '../../src/Card/CardDivider.tsx'),
+        path: path.join(__dirname, '../../src/Card/Card.Divider.tsx'),
       },
       {
         name: 'FeaturedSubtitle',
-        path: path.join(__dirname, '../../src/Card/CardFeaturedSubtitle.tsx'),
+        path: path.join(__dirname, '../../src/Card/Card.FeaturedSubtitle.tsx'),
       },
       {
         name: 'FeaturedTitle',
-        path: path.join(__dirname, '../../src/Card/CardFeaturedTitle.tsx'),
+        path: path.join(__dirname, '../../src/Card/Card.FeaturedTitle.tsx'),
       },
       {
         name: 'Image',
-        path: path.join(__dirname, '../../src/Card/CardImage.tsx'),
+        path: path.join(__dirname, '../../src/Card/Card.Image.tsx'),
       },
       {
         name: 'Title',
-        path: path.join(__dirname, '../../src/Card/CardTitle.tsx'),
+        path: path.join(__dirname, '../../src/Card/Card.Title.tsx'),
       },
     ],
   },
@@ -85,23 +85,23 @@ export const componentMap = {
   },
   Dialog: {
     name: 'Dialog',
-    path: path.join(__dirname, '../../src/Dialog/DialogBase.tsx'),
+    path: path.join(__dirname, '../../src/Dialog/Dialog.tsx'),
     childrens: [
       {
         name: 'Actions',
-        path: path.join(__dirname, '../../src/Dialog/DialogActions.tsx'),
+        path: path.join(__dirname, '../../src/Dialog/Dialog.Actions.tsx'),
       },
       {
         name: 'Button',
-        path: path.join(__dirname, '../../src/Dialog/DialogButton.tsx'),
+        path: path.join(__dirname, '../../src/Dialog/Dialog.Button.tsx'),
       },
       {
         name: 'Loading',
-        path: path.join(__dirname, '../../src/Dialog/DialogLoading.tsx'),
+        path: path.join(__dirname, '../../src/Dialog/Dialog.Loading.tsx'),
       },
       {
         name: 'Title',
-        path: path.join(__dirname, '../../src/Dialog/DialogTitle.tsx'),
+        path: path.join(__dirname, '../../src/Dialog/Dialog.Title.tsx'),
       },
     ],
   },
@@ -132,46 +132,46 @@ export const componentMap = {
   },
   ListItem: {
     name: 'ListItem',
-    path: path.join(__dirname, '../../src/ListItem/ListItemBase.tsx'),
+    path: path.join(__dirname, '../../src/ListItem/ListItem.tsx'),
     childrens: [
       {
         name: 'Accordion',
-        path: path.join(__dirname, '../../src/ListItem/ListItemAccordion.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Accordion.tsx'),
       },
       {
         name: 'ButtonGroup',
         path: path.join(
           __dirname,
-          '../../src/ListItem/ListItemButtonGroup.tsx'
+          '../../src/ListItem/ListItem.ButtonGroup.tsx'
         ),
       },
       {
         name: 'CheckBox',
-        path: path.join(__dirname, '../../src/ListItem/ListItemCheckBox.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.CheckBox.tsx'),
       },
       {
         name: 'Chevron',
-        path: path.join(__dirname, '../../src/ListItem/ListItemChevron.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Chevron.tsx'),
       },
       {
         name: 'Content',
-        path: path.join(__dirname, '../../src/ListItem/ListItemContent.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Content.tsx'),
       },
       {
         name: 'Input',
-        path: path.join(__dirname, '../../src/ListItem/ListItemInput.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Input.tsx'),
       },
       {
         name: 'Swipeable',
-        path: path.join(__dirname, '../../src/ListItem/ListItemSwipeable.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Swipeable.tsx'),
       },
       {
         name: 'SubTitle',
-        path: path.join(__dirname, '../../src/ListItem/ListItemSubtitle.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Subtitle.tsx'),
       },
       {
         name: 'Title',
-        path: path.join(__dirname, '../../src/ListItem/ListItemTitle.tsx'),
+        path: path.join(__dirname, '../../src/ListItem/ListItem.Title.tsx'),
       },
     ],
   },
@@ -209,7 +209,10 @@ export const componentMap = {
     name: 'Tab',
     path: path.join(__dirname, '../../src/Tab/Tab.tsx'),
     childrens: [
-      { name: 'Item', path: path.join(__dirname, '../../src/Tab/TabItem.tsx') },
+      {
+        name: 'Item',
+        path: path.join(__dirname, '../../src/Tab/Tab.Item.tsx'),
+      },
     ],
   },
   TabView: {
@@ -218,7 +221,7 @@ export const componentMap = {
     childrens: [
       {
         name: 'Item',
-        path: path.join(__dirname, '../../src/TabView/TabViewItem.tsx'),
+        path: path.join(__dirname, '../../src/TabView/TabView.Item.tsx'),
       },
     ],
   },

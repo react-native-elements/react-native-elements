@@ -1,7 +1,7 @@
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 import { TabBase, TabBaseProps } from './Tab';
-import { TabItem, TabItemProps } from './TabItem';
+import { TabItem, TabItemProps } from './Tab.Item';
 
 const ThemedTabItem = withTheme(TabItem, 'TabItem');
 
