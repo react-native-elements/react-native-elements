@@ -2,7 +2,7 @@ import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
 
 import { TabViewBase, TabViewBaseProps } from './TabView';
-import { TabViewItem, TabViewItemProps } from './TabViewItem';
+import { TabViewItem, TabViewItemProps } from './TabView.Item';
 
 const ThemedTabViewItem = withTheme(TabViewItem, 'TabViewItem');
 

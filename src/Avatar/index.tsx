@@ -1,5 +1,5 @@
 import { AvatarBase, AvatarBaseProps } from './Avatar';
-import { Accessory, AccessoryProps } from './Accessory';
+import { Accessory, AccessoryProps } from './Avatar.Accessory';
 import { RneFunctionComponent } from '../helpers';
 import { withTheme } from '../config';
 
