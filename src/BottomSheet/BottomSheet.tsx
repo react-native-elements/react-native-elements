@@ -22,7 +22,7 @@ export type BottomSheetProps = {
   /** Is the modal component shown. */
   isVisible?: boolean;
 
-  /**Used to add props to Scroll view. */
+  /** Used to add props to Scroll view. */
   scrollViewProps?: ScrollViewProps;
 };
 
