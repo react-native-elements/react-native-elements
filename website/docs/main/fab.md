@@ -5,6 +5,7 @@ slug: /fab
 ---
 
 import Props from './props/fab.md'
+import Usage from './usage/FAB/FAB.md'
 
 A floating action button (FAB) performs the primary, or most common, action on a screen. It appears in front of all screen content, typically as a circular shape with an icon in its center.
 
@@ -16,15 +17,7 @@ A floating action button (FAB) performs the primary, or most common, action on a
 
 ## Usage
 
-```js
-import { FAB } from 'react-native-elements';
-```
-
-```js
-<FAB title="Create" />
-```
-
----
+<Usage />
 
 ## Props
 
