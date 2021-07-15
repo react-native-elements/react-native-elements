@@ -1,0 +1,6 @@
+/// <reference types="react" />
+import { Chip, ChipProps } from './Chip';
+export { Chip };
+export type { ChipProps };
+declare const _default: import("react").FunctionComponent<Pick<ChipProps, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "onPress" | "onLongPress" | "containerStyle" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "activeOpacity" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "disabled" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "touchSoundDisabled" | "title" | "icon" | "titleStyle" | "background" | "useForeground" | "type" | "raised" | "disabledStyle" | "buttonStyle" | "TouchableComponent" | "titleProps" | "iconContainerStyle" | "iconRight" | "disabledTitleStyle" | "linearGradientProps" | "ViewComponent" | "iconPosition">> | import("react").ForwardRefExoticComponent<ChipProps>;
+export default _default;

@@ -1,0 +1,48 @@
+/// <reference types="react" />
+import { Button, ButtonProps } from './Button';
+export { Button };
+export type { ButtonProps };
+declare const _default: import("react").FunctionComponent<Pick<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+    title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+    titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    titleProps?: import("..").TextProps;
+    buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    type?: "solid" | "clear" | "outline";
+    loading?: boolean;
+    loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    loadingProps?: import("react-native").ActivityIndicatorProps;
+    containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    icon?: import("../Icon").IconNode;
+    iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    iconRight?: boolean;
+    linearGradientProps?: object;
+    TouchableComponent?: typeof import("react").Component;
+    ViewComponent?: typeof import("react").Component;
+    disabled?: boolean;
+    disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    raised?: boolean;
+    iconPosition?: "bottom" | "left" | "right" | "top";
+} & Partial<import("../config").ThemeProps<ButtonProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "onPress" | "onLongPress" | "containerStyle" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "activeOpacity" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "disabled" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "touchSoundDisabled" | "title" | "icon" | "titleStyle" | "background" | "useForeground" | "type" | "raised" | "disabledStyle" | "buttonStyle" | "TouchableComponent" | "loading" | "loadingStyle" | "loadingProps" | "titleProps" | "iconContainerStyle" | "iconRight" | "disabledTitleStyle" | "linearGradientProps" | "ViewComponent" | "iconPosition">> | import("react").ForwardRefExoticComponent<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+    title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+    titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    titleProps?: import("..").TextProps;
+    buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    type?: "solid" | "clear" | "outline";
+    loading?: boolean;
+    loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    loadingProps?: import("react-native").ActivityIndicatorProps;
+    containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    icon?: import("../Icon").IconNode;
+    iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    iconRight?: boolean;
+    linearGradientProps?: object;
+    TouchableComponent?: typeof import("react").Component;
+    ViewComponent?: typeof import("react").Component;
+    disabled?: boolean;
+    disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    raised?: boolean;
+    iconPosition?: "bottom" | "left" | "right" | "top";
+} & Partial<import("../config").ThemeProps<ButtonProps>>>;
+export default _default;

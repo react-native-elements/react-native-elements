@@ -1,0 +1,41 @@
+/// <reference types="react" />
+import { SearchBar, SearchBarProps } from './SearchBar';
+import { SearchBarAndroidProps } from './SearchBar-android';
+import { SearchBarIosProps } from './SearchBar-ios';
+import { SearchBarDefaultProps } from './SearchBar-default';
+export { SearchBar };
+export type { SearchBarProps, SearchBarAndroidProps, SearchBarDefaultProps, SearchBarIosProps, };
+declare const _default: import("react").FunctionComponent<Pick<import("react-native").TextInputProps & import("react").RefAttributes<import("react-native").TextInput> & {
+    platform?: "ios" | "android" | "default";
+    containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    inputContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    clearIcon?: import("../Icon").IconNode;
+    searchIcon?: import("../Icon").IconNode;
+    inputStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    loadingProps?: import("react-native").ActivityIndicatorProps;
+    showLoading?: boolean;
+    leftIconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    rightIconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    onClear?(): void;
+    onFocus?(): void;
+    onBlur?(): void;
+    onChangeText?(text: string): void;
+    onCancel?(): void;
+} & Partial<import("../config").ThemeProps<SearchBarProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "containerStyle" | "hitSlop" | "pointerEvents" | "removeClippedSubviews" | "nativeID" | "collapsable" | "needsOffscreenAlphaCompositing" | "renderToHardwareTextureAndroid" | "focusable" | "shouldRasterizeIOS" | "isTVSelectable" | "hasTVPreferredFocus" | "tvParallaxProperties" | "tvParallaxShiftDistanceX" | "tvParallaxShiftDistanceY" | "tvParallaxTiltAngle" | "tvParallaxMagnification" | "onStartShouldSetResponder" | "onMoveShouldSetResponder" | "onResponderEnd" | "onResponderGrant" | "onResponderReject" | "onResponderMove" | "onResponderRelease" | "onResponderStart" | "onResponderTerminationRequest" | "onResponderTerminate" | "onStartShouldSetResponderCapture" | "onMoveShouldSetResponderCapture" | "onTouchStart" | "onTouchMove" | "onTouchEnd" | "onTouchCancel" | "onTouchEndCapture" | "onBlur" | "onFocus" | "placeholder" | "ref" | "key" | "allowFontScaling" | "numberOfLines" | "maxFontSizeMultiplier" | "selectionColor" | "textBreakStrategy" | "value" | "platform" | "onContentSizeChange" | "onScroll" | "scrollEnabled" | "onClear" | "loadingProps" | "autoCapitalize" | "autoCorrect" | "autoFocus" | "blurOnSubmit" | "caretHidden" | "contextMenuHidden" | "defaultValue" | "editable" | "keyboardType" | "maxLength" | "multiline" | "onChange" | "onChangeText" | "onEndEditing" | "onSelectionChange" | "onSubmitEditing" | "onTextInput" | "onKeyPress" | "placeholderTextColor" | "returnKeyType" | "secureTextEntry" | "selectTextOnFocus" | "selection" | "textAlign" | "inputAccessoryViewID" | "clearButtonMode" | "clearTextOnFocus" | "dataDetectorTypes" | "enablesReturnKeyAutomatically" | "keyboardAppearance" | "passwordRules" | "rejectResponderTermination" | "selectionState" | "spellCheck" | "textContentType" | "autoCompleteType" | "importantForAutofill" | "disableFullscreenUI" | "inlineImageLeft" | "inlineImagePadding" | "returnKeyLabel" | "underlineColorAndroid" | "textAlignVertical" | "showSoftInputOnFocus" | "inputContainerStyle" | "leftIconContainerStyle" | "rightIconContainerStyle" | "inputStyle" | "clearIcon" | "searchIcon" | "showLoading" | "onCancel">> | import("react").ForwardRefExoticComponent<import("react-native").TextInputProps & import("react").RefAttributes<import("react-native").TextInput> & {
+    platform?: "ios" | "android" | "default";
+    containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    inputContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    clearIcon?: import("../Icon").IconNode;
+    searchIcon?: import("../Icon").IconNode;
+    inputStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    loadingProps?: import("react-native").ActivityIndicatorProps;
+    showLoading?: boolean;
+    leftIconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    rightIconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    onClear?(): void;
+    onFocus?(): void;
+    onBlur?(): void;
+    onChangeText?(text: string): void;
+    onCancel?(): void;
+} & Partial<import("../config").ThemeProps<SearchBarProps>>>;
+export default _default;
