@@ -37,3 +37,13 @@ Additional props handed to the `Modal`
 |                             Type                             | Default |
 | :----------------------------------------------------------: | :-----: |
 | [Modal Props](https://reactnative.dev/docs/modal.html#props) |   {}    |
+
+---
+
+### `scrollViewProps`
+
+Additional props handed to the `ScrollView`
+
+|                               Type                                | Default |
+| :---------------------------------------------------------------: | :-----: |
+| [ScrollView Props](https://reactnative.dev/docs/scrollview#props) |   {}    |

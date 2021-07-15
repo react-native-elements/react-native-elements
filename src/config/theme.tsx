@@ -4,7 +4,7 @@ import { BottomSheetProps } from '../BottomSheet';
 import { ButtonGroupProps } from '../ButtonGroup';
 import { ButtonProps } from '../Button';
 import { CardProps } from '../Card';
-import { CheckBoxProps } from '../Checkbox';
+import { CheckBoxProps } from '../CheckBox';
 import { ChipProps } from '../Chip';
 import {
   DialogActionsProps,

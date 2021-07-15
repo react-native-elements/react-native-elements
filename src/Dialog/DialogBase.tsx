@@ -4,12 +4,22 @@ import Overlay, { OverlayProps } from '../Overlay';
 import { RneFunctionComponent } from '../helpers';
 
 export type DialogBaseProps = Omit<OverlayProps, 'fullScreen'> & {
+  /** Add Enclosed components. */
   children?: ReactNode;
+
+  /** If true, the dialog is visible. */
   isVisible?: boolean;
+
+  /** Add dditional styling to the internal Overlay component. */
   overlayStyle?: StyleProp<ViewStyle>;
+
+  /** Handler for backdrop press. */
   onBackdropPress?: () => void;
 };
 
+/** Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
+ * You can wrap any component with a simple Dialog component to display quick information to the user.
+ * Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) props except `fullscreen`. */
 export const DialogBase: RneFunctionComponent<DialogBaseProps> = ({
   children,
   theme,

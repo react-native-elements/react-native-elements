@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import CheckBox, { CheckBoxProps } from '../Checkbox';
+import CheckBox, { CheckBoxProps } from '../CheckBox';
 import { RneFunctionComponent } from '../helpers';
 
 export type ListItemCheckBoxProps = CheckBoxProps;
 
+/** This allows adding CheckBox to the ListItem.
+ * This, Receives all [CheckBox](checkbox.md#props) props. */
 export const ListItemCheckBox: RneFunctionComponent<ListItemCheckBoxProps> = ({
   containerStyle,
   ...props

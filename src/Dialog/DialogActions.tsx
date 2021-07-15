@@ -3,9 +3,11 @@ import { View, StyleSheet } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 
 export type DialogActionsProps = {
+  /** Add Enclosed components as an action to the dialog. */
   children?: ReactNode;
 };
 
+/** Define Dialog Actions using this component. */
 export const DialogActions: RneFunctionComponent<DialogActionsProps> = ({
   children,
 }) => {
