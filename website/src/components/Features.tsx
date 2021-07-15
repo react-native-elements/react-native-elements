@@ -11,7 +11,7 @@ const features: FeatureTypes[] = [
   {
     title: 'Cross-Platform',
     description:
-      'Consistent design across android, iOS, and web. 30+ components designed to save development time',
+      'Consistent design across android, iOS, and web. 30+ components designed to save development time.',
     img: '/img/website/tweak.svg',
   },
   {
@@ -49,7 +49,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 UI components styled in a similar way. The most awesome thing
                 about is that the themes can be changed in the runtime without
                 reloading the application. This way, you may easily focus on
-                business logic, while we takes care of the visual appearance of
+                business logic, while we take care of the visual appearance of
                 your product.
               </p>
             </div>
