@@ -1,9 +1,9 @@
 import { withTheme } from '../config';
-import { DialogLoading, DialogLoadingProps } from './DialogLoading';
-import { DialogTitle, DialogTitleProps } from './DialogTitle';
-import { DialogButton } from './DialogButton';
-import { DialogActions, DialogActionsProps } from './DialogActions';
-import { DialogBase, DialogBaseProps } from './DialogBase';
+import { DialogLoading, DialogLoadingProps } from './Dialog.Loading';
+import { DialogTitle, DialogTitleProps } from './Dialog.Title';
+import { DialogButton } from './Dialog.Button';
+import { DialogActions, DialogActionsProps } from './Dialog.Actions';
+import { DialogBase, DialogBaseProps } from './Dialog';
 import { RneFunctionComponent } from '../helpers';
 
 const ThemedDialogLoading = withTheme(DialogLoading, 'DialogLoading');

@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemInput.displayName = 'ListItemInput';
+ListItemInput.displayName = 'ListItem.Input';

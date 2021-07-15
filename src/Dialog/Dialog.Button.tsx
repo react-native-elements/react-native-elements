@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-DialogButton.displayName = 'DialogButton';
+DialogButton.displayName = 'Dialog.Button';
