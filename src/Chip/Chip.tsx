@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import { StyleSheet, TouchableHighlight } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import Button, { ButtonProps } from '../Button';
 
@@ -27,7 +27,7 @@ export const Chip: RneFunctionComponent<ChipProps> = ({
       ])}
       buttonStyle={StyleSheet.flatten([{ borderRadius: 30 }, buttonStyle])}
       {...(onPress === undefined && {
-        TouchableComponent: TouchableWithoutFeedback,
+        TouchableComponent: TouchableHighlight,
       })}
       {...rest}
     />

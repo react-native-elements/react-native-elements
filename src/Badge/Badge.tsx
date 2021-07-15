@@ -3,11 +3,12 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
+  Pressable,
   TextProps,
   StyleProp,
   ViewStyle,
   TextStyle,
+  PressableProps,
 } from 'react-native';
 import { renderNode, RneFunctionComponent } from '../helpers';
 
@@ -35,6 +36,7 @@ export type BadgeProps = {
 
   /** Determines color of the indicator. */
   status?: 'primary' | 'success' | 'warning' | 'error';
+  pressableProps?: PressableProps;
 };
 
 /** Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user. */
@@ -44,10 +46,11 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   textProps,
   badgeStyle,
   onPress,
-  Component = onPress ? TouchableOpacity : View,
+  Component = onPress ? Pressable : View,
   value,
   theme,
   status = 'primary',
+  pressableProps,
   ...attributes
 }) => {
   const element = renderNode(Text, value, {
@@ -57,6 +60,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   return (
     <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
       <Component
+        {...pressableProps}
         {...attributes}
         style={StyleSheet.flatten([
           {

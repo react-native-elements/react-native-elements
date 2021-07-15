@@ -3,7 +3,7 @@ import {
   View,
   StyleSheet,
   Platform,
-  TouchableWithoutFeedback,
+  Pressable,
   Modal,
   ModalProps,
   ViewStyle,
@@ -49,15 +49,11 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
     transparent
     {...rest}
   >
-    <TouchableWithoutFeedback
+    <Pressable
+      style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
       onPress={onBackdropPress}
       testID="RNE__Overlay__backdrop"
-    >
-      <View
-        testID="backdrop"
-        style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
-      />
-    </TouchableWithoutFeedback>
+    />
 
     <View style={styles.container} pointerEvents="box-none">
       <View

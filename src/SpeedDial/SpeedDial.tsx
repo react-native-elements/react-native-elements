@@ -4,7 +4,8 @@ import {
   Animated,
   StyleSheet,
   SafeAreaView,
-  TouchableWithoutFeedback,
+  Pressable,
+  PressableProps,
 } from 'react-native';
 import FAB, { FABProps } from '../FAB';
 import { IconNode } from '../Icon';
@@ -33,6 +34,7 @@ export type SpeedDialProps = {
 
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
+  pressableProps?: PressableProps;
 } & FABProps;
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
@@ -50,6 +52,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme,
+  pressableProps,
   ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
@@ -75,7 +78,12 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
 
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
-      <TouchableWithoutFeedback onPress={onClose}>
+      <Pressable
+        {...pressableProps}
+        onPress={onClose}
+        style={[StyleSheet.absoluteFillObject]}
+        pointerEvents={isOpen ? 'auto' : 'none'}
+      >
         <Animated.View
           style={[
             StyleSheet.absoluteFillObject,
@@ -86,9 +94,8 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
                 Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
             },
           ]}
-          pointerEvents={isOpen ? 'auto' : 'none'}
         />
-      </TouchableWithoutFeedback>
+      </Pressable>
 
       <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
         {React.Children.toArray(children).map((ChildAction, i: number) => (
