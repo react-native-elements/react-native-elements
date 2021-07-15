@@ -11,6 +11,32 @@ exports[`Image Component should render 1`] = `
     }
   }
 >
+  <View
+    accessibilityElementsHidden={true}
+    importantForAccessibility="no-hide-descendants"
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": 1,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#bdbdbd",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNE__Image__placeholder"
+    />
+  </View>
   <Image
     onLoad={[Function]}
     replaceTheme={[Function]}
@@ -96,32 +122,6 @@ exports[`Image Component should render 1`] = `
     transitionDuration={360}
     updateTheme={[Function]}
   />
-  <View
-    accessibilityElementsHidden={true}
-    importantForAccessibility="no-hide-descendants"
-    pointerEvents="none"
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "opacity": 1,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#bdbdbd",
-          "justifyContent": "center",
-        }
-      }
-      testID="RNE__Image__placeholder"
-    />
-  </View>
   <View
     style={Object {}}
     testID="RNE__Image__children__container"

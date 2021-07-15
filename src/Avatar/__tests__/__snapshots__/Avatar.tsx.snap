@@ -678,6 +678,35 @@ exports[`Avatar Component should apply values from theme 1`] = `
       }
     }
   >
+    <View
+      accessibilityElementsHidden={true}
+      importantForAccessibility="no-hide-descendants"
+      pointerEvents="none"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#bdbdbd",
+            "flex": 1,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          }
+        }
+        testID="RNE__Image__placeholder"
+      />
+    </View>
     <Image
       onLoad={[Function]}
       replaceTheme={[Function]}
@@ -769,35 +798,6 @@ exports[`Avatar Component should apply values from theme 1`] = `
       transitionDuration={360}
       updateTheme={[Function]}
     />
-    <View
-      accessibilityElementsHidden={true}
-      importantForAccessibility="no-hide-descendants"
-      pointerEvents="none"
-      style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "opacity": 1,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#bdbdbd",
-            "flex": 1,
-            "height": undefined,
-            "justifyContent": "center",
-            "width": undefined,
-          }
-        }
-        testID="RNE__Image__placeholder"
-      />
-    </View>
     <View
       style={
         Object {

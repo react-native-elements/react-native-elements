@@ -73,6 +73,29 @@ export const Image = React.forwardRef<
         accessibilityIgnoresInvertColors={true}
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
+        <Animated.View
+          pointerEvents={hasImage ? 'none' : 'auto'}
+          accessibilityElementsHidden={hasImage}
+          importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
+          style={[
+            styles.placeholderContainer,
+            {
+              opacity: 0 || hasImage ? placeholderOpacity : 1,
+            },
+          ]}
+        >
+          <View
+            testID="RNE__Image__placeholder"
+            style={StyleSheet.flatten([
+              style,
+              styles.placeholder,
+              placeholderStyle,
+            ])}
+          >
+            {PlaceholderContent}
+          </View>
+        </Animated.View>
+
         <ImageComponent
           ref={ref}
           testID="RNE__Image"
@@ -89,29 +112,6 @@ export const Image = React.forwardRef<
             styleProps,
           ])}
         />
-
-        <Animated.View
-          pointerEvents={hasImage ? 'none' : 'auto'}
-          accessibilityElementsHidden={hasImage}
-          importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
-          style={[
-            styles.placeholderContainer,
-            {
-              opacity: hasImage ? placeholderOpacity : 1,
-            },
-          ]}
-        >
-          <View
-            testID="RNE__Image__placeholder"
-            style={StyleSheet.flatten([
-              style,
-              styles.placeholder,
-              placeholderStyle,
-            ])}
-          >
-            {PlaceholderContent}
-          </View>
-        </Animated.View>
 
         <View
           testID="RNE__Image__children__container"
