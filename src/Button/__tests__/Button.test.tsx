@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActivityIndicator, Pressable } from 'react-native';
+import { ActivityIndicator, TouchableOpacity } from 'react-native';
 import { FullTheme } from '../../config/theme';
 import Button from '../index';
 import { renderWithTheme } from '../../../.ci/testHelper';
@@ -31,9 +31,9 @@ describe('Button Component', () => {
 
     const { queryByTestId } = renderWithTheme(<Button onPress={onPress} />);
     const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
-    const pressableTree = wrapper.findByType(Pressable);
+    const touchableopacityTree = wrapper.findByType(TouchableOpacity);
 
-    fireEvent(pressableTree, 'press');
+    fireEvent(touchableopacityTree, 'press');
 
     expect(onPress).toHaveBeenCalled();
   });
@@ -44,9 +44,9 @@ describe('Button Component', () => {
       <Button loading onPress={onPress} />
     );
     const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
-    const pressableTree = wrapper.findByType(Pressable);
+    const touchableopacityTree = wrapper.findByType(TouchableOpacity);
 
-    fireEvent(pressableTree, 'press');
+    fireEvent(touchableopacityTree, 'press');
 
     expect(onPress).not.toHaveBeenCalled();
   });
@@ -57,9 +57,9 @@ describe('Button Component', () => {
       <Button disabled onPress={onPress} />
     );
     const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
-    const pressableTree = wrapper.findByType(Pressable);
+    const touchableopacityTree = wrapper.findByType(TouchableOpacity);
 
-    fireEvent(pressableTree, 'press');
+    fireEvent(touchableopacityTree, 'press');
 
     expect(onPress).not.toHaveBeenCalled();
   });

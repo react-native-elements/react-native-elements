@@ -8,9 +8,6 @@ exports[`Button Component Button type clear should display clear button 1`] = `
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       false,
     ]
@@ -26,20 +23,19 @@ exports[`Button Component Button type clear should display clear button 1`] = `
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -80,9 +76,6 @@ exports[`Button Component Button type clear should display disabled clear button
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       false,
     ]
@@ -98,20 +91,19 @@ exports[`Button Component Button type clear should display disabled clear button
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -152,9 +144,6 @@ exports[`Button Component Button type clear should display raised clear button 1
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       Object {
         "backgroundColor": "#fff",
@@ -180,20 +169,19 @@ exports[`Button Component Button type clear should display raised clear button 1
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -234,9 +222,6 @@ exports[`Button Component Button type outline should display disabled outline bu
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       false,
     ]
@@ -252,20 +237,19 @@ exports[`Button Component Button type outline should display disabled outline bu
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -306,9 +290,6 @@ exports[`Button Component Button type outline should display outline button 1`] 
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       false,
     ]
@@ -324,20 +305,19 @@ exports[`Button Component Button type outline should display outline button 1`] 
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -378,9 +358,6 @@ exports[`Button Component Button type outline should display raised outline butt
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       Object {
         "backgroundColor": "#fff",
@@ -406,20 +383,19 @@ exports[`Button Component Button type outline should display raised outline butt
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -460,9 +436,6 @@ exports[`Button Component Button type solid should display disabled solid button
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       false,
     ]
@@ -478,20 +451,19 @@ exports[`Button Component Button type solid should display disabled solid button
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -532,9 +504,6 @@ exports[`Button Component Button type solid should display raised solid button 1
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       Object {
         "backgroundColor": "#fff",
@@ -560,20 +529,19 @@ exports[`Button Component Button type solid should display raised solid button 1
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={
@@ -614,9 +582,6 @@ exports[`Button Component Button type solid should display solid button 1`] = `
         "borderRadius": 3,
         "overflow": "hidden",
       },
-      Object {
-        "borderRadius": 3,
-      },
       undefined,
       false,
     ]
@@ -632,20 +597,19 @@ exports[`Button Component Button type solid should display solid button 1`] = `
       }
     }
     accessible={true}
-    activeOpacity={0.3}
-    delayPressIn={0}
     focusable={true}
-    onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
-    updateTheme={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
     <View
       style={

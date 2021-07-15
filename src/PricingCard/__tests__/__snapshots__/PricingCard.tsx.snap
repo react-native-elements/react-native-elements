@@ -290,9 +290,6 @@ exports[`PricingCard component should apply values from theme 1`] = `
             "borderRadius": 3,
             "overflow": "hidden",
           },
-          Object {
-            "borderRadius": 3,
-          },
           undefined,
           false,
         ]
@@ -308,20 +305,19 @@ exports[`PricingCard component should apply values from theme 1`] = `
           }
         }
         accessible={true}
-        activeOpacity={0.3}
-        delayPressIn={0}
         focusable={true}
-        onBlur={[Function]}
         onClick={[Function]}
-        onFocus={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        replaceTheme={[Function]}
-        updateTheme={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
       >
         <View
           style={
