@@ -5,6 +5,8 @@ import Icon, { IconProps } from '../Icon';
 
 export type ListItemChevronProps = Partial<IconProps>;
 
+/** This allows adding a Chevron Icon(arrow) to the ListItem.
+ * This, Receives all [Icon](icon.md#props) props. */
 export const ListItemChevron: RneFunctionComponent<ListItemChevronProps> = ({
   containerStyle,
   ...props

@@ -12,7 +12,10 @@ type withBadgeOptions = {
 } & BadgeProps;
 
 export const withBadge = (
+  /** Text value to be displayed by badge, defaults to empty */
   value: React.ReactNode | ((props: any) => React.ReactNode),
+
+  /** Also receives all [Badge](badge.md#props) props. */
   options: withBadgeOptions = {}
 ) => (WrappedComponent: React.ComponentType<any>): React.ComponentType => {
   const WithBadge = (props: any) => {

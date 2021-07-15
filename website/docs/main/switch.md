@@ -5,6 +5,7 @@ slug: /switch
 ---
 
 import Props from './props/switch.md'
+import Usage from './usage/Switch/Switch.md'
 
 Switch represents user's decision of a process and indicates whether a state is on/off. Switch is a controlled component that requires an `onValueChange` to update the `value` prop. This renders a `boolean` value. React native elements provide you with additional `theme` and `color` support in the Switch Button.
 
@@ -17,16 +18,7 @@ Switch represents user's decision of a process and indicates whether a state is 
 
 ## Usage
 
-```js
-import { Switch } from 'react-native-elements';
-```
-
-```js
-<Switch value={true} />
-
-<Switch value={false} color="orange" />
-
-```
+<Usage />
 
 ---
 

@@ -11,13 +11,23 @@ import { RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './TabItem';
 
 export type TabBaseProps = ViewProps & {
+  /** Child position index value. */
   value?: number;
+
+  /** On Index Change Callback. */
   onChange?: (value: number) => void;
+
+  /** Disable the indicator below. */
   disableIndicator?: boolean;
+
+  /** Additional styling for tab indicator. */
   indicatorStyle?: StyleProp<ViewStyle>;
+
+  /** Define the background Variant. */
   variant?: 'primary' | 'default';
 };
 
+/** Tabs organize content across different screens, data sets, and other interactions. */
 export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   theme,
   children,

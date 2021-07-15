@@ -21,7 +21,7 @@ const SEARCHBAR_COMPONENTS = {
 export type SearchBarBaseProps = React.ComponentPropsWithRef<
   typeof TextInput
 > & {
-  platform: 'default' | 'ios' | 'android';
+  platform?: 'default' | 'ios' | 'android';
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
   clearIcon?: IconNode;
@@ -38,10 +38,11 @@ export type SearchBarBaseProps = React.ComponentPropsWithRef<
   onCancel?(): void;
 };
 
-export type SearchBarProps = SearchBarBaseProps &
-  SearchBarDefaultProps &
-  SearchBarAndroidProps &
-  SearchBarIosProps;
+export type SearchBarProps =
+  | SearchBarBaseProps
+  | SearchBarDefaultProps
+  | SearchBarAndroidProps
+  | SearchBarIosProps;
 
 export class SearchBar extends React.Component<
   SearchBarProps & Partial<ThemeProps<SearchBarProps>>
