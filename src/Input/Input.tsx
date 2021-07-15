@@ -43,8 +43,12 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   renderErrorMessage?: boolean;
 };
 
+export type InputRef = TextInput & {
+  shake?: () => void;
+};
+
 export const Input = React.forwardRef<
-  TextInput,
+  InputRef,
   InputProps & Partial<ThemeProps<InputProps>>
 >(
   (
@@ -72,7 +76,6 @@ export const Input = React.forwardRef<
     },
     ref
   ) => {
-    // const root = React.useRef<TextInput | null>(null);
     const { current: shakeAnimationValue } = React.useRef(
       new Animated.Value(0)
     );
@@ -87,10 +90,13 @@ export const Input = React.forwardRef<
       }).start();
     };
 
-    React.useImperativeHandle(ref, () =>
-      Object.assign((ref as React.MutableRefObject<TextInput>).current, {
-        shake,
-      })
+    React.useImperativeHandle(
+      ref,
+      () =>
+        ({
+          ...(ref as React.MutableRefObject<InputRef>).current,
+          shake,
+        } as InputRef)
     );
 
     const translateX = shakeAnimationValue.interpolate({
