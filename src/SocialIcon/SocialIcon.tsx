@@ -176,6 +176,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
 
   return (
     <Component
+      testID="RNE_SocialIcon"
       {...attributes}
       underlayColor={light ? 'white' : underlayColor || (type && colors[type])}
       onLongPress={disabled ? null : onLongPress}
@@ -201,6 +202,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
       <View style={styles.wrapper}>
         {(shouldShowExpandedButton || !loading) && (
           <Icon
+            testID="RNE_Icon"
             iconStyle={StyleSheet.flatten([iconStyle && iconStyle])}
             color={light ? type && colors[type] : iconColor}
             name={type as SocialMediaType}
@@ -226,6 +228,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
 
         {loading && (
           <ActivityIndicator
+            testID="RNE_ActivityIndicator"
             animating
             style={StyleSheet.flatten([
               styles.activityIndicatorStyle,

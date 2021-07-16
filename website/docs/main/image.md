@@ -5,6 +5,7 @@ slug: /image
 ---
 
 import Props from './props/image.md'
+import Usage from './usage/Image/Image.md'
 
 Drop-in replacement for the standard React Native Image component that displays
 images with a placeholder and smooth image load transitioning.
@@ -15,24 +16,7 @@ images with a placeholder and smooth image load transitioning.
 
 ## Usage
 
-```js
-import { ActivityIndicator } from 'react-native';
-import { Image } from 'react-native-elements';
-
-// Standard Image
-<Image
-  source={{ uri: image }}
-  style={{ width: 200, height: 200 }}
-/>
-
-
-// Image with custom placeholder content
-<Image
-  source={{ uri: image }}
-  style={{ width: 200, height: 200 }}
-  PlaceholderContent={<ActivityIndicator />}
-/>
-```
+<Usage />
 
 ---
 

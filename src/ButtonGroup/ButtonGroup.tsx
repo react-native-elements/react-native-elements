@@ -209,7 +209,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                 ])}
               >
                 {button.element ? (
-                  <button.element />
+                  <button.element isSelected={isSelected} />
                 ) : (
                   <Text
                     testID="buttonGroupItemText"

@@ -5,6 +5,7 @@ slug: /speeddial
 ---
 
 import Props from './props/speeddial.md'
+import Usage from './usage/SpeedDial/SpeedDial.md'
 
 When pressed, a floating action button can display three to six related actions in the form of a speed dial. If more than six actions are needed, something other than a FAB should be used to present them. Upon press, the FAB remains visible and emits a stack of related actions. If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
 
@@ -16,34 +17,7 @@ When pressed, a floating action button can display three to six related actions 
 
 ## Usage
 
-```SnackPlayer name=RNE Tabs
-import React from 'react';
-import { SpeedDial } from 'react-native-elements';
-
-export default () => {
-  const [open, setOpen] = React.useState(false);
-  return (
-    <SpeedDial
-      isOpen={open}
-      icon={{ name: 'edit', color: '#fff' }}
-      openIcon={{ name: 'close', color: '#fff' }}
-      onOpen={() => setOpen(!open)}
-      onClose={() => setOpen(!open)}
-    >
-      <SpeedDial.Action
-        icon={{ name: 'add', color: '#fff' }}
-        title="Add"
-        onPress={() => console.log('Add Something')}
-      />
-      <SpeedDial.Action
-        icon={{ name: 'delete', color: '#fff' }}
-        title="Delete"
-        onPress={() => console.log('Delete Something')}
-      />
-    </SpeedDial>
-  );
-};
-```
+<Usage />
 
 ---
 
@@ -52,9 +26,3 @@ export default () => {
 <Props />
 
 ---
-
-## Child Components
-
-### SpeedDial.Action
-
-> Receives all [FAB](fab.md#props) props.

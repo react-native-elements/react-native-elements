@@ -113,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-TabViewBase.displayName = 'TabViewBase';
+TabViewBase.displayName = 'TabView';
