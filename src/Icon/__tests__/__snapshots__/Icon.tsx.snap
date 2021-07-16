@@ -124,13 +124,13 @@ exports[`Icon component should apply raised styles 1`] = `
       "height": 52,
       "margin": 7,
       "overflow": "hidden",
-      "shadowColor": "rgba(0,0,0, .4)",
+      "shadowColor": "#000",
       "shadowOffset": Object {
         "height": 1,
-        "width": 1,
+        "width": 0,
       },
-      "shadowOpacity": 1,
-      "shadowRadius": 1,
+      "shadowOpacity": 0.2,
+      "shadowRadius": 1.41,
       "width": 52,
     }
   }
