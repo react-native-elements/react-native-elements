@@ -687,20 +687,16 @@ exports[`Avatar Component should apply values from theme 1`] = `
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "flex": 1,
-            "height": undefined,
-            "width": undefined,
-          },
-        ]
+        Object {
+          "bottom": 0,
+          "flex": 1,
+          "height": undefined,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": undefined,
+        }
       }
       testID="RNE__Image"
       theme={

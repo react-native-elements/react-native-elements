@@ -56,7 +56,6 @@ describe('Image Component', () => {
       <Image source={{ uri: FAKE_URI }} style={{ tintColor: 'red' }} />
     );
     const image = queryByTestId('RNE__Image');
-    console.log(image.props.style);
     expect(image.props.style.tintColor).toBe('red');
   });
 

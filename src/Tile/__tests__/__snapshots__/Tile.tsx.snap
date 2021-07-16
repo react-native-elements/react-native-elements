@@ -107,24 +107,15 @@ exports[`Tile component should apply styles from theme 1`] = `
         }
       }
       style={
-        Array [
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          Object {
-            "alignItems": "center",
-            "bottom": 0,
-            "justifyContent": "center",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
       }
       testID="RNE__Image"
       theme={
