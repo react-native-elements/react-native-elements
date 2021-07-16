@@ -86,6 +86,7 @@ export const SearchBarDefault = React.forwardRef<
 
     return (
       <View
+        testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
             borderTopWidth: 1,
@@ -104,7 +105,7 @@ export const SearchBarDefault = React.forwardRef<
         ])}
       >
         <Input
-          testID="searchInput"
+          testID="RNE__SearchBar"
           renderErrorMessage={false}
           {...attributes}
           onFocus={onFocusHandler}

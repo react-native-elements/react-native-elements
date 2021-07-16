@@ -73,37 +73,46 @@ export const SearchBarAndroid = React.forwardRef<
       onClear();
     };
 
-    const cancel = () => {
+    const cancel = React.useCallback(() => {
       ref.current.blur();
       onCancel();
-    };
+    }, [onCancel, ref]);
 
-    const onFocusHandler: InputProps['onFocus'] = (event) => {
-      onFocus(event);
-      setIsEmpty(value === '');
-      setHasFocus(true);
-    };
+    const onFocusHandler: InputProps['onFocus'] = React.useCallback(
+      (event) => {
+        onFocus(event);
+        setIsEmpty(value === '');
+        setHasFocus(true);
+      },
+      [onFocus, value]
+    );
 
-    const onBlurHandler: InputProps['onBlur'] = (event) => {
-      onBlur(event);
-      setHasFocus(false);
-    };
+    const onBlurHandler: InputProps['onBlur'] = React.useCallback(
+      (event) => {
+        onBlur(event);
+        setHasFocus(false);
+      },
+      [onBlur]
+    );
 
-    const onChangeTextHandler = (text: string) => {
-      onChangeText(text);
-      setIsEmpty(text === '');
-    };
+    const onChangeTextHandler = React.useCallback(
+      (text: string) => {
+        onChangeText(text);
+        setIsEmpty(text === '');
+      },
+      [onChangeText]
+    );
 
     React.useEffect(() => {
       Keyboard.addListener('keyboardDidHide', cancel);
-      () => Keyboard.removeListener('keyboardDidHide', cancel);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+      return () => Keyboard.removeListener('keyboardDidHide', cancel);
+    }, [cancel]);
 
     const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
 
     return (
       <View
+        testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
             backgroundColor: theme?.colors?.white,
@@ -114,7 +123,7 @@ export const SearchBarAndroid = React.forwardRef<
         ])}
       >
         <Input
-          testID="searchInput"
+          testID="RNE__SearchBar"
           renderErrorMessage={false}
           {...attributes}
           onFocus={onFocusHandler}

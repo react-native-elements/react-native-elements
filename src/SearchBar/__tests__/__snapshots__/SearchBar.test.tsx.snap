@@ -9,6 +9,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       "paddingTop": 8,
     }
   }
+  testID="RNE__SearchBar-wrapper"
 >
   <View
     style={
@@ -112,7 +113,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             "minHeight": 40,
           }
         }
-        testID="searchInput"
+        testID="RNE__SearchBar"
         underlineColorAndroid="transparent"
       />
       <View
@@ -160,6 +161,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
       "paddingTop": 8,
     }
   }
+  testID="RNE__SearchBar-wrapper"
 >
   <View
     style={
@@ -262,7 +264,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
             "minHeight": 40,
           }
         }
-        testID="searchInput"
+        testID="RNE__SearchBar"
         underlineColorAndroid="transparent"
       />
       <View
@@ -313,6 +315,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
       "paddingTop": 13,
     }
   }
+  testID="RNE__SearchBar-wrapper"
 >
   <View
     style={
@@ -360,7 +363,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
             "overflow": "hidden",
           }
         }
-        testID="searchInput"
+        testID="RNE__SearchBar"
         underlineColorAndroid="transparent"
       />
       <View
@@ -430,6 +433,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
             undefined,
           ]
         }
+        testID="RNE__SearchBar-cancelButton"
       >
         <Text
           style={
@@ -464,6 +468,7 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
       "padding": 8,
     }
   }
+  testID="RNE__SearchBar-wrapper"
 >
   <View
     style={
@@ -568,7 +573,7 @@ exports[`SearchBar wrapper component should render without issues 1`] = `
             "minHeight": 40,
           }
         }
-        testID="searchInput"
+        testID="RNE__SearchBar"
         underlineColorAndroid="transparent"
       />
       <View

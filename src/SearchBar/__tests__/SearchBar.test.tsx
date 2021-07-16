@@ -28,59 +28,9 @@ describe('SearchBar wrapper component', () => {
       },
     };
     const component = renderWithTheme(<SearchBar platform="android" />, theme);
-    expect(component.queryByTestId('searchInput').props.placeholder).toBe(
+    expect(component.queryByTestId('RNE__SearchBar').props.placeholder).toBe(
       'Enter search term'
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
-
-  // describe('Instance methods', () => {
-  //   it('focus', () => {
-  //     const focus = jest.fn();
-  //     const component = renderWithTheme(<SearchBar />);
-  //     const instance = component.instance();
-  //     // Refs not available in renderWithTheme render
-  //     instance.searchbar = {
-  //       focus,
-  //     };
-  //     instance.focus();
-  //     expect(focus).toHaveBeenCalledTimes(1);
-  //   });
-
-  //   it('blur', () => {
-  //     const blur = jest.fn();
-  //     const component = renderWithTheme(<SearchBar />);
-  //     const instance = component.instance();
-  //     // Refs not available in renderWithTheme render
-  //     instance.searchbar = {
-  //       blur,
-  //     };
-  //     instance.blur();
-  //     expect(blur).toHaveBeenCalledTimes(1);
-  //   });
-
-  //   it('clear', () => {
-  //     const clear = jest.fn();
-  //     const component = renderWithTheme(<SearchBar />);
-  //     const instance = component.instance();
-  //     // Refs not available in renderWithTheme render
-  //     instance.searchbar = {
-  //       clear,
-  //     };
-  //     instance.clear();
-  //     expect(clear).toHaveBeenCalledTimes(1);
-  //   });
-
-  //   it('cancel', () => {
-  //     const cancel = jest.fn();
-  //     const component = renderWithTheme(<SearchBar />);
-  //     const instance = component.instance();
-  //     // Refs not available in renderWithTheme render
-  //     instance.searchbar = {
-  //       cancel,
-  //     };
-  //     instance.cancel();
-  //     expect(cancel).toHaveBeenCalledTimes(1);
-  //   });
-  // });
 });

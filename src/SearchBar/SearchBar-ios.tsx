@@ -134,6 +134,7 @@ export const SearchBarIOS = React.forwardRef<
 
     return (
       <View
+        testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           styles.container,
           { backgroundColor: theme?.colors?.white },
@@ -141,7 +142,7 @@ export const SearchBarIOS = React.forwardRef<
         ])}
       >
         <Input
-          testID="searchInput"
+          testID="RNE__SearchBar"
           renderErrorMessage={false}
           {...attributes}
           onFocus={onFocusHandler}
@@ -209,7 +210,10 @@ export const SearchBarIOS = React.forwardRef<
             disabled={buttonDisabled}
             {...otherCancelButtonProps}
           >
-            <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
+            <View
+              testID="RNE__SearchBar-cancelButton"
+              style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}
+            >
               <Text
                 style={[
                   styles.buttonTextStyle,
