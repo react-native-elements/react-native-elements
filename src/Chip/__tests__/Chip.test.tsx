@@ -7,11 +7,11 @@ describe('Chip Component', () => {
   it('should render without issues', () => {
     const { getByA11yRole, toJSON } = renderWithTheme(<Chip />);
     const component = getByA11yRole('button');
-    console.log(component.props);
+    expect(component.props.style.borderRadius).toBe(30);
     expect(toJSON()).toMatchSnapshot();
   });
 
-  // Test for solid and outline as a loop
+  // Test for solid and outline type
   it.each`
     type
     ${'solid'}

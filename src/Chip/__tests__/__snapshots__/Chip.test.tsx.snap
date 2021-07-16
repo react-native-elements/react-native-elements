@@ -31,21 +31,18 @@ exports[`Chip Component should render without issues 1`] = `
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#2089dc",
-          "borderColor": "#2089dc",
-          "borderRadius": 30,
-          "borderWidth": 0,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "padding": 8,
-        }
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#2089dc",
+        "borderColor": "#2089dc",
+        "borderRadius": 30,
+        "borderWidth": 0,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "padding": 8,
       }
-    />
-  </View>
+    }
+  />
 </View>
 `;
