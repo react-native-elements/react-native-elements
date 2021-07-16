@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chip } from '../index';
 import { renderWithTheme } from '../../../.ci/testHelper';
+import { fireEvent } from '@testing-library/react-native';
 
 describe('Chip Component', () => {
   it('should render without issues', () => {
@@ -19,5 +20,12 @@ describe('Chip Component', () => {
     );
     expect(queryByText(type)).not.toBeNull();
     expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should pass the onPress function when specified', () => {
+    const handlePress = jest.fn();
+    const { getByA11yRole } = renderWithTheme(<Chip onPress={handlePress} />);
+    fireEvent(getByA11yRole('button'), 'press');
+    expect(handlePress).toHaveBeenCalledTimes(1);
   });
 });
