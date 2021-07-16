@@ -5,7 +5,6 @@
     "module": "CommonJS",                          /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": ["ES2017"],                        /* Specify library files to be included in the compilation. */
     "allowJs": true,                          /* Allow javascript files to be compiled. */
-    "jsx": "react-native",                    /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     "checkJs": false,
     "declaration": true,                      /* Generates corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
