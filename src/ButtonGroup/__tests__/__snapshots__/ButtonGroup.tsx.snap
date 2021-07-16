@@ -990,7 +990,9 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           }
         }
       >
-        <Text />
+        <Text
+          isSelected={false}
+        />
       </View>
     </ForwardRef>
   </View>
@@ -1022,7 +1024,9 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           }
         }
       >
-        <View />
+        <View
+          isSelected={false}
+        />
       </View>
     </ForwardRef>
   </View>
