@@ -2,16 +2,16 @@ import React from 'react';
 import {
   Animated,
   Image as ImageNative,
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  ImageProps as RNImageProps,
-  ViewStyle,
-  StyleProp,
-  ImageStyle,
-  NativeSyntheticEvent,
   ImageLoadEventData,
+  ImageProps as RNImageProps,
+  NativeSyntheticEvent,
+  StyleProp,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  ViewStyle,
 } from 'react-native';
+import { ThemeProps } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
@@ -26,7 +26,10 @@ export type ImageProps = RNImageProps & {
   transitionDuration?: number;
 };
 
-export const Image = React.forwardRef<ImageNative, ImageProps>(
+export const Image = React.forwardRef<
+  ImageNative,
+  ImageProps & Partial<ThemeProps<ImageProps>>
+>(
   (
     {
       onPress,
@@ -75,8 +78,9 @@ export const Image = React.forwardRef<ImageNative, ImageProps>(
           transitionDuration={360}
           {...attributes}
           onLoad={onLoadHandler}
-          style={[StyleSheet.absoluteFill, style]}
+          style={StyleSheet.flatten([StyleSheet.absoluteFill, style])}
         />
+        {/* Transition placeholder */}
         <Animated.View
           pointerEvents={hasImage ? 'none' : 'auto'}
           accessibilityElementsHidden={hasImage}
@@ -99,6 +103,7 @@ export const Image = React.forwardRef<ImageNative, ImageProps>(
             {PlaceholderContent}
           </View>
         </Animated.View>
+        {/* Children */}
         <View
           testID="RNE__Image__children__container"
           style={childrenContainerStyle ?? style}
