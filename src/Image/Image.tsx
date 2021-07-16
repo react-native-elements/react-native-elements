@@ -12,7 +12,6 @@ import {
   NativeSyntheticEvent,
   ImageLoadEventData,
 } from 'react-native';
-import { ThemeProps } from '../config';
 
 export type ImageProps = RNImageProps & {
   Component?: typeof React.Component;
@@ -27,10 +26,7 @@ export type ImageProps = RNImageProps & {
   transitionDuration?: number;
 };
 
-export const Image = React.forwardRef<
-  ImageNative,
-  ImageProps & Partial<ThemeProps<ImageProps>>
->(
+export const Image = React.forwardRef<ImageNative, ImageProps>(
   (
     {
       onPress,
@@ -64,7 +60,6 @@ export const Image = React.forwardRef<
     };
 
     const hasImage = Boolean(attributes.source);
-    const { width, height, ...styleProps } = StyleSheet.flatten(style);
 
     return (
       <Component
@@ -73,14 +68,23 @@ export const Image = React.forwardRef<
         accessibilityIgnoresInvertColors={true}
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
+        <ImageComponent
+          ref={ref}
+          testID="RNE__Image"
+          transition={true}
+          transitionDuration={360}
+          {...attributes}
+          onLoad={onLoadHandler}
+          style={[StyleSheet.absoluteFill, style]}
+        />
         <Animated.View
           pointerEvents={hasImage ? 'none' : 'auto'}
           accessibilityElementsHidden={hasImage}
           importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
           style={[
-            styles.placeholderContainer,
+            StyleSheet.absoluteFillObject,
             {
-              opacity: 0 || hasImage ? placeholderOpacity : 1,
+              opacity: hasImage ? placeholderOpacity : 1,
             },
           ]}
         >
@@ -95,24 +99,6 @@ export const Image = React.forwardRef<
             {PlaceholderContent}
           </View>
         </Animated.View>
-
-        <ImageComponent
-          ref={ref}
-          testID="RNE__Image"
-          transition={true}
-          transitionDuration={360}
-          {...attributes}
-          onLoad={onLoadHandler}
-          style={StyleSheet.flatten([
-            StyleSheet.absoluteFill,
-            {
-              width: width,
-              height: height,
-            } as StyleProp<ImageStyle>,
-            styleProps,
-          ])}
-        />
-
         <View
           testID="RNE__Image__children__container"
           style={childrenContainerStyle ?? style}
@@ -129,9 +115,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     position: 'relative',
     overflow: 'hidden',
-  },
-  placeholderContainer: {
-    ...StyleSheet.absoluteFillObject,
   },
   placeholder: {
     backgroundColor: '#bdbdbd',
