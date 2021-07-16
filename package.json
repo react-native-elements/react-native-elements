@@ -68,6 +68,7 @@
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "jest-transform-stub": "^2.0.0",
+    "json2md": "^1.11.0",
     "lint-staged": "^10.4.0",
     "metro-react-native-babel-preset": "^0.63.0",
     "react": "16.13.1",
