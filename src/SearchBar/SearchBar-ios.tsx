@@ -119,7 +119,9 @@ export const SearchBarIOS = React.forwardRef<
       setIsEmpty(text === '');
     };
 
-    const { style: loadingStyle, ...otherLoadingProps } = loadingProps;
+    const { style: loadingStyle, ...otherLoadingProps } = loadingProps || {
+      style: {},
+    };
     const {
       buttonStyle,
       buttonTextStyle,
@@ -128,7 +130,7 @@ export const SearchBarIOS = React.forwardRef<
       buttonDisabledStyle,
       buttonDisabledTextStyle,
       ...otherCancelButtonProps
-    } = cancelButtonProps;
+    } = cancelButtonProps || {};
 
     return (
       <View

@@ -47,9 +47,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -124,9 +122,7 @@ exports[`Android SearchBar component Props cancel button Disabled cancelButtonPr
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -201,9 +197,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonPro
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -268,9 +262,7 @@ exports[`Android SearchBar component Props cancel button Enabled cancelButtonTit
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -334,9 +326,7 @@ exports[`Android SearchBar component Props clearIcon and without clearIcon 1`] =
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -400,9 +390,7 @@ exports[`Android SearchBar component Props clearIcon and without custom clearIco
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -466,9 +454,7 @@ exports[`Android SearchBar component Props clearIcon and without no clearIcon 1`
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -525,9 +511,7 @@ exports[`Android SearchBar component Props searchIcon and without custom searchI
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -585,9 +569,7 @@ exports[`Android SearchBar component Props searchIcon and without no searchIcon 
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -652,9 +634,7 @@ exports[`Android SearchBar component Props searchIcon and without searchIcon 1`]
     }
     lightTheme={true}
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -719,9 +699,7 @@ exports[`Android SearchBar component Props showLoading, loadingProps 1`] = `
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -798,9 +776,7 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
@@ -826,7 +802,6 @@ exports[`Android SearchBar component should render with a preset value 1`] = `
       }
     }
     testID="searchInput"
-    value="Chickens"
   />
 </View>
 `;
@@ -873,9 +848,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
       }
     }
     onBlur={[Function]}
-    onCancel={[Function]}
     onChangeText={[Function]}
-    onClear={[Function]}
     onFocus={[Function]}
     renderErrorMessage={false}
     rightIcon={
