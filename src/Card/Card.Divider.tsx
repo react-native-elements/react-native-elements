@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-CardDivider.displayName = 'CardDivider';
+CardDivider.displayName = 'Card.Divider';

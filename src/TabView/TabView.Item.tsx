@@ -3,12 +3,14 @@ import { View, ViewProps } from 'react-native';
 
 import { RneFunctionComponent } from '../helpers';
 
-/** They are indivual item of the parent Tab. */
-export const TabViewItem: RneFunctionComponent<ViewProps> = ({
+export type TabViewItemProps = ViewProps;
+
+/** They are individual item of the parent Tab. */
+export const TabViewItem: RneFunctionComponent<TabViewItemProps> = ({
   children,
   ...props
 }) => {
   return <View {...props}>{React.isValidElement(children) && children}</View>;
 };
 
-TabViewItem.displayName = 'TabViewItem';
+TabViewItem.displayName = 'TabView.Item';

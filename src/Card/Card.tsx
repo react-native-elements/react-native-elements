@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-CardBase.displayName = 'CardBase';
+CardBase.displayName = 'Card';

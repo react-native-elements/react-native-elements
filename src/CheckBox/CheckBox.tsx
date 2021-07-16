@@ -167,4 +167,4 @@ const styles = StyleSheet.create({
   },
 });
 
-CheckBox.displayName = 'Checkbox';
+CheckBox.displayName = 'CheckBox';

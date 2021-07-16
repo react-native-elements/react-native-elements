@@ -104,4 +104,4 @@ const styles = StyleSheet.create({
   },
 });
 
-Accessory.displayName = 'Accessory';
+Accessory.displayName = 'Avatar.Accessory';
