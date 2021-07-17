@@ -20,6 +20,8 @@ export type AccessoryProps = Partial<IconProps> &
 
     /** Add custom styling to the accessory of avatar. */
     style?: StyleProp<ViewStyle>;
+
+    /** Props for Pressable */
     pressableProps?: PressableProps;
   };
 

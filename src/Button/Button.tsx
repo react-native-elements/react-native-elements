@@ -229,7 +229,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
             disabled && disabledStyle,
           ])}
         >
-          {/* Show Activity Indicator on loading */}
+          {/* Activity Indicator on loading */}
           {loading && (
             <ActivityIndicator
               style={StyleSheet.flatten([styles.loading, loadingStyle])}
@@ -238,7 +238,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
               {...loadingProps}
             />
           )}
-          {/* Hide Icon on loading */}
+          {/* Button Icon & hide Icon on loading */}
           {!loading &&
             icon &&
             renderNode(Icon, icon, {
@@ -247,7 +247,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
                 iconContainerStyle,
               ]),
             })}
-          {/* Hide text on loading */}
+          {/* Title for Button & hide text on loading */}
           {!loading &&
             !!title &&
             renderNode(Text, title, {

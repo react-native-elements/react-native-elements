@@ -8,6 +8,7 @@ import {
   ModalProps,
   ViewStyle,
   StyleProp,
+  PressableProps,
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 
@@ -29,6 +30,9 @@ export type OverlayProps = ModalProps & {
 
   /** Override React Native `Modal` component (usable for web-platform). */
   ModalComponent?: typeof React.Component;
+
+  /** Pressable Props */
+  pressableProps?: PressableProps;
 };
 
 /** The Overlay is a view that floats above an app’s content.
@@ -41,18 +45,20 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
   fullScreen = false,
   ModalComponent = Modal,
   isVisible,
-  ...rest
+  pressableProps,
+  ...props
 }) => (
   <ModalComponent
     visible={isVisible}
     onRequestClose={onBackdropPress}
     transparent
-    {...rest}
+    {...props}
   >
     <Pressable
       style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
       onPress={onBackdropPress}
       testID="RNE__Overlay__backdrop"
+      {...pressableProps}
     />
 
     <View style={styles.container} pointerEvents="box-none">

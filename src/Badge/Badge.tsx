@@ -36,6 +36,8 @@ export type BadgeProps = {
 
   /** Determines color of the indicator. */
   status?: 'primary' | 'success' | 'warning' | 'error';
+
+  /** Props for Pressable */
   pressableProps?: PressableProps;
 };
 

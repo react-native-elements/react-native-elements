@@ -82,6 +82,8 @@ export type AvatarBaseProps = {
 
   /** Custom ImageComponent for Avatar. */
   ImageComponent?: React.ComponentClass;
+
+  /** Props for Pressable */
   pressableProps?: PressableProps;
 };
 
