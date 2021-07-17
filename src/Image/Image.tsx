@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   Animated,
   Image as ImageNative,
@@ -41,28 +41,33 @@ export const Image = React.forwardRef<
       childrenContainerStyle = null,
       style = {},
       ImageComponent = ImageNative,
+      onLoad,
       children,
-      ...attributes
+      transition = true,
+      transitionDuration = 360,
+      ...props
     },
     ref
   ) => {
     const { current: placeholderOpacity } = React.useRef(new Animated.Value(1));
 
-    const onLoadHandler = (event: NativeSyntheticEvent<ImageLoadEventData>) => {
-      const { transition, onLoad, transitionDuration } = attributes;
-      if (!transition) {
-        placeholderOpacity.setValue(0);
-        return;
-      }
-      Animated.timing(placeholderOpacity, {
-        toValue: 0,
-        duration: transitionDuration,
-        useNativeDriver: true,
-      }).start();
-      onLoad?.(event);
-    };
+    const onLoadHandler = useCallback(
+      (event: NativeSyntheticEvent<ImageLoadEventData>) => {
+        if (!transition) {
+          placeholderOpacity.setValue(0);
+          return;
+        }
+        Animated.timing(placeholderOpacity, {
+          toValue: 0,
+          duration: transitionDuration,
+          useNativeDriver: true,
+        }).start();
+        onLoad?.(event);
+      },
+      [transition, placeholderOpacity, transitionDuration, onLoad]
+    );
 
-    const hasImage = Boolean(attributes.source);
+    const hasImage = Boolean(props.source);
 
     return (
       <Component
@@ -74,9 +79,7 @@ export const Image = React.forwardRef<
         <ImageComponent
           ref={ref}
           testID="RNE__Image"
-          transition={true}
-          transitionDuration={360}
-          {...attributes}
+          {...{ ...props, ...{ transition, transitionDuration } }}
           onLoad={onLoadHandler}
           style={StyleSheet.flatten([StyleSheet.absoluteFill, style])}
         />
@@ -103,7 +106,7 @@ export const Image = React.forwardRef<
             {PlaceholderContent}
           </View>
         </Animated.View>
-        {/* Children */}
+        {/* Children for Image */}
         <View
           testID="RNE__Image__children__container"
           style={childrenContainerStyle ?? style}
