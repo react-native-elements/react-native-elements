@@ -185,6 +185,11 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
       testID="RNE_SocialIcon"
       {...attributes}
       underlayColor={light ? 'white' : underlayColor || (type && colors[type])}
+      android_ripple={{
+        color: light ? 'white' : underlayColor || (type && colors[type]),
+        borderless: false,
+        radius: -5,
+      }}
       onLongPress={disabled ? null : onLongPress}
       onPress={disabled ? null : onPress}
       disabled={disabled}

@@ -28,12 +28,14 @@ export type SpeedDialProps = {
   /** Add overlay color to the speed dial. */
   overlayColor?: string;
 
-  /** Add childen elements to the speed dial. */
+  /** Add children elements to the speed dial. */
 
   children?: React.ReactChild[];
 
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
+
+  /** Props for Pressable */
   pressableProps?: PressableProps;
 } & FABProps;
 
@@ -78,6 +80,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
 
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
+      {/* For overlay effect */}
       <Pressable
         {...pressableProps}
         onPress={onClose}

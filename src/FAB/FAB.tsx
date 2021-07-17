@@ -18,6 +18,8 @@ export type FABProps = ButtonProps & {
 
   /** Transform Extended Label text to uppercase. */
   upperCase?: boolean;
+
+  /** Style for FAB */
   style?: StyleProp<ViewStyle>;
 };
 
@@ -93,6 +95,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
           disabled && styles.disabled,
           containerStyle,
         ])}
+        /** For Extended FAB */
         titleStyle={[
           styles.label,
           { color: theme?.colors?.white },
