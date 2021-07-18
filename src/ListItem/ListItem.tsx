@@ -106,4 +106,4 @@ export const ListItemBase: RneFunctionComponent<ListItemBaseProps> = (
   );
 };
 
-ListItemBase.displayName = 'ListItemBase';
+ListItemBase.displayName = 'ListItem';

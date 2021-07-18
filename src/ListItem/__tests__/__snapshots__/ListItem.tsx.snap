@@ -15,7 +15,7 @@ exports[`ListItem component should render with avatar 1`] = `
       }
     }
   >
-    <AvatarBase
+    <Avatar
       source={
         Object {
           "uri": "avatar_uri",

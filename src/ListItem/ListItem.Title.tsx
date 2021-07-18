@@ -5,7 +5,10 @@ import Text from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-type TitleProps = TextProps & { right?: boolean };
+type TitleProps = TextProps & {
+  /**Add right title. */
+  right?: boolean;
+};
 
 export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
   style,
@@ -47,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemTitle.displayName = 'ListItemTitle';
+ListItemTitle.displayName = 'ListItem.Title';

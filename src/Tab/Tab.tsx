@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
-import { TabItemProps } from './TabItem';
+import { TabItemProps } from './Tab.Item';
 
 export type TabBaseProps = ViewProps & {
   /** Child position index value. */
@@ -123,4 +123,4 @@ const styles = StyleSheet.create({
   },
 });
 
-TabBase.displayName = 'TabBase';
+TabBase.displayName = 'Tab';

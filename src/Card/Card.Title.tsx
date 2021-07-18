@@ -39,4 +39,4 @@ export const CardTitle: RneFunctionComponent<CardTitleProps> = ({
   />
 );
 
-CardTitle.displayName = 'CardTitle';
+CardTitle.displayName = 'Card.Title';

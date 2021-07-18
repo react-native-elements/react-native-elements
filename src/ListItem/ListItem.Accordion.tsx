@@ -1,7 +1,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import { ListItemBase, ListItemBaseProps } from './ListItemBase';
-import { ListItemContent } from './ListItemContent';
+import { ListItemBase, ListItemBaseProps } from './ListItem';
+import { ListItemContent } from './ListItem.Content';
 import { Icon, IconNode, IconProps } from '../Icon';
 import { RneFunctionComponent } from '../helpers';
 
@@ -117,4 +117,4 @@ export const ListItemAccordion: RneFunctionComponent<ListItemAccordionProps> = (
   );
 };
 
-ListItemAccordion.displayName = 'ListItemAccordion';
+ListItemAccordion.displayName = 'ListItem.Accordion';

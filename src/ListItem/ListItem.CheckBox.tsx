@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemCheckBox.displayName = 'ListItemCheckBox';
+ListItemCheckBox.displayName = 'ListItem.CheckBox';

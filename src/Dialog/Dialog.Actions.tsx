@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-DialogActions.displayName = 'DialogActions';
+DialogActions.displayName = 'Dialog.Actions';

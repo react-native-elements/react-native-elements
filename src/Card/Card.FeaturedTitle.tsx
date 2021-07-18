@@ -37,4 +37,4 @@ export const CardFeaturedTitle: RneFunctionComponent<CardFeaturedTitleProps> = (
   />
 );
 
-CardFeaturedTitle.displayName = 'CardFeaturedTitle';
+CardFeaturedTitle.displayName = 'Card.FeaturedTitle';
