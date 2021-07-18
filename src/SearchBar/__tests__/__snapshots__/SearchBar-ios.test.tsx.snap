@@ -42,6 +42,65 @@ exports[`iOS SearchBar component should render without issues 1`] = `
         }
       }
     >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 40,
+            "justifyContent": "center",
+            "marginLeft": 8,
+            "marginVertical": 4,
+            "paddingRight": 4,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            replaceTheme={[Function]}
+            updateTheme={[Function]}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "black",
+                      "fontSize": 20,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    Object {
+                      "fontFamily": "Ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+                testID="iconIcon"
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
       <TextInput
         allowFontScaling={true}
         editable={true}
@@ -136,7 +195,9 @@ exports[`iOS SearchBar component should render without issues 1`] = `
               "textAlign": "center",
             }
           }
-        />
+        >
+          Cancel
+        </Text>
       </View>
     </View>
   </View>
