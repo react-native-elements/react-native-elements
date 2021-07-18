@@ -11,6 +11,7 @@ import {
   StyleProp,
   TextStyle,
   TextProps,
+  TextInputProps,
 } from 'react-native';
 import { renderNode, patchWebProps } from '../helpers';
 import { fonts } from '../config';
@@ -76,11 +77,12 @@ export const Input = React.forwardRef<
     },
     ref
   ) => {
+    const root = React.useRef<InputRef>();
     const { current: shakeAnimationValue } = React.useRef(
       new Animated.Value(0)
     );
 
-    const shake = () => {
+    const shake = React.useCallback(() => {
       shakeAnimationValue.setValue(0);
       Animated.timing(shakeAnimationValue, {
         duration: 375,
@@ -88,16 +90,17 @@ export const Input = React.forwardRef<
         easing: Easing.bounce,
         useNativeDriver: true,
       }).start();
-    };
+    }, [shakeAnimationValue]);
 
-    React.useImperativeHandle(
-      ref,
-      () =>
-        ({
-          ...(ref as React.MutableRefObject<InputRef>).current,
-          shake,
-        } as InputRef)
-    );
+    React.useImperativeHandle<TextInput, any>(ref, () => ({
+      focus: () => root.current?.focus(),
+      clear: () => root.current?.clear(),
+      setNativeProps: (args: TextInputProps) =>
+        root.current.setNativeProps(args),
+      isFocused: () => root.current?.isFocused(),
+      blur: () => root.current?.blur(),
+      shake,
+    }));
 
     const translateX = shakeAnimationValue.interpolate({
       inputRange: [0, 0.5, 1, 1.5, 2, 2.5, 3],
@@ -155,7 +158,7 @@ export const Input = React.forwardRef<
             testID="RNE__Input__text-input"
             underlineColorAndroid="transparent"
             editable={!disabled}
-            ref={ref}
+            ref={root}
             style={StyleSheet.flatten([
               {
                 color: theme?.colors?.black,
