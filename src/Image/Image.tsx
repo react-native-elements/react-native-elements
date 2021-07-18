@@ -49,6 +49,7 @@ export const Image = React.forwardRef<
     },
     ref
   ) => {
+    const root = React.useRef<ImageNative>(null);
     const { current: placeholderOpacity } = React.useRef(new Animated.Value(1));
 
     const onLoadHandler = useCallback(
@@ -67,6 +68,13 @@ export const Image = React.forwardRef<
       [transition, placeholderOpacity, transitionDuration, onLoad]
     );
 
+    React.useImperativeHandle<ImageNative, any>(ref, () => ({
+      focus: () => root?.current?.focus(),
+      setNativeProps: (args: ImageProps) => root.current.setNativeProps(args),
+      blur: () => root.current.blur(),
+      measure: root.current.measure,
+    }));
+
     const hasImage = Boolean(props.source);
 
     return (
@@ -77,7 +85,7 @@ export const Image = React.forwardRef<
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <ImageComponent
-          ref={ref}
+          ref={root}
           testID="RNE__Image"
           {...{ ...props, ...{ transition, transitionDuration } }}
           onLoad={onLoadHandler}
