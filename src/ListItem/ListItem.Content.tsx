@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemContent.displayName = 'ListItemContent';
+ListItemContent.displayName = 'ListItem.Content';

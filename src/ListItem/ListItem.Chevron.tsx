@@ -30,4 +30,4 @@ export const ListItemChevron: RneFunctionComponent<ListItemChevronProps> = ({
   );
 };
 
-ListItemChevron.displayName = 'ListItemChevron';
+ListItemChevron.displayName = 'ListItem.Chevron';

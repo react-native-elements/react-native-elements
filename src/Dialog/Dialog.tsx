@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-DialogBase.displayName = 'DialogBase';
+DialogBase.displayName = 'Dialog';

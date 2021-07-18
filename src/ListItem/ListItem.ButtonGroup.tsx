@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-ListItemButtonGroup.displayName = 'ListItemButtonGroup';
+ListItemButtonGroup.displayName = 'ListItem.ButtonGroup';

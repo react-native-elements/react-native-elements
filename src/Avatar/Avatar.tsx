@@ -205,4 +205,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AvatarBase.displayName = 'AvatarBase';
+AvatarBase.displayName = 'Avatar';

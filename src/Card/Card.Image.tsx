@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
   },
 });
 
-CardImage.displayName = 'CardImage';
+CardImage.displayName = 'Card.Image';
