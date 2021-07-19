@@ -1,12 +1,12 @@
 import React from 'react';
 import Avatar from '..';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
-import { renderWithTheme, wrapperFindByType } from '../../../.ci/testHelper';
+import { renderWithTheme, renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 import { avatarSizes } from './../Avatar';
 import { Icon } from '../../Icon';
 
-describe('Avatar { wrapper }', () => {
+describe('Avatar Component', () => {
   jest.useFakeTimers();
 
   it('should render without issues', () => {
@@ -17,7 +17,7 @@ describe('Avatar { wrapper }', () => {
   });
 
   it('renders rounded', () => {
-    const { wrapper } = wrapperFindByType(
+    const { wrapper } = renderWithWrapper(
       <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} rounded />
     );
     expect(wrapper.findByType(View).props.style.borderRadius).toBe(
@@ -26,7 +26,7 @@ describe('Avatar { wrapper }', () => {
   });
 
   it('allows custom imageProps', () => {
-    const { wrapper } = wrapperFindByType(
+    const { wrapper } = renderWithWrapper(
       <Avatar
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
         imageProps={{ resizeMode: 'contain' }}
@@ -36,7 +36,7 @@ describe('Avatar { wrapper }', () => {
   });
 
   it('renders touchable if onPress given', () => {
-    const { wrapper } = wrapperFindByType(
+    const { wrapper } = renderWithWrapper(
       <Avatar
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
         onPress={() => null}
@@ -51,7 +51,7 @@ describe('Avatar { wrapper }', () => {
         source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' },
       },
     };
-    const { wrapper } = wrapperFindByType(<Avatar />, theme);
+    const { wrapper } = renderWithWrapper(<Avatar />, '', theme);
     expect(wrapper.findByType(Image).props.source.uri).toBe(
       'https://i.imgur.com/0y8Ftya.jpg'
     );
@@ -64,8 +64,8 @@ describe('Avatar { wrapper }', () => {
       ${'medium'}
       ${'large'}
       ${'xlarge'}
-    `('accepts $type', ({ size }) => {
-      const { wrapper } = wrapperFindByType(
+    `('accepts $size', ({ size }) => {
+      const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           size={size}
@@ -78,7 +78,7 @@ describe('Avatar { wrapper }', () => {
     });
 
     it('accepts a number', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} size={30} />
       );
       expect(wrapper.findByType(View).props.style).toMatchObject({
@@ -88,7 +88,7 @@ describe('Avatar { wrapper }', () => {
     });
 
     it('default', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
       );
       expect(wrapper.findByType(View).props.style).toMatchObject({
@@ -100,7 +100,7 @@ describe('Avatar { wrapper }', () => {
 
   describe('Placeholders', () => {
     it('renders title if given', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           title="John"
@@ -109,21 +109,20 @@ describe('Avatar { wrapper }', () => {
       expect(wrapper.findByType(Text).props.children).toBe('John');
     });
     it('renders custom', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           renderPlaceholderContent={
             <Text testID="my-custom-placeholder">Hey</Text>
           }
         />,
-        {},
         'my-custom-placeholder'
       );
       expect(wrapper.props.children).toBe('Hey');
     });
 
     it('renders using icon prop', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           icon={{
@@ -143,7 +142,7 @@ describe('Avatar { wrapper }', () => {
     });
 
     it('renders using icon with defaults', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           iconStyle={{
@@ -160,7 +159,7 @@ describe('Avatar { wrapper }', () => {
     });
 
     it('renders using image with imageProps', () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           imageProps={{ style: { backgroundColor: 'red' } }}
@@ -176,40 +175,38 @@ describe('Avatar { wrapper }', () => {
     });
 
     it("shouldn't show placeholder if not using source", () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           size="medium"
           overlayContainerStyle={{ backgroundColor: 'pink' }}
           title="MD"
         />,
-        {},
         'RNE__Image__placeholder'
       );
       expect(wrapper.props.style.backgroundColor).toBe('transparent');
     });
 
     it("shouldn't show placeholder if source doesn't contain uri property", () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           size="medium"
           overlayContainerStyle={{ backgroundColor: 'pink' }}
           title="MD"
           source={{}}
         />,
-        {},
         'RNE__Image__placeholder'
       );
       expect(wrapper.props.style.backgroundColor).toBe('transparent');
     });
+
     it("shouldn't show placeholder if source exists but uri is undefined", () => {
-      const { wrapper } = wrapperFindByType(
+      const { wrapper } = renderWithWrapper(
         <Avatar
           size="medium"
           overlayContainerStyle={{ backgroundColor: 'pink' }}
           title="MD"
           source={{ uri: undefined }}
         />,
-        {},
         'RNE__Image__placeholder'
       );
       expect(wrapper.props.style.backgroundColor).toBe('transparent');

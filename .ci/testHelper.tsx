@@ -17,15 +17,17 @@ export const renderWithTheme = (
   );
 };
 
-// for getting findByType e.g. wrapper.findByType(Icon)
-export const wrapperFindByType = (
+// for getting findByType e.g. wrapper.findByType(Icon) see implementation in Avatar Component
+export const renderWithWrapper = (
   children: React.ReactChild,
+  wrapperTestID?: string,
   theme: Partial<FullTheme> = {},
-  wrapperTestID?: string
+  options?: RenderOptions
 ) => {
   const { queryByTestId, ...otherRenderApi } = renderWithTheme(
     <View testID="wrapper">{children}</View>,
-    theme
+    theme,
+    options
   );
   const wrapper = queryByTestId(wrapperTestID || 'wrapper');
   return { wrapper, queryByTestId, ...otherRenderApi };

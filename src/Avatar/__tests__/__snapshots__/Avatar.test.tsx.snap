@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar { wrapper } should render without issues 1`] = `
+exports[`Avatar Component should render without issues 1`] = `
 <View
   replaceTheme={[Function]}
   style={
