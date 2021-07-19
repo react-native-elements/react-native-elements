@@ -1,8 +1,8 @@
 import React from 'react';
+import { View } from 'react-native';
 import { render, RenderOptions } from '@testing-library/react-native';
 import { ThemeProvider, FullTheme, colors } from '../src/config';
 import deepmerge from 'deepmerge';
-import { View } from 'react-native';
 
 export const renderWithTheme = (
   children: React.ReactChild,
@@ -17,11 +17,16 @@ export const renderWithTheme = (
   );
 };
 
-// used for getting findByType e.g. wrapper.findByType(View)
-export const wrapperFindByType = (children: any) => {
-  const { queryByTestId } = renderWithTheme(
-    <View testID="wrapper">{children}</View>
+// for getting findByType e.g. wrapper.findByType(Icon)
+export const wrapperFindByType = (
+  children: React.ReactChild,
+  theme: Partial<FullTheme> = {},
+  wrapperTestID?: string
+) => {
+  const { queryByTestId, ...otherRenderApi } = renderWithTheme(
+    <View testID="wrapper">{children}</View>,
+    theme
   );
-  const wrapper = queryByTestId('wrapper');
-  return wrapper;
+  const wrapper = queryByTestId(wrapperTestID || 'wrapper');
+  return { wrapper, queryByTestId, ...otherRenderApi };
 };
