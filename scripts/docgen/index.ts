@@ -25,4 +25,11 @@ Object.keys(componentDocs).map((componentDisplayName) => {
     path.join(__dirname, `../../.docgen/${componentName}/${fileName}.md`),
     markdownData
   );
+  fs.writeJSONSync(
+    path.join(__dirname, `../../.docgen/${componentName}/${fileName}.json`),
+    componentDocs[componentDisplayName],
+    {
+      spaces: 2,
+    }
+  );
 });
