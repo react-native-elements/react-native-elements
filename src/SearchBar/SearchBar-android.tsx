@@ -132,6 +132,7 @@ export class SearchBarAndroid extends Component<
 
     return (
       <View
+        testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
             backgroundColor: theme?.colors?.white,
@@ -142,7 +143,7 @@ export class SearchBarAndroid extends Component<
         ])}
       >
         <Input
-          testID="searchInput"
+          testID="RNE__SearchBar"
           renderErrorMessage={false}
           {...attributes}
           onFocus={this.onFocus}
