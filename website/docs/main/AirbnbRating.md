@@ -49,7 +49,7 @@ Default is 5
 
 | Type   | Default |
 | ------ | ------- |
-| number |         |
+| number | None    |
 
 ---
 
@@ -61,7 +61,7 @@ Default is 3
 
 | Type   | Default |
 | ------ | ------- |
-| number |         |
+| number | None    |
 
 ---
 
@@ -73,7 +73,7 @@ Default is false
 
 | Type    | Default |
 | ------- | ------- |
-| boolean |         |
+| boolean | None    |
 
 ---
 
@@ -83,7 +83,7 @@ Callback method when the user finishes rating. Gives you the final rating value 
 
 | Type                  | Default |
 | --------------------- | ------- |
-| (number: any) => void |         |
+| (number: any) => void | None    |
 
 ---
 
@@ -95,7 +95,7 @@ Default is #f1c40f
 
 | Type   | Default |
 | ------ | ------- |
-| string |         |
+| string | None    |
 
 ---
 
@@ -107,7 +107,7 @@ Default is 40
 
 | Type   | Default |
 | ------ | ------- |
-| number |         |
+| number | None    |
 
 ---
 
@@ -121,7 +121,7 @@ Default is ['Terrible', 'Bad', 'Okay', 'Good', 'Great']
 
 | Type     | Default |
 | -------- | ------- |
-| string[] |         |
+| string[] | None    |
 
 ---
 
@@ -133,7 +133,7 @@ Default is #004666
 
 | Type   | Default |
 | ------ | ------- |
-| string |         |
+| string | None    |
 
 ---
 
@@ -145,7 +145,7 @@ Default is true
 
 | Type    | Default |
 | ------- | ------- |
-| boolean |         |
+| boolean | None    |
 
 ---
 
@@ -157,7 +157,7 @@ Default is 40
 
 | Type   | Default |
 | ------ | ------- |
-| number |         |
+| number | None    |
 
 ---
 
@@ -167,9 +167,9 @@ Style for star container
 
 Default is none
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -179,6 +179,6 @@ Pass in a custom base image source
 
 | Type   | Default |
 | ------ | ------- |
-| string |         |
+| string | None    |
 
 ---

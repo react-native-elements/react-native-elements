@@ -46,12 +46,12 @@ Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react
 
 Component for container.
 
-| Type  | Default                                   |
-| ----- | ----------------------------------------- |
-| `any` | `linearGradientProps \|| !backgroundImage |
+| Type | Default                |
+| ---- | ---------------------- |
+| any  | linearGradientProps \| | !backgroundImage |
 
     ? View
-    : ImageBackground` |
+    : ImageBackground |
 
 ---
 
@@ -59,9 +59,9 @@ Component for container.
 
 Sets backgroundColor of the parent component.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -69,9 +69,9 @@ Sets backgroundColor of the parent component.
 
 Sets backgroundImage for parent component.
 
-| Type                  | Default |
-| --------------------- | ------- |
-| `ImageSourcePropType` | None    |
+| Type                | Default |
+| ------------------- | ------- |
+| ImageSourcePropType | None    |
 
 ---
 
@@ -79,9 +79,9 @@ Sets backgroundImage for parent component.
 
 Styling for backgroundImage in the main container.
 
-| Type         | Default |
-| ------------ | ------- |
-| `ImageStyle` | None    |
+| Type       | Default |
+| ---------- | ------- |
+| ImageStyle | None    |
 
 ---
 
@@ -89,9 +89,9 @@ Styling for backgroundImage in the main container.
 
 Sets the color of the status bar text.
 
-| Type             | Default |
-| ---------------- | ------- |
-| `StatusBarStyle` | None    |
+| Type           | Default |
+| -------------- | ------- |
+| StatusBarStyle | None    |
 
 ---
 
@@ -99,9 +99,9 @@ Sets the color of the status bar text.
 
 Define your center component here.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -109,9 +109,9 @@ Define your center component here.
 
 Styling for container around the centerComponent.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -119,9 +119,9 @@ Styling for container around the centerComponent.
 
 Add children component to the header.
 
-| Type                    | Default |
-| ----------------------- | ------- |
-| `Element[] & ReactNode` | `[]`    |
+| Type                  | Default |
+| --------------------- | ------- |
+| Element[] & ReactNode | []      |
 
 ---
 
@@ -129,9 +129,9 @@ Add children component to the header.
 
 Styling around the main container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -139,9 +139,9 @@ Styling around the main container.
 
 Elevation for header
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -149,9 +149,9 @@ Elevation for header
 
 Define your left component here.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -159,9 +159,9 @@ Define your left component here.
 
 Styling for container around the leftComponent.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -169,9 +169,9 @@ Styling for container around the leftComponent.
 
 Displays a linear gradient. See [usage](#lineargradient-usage).
 
-| Type     | Default |
-| -------- | ------- |
-| `Object` | None    |
+| Type   | Default |
+| ------ | ------- |
+| Object | None    |
 
 ---
 
@@ -179,9 +179,9 @@ Displays a linear gradient. See [usage](#lineargradient-usage).
 
 Alignment for title.
 
-| Type                           | Default  |
-| ------------------------------ | -------- |
-| `"center" \| "left" | "right"` | `center` |
+| Type              | Default  |
+| ----------------- | -------- |
+| "left" \| "right" | "center" | center |
 
 ---
 
@@ -189,9 +189,9 @@ Alignment for title.
 
 Define your right component here.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -199,9 +199,9 @@ Define your right component here.
 
 Styling for container around the rightComponent.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -209,8 +209,8 @@ Styling for container around the rightComponent.
 
 Accepts all props for StatusBar.
 
-| Type             | Default |
-| ---------------- | ------- |
-| `StatusBarProps` | None    |
+| Type           | Default |
+| -------------- | ------- |
+| StatusBarProps | None    |
 
 ---

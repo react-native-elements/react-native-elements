@@ -33,9 +33,9 @@ Overlays are an easy way to inform or request information from the user.
 
 Override React Native `Modal` component (usable for web-platform).
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -43,9 +43,9 @@ Override React Native `Modal` component (usable for web-platform).
 
 Style of the backdrop container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -53,9 +53,9 @@ Style of the backdrop container.
 
 If set to true, the modal will take up the entire screen width and height.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -63,9 +63,9 @@ If set to true, the modal will take up the entire screen width and height.
 
 If true, the overlay is visible.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -73,9 +73,9 @@ If true, the overlay is visible.
 
 Handler for backdrop press (only works when `fullscreen` is false).
 
-| Type         | Default      |
-| ------------ | ------------ |
-| `() => void` | `() => null` |
+| Type       | Default    |
+| ---------- | ---------- |
+| () => void | () => null |
 
 ---
 
@@ -83,8 +83,8 @@ Handler for backdrop press (only works when `fullscreen` is false).
 
 Style of the actual overlay.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---

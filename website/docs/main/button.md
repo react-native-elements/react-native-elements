@@ -51,7 +51,7 @@ Component for user interaction.
 
 | Type | Default |
 | ---- | ------- |
-| any  |         |
+| any  | None    |
 
 ---
 
@@ -61,7 +61,7 @@ Component for container.
 
 | Type | Default |
 | ---- | ------- |
-| any  |         |
+| any  | None    |
 
 ---
 
@@ -69,9 +69,9 @@ Component for container.
 
 Add additional styling for button component.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -79,9 +79,9 @@ Add additional styling for button component.
 
 Styling for Component container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -101,9 +101,9 @@ Disables user interaction.
 
 Style of the button when disabled.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -111,9 +111,9 @@ Style of the button when disabled.
 
 Style of the title when disabled.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -123,7 +123,7 @@ Displays a centered icon (when no title) or to the left (with text). (can be use
 
 | Type | Default |
 | ---- | ------- |
-| any  |         |
+| any  | None    |
 
 ---
 
@@ -131,9 +131,9 @@ Displays a centered icon (when no title) or to the left (with text). (can be use
 
 Styling for Icon Component container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -163,7 +163,7 @@ Displays a linear gradient. See [usage](#lineargradient-usage).
 
 | Type   | Default |
 | ------ | ------- |
-| object |         |
+| object | None    |
 
 ---
 
@@ -183,7 +183,7 @@ Add additional props for ActivityIndicator component.
 
 | Type                   | Default |
 | ---------------------- | ------- |
-| ActivityIndicatorProps |         |
+| ActivityIndicatorProps | None    |
 
 ---
 
@@ -191,9 +191,9 @@ Add additional props for ActivityIndicator component.
 
 Add additional styling for loading component.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -223,7 +223,7 @@ Add additional props for Text component.
 
 | Type      | Default |
 | --------- | ------- |
-| TextProps |         |
+| TextProps | None    |
 
 ---
 
@@ -231,9 +231,9 @@ Add additional props for Text component.
 
 Add additional styling for title component.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 

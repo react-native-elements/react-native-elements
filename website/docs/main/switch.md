@@ -24,7 +24,7 @@ This component inherits [all native Switch props that come with a standard React
 
 ## Props
 
-[color](#color)
+- [color](#color)
 
 ## Reference
 

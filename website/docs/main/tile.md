@@ -45,9 +45,9 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 Custom ImageComponent for Tile.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -59,9 +59,9 @@ Defaults to 0.2
 
 Number passed to control opacity on press.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | None    |
+| Type   | Default |
+| ------ | ------- |
+| number | None    |
 
 ---
 
@@ -69,9 +69,9 @@ Number passed to control opacity on press.
 
 Text inside the tilt when tile is featured.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -79,9 +79,9 @@ Text inside the tilt when tile is featured.
 
 Styling for the caption (optional); You only use this if `caption` is a string.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -89,9 +89,9 @@ Styling for the caption (optional); You only use this if `caption` is a string.
 
 Styling for the outer tile container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -99,9 +99,9 @@ Styling for the outer tile container.
 
 Styling for bottom container when not featured tile.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -109,9 +109,9 @@ Styling for bottom container when not featured tile.
 
 Changes the look of the tile.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -119,9 +119,9 @@ Changes the look of the tile.
 
 Height for the tile.
 
-| Type     | Default       |
-| -------- | ------------- |
-| `number` | `width * 0.8` |
+| Type   | Default      |
+| ------ | ------------ |
+| number | width \* 0.8 |
 
 ---
 
@@ -129,9 +129,9 @@ Height for the tile.
 
 Icon Component Props.
 
-| Type                                                                                                                                                        | Default |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `TouchableHighlightProps & { name?: string; color?: string; size?: number; type?: string; iconStyle?: StyleProp<TextStyle>; } & IconButtonProps & { ...; }` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -139,9 +139,9 @@ Icon Component Props.
 
 Styling for the outer icon container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -149,9 +149,9 @@ Styling for the outer icon container.
 
 Styling for the image.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -159,9 +159,9 @@ Styling for the image.
 
 Optional properties to pass to the image if provided e.g "resizeMode".
 
-| Type                  | Default |
-| --------------------- | ------- |
-| `Partial<ImageProps>` | `{}`    |
+| Type               | Default |
+| ------------------ | ------- |
+| ImageProps(Object) | {}      |
 
 ---
 
@@ -169,9 +169,9 @@ Optional properties to pass to the image if provided e.g "resizeMode".
 
 Source for the image.
 
-| Type                            | Default |
-| ------------------------------- | ------- |
-| `string \| ImageSourcePropType` | None    |
+| Type                          | Default |
+| ----------------------------- | ------- |
+| string \| ImageSourcePropType | None    |
 
 ---
 
@@ -179,9 +179,9 @@ Source for the image.
 
 Styling for the overlay container when using featured tile.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -189,9 +189,9 @@ Styling for the overlay container when using featured tile.
 
 Text inside the tile.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -199,9 +199,9 @@ Text inside the tile.
 
 Number of lines for Title.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | None    |
+| Type   | Default |
+| ------ | ------- |
+| number | None    |
 
 ---
 
@@ -209,9 +209,9 @@ Number of lines for Title.
 
 Styling for the title.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -219,8 +219,8 @@ Styling for the title.
 
 Width for the tile.
 
-| Type     | Default                          |
-| -------- | -------------------------------- |
-| `number` | `Dimensions.get('window').width` |
+| Type   | Default                        |
+| ------ | ------------------------------ |
+| number | Dimensions.get('window').width |
 
 ---

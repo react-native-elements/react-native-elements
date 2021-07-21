@@ -34,9 +34,9 @@ Also receives all [View](https://reactnative.dev/docs/view#props) props
 
 Color for linear progress.
 
-| Type     | Default     |
-| -------- | ----------- |
-| `string` | `secondary` |
+| Type   | Default   |
+| ------ | --------- |
+| string | secondary |
 
 ---
 
@@ -44,9 +44,9 @@ Color for linear progress.
 
 Add additional styling for linear progress component.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -54,9 +54,9 @@ Add additional styling for linear progress component.
 
 Track color for linear progress.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -64,9 +64,9 @@ Track color for linear progress.
 
 The value of the progress indicator for the determinate variant. Value between 0 and 1.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `0`     |
+| Type   | Default |
+| ------ | ------- |
+| number | 0       |
 
 ---
 
@@ -74,8 +74,8 @@ The value of the progress indicator for the determinate variant. Value between 0
 
 Type of button.
 
-| Type                               | Default         |
-| ---------------------------------- | --------------- |
-| `"determinate" \| "indeterminate"` | `indeterminate` |
+| Type                             | Default       |
+| -------------------------------- | ------------- |
+| "determinate" \| "indeterminate" | indeterminate |
 
 ---

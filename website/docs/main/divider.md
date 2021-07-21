@@ -24,14 +24,14 @@ Also receives all [View](https://reactnative.dev/docs/view#props) props.
 
 ## Props
 
-[color](#color)
-[inset](#inset)
-[insetType](#insetType)
-[orientation](#orientation)
-[style](#style)
-[subHeader](#subHeader)
-[subHeaderStyle](#subHeaderStyle)
-[width](#width)
+- [color](#color)
+- [inset](#inset)
+- [insetType](#insetType)
+- [orientation](#orientation)
+- [style](#style)
+- [subHeader](#subHeader)
+- [subHeaderStyle](#subHeaderStyle)
+- [width](#width)
 
 ## Reference
 
@@ -41,7 +41,7 @@ The color of the component.
 
 | Type   | Default |
 | ------ | ------- |
-| string |         |
+| string | None    |
 
 ---
 
@@ -59,9 +59,9 @@ Applies inset to the divider.
 
 Applies inset to a specific direction to the divider.
 
-| Type               | Default |
-| ------------------ | ------- |
-| "middle" \| "left" | "right" | left |
+| Type              | Default  |
+| ----------------- | -------- |
+| "left" \| "right" | "middle" | left |
 
 ---
 
@@ -79,9 +79,9 @@ Apply orientation to the divider.
 
 Applies style to the divider.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -91,7 +91,7 @@ Adds subHeader text to the divider.
 
 | Type   | Default |
 | ------ | ------- |
-| string |         |
+| string | None    |
 
 ---
 
@@ -99,9 +99,9 @@ Adds subHeader text to the divider.
 
 Adds style to the subHeader text of the divider
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -111,6 +111,6 @@ Apply width to the divider.
 
 | Type   | Default |
 | ------ | ------- |
-| number |         |
+| number | None    |
 
 ---

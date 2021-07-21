@@ -47,9 +47,9 @@ It provides a clear visual of either a true or false choice.
 
 Specify React Native component for main button.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -57,9 +57,9 @@ Specify React Native component for main button.
 
 Aligns checkbox to center.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -67,9 +67,9 @@ Aligns checkbox to center.
 
 Flag for checking the icon.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -77,9 +77,9 @@ Flag for checking the icon.
 
 Default checked color.
 
-| Type     | Default                  |
-| -------- | ------------------------ |
-| `string` | `theme?.colors?.primary` |
+| Type   | Default                |
+| ------ | ---------------------- |
+| string | theme?.colors?.primary |
 
 ---
 
@@ -87,9 +87,9 @@ Default checked color.
 
 Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)).
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -97,9 +97,9 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)).
 
 Specify a custom checked message.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -107,9 +107,9 @@ Specify a custom checked message.
 
 Style of main container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -117,9 +117,9 @@ Style of main container.
 
 Specify different font family.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -127,19 +127,19 @@ Specify different font family.
 
 Moves icon to right of text.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
 ### iconType
 
-Type of icon set. [Supported sets here](icon.md#available-icon-sets).
+Type of icon set. [Supported sets here](icon#available-icon-sets).
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -147,9 +147,9 @@ Type of icon set. [Supported sets here](icon.md#available-icon-sets).
 
 onPress function for checkbox.
 
-| Type         | Default |
-| ------------ | ------- |
-| `() => void` | None    |
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
 
 ---
 
@@ -157,9 +157,9 @@ onPress function for checkbox.
 
 onLongPress function for checkbox.
 
-| Type         | Default |
-| ------------ | ------- |
-| `() => void` | None    |
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
 
 ---
 
@@ -167,9 +167,9 @@ onLongPress function for checkbox.
 
 Aligns checkbox to right.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -177,9 +177,9 @@ Aligns checkbox to right.
 
 Size of the checkbox.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | None    |
+| Type   | Default |
+| ------ | ------- |
+| number | None    |
 
 ---
 
@@ -187,9 +187,9 @@ Size of the checkbox.
 
 Style of text.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -197,9 +197,9 @@ Style of text.
 
 Title of checkbox.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -207,9 +207,9 @@ Title of checkbox.
 
 Additional props for the title Text component.
 
-| Type        | Default |
-| ----------- | ------- |
-| `TextProps` | `{}`    |
+| Type      | Default |
+| --------- | ------- |
+| TextProps | {}      |
 
 ---
 
@@ -217,9 +217,9 @@ Additional props for the title Text component.
 
 Default unchecked color.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -227,9 +227,9 @@ Default unchecked color.
 
 Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -237,8 +237,8 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 
 Style for the wrapper of checkbox.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---

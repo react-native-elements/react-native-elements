@@ -48,9 +48,9 @@ Sliders allow users to select a value from a fixed set of values using drag util
 
 If true, thumb will respond and jump to any touch along the track.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -58,9 +58,9 @@ If true, thumb will respond and jump to any touch along the track.
 
 Set to true if you want to use the default 'spring' animation.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -68,9 +68,9 @@ Set to true if you want to use the default 'spring' animation.
 
 Used to configure the animation parameters. These are the same parameters in the [Animated library](https://reactnative.dev/docs/animations.html).
 
-| Type                                             | Default |
-| ------------------------------------------------ | ------- |
-| `TimingAnimationConfig \| SpringAnimationConfig` | None    |
+| Type                                           | Default |
+| ---------------------------------------------- | ------- |
+| TimingAnimationConfig \| SpringAnimationConfig | None    |
 
 ---
 
@@ -78,9 +78,9 @@ Used to configure the animation parameters. These are the same parameters in the
 
 Set to 'spring' or 'timing' to use one of those two types of animations with the default [animation properties](https://reactnative.dev/docs/animations.html).
 
-| Type                   | Default  |
-| ---------------------- | -------- |
-| `"timing" \| "spring"` | `timing` |
+| Type                 | Default |
+| -------------------- | ------- |
+| "spring" \| "timing" | timing  |
 
 ---
 
@@ -88,9 +88,9 @@ Set to 'spring' or 'timing' to use one of those two types of animations with the
 
 Apply style to the container of the slider.
 
-| Type                                                                                                                                                                                                                                                                                                      | Default |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `{ containerHorizontal: { height: number; justifyContent: "center"; }; containerVertical: { width: number; flexDirection: "column"; alignItems: "center"; }; track: { borderRadius: number; }; trackHorizontal: { ...; }; trackVertical: { ...; }; touchArea: { ...; }; debugThumbTouchArea: { ...; }; }` | None    |
+| Type                                                                                                                                                                                                                                                                                                    | Default |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| { containerHorizontal: { height: number; justifyContent: "center"; }; containerVertical: { width: number; flexDirection: "column"; alignItems: "center"; }; track: { borderRadius: number; }; trackHorizontal: { ...; }; trackVertical: { ...; }; touchArea: { ...; }; debugThumbTouchArea: { ...; }; } | None    |
 
 ---
 
@@ -98,9 +98,9 @@ Apply style to the container of the slider.
 
 Set this to true to visually see the thumb touch rect in green.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -108,9 +108,9 @@ Set this to true to visually see the thumb touch rect in green.
 
 If true the user won't be able to move the slider.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -118,9 +118,9 @@ If true the user won't be able to move the slider.
 
 The color used for the track to the right of the button.
 
-| Type     | Default   |
-| -------- | --------- |
-| `string` | `#b3b3b3` |
+| Type   | Default |
+| ------ | ------- |
+| string | #b3b3b3 |
 
 ---
 
@@ -128,9 +128,9 @@ The color used for the track to the right of the button.
 
 Initial maximum value of the slider.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `1`     |
+| Type   | Default |
+| ------ | ------- |
+| number | 1       |
 
 ---
 
@@ -138,9 +138,9 @@ Initial maximum value of the slider.
 
 The color used for the track to the left of the button.
 
-| Type     | Default   |
-| -------- | --------- |
-| `string` | `#3f3f3f` |
+| Type   | Default |
+| ------ | ------- |
+| string | #3f3f3f |
 
 ---
 
@@ -148,9 +148,9 @@ The color used for the track to the left of the button.
 
 Initial minimum value of the slider.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `0`     |
+| Type   | Default |
+| ------ | ------- |
+| number | 0       |
 
 ---
 
@@ -158,9 +158,9 @@ Initial minimum value of the slider.
 
 Callback called when the user finishes changing the value (e.g. when the slider is released).
 
-| Type                      | Default |
-| ------------------------- | ------- |
-| `(value: number) => void` | None    |
+| Type                    | Default |
+| ----------------------- | ------- |
+| (value: number) => void | None    |
 
 ---
 
@@ -168,9 +168,9 @@ Callback called when the user finishes changing the value (e.g. when the slider 
 
 Callback called when the user starts changing the value (e.g. when the slider is pressed).
 
-| Type                      | Default |
-| ------------------------- | ------- |
-| `(value: number) => void` | None    |
+| Type                    | Default |
+| ----------------------- | ------- |
+| (value: number) => void | None    |
 
 ---
 
@@ -178,9 +178,9 @@ Callback called when the user starts changing the value (e.g. when the slider is
 
 Callback continuously called while the user is dragging the slider.
 
-| Type                      | Default |
-| ------------------------- | ------- |
-| `(value: number) => void` | None    |
+| Type                    | Default |
+| ----------------------- | ------- |
+| (value: number) => void | None    |
 
 ---
 
@@ -188,9 +188,9 @@ Callback continuously called while the user is dragging the slider.
 
 Set the orientation of the slider.
 
-| Type                         | Default      |
-| ---------------------------- | ------------ |
-| `"vertical" \| "horizontal"` | `horizontal` |
+| Type                       | Default    |
+| -------------------------- | ---------- |
+| "vertical" \| "horizontal" | horizontal |
 
 ---
 
@@ -198,9 +198,9 @@ Set the orientation of the slider.
 
 Step value of the slider. The value should be between 0 and maximumValue - minimumValue).
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `0`     |
+| Type   | Default |
+| ------ | ------- |
+| number | 0       |
 
 ---
 
@@ -208,9 +208,9 @@ Step value of the slider. The value should be between 0 and maximumValue - minim
 
 The style applied to the slider container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -218,9 +218,9 @@ The style applied to the slider container.
 
 The props applied to the thumb. Uses `Component` prop which can accept `Animated` components.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -228,9 +228,9 @@ The props applied to the thumb. Uses `Component` prop which can accept `Animated
 
 The style applied to the thumb.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -238,9 +238,9 @@ The style applied to the thumb.
 
 The color used for the thumb.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | `red`   |
+| Type   | Default |
+| ------ | ------- |
+| string | red     |
 
 ---
 
@@ -248,9 +248,9 @@ The color used for the thumb.
 
 The size of the touch area that allows moving the thumb. The touch area has the same center as the visible thumb. This allows to have a visually small thumb while still allowing the user to move it easily.
 
-| Type      | Default                                     |
-| --------- | ------------------------------------------- |
-| `Sizable` | `{ width: THUMB_SIZE, height: THUMB_SIZE }` |
+| Type    | Default                                   |
+| ------- | ----------------------------------------- |
+| Sizable | { width: THUMB_SIZE, height: THUMB_SIZE } |
 
 ---
 
@@ -258,9 +258,9 @@ The size of the touch area that allows moving the thumb. The touch area has the 
 
 The style applied to the track.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -268,8 +268,8 @@ The style applied to the track.
 
 Initial value of the slider.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `0`     |
+| Type   | Default |
+| ------ | ------- |
+| number | 0       |
 
 ---

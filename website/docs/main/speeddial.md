@@ -38,9 +38,9 @@ If the FAB is tapped in this state, it should either initiate its default action
 
 Add childen elements to the speed dial.
 
-| Type                | Default |
-| ------------------- | ------- |
-| `any[] & ReactNode` | None    |
+| Type              | Default |
+| ----------------- | ------- |
+| any[] & ReactNode | None    |
 
 ---
 
@@ -48,9 +48,9 @@ Add childen elements to the speed dial.
 
 Opens the action stack.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -58,9 +58,9 @@ Opens the action stack.
 
 Callback fired when the component requests to be closed.
 
-| Type         | Default    |
-| ------------ | ---------- |
-| `() => void` | `() => {}` |
+| Type       | Default  |
+| ---------- | -------- |
+| () => void | () => {} |
 
 ---
 
@@ -68,9 +68,9 @@ Callback fired when the component requests to be closed.
 
 Callback fired when the component requests to be open.
 
-| Type         | Default    |
-| ------------ | ---------- |
-| `() => void` | `() => {}` |
+| Type       | Default  |
+| ---------- | -------- |
+| () => void | () => {} |
 
 ---
 
@@ -78,9 +78,9 @@ Callback fired when the component requests to be open.
 
 Icon shown on FAB when action stack is open.
 
-| Type  | Default |
-| ----- | ------- |
-| `any` | None    |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
@@ -88,9 +88,9 @@ Icon shown on FAB when action stack is open.
 
 Add overlay color to the speed dial.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -98,8 +98,8 @@ Add overlay color to the speed dial.
 
 The duration for the transition, in milliseconds.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `150`   |
+| Type   | Default |
+| ------ | ------- |
+| number | 150     |
 
 ---

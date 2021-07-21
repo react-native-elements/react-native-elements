@@ -34,9 +34,9 @@ Also receives all [Button](https://reactnativeelements.com/docs/button#props) pr
 
 Change the color of the FAB.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -44,9 +44,9 @@ Change the color of the FAB.
 
 FAB placement at bottom, (optional) use [`style`](#style) in case of custom placement.
 
-| Type                | Default |
-| ------------------- | ------- |
-| `"left" \| "right"` | None    |
+| Type              | Default |
+| ----------------- | ------- |
+| "left" \| "right" | None    |
 
 ---
 
@@ -54,9 +54,9 @@ FAB placement at bottom, (optional) use [`style`](#style) in case of custom plac
 
 Change Size of FAB.
 
-| Type                 | Default |
-| -------------------- | ------- |
-| `"small" \| "large"` | `large` |
+| Type               | Default |
+| ------------------ | ------- |
+| "large" \| "small" | large   |
 
 ---
 
@@ -64,9 +64,9 @@ Change Size of FAB.
 
 Transform Extended Label text to uppercase.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -74,8 +74,8 @@ Transform Extended Label text to uppercase.
 
 Decide the visibility of the FAB.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `true`  |
+| Type    | Default |
+| ------- | ------- |
+| boolean | true    |
 
 ---

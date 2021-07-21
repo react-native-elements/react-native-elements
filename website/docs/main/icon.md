@@ -45,15 +45,9 @@ They are also used for displaying information.
 
 Update React Native Component.
 
-| Type  | Default  |
-| ----- | -------- |
-| `any` | `onPress |
-
-    ? Platform.select<typeof React.Component>({
-        android: TouchableNativeFeedback,
-        default: TouchableHighlight,
-      })
-    : View` |
+| Type | Default                                                            |
+| ---- | ------------------------------------------------------------------ |
+| any  | { android: TouchableNativeFeedback, default: TouchableHighlight, } |
 
 ---
 
@@ -61,9 +55,9 @@ Update React Native Component.
 
 Background color of the button
 
-| Type     | Default     |
-| -------- | ----------- |
-| `string` | `'#007AFF'` |
+| Type   | Default   |
+| ------ | --------- |
+| string | '#007AFF' |
 
 ---
 
@@ -73,9 +67,9 @@ Border radius of the button
 
 Set to 0 to disable.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `5`     |
+| Type   | Default |
+| ------ | ------- |
+| number | 5       |
 
 ---
 
@@ -83,9 +77,9 @@ Set to 0 to disable.
 
 Uses the brands font (FontAwesome5 only).
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -95,9 +89,9 @@ Text and icon color
 
 Use iconStyle or nest a Text component if you need different colors.
 
-| Type     | Default   |
-| -------- | --------- |
-| `string` | `'white'` |
+| Type   | Default |
+| ------ | ------- |
+| string | 'white' |
 
 ---
 
@@ -105,9 +99,9 @@ Use iconStyle or nest a Text component if you need different colors.
 
 Add styling to container holding icon.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -117,9 +111,9 @@ If true, disable all interactions for this component.
 
 Disables onPress events. Only works when `onPress` has a handler.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -127,9 +121,9 @@ Disables onPress events. Only works when `onPress` has a handler.
 
 Style for the button when disabled. Only works when `onPress` has a handler.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -137,9 +131,9 @@ Style for the button when disabled. Only works when `onPress` has a handler.
 
 Provide all props from react-native Icon component.
 
-| Type        | Default |
-| ----------- | ------- |
-| `IconProps` | None    |
+| Type      | Default |
+| --------- | ------- |
+| IconProps | None    |
 
 ---
 
@@ -149,9 +143,9 @@ Styles applied to the icon only
 
 Good for setting margins or a different color.
 
-| Type        | Default             |
-| ----------- | ------------------- |
-| `TextStyle` | `{marginRight: 10}` |
+| Type      | Default           |
+| --------- | ----------------- |
+| TextStyle | {marginRight: 10} |
 
 ---
 
@@ -163,9 +157,9 @@ See Icon Explorer app
 
 {@link https://github.com/oblador/react-native-vector-icons/tree/master/Examples/IconExplorer}
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -173,9 +167,9 @@ See Icon Explorer app
 
 Adds box shadow to button.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -183,9 +177,9 @@ Adds box shadow to button.
 
 Reverses color scheme.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -193,9 +187,9 @@ Reverses color scheme.
 
 Specify reverse icon color.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -203,9 +197,9 @@ Specify reverse icon color.
 
 Size of the icon, can also be passed as fontSize in the style object.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `24`    |
+| Type   | Default |
+| ------ | ------- |
+| number | 24      |
 
 ---
 
@@ -213,9 +207,9 @@ Size of the icon, can also be passed as fontSize in the style object.
 
 Uses the solid font.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -225,9 +219,9 @@ Style prop inherited from TextProps and TouchableWithoutFeedbackProperties
 
 Only exist here so we can have ViewStyle or TextStyle
 
-| Type                     | Default |
-| ------------------------ | ------- |
-| `ViewStyle \| TextStyle` | None    |
+| Type                   | Default |
+| ---------------------- | ------- |
+| ViewStyle \| TextStyle | None    |
 
 ---
 
@@ -235,8 +229,8 @@ Only exist here so we can have ViewStyle or TextStyle
 
 Type of icon set. [Supported sets here](#available-icon-sets).
 
-| Type     | Default    |
-| -------- | ---------- |
-| `string` | `material` |
+| Type   | Default  |
+| ------ | -------- |
+| string | material |
 
 ---

@@ -58,10 +58,8 @@ json2md.converters.propsData = function (input, json2md) {
             headers: ['Type', 'Default'],
             rows: [
               {
-                Type: prop.type ? '`' + prop.type.name + '`' : 'None',
-                Default: prop.defaultValue
-                  ? '`' + prop.defaultValue.value + '`'
-                  : 'None',
+                Type: prop.type ? prop.type.name : 'None',
+                Default: prop.defaultValue ? prop.defaultValue.value : 'None',
               },
             ],
           },

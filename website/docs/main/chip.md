@@ -28,8 +28,8 @@ They may display text, icons, or both.
 
 Type of button.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `"solid" \| "outline"` | None    |
+| Type                 | Default |
+| -------------------- | ------- |
+| "solid" \| "outline" | None    |
 
 ---

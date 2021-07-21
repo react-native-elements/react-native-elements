@@ -46,9 +46,9 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 
 Type of button.
 
-| Type  | Default                                               |
-| ----- | ----------------------------------------------------- |
-| `any` | `onPress \|| onLongPress ? TouchableHighlight : View` |
+| Type | Default    |
+| ---- | ---------- |
+| any  | onPress \| | onLongPress ? TouchableHighlight : View |
 
 ---
 
@@ -56,9 +56,9 @@ Type of button.
 
 Style to render when in loading state.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -66,9 +66,9 @@ Style to render when in loading state.
 
 Creates button with a social icon.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -76,9 +76,9 @@ Creates button with a social icon.
 
 Disables the button, if true.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -86,9 +86,9 @@ Disables the button, if true.
 
 Specify different font family.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -96,9 +96,9 @@ Specify different font family.
 
 Specify text styling.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -106,9 +106,9 @@ Specify text styling.
 
 Specify font weight of title if set as a button with a title.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -116,9 +116,9 @@ Specify font weight of title if set as a button with a title.
 
 Specify the color of the icon.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | `white` |
+| Type   | Default |
+| ------ | ------- |
+| string | white   |
 
 ---
 
@@ -126,9 +126,9 @@ Specify the color of the icon.
 
 Specify the size of the icon.
 
-| Type     | Default |
-| -------- | ------- |
-| `number` | `24`    |
+| Type   | Default |
+| ------ | ------- |
+| number | 24      |
 
 ---
 
@@ -136,19 +136,19 @@ Specify the size of the icon.
 
 Extra styling for icon component.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
 ### iconType
 
-Type of icon set. [Supported sets here](./icon.md#available-icon-sets).
+Type of icon set. [Supported sets here](icon#available-icon-sets).
 
-| Type     | Default        |
-| -------- | -------------- |
-| `string` | `font-awesome` |
+| Type   | Default      |
+| ------ | ------------ |
+| string | font-awesome |
 
 ---
 
@@ -156,9 +156,9 @@ Type of icon set. [Supported sets here](./icon.md#available-icon-sets).
 
 Reverses icon color scheme, setting background to white and icon to primary color.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -166,9 +166,9 @@ Reverses icon color scheme, setting background to white and icon to primary colo
 
 Shows loading indicator.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | None    |
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
 
 ---
 
@@ -176,9 +176,9 @@ Shows loading indicator.
 
 Function to call when pressed for a long time.
 
-| Type         | Default |
-| ------------ | ------- |
-| `() => void` | None    |
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
 
 ---
 
@@ -186,9 +186,9 @@ Function to call when pressed for a long time.
 
 Function to call when button/icon is pressed.
 
-| Type         | Default |
-| ------------ | ------- |
-| `() => void` | None    |
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
 
 ---
 
@@ -196,9 +196,9 @@ Function to call when button/icon is pressed.
 
 Raised adds a drop shadow, set to false to remove.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `true`  |
+| Type    | Default |
+| ------- | ------- |
+| boolean | true    |
 
 ---
 
@@ -206,9 +206,9 @@ Raised adds a drop shadow, set to false to remove.
 
 Decides the size of the activity indicator.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -216,9 +216,9 @@ Decides the size of the activity indicator.
 
 Adds styling to the button.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -226,9 +226,9 @@ Adds styling to the button.
 
 Title if made into a button.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -236,9 +236,9 @@ Title if made into a button.
 
 Social media type.
 
-| Type              | Default |
-| ----------------- | ------- |
-| `SocialMediaType` | None    |
+| Type            | Default |
+| --------------- | ------- |
+| SocialMediaType | None    |
 
 ---
 
@@ -246,8 +246,8 @@ Social media type.
 
 Add Underlay color.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---

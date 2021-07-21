@@ -26,7 +26,7 @@
     "clean-install": "rimraf node_modules && yarn",
     "changelog": "auto-changelog -p",
     "docs": "cd website && yarn start",
-    "build:docs": "ts-node scripts/docgen/index.ts"
+    "build:docs": "ts-node website/scripts/docgen/index"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",

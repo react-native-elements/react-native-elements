@@ -36,9 +36,9 @@ Pricing is a convenience component used to display features and pricing tables i
 
 Button information.
 
-| Type                               | Default |
-| ---------------------------------- | ------- |
-| `ButtonProps \| ButtonInformation` | None    |
+| Type                             | Default |
+| -------------------------------- | ------- |
+| ButtonProps \| ButtonInformation | None    |
 
 ---
 
@@ -46,9 +46,9 @@ Button information.
 
 Color scheme for button & title.
 
-| Type     | Default                  |
-| -------- | ------------------------ |
-| `string` | `theme?.colors?.primary` |
+| Type   | Default                |
+| ------ | ---------------------- |
+| string | theme?.colors?.primary |
 
 ---
 
@@ -56,9 +56,9 @@ Color scheme for button & title.
 
 Outer component styling.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -66,9 +66,9 @@ Outer component styling.
 
 Pricing information.
 
-| Type       | Default |
-| ---------- | ------- |
-| `string[]` | `[]`    |
+| Type     | Default |
+| -------- | ------- |
+| string[] | []      |
 
 ---
 
@@ -76,9 +76,9 @@ Pricing information.
 
 Specify pricing information style.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -86,9 +86,9 @@ Specify pricing information style.
 
 Function to be run when button is pressed.
 
-| Type         | Default |
-| ------------ | ------- |
-| `() => void` | None    |
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
 
 ---
 
@@ -96,9 +96,9 @@ Function to be run when button is pressed.
 
 Price mentioned in the pricing card.
 
-| Type               | Default |
-| ------------------ | ------- |
-| `string \| number` | None    |
+| Type             | Default |
+| ---------------- | ------- |
+| string \| number | None    |
 
 ---
 
@@ -106,9 +106,9 @@ Price mentioned in the pricing card.
 
 Specify pricing text style.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -116,9 +116,9 @@ Specify pricing text style.
 
 Add title in the pricing card.
 
-| Type     | Default |
-| -------- | ------- |
-| `string` | None    |
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
 
 ---
 
@@ -126,9 +126,9 @@ Add title in the pricing card.
 
 Specify title text style.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -136,8 +136,8 @@ Specify title text style.
 
 Inner wrapper component styling.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` | None    |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---

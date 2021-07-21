@@ -35,9 +35,9 @@ Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react
 
 Style of the bottom sheet's container. Use this to change the color of the underlay.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 

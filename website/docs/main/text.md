@@ -34,9 +34,9 @@ Text displays words and characters at various sizes.
 
 Text with Font size 40.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -44,9 +44,9 @@ Text with Font size 40.
 
 Styling when h1 is set.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | `{}`    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | {}      |
 
 ---
 
@@ -54,9 +54,9 @@ Styling when h1 is set.
 
 Text with Font size 34.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -64,9 +64,9 @@ Text with Font size 34.
 
 Styling when h2 is set.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | `{}`    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | {}      |
 
 ---
 
@@ -74,9 +74,9 @@ Styling when h2 is set.
 
 Text with Font size 28.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -84,9 +84,9 @@ Text with Font size 28.
 
 Styling when h3 is set.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | `{}`    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | {}      |
 
 ---
 
@@ -94,9 +94,9 @@ Styling when h3 is set.
 
 Text with Font size 22.
 
-| Type      | Default |
-| --------- | ------- |
-| `boolean` | `false` |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -104,9 +104,9 @@ Text with Font size 22.
 
 Styling when h3 is set.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | `{}`    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | {}      |
 
 ---
 
@@ -116,8 +116,8 @@ Add additional styling for Text.
 
 @see https://reactnative.dev/docs/text#style
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` | `{}`    |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | {}      |
 
 ---
