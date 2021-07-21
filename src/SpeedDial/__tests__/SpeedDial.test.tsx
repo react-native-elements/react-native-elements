@@ -1,20 +1,11 @@
 import React from 'react';
-import { SpeedDial } from '../index';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import theme from '../../config/theme';
+import SpeedDial from '..';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Speed Dial Component', () => {
-  beforeEach(() => {
-    let useEffect = jest.spyOn(React, 'useEffect');
-    useEffect.mockImplementation((f) => f());
-    const app = shallow(<SpeedDial open theme={theme} />);
-    expect(app.length).toBe(1);
-  });
   it('should render without issues', () => {
-    const app = shallow(
+    const { toJSON } = renderWithWrapper(
       <SpeedDial
-        theme={theme}
         isOpen={true}
         icon={{ name: 'edit', color: '#fff' }}
         openIcon={{ name: 'close', color: '#fff' }}
@@ -31,7 +22,6 @@ describe('Speed Dial Component', () => {
         />
       </SpeedDial>
     );
-    expect(app.length).toBe(1);
-    expect(toJson(app)).toMatchSnapshot();
+    expect(toJSON()).toMatchSnapshot();
   });
 });

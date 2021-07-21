@@ -5,8 +5,7 @@ import {
   SpeedDialActionProps,
 } from './components/SpeedDialAction';
 
-export { SpeedDial };
 export type { SpeedDialProps, SpeedDialActionProps };
 export default Object.assign(withTheme(SpeedDial, 'SpeedDial'), {
-  Action: SpeedDialAction,
+  Action: withTheme(SpeedDialAction, 'SpeedDialAction'),
 });
