@@ -6,17 +6,18 @@ import {
   StatusBar,
   I18nManager,
   ViewStyle,
-  FlexStyle,
   StyleProp,
   ColorValue,
   Platform,
+  Dimensions,
 } from 'react-native';
-import { ScreenWidth, isIOS, RneFunctionComponent } from '../helpers';
 import Triangle from './components/Triangle';
+import { ScreenWidth, isIOS, RneFunctionComponent } from '../helpers';
 import { getElementVisibleWidth } from './getTooltipCoordinate';
 import { getTooltipStyle } from './getTooltipStyle';
 
 export type TooltipProps = {
+  visible?: boolean;
   withPointer?: boolean;
   popover?: React.ReactElement<{}>;
   toggleOnPress?: boolean;
@@ -38,7 +39,8 @@ export type TooltipProps = {
 
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   withOverlay = true,
-  overlayColor = 'rgba(250, 250, 250, 0.70)',
+  theme,
+  overlayColor = '#fafafa5c',
   highlightColor = 'transparent',
   withPointer = true,
   toggleOnPress = true,
@@ -50,6 +52,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   pointerColor = backgroundColor,
   onClose = () => {},
   onOpen = () => {},
+  visible = false,
   skipAndroidStatusBar = false,
   ModalComponent = Modal,
   closeOnlyOnBackdropPress = false,
@@ -58,7 +61,6 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   const isMounted = React.useRef(false);
   const renderedElement = React.useRef<View>(null);
 
-  const [isVisible, setIsVisible] = React.useState(false);
   const [dimensions, setDimensions] = React.useState({
     yOffset: 0,
     xOffset: 0,
@@ -66,88 +68,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     elementHeight: 0,
   });
 
-  const handleOnPress = () => {
-    getElementPosition();
-    isMounted.current &&
-      setIsVisible((prevState) => {
-        if (prevState) {
-          onClose?.();
-        }
-        return !prevState;
-      });
-  };
-
-  const WrapWithPress: React.FC = ({ children }) => {
-    if (toggleOnPress) {
-      return (
-        <TouchableOpacity
-          {...{ [toggleAction]: handleOnPress }}
-          delayLongPress={250}
-          activeOpacity={1}
-        >
-          {children}
-        </TouchableOpacity>
-      );
-    } else {
-      return <>{children}</>;
-    }
-  };
-
-  const Pointer: React.FC<{ tooltipY: FlexStyle['top'] }> = ({ tooltipY }) => {
-    const { yOffset, xOffset, elementHeight, elementWidth } = dimensions;
-    const pastMiddleLine = yOffset > (tooltipY || 0);
-    return (
-      <View
-        style={{
-          position: 'absolute',
-          top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
-          [I18nManager.isRTL ? 'right' : 'left']:
-            xOffset +
-            getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
-            7.5,
-        }}
-      >
-        <Triangle
-          style={{ borderBottomColor: pointerColor }}
-          isDown={pastMiddleLine}
-        />
-      </View>
-    );
-  };
-
-  const getTooltipHighlightedButtonStyle = (): ViewStyle => {
-    const { yOffset, xOffset, elementWidth, elementHeight } = dimensions;
-    return {
-      position: 'absolute',
-      top: yOffset,
-      [I18nManager.isRTL ? 'right' : 'left']: xOffset,
-      backgroundColor: highlightColor,
-      overflow: 'visible',
-      width: elementWidth,
-      height: elementHeight,
-    };
-  };
-
-  const HighlightedButton: React.FC = () => {
-    const TooltipHighlightedButtonStyle = getTooltipHighlightedButtonStyle();
-    if (closeOnlyOnBackdropPress) {
-      return (
-        <TouchableOpacity
-          testID="tooltipTouchableHighlightedButton"
-          onPress={() => handleOnPress()}
-          style={TooltipHighlightedButtonStyle}
-        >
-          {props.children}
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <View style={TooltipHighlightedButtonStyle}>{props.children}</View>
-      );
-    }
-  };
-
-  const getElementPosition = () => {
+  const getElementPosition = React.useCallback(() => {
     renderedElement.current &&
       renderedElement.current.measure(
         (
@@ -175,41 +96,111 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
             });
         }
       );
+  }, [skipAndroidStatusBar]);
+
+  const handleOnPress = React.useCallback(() => {
+    getElementPosition();
+    isMounted.current && (visible ? onClose?.() : onOpen?.());
+  }, [getElementPosition, onClose, onOpen, visible]);
+
+  const WrapWithPress: React.FC = ({ children }) => {
+    if (toggleOnPress) {
+      return (
+        <TouchableOpacity
+          {...{ [toggleAction]: handleOnPress }}
+          delayLongPress={250}
+          activeOpacity={1}
+        >
+          {children}
+        </TouchableOpacity>
+      );
+    } else {
+      return <>{children}</>;
+    }
+  };
+
+  const Pointer: React.FC<{ tooltipY: number | string }> = ({ tooltipY }) => {
+    const { yOffset, xOffset, elementHeight, elementWidth } = dimensions;
+    const pastMiddleLine = yOffset > (tooltipY || 0);
+    return (
+      <View
+        style={{
+          position: 'absolute',
+          top: pastMiddleLine ? yOffset - 13 : yOffset + elementHeight - 2,
+          [I18nManager.isRTL ? 'right' : 'left']:
+            xOffset +
+            getElementVisibleWidth(elementWidth, xOffset, ScreenWidth) / 2 -
+            7.5,
+        }}
+      >
+        <Triangle
+          style={{ borderBottomColor: pointerColor }}
+          isDown={pastMiddleLine}
+        />
+      </View>
+    );
+  };
+
+  const TooltipHighlightedButtonStyle = React.useMemo<ViewStyle>(() => {
+    const { yOffset, xOffset, elementWidth, elementHeight } = dimensions;
+    return {
+      position: 'absolute',
+      top: yOffset,
+      [I18nManager.isRTL ? 'right' : 'left']: xOffset,
+      backgroundColor: highlightColor,
+      overflow: 'visible',
+      width: elementWidth,
+      height: elementHeight,
+    };
+  }, [dimensions, highlightColor]);
+
+  const HighlightedButton: React.FC = () => {
+    if (closeOnlyOnBackdropPress) {
+      return (
+        <TouchableOpacity
+          testID="tooltipTouchableHighlightedButton"
+          onPress={() => handleOnPress()}
+          style={TooltipHighlightedButtonStyle}
+        >
+          {props.children}
+        </TouchableOpacity>
+      );
+    } else {
+      return (
+        <View style={TooltipHighlightedButtonStyle}>{props.children}</View>
+      );
+    }
   };
 
   React.useEffect(() => {
     isMounted.current = true;
     requestAnimationFrame(getElementPosition);
-    return () => (isMounted.current = false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    return () => {
+      isMounted.current = false;
+    };
+  }, [getElementPosition]);
 
-  const Content: React.FC<{
-    withTooltip?: boolean;
-  }> = ({ withTooltip }) => {
-    if (!withTooltip) {
-      return <WrapWithPress>{props.children}</WrapWithPress>;
-    }
-    const tooltipStyle = getTooltipStyle({
-      ...dimensions,
-      backgroundColor,
-      containerStyle,
-      height,
-      width,
-      withPointer,
-    }) as ViewStyle;
-    return (
-      <View>
-        <HighlightedButton />
-        {withPointer && <Pointer tooltipY={tooltipStyle.top} />}
-        <View style={tooltipStyle} testID="tooltipPopoverContainer">
-          {props.popover}
-        </View>
-      </View>
-    );
-  };
+  React.useEffect(() => {
+    Dimensions.addEventListener('change', getElementPosition);
+    return () => {
+      Dimensions.removeEventListener('change', getElementPosition);
+    };
+  }, [getElementPosition]);
 
-  const ModalContent: React.FC = () => {
+  const tooltipStyle = React.useMemo(
+    () =>
+      getTooltipStyle({
+        ...dimensions,
+        backgroundColor,
+        containerStyle,
+        height,
+        width,
+        withPointer,
+      }),
+    [backgroundColor, containerStyle, dimensions, height, width, withPointer]
+  );
+
+  const ModalContent: React.FC = ({ children }) => {
     return (
       <>
         <TouchableOpacity
@@ -220,27 +211,30 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
           onPress={handleOnPress}
           activeOpacity={1}
         >
-          {closeOnlyOnBackdropPress && <Content withTooltip />}
+          {children}
         </TouchableOpacity>
-        {!closeOnlyOnBackdropPress && (
-          <View>
-            <Content withTooltip />
-          </View>
-        )}
       </>
     );
   };
 
   return (
     <View collapsable={false} ref={renderedElement}>
-      <Content />
+      <WrapWithPress>{props.children}</WrapWithPress>
       <ModalComponent
-        animationType="fade"
-        visible={isVisible}
         transparent
+        visible={visible}
         onShow={onOpen}
+        animationType="fade"
       >
-        <ModalContent />
+        <ModalContent>
+          <View>
+            <HighlightedButton />
+            {withPointer && <Pointer tooltipY={tooltipStyle.top} />}
+            <View style={tooltipStyle} testID="tooltipPopoverContainer">
+              {props.popover}
+            </View>
+          </View>
+        </ModalContent>
       </ModalComponent>
     </View>
   );
