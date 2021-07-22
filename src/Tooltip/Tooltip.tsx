@@ -10,6 +10,7 @@ import {
   ColorValue,
   Platform,
   Dimensions,
+  Pressable,
 } from 'react-native';
 import Triangle from './components/Triangle';
 import { ScreenWidth, isIOS, RneFunctionComponent } from '../helpers';
@@ -102,24 +103,8 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
 
   const handleOnPress = React.useCallback(() => {
     getElementPosition();
-    isMounted.current && (visible ? onClose?.() : onOpen?.());
-  }, [getElementPosition, onClose, onOpen, visible]);
-
-  const WrapWithPress: React.FC = ({ children }) => {
-    if (toggleOnPress) {
-      return (
-        <TouchableOpacity
-          {...{ [toggleAction]: handleOnPress }}
-          delayLongPress={250}
-          activeOpacity={1}
-        >
-          {children}
-        </TouchableOpacity>
-      );
-    } else {
-      return <>{children}</>;
-    }
-  };
+    isMounted.current && toggleOnPress && (visible ? onClose?.() : onOpen?.());
+  }, [getElementPosition, onClose, onOpen, toggleOnPress, visible]);
 
   const Pointer: React.FC<{
     tooltipY: number | string;
@@ -165,13 +150,13 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   const HighlightedButton: React.FC = () => {
     if (closeOnlyOnBackdropPress) {
       return (
-        <TouchableOpacity
+        <Pressable
           testID="tooltipTouchableHighlightedButton"
           onPress={handleOnPress}
           style={TooltipHighlightedButtonStyle}
         >
           {props.children}
-        </TouchableOpacity>
+        </Pressable>
       );
     } else {
       return (
@@ -180,21 +165,16 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     }
   };
 
-  React.useEffect(() => {
-    isMounted.current = true;
-    // Wait till element's position is calculated
-    requestAnimationFrame(getElementPosition);
-    return () => {
-      isMounted.current = false;
-    };
-  }, [getElementPosition]);
-
   /**
    * Listen for change in layout, i.e. Portrait or Landscape
    */
   React.useEffect(() => {
+    isMounted.current = true;
+    // Wait till element's position is calculated
+    requestAnimationFrame(getElementPosition);
     Dimensions.addEventListener('change', getElementPosition);
     return () => {
+      isMounted.current = false;
       Dimensions.removeEventListener('change', getElementPosition);
     };
   }, [getElementPosition]);
@@ -217,7 +197,9 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
 
   return (
     <View collapsable={false} ref={renderedElement}>
-      <WrapWithPress>{props.children}</WrapWithPress>
+      <Pressable {...{ [toggleAction]: handleOnPress }} delayLongPress={250}>
+        {props.children}
+      </Pressable>
       <ModalComponent
         transparent
         visible={visible}
