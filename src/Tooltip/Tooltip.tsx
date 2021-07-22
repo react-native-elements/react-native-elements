@@ -35,12 +35,13 @@ export type TooltipProps = {
   skipAndroidStatusBar?: boolean;
   closeOnlyOnBackdropPress?: boolean;
   ModalComponent?: typeof React.Component;
+  pointerStyle?: StyleProp<ViewStyle>;
 };
 
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   withOverlay = true,
   theme,
-  overlayColor = '#fafafa5c',
+  overlayColor = '#fafafa14',
   highlightColor = 'transparent',
   withPointer = true,
   toggleOnPress = true,
@@ -50,6 +51,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   containerStyle = {},
   backgroundColor = '#617080',
   pointerColor = backgroundColor,
+  pointerStyle,
   onClose = () => {},
   onOpen = () => {},
   visible = false,
@@ -119,9 +121,14 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     }
   };
 
-  const Pointer: React.FC<{ tooltipY: number | string }> = ({ tooltipY }) => {
+  const Pointer: React.FC<{
+    tooltipY: number | string;
+  }> = ({ tooltipY }) => {
     const { yOffset, xOffset, elementHeight, elementWidth } = dimensions;
     const pastMiddleLine = yOffset > (tooltipY || 0);
+    if (!withPointer) {
+      return null;
+    }
     return (
       <View
         style={{
@@ -134,7 +141,8 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
         }}
       >
         <Triangle
-          style={{ borderBottomColor: pointerColor }}
+          style={pointerStyle}
+          pointerColor={pointerColor}
           isDown={pastMiddleLine}
         />
       </View>
@@ -159,7 +167,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
       return (
         <TouchableOpacity
           testID="tooltipTouchableHighlightedButton"
-          onPress={() => handleOnPress()}
+          onPress={handleOnPress}
           style={TooltipHighlightedButtonStyle}
         >
           {props.children}
@@ -174,12 +182,16 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
 
   React.useEffect(() => {
     isMounted.current = true;
+    // Wait till element's position is calculated
     requestAnimationFrame(getElementPosition);
     return () => {
       isMounted.current = false;
     };
   }, [getElementPosition]);
 
+  /**
+   * Listen for change in layout, i.e. Portrait or Landscape
+   */
   React.useEffect(() => {
     Dimensions.addEventListener('change', getElementPosition);
     return () => {
@@ -187,6 +199,9 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     };
   }, [getElementPosition]);
 
+  /**
+   * Calculate position of tooltip
+   */
   const tooltipStyle = React.useMemo(
     () =>
       getTooltipStyle({
@@ -200,23 +215,6 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     [backgroundColor, containerStyle, dimensions, height, width, withPointer]
   );
 
-  const ModalContent: React.FC = ({ children }) => {
-    return (
-      <>
-        <TouchableOpacity
-          style={{
-            backgroundColor: withOverlay ? overlayColor : 'transparent',
-            flex: 1,
-          }}
-          onPress={handleOnPress}
-          activeOpacity={1}
-        >
-          {children}
-        </TouchableOpacity>
-      </>
-    );
-  };
-
   return (
     <View collapsable={false} ref={renderedElement}>
       <WrapWithPress>{props.children}</WrapWithPress>
@@ -226,15 +224,22 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
         onShow={onOpen}
         animationType="fade"
       >
-        <ModalContent>
+        <TouchableOpacity
+          style={{
+            backgroundColor: withOverlay ? overlayColor : 'transparent',
+            flex: 1,
+          }}
+          onPress={handleOnPress}
+          activeOpacity={1}
+        >
           <View>
             <HighlightedButton />
-            {withPointer && <Pointer tooltipY={tooltipStyle.top} />}
+            <Pointer tooltipY={tooltipStyle.top} />
             <View style={tooltipStyle} testID="tooltipPopoverContainer">
               {props.popover}
             </View>
           </View>
-        </ModalContent>
+        </TouchableOpacity>
       </ModalComponent>
     </View>
   );
