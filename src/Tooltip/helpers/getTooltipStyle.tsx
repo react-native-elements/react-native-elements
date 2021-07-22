@@ -1,5 +1,5 @@
 import { I18nManager, StyleSheet, ViewStyle } from 'react-native';
-import { ScreenWidth, ScreenHeight } from '../helpers';
+import { ScreenWidth, ScreenHeight } from '../../helpers';
 import getTooltipCoordinate from './getTooltipCoordinate';
 
 export const getTooltipStyle = ({

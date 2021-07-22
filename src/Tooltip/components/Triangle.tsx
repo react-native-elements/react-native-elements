@@ -15,6 +15,7 @@ type TriangleProps = {
 
 const Triangle: React.FC<TriangleProps> = ({ style, pointerColor, isDown }) => (
   <View
+    testID="RNE__Tooltip_Triangle"
     style={StyleSheet.flatten([
       styles.triangle,
       {
