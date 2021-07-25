@@ -16,7 +16,7 @@ import Image from '../Image';
 import Text from '../Text';
 import Icon, { IconObject, IconProps } from '../Icon';
 import { ThemedFeaturedTile } from './components/FeaturedTile';
-import { RneFunctionComponent } from '../helpers';
+import { androidRipple, RneFunctionComponent } from '../helpers';
 import Color from 'color';
 
 export type TileProps = PressableProps & {
@@ -126,14 +126,9 @@ export const Tile: RneFunctionComponent<TileProps> = ({
     <Pressable
       {...attributes}
       onPress={onPress}
-      android_ripple={{
-        color: Color(theme?.colors?.primary)
-          .alpha(activeOpacity)
-          .rgb()
-          .toString(),
-        borderless: false,
-        radius: -5,
-      }}
+      android_ripple={androidRipple(
+        Color(theme?.colors?.primary).alpha(activeOpacity).rgb().toString()
+      )}
       style={StyleSheet.flatten([
         {
           width,

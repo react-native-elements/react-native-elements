@@ -1,4 +1,4 @@
-import { Platform, Dimensions } from 'react-native';
+import { Platform, Dimensions, PressableProps, ColorValue } from 'react-native';
 import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
@@ -13,6 +13,16 @@ const isIOS = Platform.OS === 'ios';
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & Partial<ThemeProps<T>>
 >;
+
+export const androidRipple = (
+  rippleColor?: string | ColorValue
+): PressableProps['android_ripple'] => {
+  return {
+    borderless: false,
+    color: rippleColor,
+    radius: -5,
+  };
+};
 
 export const patchWebProps = <T extends Record<any, any>>({
   updateTheme,

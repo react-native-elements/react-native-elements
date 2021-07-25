@@ -70,7 +70,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
   onPress,
   onLongPress,
   checkedColor = theme?.colors?.primary,
-  ...props
+  ...rest
 }) => {
   const accessibilityState = {
     checked: !!checked,
@@ -80,7 +80,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
     checked,
     onLongPress,
     checkedColor,
-    ...props,
+    ...rest,
   };
 
   return (
@@ -88,7 +88,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
       accessibilityRole="checkbox"
       accessibilityState={accessibilityState}
       testID="checkbox"
-      {...props}
+      {...rest}
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([

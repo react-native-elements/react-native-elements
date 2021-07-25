@@ -10,7 +10,12 @@ import {
   Pressable,
   PressableProps,
 } from 'react-native';
-import { normalizeText, color, RneFunctionComponent } from '../helpers';
+import {
+  normalizeText,
+  color,
+  RneFunctionComponent,
+  androidRipple,
+} from '../helpers';
 import Text from '../Text';
 
 export type ButtonGroupProps = {
@@ -178,14 +183,9 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
-              android_ripple={{
-                color: Color(underlayColor)
-                  .alpha(activeOpacity)
-                  .rgb()
-                  .toString(),
-                borderless: false,
-                radius: -5,
-              }}
+              android_ripple={androidRipple(
+                Color(underlayColor).alpha(activeOpacity).rgb().toString()
+              )}
               disabled={isDisabled}
               onPress={() => {
                 if (selectMultiple) {

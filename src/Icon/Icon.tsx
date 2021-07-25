@@ -16,7 +16,7 @@ import {
 import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
-import { RneFunctionComponent } from '../helpers';
+import { androidRipple, RneFunctionComponent } from '../helpers';
 
 export type IconType =
   | 'material'
@@ -154,14 +154,12 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           onPress,
           disabled,
         })}
-        android_ripple={{
-          color: Color(reverse ? color : (underlayColor as string))
+        android_ripple={androidRipple(
+          Color(reverse ? color : (underlayColor as string))
             .alpha(0.3)
             .rgb()
-            .string(),
-          borderless: false,
-          radius: -5,
-        }}
+            .string()
+        )}
       >
         <View
           style={StyleSheet.flatten([
