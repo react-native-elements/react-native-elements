@@ -10,6 +10,9 @@ import {
 import Color from 'color';
 import { RneFunctionComponent } from '../helpers';
 
+/**
+ * Keep value between 0 and 1
+ */
 const clamp = (value: number): number => Math.max(0, Math.min(value, 1));
 
 export type LinearProgressProps = ViewProps & {
@@ -28,7 +31,7 @@ export type LinearProgressProps = ViewProps & {
   /** Add additional styling for linear progress component. */
   style?: StyleProp<ViewStyle>;
 
-  /** Animation timing */
+  /** Animation duration */
   animation?:
     | {
         duration?: number;
