@@ -24,27 +24,31 @@ If the FAB is tapped in this state, it should either initiate its default action
 
 ## Props
 
+### SpeedDial
+
 - [children](#children)
-- [isOpen](#isOpen)
-- [onClose](#onClose)
-- [onOpen](#onOpen)
-- [openIcon](#openIcon)
-- [overlayColor](#overlayColor)
-- [transitionDuration](#transitionDuration)
+- [isOpen](#isopen)
+- [onClose](#onclose)
+- [onOpen](#onopen)
+- [openIcon](#openicon)
+- [overlayColor](#overlaycolor)
+- [transitionDuration](#transitionduration)
 
 ## Reference
 
-### children
+### SpeedDial
+
+#### children
 
 Add childen elements to the speed dial.
 
-| Type              | Default |
-| ----------------- | ------- |
-| any[] & ReactNode | None    |
+| Type                | Default |
+| ------------------- | ------- |
+| any[] and ReactNode | None    |
 
 ---
 
-### isOpen
+#### isOpen
 
 Opens the action stack.
 
@@ -54,7 +58,7 @@ Opens the action stack.
 
 ---
 
-### onClose
+#### onClose
 
 Callback fired when the component requests to be closed.
 
@@ -64,7 +68,7 @@ Callback fired when the component requests to be closed.
 
 ---
 
-### onOpen
+#### onOpen
 
 Callback fired when the component requests to be open.
 
@@ -74,7 +78,7 @@ Callback fired when the component requests to be open.
 
 ---
 
-### openIcon
+#### openIcon
 
 Icon shown on FAB when action stack is open.
 
@@ -84,7 +88,7 @@ Icon shown on FAB when action stack is open.
 
 ---
 
-### overlayColor
+#### overlayColor
 
 Add overlay color to the speed dial.
 
@@ -94,7 +98,7 @@ Add overlay color to the speed dial.
 
 ---
 
-### transitionDuration
+#### transitionDuration
 
 The duration for the transition, in milliseconds.
 

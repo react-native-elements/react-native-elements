@@ -22,15 +22,19 @@ Also receives all [View](https://reactnative.dev/docs/view#props) props
 
 ## Props
 
+### LinearProgress
+
 - [color](#color)
 - [style](#style)
-- [trackColor](#trackColor)
+- [trackColor](#trackcolor)
 - [value](#value)
 - [variant](#variant)
 
 ## Reference
 
-### color
+### LinearProgress
+
+#### color
 
 Color for linear progress.
 
@@ -40,7 +44,7 @@ Color for linear progress.
 
 ---
 
-### style
+#### style
 
 Add additional styling for linear progress component.
 
@@ -50,7 +54,7 @@ Add additional styling for linear progress component.
 
 ---
 
-### trackColor
+#### trackColor
 
 Track color for linear progress.
 
@@ -60,7 +64,7 @@ Track color for linear progress.
 
 ---
 
-### value
+#### value
 
 The value of the progress indicator for the determinate variant. Value between 0 and 1.
 
@@ -70,12 +74,12 @@ The value of the progress indicator for the determinate variant. Value between 0
 
 ---
 
-### variant
+#### variant
 
 Type of button.
 
 | Type                             | Default       |
 | -------------------------------- | ------------- |
-| "determinate" \| "indeterminate" | indeterminate |
+| "determinate" or "indeterminate" | indeterminate |
 
 ---

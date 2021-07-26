@@ -22,15 +22,19 @@ Also receives all [Button](https://reactnativeelements.com/docs/button#props) pr
 
 ## Props
 
+### FAB
+
 - [color](#color)
 - [placement](#placement)
 - [size](#size)
-- [upperCase](#upperCase)
+- [upperCase](#uppercase)
 - [visible](#visible)
 
 ## Reference
 
-### color
+### FAB
+
+#### color
 
 Change the color of the FAB.
 
@@ -40,27 +44,27 @@ Change the color of the FAB.
 
 ---
 
-### placement
+#### placement
 
 FAB placement at bottom, (optional) use [`style`](#style) in case of custom placement.
 
 | Type              | Default |
 | ----------------- | ------- |
-| "left" \| "right" | None    |
+| "left" or "right" | None    |
 
 ---
 
-### size
+#### size
 
 Change Size of FAB.
 
 | Type               | Default |
 | ------------------ | ------- |
-| "large" \| "small" | large   |
+| "small" or "large" | large   |
 
 ---
 
-### upperCase
+#### upperCase
 
 Transform Extended Label text to uppercase.
 
@@ -70,7 +74,7 @@ Transform Extended Label text to uppercase.
 
 ---
 
-### visible
+#### visible
 
 Decide the visibility of the FAB.
 

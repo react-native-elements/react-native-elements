@@ -1,4 +1,5 @@
 import json2md from 'json2md';
+import _ from 'lodash';
 
 json2md.converters.header = function (input, json2md) {
   return json2md([
@@ -10,48 +11,83 @@ json2md.converters.header = function (input, json2md) {
   ]);
 };
 
-json2md.converters.imports = function (input, json2md) {
-  if (input.canImportUsage) {
+function generateComponentsDescriptions(input) {
+  const childComponentDescriptions = Object.keys(input).map((key) => {
     return json2md([
       {
-        p: `import Usage from './usage/${input.component}/${input.component}.md'`,
+        link: { title: key, source: `#${key}` },
+      },
+      {
+        p: input[key].description,
       },
     ]);
+  });
+  return childComponentDescriptions;
+}
+
+json2md.converters.components = function (input, json2md) {
+  if (input.childrens) {
+    let markdown = json2md({ h2: 'Components' });
+    markdown += json2md({
+      ul: generateComponentsDescriptions(input.childrens),
+    });
+    return markdown;
   } else return '';
 };
 
+json2md.converters.imports = function (input, json2md) {
+  return json2md([
+    {
+      p: `import Usage from './usage/${input.component}/${input.component}.md'`,
+    },
+  ]);
+};
+
 json2md.converters.usage = function (input, json2md) {
-  if (input.canImportUsage) {
-    return json2md([
-      { h2: `Usage` },
-      {
-        p: `<Usage />`,
-      },
-      { hr: '' },
-    ]);
-  } else return '';
+  return json2md([
+    { h2: `Usage` },
+    {
+      p: `<Usage />`,
+    },
+    { hr: '' },
+  ]);
 };
 
 function generatePropsLinks(props) {
   const propLinks = Object.keys(props).map((key) => {
-    return json2md({ link: { title: key, source: `#${key}` } });
+    return json2md({ link: { title: key, source: `#${key.toLowerCase()}` } });
   });
   return propLinks;
 }
 
 json2md.converters.props = function (input, json2md) {
-  let data = json2md({ h2: 'Props' });
-  data += json2md({ ul: generatePropsLinks(input) });
-  return data;
+  let markdown = json2md([
+    { h2: 'Props' },
+    { h3: input.displayName },
+    { ul: generatePropsLinks(input.props) },
+  ]);
+  if (input.childrens) {
+    markdown += Object.keys(input.childrens)
+      .map((key) => {
+        const props = input.childrens[key].props;
+        return json2md([
+          { h3: key },
+          _.isEmpty(props)
+            ? { p: 'None' }
+            : { ul: generatePropsLinks(input.childrens[key].props) },
+        ]);
+      })
+      .join('');
+  }
+  return markdown;
 };
 
-json2md.converters.propsData = function (input, json2md) {
-  let data = json2md({ h2: 'Reference' });
-  data += Object.keys(input)
+function generatePropsReference(props) {
+  const propsReference = Object.keys(props)
     .map((key) => {
-      const prop = input[key];
+      const prop = props[key];
       return json2md([
-        { h3: prop.name },
+        { h4: prop.name },
         { p: prop.description },
         {
           table: {
@@ -68,25 +104,44 @@ json2md.converters.propsData = function (input, json2md) {
       ]);
     })
     .join('');
-  return data;
+  return propsReference;
+}
+
+json2md.converters.propsData = function (input, json2md) {
+  let markdowm = json2md([{ h2: 'Reference' }, { h3: input.displayName }]);
+  markdowm += generatePropsReference(input.props);
+  if (input.childrens) {
+    markdowm += Object.keys(input.childrens)
+      .map((key) => {
+        const props = input.childrens[key].props;
+        return (
+          json2md([{ h3: key }]) +
+          (_.isEmpty(props)
+            ? json2md({ p: 'None' })
+            : generatePropsReference(props))
+        );
+      })
+      .join('');
+  }
+  return markdowm;
 };
 
-export const generateMarkdown = (data, children) => {
+export const generateMarkdown = (data) => {
   return json2md([
     { header: { id: data.displayName } },
     {
       imports: {
         component: data.displayName,
-        canImportUsage: !children ? true : false,
       },
     },
     { p: data.description },
     {
-      usage: {
-        canImportUsage: !children ? true : false,
+      components: {
+        childrens: data.childrens,
       },
     },
-    { props: data.props },
-    { propsData: data.props },
+    { usage: '' },
+    { props: data },
+    { propsData: data },
   ]);
 };

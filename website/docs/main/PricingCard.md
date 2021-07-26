@@ -18,31 +18,35 @@ Pricing is a convenience component used to display features and pricing tables i
 
 ## Props
 
+### PricingCard
+
 - [button](#button)
 - [color](#color)
-- [containerStyle](#containerStyle)
+- [containerStyle](#containerstyle)
 - [info](#info)
-- [infoStyle](#infoStyle)
-- [onButtonPress](#onButtonPress)
+- [infoStyle](#infostyle)
+- [onButtonPress](#onbuttonpress)
 - [price](#price)
-- [pricingStyle](#pricingStyle)
+- [pricingStyle](#pricingstyle)
 - [title](#title)
-- [titleStyle](#titleStyle)
-- [wrapperStyle](#wrapperStyle)
+- [titleStyle](#titlestyle)
+- [wrapperStyle](#wrapperstyle)
 
 ## Reference
 
-### button
+### PricingCard
+
+#### button
 
 Button information.
 
 | Type                             | Default |
 | -------------------------------- | ------- |
-| ButtonProps \| ButtonInformation | None    |
+| ButtonProps or ButtonInformation | None    |
 
 ---
 
-### color
+#### color
 
 Color scheme for button & title.
 
@@ -52,7 +56,7 @@ Color scheme for button & title.
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Outer component styling.
 
@@ -62,7 +66,7 @@ Outer component styling.
 
 ---
 
-### info
+#### info
 
 Pricing information.
 
@@ -72,7 +76,7 @@ Pricing information.
 
 ---
 
-### infoStyle
+#### infoStyle
 
 Specify pricing information style.
 
@@ -82,7 +86,7 @@ Specify pricing information style.
 
 ---
 
-### onButtonPress
+#### onButtonPress
 
 Function to be run when button is pressed.
 
@@ -92,17 +96,17 @@ Function to be run when button is pressed.
 
 ---
 
-### price
+#### price
 
 Price mentioned in the pricing card.
 
 | Type             | Default |
 | ---------------- | ------- |
-| string \| number | None    |
+| string or number | None    |
 
 ---
 
-### pricingStyle
+#### pricingStyle
 
 Specify pricing text style.
 
@@ -112,7 +116,7 @@ Specify pricing text style.
 
 ---
 
-### title
+#### title
 
 Add title in the pricing card.
 
@@ -122,7 +126,7 @@ Add title in the pricing card.
 
 ---
 
-### titleStyle
+#### titleStyle
 
 Specify title text style.
 
@@ -132,7 +136,7 @@ Specify title text style.
 
 ---
 
-### wrapperStyle
+#### wrapperStyle
 
 Inner wrapper component styling.
 

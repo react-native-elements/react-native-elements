@@ -18,19 +18,23 @@ Text displays words and characters at various sizes.
 
 ## Props
 
+### Text
+
 - [h1](#h1)
-- [h1Style](#h1Style)
+- [h1Style](#h1style)
 - [h2](#h2)
-- [h2Style](#h2Style)
+- [h2Style](#h2style)
 - [h3](#h3)
-- [h3Style](#h3Style)
+- [h3Style](#h3style)
 - [h4](#h4)
-- [h4Style](#h4Style)
+- [h4Style](#h4style)
 - [style](#style)
 
 ## Reference
 
-### h1
+### Text
+
+#### h1
 
 Text with Font size 40.
 
@@ -40,7 +44,7 @@ Text with Font size 40.
 
 ---
 
-### h1Style
+#### h1Style
 
 Styling when h1 is set.
 
@@ -50,7 +54,7 @@ Styling when h1 is set.
 
 ---
 
-### h2
+#### h2
 
 Text with Font size 34.
 
@@ -60,7 +64,7 @@ Text with Font size 34.
 
 ---
 
-### h2Style
+#### h2Style
 
 Styling when h2 is set.
 
@@ -70,7 +74,7 @@ Styling when h2 is set.
 
 ---
 
-### h3
+#### h3
 
 Text with Font size 28.
 
@@ -80,7 +84,7 @@ Text with Font size 28.
 
 ---
 
-### h3Style
+#### h3Style
 
 Styling when h3 is set.
 
@@ -90,7 +94,7 @@ Styling when h3 is set.
 
 ---
 
-### h4
+#### h4
 
 Text with Font size 22.
 
@@ -100,7 +104,7 @@ Text with Font size 22.
 
 ---
 
-### h4Style
+#### h4Style
 
 Styling when h3 is set.
 
@@ -110,7 +114,7 @@ Styling when h3 is set.
 
 ---
 
-### style
+#### style
 
 Add additional styling for Text.
 

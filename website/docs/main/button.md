@@ -22,30 +22,34 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 ## Props
 
-- [TouchableComponent](#TouchableComponent)
-- [ViewComponent](#ViewComponent)
-- [buttonStyle](#buttonStyle)
-- [containerStyle](#containerStyle)
+### Button
+
+- [TouchableComponent](#touchablecomponent)
+- [ViewComponent](#viewcomponent)
+- [buttonStyle](#buttonstyle)
+- [containerStyle](#containerstyle)
 - [disabled](#disabled)
-- [disabledStyle](#disabledStyle)
-- [disabledTitleStyle](#disabledTitleStyle)
+- [disabledStyle](#disabledstyle)
+- [disabledTitleStyle](#disabledtitlestyle)
 - [icon](#icon)
-- [iconContainerStyle](#iconContainerStyle)
-- [iconPosition](#iconPosition)
-- [iconRight](#iconRight)
-- [linearGradientProps](#linearGradientProps)
+- [iconContainerStyle](#iconcontainerstyle)
+- [iconPosition](#iconposition)
+- [iconRight](#iconright)
+- [linearGradientProps](#lineargradientprops)
 - [loading](#loading)
-- [loadingProps](#loadingProps)
-- [loadingStyle](#loadingStyle)
+- [loadingProps](#loadingprops)
+- [loadingStyle](#loadingstyle)
 - [raised](#raised)
 - [title](#title)
-- [titleProps](#titleProps)
-- [titleStyle](#titleStyle)
+- [titleProps](#titleprops)
+- [titleStyle](#titlestyle)
 - [type](#type)
 
 ## Reference
 
-### TouchableComponent
+### Button
+
+#### TouchableComponent
 
 Component for user interaction.
 
@@ -55,17 +59,17 @@ Component for user interaction.
 
 ---
 
-### ViewComponent
+#### ViewComponent
 
 Component for container.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
 
 ---
 
-### buttonStyle
+#### buttonStyle
 
 Add additional styling for button component.
 
@@ -75,7 +79,7 @@ Add additional styling for button component.
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Styling for Component container.
 
@@ -85,7 +89,7 @@ Styling for Component container.
 
 ---
 
-### disabled
+#### disabled
 
 If true, disable all interactions for this component.
 
@@ -97,7 +101,7 @@ Disables user interaction.
 
 ---
 
-### disabledStyle
+#### disabledStyle
 
 Style of the button when disabled.
 
@@ -107,7 +111,7 @@ Style of the button when disabled.
 
 ---
 
-### disabledTitleStyle
+#### disabledTitleStyle
 
 Style of the title when disabled.
 
@@ -117,7 +121,7 @@ Style of the title when disabled.
 
 ---
 
-### icon
+#### icon
 
 Displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component.
 
@@ -127,7 +131,7 @@ Displays a centered icon (when no title) or to the left (with text). (can be use
 
 ---
 
-### iconContainerStyle
+#### iconContainerStyle
 
 Styling for Icon Component container.
 
@@ -137,17 +141,17 @@ Styling for Icon Component container.
 
 ---
 
-### iconPosition
+#### iconPosition
 
 Displays Icon to the position mentioned. Needs to be used along with `icon` prop.
 
-| Type              | Default |
-| ----------------- | ------- |
-| "left" \| "right" | "top"   | "bottom" | left |
+| Type                                   | Default |
+| -------------------------------------- | ------- |
+| "left" or "right" or "top" or "bottom" | left    |
 
 ---
 
-### iconRight
+#### iconRight
 
 Displays Icon to the right of title. Needs to be used along with `icon` prop.
 
@@ -157,7 +161,7 @@ Displays Icon to the right of title. Needs to be used along with `icon` prop.
 
 ---
 
-### linearGradientProps
+#### linearGradientProps
 
 Displays a linear gradient. See [usage](#lineargradient-usage).
 
@@ -167,7 +171,7 @@ Displays a linear gradient. See [usage](#lineargradient-usage).
 
 ---
 
-### loading
+#### loading
 
 Prop to display a loading spinner.
 
@@ -177,7 +181,7 @@ Prop to display a loading spinner.
 
 ---
 
-### loadingProps
+#### loadingProps
 
 Add additional props for ActivityIndicator component.
 
@@ -187,7 +191,7 @@ Add additional props for ActivityIndicator component.
 
 ---
 
-### loadingStyle
+#### loadingStyle
 
 Add additional styling for loading component.
 
@@ -197,7 +201,7 @@ Add additional styling for loading component.
 
 ---
 
-### raised
+#### raised
 
 Add raised button styling (optional). Has no effect if `type="clear"`.
 
@@ -207,7 +211,7 @@ Add raised button styling (optional). Has no effect if `type="clear"`.
 
 ---
 
-### title
+#### title
 
 Add button title.
 
@@ -217,7 +221,7 @@ Add button title.
 
 ---
 
-### titleProps
+#### titleProps
 
 Add additional props for Text component.
 
@@ -227,7 +231,7 @@ Add additional props for Text component.
 
 ---
 
-### titleStyle
+#### titleStyle
 
 Add additional styling for title component.
 
@@ -237,12 +241,12 @@ Add additional styling for title component.
 
 ---
 
-### type
+#### type
 
 Type of button.
 
-| Type               | Default   |
-| ------------------ | --------- |
-| "solid" \| "clear" | "outline" | solid |
+| Type                            | Default |
+| ------------------------------- | ------- |
+| "solid" or "clear" or "outline" | solid   |
 
 ---

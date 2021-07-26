@@ -26,22 +26,26 @@ This documentation is for Tap Rating version.
 
 ## Props
 
+### AirbnbRating
+
 - [count](#count)
-- [defaultRating](#defaultRating)
-- [isDisabled](#isDisabled)
-- [onFinishRating](#onFinishRating)
-- [reviewColor](#reviewColor)
-- [reviewSize](#reviewSize)
+- [defaultRating](#defaultrating)
+- [isDisabled](#isdisabled)
+- [onFinishRating](#onfinishrating)
+- [reviewColor](#reviewcolor)
+- [reviewSize](#reviewsize)
 - [reviews](#reviews)
-- [selectedColor](#selectedColor)
-- [showRating](#showRating)
+- [selectedColor](#selectedcolor)
+- [showRating](#showrating)
 - [size](#size)
-- [starContainerStyle](#starContainerStyle)
-- [starImage](#starImage)
+- [starContainerStyle](#starcontainerstyle)
+- [starImage](#starimage)
 
 ## Reference
 
-### count
+### AirbnbRating
+
+#### count
 
 Total number of ratings to display
 
@@ -53,7 +57,7 @@ Default is 5
 
 ---
 
-### defaultRating
+#### defaultRating
 
 Initial value for the rating
 
@@ -65,7 +69,7 @@ Default is 3
 
 ---
 
-### isDisabled
+#### isDisabled
 
 Whether the rating can be modiefied by the user
 
@@ -77,7 +81,7 @@ Default is false
 
 ---
 
-### onFinishRating
+#### onFinishRating
 
 Callback method when the user finishes rating. Gives you the final rating value as a whole number
 
@@ -87,7 +91,7 @@ Callback method when the user finishes rating. Gives you the final rating value 
 
 ---
 
-### reviewColor
+#### reviewColor
 
 Color value for review.
 
@@ -99,7 +103,7 @@ Default is #f1c40f
 
 ---
 
-### reviewSize
+#### reviewSize
 
 Size value for review.
 
@@ -111,7 +115,7 @@ Default is 40
 
 ---
 
-### reviews
+#### reviews
 
 Labels to show when each value is tapped
 
@@ -125,7 +129,7 @@ Default is ['Terrible', 'Bad', 'Okay', 'Good', 'Great']
 
 ---
 
-### selectedColor
+#### selectedColor
 
 Color value for filled stars.
 
@@ -137,7 +141,7 @@ Default is #004666
 
 ---
 
-### showRating
+#### showRating
 
 Determines if to show the reviews above the rating
 
@@ -149,7 +153,7 @@ Default is true
 
 ---
 
-### size
+#### size
 
 Size of rating image
 
@@ -161,7 +165,7 @@ Default is 40
 
 ---
 
-### starContainerStyle
+#### starContainerStyle
 
 Style for star container
 
@@ -173,7 +177,7 @@ Default is none
 
 ---
 
-### starImage
+#### starImage
 
 Pass in a custom base image source
 

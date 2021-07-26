@@ -22,40 +22,44 @@ Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react
 
 ## Props
 
-- [ViewComponent](#ViewComponent)
-- [backgroundColor](#backgroundColor)
-- [backgroundImage](#backgroundImage)
-- [backgroundImageStyle](#backgroundImageStyle)
-- [barStyle](#barStyle)
-- [centerComponent](#centerComponent)
-- [centerContainerStyle](#centerContainerStyle)
+### Header
+
+- [ViewComponent](#viewcomponent)
+- [backgroundColor](#backgroundcolor)
+- [backgroundImage](#backgroundimage)
+- [backgroundImageStyle](#backgroundimagestyle)
+- [barStyle](#barstyle)
+- [centerComponent](#centercomponent)
+- [centerContainerStyle](#centercontainerstyle)
 - [children](#children)
-- [containerStyle](#containerStyle)
+- [containerStyle](#containerstyle)
 - [elevated](#elevated)
-- [leftComponent](#leftComponent)
-- [leftContainerStyle](#leftContainerStyle)
-- [linearGradientProps](#linearGradientProps)
+- [leftComponent](#leftcomponent)
+- [leftContainerStyle](#leftcontainerstyle)
+- [linearGradientProps](#lineargradientprops)
 - [placement](#placement)
-- [rightComponent](#rightComponent)
-- [rightContainerStyle](#rightContainerStyle)
-- [statusBarProps](#statusBarProps)
+- [rightComponent](#rightcomponent)
+- [rightContainerStyle](#rightcontainerstyle)
+- [statusBarProps](#statusbarprops)
 
 ## Reference
 
-### ViewComponent
+### Header
+
+#### ViewComponent
 
 Component for container.
 
-| Type | Default                |
-| ---- | ---------------------- |
-| any  | linearGradientProps \| | !backgroundImage |
+| Type            | Default                |
+| --------------- | ---------------------- |
+| React Component | linearGradientProps \| | !backgroundImage |
 
     ? View
     : ImageBackground |
 
 ---
 
-### backgroundColor
+#### backgroundColor
 
 Sets backgroundColor of the parent component.
 
@@ -65,7 +69,7 @@ Sets backgroundColor of the parent component.
 
 ---
 
-### backgroundImage
+#### backgroundImage
 
 Sets backgroundImage for parent component.
 
@@ -75,7 +79,7 @@ Sets backgroundImage for parent component.
 
 ---
 
-### backgroundImageStyle
+#### backgroundImageStyle
 
 Styling for backgroundImage in the main container.
 
@@ -85,7 +89,7 @@ Styling for backgroundImage in the main container.
 
 ---
 
-### barStyle
+#### barStyle
 
 Sets the color of the status bar text.
 
@@ -95,7 +99,7 @@ Sets the color of the status bar text.
 
 ---
 
-### centerComponent
+#### centerComponent
 
 Define your center component here.
 
@@ -105,7 +109,7 @@ Define your center component here.
 
 ---
 
-### centerContainerStyle
+#### centerContainerStyle
 
 Styling for container around the centerComponent.
 
@@ -115,17 +119,17 @@ Styling for container around the centerComponent.
 
 ---
 
-### children
+#### children
 
 Add children component to the header.
 
-| Type                  | Default |
-| --------------------- | ------- |
-| Element[] & ReactNode | []      |
+| Type                    | Default |
+| ----------------------- | ------- |
+| Element[] and ReactNode | []      |
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Styling around the main container.
 
@@ -135,7 +139,7 @@ Styling around the main container.
 
 ---
 
-### elevated
+#### elevated
 
 Elevation for header
 
@@ -145,7 +149,7 @@ Elevation for header
 
 ---
 
-### leftComponent
+#### leftComponent
 
 Define your left component here.
 
@@ -155,7 +159,7 @@ Define your left component here.
 
 ---
 
-### leftContainerStyle
+#### leftContainerStyle
 
 Styling for container around the leftComponent.
 
@@ -165,7 +169,7 @@ Styling for container around the leftComponent.
 
 ---
 
-### linearGradientProps
+#### linearGradientProps
 
 Displays a linear gradient. See [usage](#lineargradient-usage).
 
@@ -175,17 +179,17 @@ Displays a linear gradient. See [usage](#lineargradient-usage).
 
 ---
 
-### placement
+#### placement
 
 Alignment for title.
 
-| Type              | Default  |
-| ----------------- | -------- |
-| "left" \| "right" | "center" | center |
+| Type                          | Default |
+| ----------------------------- | ------- |
+| "center" or "left" or "right" | center  |
 
 ---
 
-### rightComponent
+#### rightComponent
 
 Define your right component here.
 
@@ -195,7 +199,7 @@ Define your right component here.
 
 ---
 
-### rightContainerStyle
+#### rightContainerStyle
 
 Styling for container around the rightComponent.
 
@@ -205,7 +209,7 @@ Styling for container around the rightComponent.
 
 ---
 
-### statusBarProps
+#### statusBarProps
 
 Accepts all props for StatusBar.
 

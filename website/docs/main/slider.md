@@ -18,33 +18,37 @@ Sliders allow users to select a value from a fixed set of values using drag util
 
 ## Props
 
-- [allowTouchTrack](#allowTouchTrack)
-- [animateTransitions](#animateTransitions)
-- [animationConfig](#animationConfig)
-- [animationType](#animationType)
-- [containerStyle](#containerStyle)
-- [debugTouchArea](#debugTouchArea)
+### Slider
+
+- [allowTouchTrack](#allowtouchtrack)
+- [animateTransitions](#animatetransitions)
+- [animationConfig](#animationconfig)
+- [animationType](#animationtype)
+- [containerStyle](#containerstyle)
+- [debugTouchArea](#debugtoucharea)
 - [disabled](#disabled)
-- [maximumTrackTintColor](#maximumTrackTintColor)
-- [maximumValue](#maximumValue)
-- [minimumTrackTintColor](#minimumTrackTintColor)
-- [minimumValue](#minimumValue)
-- [onSlidingComplete](#onSlidingComplete)
-- [onSlidingStart](#onSlidingStart)
-- [onValueChange](#onValueChange)
+- [maximumTrackTintColor](#maximumtracktintcolor)
+- [maximumValue](#maximumvalue)
+- [minimumTrackTintColor](#minimumtracktintcolor)
+- [minimumValue](#minimumvalue)
+- [onSlidingComplete](#onslidingcomplete)
+- [onSlidingStart](#onslidingstart)
+- [onValueChange](#onvaluechange)
 - [orientation](#orientation)
 - [step](#step)
 - [style](#style)
-- [thumbProps](#thumbProps)
-- [thumbStyle](#thumbStyle)
-- [thumbTintColor](#thumbTintColor)
-- [thumbTouchSize](#thumbTouchSize)
-- [trackStyle](#trackStyle)
+- [thumbProps](#thumbprops)
+- [thumbStyle](#thumbstyle)
+- [thumbTintColor](#thumbtintcolor)
+- [thumbTouchSize](#thumbtouchsize)
+- [trackStyle](#trackstyle)
 - [value](#value)
 
 ## Reference
 
-### allowTouchTrack
+### Slider
+
+#### allowTouchTrack
 
 If true, thumb will respond and jump to any touch along the track.
 
@@ -54,7 +58,7 @@ If true, thumb will respond and jump to any touch along the track.
 
 ---
 
-### animateTransitions
+#### animateTransitions
 
 Set to true if you want to use the default 'spring' animation.
 
@@ -64,27 +68,27 @@ Set to true if you want to use the default 'spring' animation.
 
 ---
 
-### animationConfig
+#### animationConfig
 
 Used to configure the animation parameters. These are the same parameters in the [Animated library](https://reactnative.dev/docs/animations.html).
 
 | Type                                           | Default |
 | ---------------------------------------------- | ------- |
-| TimingAnimationConfig \| SpringAnimationConfig | None    |
+| TimingAnimationConfig or SpringAnimationConfig | None    |
 
 ---
 
-### animationType
+#### animationType
 
 Set to 'spring' or 'timing' to use one of those two types of animations with the default [animation properties](https://reactnative.dev/docs/animations.html).
 
 | Type                 | Default |
 | -------------------- | ------- |
-| "spring" \| "timing" | timing  |
+| "timing" or "spring" | timing  |
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Apply style to the container of the slider.
 
@@ -94,7 +98,7 @@ Apply style to the container of the slider.
 
 ---
 
-### debugTouchArea
+#### debugTouchArea
 
 Set this to true to visually see the thumb touch rect in green.
 
@@ -104,7 +108,7 @@ Set this to true to visually see the thumb touch rect in green.
 
 ---
 
-### disabled
+#### disabled
 
 If true the user won't be able to move the slider.
 
@@ -114,7 +118,7 @@ If true the user won't be able to move the slider.
 
 ---
 
-### maximumTrackTintColor
+#### maximumTrackTintColor
 
 The color used for the track to the right of the button.
 
@@ -124,7 +128,7 @@ The color used for the track to the right of the button.
 
 ---
 
-### maximumValue
+#### maximumValue
 
 Initial maximum value of the slider.
 
@@ -134,7 +138,7 @@ Initial maximum value of the slider.
 
 ---
 
-### minimumTrackTintColor
+#### minimumTrackTintColor
 
 The color used for the track to the left of the button.
 
@@ -144,7 +148,7 @@ The color used for the track to the left of the button.
 
 ---
 
-### minimumValue
+#### minimumValue
 
 Initial minimum value of the slider.
 
@@ -154,7 +158,7 @@ Initial minimum value of the slider.
 
 ---
 
-### onSlidingComplete
+#### onSlidingComplete
 
 Callback called when the user finishes changing the value (e.g. when the slider is released).
 
@@ -164,7 +168,7 @@ Callback called when the user finishes changing the value (e.g. when the slider 
 
 ---
 
-### onSlidingStart
+#### onSlidingStart
 
 Callback called when the user starts changing the value (e.g. when the slider is pressed).
 
@@ -174,7 +178,7 @@ Callback called when the user starts changing the value (e.g. when the slider is
 
 ---
 
-### onValueChange
+#### onValueChange
 
 Callback continuously called while the user is dragging the slider.
 
@@ -184,17 +188,17 @@ Callback continuously called while the user is dragging the slider.
 
 ---
 
-### orientation
+#### orientation
 
 Set the orientation of the slider.
 
 | Type                       | Default    |
 | -------------------------- | ---------- |
-| "vertical" \| "horizontal" | horizontal |
+| "vertical" or "horizontal" | horizontal |
 
 ---
 
-### step
+#### step
 
 Step value of the slider. The value should be between 0 and maximumValue - minimumValue).
 
@@ -204,7 +208,7 @@ Step value of the slider. The value should be between 0 and maximumValue - minim
 
 ---
 
-### style
+#### style
 
 The style applied to the slider container.
 
@@ -214,7 +218,7 @@ The style applied to the slider container.
 
 ---
 
-### thumbProps
+#### thumbProps
 
 The props applied to the thumb. Uses `Component` prop which can accept `Animated` components.
 
@@ -224,7 +228,7 @@ The props applied to the thumb. Uses `Component` prop which can accept `Animated
 
 ---
 
-### thumbStyle
+#### thumbStyle
 
 The style applied to the thumb.
 
@@ -234,7 +238,7 @@ The style applied to the thumb.
 
 ---
 
-### thumbTintColor
+#### thumbTintColor
 
 The color used for the thumb.
 
@@ -244,7 +248,7 @@ The color used for the thumb.
 
 ---
 
-### thumbTouchSize
+#### thumbTouchSize
 
 The size of the touch area that allows moving the thumb. The touch area has the same center as the visible thumb. This allows to have a visually small thumb while still allowing the user to move it easily.
 
@@ -254,7 +258,7 @@ The size of the touch area that allows moving the thumb. The touch area has the 
 
 ---
 
-### trackStyle
+#### trackStyle
 
 The style applied to the track.
 
@@ -264,7 +268,7 @@ The style applied to the track.
 
 ---
 
-### value
+#### value
 
 Initial value of the slider.
 

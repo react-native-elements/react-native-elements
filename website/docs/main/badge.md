@@ -18,28 +18,32 @@ Badges are small components typically used to communicate a numerical value or i
 
 ## Props
 
-- [Component](#Component)
-- [badgeStyle](#badgeStyle)
-- [containerStyle](#containerStyle)
-- [onPress](#onPress)
+### Badge
+
+- [Component](#component)
+- [badgeStyle](#badgestyle)
+- [containerStyle](#containerstyle)
+- [onPress](#onpress)
 - [status](#status)
-- [textProps](#textProps)
-- [textStyle](#textStyle)
+- [textProps](#textprops)
+- [textStyle](#textstyle)
 - [value](#value)
 
 ## Reference
 
-### Component
+### Badge
+
+#### Component
 
 Custom component to replace the badge outer component.
 
-| Type | Default                           |
-| ---- | --------------------------------- |
-| any  | onPress ? TouchableOpacity : View |
+| Type            | Default                           |
+| --------------- | --------------------------------- |
+| React Component | onPress ? TouchableOpacity : View |
 
 ---
 
-### badgeStyle
+#### badgeStyle
 
 Additional styling for badge (background) view component.
 
@@ -49,7 +53,7 @@ Additional styling for badge (background) view component.
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Style for the container.
 
@@ -59,7 +63,7 @@ Style for the container.
 
 ---
 
-### onPress
+#### onPress
 
 Function called when pressed on the badge.
 
@@ -69,17 +73,17 @@ Function called when pressed on the badge.
 
 ---
 
-### status
+#### status
 
 Determines color of the indicator.
 
-| Type                   | Default   |
-| ---------------------- | --------- |
-| "primary" \| "success" | "warning" | "error" | primary |
+| Type                                           | Default |
+| ---------------------------------------------- | ------- |
+| "primary" or "success" or "warning" or "error" | primary |
 
 ---
 
-### textProps
+#### textProps
 
 Extra props for text component.
 
@@ -89,7 +93,7 @@ Extra props for text component.
 
 ---
 
-### textStyle
+#### textStyle
 
 Extra styling for icon component.
 
@@ -99,7 +103,7 @@ Extra styling for icon component.
 
 ---
 
-### value
+#### value
 
 Text value to be displayed by badge, defaults to empty.
 

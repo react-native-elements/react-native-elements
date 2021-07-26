@@ -1,19 +1,21 @@
 ---
 id: tab
-title: Tabs
+
+title: Tab
+
 slug: /tab
 ---
 
-import Props from './props/tab.md'
 import Usage from './usage/Tab/Tab.md'
 
 Tabs organize content across different screens, data sets, and other interactions.
 
-<div className="component-preview component-preview--grid component-preview--grid-10">
-  <figure>
-    <img src="/img/tab.jpg" alt="Floating Action Button" />
-  </figure>
-</div>
+## Components
+
+- [Tab.Item](#Tab.Item)
+  They are indivual item of the parent Tab.
+  They are clickable and allows users to click and change Tab.
+  Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
 
 ## Usage
 
@@ -21,6 +23,93 @@ Tabs organize content across different screens, data sets, and other interaction
 
 ---
 
-<Props />
+## Props
+
+### Tab
+
+- [disableIndicator](#disableindicator)
+- [indicatorStyle](#indicatorstyle)
+- [onChange](#onchange)
+- [value](#value)
+- [variant](#variant)
+
+### Tab.Item
+
+- [active](#active)
+- [variant](#variant)
+
+## Reference
+
+### Tab
+
+#### disableIndicator
+
+Disable the indicator below.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### indicatorStyle
+
+Additional styling for tab indicator.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### onChange
+
+On Index Change Callback.
+
+| Type                    | Default  |
+| ----------------------- | -------- |
+| (value: number) => void | () => {} |
+
+---
+
+#### value
+
+Child position index value.
+
+| Type   | Default |
+| ------ | ------- |
+| number | None    |
+
+---
+
+#### variant
+
+Define the background Variant.
+
+| Type                   | Default |
+| ---------------------- | ------- |
+| "primary" or "default" | None    |
+
+---
+
+### Tab.Item
+
+#### active
+
+Allows to define if TabItem is active.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### variant
+
+Define the background Variant.
+
+| Type                   | Default |
+| ---------------------- | ------- |
+| "primary" or "default" | None    |
 
 ---

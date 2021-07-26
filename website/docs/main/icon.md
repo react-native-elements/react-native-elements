@@ -20,20 +20,22 @@ They are also used for displaying information.
 
 ## Props
 
-- [Component](#Component)
-- [backgroundColor](#backgroundColor)
-- [borderRadius](#borderRadius)
+### Icon
+
+- [Component](#component)
+- [backgroundColor](#backgroundcolor)
+- [borderRadius](#borderradius)
 - [brand](#brand)
 - [color](#color)
-- [containerStyle](#containerStyle)
+- [containerStyle](#containerstyle)
 - [disabled](#disabled)
-- [disabledStyle](#disabledStyle)
-- [iconProps](#iconProps)
-- [iconStyle](#iconStyle)
+- [disabledStyle](#disabledstyle)
+- [iconProps](#iconprops)
+- [iconStyle](#iconstyle)
 - [name](#name)
 - [raised](#raised)
 - [reverse](#reverse)
-- [reverseColor](#reverseColor)
+- [reverseColor](#reversecolor)
 - [size](#size)
 - [solid](#solid)
 - [style](#style)
@@ -41,17 +43,25 @@ They are also used for displaying information.
 
 ## Reference
 
-### Component
+### Icon
+
+#### Component
 
 Update React Native Component.
 
-| Type | Default                                                            |
-| ---- | ------------------------------------------------------------------ |
-| any  | { android: TouchableNativeFeedback, default: TouchableHighlight, } |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | onPress |
+
+    ? Platform.select<typeof React.Component>({
+        android: TouchableNativeFeedback,
+        default: TouchableHighlight,
+      })
+    : View |
 
 ---
 
-### backgroundColor
+#### backgroundColor
 
 Background color of the button
 
@@ -61,7 +71,7 @@ Background color of the button
 
 ---
 
-### borderRadius
+#### borderRadius
 
 Border radius of the button
 
@@ -73,7 +83,7 @@ Set to 0 to disable.
 
 ---
 
-### brand
+#### brand
 
 Uses the brands font (FontAwesome5 only).
 
@@ -83,7 +93,7 @@ Uses the brands font (FontAwesome5 only).
 
 ---
 
-### color
+#### color
 
 Text and icon color
 
@@ -95,7 +105,7 @@ Use iconStyle or nest a Text component if you need different colors.
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Add styling to container holding icon.
 
@@ -105,7 +115,7 @@ Add styling to container holding icon.
 
 ---
 
-### disabled
+#### disabled
 
 If true, disable all interactions for this component.
 
@@ -117,7 +127,7 @@ Disables onPress events. Only works when `onPress` has a handler.
 
 ---
 
-### disabledStyle
+#### disabledStyle
 
 Style for the button when disabled. Only works when `onPress` has a handler.
 
@@ -127,7 +137,7 @@ Style for the button when disabled. Only works when `onPress` has a handler.
 
 ---
 
-### iconProps
+#### iconProps
 
 Provide all props from react-native Icon component.
 
@@ -137,7 +147,7 @@ Provide all props from react-native Icon component.
 
 ---
 
-### iconStyle
+#### iconStyle
 
 Styles applied to the icon only
 
@@ -149,7 +159,7 @@ Good for setting margins or a different color.
 
 ---
 
-### name
+#### name
 
 Name of the icon to show
 
@@ -163,7 +173,7 @@ See Icon Explorer app
 
 ---
 
-### raised
+#### raised
 
 Adds box shadow to button.
 
@@ -173,7 +183,7 @@ Adds box shadow to button.
 
 ---
 
-### reverse
+#### reverse
 
 Reverses color scheme.
 
@@ -183,7 +193,7 @@ Reverses color scheme.
 
 ---
 
-### reverseColor
+#### reverseColor
 
 Specify reverse icon color.
 
@@ -193,7 +203,7 @@ Specify reverse icon color.
 
 ---
 
-### size
+#### size
 
 Size of the icon, can also be passed as fontSize in the style object.
 
@@ -203,7 +213,7 @@ Size of the icon, can also be passed as fontSize in the style object.
 
 ---
 
-### solid
+#### solid
 
 Uses the solid font.
 
@@ -213,7 +223,7 @@ Uses the solid font.
 
 ---
 
-### style
+#### style
 
 Style prop inherited from TextProps and TouchableWithoutFeedbackProperties
 
@@ -221,11 +231,11 @@ Only exist here so we can have ViewStyle or TextStyle
 
 | Type                   | Default |
 | ---------------------- | ------- |
-| ViewStyle \| TextStyle | None    |
+| ViewStyle or TextStyle | None    |
 
 ---
 
-### type
+#### type
 
 Type of icon set. [Supported sets here](#available-icon-sets).
 

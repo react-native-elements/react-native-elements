@@ -6,4 +6,4 @@ import Snack from './snack/index.md'
 
 #### SpeedDial.Action
 
-> Receives all [FAB](../../fab.md#props) props.
+> Receives all [FAB](../../fab#props) props.

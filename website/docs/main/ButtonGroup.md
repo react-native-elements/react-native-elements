@@ -22,45 +22,49 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 
 ## Props
 
-- [Component](#Component)
-- [activeOpacity](#activeOpacity)
+### ButtonGroup
+
+- [Component](#component)
+- [activeOpacity](#activeopacity)
 - [button](#button)
-- [buttonContainerStyle](#buttonContainerStyle)
-- [buttonStyle](#buttonStyle)
+- [buttonContainerStyle](#buttoncontainerstyle)
+- [buttonStyle](#buttonstyle)
 - [buttons](#buttons)
-- [containerStyle](#containerStyle)
+- [containerStyle](#containerstyle)
 - [disabled](#disabled)
-- [disabledSelectedStyle](#disabledSelectedStyle)
-- [disabledSelectedTextStyle](#disabledSelectedTextStyle)
-- [disabledStyle](#disabledStyle)
-- [disabledTextStyle](#disabledTextStyle)
-- [innerBorderStyle](#innerBorderStyle)
-- [onHideUnderlay](#onHideUnderlay)
-- [onPress](#onPress)
-- [onShowUnderlay](#onShowUnderlay)
-- [selectMultiple](#selectMultiple)
-- [selectedButtonStyle](#selectedButtonStyle)
-- [selectedIndex](#selectedIndex)
-- [selectedIndexes](#selectedIndexes)
-- [selectedTextStyle](#selectedTextStyle)
-- [setOpacityTo](#setOpacityTo)
-- [textStyle](#textStyle)
-- [underlayColor](#underlayColor)
+- [disabledSelectedStyle](#disabledselectedstyle)
+- [disabledSelectedTextStyle](#disabledselectedtextstyle)
+- [disabledStyle](#disabledstyle)
+- [disabledTextStyle](#disabledtextstyle)
+- [innerBorderStyle](#innerborderstyle)
+- [onHideUnderlay](#onhideunderlay)
+- [onPress](#onpress)
+- [onShowUnderlay](#onshowunderlay)
+- [selectMultiple](#selectmultiple)
+- [selectedButtonStyle](#selectedbuttonstyle)
+- [selectedIndex](#selectedindex)
+- [selectedIndexes](#selectedindexes)
+- [selectedTextStyle](#selectedtextstyle)
+- [setOpacityTo](#setopacityto)
+- [textStyle](#textstyle)
+- [underlayColor](#underlaycolor)
 - [vertical](#vertical)
 
 ## Reference
 
-### Component
+### ButtonGroup
+
+#### Component
 
 Choose other button component such as TouchableOpacity.
 
-| Type | Default                                                          |
-| ---- | ---------------------------------------------------------------- |
-| any  | { android: TouchableNativeFeedback, default: TouchableOpacity, } |
+| Type            | Default                                                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| React Component | {"ios":"TouchableOpacity","android":"TouchableOpacity","web":"TouchableOpacity","{android":"TouchableNativeFeedback"} |
 
 ---
 
-### activeOpacity
+#### activeOpacity
 
 Add active opacity to the button in buttongroup.
 
@@ -70,7 +74,7 @@ Add active opacity to the button in buttongroup.
 
 ---
 
-### button
+#### button
 
 Button for the component.
 
@@ -80,7 +84,7 @@ Button for the component.
 
 ---
 
-### buttonContainerStyle
+#### buttonContainerStyle
 
 Specify styling for button containers.
 
@@ -90,7 +94,7 @@ Specify styling for button containers.
 
 ---
 
-### buttonStyle
+#### buttonStyle
 
 Specify styling for button.
 
@@ -100,7 +104,7 @@ Specify styling for button.
 
 ---
 
-### buttons
+#### buttons
 
 Array of buttons for component (required), if returning a component, must be an object with { element: componentName }.
 
@@ -110,7 +114,7 @@ Array of buttons for component (required), if returning a component, must be an 
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Specify styling for main button container.
 
@@ -120,17 +124,17 @@ Specify styling for main button container.
 
 ---
 
-### disabled
+#### disabled
 
 Controls if buttons are disabled. Setting `true` makes all of them disabled, while using an array only makes those indices disabled.
 
 | Type                | Default |
 | ------------------- | ------- |
-| boolean \| number[] | false   |
+| boolean or number[] | false   |
 
 ---
 
-### disabledSelectedStyle
+#### disabledSelectedStyle
 
 Styling for each selected button when disabled.
 
@@ -140,7 +144,7 @@ Styling for each selected button when disabled.
 
 ---
 
-### disabledSelectedTextStyle
+#### disabledSelectedTextStyle
 
 Styling for the text of each selected button when disabled.
 
@@ -150,7 +154,7 @@ Styling for the text of each selected button when disabled.
 
 ---
 
-### disabledStyle
+#### disabledStyle
 
 Styling for each button when disabled.
 
@@ -160,7 +164,7 @@ Styling for each button when disabled.
 
 ---
 
-### disabledTextStyle
+#### disabledTextStyle
 
 Styling for the text of each button when disabled.
 
@@ -170,7 +174,7 @@ Styling for the text of each button when disabled.
 
 ---
 
-### innerBorderStyle
+#### innerBorderStyle
 
 Update the styling of the interior border of the list of buttons.
 
@@ -180,7 +184,7 @@ Update the styling of the interior border of the list of buttons.
 
 ---
 
-### onHideUnderlay
+#### onHideUnderlay
 
 Function called on hiding underlay.
 
@@ -190,7 +194,7 @@ Function called on hiding underlay.
 
 ---
 
-### onPress
+#### onPress
 
 Method to update Button Group Index.
 
@@ -200,7 +204,7 @@ Method to update Button Group Index.
 
 ---
 
-### onShowUnderlay
+#### onShowUnderlay
 
 Function called on showing underlay.
 
@@ -210,7 +214,7 @@ Function called on showing underlay.
 
 ---
 
-### selectMultiple
+#### selectMultiple
 
 Allows the user to select multiple buttons.
 
@@ -220,7 +224,7 @@ Allows the user to select multiple buttons.
 
 ---
 
-### selectedButtonStyle
+#### selectedButtonStyle
 
 Specify styling for selected button.
 
@@ -230,7 +234,7 @@ Specify styling for selected button.
 
 ---
 
-### selectedIndex
+#### selectedIndex
 
 Current selected index of array of buttons.
 
@@ -240,7 +244,7 @@ Current selected index of array of buttons.
 
 ---
 
-### selectedIndexes
+#### selectedIndexes
 
 Current selected indexes from the array of buttons.
 
@@ -250,7 +254,7 @@ Current selected indexes from the array of buttons.
 
 ---
 
-### selectedTextStyle
+#### selectedTextStyle
 
 Specify specific styling for text in the selected state.
 
@@ -260,7 +264,7 @@ Specify specific styling for text in the selected state.
 
 ---
 
-### setOpacityTo
+#### setOpacityTo
 
 Funtion to set the opacity.
 
@@ -270,7 +274,7 @@ Funtion to set the opacity.
 
 ---
 
-### textStyle
+#### textStyle
 
 Specify specific styling for text.
 
@@ -280,7 +284,7 @@ Specify specific styling for text.
 
 ---
 
-### underlayColor
+#### underlayColor
 
 Specify underlayColor for TouchableHighlight.
 
@@ -290,7 +294,7 @@ Specify underlayColor for TouchableHighlight.
 
 ---
 
-### vertical
+#### vertical
 
 Display the ButtonGroup vertically.
 

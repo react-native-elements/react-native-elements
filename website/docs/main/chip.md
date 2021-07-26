@@ -20,16 +20,20 @@ They may display text, icons, or both.
 
 ## Props
 
+### Chip
+
 - [type](#type)
 
 ## Reference
 
-### type
+### Chip
+
+#### type
 
 Type of button.
 
 | Type                 | Default |
 | -------------------- | ------- |
-| "solid" \| "outline" | None    |
+| "solid" or "outline" | None    |
 
 ---

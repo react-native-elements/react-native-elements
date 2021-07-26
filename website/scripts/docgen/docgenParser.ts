@@ -3,6 +3,31 @@ import { withDefaultConfig } from 'react-docgen-typescript';
 const themeProps = ['theme', 'updateTheme', 'replaceTheme'];
 const componentsWithParentsTypeToBeParsed = ['AirbnbRating'];
 
+function platformMappingHandler(value) {
+  const formattedString = value
+    .substring(value.lastIndexOf('{'), value.lastIndexOf('}') + 1)
+    .replace(/\r\n/g, '')
+    .replace(/ /g, '');
+  const platforms = formattedString.split(',');
+
+  const platformTypes = { ios: '', android: '', web: '' };
+
+  platforms.map((item) => {
+    if (item !== '') {
+      const [platform, type] = item.split(':');
+      if (platform !== 'default') {
+        platformTypes[platform] = type;
+      } else {
+        Object.keys(platformTypes).map((key) => {
+          if (!platformTypes[key]) platformTypes[key] = type;
+        });
+      }
+    }
+  });
+
+  return JSON.stringify(platformTypes);
+}
+
 // The config object is passed to the parser.
 const parserOptions = {
   savePropValueAsString: true,
@@ -10,6 +35,19 @@ const parserOptions = {
     if (themeProps.includes(prop.name)) {
       return false;
     }
+
+    if (prop.type.name.includes('|')) {
+      prop.type.name = prop.type.name.replace(/\|/g, 'or');
+    }
+
+    if (prop.type.name.includes('&')) {
+      prop.type.name = prop.type.name.replace(/&/g, 'and');
+    }
+
+    if (prop.name === 'Component' || prop.name === 'ViewComponent') {
+      prop.type.name = 'React Component';
+    }
+
     // To deal with the props of type StyleProp<ViewStyle> and StyleProp<TextStyle>
     if (prop?.type?.name.includes('StyleProp')) {
       if (prop.type.name.includes('TextStyle')) {
@@ -30,14 +68,8 @@ const parserOptions = {
     }
 
     // To deal with the platform specific props default value
-    if (prop?.defaultValue?.value.includes('Platform.select')) {
-      const defaultValue = prop.defaultValue.value;
-      prop.defaultValue.value = defaultValue
-        .substring(
-          defaultValue.lastIndexOf('{'),
-          defaultValue.lastIndexOf('}') + 1
-        )
-        .replace(/\r\n/g, '');
+    if (component.name === 'ButtonGroup' && prop.name === 'Component') {
+      prop.defaultValue.value = platformMappingHandler(prop.defaultValue.value);
     }
 
     // To deal with the prop of defaultValue onPress || onLongPress ? TouchableOpacity : View in Avatar

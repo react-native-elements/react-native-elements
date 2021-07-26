@@ -20,16 +20,20 @@ Overlays are an easy way to inform or request information from the user.
 
 ## Props
 
-- [ModalComponent](#ModalComponent)
-- [backdropStyle](#backdropStyle)
-- [fullScreen](#fullScreen)
-- [isVisible](#isVisible)
-- [onBackdropPress](#onBackdropPress)
-- [overlayStyle](#overlayStyle)
+### Overlay
+
+- [ModalComponent](#modalcomponent)
+- [backdropStyle](#backdropstyle)
+- [fullScreen](#fullscreen)
+- [isVisible](#isvisible)
+- [onBackdropPress](#onbackdroppress)
+- [overlayStyle](#overlaystyle)
 
 ## Reference
 
-### ModalComponent
+### Overlay
+
+#### ModalComponent
 
 Override React Native `Modal` component (usable for web-platform).
 
@@ -39,7 +43,7 @@ Override React Native `Modal` component (usable for web-platform).
 
 ---
 
-### backdropStyle
+#### backdropStyle
 
 Style of the backdrop container.
 
@@ -49,7 +53,7 @@ Style of the backdrop container.
 
 ---
 
-### fullScreen
+#### fullScreen
 
 If set to true, the modal will take up the entire screen width and height.
 
@@ -59,7 +63,7 @@ If set to true, the modal will take up the entire screen width and height.
 
 ---
 
-### isVisible
+#### isVisible
 
 If true, the overlay is visible.
 
@@ -69,7 +73,7 @@ If true, the overlay is visible.
 
 ---
 
-### onBackdropPress
+#### onBackdropPress
 
 Handler for backdrop press (only works when `fullscreen` is false).
 
@@ -79,7 +83,7 @@ Handler for backdrop press (only works when `fullscreen` is false).
 
 ---
 
-### overlayStyle
+#### overlayStyle
 
 Style of the actual overlay.
 

@@ -1,42 +1,30 @@
 ---
 id: dialog
+
 title: Dialog
+
 slug: /dialog
 ---
 
-import Props from './props/dialog.md'
 import Usage from './usage/Dialog/Dialog.md'
 
-Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks. You can wrap any component with a simple Dialog component to display quick information to the user.
+Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
 
-<div className="component-preview component-preview--grid component-preview--grid-3">
-  <figure>
-    <img src="/img/dialog/dialog--simple.jpg" alt="Simple Dialog" />
-    <figcaption>Simple</figcaption>
-  </figure>
-  <figure>
-  <img src="/img/dialog/dialog--multi.jpg" alt="Multi Action Dialog" />
-    <figcaption>Multi Action</figcaption>
-  </figure>
-  <figure>
-  <img src="/img/dialog/dialog--noaction.jpg" alt="Buttonless Dialog" />
-    <figcaption>No Action</figcaption>
-  </figure>
-</div>
-<div className="component-preview component-preview--grid component-preview--grid-3">
-  <figure>
-    <img src="/img/dialog/dialog--loading.gif" alt="Loading Dialog" />
-    <figcaption>Loading</figcaption>
-  </figure>
-  <figure>
-  <img src="/img/dialog/dialog--custom1.gif" alt="Custom Multi Action" />
-    <figcaption>Custom Multi Action</figcaption>
-  </figure>
-  <figure>
-  <img src="/img/dialog/dialog--custom2.gif" alt="Custom No Action" />
-    <figcaption>Custom No Action</figcaption>
-  </figure>
-</div>
+You can wrap any component with a simple Dialog component to display quick information to the user.
+
+Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) props except `fullscreen`.
+
+## Components
+
+- [Dialog.Actions](#Dialog.Actions)
+  Define Dialog Actions using this component.
+- [Dialog.Button](#Dialog.Button)
+  This is used to add a button to the Dialog.
+  Receives all [Button](button#props) props.
+- [Dialog.Loading](#Dialog.Loading)
+  `DialogLoader` allows adding loader to the Dialog. Loader is simply ActivityIndicator.
+- [Dialog.Title](#Dialog.Title)
+  `DialogTitle` allows you to add title to the Dialog.
 
 ## Usage
 
@@ -44,6 +32,150 @@ Dialogs inform users about a task and can contain critical information, require 
 
 ---
 
-<Props />
+## Props
+
+### Dialog
+
+- [children](#children)
+- [isVisible](#isvisible)
+- [onBackdropPress](#onbackdroppress)
+- [overlayStyle](#overlaystyle)
+
+### Dialog.Actions
+
+- [children](#children)
+
+### Dialog.Button
+
+None
+
+### Dialog.Loading
+
+- [loadingProps](#loadingprops)
+- [loadingStyle](#loadingstyle)
+
+### Dialog.Title
+
+- [title](#title)
+- [titleProps](#titleprops)
+- [titleStyle](#titlestyle)
+
+## Reference
+
+### Dialog
+
+#### children
+
+Add Enclosed components.
+
+| Type      | Default |
+| --------- | ------- |
+| ReactNode | None    |
+
+---
+
+#### isVisible
+
+If true, the overlay is visible.
+
+If true, the dialog is visible.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### onBackdropPress
+
+Handler for backdrop press (only works when `fullscreen` is false).
+
+Handler for backdrop press.
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| (() => void) and (() => void) | None    |
+
+---
+
+#### overlayStyle
+
+Style of the actual overlay.
+
+Add dditional styling to the internal Overlay component.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+### Dialog.Actions
+
+#### children
+
+Add Enclosed components as an action to the dialog.
+
+| Type      | Default |
+| --------- | ------- |
+| ReactNode | None    |
+
+---
+
+### Dialog.Button
+
+None
+
+### Dialog.Loading
+
+#### loadingProps
+
+Add additional props for ActivityIndicator component
+
+| Type                   | Default           |
+| ---------------------- | ----------------- |
+| ActivityIndicatorProps | { size: 'large' } |
+
+---
+
+#### loadingStyle
+
+Add additional styling for loading component.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+### Dialog.Title
+
+#### title
+
+Add Dialog title.
+
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
+
+---
+
+#### titleProps
+
+Add additional props for Text component.
+
+| Type      | Default |
+| --------- | ------- |
+| TextProps | None    |
+
+---
+
+#### titleStyle
+
+Add additional styling for title component.
+
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---

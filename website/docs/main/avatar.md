@@ -14,57 +14,43 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ## Components
 
-- **Avatar.Accessory** - This is used for adding an accessory to the Avatar. Receives either all [Icon](icon.md#props) or [Image](image.md#props) props.
+- [Avatar.Accessory](#Avatar.Accessory)
+  This is used for adding an accessory to the Avatar.
+  Receives either all [Icon](icon#props) or [Image](image#props) props.
 
 ## Usage
 
 <Usage />
 
+---
+
 ## Props
 
 ### Avatar
 
-- [Component](#Component)
-
-- [ImageComponent](#ImageComponent)
-
-- [activeOpacity](#activeOpacity)
-
-- [avatarStyle](#avatarStyle)
-
-- [containerStyle](#containerStyle)
-
+- [Component](#component)
+- [ImageComponent](#imagecomponent)
+- [activeOpacity](#activeopacity)
+- [avatarStyle](#avatarstyle)
+- [containerStyle](#containerstyle)
 - [icon](#icon)
-
-- [iconStyle](#iconStyle)
-
-- [imageProps](#imageProps)
-
-- [onLongPress](#onLongPress)
-
-- [onPress](#onPress)
-
-- [overlayContainerStyle](#overlayContainerStyle)
-
-- [placeholderStyle](#placeholderStyle)
-
-- [renderPlaceholderContent](#renderPlaceholderContent)
-
+- [iconStyle](#iconstyle)
+- [imageProps](#imageprops)
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [overlayContainerStyle](#overlaycontainerstyle)
+- [placeholderStyle](#placeholderstyle)
+- [renderPlaceholderContent](#renderplaceholdercontent)
 - [rounded](#rounded)
-
 - [size](#size)
-
 - [source](#source)
-
 - [title](#title)
-
-- [titleStyle](#titleStyle)
+- [titleStyle](#titlestyle)
 
 ### Avatar.Accessory
 
 - [style](#style)
-
-- [underlayColor](#underlayColor)
+- [underlayColor](#underlaycolor)
 
 ## Reference
 
@@ -74,9 +60,9 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 Component for enclosing element (eg: TouchableHighlight, View, etc).
 
-| Type | Default                                          |
-| ---- | ------------------------------------------------ |
-| any  | onPress \| onLongPress ? TouchableOpacity : View |
+| Type            | Default                  |
+| --------------- | ------------------------ |
+| React Component | TouchableOpacity or View |
 
 ---
 
@@ -86,7 +72,7 @@ Custom ImageComponent for Avatar.
 
 | Type | Default |
 | ---- | ------- |
-| any  |         |
+| any  | None    |
 
 ---
 
@@ -96,7 +82,7 @@ Opacity when pressed.
 
 | Type   | Default |
 | ------ | ------- |
-| number |         |
+| number | None    |
 
 ---
 
@@ -106,7 +92,7 @@ Style for avatar image.
 
 | Type       | Default |
 | ---------- | ------- |
-| ImageStyle |         |
+| ImageStyle | None    |
 
 ---
 
@@ -114,9 +100,9 @@ Style for avatar image.
 
 Styling for outer container.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -126,7 +112,7 @@ Displays an icon as the main content of the Avatar. **Cannot be used alongside t
 
 | Type       | Default |
 | ---------- | ------- |
-| AvatarIcon |         |
+| AvatarIcon | None    |
 
 ---
 
@@ -134,9 +120,9 @@ Displays an icon as the main content of the Avatar. **Cannot be used alongside t
 
 Extra styling for icon component.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -144,9 +130,9 @@ Extra styling for icon component.
 
 Optional properties to pass to the avatar e.g "resizeMode".
 
-| Type                  | Default |
-| --------------------- | ------- |
-| `Partial<ImageProps>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| ImageProps(Object) | None    |
 
 ---
 
@@ -156,7 +142,7 @@ Callback function when long pressing component.
 
 | Type       | Default |
 | ---------- | ------- |
-| () => void |         |
+| () => void | None    |
 
 ---
 
@@ -166,7 +152,7 @@ Callback function when pressing component.
 
 | Type       | Default |
 | ---------- | ------- |
-| () => void |         |
+| () => void | None    |
 
 ---
 
@@ -174,9 +160,9 @@ Callback function when pressing component.
 
 Style for the view outside image or icon.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -184,9 +170,9 @@ Style for the view outside image or icon.
 
 Adds style to the placeholder wrapper.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
@@ -196,7 +182,7 @@ Custom placeholder element (by default, it's the title).
 
 | Type | Default |
 | ---- | ------- |
-| any  |         |
+| any  | None    |
 
 ---
 
@@ -206,7 +192,7 @@ Makes the avatar circular.
 
 | Type    | Default |
 | ------- | ------- |
-| boolean |         |
+| boolean | None    |
 
 ---
 
@@ -214,9 +200,9 @@ Makes the avatar circular.
 
 Size of the avatar.
 
-| Type              | Default  |
-| ----------------- | -------- |
-| number \| "small" | "medium" | "large" | "xlarge" | small |
+| Type                                                 | Default |
+| ---------------------------------------------------- | ------- |
+| number or "small" or "medium" or "large" or "xlarge" | small   |
 
 ---
 
@@ -226,7 +212,7 @@ Image source to be displayed on avatar.
 
 | Type                | Default |
 | ------------------- | ------- |
-| ImageSourcePropType |         |
+| ImageSourcePropType | None    |
 
 ---
 
@@ -236,7 +222,7 @@ Renders title in the placeholder.
 
 | Type   | Default |
 | ------ | ------- |
-| string |         |
+| string | None    |
 
 ---
 
@@ -244,9 +230,9 @@ Renders title in the placeholder.
 
 Style for the title.
 
-| Type                   | Default |
-| ---------------------- | ------- |
-| `StyleProp<TextStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 
@@ -262,9 +248,9 @@ Style
 
 Add custom styling to the accessory of avatar.
 
-| Type                                                                      | Default |
-| ------------------------------------------------------------------------- | ------- |
-| `(ViewStyle \| TextStyle) & StyleProp<ImageStyle> & StyleProp<ViewStyle>` |         |
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
 
 ---
 

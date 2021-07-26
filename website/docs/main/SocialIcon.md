@@ -18,41 +18,45 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 
 ## Props
 
-- [Component](#Component)
-- [activityIndicatorStyle](#activityIndicatorStyle)
+### SocialIcon
+
+- [Component](#component)
+- [activityIndicatorStyle](#activityindicatorstyle)
 - [button](#button)
 - [disabled](#disabled)
-- [fontFamily](#fontFamily)
-- [fontStyle](#fontStyle)
-- [fontWeight](#fontWeight)
-- [iconColor](#iconColor)
-- [iconSize](#iconSize)
-- [iconStyle](#iconStyle)
-- [iconType](#iconType)
+- [fontFamily](#fontfamily)
+- [fontStyle](#fontstyle)
+- [fontWeight](#fontweight)
+- [iconColor](#iconcolor)
+- [iconSize](#iconsize)
+- [iconStyle](#iconstyle)
+- [iconType](#icontype)
 - [light](#light)
 - [loading](#loading)
-- [onLongPress](#onLongPress)
-- [onPress](#onPress)
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
 - [raised](#raised)
 - [small](#small)
 - [style](#style)
 - [title](#title)
 - [type](#type)
-- [underlayColor](#underlayColor)
+- [underlayColor](#underlaycolor)
 
 ## Reference
 
-### Component
+### SocialIcon
+
+#### Component
 
 Type of button.
 
-| Type | Default    |
-| ---- | ---------- |
-| any  | onPress \| | onLongPress ? TouchableHighlight : View |
+| Type            | Default    |
+| --------------- | ---------- |
+| React Component | onPress \| | onLongPress ? TouchableHighlight : View |
 
 ---
 
-### activityIndicatorStyle
+#### activityIndicatorStyle
 
 Style to render when in loading state.
 
@@ -62,7 +66,7 @@ Style to render when in loading state.
 
 ---
 
-### button
+#### button
 
 Creates button with a social icon.
 
@@ -72,7 +76,7 @@ Creates button with a social icon.
 
 ---
 
-### disabled
+#### disabled
 
 Disables the button, if true.
 
@@ -82,7 +86,7 @@ Disables the button, if true.
 
 ---
 
-### fontFamily
+#### fontFamily
 
 Specify different font family.
 
@@ -92,7 +96,7 @@ Specify different font family.
 
 ---
 
-### fontStyle
+#### fontStyle
 
 Specify text styling.
 
@@ -102,7 +106,7 @@ Specify text styling.
 
 ---
 
-### fontWeight
+#### fontWeight
 
 Specify font weight of title if set as a button with a title.
 
@@ -112,7 +116,7 @@ Specify font weight of title if set as a button with a title.
 
 ---
 
-### iconColor
+#### iconColor
 
 Specify the color of the icon.
 
@@ -122,7 +126,7 @@ Specify the color of the icon.
 
 ---
 
-### iconSize
+#### iconSize
 
 Specify the size of the icon.
 
@@ -132,7 +136,7 @@ Specify the size of the icon.
 
 ---
 
-### iconStyle
+#### iconStyle
 
 Extra styling for icon component.
 
@@ -142,7 +146,7 @@ Extra styling for icon component.
 
 ---
 
-### iconType
+#### iconType
 
 Type of icon set. [Supported sets here](icon#available-icon-sets).
 
@@ -152,7 +156,7 @@ Type of icon set. [Supported sets here](icon#available-icon-sets).
 
 ---
 
-### light
+#### light
 
 Reverses icon color scheme, setting background to white and icon to primary color.
 
@@ -162,7 +166,7 @@ Reverses icon color scheme, setting background to white and icon to primary colo
 
 ---
 
-### loading
+#### loading
 
 Shows loading indicator.
 
@@ -172,7 +176,7 @@ Shows loading indicator.
 
 ---
 
-### onLongPress
+#### onLongPress
 
 Function to call when pressed for a long time.
 
@@ -182,7 +186,7 @@ Function to call when pressed for a long time.
 
 ---
 
-### onPress
+#### onPress
 
 Function to call when button/icon is pressed.
 
@@ -192,7 +196,7 @@ Function to call when button/icon is pressed.
 
 ---
 
-### raised
+#### raised
 
 Raised adds a drop shadow, set to false to remove.
 
@@ -202,7 +206,7 @@ Raised adds a drop shadow, set to false to remove.
 
 ---
 
-### small
+#### small
 
 Decides the size of the activity indicator.
 
@@ -212,7 +216,7 @@ Decides the size of the activity indicator.
 
 ---
 
-### style
+#### style
 
 Adds styling to the button.
 
@@ -222,7 +226,7 @@ Adds styling to the button.
 
 ---
 
-### title
+#### title
 
 Title if made into a button.
 
@@ -232,7 +236,7 @@ Title if made into a button.
 
 ---
 
-### type
+#### type
 
 Social media type.
 
@@ -242,7 +246,7 @@ Social media type.
 
 ---
 
-### underlayColor
+#### underlayColor
 
 Add Underlay color.
 

@@ -20,28 +20,32 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 ## Props
 
-- [ImageComponent](#ImageComponent)
-- [activeOpacity](#activeOpacity)
+### Tile
+
+- [ImageComponent](#imagecomponent)
+- [activeOpacity](#activeopacity)
 - [caption](#caption)
-- [captionStyle](#captionStyle)
-- [containerStyle](#containerStyle)
-- [contentContainerStyle](#contentContainerStyle)
+- [captionStyle](#captionstyle)
+- [containerStyle](#containerstyle)
+- [contentContainerStyle](#contentcontainerstyle)
 - [featured](#featured)
 - [height](#height)
 - [icon](#icon)
-- [iconContainerStyle](#iconContainerStyle)
-- [imageContainerStyle](#imageContainerStyle)
-- [imageProps](#imageProps)
-- [imageSrc](#imageSrc)
-- [overlayContainerStyle](#overlayContainerStyle)
+- [iconContainerStyle](#iconcontainerstyle)
+- [imageContainerStyle](#imagecontainerstyle)
+- [imageProps](#imageprops)
+- [imageSrc](#imagesrc)
+- [overlayContainerStyle](#overlaycontainerstyle)
 - [title](#title)
-- [titleNumberOfLines](#titleNumberOfLines)
-- [titleStyle](#titleStyle)
+- [titleNumberOfLines](#titlenumberoflines)
+- [titleStyle](#titlestyle)
 - [width](#width)
 
 ## Reference
 
-### ImageComponent
+### Tile
+
+#### ImageComponent
 
 Custom ImageComponent for Tile.
 
@@ -51,7 +55,7 @@ Custom ImageComponent for Tile.
 
 ---
 
-### activeOpacity
+#### activeOpacity
 
 Determines what the opacity of the wrapped view should be when touch is active.
 
@@ -65,7 +69,7 @@ Number passed to control opacity on press.
 
 ---
 
-### caption
+#### caption
 
 Text inside the tilt when tile is featured.
 
@@ -75,7 +79,7 @@ Text inside the tilt when tile is featured.
 
 ---
 
-### captionStyle
+#### captionStyle
 
 Styling for the caption (optional); You only use this if `caption` is a string.
 
@@ -85,7 +89,7 @@ Styling for the caption (optional); You only use this if `caption` is a string.
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Styling for the outer tile container.
 
@@ -95,7 +99,7 @@ Styling for the outer tile container.
 
 ---
 
-### contentContainerStyle
+#### contentContainerStyle
 
 Styling for bottom container when not featured tile.
 
@@ -105,7 +109,7 @@ Styling for bottom container when not featured tile.
 
 ---
 
-### featured
+#### featured
 
 Changes the look of the tile.
 
@@ -115,7 +119,7 @@ Changes the look of the tile.
 
 ---
 
-### height
+#### height
 
 Height for the tile.
 
@@ -125,7 +129,7 @@ Height for the tile.
 
 ---
 
-### icon
+#### icon
 
 Icon Component Props.
 
@@ -135,7 +139,7 @@ Icon Component Props.
 
 ---
 
-### iconContainerStyle
+#### iconContainerStyle
 
 Styling for the outer icon container.
 
@@ -145,7 +149,7 @@ Styling for the outer icon container.
 
 ---
 
-### imageContainerStyle
+#### imageContainerStyle
 
 Styling for the image.
 
@@ -155,7 +159,7 @@ Styling for the image.
 
 ---
 
-### imageProps
+#### imageProps
 
 Optional properties to pass to the image if provided e.g "resizeMode".
 
@@ -165,17 +169,17 @@ Optional properties to pass to the image if provided e.g "resizeMode".
 
 ---
 
-### imageSrc
+#### imageSrc
 
 Source for the image.
 
 | Type                          | Default |
 | ----------------------------- | ------- |
-| string \| ImageSourcePropType | None    |
+| string or ImageSourcePropType | None    |
 
 ---
 
-### overlayContainerStyle
+#### overlayContainerStyle
 
 Styling for the overlay container when using featured tile.
 
@@ -185,7 +189,7 @@ Styling for the overlay container when using featured tile.
 
 ---
 
-### title
+#### title
 
 Text inside the tile.
 
@@ -195,7 +199,7 @@ Text inside the tile.
 
 ---
 
-### titleNumberOfLines
+#### titleNumberOfLines
 
 Number of lines for Title.
 
@@ -205,7 +209,7 @@ Number of lines for Title.
 
 ---
 
-### titleStyle
+#### titleStyle
 
 Styling for the title.
 
@@ -215,7 +219,7 @@ Styling for the title.
 
 ---
 
-### width
+#### width
 
 Width for the tile.
 

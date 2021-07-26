@@ -10,6 +10,8 @@ type TitleProps = TextProps & {
   right?: boolean;
 };
 
+/** This allows adding Title to the ListItem.
+ * This, Receives all [Text](text#props) props. */
 export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
   style,
   right,

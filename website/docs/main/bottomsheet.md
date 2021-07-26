@@ -24,14 +24,18 @@ Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react
 
 ## Props
 
-- [containerStyle](#containerStyle)
-- [isVisible](#isVisible)
-- [modalProps](#modalProps)
-- [scrollViewProps](#scrollViewProps)
+### BottomSheet
+
+- [containerStyle](#containerstyle)
+- [isVisible](#isvisible)
+- [modalProps](#modalprops)
+- [scrollViewProps](#scrollviewprops)
 
 ## Reference
 
-### containerStyle
+### BottomSheet
+
+#### containerStyle
 
 Style of the bottom sheet's container. Use this to change the color of the underlay.
 
@@ -41,7 +45,7 @@ Style of the bottom sheet's container. Use this to change the color of the under
 
 ---
 
-### isVisible
+#### isVisible
 
 Is the modal component shown.
 
@@ -51,7 +55,7 @@ Is the modal component shown.
 
 ---
 
-### modalProps
+#### modalProps
 
 Additional props handed to the `Modal`.
 
@@ -61,7 +65,7 @@ Additional props handed to the `Modal`.
 
 ---
 
-### scrollViewProps
+#### scrollViewProps
 
 Used to add props to Scroll view.
 

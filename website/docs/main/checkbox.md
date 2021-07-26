@@ -20,40 +20,44 @@ It provides a clear visual of either a true or false choice.
 
 ## Props
 
-- [Component](#Component)
+### CheckBox
+
+- [Component](#component)
 - [center](#center)
 - [checked](#checked)
-- [checkedColor](#checkedColor)
-- [checkedIcon](#checkedIcon)
-- [checkedTitle](#checkedTitle)
-- [containerStyle](#containerStyle)
-- [fontFamily](#fontFamily)
-- [iconRight](#iconRight)
-- [iconType](#iconType)
-- [onIconPress](#onIconPress)
-- [onLongIconPress](#onLongIconPress)
+- [checkedColor](#checkedcolor)
+- [checkedIcon](#checkedicon)
+- [checkedTitle](#checkedtitle)
+- [containerStyle](#containerstyle)
+- [fontFamily](#fontfamily)
+- [iconRight](#iconright)
+- [iconType](#icontype)
+- [onIconPress](#oniconpress)
+- [onLongIconPress](#onlongiconpress)
 - [right](#right)
 - [size](#size)
-- [textStyle](#textStyle)
+- [textStyle](#textstyle)
 - [title](#title)
-- [titleProps](#titleProps)
-- [uncheckedColor](#uncheckedColor)
-- [uncheckedIcon](#uncheckedIcon)
-- [wrapperStyle](#wrapperStyle)
+- [titleProps](#titleprops)
+- [uncheckedColor](#uncheckedcolor)
+- [uncheckedIcon](#uncheckedicon)
+- [wrapperStyle](#wrapperstyle)
 
 ## Reference
 
-### Component
+### CheckBox
+
+#### Component
 
 Specify React Native component for main button.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
 
 ---
 
-### center
+#### center
 
 Aligns checkbox to center.
 
@@ -63,7 +67,7 @@ Aligns checkbox to center.
 
 ---
 
-### checked
+#### checked
 
 Flag for checking the icon.
 
@@ -73,7 +77,7 @@ Flag for checking the icon.
 
 ---
 
-### checkedColor
+#### checkedColor
 
 Default checked color.
 
@@ -83,7 +87,7 @@ Default checked color.
 
 ---
 
-### checkedIcon
+#### checkedIcon
 
 Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)).
 
@@ -93,7 +97,7 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)).
 
 ---
 
-### checkedTitle
+#### checkedTitle
 
 Specify a custom checked message.
 
@@ -103,7 +107,7 @@ Specify a custom checked message.
 
 ---
 
-### containerStyle
+#### containerStyle
 
 Style of main container.
 
@@ -113,7 +117,7 @@ Style of main container.
 
 ---
 
-### fontFamily
+#### fontFamily
 
 Specify different font family.
 
@@ -123,7 +127,7 @@ Specify different font family.
 
 ---
 
-### iconRight
+#### iconRight
 
 Moves icon to right of text.
 
@@ -133,7 +137,7 @@ Moves icon to right of text.
 
 ---
 
-### iconType
+#### iconType
 
 Type of icon set. [Supported sets here](icon#available-icon-sets).
 
@@ -143,7 +147,7 @@ Type of icon set. [Supported sets here](icon#available-icon-sets).
 
 ---
 
-### onIconPress
+#### onIconPress
 
 onPress function for checkbox.
 
@@ -153,7 +157,7 @@ onPress function for checkbox.
 
 ---
 
-### onLongIconPress
+#### onLongIconPress
 
 onLongPress function for checkbox.
 
@@ -163,7 +167,7 @@ onLongPress function for checkbox.
 
 ---
 
-### right
+#### right
 
 Aligns checkbox to right.
 
@@ -173,7 +177,7 @@ Aligns checkbox to right.
 
 ---
 
-### size
+#### size
 
 Size of the checkbox.
 
@@ -183,7 +187,7 @@ Size of the checkbox.
 
 ---
 
-### textStyle
+#### textStyle
 
 Style of text.
 
@@ -193,7 +197,7 @@ Style of text.
 
 ---
 
-### title
+#### title
 
 Title of checkbox.
 
@@ -203,7 +207,7 @@ Title of checkbox.
 
 ---
 
-### titleProps
+#### titleProps
 
 Additional props for the title Text component.
 
@@ -213,7 +217,7 @@ Additional props for the title Text component.
 
 ---
 
-### uncheckedColor
+#### uncheckedColor
 
 Default unchecked color.
 
@@ -223,7 +227,7 @@ Default unchecked color.
 
 ---
 
-### uncheckedIcon
+#### uncheckedIcon
 
 Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 
@@ -233,7 +237,7 @@ Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
 
 ---
 
-### wrapperStyle
+#### wrapperStyle
 
 Style for the wrapper of checkbox.
 

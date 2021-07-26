@@ -3,7 +3,7 @@ import { docgenParser } from './docgenParser';
 // Function to generate the component docs.
 // Input - Array of component files.
 // Output - Component Docs in a single object.
-export function generateComponentDocs(componentFilePaths: string[]) {
+export function generateComponentDocs(componentFilePaths: string[] | string) {
   return docgenParser
     .parse(componentFilePaths)
     .reduce((componentDocs, componentDoc) => {

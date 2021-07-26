@@ -12,10 +12,10 @@
   },
   "version": "2.0.0",
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.69",
+    "@docusaurus/core": "^2.0.0-beta.3",
     "@docusaurus/plugin-client-redirects": "^2.0.0-alpha.69",
     "@docusaurus/plugin-google-analytics": "^2.0.0-alpha.69",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.69",
+    "@docusaurus/preset-classic": "^2.0.0-beta.3",
     "dedent": "^0.7.0",
     "object.fromentries": "^2.0.4",
     "prism-react-renderer": "^1.2.1",

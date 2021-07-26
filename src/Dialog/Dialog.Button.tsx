@@ -6,7 +6,7 @@ import { RneFunctionComponent } from '../helpers';
 type DialogButtonProps = ButtonProps;
 
 /** This is used to add a button to the Dialog.
- * Receives all [Button](button.md#props) props. */
+ * Receives all [Button](button#props) props. */
 export const DialogButton: RneFunctionComponent<DialogButtonProps> = ({
   titleStyle,
   ...rest
