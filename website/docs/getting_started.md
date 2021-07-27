@@ -10,9 +10,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 :::note
 
 The aim of React Native Elements is to provide an all-in-one UI kit for creating
-apps in react native. There are many great ui components made by developers all
+apps in react native. There are many great UI components made by developers all
 around open source. React Native Elements takes the hassle of assembling these
-packages together by giving you a ready made kit with consistent api and look
+packages together by giving you a ready made kit with consistent API and look
 and feel.
 :::
 
