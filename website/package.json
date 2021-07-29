@@ -2,13 +2,14 @@
   "license": "MIT",
   "scripts": {
     "examples": "docusaurus examples",
-    "start": "docusaurus start",
+    "start": "yarn docs:build && docusaurus start",
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
     "publish-gh-pages": "docusaurus deploy",
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus docs:version",
-    "rename-version": "docusaurus rename-version"
+    "rename-version": "docusaurus rename-version",
+    "docs:build": "ts-node scripts/docgen/index.ts"
   },
   "version": "2.0.0",
   "dependencies": {
@@ -26,6 +27,7 @@
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.75",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.3"
+    "@types/react-dom": "^17.0.3",
+    "ts-node": "^10.1.0"
   }
 }

@@ -50,12 +50,9 @@ Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react
 
 Component for container.
 
-| Type            | Default                |
-| --------------- | ---------------------- |
-| React Component | linearGradientProps \| | !backgroundImage |
-
-    ? View
-    : ImageBackground |
+| Type            | Default                           |
+| --------------- | --------------------------------- |
+| React Component | ImageBackground or View Component |
 
 ---
 

@@ -58,9 +58,9 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 
 Choose other button component such as TouchableOpacity.
 
-| Type            | Default                                                                                                               |
-| --------------- | --------------------------------------------------------------------------------------------------------------------- |
-| React Component | {"ios":"TouchableOpacity","android":"TouchableOpacity","web":"TouchableOpacity","{android":"TouchableNativeFeedback"} |
+| Type            | Default                                                                                      |
+| --------------- | -------------------------------------------------------------------------------------------- |
+| React Component | (ios),(android),(web),TouchableNativeFeedback(android),TouchableOpacity(default),undefined() |
 
 ---
 
@@ -288,9 +288,9 @@ Specify specific styling for text.
 
 Specify underlayColor for TouchableHighlight.
 
-| Type   | Default                |
-| ------ | ---------------------- |
-| string | theme?.colors?.primary |
+| Type   | Default        |
+| ------ | -------------- |
+| string | Color(Primary) |
 
 ---
 

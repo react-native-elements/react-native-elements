@@ -50,9 +50,9 @@ Button information.
 
 Color scheme for button & title.
 
-| Type   | Default                |
-| ------ | ---------------------- |
-| string | theme?.colors?.primary |
+| Type   | Default        |
+| ------ | -------------- |
+| string | Color(Primary) |
 
 ---
 

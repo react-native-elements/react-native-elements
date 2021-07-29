@@ -7,6 +7,7 @@ import { generateMarkdown } from './generateMarkdown';
 const filePaths = getComponentFiles();
 const componentDocs = generateComponentDocs(filePaths);
 
+// To make the mapping such the the componentDocs for Compound Component's children are inside the childrens property of the component.
 Object.keys(componentDocs).map((componentDisplayName) => {
   let componentDoc = componentDocs[componentDisplayName];
   const [componentName, childComponentName] = componentDisplayName.split('.');
@@ -19,8 +20,6 @@ Object.keys(componentDocs).map((componentDisplayName) => {
   }
 });
 
-// console.log(componentDocs);
-
 // Function to set the componentDocs to their respective file and storing it in the .docgen folder.
 Object.keys(componentDocs).map((componentDisplayName) => {
   // Condition check for compound components display name.
@@ -29,22 +28,8 @@ Object.keys(componentDocs).map((componentDisplayName) => {
 
   const markdownData = generateMarkdown(componentDoc);
 
-  // Ensuring that the directory is present, and if not, create it.
-  fs.ensureDirSync(
-    path.join(__dirname, `../../.docgen/${componentDisplayName}`)
-  );
   fs.outputFile(
     path.join(__dirname, `../../docs/main/${componentDisplayName}.md`),
     markdownData
-  );
-  fs.writeJSONSync(
-    path.join(
-      __dirname,
-      `../../.docgen/${componentDisplayName}/${componentDisplayName}.json`
-    ),
-    componentDoc,
-    {
-      spaces: 2,
-    }
   );
 });

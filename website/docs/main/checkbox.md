@@ -81,9 +81,9 @@ Flag for checking the icon.
 
 Default checked color.
 
-| Type   | Default                |
-| ------ | ---------------------- |
-| string | theme?.colors?.primary |
+| Type   | Default        |
+| ------ | -------------- |
+| string | Color(Primary) |
 
 ---
 

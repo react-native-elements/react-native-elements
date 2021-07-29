@@ -209,14 +209,9 @@ Add divider at the top of the list item.
 
 Decide whether to show animation.
 
-| Type                                                           | Default |
-| -------------------------------------------------------------- | ------- |
-| boolean or { type?: "timing" or "spring"; duration?: number; } | {       |
-
-    duration: 350,
-    type: 'timing',
-
-} |
+| Type              | Default                            |
+| ----------------- | ---------------------------------- |
+| Boolean or Object | { duration: 350, type: 'timing', } |
 
 ---
 

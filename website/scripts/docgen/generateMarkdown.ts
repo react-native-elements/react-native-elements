@@ -32,7 +32,9 @@ json2md.converters.components = function (input, json2md) {
       ul: generateComponentsDescriptions(input.childrens),
     });
     return markdown;
-  } else return '';
+  } else {
+    return '';
+  }
 };
 
 json2md.converters.imports = function (input, json2md) {
@@ -107,11 +109,58 @@ function generatePropsReference(props) {
   return propsReference;
 }
 
+// function generatePropsTable(props) {
+//   const propsData = [];
+//   Object.keys(props).map((key) => {
+//     const prop = props[key];
+//     propsData.push({
+//       Name: prop.name,
+//       Type: prop.type ? prop.type.name : 'None',
+//       Default: prop.defaultValue ? prop.defaultValue.value : 'None',
+//       Description: prop.description,
+//     });
+//   });
+//   return propsData;
+// }
+
+// json2md.converters.propsTable = function (input, json2md) {
+//   let markdown = json2md([{ h2: 'Reference' }, { h3: input.displayName }]);
+//   markdown += json2md([
+//     {
+//       table: {
+//         headers: ['Name', 'Type', 'Default', 'Description'],
+//         rows: generatePropsTable(input.props),
+//       },
+//     },
+//   ]);
+//   if (input.childrens) {
+//     markdown += Object.keys(input.childrens)
+//       .map((key) => {
+//         const props = input.childrens[key].props;
+//         return (
+//           json2md([{ h3: key }]) +
+//           (_.isEmpty(props)
+//             ? json2md({ p: 'None' })
+//             : json2md([
+//                 {
+//                   table: {
+//                     headers: ['Name', 'Type', 'Default', 'Description'],
+//                     rows: generatePropsTable(props),
+//                   },
+//                 },
+//               ]))
+//         );
+//       })
+//       .join('');
+//   }
+//   return markdown;
+// };
+
 json2md.converters.propsData = function (input, json2md) {
-  let markdowm = json2md([{ h2: 'Reference' }, { h3: input.displayName }]);
-  markdowm += generatePropsReference(input.props);
+  let markdown = json2md([{ h2: 'Reference' }, { h3: input.displayName }]);
+  markdown += generatePropsReference(input.props);
   if (input.childrens) {
-    markdowm += Object.keys(input.childrens)
+    markdown += Object.keys(input.childrens)
       .map((key) => {
         const props = input.childrens[key].props;
         return (
@@ -123,7 +172,7 @@ json2md.converters.propsData = function (input, json2md) {
       })
       .join('');
   }
-  return markdowm;
+  return markdown;
 };
 
 export const generateMarkdown = (data) => {

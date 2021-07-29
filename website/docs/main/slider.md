@@ -92,9 +92,9 @@ Set to 'spring' or 'timing' to use one of those two types of animations with the
 
 Apply style to the container of the slider.
 
-| Type                                                                                                                                                                                                                                                                                                    | Default |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| { containerHorizontal: { height: number; justifyContent: "center"; }; containerVertical: { width: number; flexDirection: "column"; alignItems: "center"; }; track: { borderRadius: number; }; trackHorizontal: { ...; }; trackVertical: { ...; }; touchArea: { ...; }; debugThumbTouchArea: { ...; }; } | None    |
+| Type         | Default |
+| ------------ | ------- |
+| Style Object | None    |
 
 ---
 
