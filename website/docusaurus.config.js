@@ -33,12 +33,12 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          homePageId: 'getting_started',
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
             'https://github.com/react-native-elements/react-native-elements/edit/next/website/',
+          sidebarCollapsible: false,
         },
         theme: {
           customCss: require.resolve('./static/css/custom.css'),
@@ -61,7 +61,6 @@ module.exports = {
     colorMode: {
       defaultMode: 'dark',
     },
-    sidebarCollapsible: false,
     navbar: {
       title: 'React Native Elements',
       logo: {
