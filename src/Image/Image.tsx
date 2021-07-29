@@ -9,23 +9,21 @@ import {
   ViewStyle,
   StyleProp,
   ImageStyle,
-  PressableProps,
 } from 'react-native';
 import { ThemeProps } from '../config';
+import { InlinePressableProps } from '../helpers';
 
-export type ImageProps = RNImageProps & {
-  Component?: typeof React.Component;
-  onPress?(): void;
-  onLongPress?(): void;
-  pressableProps?: PressableProps;
-  ImageComponent?: React.ComponentType<any>;
-  PlaceholderContent?: React.ReactElement<any>;
-  containerStyle?: StyleProp<ViewStyle>;
-  childrenContainerStyle?: StyleProp<ViewStyle>;
-  placeholderStyle?: StyleProp<ViewStyle>;
-  transition?: boolean;
-  transitionDuration?: number;
-};
+export type ImageProps = RNImageProps &
+  InlinePressableProps & {
+    Component?: typeof React.Component;
+    ImageComponent?: React.ComponentType<any>;
+    PlaceholderContent?: React.ReactElement<any>;
+    containerStyle?: StyleProp<ViewStyle>;
+    childrenContainerStyle?: StyleProp<ViewStyle>;
+    placeholderStyle?: StyleProp<ViewStyle>;
+    transition?: boolean;
+    transitionDuration?: number;
+  };
 
 type ImageState = {
   placeholderOpacity: Animated.Value;
@@ -66,6 +64,8 @@ export class Image extends React.Component<
     const {
       onPress,
       onLongPress,
+      onPressIn,
+      onPressOut,
       Component = onPress || onLongPress ? Pressable : View,
       placeholderStyle,
       PlaceholderContent,
@@ -84,8 +84,7 @@ export class Image extends React.Component<
     return (
       <Component
         {...pressableProps}
-        onPress={onPress}
-        onLongPress={onLongPress}
+        {...{ onPress, onPressIn, onPressOut, onLongPress }}
         accessibilityIgnoresInvertColors={true}
         style={StyleSheet.flatten([styles.container, containerStyle])}
       >

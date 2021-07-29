@@ -7,7 +7,6 @@ import {
   StyleProp,
   TextStyle,
   Pressable,
-  PressableProps,
 } from 'react-native';
 import {
   IconButtonProps,
@@ -16,7 +15,11 @@ import {
 import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
-import { androidRipple, RneFunctionComponent } from '../helpers';
+import {
+  androidRipple,
+  InlinePressableProps,
+  RneFunctionComponent,
+} from '../helpers';
 
 export type IconType =
   | 'material'
@@ -85,10 +88,7 @@ export type IconProps = IconButtonProps & {
 
   /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
-
-  /** Props for Pressable */
-  pressableProps?: PressableProps;
-};
+} & InlinePressableProps;
 
 /** Icons are visual indicators usually used to describe action or intent.
  * They are also used for displaying information. */
@@ -107,6 +107,9 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   disabled = false,
   disabledStyle,
   onPress,
+  onLongPress,
+  onPressIn,
+  onPressOut,
   Component = onPress ? Pressable : View,
   solid = false,
   brand = false,
@@ -154,6 +157,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           onPress,
           disabled,
         })}
+        {...{ onLongPress, onPressIn, onPressOut }}
         android_ripple={androidRipple(
           Color(reverse ? color : (underlayColor as string))
             .alpha(0.3)

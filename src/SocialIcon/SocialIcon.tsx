@@ -8,12 +8,15 @@ import {
   ViewStyle,
   StyleProp,
   TextStyle,
-  PressableProps,
 } from 'react-native';
 import Icon from '../Icon';
 import Text from '../Text';
 import fonts from '../config/fonts';
-import { androidRipple, RneFunctionComponent } from '../helpers';
+import {
+  androidRipple,
+  InlinePressableProps,
+  RneFunctionComponent,
+} from '../helpers';
 
 const colors = {
   'github-alt': '#000000',
@@ -87,20 +90,11 @@ export type SocialIconProps = {
   /** Type of button. */
   Component?: typeof React.Component;
 
-  /** Props for Pressable */
-  pressableProps?: PressableProps;
-
   /** Social media type. */
   type?: SocialMediaType;
 
   /** Creates button with a social icon. */
   button?: boolean;
-
-  /** Function to call when button/icon is pressed. */
-  onPress?(): void;
-
-  /** Function to call when pressed for a long time. */
-  onLongPress?(): void;
 
   /** Type of icon set. [Supported sets here](./icon.md#available-icon-sets). */
   iconType?: string;
@@ -149,7 +143,7 @@ export type SocialIconProps = {
 
   /** Specify different font family. */
   fontFamily?: string;
-};
+} & InlinePressableProps;
 
 /** SocialIcons are visual cues to online and social media networks. We offer a varied range of social icons. */
 export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
@@ -167,6 +161,8 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   loading,
   onLongPress,
   onPress,
+  onPressOut,
+  onPressIn,
   Component = onPress || onLongPress ? Pressable : View,
   raised = true,
   small,
@@ -182,14 +178,13 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   return (
     <Component
       {...pressableProps}
+      {...(disabled ? {} : { onLongPress, onPress, onPressOut, onPressIn })}
       testID="RNE_SocialIcon"
       {...attributes}
       underlayColor={light ? 'white' : underlayColor || (type && colors[type])}
       android_ripple={androidRipple(
         light ? 'white' : underlayColor || (type && colors[type])
       )}
-      onLongPress={disabled ? null : onLongPress}
-      onPress={disabled ? null : onPress}
       disabled={disabled}
       style={StyleSheet.flatten([
         raised && styles.raised,

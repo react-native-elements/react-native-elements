@@ -8,25 +8,22 @@ import {
   StyleProp,
   TextStyle,
   Pressable,
-  PressableProps,
 } from 'react-native';
 import {
   normalizeText,
   color,
   RneFunctionComponent,
   androidRipple,
+  InlinePressableProps,
 } from '../helpers';
 import Text from '../Text';
 
-export type ButtonGroupProps = {
+export type ButtonGroupProps = InlinePressableProps & {
   /** Button for the component. */
   button?: object;
 
   /** Choose other button component such as TouchableOpacity. */
   Component?: typeof React.Component;
-
-  /** Props for Pressable */
-  pressableProps?: PressableProps;
 
   /** Method to update Button Group Index. */
   onPress?(...args: any[]): void;
@@ -109,6 +106,9 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
   pressableProps,
   buttons,
   onPress = () => null,
+  onLongPress,
+  onPressIn,
+  onPressOut,
   selectedIndex = null,
   selectedIndexes = [],
   selectMultiple = false,
@@ -200,6 +200,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
               }}
               style={styles.button}
               {...pressableProps}
+              {...{ onPressIn, onPressOut, onLongPress }}
             >
               <View
                 style={StyleSheet.flatten([
