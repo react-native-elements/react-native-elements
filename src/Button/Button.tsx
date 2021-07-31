@@ -124,7 +124,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   ViewComponent = View,
   theme,
   iconPosition = 'left',
-  ...props
+  ...rest
 }) => {
   useEffect(() => {
     if (linearGradientProps && !ViewComponent) {
@@ -198,7 +198,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
         accessibilityState={accessibilityState}
         disabled={disabled}
         background={background}
-        {...props}
+        {...rest}
       >
         <ViewComponent
           {...linearGradientProps}

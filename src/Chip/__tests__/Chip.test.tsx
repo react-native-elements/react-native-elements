@@ -4,13 +4,6 @@ import { renderWithTheme } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Chip Component', () => {
-  it('should render without issues', () => {
-    const { getByA11yRole, toJSON } = renderWithTheme(<Chip />);
-    const component = getByA11yRole('button');
-    expect(component.props.style.borderRadius).toBe(30);
-    expect(toJSON()).toMatchSnapshot();
-  });
-
   // Test for solid and outline type
   it.each`
     type

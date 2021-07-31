@@ -107,15 +107,12 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   disabled = false,
   disabledStyle,
   onPress,
-  onLongPress,
-  onPressIn,
-  onPressOut,
   Component = onPress ? Pressable : View,
   solid = false,
   brand = false,
   theme,
   pressableProps,
-  ...attributes
+  ...rest
 }) => {
   const color = colorProp || theme?.colors?.black;
   const reverseColor = reverseColorProp || theme?.colors?.white;
@@ -151,19 +148,20 @@ export const Icon: RneFunctionComponent<IconProps> = ({
       ])}
     >
       <Component
-        {...pressableProps}
-        {...attributes}
+        {...{
+          android_ripple: androidRipple(
+            Color(reverse ? color : (underlayColor as string))
+              .alpha(0.3)
+              .rgb()
+              .string()
+          ),
+          ...pressableProps,
+          ...rest,
+        }}
         {...(onPress && {
           onPress,
           disabled,
         })}
-        {...{ onLongPress, onPressIn, onPressOut }}
-        android_ripple={androidRipple(
-          Color(reverse ? color : (underlayColor as string))
-            .alpha(0.3)
-            .rgb()
-            .string()
-        )}
       >
         <View
           style={StyleSheet.flatten([

@@ -11,9 +11,12 @@ import {
   ImageSourcePropType,
   ImageURISource,
   ImageStyle,
-  PressableProps,
 } from 'react-native';
-import { renderNode, RneFunctionComponent } from '../helpers';
+import {
+  InlinePressableProps,
+  renderNode,
+  RneFunctionComponent,
+} from '../helpers';
 import Icon, { IconObject } from '../Icon';
 import Image, { ImageProps } from '../Image';
 
@@ -82,10 +85,7 @@ export type AvatarBaseProps = {
 
   /** Custom ImageComponent for Avatar. */
   ImageComponent?: React.ComponentClass;
-
-  /** Props for Pressable */
-  pressableProps?: PressableProps;
-};
+} & InlinePressableProps;
 
 /** Avatars are found all over ui design from lists to profile screens.
  * They are commonly used to represent a user and can contain photos, icons, or even text. */
@@ -109,7 +109,7 @@ export const AvatarBase: RneFunctionComponent<AvatarBaseProps> = ({
   ImageComponent = RNImage,
   children,
   pressableProps,
-  ...props
+  ...rest
 }) => {
   let width = avatarSizes.small;
   width = typeof size === 'number' ? size : avatarSizes[size];
@@ -156,15 +156,14 @@ export const AvatarBase: RneFunctionComponent<AvatarBaseProps> = ({
 
   return (
     <Component
-      onPress={onPress}
-      onLongPress={onLongPress}
       style={StyleSheet.flatten([
         styles.container,
         { height, width },
         rounded && { borderRadius: width / 2 },
         containerStyle,
       ])}
-      {...props}
+      {...rest}
+      {...{ onPress, onLongPress }}
       {...pressableProps}
     >
       <Image

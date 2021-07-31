@@ -59,7 +59,7 @@ export const ListItemBase: RneFunctionComponent<ListItemBaseProps> = (
     ViewComponent = View,
     theme,
     children,
-    ...attributes
+    ...rest
   } = props;
 
   if (props.linearGradientProps && !props.ViewComponent) {
@@ -70,7 +70,7 @@ export const ListItemBase: RneFunctionComponent<ListItemBaseProps> = (
 
   return (
     <Component
-      {...attributes}
+      {...rest}
       onPress={onPress}
       onLongPress={onLongPress}
       disabled={disabled}

@@ -9,11 +9,11 @@ export type ListItemButtonGroupProps = ButtonGroupProps;
  * This, Receives all [ButtonGroup](button_group.md#props) props. */
 export const ListItemButtonGroup: RneFunctionComponent<ListItemButtonGroupProps> = ({
   containerStyle,
-  ...props
+  ...rest
 }) => {
   return (
     <ButtonGroup
-      {...props}
+      {...rest}
       containerStyle={StyleSheet.flatten([styles.container, containerStyle])}
     />
   );

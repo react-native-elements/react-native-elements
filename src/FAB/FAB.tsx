@@ -39,7 +39,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
   containerStyle,
   iconContainerStyle,
   placement,
-  ...props
+  ...rest
 }) => {
   const { current: animation } = React.useRef(
     new Animated.Value(Number(visible))
@@ -72,7 +72,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
     >
       <Button
         buttonStyle={StyleSheet.flatten([
-          props.title
+          rest.title
             ? styles.extendedLabel
             : size === 'small'
             ? styles.smallFAB
@@ -83,7 +83,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
           buttonStyle,
         ])}
         iconContainerStyle={[
-          props.title
+          rest.title
             ? {}
             : size === 'small'
             ? styles.smallFAB
@@ -102,7 +102,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
           upperCase && styles.upperCaseLabel,
           titleStyle,
         ]}
-        {...props}
+        {...rest}
         {...{ disabled, theme }}
       />
     </Animated.View>

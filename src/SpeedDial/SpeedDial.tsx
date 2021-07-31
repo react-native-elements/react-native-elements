@@ -55,7 +55,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   overlayColor,
   theme,
   pressableProps,
-  ...props
+  ...rest
 }) => {
   const animations = React.useRef<Animated.Value[]>(
     [...new Array(React.Children.count(children))].map(
@@ -116,7 +116,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         <FAB
           style={[styles.fab]}
           icon={isOpen ? openIcon : icon}
-          {...props}
+          {...rest}
           onPress={isOpen ? onClose : onOpen}
         />
       </SafeAreaView>
