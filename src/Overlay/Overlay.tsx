@@ -29,7 +29,7 @@ export type OverlayProps = ModalProps & {
 
   /** Override React Native `Modal` component (usable for web-platform). */
   ModalComponent?: typeof React.Component;
-} & InlinePressableProps;
+} & Omit<InlinePressableProps, 'onPress'>; // used as onBackdropPress
 
 /** The Overlay is a view that floats above an app’s content.
  * Overlays are an easy way to inform or request information from the user. */
@@ -44,7 +44,6 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
   pressableProps,
   onPressOut,
   onPressIn,
-  onPress,
   onLongPress,
   ...props
 }) => (
@@ -59,7 +58,7 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
       onPress={onBackdropPress}
       testID="RNE__Overlay__backdrop"
       {...pressableProps}
-      {...{ onPressOut, onPressIn, onPress, onLongPress }}
+      {...{ onPressOut, onPressIn, onLongPress }}
     />
 
     <View style={styles.container} pointerEvents="box-none">
