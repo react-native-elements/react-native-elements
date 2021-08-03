@@ -2,6 +2,8 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- Examples of several use cases which are covered here and are not yet added to the snack. -->
+
 ### Using Map Function - Implemented with avatar
 
 ```js

@@ -2,6 +2,9 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- To show the guide to configure the Overlay Component to a project.
+This is not added as description in comments of the component so is added here. -->
+
 ---
 
 > **Web-platform specific note**:

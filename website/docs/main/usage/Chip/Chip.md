@@ -2,6 +2,8 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- The react-native-linear-gradient is not configured with snack so the usage guide is added here to be displayed in documentation. -->
+
 ### LinearGradient Usage
 
 Using LinearGradient in React Native Elements is supported through the

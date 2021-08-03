@@ -1406,9 +1406,9 @@
     webpack "^5.40.0"
 
 "@docusaurus/module-type-aliases@^2.0.0-alpha.75":
-  version "2.0.0-alpha.75"
-  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-alpha.75.tgz#fa1f7f8f50ac5e77b7bf5a575e2458993c9efcff"
-  integrity sha512-9OWDcQ6JpgCsD/ihFhVC9JuOuxcJ1AeHnFSThVb7/5tINx5sTkxPy5Ee1c0xbvCxvxz7EADufZTX03JJQdcrHg==
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.4.tgz#a48e3bdb81ce77c4438ff94d6ee15859c5705ede"
+  integrity sha512-FRAAOJMDbHcBNgFvH4ihPszxraTTCkS7kN3q8WIj67Uv8u3+T36XWpReWdFYmzfPA4QyFx9YK4u1bmF7pndBSw==
 
 "@docusaurus/plugin-client-redirects@^2.0.0-beta.4":
   version "2.0.0-beta.4"

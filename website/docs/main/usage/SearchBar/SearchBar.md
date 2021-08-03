@@ -1,5 +1,7 @@
 import Snack from './snack/index.md'
 
+<!-- Added examples of platform specifc searchbar to be shown in the documentation. -->
+
 <Snack />
 
 ### Default SearchBar

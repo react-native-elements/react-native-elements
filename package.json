@@ -25,8 +25,8 @@
     "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rimraf node_modules && yarn",
     "changelog": "auto-changelog -p",
-    "docs": "yarn build:docs && cd website && yarn start",
-    "build:docs": "ts-node website/scripts/docgen/index"
+    "docs": "cd website && yarn start",
+    "docs:build": "ts-node website/scripts/docgen/index"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",

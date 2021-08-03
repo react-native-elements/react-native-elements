@@ -2,6 +2,8 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- Documentation of the interaction methods of Input as it is not commented in the component itself. -->
+
 ### Interaction methods
 
 | method         | description                                       |

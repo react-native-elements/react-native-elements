@@ -49,9 +49,9 @@ They are also used for displaying information.
 
 Update React Native Component.
 
-| Type            | Default                                                                                  |
-| --------------- | ---------------------------------------------------------------------------------------- |
-| React Component | TouchableHighlight(ios),TouchableNativeFeedback(android),TouchableHighlight(web) \| View |
+| Type            | Default                                                                          |
+| --------------- | -------------------------------------------------------------------------------- |
+| React Component | TouchableHighlight(ios),TouchableNativeFeedback(android),TouchableHighlight(web) |
 
 ---
 
