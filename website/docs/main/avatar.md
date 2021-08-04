@@ -14,7 +14,7 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ## Components
 
-- [Avatar.Accessory](#Avatar.Accessory)
+- [Avatar.Accessory](#avataraccessory)
   This is used for adding an accessory to the Avatar.
   Receives either all [Icon](icon#props) or [Image](image#props) props.
 

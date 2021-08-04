@@ -14,7 +14,7 @@ TabView enables swipeable tabs.
 
 ## Components
 
-- [TabView.Item](#TabView.Item)
+- [TabView.Item](#tabviewitem)
   They are individual item of the parent Tab.
 
 ## Usage

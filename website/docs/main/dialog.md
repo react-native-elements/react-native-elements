@@ -16,14 +16,14 @@ Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) 
 
 ## Components
 
-- [Dialog.Actions](#Dialog.Actions)
+- [Dialog.Actions](#dialogactions)
   Define Dialog Actions using this component.
-- [Dialog.Button](#Dialog.Button)
+- [Dialog.Button](#dialogbutton)
   This is used to add a button to the Dialog.
   Receives all [Button](button#props) props.
-- [Dialog.Loading](#Dialog.Loading)
+- [Dialog.Loading](#dialogloading)
   `DialogLoader` allows adding loader to the Dialog. Loader is simply ActivityIndicator.
-- [Dialog.Title](#Dialog.Title)
+- [Dialog.Title](#dialogtitle)
   `DialogTitle` allows you to add title to the Dialog.
 
 ## Usage

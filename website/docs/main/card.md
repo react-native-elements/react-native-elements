@@ -16,19 +16,19 @@ Cards are mainly used for informative purpose.
 
 ## Components
 
-- [Card.Divider](#Card.Divider)
+- [Card.Divider](#carddivider)
   Add divider to the card which acts as a separator between elements.
   This, Receives all [Divider](divider#props) props.
-- [Card.FeaturedSubtitle](#Card.FeaturedSubtitle)
+- [Card.FeaturedSubtitle](#cardfeaturedsubtitle)
   Add a featured subtitle to the Card.
   This, Receives all [Text](text.md#props) props.
-- [Card.FeaturedTitle](#Card.FeaturedTitle)
+- [Card.FeaturedTitle](#cardfeaturedtitle)
   Add a featured title to the Card.
   This, Receives all [Text](text#props) props.
-- [Card.Image](#Card.Image)
+- [Card.Image](#cardimage)
   Add information in the form of image to the card.
   This, Receives all [Image](image.md#props) props.
-- [Card.Title](#Card.Title)
+- [Card.Title](#cardtitle)
   Add a general title to the Card.
   This, Receives all [Text](text#props) props.
 

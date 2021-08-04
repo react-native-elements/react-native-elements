@@ -12,7 +12,7 @@ Tabs organize content across different screens, data sets, and other interaction
 
 ## Components
 
-- [Tab.Item](#Tab.Item)
+- [Tab.Item](#tabitem)
   They are indivual item of the parent Tab.
   They are clickable and allows users to click and change Tab.
   Receives all [Button](https://reactnativeelements.com/docs/button#props) props.

@@ -14,29 +14,29 @@ They are very customizable and can contain switches, avatars, badges, icons, and
 
 ## Components
 
-- [ListItem.Accordion](#ListItem.Accordion)
+- [ListItem.Accordion](#listitemaccordion)
   This allows making a accordion list which can show/hide content.
-- [ListItem.ButtonGroup](#ListItem.ButtonGroup)
+- [ListItem.ButtonGroup](#listitembuttongroup)
   This allows adding ButtonGroup to the ListItem.
   This, Receives all [ButtonGroup](button_group#props) props.
-- [ListItem.CheckBox](#ListItem.CheckBox)
+- [ListItem.CheckBox](#listitemcheckbox)
   This allows adding CheckBox to the ListItem.
   This, Receives all [CheckBox](checkbox#props) props.
-- [ListItem.Chevron](#ListItem.Chevron)
+- [ListItem.Chevron](#listitemchevron)
   This allows adding a Chevron Icon(arrow) to the ListItem.
   This, Receives all [Icon](icon#props) props.
-- [ListItem.Content](#ListItem.Content)
+- [ListItem.Content](#listitemcontent)
   This allows adding content to the ListItem.
   This, Receives all [View](https://reactnative.dev/docs/view#props) props.
-- [ListItem.Input](#ListItem.Input)
+- [ListItem.Input](#listiteminput)
   This allows adding an Text Input within the ListItem.
   This, Receives all [Input](input.md#props) props.
-- [ListItem.Swipeable](#ListItem.Swipeable)
+- [ListItem.Swipeable](#listitemswipeable)
   We offer a special kind of ListItem which is swipeable from both ends and allows users select an event.
-- [ListItem.Subtitle](#ListItem.Subtitle)
+- [ListItem.Subtitle](#listitemsubtitle)
   This allows adding SubTitle to the ListItem.
   This, Receives all [Text](text#props) props.
-- [ListItem.Title](#ListItem.Title)
+- [ListItem.Title](#listitemtitle)
   This allows adding Title to the ListItem.
   This, Receives all [Text](text#props) props.
 

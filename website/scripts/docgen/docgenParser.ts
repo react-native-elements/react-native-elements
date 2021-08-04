@@ -6,7 +6,8 @@ const componentsWithParentsTypeToBeParsed = ['AirbnbRating'];
 function platformMappingHandler(value) {
   const formattedString = value
     .substring(value.lastIndexOf('{') + 1, value.lastIndexOf('}') - 1)
-    .replace(/ /g, '');
+    .replace(/ /g, '')
+    .replace(/\r\n/g, '');
   const platforms = formattedString.split(',');
 
   const platformTypes = { ios: '', android: '', web: '' };

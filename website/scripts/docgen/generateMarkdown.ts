@@ -15,7 +15,7 @@ function generateComponentsDescriptions(input) {
   const childComponentDescriptions = Object.keys(input).map((key) => {
     return json2md([
       {
-        link: { title: key, source: `#${key}` },
+        link: { title: key, source: `#${key.replace('.', '').toLowerCase()}` },
       },
       {
         p: input[key].description,
