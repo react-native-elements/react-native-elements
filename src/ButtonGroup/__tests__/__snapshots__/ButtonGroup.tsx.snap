@@ -519,6 +519,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
+          accessibilityRole="text"
           style={
             Object {
               "color": "red",
@@ -570,6 +571,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
+          accessibilityRole="text"
           style={
             Object {
               "color": "#5e6977",
@@ -619,6 +621,7 @@ exports[`ButtonGroup Component should apply values from theme 1`] = `
         }
       >
         <Text
+          accessibilityRole="text"
           style={
             Object {
               "color": "#5e6977",
@@ -987,7 +990,9 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           }
         }
       >
-        <Text />
+        <Text
+          isSelected={false}
+        />
       </View>
     </ForwardRef>
   </View>
@@ -1019,7 +1024,9 @@ exports[`ButtonGroup Component should render with button.element 1`] = `
           }
         }
       >
-        <View />
+        <View
+          isSelected={false}
+        />
       </View>
     </ForwardRef>
   </View>

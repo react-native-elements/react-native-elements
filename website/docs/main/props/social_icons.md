@@ -210,9 +210,9 @@ title if made into a button (optional)
 
 social media type (required)
 
-|                                                                                                                                                                           Type                                                                                                                                                                           | Default |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
-| social media type (angellist, codepen, envelope, etsy, facebook, facebook-messenger, flickr, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter, google, google-plus-official, vimeo, vk, weibo, whatsapp, wordpress, youtube) |  none   |
+|                                                                                                                                                                                Type                                                                                                                                                                                 | Default |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----: |
+| social media type (angellist, codepen, envelope, etsy, facebook, facebook-messenger, flickr, foursquare, github-alt, github, gitlab, instagram, linkedin, medium, pinterest, quora, reddit-alien, soundcloud, stack-overflow, steam, stumbleupon, tumblr, twitch, twitter, google, google-plus-official, vimeo, vk, weibo, whatsapp, wordpress, youtube, microsoft) |  none   |
 
 ---
 

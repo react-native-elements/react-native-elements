@@ -153,6 +153,7 @@ exports[`FeaturedTitle component should apply values from theme 1`] = `
         }
       />
       <Text
+        accessibilityRole="text"
         style={
           Object {
             "backgroundColor": "rgba(0,0,0,0)",
