@@ -45,21 +45,21 @@ const parserOptions = {
     // To replace all the '|' in props with 'or'
     // Input - TouchableOpacity | View
     // Output - TouchableOpacity or View
-    if (prop.type && prop.type.name.includes('|')) {
+    if (prop.type && prop.type.name && prop.type.name.includes('|')) {
       prop.type.name = prop.type.name.replace(/\|/g, 'or');
     }
 
     // To replace all the '&' in props with 'and'
     // Input - TouchableOpacity & View
     // Output - TouchableOpacity and View
-    if (prop.type && prop.type.name.includes('&')) {
+    if (prop.type && prop.type.name && prop.type.name.includes('&')) {
       prop.type.name = prop.type.name.replace(/&/g, 'and');
     }
 
     // To deal with the props of type StyleProp<ViewStyle> and StyleProp<TextStyle> which breaks the markdown
     // Input - StyleProp<ViewStyle>
     // Output - View style(Object)
-    if (prop.type && prop.type.name.includes('StyleProp')) {
+    if (prop.type && prop.type.name && prop.type.name.includes('StyleProp')) {
       if (prop.type.name.includes('TextStyle')) {
         prop.type.name = 'Text Style(Object)';
       } else {
@@ -70,7 +70,7 @@ const parserOptions = {
     // To deal with the props of type Partial<> which breaks the markdown
     // Input - Partial<ImageProps>
     // Output - ImageProps(Object)
-    if (prop.type && prop.type.name.includes('Partial')) {
+    if (prop.type && prop.type.name && prop.type.name.includes('Partial')) {
       const propName = prop.type.name;
       prop.type.name =
         propName.substring(

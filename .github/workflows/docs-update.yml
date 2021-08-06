@@ -1,0 +1,36 @@
+name: Update Documentation
+on:
+  push:
+  pull_request:
+    branches-ignore:
+      - master
+
+jobs:
+  run:
+    name: Update Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: |
+          cd website
+          yarn
+          yarn global add ts-node
+      - name: Update source code
+        run: yarn docs:build
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: React Native Elements CI
+          author_email: react-native-elements-ci@users.noreply.github.com
+          message: 'Update Documentation'
+          add: '*.md'
+          push: true

@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { withTheme } from '../../config';
-import { FAB, FABProps } from '../../FAB/index';
-import { RneFunctionComponent } from '../../helpers';
+import { withTheme } from '../config';
+import { FAB, FABProps } from '../FAB/index';
+import { RneFunctionComponent } from '../helpers';
 
 export type SpeedDialActionProps = Omit<FABProps, 'size'>;
 
+/** Adds Action to the SpeedDial.
+ * This, Receieve all [Fab](fab#props) props. */
 export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
   ({ title, titleStyle, ...actionProps }) => {
     return (
@@ -37,3 +39,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+SpeedDialAction.displayName = 'SpeedDial.Action';

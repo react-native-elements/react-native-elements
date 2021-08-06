@@ -78,7 +78,7 @@ export const componentMap = {
   },
   CheckBox: {
     name: 'CheckBox',
-    path: path.join(__dirname, '../../../src/Checkbox/CheckBox.tsx'),
+    path: path.join(__dirname, '../../../src/CheckBox/CheckBox.tsx'),
     childrens: [],
   },
   Chip: {
@@ -227,7 +227,15 @@ export const componentMap = {
   SpeedDial: {
     name: 'SpeedDial',
     path: path.join(__dirname, '../../../src/SpeedDial/SpeedDial.tsx'),
-    childrens: [],
+    childrens: [
+      {
+        name: 'Action',
+        path: path.join(
+          __dirname,
+          '../../../src/SpeedDial/SpeedDial.Action.tsx'
+        ),
+      },
+    ],
   },
   Switch: {
     name: 'Switch',
