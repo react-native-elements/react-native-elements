@@ -5,7 +5,8 @@
       "overview",
       "customization",
       "web_usage",
-      "troubleshooting"
+      "troubleshooting",
+      "migration_v3_to_v4"
     ],
     "Components": [
       "main/avatar",

@@ -1,8 +1,11 @@
-# Migration from v3 to v4
+---
+id: migration_v3_to_v4
+title: Migration from v3 to v4
+---
 
 ## Introduction
 
-React Native Elements v4 introduces many features including few new components and some breaking changes whose migration is being [given below](handling-breaking-changes).
+React Native Elements v4 introduces many features including few new components and some breaking changes whose migration is being [given below](#handling-breaking-changes).
 
 Few added components are
 
@@ -21,7 +24,7 @@ Few added components are
 
 :::note
 
-Earlier React Native Elements was using `Touchable` as touch handler, but since `v4.0` RNE will use `Pressable`
+Earlier React Native Elements was using `Touchable` as touch handler, but since `v4.0` will use `Pressable`
 
 :::
 
