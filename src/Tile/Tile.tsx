@@ -124,11 +124,13 @@ export const Tile: RneFunctionComponent<TileProps> = ({
 
   return (
     <Pressable
-      {...attributes}
-      onPress={onPress}
-      android_ripple={androidRipple(
-        Color(theme?.colors?.primary).alpha(activeOpacity).rgb().toString()
-      )}
+      {...{
+        onPress,
+        android_ripple: androidRipple(
+          Color(theme?.colors?.primary).alpha(activeOpacity).rgb().toString()
+        ),
+        ...attributes,
+      }}
       style={StyleSheet.flatten([
         {
           width,

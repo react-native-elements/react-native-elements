@@ -163,7 +163,9 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   onPress,
   onPressOut,
   onPressIn,
-  Component = onPress || onLongPress ? Pressable : View,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   raised = true,
   small,
   style,
@@ -178,14 +180,17 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   return (
     <Component
       {...{
+        onLongPress,
+        onPress,
+        onPressOut,
+        onPressIn,
         android_ripple: androidRipple(
           light ? 'white' : underlayColor || (type && colors[type])
         ),
         ...pressableProps,
+        ...attributes,
       }}
-      {...(disabled ? {} : { onLongPress, onPress, onPressOut, onPressIn })}
       testID="RNE_SocialIcon"
-      {...attributes}
       underlayColor={light ? 'white' : underlayColor || (type && colors[type])}
       disabled={disabled}
       style={StyleSheet.flatten([

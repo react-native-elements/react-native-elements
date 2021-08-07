@@ -109,7 +109,6 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
         {!iconRight && (
           <CheckBoxIcon {...iconProps} checkedColor={checkedColor} />
         )}
-
         {React.isValidElement(title)
           ? title
           : title !== '' &&

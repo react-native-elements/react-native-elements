@@ -200,9 +200,11 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                 android_ripple: androidRipple(
                   Color(underlayColor).alpha(activeOpacity).rgb().toString()
                 ),
+                onPressIn,
+                onPressOut,
+                onLongPress,
                 ...pressableProps,
               }}
-              {...{ onPressIn, onPressOut, onLongPress }}
             >
               <View
                 style={StyleSheet.flatten([

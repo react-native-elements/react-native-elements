@@ -34,8 +34,8 @@ export type SpeedDialProps = {
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
 
-  /** Props for Pressable */
-  pressableProps?: PressableProps;
+  /** Props for Backdrop Pressable */
+  backdropPressableProps?: PressableProps;
 } & FABProps;
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
@@ -53,7 +53,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme,
-  pressableProps,
+  backdropPressableProps: pressableProps,
   ...rest
 }) => {
   const animations = React.useRef<Animated.Value[]>(

@@ -107,7 +107,12 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   disabled = false,
   disabledStyle,
   onPress,
-  Component = onPress ? Pressable : View,
+  onLongPress,
+  onPressIn,
+  onPressOut,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   solid = false,
   brand = false,
   theme,

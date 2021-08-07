@@ -92,7 +92,11 @@ export type AvatarBaseProps = {
 export const AvatarBase: RneFunctionComponent<AvatarBaseProps> = ({
   onPress,
   onLongPress,
-  Component = onPress || onLongPress ? Pressable : View,
+  onPressIn,
+  onPressOut,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   containerStyle,
   icon,
   iconStyle,
@@ -162,9 +166,14 @@ export const AvatarBase: RneFunctionComponent<AvatarBaseProps> = ({
         rounded && { borderRadius: width / 2 },
         containerStyle,
       ])}
-      {...rest}
-      {...{ onPress, onLongPress }}
-      {...pressableProps}
+      {...{
+        onPress,
+        onLongPress,
+        onPressIn,
+        onPressOut,
+        ...pressableProps,
+        ...rest,
+      }}
     >
       <Image
         placeholderStyle={StyleSheet.flatten([

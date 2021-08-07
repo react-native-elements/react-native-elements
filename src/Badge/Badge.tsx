@@ -31,9 +31,6 @@ export type BadgeProps = {
   /** Text value to be displayed by badge, defaults to empty. */
   value?: React.ReactNode;
 
-  /** Function called when pressed on the badge. */
-  onPress?: (...args: any[]) => any;
-
   /** Custom component to replace the badge outer component. */
   Component?: typeof React.Component;
 
@@ -51,7 +48,9 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   onLongPress,
   onPressOut,
   onPressIn,
-  Component = onPress ? Pressable : View,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   value,
   theme,
   status = 'primary',
@@ -65,8 +64,14 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   return (
     <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
       <Component
-        {...pressableProps}
-        {...rest}
+        {...{
+          onPress,
+          onLongPress,
+          onPressOut,
+          onPressIn,
+          ...pressableProps,
+          ...rest,
+        }}
         style={StyleSheet.flatten([
           {
             alignSelf: 'center',
@@ -82,7 +87,6 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
           !element && styles.miniBadge,
           badgeStyle && badgeStyle,
         ])}
-        onPress={onPress}
       >
         {element}
       </Component>

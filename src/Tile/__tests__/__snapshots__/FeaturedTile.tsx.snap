@@ -477,14 +477,12 @@ exports[`FeaturedTitle component should render with Icon 1`] = `
 
 exports[`FeaturedTitle component should render with width and height 1`] = `
 <Pressable
-  height={20}
   style={
     Object {
       "height": 20,
       "width": 34,
     }
   }
-  width={34}
 >
   <ImageBackground
     resizeMode="cover"
