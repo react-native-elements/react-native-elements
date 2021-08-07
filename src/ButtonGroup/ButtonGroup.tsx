@@ -183,9 +183,6 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
-              android_ripple={androidRipple(
-                Color(underlayColor).alpha(activeOpacity).rgb().toString()
-              )}
               disabled={isDisabled}
               onPress={() => {
                 if (selectMultiple) {
@@ -199,7 +196,12 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                 }
               }}
               style={styles.button}
-              {...pressableProps}
+              {...{
+                android_ripple: androidRipple(
+                  Color(underlayColor).alpha(activeOpacity).rgb().toString()
+                ),
+                ...pressableProps,
+              }}
               {...{ onPressIn, onPressOut, onLongPress }}
             >
               <View

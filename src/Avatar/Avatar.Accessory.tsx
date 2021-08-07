@@ -41,8 +41,11 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
 }: AccessoryProps) => {
   return (
     <Pressable
-      android_ripple={(onPress || onLongPress) && androidRipple(underlayColor)}
-      {...pressableProps}
+      {...{
+        android_ripple:
+          (onPress || onLongPress) && androidRipple(underlayColor),
+        ...pressableProps,
+      }}
       style={[
         styles.accessory,
         {
