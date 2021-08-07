@@ -140,7 +140,6 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
                 {checked ? checkedTitle || title : title}
               </TextElement>
             )}
-
         {/* Show Icon on right side if iconRight is true */}
         {iconRight && (
           <CheckBoxIcon {...iconProps} checkedColor={checkedColor} />
