@@ -16,6 +16,8 @@ distinction between sections of content.
 
 ---
 
+## Props
+
 <Props />
 
 ---

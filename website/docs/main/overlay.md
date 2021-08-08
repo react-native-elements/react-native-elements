@@ -18,6 +18,8 @@ way to inform or request information from the user.
 
 ---
 
+## Props
+
 <Props />
 
 ---

@@ -23,6 +23,8 @@ Input where imagery can increase user interaction.
 
 ---
 
+## Props
+
 <Props />
 
 ---

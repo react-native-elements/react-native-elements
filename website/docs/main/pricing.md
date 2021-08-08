@@ -19,6 +19,8 @@ in a beautiful and engaging way.
 
 ---
 
+## Props
+
 <Props />
 
 ---

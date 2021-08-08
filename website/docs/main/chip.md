@@ -27,6 +27,8 @@ display text, icons, or both.
 
 ---
 
+## Props
+
 <Props />
 
 ---

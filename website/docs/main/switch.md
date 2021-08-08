@@ -22,6 +22,8 @@ Switch represents user's decision of a process and indicates whether a state is 
 
 ---
 
+## Props
+
 <Props />
 
 ---

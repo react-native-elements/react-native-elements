@@ -20,6 +20,8 @@ avatars, badges, icons, and more.
 
 ---
 
+## Props
+
 <Props />
 
 ---

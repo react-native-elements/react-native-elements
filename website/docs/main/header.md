@@ -16,6 +16,8 @@ import Usage from './usage/Header/Header.md'
 
 ---
 
+## Props
+
 <Props />
 
 ---

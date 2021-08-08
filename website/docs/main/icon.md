@@ -18,6 +18,8 @@ Icons are visual indicators usually used to describe action or intent.
 
 ---
 
+## Props
+
 <Props />
 
 ---

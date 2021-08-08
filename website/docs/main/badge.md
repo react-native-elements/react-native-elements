@@ -31,6 +31,8 @@ indicate the status of an item to the user.
 
 ---
 
+## Props
+
 <Props />
 
 ---

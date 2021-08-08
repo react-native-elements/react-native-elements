@@ -20,6 +20,8 @@ images with a placeholder and smooth image load transitioning.
 
 ---
 
+## Props
+
 <Props />
 
 ---

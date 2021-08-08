@@ -21,6 +21,8 @@ Sliders allow users to select a value from a fixed set of options.
 
 ---
 
+## Props
+
 <Props />
 
 ---

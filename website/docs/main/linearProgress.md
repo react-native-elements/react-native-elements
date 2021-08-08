@@ -22,6 +22,8 @@ Progress indicators inform users about the status of ongoing processes, such as 
 
 ---
 
+## Props
+
 <Props />
 
 ---

@@ -32,6 +32,8 @@ specific way.
 
 ---
 
+## Props
+
 <Props />
 
 ---

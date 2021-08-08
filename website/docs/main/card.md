@@ -20,6 +20,8 @@ more.
 
 ---
 
+## Props
+
 <Props />
 
 ---

@@ -16,6 +16,8 @@ of items directly impacts a user's ability to find one of them.
 
 ---
 
+## Props
+
 <Props />
 
 ---

@@ -16,6 +16,8 @@ import Usage from './usage/BottomSheet/BottomSheet.md'
 
 ---
 
+## Props
+
 <Props />
 
 ---

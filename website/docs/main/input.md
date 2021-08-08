@@ -27,6 +27,8 @@ dialogs.
 
 ---
 
+## Props
+
 <Props />
 
 ---

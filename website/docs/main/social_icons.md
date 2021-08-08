@@ -18,6 +18,8 @@ SocialIcons are visual cues to online and social media networks.
 
 ---
 
+## Props
+
 <Props />
 
 ---

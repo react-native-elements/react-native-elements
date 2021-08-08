@@ -18,6 +18,8 @@ Text displays words and characters at various sizes.
 
 ---
 
+## Props
+
 <Props />
 
 ---

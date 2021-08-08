@@ -44,6 +44,8 @@ Dialogs inform users about a task and can contain critical information, require 
 
 ---
 
+## Props
+
 <Props />
 
 ---

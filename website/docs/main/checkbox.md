@@ -20,6 +20,8 @@ of either a true or false choice.
 
 ---
 
+## Props
+
 <Props />
 
 ---

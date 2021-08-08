@@ -20,6 +20,8 @@ subject.
 
 ---
 
+## Props
+
 <Props />
 
 ---

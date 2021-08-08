@@ -21,6 +21,8 @@ Tabs organize content across different screens, data sets, and other interaction
 
 ---
 
+## Props
+
 <Props />
 
 ---

@@ -17,6 +17,8 @@ Tooltips display informative text when users tap on an element.
 
 ---
 
+## Props
+
 <Props />
 
 ---

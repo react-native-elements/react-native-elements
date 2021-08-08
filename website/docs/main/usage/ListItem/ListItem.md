@@ -192,7 +192,7 @@ styles = StyleSheet.create({
 
 ### Badges
 
-<img alt="Badges" src={useBaseUrl('img/list-badges.png')} />
+<img alt="Badges" src={('img/list-badges.png')} />
 
 Example badge usage
 

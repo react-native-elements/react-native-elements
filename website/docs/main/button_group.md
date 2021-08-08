@@ -20,6 +20,8 @@ closely related but mutually exclusive.
 
 ---
 
+## Props
+
 <Props />
 
 ---
