@@ -1,0 +1,46 @@
+---
+
+
+id: linearprogress
+
+
+title: LinearProgress
+
+
+slug: /linearprogress
+
+---
+
+
+
+import Usage from './usage/LinearProgress/LinearProgress.md'
+
+
+
+Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates.
+
+They communicate an app’s state and indicate available actions, such as whether users can navigate away from the current screen.
+
+Also receives all [View](https://reactnative.dev/docs/view#props) props
+
+
+
+## Usage
+
+
+<Usage />
+
+---
+
+
+## Props
+
+### LinearProgress
+
+
+
+
+## Reference
+
+### LinearProgress
+
