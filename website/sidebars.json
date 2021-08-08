@@ -5,8 +5,7 @@
       "overview",
       "customization",
       "web_usage",
-      "troubleshooting",
-      "migration_v3_to_v4"
+      "troubleshooting"
     ],
     "Components": [
       "main/avatar",
@@ -39,6 +38,11 @@
       "main/tooltip"
     ],
     "Universe Components": ["universe/circularslider"],
-    "Repo": ["repo/contributing", "repo/testing", "repo/labels"]
+    "Repo": [
+      "repo/contributing",
+      "repo/testing",
+      "repo/labels",
+      "migration_v3_to_v4"
+    ]
   }
 }

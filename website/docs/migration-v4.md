@@ -3,11 +3,21 @@ id: migration_v3_to_v4
 title: Migration from v3 to v4
 ---
 
+### Table of Contents
+
+- [Introduction](#introduction)
+  - [Few added components are](#few-added-components-are)
+  - [Migrated to FC](#migrated-to-fc)
+- [Handling breaking changes](#handling-breaking-changes)
+  - [Migration to Pressable](#migration-to-pressable)
+  - [Tooltip](#tooltip)
+  - [Text](#text)
+
 ## Introduction
 
 React Native Elements v4 introduces many features including few new components and some breaking changes whose migration is being [given below](#handling-breaking-changes).
 
-Few added components are
+### Few added components are
 
 - [LinearProgress (#2867)](https://github.com/react-native-elements/react-native-elements/pull/2867)
 - [FAB (#2885)](https://github.com/react-native-elements/react-native-elements/pull/2885)
@@ -17,6 +27,18 @@ Few added components are
 - [TabView & TabView.Item (#2983)](https://github.com/react-native-elements/react-native-elements/pull/2983)
 - [ListItem Accordion (#2953)](https://github.com/react-native-elements/react-native-elements/pull/2953)
 - [ListItem Swipeable (#2982)](https://github.com/react-native-elements/react-native-elements/pull/2982)
+- Dialog
+
+### Migrated to FC
+
+These components are converted to Functional Components,
+
+- Button
+- Slider
+- Tooltip
+- Image
+
+> `ref` may not work as of now, but will be added in future releases.
 
 ## Handling breaking changes
 
