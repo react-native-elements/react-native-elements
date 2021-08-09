@@ -8,7 +8,7 @@ import {
 import { RneFunctionComponent } from '../helpers';
 
 export type SwitchProps = NativeSwitchProps & {
-  /**  The color of the component. */
+  /**  The color of the Switch component. */
   color?: string;
 };
 
