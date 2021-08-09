@@ -11,6 +11,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import { Text } from '..';
 import { RneFunctionComponent } from '../helpers';
 
 export type ImageProps = RNImageProps & {
@@ -98,7 +99,13 @@ export const Image: RneFunctionComponent<ImageProps> = ({
             placeholderStyle,
           ])}
         >
-          {PlaceholderContent}
+          {React.isValidElement(PlaceholderContent)
+            ? PlaceholderContent
+            : PlaceholderContent && (
+                <Text testID="RNE__Image__Placeholder__Content">
+                  {PlaceholderContent}
+                </Text>
+              )}
         </View>
       </Animated.View>
       {/* Children for Image */}

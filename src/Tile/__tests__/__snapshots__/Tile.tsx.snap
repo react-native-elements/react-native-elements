@@ -182,7 +182,6 @@ exports[`Tile component should apply styles from theme 1`] = `
           },
         }
       }
-      transition={true}
       transitionDuration={360}
       updateTheme={[Function]}
     />
