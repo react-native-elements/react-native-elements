@@ -34,7 +34,7 @@ This component inherits [all native Switch props that come with a standard React
 
 #### color
 
-The color of the component.
+The color of the Switch component.
 
 | Type   | Default |
 | ------ | ------- |
