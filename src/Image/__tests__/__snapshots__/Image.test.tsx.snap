@@ -32,7 +32,7 @@ exports[`Image Component should render 1`] = `
     theme={
       Object {
         "colors": Object {
-          "black": "black",
+          "black": "#242424",
           "disabled": "hsl(208, 8%, 90%)",
           "divider": "#bcbbc1",
           "error": "#ff190c",

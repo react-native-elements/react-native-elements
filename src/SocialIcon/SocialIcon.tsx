@@ -195,6 +195,11 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
             borderRadius: iconSize * 2,
           },
         { backgroundColor: type && colors[type] },
+        {
+          width: iconSize * 2 + 4,
+          height: iconSize * 2 + 4,
+          borderRadius: iconSize * 2,
+        },
         light && { backgroundColor: 'white' },
         style && style,
       ])}
