@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd website
-          yarn install --production=false
+          yarn install --all
       - name: Update source code
         run: yarn docs:build
 
