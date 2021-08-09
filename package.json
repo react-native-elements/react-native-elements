@@ -22,11 +22,11 @@
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
     "clean-install": "rimraf node_modules && yarn",
     "changelog": "auto-changelog -p",
     "docs": "yarn docs:build && cd website && yarn start",
-    "docs:build": "ts-node website/scripts/docgen/index.ts"
+    "docs:lint": "prettier --single-quote --trailing-comma=es5 --write **/*.md",
+    "docs:build": "ts-node website/scripts/docgen/index.ts && yarn docs:lint"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",

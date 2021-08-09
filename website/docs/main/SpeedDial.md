@@ -1,21 +1,12 @@
 ---
-
-
 id: speeddial
-
 
 title: SpeedDial
 
-
 slug: /speeddial
-
 ---
 
-
-
 import Usage from './usage/SpeedDial/SpeedDial.md'
-
-
 
 When pressed, a floating action button can display three to six related actions in the form of a speed dial.
 
@@ -27,38 +18,106 @@ If the FAB is tapped in this state, it should either initiate its default action
 
 ## Components
 
- - [SpeedDial.Action](#speeddialaction)
-    
-    
-    Adds Action to the SpeedDial.
-    
-    This, Receieve all [Fab](fab#props) props.
-    
-
+- [SpeedDial.Action](#speeddialaction)
+  Adds Action to the SpeedDial.
+  This, Receieve all [Fab](fab#props) props.
 
 ## Usage
-
 
 <Usage />
 
 ---
 
-
 ## Props
 
 ### SpeedDial
 
+- [children](#children)
+- [isOpen](#isopen)
+- [onClose](#onclose)
+- [onOpen](#onopen)
+- [openIcon](#openicon)
+- [overlayColor](#overlaycolor)
+- [transitionDuration](#transitionduration)
 
 ### SpeedDial.Action
 
-
 None
-
 
 ## Reference
 
 ### SpeedDial
+
+#### children
+
+Add childen elements to the speed dial.
+
+| Type                | Default |
+| ------------------- | ------- |
+| any[] and ReactNode | None    |
+
+---
+
+#### isOpen
+
+Opens the action stack.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### onClose
+
+Callback fired when the component requests to be closed.
+
+| Type       | Default  |
+| ---------- | -------- |
+| () => void | () => {} |
+
+---
+
+#### onOpen
+
+Callback fired when the component requests to be open.
+
+| Type       | Default  |
+| ---------- | -------- |
+| () => void | () => {} |
+
+---
+
+#### openIcon
+
+Icon shown on FAB when action stack is open.
+
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
+
+---
+
+#### overlayColor
+
+Add overlay color to the speed dial.
+
+| Type   | Default |
+| ------ | ------- |
+| string | None    |
+
+---
+
+#### transitionDuration
+
+The duration for the transition, in milliseconds.
+
+| Type   | Default |
+| ------ | ------- |
+| number | 150     |
+
+---
+
 ### SpeedDial.Action
 
 None
-

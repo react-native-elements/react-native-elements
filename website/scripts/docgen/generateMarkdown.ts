@@ -1,31 +1,38 @@
 import json2md from 'json2md';
 import _ from 'lodash';
 
-json2md.converters.header = function (input, json2md) {
-  return json2md([
-    { hr: '' },
-    { p: `id: ${input.id.toLowerCase()}` },
-    { p: `title: ${input.id}` },
-    { p: `slug: /${input.id.toLowerCase()}` },
-    { hr: '' },
-  ]);
+json2md.converters.header = function (input) {
+  return input.id
+    ? json2md([
+        { hr: '' },
+        { p: `id: ${input.id.toLowerCase()}` },
+        { p: `title: ${input.id}` },
+        { p: `slug: /${input.id.toLowerCase()}` },
+        { hr: '' },
+      ])
+    : '';
 };
 
 function generateComponentsDescriptions(input) {
-  const childComponentDescriptions = Object.keys(input).map((key) => {
-    return json2md([
-      {
-        link: { title: key, source: `#${key.replace('.', '').toLowerCase()}` },
-      },
-      {
-        p: input[key].description,
-      },
-    ]);
-  });
+  const childComponentDescriptions = input
+    ? Object.keys(input).map((key) => {
+        return json2md([
+          {
+            link: {
+              title: key,
+              source: `#${key.replace('.', '').toLowerCase()}`,
+            },
+          },
+          {
+            p: input[key].description,
+          },
+        ]);
+      })
+    : '';
   return childComponentDescriptions;
 }
 
-json2md.converters.components = function (input, json2md) {
+json2md.converters.components = function (input) {
   if (input.childrens) {
     let markdown = json2md({ h2: 'Components' });
     markdown += json2md({
@@ -37,15 +44,17 @@ json2md.converters.components = function (input, json2md) {
   }
 };
 
-json2md.converters.imports = function (input, json2md) {
-  return json2md([
-    {
-      p: `import Usage from './usage/${input.component}/${input.component}.md'`,
-    },
-  ]);
+json2md.converters.imports = function (input) {
+  return input.component
+    ? json2md([
+        {
+          p: `import Usage from './usage/${input.component}/${input.component}.md'`,
+        },
+      ])
+    : '';
 };
 
-json2md.converters.usage = function (input, json2md) {
+json2md.converters.usage = function (input) {
   return json2md([
     { h2: `Usage` },
     {
@@ -56,13 +65,17 @@ json2md.converters.usage = function (input, json2md) {
 };
 
 function generatePropsLinks(props) {
-  const propLinks = Object.keys(props).map((key) => {
-    return json2md({ link: { title: key, source: `#${key.toLowerCase()}` } });
-  });
+  const propLinks = props
+    ? Object.keys(props).map((key) => {
+        return json2md({
+          link: { title: key, source: `#${key.toLowerCase()}` },
+        });
+      })
+    : '';
   return propLinks;
 }
 
-json2md.converters.props = function (input, json2md) {
+json2md.converters.props = function (input) {
   let markdown = json2md([
     { h2: 'Props' },
     { h3: input.displayName },
@@ -85,31 +98,33 @@ json2md.converters.props = function (input, json2md) {
 };
 
 function generatePropsReference(props) {
-  const propsReference = Object.keys(props)
-    .map((key) => {
-      const prop = props[key];
-      return json2md([
-        { h4: prop.name },
-        { p: prop.description },
-        {
-          table: {
-            headers: ['Type', 'Default'],
-            rows: [
-              {
-                Type: prop.type ? prop.type.name : 'None',
-                Default: prop.defaultValue ? prop.defaultValue.value : 'None',
-              },
-            ],
+  const propsReference =
+    props &&
+    Object.keys(props)
+      .map((key) => {
+        const prop = props[key];
+        return json2md([
+          { h4: prop.name },
+          { p: prop.description },
+          {
+            table: {
+              headers: ['Type', 'Default'],
+              rows: [
+                {
+                  Type: prop.type ? prop.type.name : 'None',
+                  Default: prop.defaultValue ? prop.defaultValue.value : 'None',
+                },
+              ],
+            },
           },
-        },
-        { hr: '' },
-      ]);
-    })
-    .join('');
+          { hr: '' },
+        ]);
+      })
+      .join('');
   return propsReference;
 }
 
-json2md.converters.propsData = function (input, json2md) {
+json2md.converters.propsData = function (input) {
   let markdown = json2md([{ h2: 'Reference' }, { h3: input.displayName }]);
   markdown += generatePropsReference(input.props);
   if (input.childrens) {
