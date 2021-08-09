@@ -62,7 +62,10 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
     ...textProps,
   });
   return (
-    <View style={StyleSheet.flatten([containerStyle && containerStyle])}>
+    <View
+      testID="RNE__Badge__Container"
+      style={StyleSheet.flatten([containerStyle && containerStyle])}
+    >
       <Component
         {...{
           onPress,
@@ -72,6 +75,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
           ...pressableProps,
           ...rest,
         }}
+        testID="RNE__Badge"
         style={StyleSheet.flatten([
           {
             alignSelf: 'center',

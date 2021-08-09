@@ -136,11 +136,11 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
 
   const handleOnPress = useCallback(
     (evt) => {
-      if (!loading) {
+      if (!loading && !disabled) {
         onPress(evt);
       }
     },
-    [loading, onPress]
+    [loading, onPress, disabled]
   );
 
   // Refactor to Pressable
