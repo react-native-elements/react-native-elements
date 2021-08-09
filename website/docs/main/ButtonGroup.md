@@ -58,9 +58,13 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 
 Choose other button component such as TouchableOpacity.
 
-| Type            | Default                                                                      |
-| --------------- | ---------------------------------------------------------------------------- |
-| React Component | TouchableOpacity(ios),TouchableNativeFeedback(android),TouchableOpacity(web) |
+| Type            | Default                                        |
+| --------------- | ---------------------------------------------- |
+| React Component | (ios),(android),(web),TouchableNativeFeedback( |
+
+android),TouchableOpacity(
+default),undefined(
+) |
 
 ---
 

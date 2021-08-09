@@ -18,18 +18,11 @@ jobs:
         with:
           node-version: 14
 
-      - name: Cache Dependencies
-        uses: actions/cache@v2
-        id: rne-docs-deploy
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
-
       - name: Install dependencies
-        if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
         run: |
           cd website
           yarn --all
+
       - name: Update source code
         run: yarn docs:build
 
