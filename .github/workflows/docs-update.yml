@@ -21,8 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd website
-          yarn install --production=false --frozen-lockfile
-          yarn global add ts-node typescript
+          yarn install --production=false
       - name: Update source code
         run: yarn docs:build
 
