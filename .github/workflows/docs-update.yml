@@ -1,0 +1,43 @@
+name: Update Documentation
+on:
+  push:
+  pull_request:
+    branches-ignore:
+      - master
+
+jobs:
+  run:
+    name: Update Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Cache Dependencies
+        uses: actions/cache@v2
+        id: rne-docs-deploy
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
+        run: |
+          cd website
+          yarn --all
+      - name: Update source code
+        run: yarn docs:build
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: React Native Elements CI
+          author_email: react-native-elements-ci@users.noreply.github.com
+          message: 'Update Documentation'
+          add: '*.md'
+          push: true

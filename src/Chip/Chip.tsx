@@ -7,9 +7,12 @@ export type ChipProps = Omit<
   ButtonProps,
   'loading' | 'loadingStyle' | 'loadingProps'
 > & {
+  /** Type of button. */
   type?: 'solid' | 'outline';
 };
 
+/** Chips are compact elements that represent an input, attribute, or action.
+ * They may display text, icons, or both. */
 export const Chip: RneFunctionComponent<ChipProps> = ({
   titleStyle,
   buttonStyle,
@@ -23,9 +26,11 @@ export const Chip: RneFunctionComponent<ChipProps> = ({
         titleStyle,
       ])}
       buttonStyle={StyleSheet.flatten([{ borderRadius: 30 }, buttonStyle])}
-      {...(onPress === undefined && {
-        TouchableComponent: TouchableWithoutFeedback,
-      })}
+      {...(onPress === undefined
+        ? {
+            TouchableComponent: TouchableWithoutFeedback,
+          }
+        : { onPress })}
       {...rest}
     />
   );

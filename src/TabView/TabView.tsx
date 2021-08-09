@@ -9,17 +9,25 @@ import {
 } from 'react-native';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
-// TabView
 export type TabViewBaseProps = {
+  /** Child position index value. */
   value?: number;
+
+  /** On Index Change Callback. */
   onChange?: (value: number) => any;
+
+  /** Choose the animation type among `spring` and `timing`. This is visible when there is tab change. */
   animationType?: 'spring' | 'timing';
+
+  /** Define the animation configurations. */
   animationConfig?: Omit<
     Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,
     'toValue'
   >;
 };
 
+/** Tabs organize content across different screens, data sets, and other interactions.
+ * TabView enables swipeable tabs. */
 export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   children,
   onChange,
@@ -105,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-TabViewBase.displayName = 'TabViewBase';
+TabViewBase.displayName = 'TabView';
