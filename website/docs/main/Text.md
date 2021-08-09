@@ -8,7 +8,7 @@ slug: /text
 
 import Usage from './usage/Text/Text.md'
 
-Text displays words and characters at various sizes.
+Text displays words and characters of various sizes.
 
 ## Usage
 
