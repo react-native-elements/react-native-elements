@@ -90,7 +90,6 @@ exports[`Image Component should render 1`] = `
         },
       }
     }
-    transition={true}
     transitionDuration={360}
     updateTheme={[Function]}
   />

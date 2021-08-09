@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image as RNImage } from 'react-native';
+import { Image as RNImage, Text } from 'react-native';
 import Image from '../index';
 import { renderWithTheme } from '../../../.ci/testHelper';
 
@@ -13,6 +13,7 @@ describe('Image Component', () => {
     );
     expect(toJSON()).toMatchSnapshot();
   });
+
   it('should render the appropriate testId when one is passed.', () => {
     const { queryByTestId } = renderWithTheme(
       <Image testID="customTestId" source={{ uri: FAKE_URI }} />
@@ -20,6 +21,7 @@ describe('Image Component', () => {
     const image = queryByTestId('customTestId');
     expect(image.props.source.uri).toBe(FAKE_URI);
   });
+
   it('should render the appropriate testId when one is not passed.', () => {
     const { queryByTestId } = renderWithTheme(
       <Image source={{ uri: FAKE_URI }} />
@@ -27,6 +29,7 @@ describe('Image Component', () => {
     const image = queryByTestId('RNE__Image');
     expect(image.props.source.uri).toBe(FAKE_URI);
   });
+
   it('should apply values from theme', () => {
     const textTheme = {
       Image: {
@@ -49,6 +52,17 @@ describe('Image Component', () => {
     );
     const image = queryByTestId('RNE__Image');
     expect(image.props.onLoad).not.toBeNull();
+  });
+
+  it('should render PlaceholderContent', () => {
+    const { queryByTestId } = renderWithTheme(
+      <Image
+        source={{ uri: FAKE_URI }}
+        PlaceholderContent={<Text testID="text">MyText</Text>}
+      />
+    );
+    const imageText = queryByTestId('text');
+    expect(imageText.props.children).toBe('MyText');
   });
 
   it('should apply value from style prop', () => {
