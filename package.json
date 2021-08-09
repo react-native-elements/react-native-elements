@@ -61,6 +61,7 @@
     "@types/react-test-renderer": "^17.0.0",
     "auto-changelog": "^2.2.1",
     "babel-jest": "^26.3.0",
+    "child_process": "^1.0.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4",
     "enzyme-to-json": "^3.5.0",
@@ -146,7 +147,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn docs:build && git add '*.md' && git commit -m 'Update Documentation'"
+      "pre-push": "node ./updateDocumentation.js"
     }
   }
 }
