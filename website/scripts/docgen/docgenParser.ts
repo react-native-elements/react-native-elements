@@ -115,7 +115,11 @@ const parserOptions = {
     }
 
     // To replace '\r\n' which breaks the markdown for certain props to ''
-    if (prop.defaultValue && prop.defaultValue.value.includes('\r\n')) {
+    if (
+      prop.defaultValue &&
+      prop.defaultValue.value &&
+      prop.defaultValue.value.includes('\r\n')
+    ) {
       prop.defaultValue.value = prop.defaultValue.value.replace(/\r\n/g, '');
     }
 

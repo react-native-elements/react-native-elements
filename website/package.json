@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "examples": "docusaurus examples",
-    "start": "yarn docs:build && docusaurus start",
+    "start": "docusaurus start",
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
     "publish-gh-pages": "docusaurus deploy",
