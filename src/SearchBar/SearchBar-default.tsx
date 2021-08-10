@@ -110,6 +110,7 @@ export class SearchBarDefault extends React.Component<
 
     return (
       <View
+        testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
             borderTopWidth: 1,
@@ -128,7 +129,7 @@ export class SearchBarDefault extends React.Component<
         ])}
       >
         <Input
-          testID="searchInput"
+          testID="RNE__SearchBar"
           renderErrorMessage={false}
           {...attributes}
           onFocus={this.onFocus}

@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBar wrapper component should apply values from theme 1`] = `
+exports[`Default SearchBar component should render without issues 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#ffffff",
-      "paddingBottom": 8,
-      "paddingTop": 8,
+      "backgroundColor": undefined,
+      "borderBottomColor": "#000",
+      "borderBottomWidth": 1,
+      "borderTopColor": "#000",
+      "borderTopWidth": 1,
+      "padding": 8,
     }
   }
+  testID="RNE__SearchBar-wrapper"
 >
   <View
     style={
@@ -17,20 +21,24 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         "width": "100%",
       }
     }
+    testID="RNE__Input__view-wrapper"
   >
     <View
       style={
         Object {
           "alignItems": "center",
+          "backgroundColor": undefined,
           "borderBottomWidth": 0,
           "borderColor": "#86939e",
+          "borderRadius": 3,
           "flexDirection": "row",
+          "minHeight": 30,
+          "overflow": "hidden",
           "transform": Array [
             Object {
               "translateX": 0,
             },
           ],
-          "width": "100%",
         }
       }
     >
@@ -71,8 +79,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                 style={
                   Array [
                     Object {
-                      "color": "rgba(0, 0, 0, 0.54)",
-                      "fontSize": 25,
+                      "color": "#242424",
+                      "fontSize": 18,
                     },
                     Object {
                       "backgroundColor": "transparent",
@@ -97,25 +105,21 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         allowFontScaling={true}
         editable={true}
         onBlur={[Function]}
-        onCancel={[Function]}
         onChangeText={[Function]}
         onFocus={[Function]}
-        placeholder="Enter search term"
-        placeholderTextColor="#86939e"
-        platform="android"
         rejectResponderTermination={true}
         style={
           Object {
-            "color": "#242424",
+            "color": undefined,
             "flex": 1,
             "fontSize": 18,
-            "marginLeft": 24,
-            "marginRight": 8,
+            "marginLeft": 10,
             "minHeight": 40,
           }
         }
-        testID="searchInput"
+        testID="RNE__SearchBar"
         underlineColorAndroid="transparent"
+        value=""
       />
       <View
         style={
@@ -151,57 +155,4 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
     />
   </View>
 </View>
-`;
-
-exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
-<SearchBarAndroid
-  onBlur={[Function]}
-  onCancel={[Function]}
-  onChangeText={[Function]}
-  onClear={[Function]}
-  onFocus={[Function]}
-  platform="android"
-/>
-`;
-
-exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
-<SearchBarIOS
-  cancelButtonProps={Object {}}
-  cancelButtonTitle="Cancel"
-  clearIcon={
-    Object {
-      "name": "ios-close-circle",
-    }
-  }
-  loadingProps={Object {}}
-  onBlur={[Function]}
-  onCancel={[Function]}
-  onChangeText={[Function]}
-  onClear={[Function]}
-  onFocus={[Function]}
-  platform="ios"
-  searchIcon={
-    Object {
-      "name": "ios-search",
-    }
-  }
-  showCancel={false}
-  showLoading={false}
-  value=""
-/>
-`;
-
-exports[`SearchBar wrapper component should render without issues 1`] = `
-<SearchBarDefault
-  lightTheme={false}
-  loadingProps={Object {}}
-  onBlur={[Function]}
-  onChangeText={[Function]}
-  onClear={[Function]}
-  onFocus={[Function]}
-  platform="default"
-  round={false}
-  showLoading={false}
-  value=""
-/>
 `;

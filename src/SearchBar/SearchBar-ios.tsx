@@ -166,6 +166,7 @@ export class SearchBarIOS extends Component<
 
     return (
       <View
+        testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           styles.container,
           { backgroundColor: theme?.colors?.white },
@@ -173,7 +174,7 @@ export class SearchBarIOS extends Component<
         ])}
       >
         <Input
-          testID="searchInput"
+          testID="RNE__SearchBar"
           renderErrorMessage={false}
           {...attributes}
           onFocus={this.onFocus}
@@ -240,6 +241,7 @@ export class SearchBarIOS extends Component<
           onLayout={(event) =>
             this.setState({ cancelButtonWidth: event.nativeEvent.layout.width })
           }
+          testID="RNE__SearchBar-cancelButtonContainer"
         >
           <TouchableOpacity
             accessibilityRole="button"
@@ -247,15 +249,21 @@ export class SearchBarIOS extends Component<
             disabled={buttonDisabled}
             {...otherCancelButtonProps}
           >
-            <View style={[buttonStyle, buttonDisabled && buttonDisabledStyle]}>
+            <View
+              style={StyleSheet.flatten([
+                buttonStyle,
+                buttonDisabled && buttonDisabledStyle,
+              ])}
+              testID="RNE__SearchBar-cancelButton"
+            >
               <Text
-                style={[
+                style={StyleSheet.flatten([
                   styles.buttonTextStyle,
                   buttonColor && { color: buttonColor },
                   buttonTextStyle,
                   buttonDisabled &&
                     (buttonDisabledTextStyle || styles.buttonTextDisabled),
-                ]}
+                ])}
               >
                 {cancelButtonTitle}
               </Text>

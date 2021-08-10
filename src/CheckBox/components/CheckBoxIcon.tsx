@@ -54,6 +54,7 @@ export const CheckBoxIcon: RneFunctionComponent<CheckBoxIconProps> = ({
     : getIconType('font-awesome');
   return (
     <VectorIcon
+      testID="RNE__Checkbox__Icon"
       color={checked ? checkedColor : uncheckedColor}
       name={checked ? checkedIcon : uncheckedIcon}
       size={size || 24}
