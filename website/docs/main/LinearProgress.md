@@ -24,6 +24,7 @@ Also receives all [View](https://reactnative.dev/docs/view#props) props
 
 ### LinearProgress
 
+- [animation](#animation)
 - [color](#color)
 - [style](#style)
 - [trackColor](#trackcolor)
@@ -33,6 +34,16 @@ Also receives all [View](https://reactnative.dev/docs/view#props) props
 ## Reference
 
 ### LinearProgress
+
+#### animation
+
+Animation duration
+
+| Type                              | Default            |
+| --------------------------------- | ------------------ |
+| boolean or { duration?: number; } | { duration: 2000 } |
+
+---
 
 #### color
 
@@ -70,7 +81,7 @@ The value of the progress indicator for the determinate variant. Value between 0
 
 | Type   | Default |
 | ------ | ------- |
-| number | 0       |
+| number | None    |
 
 ---
 
@@ -78,8 +89,8 @@ The value of the progress indicator for the determinate variant. Value between 0
 
 Type of button.
 
-| Type                             | Default       |
-| -------------------------------- | ------------- |
-| "determinate" or "indeterminate" | indeterminate |
+| Type                             | Default                                               |
+| -------------------------------- | ----------------------------------------------------- |
+| "determinate" or "indeterminate" | value === undefined ? 'indeterminate' : 'determinate' |
 
 ---
