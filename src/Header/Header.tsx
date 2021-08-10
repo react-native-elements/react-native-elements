@@ -68,7 +68,7 @@ export type HeaderProps = ViewProps & {
   rightContainerStyle?: StyleProp<ViewStyle>;
 
   /** Add children component to the header. */
-  children?: JSX.Element[];
+  children?: JSX.Element | JSX.Element[];
 
   /** Elevation for header */
   elevated?: boolean;
