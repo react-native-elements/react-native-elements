@@ -2,7 +2,6 @@ import React from 'react';
 import { Text } from 'react-native';
 import { render } from '@testing-library/react-native';
 import withTheme from '../withTheme';
-import { ThemeProps } from '..';
 
 describe('withTheme', () => {
   it('passes theme props to function component', () => {
