@@ -179,9 +179,11 @@ exports[`Speed Dial Component should render without issues 1`] = `
                         "width": 40,
                       }
                     }
+                    testID="RNE__ICON__CONTAINER"
                   >
                     <View
                       replaceTheme={[Function]}
+                      testID="RNE__ICON__CONTAINER_ACTION"
                       updateTheme={[Function]}
                     >
                       <View
@@ -192,6 +194,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
                             "justifyContent": "center",
                           }
                         }
+                        testID="RNE__ICON"
                       >
                         <Text
                           allowFontScaling={false}
@@ -212,7 +215,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
                               Object {},
                             ]
                           }
-                          testID="iconIcon"
+                          testID="RNE__ICON__Component"
                         >
                           
                         </Text>
@@ -352,9 +355,11 @@ exports[`Speed Dial Component should render without issues 1`] = `
                         "width": 40,
                       }
                     }
+                    testID="RNE__ICON__CONTAINER"
                   >
                     <View
                       replaceTheme={[Function]}
+                      testID="RNE__ICON__CONTAINER_ACTION"
                       updateTheme={[Function]}
                     >
                       <View
@@ -365,6 +370,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
                             "justifyContent": "center",
                           }
                         }
+                        testID="RNE__ICON"
                       >
                         <Text
                           allowFontScaling={false}
@@ -385,7 +391,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
                               Object {},
                             ]
                           }
-                          testID="iconIcon"
+                          testID="RNE__ICON__Component"
                         >
                           
                         </Text>
@@ -484,9 +490,11 @@ exports[`Speed Dial Component should render without issues 1`] = `
                     "width": 56,
                   }
                 }
+                testID="RNE__ICON__CONTAINER"
               >
                 <View
                   replaceTheme={[Function]}
+                  testID="RNE__ICON__CONTAINER_ACTION"
                   updateTheme={[Function]}
                 >
                   <View
@@ -497,6 +505,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
                         "justifyContent": "center",
                       }
                     }
+                    testID="RNE__ICON"
                   >
                     <Text
                       allowFontScaling={false}
@@ -517,7 +526,7 @@ exports[`Speed Dial Component should render without issues 1`] = `
                           Object {},
                         ]
                       }
-                      testID="iconIcon"
+                      testID="RNE__ICON__Component"
                     >
                       
                     </Text>

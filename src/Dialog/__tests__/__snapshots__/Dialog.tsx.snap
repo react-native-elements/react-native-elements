@@ -109,6 +109,7 @@ exports[`Dialog Component should apply values from theme 1`] = `
         "justifyContent": "center",
       }
     }
+    testID="RNE__Overlay__Container"
   >
     <View
       style={
@@ -125,6 +126,7 @@ exports[`Dialog Component should apply values from theme 1`] = `
           "width": "75%",
         }
       }
+      testID="RNE__Overlay"
     >
       <View
         style={

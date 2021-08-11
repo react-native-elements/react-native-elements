@@ -230,10 +230,12 @@ exports[`Header Component should render left component by passing a config throu
               "overflow": "hidden",
             }
           }
+          testID="RNE__ICON__CONTAINER"
         >
           <View
             icon="home"
             replaceTheme={[Function]}
+            testID="RNE__ICON__CONTAINER_ACTION"
             updateTheme={[Function]}
           >
             <View
@@ -244,6 +246,7 @@ exports[`Header Component should render left component by passing a config throu
                   "justifyContent": "center",
                 }
               }
+              testID="RNE__ICON"
             >
               <Text
                 allowFontScaling={false}
@@ -264,7 +267,7 @@ exports[`Header Component should render left component by passing a config throu
                     Object {},
                   ]
                 }
-                testID="iconIcon"
+                testID="RNE__ICON__Component"
               >
                 
               </Text>
@@ -360,10 +363,12 @@ exports[`Header Component should render right component by passing a config thro
               "overflow": "hidden",
             }
           }
+          testID="RNE__ICON__CONTAINER"
         >
           <View
             icon="home"
             replaceTheme={[Function]}
+            testID="RNE__ICON__CONTAINER_ACTION"
             updateTheme={[Function]}
           >
             <View
@@ -374,6 +379,7 @@ exports[`Header Component should render right component by passing a config thro
                   "justifyContent": "center",
                 }
               }
+              testID="RNE__ICON"
             >
               <Text
                 allowFontScaling={false}
@@ -394,7 +400,7 @@ exports[`Header Component should render right component by passing a config thro
                     Object {},
                   ]
                 }
-                testID="iconIcon"
+                testID="RNE__ICON__Component"
               >
                 
               </Text>

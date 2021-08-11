@@ -4,11 +4,12 @@ import {
   render,
   RenderOptions,
   fireEvent,
+  act,
 } from '@testing-library/react-native';
 import { ThemeProvider, FullTheme, colors } from '../src/config';
 import deepmerge from 'deepmerge';
 
-export { fireEvent };
+export { fireEvent, act };
 
 export const renderWithTheme = (
   children: React.ReactChild,
