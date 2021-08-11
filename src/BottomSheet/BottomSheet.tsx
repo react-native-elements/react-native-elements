@@ -54,18 +54,18 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
       visible={isVisible}
       {...modalProps}
     >
-      <Pressable onPress={onBackdropPress} testID="RNE__Overlay__backdrop">
-        <View
-          testID="backdrop"
-          style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
-        />
-      </Pressable>
+      <Pressable
+        onPress={onBackdropPress}
+        style={[StyleSheet.absoluteFill, styles.backdrop, backdropStyle]}
+        testID="RNE__Overlay__backdrop"
+      />
 
       <SafeAreaView
         style={StyleSheet.flatten([
           styles.safeAreaView,
           containerStyle && containerStyle,
         ])}
+        pointerEvents="none"
         {...props}
       >
         <View>
