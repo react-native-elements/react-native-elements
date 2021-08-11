@@ -1,36 +1,36 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
-import { create } from 'react-test-renderer';
-import { ThemeProvider } from '../../config';
 import Avatar from '../../Avatar';
-import { ThemedFeaturedTile, FeaturedTile } from '../components/FeaturedTile';
+import { ThemedFeaturedTile as FeaturedTile } from '../components/FeaturedTile';
+import { renderWithWrapper } from '../../../.ci/testHelper';
+import { TouchableOpacity, Image } from 'react-native';
+import Icon from '../../Icon';
 
 describe('FeaturedTitle component', () => {
   it('should render without issues', () => {
-    const component = shallow(
+    const component = renderWithWrapper(
       <FeaturedTile imageSrc={{ uri: 'http://google.com' }} />
     );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should render with width and height', () => {
-    const component = shallow(
+    const { wrapper } = renderWithWrapper(
       <FeaturedTile
         imageSrc={{ uri: 'http://google.com' }}
         width={34}
         height={20}
       />
     );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    expect(wrapper.findByType(TouchableOpacity).props.style).toMatchObject({
+      width: 34,
+      height: 20,
+    });
   });
 
   it('should render with Icon', () => {
-    const component = shallow(
+    const { wrapper, queryByTestId } = renderWithWrapper(
       <FeaturedTile
-        imageSrc={{ uri: 'http://google.com' }}
+        imageSrc={{ uri: 'http://googleRNE__ICON__CONTAINER.com' }}
         icon={{ name: 'play-circle', type: 'font-awesome' }}
         imageContainerStyle={{ height: 70 }}
         containerStyle={{ height: 70 }}
@@ -40,8 +40,10 @@ describe('FeaturedTitle component', () => {
         overlayContainerStyle={{ height: 70 }}
       />
     );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    expect(wrapper.findByType(Icon).props).toMatchObject({
+      name: 'play-circle',
+      type: 'font-awesome',
+    });
   });
 
   it('should apply values from theme', () => {
@@ -50,46 +52,46 @@ describe('FeaturedTitle component', () => {
         title: 'I am featured',
       },
     };
-    const component = create(
-      <ThemeProvider theme={theme}>
-        <ThemedFeaturedTile imageSrc={{ uri: 'http://google.com' }} />
-      </ThemeProvider>
+    const { queryByText } = renderWithWrapper(
+      <FeaturedTile imageSrc={{ uri: 'http://google.com' }} />,
+      '',
+      // @ts-ignore
+      theme
     );
-    expect(
-      component.root.findByProps({ testID: 'featuredTileTitle' }).props.children
-    ).toBe('I am featured');
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(queryByText('I am featured')).not.toBeNull();
   });
 
   it('should render component in caption', () => {
-    const component = shallow(
+    const { wrapper } = renderWithWrapper(
       <FeaturedTile
         imageSrc={{ uri: 'http://google.com' }}
         caption={<Avatar source={{ uri: 'http://google.com' }} />}
       />
     );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    expect(wrapper.findByType(Avatar).props).toMatchObject({
+      source: { uri: 'http://google.com' },
+    });
   });
 
   it('should apply custom image props', () => {
-    const component = shallow(
+    const { wrapper } = renderWithWrapper(
       <FeaturedTile
         imageSrc={{ uri: 'http://google.com' }}
         imageProps={{ resizeMode: 'contain' }}
       />
     );
-    expect(toJson(component)).toMatchSnapshot();
+    expect(wrapper.findByType(Image).props).toMatchObject({
+      resizeMode: 'contain',
+    });
   });
 
   it('should render string in caption', () => {
-    const component = shallow(
+    const { queryByText } = renderWithWrapper(
       <FeaturedTile
         imageSrc={{ uri: 'http://google.com' }}
         caption="Caption text"
       />
     );
-    expect(component.length).toBe(1);
-    expect(toJson(component)).toMatchSnapshot();
+    expect(queryByText('Caption text')).not.toBeNull();
   });
 });
