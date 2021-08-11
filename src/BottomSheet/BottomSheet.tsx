@@ -65,7 +65,7 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
           styles.safeAreaView,
           containerStyle && containerStyle,
         ])}
-        pointerEvents="none"
+        pointerEvents="box-none"
         {...props}
       >
         <View>
