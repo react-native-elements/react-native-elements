@@ -66,6 +66,7 @@ export const Switch: RneFunctionComponent<SwitchProps> = ({
 
   return (
     <NativeSwitch
+      testID="RNE__SWITCH"
       value={value}
       accessibilityState={{
         checked: value,
