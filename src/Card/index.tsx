@@ -1,11 +1,11 @@
 import { withTheme } from '../config';
 import { RneFunctionComponent } from '../helpers';
-import { CardBase, CardBaseProps } from './CardBase';
-import { CardDivider } from './CardDivider';
-import { CardFeaturedSubtitle } from './CardFeaturedSubtitle';
-import { CardFeaturedTitle } from './CardFeaturedTitle';
-import { CardImage } from './CardImage';
-import { CardTitle } from './CardTitle';
+import { CardBase, CardBaseProps } from './Card';
+import { CardDivider } from './Card.Divider';
+import { CardFeaturedSubtitle } from './Card.FeaturedSubtitle';
+import { CardFeaturedTitle } from './Card.FeaturedTitle';
+import { CardImage } from './Card.Image';
+import { CardTitle } from './Card.Title';
 
 const ThemedCardDivider = withTheme(CardDivider, 'CardDivider');
 const ThemedCardFeaturedSubtitle = withTheme(

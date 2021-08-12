@@ -26,9 +26,11 @@ export const Chip: RneFunctionComponent<ChipProps> = ({
         titleStyle,
       ])}
       buttonStyle={StyleSheet.flatten([{ borderRadius: 30 }, buttonStyle])}
-      {...(onPress === undefined && {
-        TouchableComponent: TouchableWithoutFeedback,
-      })}
+      {...(onPress === undefined
+        ? {
+            TouchableComponent: TouchableWithoutFeedback,
+          }
+        : { onPress })}
       {...rest}
     />
   );
