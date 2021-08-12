@@ -31,11 +31,11 @@ They are very customizable and can contain switches, avatars, badges, icons, and
 - [ListItem.Input](#listiteminput)
   This allows adding an Text Input within the ListItem.
   This, Receives all [Input](Input.md#props) props.
-- [ListItem.Swipeable](#listitemswipeable)
-  We offer a special kind of ListItem which is swipeable from both ends and allows users select an event.
 - [ListItem.Subtitle](#listitemsubtitle)
   This allows adding SubTitle to the ListItem.
   This, Receives all [Text](text#props) props.
+- [ListItem.Swipeable](#listitemswipeable)
+  We offer a special kind of ListItem which is swipeable from both ends and allows users select an event.
 - [ListItem.Title](#listitemtitle)
   This allows adding Title to the ListItem.
   This, Receives all [Text](text#props) props.
@@ -90,6 +90,10 @@ None
 
 None
 
+### ListItem.Subtitle
+
+- [right](#right)
+
 ### ListItem.Swipeable
 
 - [leftContent](#leftcontent)
@@ -100,10 +104,6 @@ None
 - [rightContent](#rightcontent)
 - [rightStyle](#rightstyle)
 - [rightWidth](#rightwidth)
-
-### ListItem.Subtitle
-
-- [right](#right)
 
 ### ListItem.Title
 
@@ -306,6 +306,16 @@ None
 
 None
 
+### ListItem.Subtitle
+
+#### right
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
 ### ListItem.Swipeable
 
 #### leftContent
@@ -385,16 +395,6 @@ Width to swipe right.
 | Type   | Default         |
 | ------ | --------------- |
 | number | ScreenWidth / 3 |
-
----
-
-### ListItem.Subtitle
-
-#### right
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | None    |
 
 ---
 
