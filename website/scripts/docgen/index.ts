@@ -1,10 +1,10 @@
 import fs from 'fs-extra';
 import path from 'path';
 import { generateComponentDocs } from './generateComponentDocs';
-import { getComponentFiles } from './getComponentFiles';
+import { runFileScript } from './getComponentFiles';
 import { generateMarkdown } from './generateMarkdown';
 
-const filePaths = getComponentFiles();
+const filePaths = runFileScript();
 const componentDocs = generateComponentDocs(filePaths);
 
 // To make the mapping such that the componentDocs for Compound Component's children are inside the children's property of the component.

@@ -32,28 +32,11 @@ This is simple. Adding, removing, updating the props is also simple now. You jus
 
 ## Adding new components
 
-Trust me this is easy. We have designed the workflow such that, you only need to work on your JavaScript/TypeScript logic, without bothering about updating the markdown files.
-
-> Once a new component is added, please update the path inside the `website/scripts/docgen/componentMap.ts` for the auto generation of that component to work.
-
-Eg:
-
-```json
-Avatar: {
-	name: 'Avatar',
-	path: path.join(__dirname, '../../../src/Avatar/Avatar.tsx'),
-	childrens: [
-		{
-			name: 'Accessory',
-			path: path.join(__dirname, '../../../src/Avatar/Avatar.Accessory.tsx'),
-		},
-	],
-},
-```
-
-The `name` is the Name of the component. The `path` is the path to the base component. The `childrens` component consists of paths to the Children Component in the case of Compound Components like we have `Avatar.Accessory`.
+Trust me this is easy. We have designed the workflow such that, you only need to work on your JavaScript/TypeScript logic, without bothering about updating the markdown files. The input to the docgenParser is automatic and doesn't require any aditional cofiguration.
 
 **Make sure to add appropriate comments and description related to the components and the props of the component. Try keeping your code simple with simpler types for Autogen to work.**
+
+**Please note:** The file name of the component as well as the folder must be in Capital letter. We use `regex` to parse the file paths, so this is important.
 
 **Note**: If there are complex types/defaultValue, please head to `website/scripts/docgen/docgenParser.ts` to deal with those cases. Although we recommend you to avoid it as far as possible. Try improving the React logic and that will work.
 
@@ -65,7 +48,8 @@ The demos can now be added by moving in to the `usage` directory under `website/
 
 ## Future
 
-Some of the components are class-based. They are: Input, SearchBar, Rating.(from https://github.com/Monte9/react-native-ratings)
+Some of the components are class-based. They are: Input, SearchBar, Rating.(from https://github.com/Monte9/react-native-ratings). If you change the components to Functional/hooks based please remove it from the array of `filesToExclude` under `website/scripts/docgen/getComponentFiles.ts`. These are the paths of the component files for which the process is still manual.
+
 So, generating the documentation doesn't come up well for these components. Due to the existing structure `react-docgen-typescript` fails to generate relevant result for them. We are therefore looking for contributions on these components to make them Fuctional/Hooks based.
 
 Thanks. Hope you like the new workflow. Looking forward for improvements and contributions to it.

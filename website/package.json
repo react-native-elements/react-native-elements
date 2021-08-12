@@ -29,6 +29,7 @@
     "@types/node": "^16.4.6",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
+    "fast-glob": "^3.2.7",
     "json2md": "^1.11.0",
     "react-docgen-typescript": "^2.1.0",
     "ts-node": "^10.1.0",
