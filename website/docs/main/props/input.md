@@ -155,9 +155,9 @@ styling for the label (optional); You can only use this if `label` is a string
 
 displays an icon on the left (optional)
 
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+|                          Type                           | Default |
+| :-----------------------------------------------------: | :-----: |
+| {[...Icon props](icon#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -195,9 +195,9 @@ If the error message container should be rendered (take up vertical space). If `
 
 displays an icon on the right (optional)
 
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+|                          Type                           | Default |
+| :-----------------------------------------------------: | :-----: |
+| {[...Icon props](icon#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 

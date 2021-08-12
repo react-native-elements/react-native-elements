@@ -115,9 +115,9 @@ Styles for the text when cancel Button is disabled
 This props allows to override the `Icon` props or use a custom component. Use
 `null` or `false` to hide the icon.
 
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+|                          Type                           | Default |
+| :-----------------------------------------------------: | :-----: |
+| {[...Icon props](icon#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -126,9 +126,9 @@ This props allows to override the `Icon` props or use a custom component. Use
 This props allows to override the `Icon` props or use a custom component. Use
 `null` or `false` to hide the icon.
 
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+|                          Type                           | Default |
+| :-----------------------------------------------------: | :-----: |
+| {[...Icon props](icon#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 
@@ -277,9 +277,9 @@ change TextInput styling to rounded corners
 This props allows to override the `Icon` props or use a custom component. Use
 `null` or `false` to hide the icon.
 
-|                            Type                            | Default |
-| :--------------------------------------------------------: | :-----: |
-| {[...Icon props](icon.md#props)}<br/>**OR**<br/> component |  none   |
+|                          Type                           | Default |
+| :-----------------------------------------------------: | :-----: |
+| {[...Icon props](icon#props)}<br/>**OR**<br/> component |  none   |
 
 ---
 

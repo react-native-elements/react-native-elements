@@ -7,7 +7,7 @@ import { generateMarkdown } from './generateMarkdown';
 const filePaths = getComponentFiles();
 const componentDocs = generateComponentDocs(filePaths);
 
-// To make the mapping such the the componentDocs for Compound Component's children are inside the childrens property of the component.
+// To make the mapping such that the componentDocs for Compound Component's children are inside the children's property of the component.
 Object.keys(componentDocs).map((componentDisplayName) => {
   let componentDoc = componentDocs[componentDisplayName];
   const [componentName, childComponentName] = componentDisplayName.split('.');
