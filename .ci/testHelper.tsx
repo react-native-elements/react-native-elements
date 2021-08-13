@@ -31,11 +31,9 @@ export const renderWithWrapper = (
   theme: Partial<FullTheme> = {},
   options?: RenderOptions
 ) => {
-  const renderApi = renderWithTheme(
-    <View testID="wrapper">{children}</View>,
-    theme,
-    options
-  );
+  const renderApi = theme
+    ? renderWithTheme(<View testID="wrapper">{children}</View>, theme, options)
+    : render(<View testID="wrapper">{children}</View>, options);
   const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');
   return { wrapper, ...renderApi };
 };

@@ -47,13 +47,11 @@ exports[`Tile component should render tile with icon 1`] = `
           Object {
             "alignItems": "center",
             "bottom": 0,
-            "height": undefined,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "width": undefined,
           }
         }
         testID="RNE__Image"
@@ -118,7 +116,6 @@ exports[`Tile component should render tile with icon 1`] = `
             },
           }
         }
-        transition={true}
         transitionDuration={360}
         updateTheme={[Function]}
       />
@@ -305,13 +302,11 @@ exports[`Tile component should render without issues 1`] = `
           Object {
             "alignItems": "center",
             "bottom": 0,
-            "height": undefined,
             "justifyContent": "center",
             "left": 0,
             "position": "absolute",
             "right": 0,
             "top": 0,
-            "width": undefined,
           }
         }
         testID="RNE__Image"
@@ -376,7 +371,6 @@ exports[`Tile component should render without issues 1`] = `
             },
           }
         }
-        transition={true}
         transitionDuration={360}
         updateTheme={[Function]}
       />
