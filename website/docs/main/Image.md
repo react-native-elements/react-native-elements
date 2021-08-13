@@ -1,17 +1,16 @@
 ---
 id: image
+
 title: Image
+
 slug: /image
 ---
 
 import Usage from './usage/Image/Image.md'
 
 Drop-in replacement for the standard React Native Image component that displays
-images with a placeholder and smooth image load transitioning.
 
-<div class="component-preview component-preview--single margin-none">
-  <img src="https://user-images.githubusercontent.com/5962998/48658581-f4170a00-ea1a-11e8-866c-df4f42f21947.gif" alt="Image Component" />
-</div>
+images with a placeholder and smooth image load transitioning.
 
 ## Usage
 
@@ -21,109 +20,119 @@ images with a placeholder and smooth image load transitioning.
 
 ## Props
 
-> Also receives all
-> [React Native Image](https://reactnative.dev/docs/image#props) props
->
-> Contains all
-> [React Native Image](https://reactnative.dev/docs/image#methods) methods.
+### Image
 
-- [`containerStyle`](#containerstyle)
-- [`childrenContainerStyle`](#childrencontainerstyle)
-- [`ImageComponent`](#imagecomponent)
-- [`onLongPress`](#onlongpress)
-- [`onPress`](#onpress)
-- [`PlaceholderContent`](#placeholdercontent)
-- [`placeholderStyle`](#placeholderstyle)
-- [`transition`](#transition)
-
----
+- [Component](#component)
+- [ImageComponent](#imagecomponent)
+- [PlaceholderContent](#placeholdercontent)
+- [childrenContainerStyle](#childrencontainerstyle)
+- [containerStyle](#containerstyle)
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [placeholderStyle](#placeholderstyle)
+- [transition](#transition)
+- [transitionDuration](#transitionduration)
 
 ## Reference
 
-### `containerStyle`
+### Image
 
-Additional styling for the container (optional)
+#### Component
 
-|        Type         | Default |
-| :-----------------: | :-----: |
-| View style (object) |  none   |
+Define the component passed to image.
 
----
-
-### `childrenContainerStyle`
-
-Additional styling for the children container (optional)
-
-|        Type         | Default |
-| :-----------------: | :-----: |
-| View style (object) |  none   |
+| Type            | Default                  |
+| --------------- | ------------------------ |
+| React Component | TouchableOpacity or View |
 
 ---
 
-### `ImageComponent`
+#### ImageComponent
 
 Specify a different component as the Image component.
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  Image  |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
-### `onLongPress`
+#### PlaceholderContent
 
-Callback function when long pressing component
+Content to load when Image is rendering.
 
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
-
----
-
-### `onPress`
-
-Callback function when pressing component
-
-|   Type   | Default |
-| :------: | :-----: |
-| function |  none   |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
-### `PlaceholderContent`
+#### childrenContainerStyle
 
-Content to render when image is loading.
+Additional styling for the children container.
 
-|   Type    | Default |
-| :-------: | :-----: |
-| component |  none   |
-
----
-
-### `placeholderStyle`
-
-Additional styling for the placeholder container (optional)
-
-|        Type         | Default |
-| :-----------------: | :-----: |
-| View style (object) |  none   |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | null    |
 
 ---
 
-### `transition`
+#### containerStyle
 
-Perform fade transition on image load
+Additional styling for the container.
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 
-### `transitionDuration`
+#### onLongPress
 
-Perform fade transition on image load
+Callback function when long pressing component.
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   360   |
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
+
+---
+
+#### onPress
+
+Callback function when pressing component.
+
+| Type       | Default |
+| ---------- | ------- |
+| () => void | None    |
+
+---
+
+#### placeholderStyle
+
+Additional styling for the placeholder container.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### transition
+
+Perform fade transition on image load.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### transitionDuration
+
+Perform fade transition on image load.
+
+| Type   | Default |
+| ------ | ------- |
+| number | 360     |
+
+---

@@ -1,14 +1,14 @@
 ---
 id: tooltip
+
 title: Tooltip
+
 slug: /tooltip
 ---
 
 import Usage from './usage/Tooltip/Tooltip.md'
 
 Tooltips display informative text when users tap on an element.
-
-<img src="/img/tooltipExample.gif" alt="tooltip example gif" width="290" />
 
 ## Usage
 
@@ -18,230 +18,218 @@ Tooltips display informative text when users tap on an element.
 
 ## Props
 
-- [`backgroundColor`](#backgroundcolor)
-- [`closeOnlyOnBackdropPress`](#closeonlyonbackdroppress)
-- [`containerStyle`](#containerstyle)
-- [`height`](#height)
-- [`highlightColor`](#highlightcolor)
-- [`ModalComponent`](#modalcomponent)
-- [`onClose`](#onclose)
-- [`onOpen`](#onopen)
-- [`overlayColor`](#overlaycolor)
-- [`pointerColor`](#pointercolor)
-- [`popover`](#popover)
-- [`skipAndroidStatusBar`](#skipandroidstatusbar)
-- [`toggleAction`](#toggleaction)
-- [`toggleOnPress`](#toggleonpress)
-- [`width`](#width)
-- [`withOverlay`](#withoverlay)
-- [`withPointer`](#withpointer)
+### Tooltip
 
----
+- [ModalComponent](#modalcomponent)
+- [backgroundColor](#backgroundcolor)
+- [closeOnlyOnBackdropPress](#closeonlyonbackdroppress)
+- [containerStyle](#containerstyle)
+- [height](#height)
+- [highlightColor](#highlightcolor)
+- [onClose](#onclose)
+- [onOpen](#onopen)
+- [overlayColor](#overlaycolor)
+- [pointerColor](#pointercolor)
+- [pointerStyle](#pointerstyle)
+- [popover](#popover)
+- [skipAndroidStatusBar](#skipandroidstatusbar)
+- [toggleAction](#toggleaction)
+- [toggleOnPress](#toggleonpress)
+- [visible](#visible)
+- [width](#width)
+- [withOverlay](#withoverlay)
+- [withPointer](#withpointer)
 
 ## Reference
 
-### `backgroundColor`
+### Tooltip
 
-sets backgroundColor of the tooltip and pointer.
+#### ModalComponent
 
-|  Type  | Default |
-| :----: | :-----: |
-| string | #617080 |
+Override React Native `Modal` component (usable for web-platform).
 
----
-
-### `closeOnlyOnBackdropPress`
-
-Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container.
-
-- When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed.
-
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
-### `containerStyle`
+#### backgroundColor
+
+Sets backgroundColor of the tooltip and pointer.
+
+| Type       | Default |
+| ---------- | ------- |
+| ColorValue | #617080 |
+
+---
+
+#### closeOnlyOnBackdropPress
+
+Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
+
+---
+
+#### containerStyle
 
 Passes style object to tooltip container
 
-|      Type      |      Default      |
-| :------------: | :---------------: |
-| object (style) | inherited styling |
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | {}      |
 
 ---
 
-### `height`
+#### height
 
-Tooltip container height. Necessary in order to render the container in the
-correct place. Pass height according to the size of the content rendered inside
-the container.
+Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   40    |
+| Type   | Default |
+| ------ | ------- |
+| number | 40      |
 
 ---
 
-### `highlightColor`
+#### highlightColor
 
 Color to highlight the item the tooltip is surrounding.
 
-|  Type  |   Default   |
-| :----: | :---------: |
-| string | transparent |
+| Type       | Default     |
+| ---------- | ----------- |
+| ColorValue | transparent |
 
 ---
 
-### `ModalComponent`
+#### onClose
 
-override React Native `Modal` component (usable for web-platform)
+Function which gets called on closing the tooltip.
 
-|          Type          | Default |
-| :--------------------: | :-----: |
-| React Native Component |  Modal  |
-
-## Interaction methods
-
-| method        | description                                                    |
-| ------------- | -------------------------------------------------------------- |
-| toggleTooltip | Toggles tooltip manually. ([example](#toggle-tooltip-example)) |
-
-#### `toggleTooltip` example
-
-Store a reference to the Tooltip in your component by using the ref prop
-provided by React ([see docs](https://reactjs.org/docs/refs-and-the-dom.html)):
-
-```js
-const tooltipRef = useRef(null);
-
-...
-
-<Tooltip
-  ref={tooltipRef}
-  ...
-/>
-```
-
-Then you can manually trigger tooltip from anywhere for example when screen loads:
-
-```js
-useEffect(() => {
-  tooltipRef.current.toggleTooltip();
-}, []);
-```
+| Type       | Default  |
+| ---------- | -------- |
+| () => void | () => {} |
 
 ---
 
-### `onClose`
+#### onOpen
 
-function which gets called on closing the tooltip.
+Function which gets called on opening the tooltip.
 
-|   Type   | Default  |
-| :------: | :------: |
-| function | () => {} |
-
----
-
-### `onOpen`
-
-function which gets called on opening the tooltip.
-
-|   Type   | Default  |
-| :------: | :------: |
-| function | () => {} |
+| Type       | Default  |
+| ---------- | -------- |
+| () => void | () => {} |
 
 ---
 
-### `overlayColor`
+#### overlayColor
 
 Color of overlay shadow when tooltip is open.
 
-|  Type  |           Default           |
-| :----: | :-------------------------: |
-| string | 'rgba(250, 250, 250, 0.70)' |
+| Type       | Default   |
+| ---------- | --------- |
+| ColorValue | #fafafa14 |
 
 ---
 
-### `pointerColor`
+#### pointerColor
 
-Color of tooltip pointer, it defaults to the
-[`backgroundColor`](#backgroundcolor) if none is passed .
+Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolor) if none is passed.
 
-|  Type  |                Default                |
-| :----: | :-----------------------------------: |
-| string | [`backgroundColor`](#backgroundcolor) |
+| Type       | Default |
+| ---------- | ------- |
+| ColorValue | #617080 |
 
 ---
 
-### `popover`
+#### pointerStyle
+
+Style to be applied on the pointer.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### popover
 
 Component to be rendered as the display container.
 
-|     Type      | Default |
-| :-----------: | :-----: |
-| React.Element |  null   |
+| Type | Default |
+| ---- | ------- |
+| any  | None    |
 
 ---
 
-### `skipAndroidStatusBar`
+#### skipAndroidStatusBar
 
 Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  false  |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
-### `toggleAction`
+#### toggleAction
 
-Define type of action that should trigger tooltip.
-Available options _onPress_, _onLongPress_
+Define type of action that should trigger tooltip. Available options _onPress_, _onLongPress_
 
-|  Type  | Default |
-| :----: | :-----: |
+| Type   | Default |
+| ------ | ------- |
 | string | onPress |
 
 ---
 
-### `toggleOnPress`
+#### toggleOnPress
 
 Flag to determine to toggle or not the tooltip on press.
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
+| Type    | Default |
+| ------- | ------- |
+| boolean | true    |
 
 ---
 
-### `width`
+#### visible
 
-Tooltip container width. Necessary in order to render the container in the
-correct place. Pass height according to the size of the content rendered inside
-the container.
+To show the tooltip.
 
-|  Type  | Default |
-| :----: | :-----: |
-| number |   150   |
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
-### `withOverlay`
+#### width
+
+Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.
+
+| Type   | Default |
+| ------ | ------- |
+| number | 150     |
+
+---
+
+#### withOverlay
 
 Flag to determine whether or not display overlay shadow when tooltip is open.
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
+| Type    | Default |
+| ------- | ------- |
+| boolean | true    |
 
 ---
 
-### `withPointer`
+#### withPointer
 
 Flag to determine whether or not to display the pointer.
 
-|  Type   | Default |
-| :-----: | :-----: |
-| boolean |  true   |
+| Type    | Default |
+| ------- | ------- |
+| boolean | true    |
+
+---

@@ -166,7 +166,6 @@ exports[`Avatar Component should render without issues 1`] = `
           },
         }
       }
-      transition={true}
       transitionDuration={360}
       updateTheme={[Function]}
     />

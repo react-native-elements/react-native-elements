@@ -6,9 +6,7 @@ import path from 'path';
 // auto-generation of docuentaion works for them they can be removed.
 const filesToExclude = [
   path.join(__dirname, '..', '..', '..', 'src', 'Input', 'Input.tsx'),
-  path.join(__dirname, '..', '..', '..', 'src', 'Image', 'Image.tsx'),
   path.join(__dirname, '..', '..', '..', 'src', 'Rating', 'Rating.tsx'),
-  path.join(__dirname, '..', '..', '..', 'src', 'Tooltip', 'Tooltip.tsx'),
   path.join(
     __dirname,
     '..',
