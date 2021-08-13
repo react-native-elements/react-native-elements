@@ -1,24 +1,26 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import withTheme from '../withTheme';
 
 describe('withTheme', () => {
   it('passes theme props to function component', () => {
-    const Component = withTheme(() => <Text />);
-    const wrapper = create(<Component />);
-    expect(Object.keys(wrapper.root.children[0].props)).toContain('theme');
+    const Component = withTheme(() => <Text testID="myText" />);
+    const { queryByTestId } = render(<Component />);
+    const wrapper = queryByTestId('myText').parent.parent;
+    expect(Object.keys(wrapper.props)).toContain('theme');
   });
 
   it('passes theme props to class component', () => {
     class Component extends React.Component {
       render() {
-        return <Text />;
+        return <Text testID="myText" />;
       }
     }
     const WrappedComponent = withTheme(Component);
-    const wrapper = create(<WrappedComponent />);
-    expect(Object.keys(wrapper.root.children[0].props)).toContain('theme');
+    const { queryByTestId } = render(<WrappedComponent />);
+    const wrapper = queryByTestId('myText').parent.parent;
+    expect(Object.keys(wrapper.props)).toContain('theme');
   });
 
   it('passes statics on to wrapped component', () => {
@@ -38,13 +40,16 @@ describe('withTheme', () => {
 
   it('passes instance methods on to wrapped component', () => {
     class Component extends React.Component {
-      hello = () => {};
+      hello = () => {
+        return 'Hey';
+      };
       render() {
-        return <Text />;
+        return <Text testID="myText" />;
       }
     }
     const WrappedComponent = withTheme(Component);
-    const wrapper = create(<WrappedComponent />);
-    expect(typeof wrapper.root.children[0].instance.hello).toBe('function');
+    const { queryByTestId } = render(<WrappedComponent />);
+    const instanceMethods = queryByTestId('myText').parent.parent.instance;
+    expect(instanceMethods.hello()).toBe('Hey');
   });
 });

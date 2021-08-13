@@ -53,14 +53,16 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
       onPress={onBackdropPress}
       testID="RNE__Overlay__backdrop"
     >
-      <View
-        testID="backdrop"
-        style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
-      />
+      <View style={StyleSheet.flatten([styles.backdrop, backdropStyle])} />
     </TouchableWithoutFeedback>
 
-    <View style={styles.container} pointerEvents="box-none">
+    <View
+      testID="RNE__Overlay__Container"
+      style={styles.container}
+      pointerEvents="box-none"
+    >
       <View
+        testID="RNE__Overlay"
         style={StyleSheet.flatten([
           styles.overlay,
           fullScreen && styles.fullscreen,

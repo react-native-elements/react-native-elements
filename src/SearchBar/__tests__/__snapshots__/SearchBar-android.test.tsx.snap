@@ -54,9 +54,11 @@ exports[`Android SearchBar component should render without issues 1`] = `
               "overflow": "hidden",
             }
           }
+          testID="RNE__ICON__CONTAINER"
         >
           <View
             replaceTheme={[Function]}
+            testID="RNE__ICON__CONTAINER_ACTION"
             updateTheme={[Function]}
           >
             <View
@@ -67,6 +69,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
                   "justifyContent": "center",
                 }
               }
+              testID="RNE__ICON"
             >
               <Text
                 allowFontScaling={false}
@@ -87,7 +90,7 @@ exports[`Android SearchBar component should render without issues 1`] = `
                     Object {},
                   ]
                 }
-                testID="iconIcon"
+                testID="RNE__ICON__Component"
               >
                 
               </Text>
