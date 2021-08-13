@@ -28,7 +28,7 @@ describe('FeaturedTitle component', () => {
   });
 
   it('should render with Icon', () => {
-    const { wrapper, queryByTestId } = renderWithWrapper(
+    const { wrapper } = renderWithWrapper(
       <FeaturedTile
         imageSrc={{ uri: 'http://googleRNE__ICON__CONTAINER.com' }}
         icon={{ name: 'play-circle', type: 'font-awesome' }}
