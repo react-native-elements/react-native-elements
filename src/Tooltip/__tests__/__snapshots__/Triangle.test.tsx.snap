@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip component should render without issues  1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": undefined,
+        "borderBottomWidth": 15,
+        "borderLeftColor": "transparent",
+        "borderLeftWidth": 8,
+        "borderRightColor": "transparent",
+        "borderRightWidth": 8,
+        "borderStyle": "solid",
+        "height": 0,
+        "width": 0,
+      }
+    }
+    testID="RNE__Tooltip_Triangle"
+  />
+</View>
+`;
