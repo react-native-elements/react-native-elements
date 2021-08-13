@@ -50,6 +50,7 @@ const ThemedComponent = (
               ),
               children,
             };
+
             if (isClassComponent(WrappedComponent)) {
               return <WrappedComponent ref={forwardedRef} {...newProps} />;
             }

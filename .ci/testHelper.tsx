@@ -1,8 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
-import { render, RenderOptions } from '@testing-library/react-native';
+import {
+  render,
+  RenderOptions,
+  fireEvent,
+} from '@testing-library/react-native';
 import { ThemeProvider, FullTheme, colors } from '../src/config';
 import deepmerge from 'deepmerge';
+
+export { fireEvent };
 
 export const renderWithTheme = (
   children: React.ReactChild,
@@ -24,11 +30,11 @@ export const renderWithWrapper = (
   theme: Partial<FullTheme> = {},
   options?: RenderOptions
 ) => {
-  const { queryByTestId, ...otherRenderApi } = renderWithTheme(
+  const renderApi = renderWithTheme(
     <View testID="wrapper">{children}</View>,
     theme,
     options
   );
-  const wrapper = queryByTestId(wrapperTestID || 'wrapper');
-  return { wrapper, queryByTestId, ...otherRenderApi };
+  const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');
+  return { wrapper, ...renderApi };
 };

@@ -53,6 +53,7 @@ const colors = {
   wordpress: '#21759b',
   youtube: '#bb0000',
   microsoft: '#46A4F2',
+  reddit: '#ed452f',
 };
 
 export type SocialMediaType =
@@ -84,7 +85,8 @@ export type SocialMediaType =
   | 'codepen'
   | 'weibo'
   | 'vk'
-  | 'microsoft';
+  | 'microsoft'
+  | 'reddit';
 
 export type SocialIconProps = {
   /** Type of button. */

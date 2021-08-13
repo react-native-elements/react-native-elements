@@ -87,7 +87,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
     <Component
       accessibilityRole="checkbox"
       accessibilityState={accessibilityState}
-      testID="checkbox"
+      testID="RNE__CheckBox__Wrapper"
       {...rest}
       onLongPress={onLongPress}
       onPress={onPress}
@@ -114,7 +114,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
           : title !== '' &&
             title && (
               <TextElement
-                testID="checkboxTitle"
+                testID="RNE__CheckBox__Title"
                 style={
                   StyleSheet.flatten([
                     {
