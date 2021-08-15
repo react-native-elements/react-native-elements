@@ -9,7 +9,11 @@
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus docs:version",
     "rename-version": "docusaurus rename-version",
-    "docs:build": "ts-node scripts/docgen/index.ts"
+    "docs:build": "ts-node scripts/docgen/index.ts",
+    "test": "jest --runInBand"
+  },
+  "jest": {
+    "preset": "react-native"
   },
   "version": "2.0.0",
   "dependencies": {
@@ -26,10 +30,12 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.75",
     "@tsconfig/docusaurus": "^1.0.2",
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.4.6",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
     "fast-glob": "^3.2.7",
+    "jest": "^27.0.6",
     "json2md": "^1.11.0",
     "react-docgen-typescript": "^2.1.0",
     "ts-node": "^10.1.0",

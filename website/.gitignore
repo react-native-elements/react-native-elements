@@ -19,6 +19,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+website/docs/main/Component.md
 website/translated_docs
 website/build/
 website/yarn.lock

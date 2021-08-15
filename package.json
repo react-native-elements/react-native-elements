@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "jest && cd website && yarn test",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
@@ -127,7 +127,8 @@
     "src/**/*.{ts,tsx}": [
       "eslint --fix",
       "bash -c tsc",
-      "jest --bail --findRelatedTests"
+      "jest --bail --findRelatedTests",
+      "cd website && jest --bail"
     ],
     "src/**/*.{js,jsx}": [
       "eslint --fix",
