@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { renderWithTheme, renderWithWrapper } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 import { colors } from '../../config';
 
@@ -59,7 +59,7 @@ describe('Badge Component', () => {
   });
 
   it('text props', () => {
-    const { getAllByTestId } = renderWithTheme(
+    const { getAllByTestId } = renderWithWrapper(
       <Badge textProps={{ testID: 'text' }} value={10} />
     );
     const elements = getAllByTestId('text');

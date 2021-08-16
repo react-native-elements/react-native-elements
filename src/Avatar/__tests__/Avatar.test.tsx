@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '..';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
-import { renderWithTheme, renderWithWrapper } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 import { avatarSizes } from './../Avatar';
 import { Icon } from '../../Icon';
@@ -10,7 +10,7 @@ describe('Avatar Component', () => {
   jest.useFakeTimers();
 
   it('should render without issues', () => {
-    const { toJSON } = renderWithTheme(
+    const { toJSON } = renderWithWrapper(
       <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
     );
     expect(toJSON()).toMatchSnapshot();

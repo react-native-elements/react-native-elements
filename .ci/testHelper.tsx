@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSXElementConstructor } from 'react';
 import { View } from 'react-native';
 import {
   render,
@@ -11,29 +11,29 @@ import deepmerge from 'deepmerge';
 
 export { fireEvent, act };
 
-export const renderWithTheme = (
-  children: React.ReactChild,
-  themeProp: Partial<FullTheme> = {},
-  options?: RenderOptions
-) => {
-  return render(
-    <ThemeProvider theme={deepmerge({ colors }, themeProp)}>
-      {children}
-    </ThemeProvider>,
-    options
-  );
-};
-
 // for getting findByType e.g. wrapper.findByType(Icon) see implementation in Avatar Component
 export const renderWithWrapper = (
-  children: React.ReactChild,
+  children: React.ReactElement<any, string | JSXElementConstructor<any>>,
   wrapperTestID?: string,
-  theme: Partial<FullTheme> = {},
-  options?: RenderOptions
+  themeProp: Partial<FullTheme> = {},
+  renderOptions?: RenderOptions
 ) => {
-  const renderApi = theme
-    ? renderWithTheme(<View testID="wrapper">{children}</View>, theme, options)
-    : render(<View testID="wrapper">{children}</View>, options);
+  const options: RenderOptions = {
+    ...(!wrapperTestID && {
+      wrapper: (props) => <View {...props} testID="wrapper" />,
+    }),
+    ...renderOptions,
+  };
+  const renderApi = render(
+    themeProp ? (
+      <ThemeProvider theme={deepmerge({ colors }, themeProp)}>
+        {children}
+      </ThemeProvider>
+    ) : (
+      children
+    ),
+    options
+  );
   const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');
   return { wrapper, ...renderApi };
 };

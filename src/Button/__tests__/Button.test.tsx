@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
 import { ActivityIndicator, TouchableOpacity } from 'react-native';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config/theme';
 import Icon from '../../Icon';
 import Button from '../index';
@@ -9,20 +9,20 @@ import Button from '../index';
 describe('Button Component', () => {
   it('should render without issues', () => {
     const TITLE = 'My Button';
-    const { queryByTestId, queryByText } = renderWithTheme(
-      <Button title={TITLE} />
+    const { queryByText, wrapper } = renderWithWrapper(
+      <Button title={TITLE} />,
+      'RNE_BUTTON_WRAPPER'
     );
-    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
     expect(queryByText(TITLE)).toBeTruthy();
     expect(wrapper).not.toBeNull();
   });
 
   it('should render icon', () => {
     const ICON_NAME = 'edit';
-    const { queryByTestId } = renderWithTheme(
-      <Button icon={{ name: ICON_NAME }} />
+    const { wrapper } = renderWithWrapper(
+      <Button icon={{ name: ICON_NAME }} />,
+      'RNE_BUTTON_WRAPPER'
     );
-    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
     const iconTree = wrapper.findByType(Icon);
     expect(iconTree.props.name).toBe(ICON_NAME);
     expect(iconTree).not.toBeNull();
@@ -30,8 +30,10 @@ describe('Button Component', () => {
 
   it('should be call onPress events', () => {
     const onPress = jest.fn();
-    const { queryByTestId } = renderWithTheme(<Button onPress={onPress} />);
-    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    const { wrapper } = renderWithWrapper(
+      <Button onPress={onPress} />,
+      'RNE_BUTTON_WRAPPER'
+    );
     const touchableOpacityTree = wrapper.findByType(TouchableOpacity);
     fireEvent(touchableOpacityTree, 'press');
     expect(onPress).toHaveBeenCalled();
@@ -39,10 +41,10 @@ describe('Button Component', () => {
 
   it('should be NOT call onPress events while loading', () => {
     const onPress = jest.fn();
-    const { queryByTestId } = renderWithTheme(
-      <Button loading onPress={onPress} />
+    const { wrapper } = renderWithWrapper(
+      <Button loading onPress={onPress} />,
+      'RNE_BUTTON_WRAPPER'
     );
-    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
     const touchableOpacityTree = wrapper.findByType(TouchableOpacity);
     fireEvent(touchableOpacityTree, 'press');
     expect(onPress).not.toHaveBeenCalled();
@@ -50,10 +52,10 @@ describe('Button Component', () => {
 
   it('should be NOT call onPress events if disabled', () => {
     const onPress = jest.fn();
-    const { queryByTestId } = renderWithTheme(
-      <Button disabled onPress={onPress} />
+    const { wrapper } = renderWithWrapper(
+      <Button disabled onPress={onPress} />,
+      'RNE_BUTTON_WRAPPER'
     );
-    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
     const touchableOpacityTree = wrapper.findByType(TouchableOpacity);
     fireEvent(touchableOpacityTree, 'press');
     expect(onPress).not.toHaveBeenCalled();
@@ -68,17 +70,17 @@ describe('Button Component', () => {
       ${'clear'}
     `('$type', ({ type }) => {
       it(`should display ${type} button`, () => {
-        const { toJSON } = renderWithTheme(<Button title={type} />);
+        const { toJSON } = renderWithWrapper(<Button title={type} />);
         expect(toJSON()).toMatchSnapshot();
       });
 
       it(`should display raised ${type} button`, () => {
-        const { toJSON } = renderWithTheme(<Button title={type} raised />);
+        const { toJSON } = renderWithWrapper(<Button title={type} raised />);
         expect(toJSON()).toMatchSnapshot();
       });
 
       it(`should display disabled ${type} button`, () => {
-        const { toJSON } = renderWithTheme(<Button title={type} disabled />);
+        const { toJSON } = renderWithWrapper(<Button title={type} disabled />);
         expect(toJSON()).toMatchSnapshot();
       });
     });
@@ -90,8 +92,11 @@ describe('Button Component', () => {
         loading: true,
       },
     };
-    const { queryByTestId } = renderWithTheme(<Button />, testTheme);
-    const wrapper = queryByTestId('RNE_BUTTON_WRAPPER');
+    const { wrapper } = renderWithWrapper(
+      <Button />,
+      'RNE_BUTTON_WRAPPER',
+      testTheme
+    );
     expect(wrapper.findByType(ActivityIndicator)).toBeTruthy();
   });
 
@@ -101,7 +106,7 @@ describe('Button Component', () => {
         title: 'Custom Button',
       },
     };
-    const { queryByText } = renderWithTheme(<Button />, testTheme);
+    const { queryByText } = renderWithWrapper(<Button />, '', testTheme);
     expect(queryByText(String(testTheme.Button.title))).toBeTruthy();
   });
 });
