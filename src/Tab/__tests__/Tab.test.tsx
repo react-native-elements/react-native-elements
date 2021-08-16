@@ -7,7 +7,7 @@ import { fireEvent } from '@testing-library/react-native';
 describe('Tab Component', () => {
   const items = ['Tab 1', 'Tab 2', 'Tab 3'];
 
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { queryByA11yRole } = renderWithWrapper(
       <Tab>
         <Tab.Item title="Tab 1" />

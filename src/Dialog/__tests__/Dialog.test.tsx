@@ -21,7 +21,7 @@ describe('Dialog Component', () => {
     expect(queryByTestId('text').props.children).toBe('This is a test dialog');
   });
 
-  it('should render without buttons', () => {
+  it('should render buttons', () => {
     const { wrapper } = renderWithWrapper(
       <Dialog isVisible>
         <Text>This is a test dialog</Text>
@@ -34,7 +34,7 @@ describe('Dialog Component', () => {
     expect(wrapper).not.toBeNull();
   });
 
-  it('shows when isVisible is true', () => {
+  it('should shows when isVisible is true', () => {
     const { wrapper } = renderWithWrapper(
       <Dialog isVisible>
         <Text>This is a test dialog</Text>
@@ -55,7 +55,7 @@ describe('Dialog Component', () => {
     expect(wrapper.props.visible).toBeFalsy();
   });
 
-  it('should apply values from theme', () => {
+  it('should apply props from theme', () => {
     const theme: Partial<FullTheme> = {
       Dialog: {
         transparent: false,

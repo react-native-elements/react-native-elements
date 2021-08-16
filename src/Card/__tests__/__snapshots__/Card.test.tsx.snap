@@ -52,7 +52,7 @@ exports[`Card Component should have Card title without image 1`] = `
 </View>
 `;
 
-exports[`Card Component should render without issues 1`] = `
+exports[`Card Component should match snapshot 1`] = `
 <View
   testID="wrapper"
 >

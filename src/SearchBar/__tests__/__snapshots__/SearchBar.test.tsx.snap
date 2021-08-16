@@ -539,7 +539,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
 </View>
 `;
 
-exports[`SearchBar wrapper component should render without issues 1`] = `
+exports[`SearchBar wrapper component should match snapshot 1`] = `
 <View
   testID="wrapper"
 >

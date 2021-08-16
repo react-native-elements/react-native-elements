@@ -11,17 +11,17 @@ import { fireEvent } from '@testing-library/react-native';
 import { colors } from '../../config';
 
 describe('Badge Component', () => {
-  it('should render without issue', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(<Badge value={10} />);
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('should render if element included', () => {
+  it('should work with value prop as ReactElement', () => {
     const component = renderWithWrapper(<Badge value={<Text>foo</Text>} />);
     expect(component.queryByText('foo')).toBeTruthy();
   });
 
-  it('should pass value props should still work', () => {
+  it('should work with value prop as string', () => {
     const component = renderWithWrapper(<Badge value="foo" />);
     expect(component.queryByText('foo')).toBeTruthy();
   });
@@ -58,7 +58,7 @@ describe('Badge Component', () => {
     expect(handler).toBeCalledTimes(1);
   });
 
-  it('text props', () => {
+  it('should use text props', () => {
     const { getAllByTestId } = renderWithWrapper(
       <Badge textProps={{ testID: 'text' }} value={10} />
     );

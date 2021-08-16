@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`iOS SearchBar component should render without issues 1`] = `
+exports[`iOS SearchBar component should match snapshot 1`] = `
 <View
   testID="wrapper"
 >

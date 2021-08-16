@@ -7,7 +7,7 @@ import { fireEvent } from '@testing-library/react-native';
 import { SocialMediaType } from '../SocialIcon';
 
 describe('SocialIcon component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { queryByTestId } = renderWithWrapper(<SocialIcon type="twitter" />);
     const tree = queryByTestId('RNE_SocialIcon');
     expect(tree).not.toBeNull();

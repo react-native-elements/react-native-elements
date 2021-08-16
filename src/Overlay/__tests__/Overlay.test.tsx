@@ -5,7 +5,7 @@ import { FullTheme } from '../../config';
 import Overlay from '../index';
 
 describe('Overlay', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { queryByText } = renderWithWrapper(
       <Overlay isVisible>
         <Text>Overlay</Text>

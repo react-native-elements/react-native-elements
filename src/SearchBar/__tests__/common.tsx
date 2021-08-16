@@ -12,7 +12,7 @@ export function commonTests(SearchBar) {
     jest.resetModules();
   });
 
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(<SearchBar />);
     expect(component.toJSON()).toMatchSnapshot();
   });

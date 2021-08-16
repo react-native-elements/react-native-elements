@@ -7,7 +7,7 @@ import Icon from '../../Icon';
 import Button from '../index';
 
 describe('Button Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const TITLE = 'My Button';
     const { queryByText, wrapper } = renderWithWrapper(
       <Button title={TITLE} />,
@@ -64,7 +64,7 @@ describe('Button Component', () => {
   describe('Button type', () => {
     // Test for each type of button variant
     describe.each`
-      type
+      should have type as
       ${'solid'}
       ${'outline'}
       ${'clear'}
@@ -86,7 +86,7 @@ describe('Button Component', () => {
     });
   });
 
-  it('should apply values from theme', () => {
+  it('should apply props from theme', () => {
     const testTheme: Partial<FullTheme> = {
       Button: {
         loading: true,

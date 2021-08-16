@@ -5,17 +5,17 @@ import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 import { Icon } from '../../Icon';
 
 describe('FAB Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { toJSON } = renderWithWrapper(<FAB title="Hey" size="small" />);
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('extended fab', () => {
+  it('should have extended fab', () => {
     const { queryByText } = renderWithWrapper(<FAB title="test" />);
     expect(queryByText('test')).toBeTruthy();
   });
 
-  it('extended small fab', () => {
+  it('should extended small fab', () => {
     const { wrapper, queryByText } = renderWithWrapper(
       <FAB title="test" size="small" />,
       'RNE_BUTTON_WRAPPER'
@@ -26,7 +26,7 @@ describe('FAB Component', () => {
     });
   });
 
-  it('default size as large', () => {
+  it('should have default size as large', () => {
     const { wrapper } = renderWithWrapper(<FAB />, 'RNE_BUTTON_WRAPPER');
     expect(wrapper.findAllByType(View)[1].props.style).toMatchObject({
       height: 56,
@@ -34,7 +34,7 @@ describe('FAB Component', () => {
     });
   });
 
-  it('size small', () => {
+  it('should render size small', () => {
     const { wrapper } = renderWithWrapper(
       <FAB size="small" />,
       'RNE_BUTTON_WRAPPER'
@@ -45,7 +45,7 @@ describe('FAB Component', () => {
     });
   });
 
-  it('should render with disabled', () => {
+  it('should render disabled fab', () => {
     const { wrapper } = renderWithWrapper(
       <FAB icon={{ name: 'edit' }} disabled={true} />
     );

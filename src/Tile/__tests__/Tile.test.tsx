@@ -5,7 +5,7 @@ import { Image, TouchableOpacity, Text } from 'react-native';
 import Icon from '../../Icon';
 
 describe('Tile component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { toJSON } = renderWithWrapper(
       <Tile imageSrc={{ uri: 'http://google.com' }} />
     );

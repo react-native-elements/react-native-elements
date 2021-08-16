@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tooltip component should render without issues  1`] = `
+exports[`Tooltip component should match snapshot  1`] = `
 <View
   style={
     Object {

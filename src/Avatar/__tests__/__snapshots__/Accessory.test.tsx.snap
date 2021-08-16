@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accessory Component uses Icon 1`] = `
+exports[`Accessory Component should uses Icon 1`] = `
 <View
   testID="wrapper"
 >

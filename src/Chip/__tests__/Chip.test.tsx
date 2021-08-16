@@ -4,7 +4,7 @@ import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Chip Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { getByA11yRole } = renderWithWrapper(<Chip />);
     const component = getByA11yRole('button');
     expect(component.props.style.borderRadius).toBe(30);
@@ -22,7 +22,7 @@ describe('Chip Component', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('should pass the onPress function when specified', () => {
+  it('should have onPress function when specified', () => {
     const handlePress = jest.fn();
     const { getByA11yRole } = renderWithWrapper(<Chip onPress={handlePress} />);
     fireEvent(getByA11yRole('button'), 'press');

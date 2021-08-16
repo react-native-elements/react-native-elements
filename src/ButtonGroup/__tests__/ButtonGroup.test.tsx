@@ -7,7 +7,7 @@ import { FullTheme } from '../../config';
 const buttons = ['Button 1', 'Button 2', 'Button 3'];
 
 describe('ButtonGroup Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(
       <ButtonGroup
         buttons={buttons}
@@ -50,12 +50,12 @@ describe('ButtonGroup Component', () => {
   it('should render with button.element', () => {
     const { queryByText } = renderWithWrapper(
       <ButtonGroup
-        buttons={['Text', 'View']}
+        buttons={['React Native', 'Flutter']}
         innerBorderStyle={{ width: 300, color: 'red' }}
       />
     );
-    expect(queryByText('Text')).toBeTruthy();
-    expect(queryByText('View')).toBeTruthy();
+    expect(queryByText('React Native')).toBeTruthy();
+    expect(queryByText('Flutter')).toBeTruthy();
   });
 
   it('should render without inner borders', () => {
@@ -151,7 +151,7 @@ describe('ButtonGroup Component', () => {
     });
   });
 
-  it('vertical ButtonGroup', () => {
+  it('should render vertical ButtonGroup', () => {
     const { wrapper } = renderWithWrapper(
       <ButtonGroup
         buttons={buttons}
@@ -169,7 +169,7 @@ describe('ButtonGroup Component', () => {
     });
   });
 
-  it('should apply values from theme', () => {
+  it('should apply props from theme', () => {
     const testTheme: Partial<FullTheme> = {
       ButtonGroup: {
         selectedTextStyle: {

@@ -5,7 +5,7 @@ import { TouchableOpacity, View, Text, Image } from 'react-native';
 import { FullTheme } from '../../config';
 
 describe('CheckBox Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(<CheckBox checked />);
     expect(component.toJSON()).toMatchSnapshot();
   });

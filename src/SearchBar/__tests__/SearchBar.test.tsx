@@ -3,7 +3,7 @@ import SearchBar from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('SearchBar wrapper component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(<SearchBar />);
     expect(component).not.toBeNull();
     expect(component.toJSON()).toMatchSnapshot();

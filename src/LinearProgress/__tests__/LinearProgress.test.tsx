@@ -4,7 +4,7 @@ import { renderWithWrapper, fireEvent, act } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 
 describe('LinearProgress Component', () => {
-  it('should have basic stylings', () => {
+  it('should have apply color', () => {
     const { wrapper } = renderWithWrapper(
       <LinearProgress color="red" trackColor="blue" />,
       'RNE__LinearProgress_Bar'
@@ -84,7 +84,7 @@ describe('LinearProgress Component', () => {
     });
   });
 
-  it('should apply from theme', () => {
+  it('should apply props from theme', () => {
     const theme: Partial<FullTheme> = {
       LinearProgress: {
         color: 'rgb(255, 0, 0)',

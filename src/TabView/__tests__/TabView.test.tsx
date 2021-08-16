@@ -3,7 +3,7 @@ import TabView from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Tab Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const onValueChange = jest.fn();
     const { queryByTestId } = renderWithWrapper(
       <TabView onChange={onValueChange} value={0}>

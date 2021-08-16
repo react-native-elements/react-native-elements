@@ -413,7 +413,7 @@ exports[`Header Component should render right component by passing a config thro
 </View>
 `;
 
-exports[`Header Component should render without issues 1`] = `
+exports[`Header Component should match snapshot 1`] = `
 <View
   testID="wrapper"
 >

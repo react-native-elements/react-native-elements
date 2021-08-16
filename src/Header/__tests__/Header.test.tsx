@@ -7,7 +7,7 @@ const btnCfg = { icon: 'home' };
 const titleCfg = { text: 'This is a title' };
 
 describe('Header Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { toJSON } = renderWithWrapper(
       <Header
         backgroundImage={{
@@ -90,7 +90,7 @@ describe('Header Component', () => {
     );
   });
 
-  it('should elevate', () => {
+  it('should have valid elevate prop', () => {
     const { wrapper } = renderWithWrapper(<Header elevated />);
     expect(wrapper.findAllByType(View)[0].props.style.elevation).toBe(24);
   });
@@ -111,7 +111,7 @@ describe('Header Component', () => {
     expect(wrapper.findByType(StatusBar).props.hidden).toBe(true);
   });
 
-  it('should apply values from theme', () => {
+  it('should apply props from theme', () => {
     const testTheme = {
       Header: {
         backgroundColor: 'pink',

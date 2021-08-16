@@ -4,7 +4,7 @@ import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 
 describe('Text Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { getByRole } = renderWithWrapper(<Text />);
     const { props } = getByRole('text');
     expect(props).not.toBeNull();

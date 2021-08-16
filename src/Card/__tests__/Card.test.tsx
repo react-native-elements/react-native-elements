@@ -4,7 +4,7 @@ import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Image } from '../../Image';
 
 describe('Card Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(<Card />);
     expect(component.toJSON()).toMatchSnapshot();
   });

@@ -5,7 +5,7 @@ import { Avatar, Icon } from '../..';
 import { TextInput } from 'react-native';
 
 describe('ListItem component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(<ListItem />);
     expect(component.toJSON()).toMatchSnapshot();
   });

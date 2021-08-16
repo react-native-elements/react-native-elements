@@ -6,7 +6,7 @@ import { TouchableOpacity, Image } from 'react-native';
 import Icon from '../../Icon';
 
 describe('FeaturedTitle component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const component = renderWithWrapper(
       <FeaturedTile imageSrc={{ uri: 'http://google.com' }} />
     );

@@ -3,7 +3,7 @@ import SpeedDial from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Speed Dial Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { toJSON } = renderWithWrapper(
       <SpeedDial
         isOpen={true}
