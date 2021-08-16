@@ -14,14 +14,13 @@ export const PadView: React.FC<PadViewProps> = ({
 }) => {
   const _root = useRef(null);
 
-  const childrens = React.Children.toArray(children);
-  const { length } = childrens;
+  const length = React.Children.count(children);
   const Container = Component || View;
 
   return (
-    <Container {...props} ref={_root} testID="padView">
+    <Container {...props} ref={_root} testID="RNE__LISTITEM__padView">
       {React.Children.map(
-        childrens,
+        children,
         (child, index) =>
           child && [
             child,
