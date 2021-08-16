@@ -21,7 +21,7 @@ export const SliderThumb = ({
 
   return (
     <ThumbComponent
-      testID="sliderThumb"
+      testID="RNE__Slider_Thumb"
       onLayout={onLayout}
       style={StyleSheet.flatten([
         {
