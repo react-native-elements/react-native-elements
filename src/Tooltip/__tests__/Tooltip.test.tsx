@@ -40,7 +40,7 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-    wrapper.findAllByType(Pressable)[0].props.onLongPress();
+    fireEvent(wrapper.findAllByType(Pressable)[0], 'onLongPress');
     expect(wrapper.findByType(Info)).toBeTruthy();
   });
 

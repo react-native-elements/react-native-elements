@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 
-export type OverlayProps = ModalProps & {
+export type OverlayProps = Omit<ModalProps, 'visible'> & {
   /** If true, the overlay is visible. */
   isVisible: boolean;
 
