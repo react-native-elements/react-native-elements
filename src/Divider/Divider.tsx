@@ -55,6 +55,7 @@ export const Divider: RneFunctionComponent<DividerProps> = ({
 }) => (
   <>
     <View
+      testID="RNE__Divider"
       style={StyleSheet.flatten([
         styles.divider,
         style,
