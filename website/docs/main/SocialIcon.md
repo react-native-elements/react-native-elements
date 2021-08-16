@@ -50,9 +50,9 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 
 Type of button.
 
-| Type            | Default    |
-| --------------- | ---------- |
-| React Component | onPress \| | onLongPress ? TouchableHighlight : View |
+| Type            | Default                    |
+| --------------- | -------------------------- |
+| React Component | TouchableHighlight or View |
 
 ---
 
@@ -180,9 +180,9 @@ Shows loading indicator.
 
 Function to call when pressed for a long time.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 
@@ -190,9 +190,9 @@ Function to call when pressed for a long time.
 
 Function to call when button/icon is pressed.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

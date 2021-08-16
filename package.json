@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest && cd website && yarn test",
+    "test": "jest",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
@@ -26,7 +26,8 @@
     "changelog": "auto-changelog -p",
     "docs": "yarn docs:build && cd website && yarn start",
     "docs:lint": "prettier --single-quote --trailing-comma=es5 --write '**/*.md'",
-    "docs:build": "ts-node website/scripts/docgen/index.ts && yarn docs:lint"
+    "docs:build": "ts-node website/scripts/docgen/index.ts && yarn docs:lint",
+    "docs:test": "cd website && jest --runInBand"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -127,8 +128,7 @@
     "src/**/*.{ts,tsx}": [
       "eslint --fix",
       "bash -c tsc",
-      "jest --bail --findRelatedTests",
-      "cd website && jest --bail"
+      "jest --bail --findRelatedTests"
     ],
     "src/**/*.{js,jsx}": [
       "eslint --fix",
@@ -148,7 +148,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "node ./updateDocumentation.js"
+      "pre-push": "node updateDocumentation.js"
     }
   }
 }

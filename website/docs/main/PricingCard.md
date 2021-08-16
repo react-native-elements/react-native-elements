@@ -90,9 +90,9 @@ Specify pricing information style.
 
 Function to be run when button is pressed.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

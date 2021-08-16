@@ -108,9 +108,9 @@ Color to highlight the item the tooltip is surrounding.
 
 Function which gets called on closing the tooltip.
 
-| Type       | Default  |
-| ---------- | -------- |
-| () => void | () => {} |
+| Type     | Default  |
+| -------- | -------- |
+| Function | Function |
 
 ---
 
@@ -118,9 +118,9 @@ Function which gets called on closing the tooltip.
 
 Function which gets called on opening the tooltip.
 
-| Type       | Default  |
-| ---------- | -------- |
-| () => void | () => {} |
+| Type     | Default  |
+| -------- | -------- |
+| Function | Function |
 
 ---
 

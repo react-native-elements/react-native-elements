@@ -77,9 +77,9 @@ If true, the overlay is visible.
 
 Handler for backdrop press (only works when `fullscreen` is false).
 
-| Type       | Default    |
-| ---------- | ---------- |
-| () => void | () => null |
+| Type     | Default  |
+| -------- | -------- |
+| Function | Function |
 
 ---
 

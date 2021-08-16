@@ -12,9 +12,6 @@ export type DialogBaseProps = Omit<OverlayProps, 'fullScreen'> & {
 
   /** Add dditional styling to the internal Overlay component. */
   overlayStyle?: StyleProp<ViewStyle>;
-
-  /** Handler for backdrop press. */
-  onBackdropPress?: () => void;
 };
 
 /** Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.

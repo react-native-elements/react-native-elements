@@ -67,6 +67,29 @@ const parserOptions = {
       }
     }
 
+    // To deal with the props of type `() => void` or `() => any`
+    // Input - () => void or () => any
+    // Ouput - Function
+    if (
+      prop.type &&
+      prop.type.name &&
+      (prop.type.name === '() => void' || prop.type.name === '() => any')
+    ) {
+      prop.type.name = 'Function';
+    }
+
+    // To deal with prop's defaultValue of type `() => null` or `() => {}`
+    // Input - `() => null` or `() => {}`
+    // Output - Function
+    if (
+      prop.defaultValue &&
+      prop.defaultValue.value &&
+      (prop.defaultValue.value === '() => {}' ||
+        prop.defaultValue.value === '() => null')
+    ) {
+      prop.defaultValue.value = 'Function';
+    }
+
     // To deal with the props of type Partial<> which breaks the markdown
     // Input - Partial<ImageProps>
     // Output - ImageProps(Object)
@@ -123,6 +146,13 @@ const parserOptions = {
       prop.defaultValue.value = prop.defaultValue.value.replace(/\r\n/g, '');
     }
 
+    // To deal with the Badge Component with prop name onPress
+    // Input - (...args: any[]) => an
+    // Output - Function
+    if (component.name === 'Badge' && prop.name === 'onPress') {
+      prop.type.name = 'Function';
+    }
+
     // To deal with the platform specific props default value in Icon
     // Image -  onPress ? Platform.select<typeof React.Component>({
     //   android: TouchableNativeFeedback,
@@ -162,6 +192,17 @@ const parserOptions = {
         'onPress || onLongPress ? TouchableOpacity : View'
     ) {
       prop.defaultValue.value = 'TouchableOpacity or View';
+    }
+
+    // To deal with the prop of default value onPress || onLongPress ? TouchableOpacity : View in Avatar
+    // Input - onPress || onLongPress ? TouchableHighlight : View
+    // Output - TouchableHighlight or View
+    if (
+      prop.defaultValue &&
+      prop.defaultValue.value ===
+        'onPress || onLongPress ? TouchableHighlight : View'
+    ) {
+      prop.defaultValue.value = 'TouchableHighlight or View';
     }
 
     // Filter to show the props of the components only related to the src and ignore the props of the noe modules

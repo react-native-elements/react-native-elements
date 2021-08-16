@@ -192,9 +192,9 @@ Update the styling of the interior border of the list of buttons.
 
 Function called on hiding underlay.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 
@@ -202,9 +202,9 @@ Function called on hiding underlay.
 
 Method to update Button Group Index.
 
-| Type                     | Default    |
-| ------------------------ | ---------- |
-| (...args: any[]) => void | () => null |
+| Type                     | Default  |
+| ------------------------ | -------- |
+| (...args: any[]) => void | Function |
 
 ---
 
@@ -212,9 +212,9 @@ Method to update Button Group Index.
 
 Function called on showing underlay.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

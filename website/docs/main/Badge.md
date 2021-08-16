@@ -67,9 +67,9 @@ Style for the container.
 
 Function called when pressed on the badge.
 
-| Type                    | Default |
-| ----------------------- | ------- |
-| (...args: any[]) => any | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

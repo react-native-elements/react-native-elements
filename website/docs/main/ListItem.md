@@ -352,9 +352,9 @@ Width to swipe left.
 
 Function to call when user swipes left.
 
-| Type      | Default |
-| --------- | ------- |
-| () => any | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 
@@ -362,9 +362,9 @@ Function to call when user swipes left.
 
 Function to call when user swipes right.
 
-| Type      | Default |
-| --------- | ------- |
-| () => any | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

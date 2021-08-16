@@ -72,9 +72,9 @@ Opens the action stack.
 
 Callback fired when the component requests to be closed.
 
-| Type       | Default  |
-| ---------- | -------- |
-| () => void | () => {} |
+| Type     | Default  |
+| -------- | -------- |
+| Function | Function |
 
 ---
 
@@ -82,9 +82,9 @@ Callback fired when the component requests to be closed.
 
 Callback fired when the component requests to be open.
 
-| Type       | Default  |
-| ---------- | -------- |
-| () => void | () => {} |
+| Type     | Default  |
+| -------- | -------- |
+| Function | Function |
 
 ---
 

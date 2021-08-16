@@ -140,9 +140,9 @@ Optional properties to pass to the avatar e.g "resizeMode".
 
 Callback function when long pressing component.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 
@@ -150,9 +150,9 @@ Callback function when long pressing component.
 
 Callback function when pressing component.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

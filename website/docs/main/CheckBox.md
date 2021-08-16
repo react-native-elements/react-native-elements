@@ -151,9 +151,9 @@ Type of icon set. [Supported sets here](icon#available-icon-sets).
 
 onPress function for checkbox.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 
@@ -161,9 +161,9 @@ onPress function for checkbox.
 
 onLongPress function for checkbox.
 
-| Type       | Default |
-| ---------- | ------- |
-| () => void | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 

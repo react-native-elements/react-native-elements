@@ -68,7 +68,7 @@ On Index Change Callback.
 
 | Type                    | Default  |
 | ----------------------- | -------- |
-| (value: number) => void | () => {} |
+| (value: number) => void | Function |
 
 ---
 

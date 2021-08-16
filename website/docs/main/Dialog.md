@@ -38,7 +38,6 @@ Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) 
 
 - [children](#children)
 - [isVisible](#isvisible)
-- [onBackdropPress](#onbackdroppress)
 - [overlayStyle](#overlaystyle)
 
 ### Dialog.Actions
@@ -83,18 +82,6 @@ If true, the dialog is visible.
 | Type    | Default |
 | ------- | ------- |
 | boolean | None    |
-
----
-
-#### onBackdropPress
-
-Handler for backdrop press (only works when `fullscreen` is false).
-
-Handler for backdrop press.
-
-| Type                          | Default |
-| ----------------------------- | ------- |
-| (() => void) and (() => void) | None    |
 
 ---
 
