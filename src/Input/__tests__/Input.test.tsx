@@ -169,20 +169,6 @@ describe('Input component', () => {
       expect(queryByTestId('myView')).not.toBeNull();
     });
 
-    it('inputComponent fc', () => {
-      const CustomComponent: React.FC = (props) => {
-        return (
-          <View {...props} testID="myView">
-            Custom!
-          </View>
-        );
-      };
-      const { queryByTestId } = renderWithTheme(
-        <Input InputComponent={CustomComponent} />
-      );
-      expect(queryByTestId('myView')).not.toBeNull();
-    });
-
     it('inputComponent forwardRef', () => {
       const CustomComponent = React.forwardRef<View>((props, ref) => {
         return (
