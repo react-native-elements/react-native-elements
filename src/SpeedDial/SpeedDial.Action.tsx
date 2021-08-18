@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { withTheme } from '../config';
 import { FAB, FABProps } from '../FAB/index';
 import { RneFunctionComponent } from '../helpers';
 
@@ -8,17 +7,18 @@ export type SpeedDialActionProps = Omit<FABProps, 'size'>;
 
 /** Adds Action to the SpeedDial.
  * This, Receieve all [Fab](fab#props) props. */
-export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = withTheme(
-  ({ title, titleStyle, ...actionProps }) => {
-    return (
-      <View style={styles.action}>
-        {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
-        <FAB {...actionProps} size="small" style={[actionProps.style]} />
-      </View>
-    );
-  },
-  'SpeedDialAction'
-);
+export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
+  title,
+  titleStyle,
+  ...actionProps
+}) => {
+  return (
+    <View style={styles.action}>
+      {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
+      <FAB {...actionProps} size="small" style={[actionProps.style]} />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   title: {

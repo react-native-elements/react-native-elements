@@ -50,7 +50,7 @@ None
 
 #### children
 
-Add childen elements to the speed dial.
+SpeedDial Action as children.
 
 | Type                | Default |
 | ------------------- | ------- |

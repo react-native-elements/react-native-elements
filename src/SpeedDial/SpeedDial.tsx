@@ -16,10 +16,10 @@ export type SpeedDialProps = {
   isOpen: boolean;
 
   /** Callback fired when the component requests to be open. */
-  onOpen: () => void;
+  onOpen?: () => void;
 
   /** Callback fired when the component requests to be closed. */
-  onClose: () => void;
+  onClose?: () => void;
 
   /** Icon shown on FAB when action stack is open. */
   openIcon?: IconNode;
@@ -27,8 +27,7 @@ export type SpeedDialProps = {
   /** Add overlay color to the speed dial. */
   overlayColor?: string;
 
-  /** Add childen elements to the speed dial. */
-
+  /** SpeedDial Action as children. */
   children?: React.ReactChild[];
 
   /** The duration for the transition, in milliseconds. */

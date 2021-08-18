@@ -4,7 +4,7 @@ import { Text, Modal, Pressable } from 'react-native';
 import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 
 describe('Tooltip component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const { queryByText, queryAllByText } = renderWithWrapper(
       <Tooltip popover={<Text>Info here</Text>}>
         <Text>Press me</Text>
@@ -14,7 +14,7 @@ describe('Tooltip component', () => {
     expect(queryAllByText('Press me')).toBeTruthy();
   });
 
-  it('should display tooltip', () => {
+  it('should call onPress', () => {
     const openFn = jest.fn();
     const Info = () => <Text>Info here</Text>;
     const { wrapper, queryByTestId } = renderWithWrapper(
@@ -40,11 +40,11 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-    wrapper.findAllByType(Pressable)[0].props.onLongPress();
+    fireEvent(wrapper.findAllByType(Pressable)[0], 'onLongPress');
     expect(wrapper.findByType(Info)).toBeTruthy();
   });
 
-  it('does not render pointer', () => {
+  it('should not render pointer if tooltip is close', () => {
     const { queryByTestId } = renderWithWrapper(
       <Tooltip
         visible

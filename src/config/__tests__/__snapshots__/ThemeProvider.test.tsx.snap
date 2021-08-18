@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider should contain useDark key with value true 1`] = `[Function]`;
+
+exports[`ThemeProvider should work 1`] = `[Function]`;

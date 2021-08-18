@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
 import { ActivityIndicator, Text, TouchableOpacity, View } from 'react-native';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Icon } from '../../Icon';
 
 const WrapperTestID = 'RNE__SearchBar-wrapper';
@@ -12,15 +12,15 @@ export function commonTests(SearchBar) {
     jest.resetModules();
   });
 
-  it('should render without issues', () => {
-    const component = renderWithTheme(<SearchBar />);
+  it('should match snapshot', () => {
+    const component = renderWithWrapper(<SearchBar />);
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   describe('Handlers', () => {
     it('onClear', () => {
       const handler = jest.fn();
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <SearchBar onClear={handler} />
       );
       const Wrapper = queryByTestId(SearchBarTestID);
@@ -30,7 +30,7 @@ export function commonTests(SearchBar) {
 
     it('onFocus', () => {
       const handler = jest.fn();
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <SearchBar onFocus={handler} />
       );
       const Wrapper = queryByTestId(SearchBarTestID);
@@ -40,7 +40,9 @@ export function commonTests(SearchBar) {
 
     it('onBlur', () => {
       const handler = jest.fn();
-      const { queryByTestId } = renderWithTheme(<SearchBar onBlur={handler} />);
+      const { queryByTestId } = renderWithWrapper(
+        <SearchBar onBlur={handler} />
+      );
       const Wrapper = queryByTestId(SearchBarTestID);
       fireEvent(Wrapper, 'blur');
       expect(handler).toBeCalled();
@@ -48,7 +50,7 @@ export function commonTests(SearchBar) {
 
     it('onChangeText', () => {
       const handler = jest.fn();
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <SearchBar onChangeText={handler} />
       );
       const Wrapper = queryByTestId(SearchBarTestID);
@@ -59,7 +61,7 @@ export function commonTests(SearchBar) {
 
   describe('Props', () => {
     it('showLoading, loadingProps', () => {
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <SearchBar
           showLoading
           loadingProps={{
@@ -75,7 +77,7 @@ export function commonTests(SearchBar) {
 
     describe('searchIcon and without', () => {
       it('searchIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <SearchBar searchIcon={{ size: 50 }} lightTheme />
         );
         const Wrapper = queryByTestId(WrapperTestID);
@@ -84,7 +86,7 @@ export function commonTests(SearchBar) {
       });
 
       it('custom searchIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <SearchBar searchIcon={<View />} round />
         );
         const Wrapper = queryByTestId(WrapperTestID);
@@ -92,7 +94,7 @@ export function commonTests(SearchBar) {
       });
 
       it('no searchIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <SearchBar searchIcon={false} />
         );
         const Wrapper = queryByTestId(SearchBarTestID);
@@ -102,7 +104,7 @@ export function commonTests(SearchBar) {
 
     describe('clearIcon and without', () => {
       it('clearIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <SearchBar
             searchIcon={false}
             value="test"
@@ -115,7 +117,7 @@ export function commonTests(SearchBar) {
       });
 
       it('custom clearIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <SearchBar clearIcon={<View />} />
         );
         const Wrapper = queryByTestId(WrapperTestID);
@@ -123,7 +125,7 @@ export function commonTests(SearchBar) {
       });
 
       it('no clearIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <SearchBar clearIcon={false} />
         );
         const Wrapper = queryByTestId(WrapperTestID);
@@ -137,7 +139,7 @@ export function commonPlatformTest(SearchBar) {
   describe('Platform Handlers', () => {
     it('onCancel', () => {
       const handler = jest.fn();
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <SearchBar onCancel={handler} />
       );
       const Wrapper = queryByTestId(SearchBarTestID);
@@ -150,7 +152,7 @@ export function commonPlatformTest(SearchBar) {
     describe('cancel button', () => {
       describe('Enabled', () => {
         it('cancelButtonTitle', () => {
-          const { queryByTestId } = renderWithTheme(
+          const { queryByTestId } = renderWithWrapper(
             <SearchBar cancelButtonTitle="Annuler" />
           );
           const Wrapper = queryByTestId('RNE__SearchBar-cancelButton');
@@ -163,7 +165,7 @@ export function commonPlatformTest(SearchBar) {
             buttonStyle: { elevation: 0 },
             buttonTextStyle: { fontSize: 12 },
           };
-          const { queryByTestId } = renderWithTheme(
+          const { queryByTestId } = renderWithWrapper(
             <SearchBar cancelButtonProps={Props} />
           );
           const Wrapper = queryByTestId('RNE__SearchBar-cancelButton');
@@ -179,7 +181,7 @@ export function commonPlatformTest(SearchBar) {
 
       describe('Disabled', () => {
         it('cancelButtonProps', () => {
-          const { queryByTestId } = renderWithTheme(
+          const { queryByTestId } = renderWithWrapper(
             <SearchBar cancelButtonProps={{ disabled: true }} />
           );
           const Wrapper = queryByTestId('RNE__SearchBar-cancelButtonContainer');
@@ -188,7 +190,7 @@ export function commonPlatformTest(SearchBar) {
           ).toBeTruthy();
         });
         it('cancelButtonProps disabled styles', () => {
-          const { queryByTestId } = renderWithTheme(
+          const { queryByTestId } = renderWithWrapper(
             <SearchBar
               cancelButtonProps={{
                 disabled: true,

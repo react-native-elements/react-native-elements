@@ -3,7 +3,7 @@ import Triangle from '../components/Triangle';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Tooltip component', () => {
-  it('should render without issues ', () => {
+  it('should match snapshot ', () => {
     const { toJSON } = renderWithWrapper(<Triangle />, 'RNE__Tooltip_Triangle');
     expect(toJSON()).toMatchSnapshot();
   });

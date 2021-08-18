@@ -120,9 +120,9 @@ Styling for container around the centerComponent.
 
 Add children component to the header.
 
-| Type                    | Default |
-| ----------------------- | ------- |
-| Element[] and ReactNode | []      |
+| Type                                 | Default |
+| ------------------------------------ | ------- |
+| (Element or Element[]) and ReactNode | []      |
 
 ---
 

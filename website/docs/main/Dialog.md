@@ -89,7 +89,7 @@ If true, the dialog is visible.
 
 Style of the actual overlay.
 
-Add dditional styling to the internal Overlay component.
+Add additional styling to the internal Overlay component.
 
 | Type               | Default |
 | ------------------ | ------- |

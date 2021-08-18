@@ -22,7 +22,7 @@ describe('BottomSheet Component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('shows when isVisible is true', () => {
+  it('should shows when isVisible is true', () => {
     const list = [{ title: 'test' }, { title: 'test2' }];
     const component = renderWithWrapper(
       <BottomSheet isVisible>
@@ -38,7 +38,7 @@ describe('BottomSheet Component', () => {
     expect(component.wrapper.findByType(Modal).props.visible).toBeTruthy();
   });
 
-  it('not show when isVisible is false', () => {
+  it('should not show when isVisible is false', () => {
     const list = [{ title: 'test' }, { title: 'test2' }];
     const component = renderWithWrapper(
       <BottomSheet>

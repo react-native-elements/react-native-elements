@@ -135,6 +135,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
   }
   return (
     <View
+      testID="RNE__ButtonGroupContainer"
       {...rest}
       style={StyleSheet.flatten([
         styles.container,
@@ -171,7 +172,10 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
             ])}
           >
             <Component
-              testID="buttonGroupItem"
+              testID="RNE__ButtonGroupItem"
+              accessibilityState={{
+                disabled: isDisabled,
+              }}
               activeOpacity={activeOpacity}
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
