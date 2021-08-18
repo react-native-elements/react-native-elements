@@ -1,22 +1,29 @@
 import React from 'react';
 import { Chip } from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Chip Component', () => {
-  // Test for solid and outline type
+  it('should match snapshot', () => {
+    const { getByA11yRole } = renderWithWrapper(<Chip />);
+    const component = getByA11yRole('button');
+    expect(component.props.style.borderRadius).toBe(30);
+  });
+
   it.each`
     type
     ${'solid'}
     ${'outline'}
   `('should render $type', ({ type }) => {
-    const { queryByText } = renderWithTheme(<Chip title={type} type={type} />);
+    const { queryByText } = renderWithWrapper(
+      <Chip title={type} type={type} />
+    );
     expect(queryByText(type)).not.toBeNull();
   });
 
-  it('should pass the onPress function when specified', () => {
+  it('should have onPress function when specified', () => {
     const handlePress = jest.fn();
-    const { getByA11yRole } = renderWithTheme(<Chip onPress={handlePress} />);
+    const { getByA11yRole } = renderWithWrapper(<Chip onPress={handlePress} />);
     fireEvent(getByA11yRole('button'), 'press');
     expect(handlePress).toHaveBeenCalledTimes(1);
   });

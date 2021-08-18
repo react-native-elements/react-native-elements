@@ -55,7 +55,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
 
   return (
     <Animated.View
-      style={[
+      style={StyleSheet.flatten([
         {
           opacity: animation,
           transform: [{ scale: animation }],
@@ -68,7 +68,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
           bottom: 0,
         },
         style,
-      ]}
+      ])}
     >
       <Button
         buttonStyle={StyleSheet.flatten([

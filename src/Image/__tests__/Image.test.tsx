@@ -1,21 +1,21 @@
 import React from 'react';
 import { Image as RNImage, Text } from 'react-native';
 import Image from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 
 jest.useFakeTimers();
 
 describe('Image Component', () => {
   const FAKE_URI = 'https://i.imgur.com/0y8Ftya.jpg';
   it('should render', () => {
-    const { toJSON } = renderWithTheme(
+    const { toJSON } = renderWithWrapper(
       <Image testID="customTestId" source={{ uri: FAKE_URI }} />
     );
     expect(toJSON()).toMatchSnapshot();
   });
 
   it('should render the appropriate testId when one is passed.', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image testID="customTestId" source={{ uri: FAKE_URI }} />
     );
     const image = queryByTestId('customTestId');
@@ -23,7 +23,7 @@ describe('Image Component', () => {
   });
 
   it('should render the appropriate testId when one is not passed.', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image source={{ uri: FAKE_URI }} />
     );
     const image = queryByTestId('RNE__Image');
@@ -38,8 +38,9 @@ describe('Image Component', () => {
         },
       },
     };
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image source={{ uri: FAKE_URI }} />,
+      '',
       textTheme
     );
     const placeholder = queryByTestId('RNE__Image__placeholder');
@@ -47,7 +48,7 @@ describe('Image Component', () => {
   });
 
   it('should render without the transition', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image source={{ uri: FAKE_URI }} transition={false} />
     );
     const image = queryByTestId('RNE__Image');
@@ -55,7 +56,7 @@ describe('Image Component', () => {
   });
 
   it('should render PlaceholderContent', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image
         source={{ uri: FAKE_URI }}
         PlaceholderContent={<Text testID="text">MyText</Text>}
@@ -66,7 +67,7 @@ describe('Image Component', () => {
   });
 
   it('should apply value from style prop', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image source={{ uri: FAKE_URI }} style={{ tintColor: 'red' }} />
     );
     const image = queryByTestId('RNE__Image');
@@ -74,7 +75,7 @@ describe('Image Component', () => {
   });
 
   it('should apply value from childrenContainerStyle prop', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <Image
         source={{ uri: FAKE_URI }}
         childrenContainerStyle={{

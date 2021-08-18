@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
-export type OverlayProps = ModalProps & {
+export type OverlayProps = Omit<ModalProps, 'visible'> & {
   /** If true, the overlay is visible. */
   isVisible: boolean;
 
@@ -61,8 +61,13 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
       {...{ onPressOut, onPressIn, onLongPress }}
     />
 
-    <View style={styles.container} pointerEvents="box-none">
+    <View
+      testID="RNE__Overlay__Container"
+      style={styles.container}
+      pointerEvents="box-none"
+    >
       <View
+        testID="RNE__Overlay"
         style={StyleSheet.flatten([
           styles.overlay,
           fullScreen && styles.fullscreen,

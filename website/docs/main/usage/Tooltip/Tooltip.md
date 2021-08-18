@@ -2,6 +2,8 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- Web specific usage which is to be displayed on the documentation and not added as comment in the component. -->
+
 ---
 
 > **Web-platform specific note**:

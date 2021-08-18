@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, TextInput, Image, Animated } from 'react-native';
 import Input from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 import Icon from '../../Icon';
 import { FullTheme } from '../../config';
 
 describe('Input component', () => {
   it('should match snapshot', () => {
-    const { toJSON, queryByTestId } = renderWithTheme(<Input />);
+    const { toJSON, queryByTestId } = renderWithWrapper(<Input />);
     const component = queryByTestId('RNE__Input__view-wrapper');
     expect(component).not.toBeNull();
     expect(toJSON()).toMatchSnapshot();
@@ -16,7 +16,7 @@ describe('Input component', () => {
 
   describe('Props', () => {
     it('containerStyle', () => {
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input containerStyle={{ width: 200 }} />
       );
       const component = queryByTestId('RNE__Input__view-wrapper');
@@ -24,7 +24,7 @@ describe('Input component', () => {
     });
 
     it('inputContainerStyle', () => {
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input inputContainerStyle={{ width: 200 }} />
       );
       const component = queryByTestId('RNE__Input__view-wrapper');
@@ -33,7 +33,7 @@ describe('Input component', () => {
     });
 
     it('inputStyle', () => {
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input inputStyle={{ width: 200 }} />
       );
       const component = queryByTestId('RNE__Input__view-wrapper');
@@ -42,7 +42,7 @@ describe('Input component', () => {
     });
 
     it('disabled', () => {
-      const { queryByTestId } = renderWithTheme(<Input disabled={true} />);
+      const { queryByTestId } = renderWithWrapper(<Input disabled={true} />);
       const component = queryByTestId('RNE__Input__view-wrapper');
       const inputTree = component.findByType(TextInput);
       expect(inputTree.props.editable).toBe(false);
@@ -50,7 +50,7 @@ describe('Input component', () => {
 
     describe('leftIcon and styles', () => {
       it('leftIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <Input leftIcon={{ type: 'feather', name: 'user' }} />
         );
         const component = queryByTestId('RNE__Input__view-wrapper');
@@ -60,7 +60,7 @@ describe('Input component', () => {
       });
 
       it('leftIconContainerStyle', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <Input
             leftIcon={{ type: 'feather', name: 'user' }}
             leftIconContainerStyle={{ width: 200 }}
@@ -75,7 +75,7 @@ describe('Input component', () => {
     });
     describe('rightIcon and styles', () => {
       it('rightIcon', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <Input rightIcon={{ type: 'feather', name: 'user' }} />
         );
         const component = queryByTestId('RNE__Input__view-wrapper');
@@ -85,7 +85,7 @@ describe('Input component', () => {
       });
 
       it('rightIconContainerStyle', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <Input
             rightIcon={{ type: 'feather', name: 'user' }}
             rightIconContainerStyle={{ width: 200 }}
@@ -101,13 +101,13 @@ describe('Input component', () => {
 
     describe('label and styles', () => {
       it('label', () => {
-        const { queryByText } = renderWithTheme(<Input label="My Label" />);
+        const { queryByText } = renderWithWrapper(<Input label="My Label" />);
         const textTree = queryByText('My Label');
         expect(textTree).not.toBeNull();
       });
 
       it('labelStyle', () => {
-        const { queryByText } = renderWithTheme(
+        const { queryByText } = renderWithWrapper(
           <Input label="My Label" labelStyle={{ width: 200 }} />
         );
         const textTree = queryByText('My Label');
@@ -116,7 +116,7 @@ describe('Input component', () => {
       });
 
       it('label as component', () => {
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <Input label={<Image source={{ uri: 'http://google.com' }} />} />
         );
         const component = queryByTestId('RNE__Input__view-wrapper');
@@ -128,7 +128,7 @@ describe('Input component', () => {
 
     describe('errorMessage and style', () => {
       it('errorMessage', () => {
-        const { queryByText } = renderWithTheme(
+        const { queryByText } = renderWithWrapper(
           <Input errorMessage="My Error Message" />
         );
         const textTree = queryByText('My Error Message');
@@ -136,7 +136,7 @@ describe('Input component', () => {
       });
 
       it('errorStyle', () => {
-        const { queryByText } = renderWithTheme(
+        const { queryByText } = renderWithWrapper(
           <Input errorMessage="My Error Message" errorStyle={{ width: 200 }} />
         );
         const textTree = queryByText('My Error Message');
@@ -146,7 +146,7 @@ describe('Input component', () => {
     });
 
     it('placeholder', () => {
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input placeholder="My Placeholder" />
       );
       const component = queryByTestId('RNE__Input__text-input');
@@ -163,21 +163,7 @@ describe('Input component', () => {
           );
         }
       }
-      const { queryByTestId } = renderWithTheme(
-        <Input InputComponent={CustomComponent} />
-      );
-      expect(queryByTestId('myView')).not.toBeNull();
-    });
-
-    it('inputComponent fc', () => {
-      const CustomComponent: React.FC = (props) => {
-        return (
-          <View {...props} testID="myView">
-            Custom!
-          </View>
-        );
-      };
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input InputComponent={CustomComponent} />
       );
       expect(queryByTestId('myView')).not.toBeNull();
@@ -191,7 +177,7 @@ describe('Input component', () => {
           </View>
         );
       });
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input InputComponent={CustomComponent} />
       );
       expect(queryByTestId('myView')).not.toBeNull();
@@ -199,7 +185,7 @@ describe('Input component', () => {
 
     it('should trigger onChange', () => {
       const changeText = jest.fn();
-      const { queryByTestId } = renderWithTheme(
+      const { queryByTestId } = renderWithWrapper(
         <Input onChangeText={changeText} />
       );
       const component = queryByTestId('RNE__Input__view-wrapper');
@@ -211,7 +197,7 @@ describe('Input component', () => {
       it('should focus the input', () => {
         const focus = jest.fn();
         const ref = React.createRef<TextInput>();
-        const { queryByTestId } = renderWithTheme(
+        const { queryByTestId } = renderWithWrapper(
           <Input ref={ref} testID="demo" onFocus={focus} />
         );
         const component = queryByTestId('RNE__Input__view-wrapper');
@@ -226,7 +212,7 @@ describe('Input component', () => {
           placeholder: 'Enter text',
         },
       };
-      const { queryByTestId } = renderWithTheme(<Input />, testTheme);
+      const { queryByTestId } = renderWithWrapper(<Input />, '', testTheme);
       const component = queryByTestId('RNE__Input__text-input');
       expect(component.props.placeholder).toBe(testTheme.Input.placeholder);
     });

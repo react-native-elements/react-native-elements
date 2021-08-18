@@ -5,31 +5,22 @@ title: Migration from v3 to v4
 
 ### Table of Contents
 
-- [Introduction](#introduction)
-  - [Few added components are](#few-added-components-are)
-  - [Migrated to FC](#migrated-to-fc)
-- [Handling breaking changes](#handling-breaking-changes)
+- [What's New?](#whats-new)
+  - [Migration to Functional](#migration-to-functional)
+    - [Why?](#why)
+    - [How would it affect?](#how-would-it-affect)
   - [Migration to Pressable](#migration-to-pressable)
+    - [The Reason](#the-reason)
+  - [Tests migrated to React Native Testing library](#tests-migrated-to-react-native-testing-library)
+- [Handling breaking changes](#handling-breaking-changes)
   - [Tooltip](#tooltip)
   - [Text](#text)
 
-## Introduction
+## What's New?
 
-React Native Elements v4 introduces many features including few new components and some breaking changes whose migration is being [given below](#handling-breaking-changes).
+React Native Elements v4 introduces many features including few new components, fully typescript support and some breaking changes whose migration is being [given below](#handling-breaking-changes).
 
-### Few added components are
-
-- [LinearProgress (#2867)](https://github.com/react-native-elements/react-native-elements/pull/2867)
-- [FAB (#2885)](https://github.com/react-native-elements/react-native-elements/pull/2885)
-- [Speed dial (#2896)](https://github.com/react-native-elements/react-native-elements/pull/2896)
-- [Tab & TabItem (#2919)](https://github.com/react-native-elements/react-native-elements/pull/2919)
-- [CircularSlider (#1)](https://github.com/react-native-elements/react-native-elements-universe/pull/1)
-- [TabView & TabView.Item (#2983)](https://github.com/react-native-elements/react-native-elements/pull/2983)
-- [ListItem Accordion (#2953)](https://github.com/react-native-elements/react-native-elements/pull/2953)
-- [ListItem Swipeable (#2982)](https://github.com/react-native-elements/react-native-elements/pull/2982)
-- Dialog
-
-### Migrated to FC
+### Migration to Functional
 
 These components are converted to Functional Components,
 
@@ -38,17 +29,25 @@ These components are converted to Functional Components,
 - Tooltip
 - Image
 
-> `ref` may not work as of now, but will be added in future releases.
+#### Why?
 
-## Handling breaking changes
+#### How would it affect?
+
+> `ref` may not work as of now, but would be added in future releases.
 
 ### Migration to Pressable
+
+#### The Reason
 
 :::note
 
 Earlier React Native Elements was using `Touchable` as touch handler, but since `v4.0` will use `Pressable`
 
 :::
+
+### Tests migrated to React Native Testing library
+
+## Handling breaking changes
 
 > [Pressable](https://reactnative.dev/docs/pressable) is a Core Component wrapper that can detect various stages of press interactions on any of its defined children.
 

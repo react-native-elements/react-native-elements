@@ -17,10 +17,10 @@ export type SpeedDialProps = {
   isOpen: boolean;
 
   /** Callback fired when the component requests to be open. */
-  onOpen: () => void;
+  onOpen?: () => void;
 
   /** Callback fired when the component requests to be closed. */
-  onClose: () => void;
+  onClose?: () => void;
 
   /** Icon shown on FAB when action stack is open. */
   openIcon?: IconNode;
@@ -28,7 +28,7 @@ export type SpeedDialProps = {
   /** Add overlay color to the speed dial. */
   overlayColor?: string;
 
-  /** Actions for speed dial. */
+  /** SpeedDial Action as children. */
   children?: React.ReactChild[];
 
   /** The duration for the transition, in milliseconds. */
@@ -41,7 +41,8 @@ export type SpeedDialProps = {
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
  * If more than six actions are needed, something other than a FAB should be used to present them.
  * Upon press, the FAB remains visible and emits a stack of related actions.
- * If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions. */
+ * If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
+ */
 export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   isOpen,
   onOpen = () => {},
