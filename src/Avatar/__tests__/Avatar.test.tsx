@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '..';
 import { TouchableOpacity, View, Image, Text } from 'react-native';
-import { renderWithTheme, renderWithWrapper } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 import { avatarSizes } from './../Avatar';
 import { Icon } from '../../Icon';
@@ -9,14 +9,14 @@ import { Icon } from '../../Icon';
 describe('Avatar Component', () => {
   jest.useFakeTimers();
 
-  it('should render without issues', () => {
-    const { toJSON } = renderWithTheme(
+  it('should match snapshot', () => {
+    const { toJSON } = renderWithWrapper(
       <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
     );
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('renders rounded', () => {
+  it('should renders rounded', () => {
     const { wrapper } = renderWithWrapper(
       <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} rounded />
     );
@@ -25,7 +25,7 @@ describe('Avatar Component', () => {
     );
   });
 
-  it('allows custom imageProps', () => {
+  it('should allows custom imageProps', () => {
     const { wrapper } = renderWithWrapper(
       <Avatar
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -35,7 +35,7 @@ describe('Avatar Component', () => {
     expect(wrapper.findByType(Image).props.resizeMode).toBe('contain');
   });
 
-  it('renders touchable if onPress given', () => {
+  it('should renders touchable if onPress given', () => {
     const { wrapper } = renderWithWrapper(
       <Avatar
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -77,7 +77,7 @@ describe('Avatar Component', () => {
       });
     });
 
-    it('accepts a number', () => {
+    it('should accepts a number as size', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} size={30} />
       );
@@ -87,7 +87,7 @@ describe('Avatar Component', () => {
       });
     });
 
-    it('default', () => {
+    it('should have default size', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />
       );
@@ -99,7 +99,7 @@ describe('Avatar Component', () => {
   });
 
   describe('Placeholders', () => {
-    it('renders title if given', () => {
+    it('should renders title if given', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -108,7 +108,7 @@ describe('Avatar Component', () => {
       );
       expect(wrapper.findByType(Text).props.children).toBe('John');
     });
-    it('renders custom', () => {
+    it('should renders custom renderPlaceholderContent', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -121,7 +121,7 @@ describe('Avatar Component', () => {
       expect(wrapper.props.children).toBe('Hey');
     });
 
-    it('renders using icon prop', () => {
+    it('should renders using icon prop', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -141,7 +141,7 @@ describe('Avatar Component', () => {
       });
     });
 
-    it('renders using icon with defaults', () => {
+    it('should render using icon with defaults', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -158,7 +158,7 @@ describe('Avatar Component', () => {
       });
     });
 
-    it('renders using image with imageProps', () => {
+    it('should render using image with imageProps', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
@@ -174,7 +174,7 @@ describe('Avatar Component', () => {
       });
     });
 
-    it("shouldn't show placeholder if not using source", () => {
+    it('should not show placeholder if not using source', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           size="medium"

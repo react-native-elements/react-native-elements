@@ -10,7 +10,7 @@ export type DialogBaseProps = Omit<OverlayProps, 'fullScreen'> & {
   /** If true, the dialog is visible. */
   isVisible?: boolean;
 
-  /** Add dditional styling to the internal Overlay component. */
+  /** Add additional styling to the internal Overlay component. */
   overlayStyle?: StyleProp<ViewStyle>;
 
   /** Handler for backdrop press. */

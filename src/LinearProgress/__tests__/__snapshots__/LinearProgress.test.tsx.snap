@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinearProgress Component should render determinant variant 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessibilityRole="progressbar"
+    accessibilityValue={
+      Object {
+        "max": 1,
+        "min": 0,
+        "now": 0.4,
+      }
+    }
+    accessible={true}
+    onLayout={[Function]}
+    replaceTheme={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(202, 113, 235, 0.4)",
+          "height": 4,
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="RNE__LinearProgress_Bar"
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#ca71eb",
+          "flex": 1,
+          "transform": Array [
+            Object {
+              "translateX": -0,
+            },
+            Object {
+              "scaleX": 0.0001,
+            },
+          ],
+        }
+      }
+      testID="RNE__LinearProgress_Progress"
+    />
+  </View>
+</View>
+`;
+
+exports[`LinearProgress Component should render inDeterminant variant 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessibilityRole="progressbar"
+    accessibilityValue={
+      Object {
+        "max": 1,
+        "min": 0,
+        "now": NaN,
+      }
+    }
+    accessible={true}
+    onLayout={[Function]}
+    replaceTheme={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(202, 113, 235, 0.4)",
+          "height": 4,
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="RNE__LinearProgress_Bar"
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#ca71eb",
+          "flex": 1,
+          "transform": Array [
+            Object {
+              "translateX": -0,
+            },
+            Object {
+              "scaleX": 0.0001,
+            },
+          ],
+        }
+      }
+      testID="RNE__LinearProgress_Progress"
+    />
+  </View>
+</View>
+`;

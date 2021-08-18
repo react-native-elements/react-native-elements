@@ -20,6 +20,7 @@ export const PricingButton = (
   } = props;
   return (
     <Button
+      testID="RNE__PricingButton"
       title={title}
       buttonStyle={StyleSheet.flatten([
         styles.button,

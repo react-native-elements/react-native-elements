@@ -44,6 +44,6 @@ If a user touches on a button in the button group, then the button selected shou
 and the previous one un-highlighted.
 ```
 
-For Functional Testing, we use [Enzyme](http://airbnb.io/enzyme/).
+For Functional Testing, we use [React Native Testing Library](https://callstack.github.io/react-native-testing-library/).
 
 You can read more about functional testing [here](https://www.guru99.com/functional-testing.html).

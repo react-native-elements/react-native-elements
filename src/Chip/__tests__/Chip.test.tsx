@@ -1,11 +1,11 @@
 import React from 'react';
 import { Chip } from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Chip Component', () => {
-  it('should render without issues', () => {
-    const { getByA11yRole } = renderWithTheme(<Chip />);
+  it('should match snapshot', () => {
+    const { getByA11yRole } = renderWithWrapper(<Chip />);
     const component = getByA11yRole('button');
     expect(component.props.style.borderRadius).toBe(30);
   });
@@ -15,16 +15,16 @@ describe('Chip Component', () => {
     ${'solid'}
     ${'outline'}
   `('should render $type', ({ type }) => {
-    const { toJSON, queryByText } = renderWithTheme(
+    const { toJSON, queryByText } = renderWithWrapper(
       <Chip title={type} type={type} />
     );
     expect(queryByText(type)).not.toBeNull();
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it('should pass the onPress function when specified', () => {
+  it('should have onPress function when specified', () => {
     const handlePress = jest.fn();
-    const { getByA11yRole } = renderWithTheme(<Chip onPress={handlePress} />);
+    const { getByA11yRole } = renderWithWrapper(<Chip onPress={handlePress} />);
     fireEvent(getByA11yRole('button'), 'press');
     expect(handlePress).toHaveBeenCalledTimes(1);
   });

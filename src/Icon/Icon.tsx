@@ -121,18 +121,21 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
 
-  const getBackgroundColor = () => {
+  const getBackgroundColor = React.useMemo(() => {
     if (reverse) {
       return color;
     }
     return raised ? theme?.colors?.white : 'transparent';
-  };
+  }, [color, raised, reverse, theme?.colors?.white]);
 
-  const buttonStyles = {
-    borderRadius: size + 4,
-    height: size * 2 + 4,
-    width: size * 2 + 4,
-  };
+  const buttonStyles = React.useMemo(
+    () => ({
+      borderRadius: size + 4,
+      height: size * 2 + 4,
+      width: size * 2 + 4,
+    }),
+    [size]
+  );
 
   if (Platform.OS === 'android' && !attributes.background) {
     if (Platform.Version >= 21) {
@@ -157,6 +160,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           : {},
         containerStyle && containerStyle,
       ])}
+      testID="RNE__ICON__CONTAINER"
     >
       <Component
         {...attributes}
@@ -165,22 +169,25 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           disabled,
           underlayColor: reverse ? color : underlayColor,
           activeOpacity: 0.3,
+          accessibilityRole: 'button',
         })}
+        testID="RNE__ICON__CONTAINER_ACTION"
       >
         <View
           style={StyleSheet.flatten([
             (reverse || raised) && buttonStyles,
             {
-              backgroundColor: getBackgroundColor(),
+              backgroundColor: getBackgroundColor,
               alignItems: 'center',
               justifyContent: 'center',
             },
             disabled && styles.disabled,
             disabled && disabledStyle,
           ])}
+          testID="RNE__ICON"
         >
           <IconComponent
-            testID="iconIcon"
+            testID="RNE__ICON__Component"
             style={StyleSheet.flatten([
               { backgroundColor: 'transparent' },
               iconStyle && iconStyle,

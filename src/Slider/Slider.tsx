@@ -500,6 +500,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
 
   return (
     <View
+      testID="RNE__Slider_Container"
       {...other}
       style={StyleSheet.flatten([
         isVertical.current
@@ -512,10 +513,11 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
       accessibilityValue={{
         min: minimumValue,
         max: maximumValue,
-        now: props.value,
+        now: currentPropValue.current,
       }}
     >
       <View
+        testID="RNE__Slider_Track_maximum"
         style={StyleSheet.flatten([
           mainStyles.track,
           isVertical.current
@@ -528,6 +530,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
       />
 
       <Animated.View
+        testID="RNE__Slider_Track_minimum"
         style={StyleSheet.flatten([
           mainStyles.track,
           isVertical.current
@@ -547,6 +550,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
         {...thumbProps}
       />
       <View
+        testID="RNE__Slider_TouchArea"
         style={StyleSheet.flatten([styles.touchArea, touchOverflowStyle])}
         {...panResponder.panHandlers}
       >

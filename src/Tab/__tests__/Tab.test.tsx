@@ -1,14 +1,14 @@
 import React from 'react';
 import Tab from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import theme from '../../config/theme';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Tab Component', () => {
   const items = ['Tab 1', 'Tab 2', 'Tab 3'];
 
-  it('should render without issues', () => {
-    const { queryByA11yRole } = renderWithTheme(
+  it('should match snapshot', () => {
+    const { queryByA11yRole } = renderWithWrapper(
       <Tab>
         <Tab.Item title="Tab 1" />
         <Tab.Item title="Tab 2" />
@@ -19,7 +19,7 @@ describe('Tab Component', () => {
   });
 
   it('should render primary variant ', () => {
-    const { queryByA11yRole } = renderWithTheme(
+    const { queryByA11yRole } = renderWithWrapper(
       <Tab variant="primary">
         {items.map((i) => (
           <Tab.Item key={i} />
@@ -34,7 +34,7 @@ describe('Tab Component', () => {
   });
 
   it('should contain the required accessibility properties', () => {
-    const component = renderWithTheme(
+    const component = renderWithWrapper(
       <Tab variant="default">
         {items.map((i) => (
           <Tab.Item key={i} title={i} />
@@ -54,7 +54,7 @@ describe('Tab Component', () => {
 
   it('should render with icon props', () => {
     const changeTab = jest.fn();
-    const { queryAllByRole } = renderWithTheme(
+    const { queryAllByRole } = renderWithWrapper(
       <Tab onChange={changeTab}>
         <Tab.Item
           title={'Hello'}
