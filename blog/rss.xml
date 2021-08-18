@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>React Native Elements Blog</title>
+        <link>https://reactnativeelements.com/blog</link>
+        <description>React Native Elements Blog</description>
+        <lastBuildDate>Wed, 18 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Google Summer of Code'21]]></title>
+            <link>https://reactnativeelements.com/blog/2021/08/18/google-summer-of-code-khushal-agarwal</link>
+            <guid>Google Summer of Code'21</guid>
+            <pubDate>Wed, 18 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Automatically generate documentation out of React/React Native Component]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Auto-generation of Documentation Website]]></title>
+            <link>https://reactnativeelements.com/blog/2021/08/12/auto-generation-of-docs</link>
+            <guid>Auto-generation of Documentation Website</guid>
+            <pubDate>Thu, 12 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is a guide to generate documentation of the UI components automatically.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Version 2.3 Upgrade Guide]]></title>
+            <link>https://reactnativeelements.com/blog/2020/08/10/2.3-upgrade-guide</link>
+            <guid>Version 2.3 Upgrade Guide</guid>
+            <pubDate>Mon, 10 Aug 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[There have been a lot of changes and improvements coming through the pipeline recently with react-native-elements. So in preparing for a version 3, there are some planned deprecations that will be added into version 2.3 and then removed in version 3.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[React Native Elements 1.0]]></title>
+            <link>https://reactnativeelements.com/blog/2019/01/27/1.0-release</link>
+            <guid>React Native Elements 1.0</guid>
+            <pubDate>Sun, 27 Jan 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[React Native Elements has UI elements that are easy to use & really customizable. It also has theming, platform specific search bars, React Native Web support, and much more.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[React Native Web]]></title>
+            <link>https://reactnativeelements.com/blog/2018/12/13/react-native-web</link>
+            <guid>React Native Web</guid>
+            <pubDate>Thu, 13 Dec 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Comprehensive Guide to create simple app using React Native Web and React Native Elements]]></description>
+        </item>
+    </channel>
+</rss>
