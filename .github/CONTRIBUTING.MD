@@ -14,6 +14,10 @@ If you would like to submit a feature request or report a bug, we encourage you 
 
 Check out the [react-native-elements-app](https://github.com/react-native-elements/react-native-elements-app) repository to see how React Native Elements is used to build the [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app) on Expo.
 
+## Updating docs automatically
+
+Please go through the blog([https://reactnativeelements.com/blog/2021/08/12/auto-generation-of-docs](Auto-generation of Documentation Website)) to understand how it works and what you need to do. This is a important step.
+
 ## Submitting a Pull Request
 
 If you wish to submit a pull request for a new feature or issue, you should start by forking this repository first. This should get you setup on your local machine:
@@ -34,9 +38,10 @@ We like to provide informative and useful commit messages when pushing changes t
 
 ### Branching Strategy
 
-There are 3 main branches: 
+There are 3 main branches:
+
 - `master` is the branch with the most recent deployed version
 - `next` is the main development branch. For new features and enhancements, base the
-changes off this branch.
+  changes off this branch.
 - `patch` is a branch for working on patch releases. If you have a bug fix
-that requires a fast release, use this branch.
+  that requires a fast release, use this branch.

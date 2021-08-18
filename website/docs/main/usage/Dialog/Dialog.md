@@ -1,5 +1,8 @@
 import Snack from './snack/index.md'
 
+<!-- To show the guide to configure the Dialog Component to a project.
+This is not added as description in comments of the component so is added here. -->
+
 <Snack />
 
 > **Web-platform specific note**:

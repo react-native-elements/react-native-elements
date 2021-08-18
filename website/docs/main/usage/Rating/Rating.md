@@ -2,6 +2,8 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- Adding the read-only mode and fractions example as it is not added in the comments of Rating Component. -->
+
 ### Read-only mode
 
 ```js

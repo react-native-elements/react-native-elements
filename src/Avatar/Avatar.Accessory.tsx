@@ -22,7 +22,7 @@ export type AccessoryProps = Partial<IconProps> &
   };
 
 /** This is used for adding an accessory to the Avatar.
- * Receives either all [Icon](icon.md#props) or [Image](image.md#props) props. */
+ * Receives either all [Icon](icon#props) or [Image](image#props) props. */
 export const Accessory: RneFunctionComponent<AccessoryProps> = ({
   size = 10,
   style,

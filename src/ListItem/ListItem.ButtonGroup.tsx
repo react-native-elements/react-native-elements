@@ -6,7 +6,7 @@ import { RneFunctionComponent } from '../helpers';
 export type ListItemButtonGroupProps = ButtonGroupProps;
 
 /** This allows adding ButtonGroup to the ListItem.
- * This, Receives all [ButtonGroup](button_group.md#props) props. */
+ * This, Receives all [ButtonGroup](buttongroup#props) props. */
 export const ListItemButtonGroup: RneFunctionComponent<ListItemButtonGroupProps> = ({
   containerStyle,
   ...props

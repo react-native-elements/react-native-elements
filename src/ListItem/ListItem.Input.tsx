@@ -6,7 +6,7 @@ import Input, { InputProps } from '../Input';
 export type ListItemInputProps = InputProps;
 
 /** This allows adding an Text Input within the ListItem.
- * This, Receives all [Input](input.md#props) props. */
+ * This, Receives all [Input](Input.md#props) props. */
 export const ListItemInput = React.forwardRef<
   TextInput,
   ListItemInputProps & Partial<ThemeProps<ListItemInputProps>>
