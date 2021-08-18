@@ -24,6 +24,13 @@ exports[`Icon component should apply raised styles 1`] = `
     testID="RNE__ICON__CONTAINER"
   >
     <View
+      android_ripple={
+        Object {
+          "borderless": false,
+          "color": "rgba(0, 0, 0, 0.3)",
+          "radius": -5,
+        }
+      }
       replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
       updateTheme={[Function]}
@@ -87,6 +94,13 @@ exports[`Icon component should apply reverse styles 1`] = `
     testID="RNE__ICON__CONTAINER"
   >
     <View
+      android_ripple={
+        Object {
+          "borderless": false,
+          "color": "rgba(36, 36, 36, 0.3)",
+          "radius": -5,
+        }
+      }
       replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
       updateTheme={[Function]}
@@ -152,15 +166,21 @@ exports[`Icon component should render with icon type 1`] = `
     <View
       accessibilityRole="button"
       accessible={true}
+      activeOpacity={0.3}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
+      replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
+      underlayColor="red"
+      updateTheme={[Function]}
     >
       <View
         style={
@@ -220,15 +240,21 @@ exports[`Icon component should set underlayColor to color when styles when under
     <View
       accessibilityRole="button"
       accessible={true}
+      activeOpacity={0.3}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
+      replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
+      underlayColor={null}
+      updateTheme={[Function]}
     >
       <View
         style={

@@ -2,51 +2,14 @@
 
 exports[`Accessory Component should uses Icon 1`] = `
 <View
-<<<<<<< HEAD
-  accessible={true}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#aaa",
-        "bottom": 0,
-        "justifyContent": "center",
-        "position": "absolute",
-        "right": 0,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 0.5,
-        "shadowRadius": 2,
-      },
-      Object {
-        "borderRadius": 5,
-        "height": 10,
-        "width": 10,
-      },
-      undefined,
-    ]
-  }
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     accessible={true}
-    focusable={false}
+    focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -81,26 +44,21 @@ exports[`Accessory Component should uses Icon 1`] = `
   >
     <View>
       <View
-<<<<<<< HEAD
-        android_ripple={
-          Object {
-            "borderless": false,
-            "color": "rgba(0, 0, 0, 0.3)",
-            "radius": -5,
-          }
-        }
-        replaceTheme={[Function]}
-        updateTheme={[Function]}
-=======
         style={
           Object {
             "overflow": "hidden",
           }
         }
         testID="RNE__ICON__CONTAINER"
->>>>>>> o/next
       >
         <View
+          android_ripple={
+            Object {
+              "borderless": false,
+              "color": "rgba(0, 0, 0, 0.3)",
+              "radius": -5,
+            }
+          }
           replaceTheme={[Function]}
           testID="RNE__ICON__CONTAINER_ACTION"
           updateTheme={[Function]}

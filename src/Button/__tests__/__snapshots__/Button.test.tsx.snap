@@ -2,21 +2,7 @@
 
 exports[`Button Component Button type $type should display disabled undefined button 1`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      false,
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -24,9 +10,6 @@ exports[`Button Component Button type $type should display disabled undefined bu
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
@@ -78,21 +61,7 @@ exports[`Button Component Button type $type should display disabled undefined bu
 
 exports[`Button Component Button type $type should display disabled undefined button 2`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      false,
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -100,9 +69,6 @@ exports[`Button Component Button type $type should display disabled undefined bu
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
@@ -154,31 +120,7 @@ exports[`Button Component Button type $type should display disabled undefined bu
 
 exports[`Button Component Button type $type should display disabled undefined button 3`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      Object {
-        "backgroundColor": "#fff",
-        "overflow": "visible",
-        "shadowColor": "rgba(0,0,0, .4)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
-      },
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -186,9 +128,6 @@ exports[`Button Component Button type $type should display disabled undefined bu
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
@@ -240,21 +179,7 @@ exports[`Button Component Button type $type should display disabled undefined bu
 
 exports[`Button Component Button type $type should display raised undefined button 1`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      false,
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -262,9 +187,6 @@ exports[`Button Component Button type $type should display raised undefined butt
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         Object {
@@ -326,21 +248,7 @@ exports[`Button Component Button type $type should display raised undefined butt
 
 exports[`Button Component Button type $type should display raised undefined button 2`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      false,
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -348,9 +256,6 @@ exports[`Button Component Button type $type should display raised undefined butt
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         Object {
@@ -412,31 +317,7 @@ exports[`Button Component Button type $type should display raised undefined butt
 
 exports[`Button Component Button type $type should display raised undefined button 3`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      Object {
-        "backgroundColor": "#fff",
-        "overflow": "visible",
-        "shadowColor": "rgba(0,0,0, .4)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
-      },
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -444,9 +325,6 @@ exports[`Button Component Button type $type should display raised undefined butt
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         Object {
@@ -508,21 +386,7 @@ exports[`Button Component Button type $type should display raised undefined butt
 
 exports[`Button Component Button type $type should display undefined button 1`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      false,
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -530,9 +394,6 @@ exports[`Button Component Button type $type should display undefined button 1`] 
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
@@ -584,31 +445,7 @@ exports[`Button Component Button type $type should display undefined button 1`] 
 
 exports[`Button Component Button type $type should display undefined button 2`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      Object {
-        "backgroundColor": "#fff",
-        "overflow": "visible",
-        "shadowColor": "rgba(0,0,0, .4)",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 1,
-        },
-        "shadowOpacity": 1,
-        "shadowRadius": 1,
-      },
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -616,9 +453,6 @@ exports[`Button Component Button type $type should display undefined button 2`] 
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
@@ -670,21 +504,7 @@ exports[`Button Component Button type $type should display undefined button 2`] 
 
 exports[`Button Component Button type $type should display undefined button 3`] = `
 <View
-<<<<<<< HEAD
-  style={
-    Array [
-      Object {
-        "borderRadius": 3,
-        "overflow": "hidden",
-      },
-      undefined,
-      false,
-    ]
-  }
-  testID="RNE_BUTTON_WRAPPER"
-=======
   testID="wrapper"
->>>>>>> o/next
 >
   <View
     style={
@@ -692,9 +512,6 @@ exports[`Button Component Button type $type should display undefined button 3`] 
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
