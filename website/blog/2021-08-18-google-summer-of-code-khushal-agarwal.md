@@ -1,5 +1,5 @@
 ---
-title: Google Summer of Code'21
+title: GSoC'21 Khushal
 
 author: Khushal Agarwal
 
