@@ -98,7 +98,7 @@ export type SocialIconProps = {
   /** Creates button with a social icon. */
   button?: boolean;
 
-  /** Type of icon set. [Supported sets here](./icon.md#available-icon-sets). */
+  /** Type of icon set. [Supported sets here](icon#available-icon-sets). */
   iconType?: string;
 
   /** Extra styling for icon component. */

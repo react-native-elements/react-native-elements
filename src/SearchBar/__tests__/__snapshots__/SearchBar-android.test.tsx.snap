@@ -60,6 +60,7 @@ exports[`Android SearchBar component should match snapshot 1`] = `
             testID="RNE__ICON__CONTAINER"
           >
             <View
+              accessibilityRole="button"
               android_ripple={
                 Object {
                   "borderless": false,
@@ -67,6 +68,7 @@ exports[`Android SearchBar component should match snapshot 1`] = `
                   "radius": -5,
                 }
               }
+              disabled={false}
               replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
               updateTheme={[Function]}

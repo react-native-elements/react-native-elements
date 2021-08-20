@@ -392,6 +392,7 @@ exports[`Tile component should render tile with icon 1`] = `
             testID="RNE__ICON__CONTAINER"
           >
             <View
+              accessibilityRole="button"
               android_ripple={
                 Object {
                   "borderless": false,
@@ -399,6 +400,7 @@ exports[`Tile component should render tile with icon 1`] = `
                   "radius": -5,
                 }
               }
+              disabled={false}
               replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
               updateTheme={[Function]}

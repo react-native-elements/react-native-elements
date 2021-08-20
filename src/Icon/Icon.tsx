@@ -164,16 +164,15 @@ export const Icon: RneFunctionComponent<IconProps> = ({
               .rgb()
               .string()
           ),
+          onPress,
+          onLongPress,
+          onPressIn,
+          onPressOut,
+          disabled,
+          accessibilityRole: 'button',
           ...pressableProps,
           ...rest,
         }}
-        {...(onPress && {
-          onPress,
-          disabled,
-          underlayColor: reverse ? color : underlayColor,
-          activeOpacity: 0.3,
-          accessibilityRole: 'button',
-        })}
         testID="RNE__ICON__CONTAINER_ACTION"
       >
         <View

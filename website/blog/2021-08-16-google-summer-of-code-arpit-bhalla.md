@@ -1,5 +1,5 @@
 ---
-title: GSoC'21 Arpit Bhalla
+title: Google Summer of Code 2021 Arpit Bhalla
 
 author: Arpit Bhalla
 

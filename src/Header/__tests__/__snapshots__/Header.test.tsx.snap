@@ -322,6 +322,7 @@ exports[`Header Component should render left component by passing a config throu
           testID="RNE__ICON__CONTAINER"
         >
           <View
+            accessibilityRole="button"
             android_ripple={
               Object {
                 "borderless": false,
@@ -329,6 +330,7 @@ exports[`Header Component should render left component by passing a config throu
                 "radius": -5,
               }
             }
+            disabled={false}
             icon="home"
             replaceTheme={[Function]}
             testID="RNE__ICON__CONTAINER_ACTION"
@@ -462,6 +464,7 @@ exports[`Header Component should render right component by passing a config thro
           testID="RNE__ICON__CONTAINER"
         >
           <View
+            accessibilityRole="button"
             android_ripple={
               Object {
                 "borderless": false,
@@ -469,6 +472,7 @@ exports[`Header Component should render right component by passing a config thro
                 "radius": -5,
               }
             }
+            disabled={false}
             icon="home"
             replaceTheme={[Function]}
             testID="RNE__ICON__CONTAINER_ACTION"
