@@ -48,7 +48,7 @@ export function commonTests(SearchBar) {
       expect(handler).toBeCalled();
     });
 
-    it('onChangeText', () => {
+    it.skip('onChangeText', () => {
       const handler = jest.fn();
       const { queryByTestId } = renderWithWrapper(
         <SearchBar onChangeText={handler} />
@@ -103,7 +103,7 @@ export function commonTests(SearchBar) {
     });
 
     describe('clearIcon and without', () => {
-      it('clearIcon', () => {
+      it.skip('clearIcon', () => {
         const { queryByTestId } = renderWithWrapper(
           <SearchBar
             searchIcon={false}
