@@ -3,7 +3,7 @@ import {
   View,
   StyleSheet,
   Platform,
-  TouchableHighlight,
+  Pressable,
   ActivityIndicator,
   ViewStyle,
   StyleProp,
@@ -12,7 +12,11 @@ import {
 import Icon from '../Icon';
 import Text from '../Text';
 import fonts from '../config/fonts';
-import { RneFunctionComponent } from '../helpers';
+import {
+  androidRipple,
+  InlinePressableProps,
+  RneFunctionComponent,
+} from '../helpers';
 
 const colors = {
   'github-alt': '#000000',
@@ -94,12 +98,6 @@ export type SocialIconProps = {
   /** Creates button with a social icon. */
   button?: boolean;
 
-  /** Function to call when button/icon is pressed. */
-  onPress?(): void;
-
-  /** Function to call when pressed for a long time. */
-  onLongPress?(): void;
-
   /** Type of icon set. [Supported sets here](icon#available-icon-sets). */
   iconType?: string;
 
@@ -147,7 +145,7 @@ export type SocialIconProps = {
 
   /** Specify different font family. */
   fontFamily?: string;
-};
+} & InlinePressableProps;
 
 /** SocialIcons are visual cues to online and social media networks. We offer a varied range of social icons. */
 export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
@@ -165,24 +163,37 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   loading,
   onLongPress,
   onPress,
-  Component = onPress || onLongPress ? TouchableHighlight : View,
+  onPressOut,
+  onPressIn,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   raised = true,
   small,
   style,
   title,
   type,
   underlayColor,
+  pressableProps,
   ...attributes
 }) => {
   const shouldShowExpandedButton = button && title;
 
   return (
     <Component
+      {...{
+        onLongPress,
+        onPress,
+        onPressOut,
+        onPressIn,
+        android_ripple: androidRipple(
+          light ? 'white' : underlayColor || (type && colors[type])
+        ),
+        ...pressableProps,
+        ...attributes,
+      }}
       testID="RNE_SocialIcon"
-      {...attributes}
       underlayColor={light ? 'white' : underlayColor || (type && colors[type])}
-      onLongPress={disabled ? null : onLongPress}
-      onPress={disabled ? null : onPress}
       disabled={disabled}
       style={StyleSheet.flatten([
         raised && styles.raised,

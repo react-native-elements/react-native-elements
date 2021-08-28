@@ -24,7 +24,7 @@ export const TabItem: RneFunctionComponent<TabItemProps> = ({
   variant,
   iconPosition = 'top',
   title,
-  ...props
+  ...rest
 }) => {
   return (
     <Button
@@ -38,7 +38,7 @@ export const TabItem: RneFunctionComponent<TabItemProps> = ({
         styles.titleStyle,
         {
           color: variant === 'primary' ? 'white' : theme?.colors?.secondary,
-          paddingVertical: !props.icon ? 8 : 2,
+          paddingVertical: !rest.icon ? 8 : 2,
         },
         titleStyle,
       ]}
@@ -53,7 +53,7 @@ export const TabItem: RneFunctionComponent<TabItemProps> = ({
       ]}
       iconPosition={iconPosition}
       title={title}
-      {...props}
+      {...rest}
     />
   );
 };

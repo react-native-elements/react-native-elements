@@ -51,7 +51,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
   theme,
   trackColor,
   animation = { duration: 2000 },
-  ...props
+  ...rest
 }) => {
   const [width, setWidth] = React.useState<number>(0);
 
@@ -105,7 +105,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
         min: 0,
         max: 1,
       }}
-      {...props}
+      {...rest}
       onLayout={(e) => {
         setWidth(e.nativeEvent.layout.width);
       }}

@@ -18,11 +18,11 @@ export const CardBase: RneFunctionComponent<CardBaseProps> = ({
   containerStyle,
   wrapperStyle,
   theme,
-  ...attributes
+  ...rest
 }) => {
   return (
     <View
-      {...attributes}
+      {...rest}
       style={StyleSheet.flatten([
         {
           backgroundColor: theme?.colors?.white,

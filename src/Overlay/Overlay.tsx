@@ -3,13 +3,13 @@ import {
   View,
   StyleSheet,
   Platform,
-  TouchableWithoutFeedback,
+  Pressable,
   Modal,
   ModalProps,
   ViewStyle,
   StyleProp,
 } from 'react-native';
-import { RneFunctionComponent } from '../helpers';
+import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
 export type OverlayProps = Omit<ModalProps, 'visible'> & {
   /** If true, the overlay is visible. */
@@ -29,7 +29,7 @@ export type OverlayProps = Omit<ModalProps, 'visible'> & {
 
   /** Override React Native `Modal` component (usable for web-platform). */
   ModalComponent?: typeof React.Component;
-};
+} & Omit<InlinePressableProps, 'onPress'>; // used as onBackdropPress
 
 /** The Overlay is a view that floats above an app’s content.
  * Overlays are an easy way to inform or request information from the user. */
@@ -41,6 +41,10 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
   fullScreen = false,
   ModalComponent = Modal,
   isVisible,
+  pressableProps,
+  onPressOut,
+  onPressIn,
+  onLongPress,
   ...rest
 }) => (
   <ModalComponent
@@ -49,12 +53,13 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
     transparent
     {...rest}
   >
-    <TouchableWithoutFeedback
+    <Pressable
+      style={StyleSheet.flatten([styles.backdrop, backdropStyle])}
       onPress={onBackdropPress}
       testID="RNE__Overlay__backdrop"
-    >
-      <View style={StyleSheet.flatten([styles.backdrop, backdropStyle])} />
-    </TouchableWithoutFeedback>
+      {...pressableProps}
+      {...{ onPressOut, onPressIn, onLongPress }}
+    />
 
     <View
       testID="RNE__Overlay__Container"
