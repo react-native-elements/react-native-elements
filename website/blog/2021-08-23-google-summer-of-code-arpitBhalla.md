@@ -1,5 +1,5 @@
 ---
-title: Google Summer of Code 2021 Arpit Bhalla
+title: Google Summer of Code'21 Arpit Bhalla
 
 author: Arpit Bhalla
 
@@ -7,7 +7,7 @@ authorURL: https://github.com/arpitBhalla
 ---
 
 <div align='center'>
-<img src='https://raw.githubusercontent.com/arpitBhalla/google-summer-of-code/master/assets//header.png' width='900' height='300'/>
+<img src='https://raw.githubusercontent.com/arpitBhalla/google-summer-of-code/master/assets//header.png' />
 </div>
 
 ## 📑 Project Details
@@ -79,7 +79,7 @@ You can find all my contributions [here](https://github.com/react-native-element
 
 ### Core Improvements
 
-- [Migrate build to Github Actions (#3036)](https://github.com/react-native-elements/react-native-elements/pull/3036)
+- [Migrate build to Github Actions (#3101)](https://github.com/react-native-elements/react-native-elements/pull/3101)
 - [Strict TypeScript (#2930)](https://github.com/react-native-elements/react-native-elements/pull/2930)
 - [Removed ts-ignore and transformed to Functional Component (#2834)](https://github.com/react-native-elements/react-native-elements/pull/2834)
 
