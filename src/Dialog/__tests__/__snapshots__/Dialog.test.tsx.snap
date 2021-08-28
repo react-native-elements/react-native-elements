@@ -77,9 +77,7 @@ exports[`Dialog Component should render without any children 1`] = `
     <View
       accessible={true}
       focusable={true}
-      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}

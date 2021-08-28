@@ -9,8 +9,10 @@ export type CardDividerProps = DividerProps;
  * This, Receives all [Divider](divider#props) props. */
 export const CardDivider: RneFunctionComponent<CardDividerProps> = ({
   style,
-  ...rest
-}) => <Divider style={StyleSheet.flatten([styles.divider, style])} {...rest} />;
+  ...props
+}) => (
+  <Divider style={StyleSheet.flatten([styles.divider, style])} {...props} />
+);
 
 const styles = StyleSheet.create({
   divider: {

@@ -4,7 +4,7 @@ import {
   Text,
   Image as RNImage,
   StyleSheet,
-  Pressable,
+  TouchableOpacity,
   StyleProp,
   ViewStyle,
   TextStyle,
@@ -12,11 +12,7 @@ import {
   ImageURISource,
   ImageStyle,
 } from 'react-native';
-import {
-  InlinePressableProps,
-  renderNode,
-  RneFunctionComponent,
-} from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 import Icon, { IconObject } from '../Icon';
 import Image, { ImageProps } from '../Image';
 
@@ -85,18 +81,14 @@ export type AvatarProps = {
 
   /** Custom ImageComponent for Avatar. */
   ImageComponent?: React.ComponentClass;
-} & InlinePressableProps;
+};
 
 /** Avatars are found all over ui design from lists to profile screens.
  * They are commonly used to represent a user and can contain photos, icons, or even text. */
 export const Avatar: RneFunctionComponent<AvatarProps> = ({
   onPress,
   onLongPress,
-  onPressIn,
-  onPressOut,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View,
+  Component = onPress || onLongPress ? TouchableOpacity : View,
   containerStyle,
   icon,
   iconStyle,
@@ -112,8 +104,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
   renderPlaceholderContent,
   ImageComponent = RNImage,
   children,
-  pressableProps,
-  ...rest
+  ...attributes
 }) => {
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
@@ -160,20 +151,15 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 
   return (
     <Component
+      onPress={onPress}
+      onLongPress={onLongPress}
       style={StyleSheet.flatten([
         styles.container,
         { height, width },
         rounded && { borderRadius: width / 2 },
         containerStyle,
       ])}
-      {...{
-        onPress,
-        onLongPress,
-        onPressIn,
-        onPressOut,
-        ...pressableProps,
-        ...rest,
-      }}
+      {...attributes}
     >
       <Image
         testID="RNE__Avatar__Image"

@@ -3,8 +3,9 @@ import {
   View,
   StyleSheet,
   Dimensions,
-  Pressable,
-  PressableProps,
+  TouchableOpacity,
+  TouchableOpacityProps,
+  TouchableNativeFeedbackProps,
   ViewStyle,
   StyleProp,
   TextStyle,
@@ -16,64 +17,64 @@ import Image from '../Image';
 import Text from '../Text';
 import Icon, { IconObject, IconProps } from '../Icon';
 import { ThemedFeaturedTile } from './components/FeaturedTile';
-import { androidRipple, RneFunctionComponent } from '../helpers';
-import Color from 'color';
+import { RneFunctionComponent } from '../helpers';
 
-export type TileProps = PressableProps & {
-  /** Text inside the tile. */
-  title?: string;
+export type TileProps = TouchableOpacityProps &
+  TouchableNativeFeedbackProps & {
+    /** Text inside the tile. */
+    title?: string;
 
-  /** Icon Component Props. */
-  icon?: IconObject & IconProps;
+    /** Icon Component Props. */
+    icon?: IconObject & IconProps;
 
-  /** Text inside the tilt when tile is featured. */
-  caption?: React.ReactNode;
+    /** Text inside the tilt when tile is featured. */
+    caption?: React.ReactNode;
 
-  /** Source for the image. */
-  imageSrc?: ImageSourcePropType | string | number;
+    /** Source for the image. */
+    imageSrc?: ImageSourcePropType | string | number;
 
-  /** Number passed to control opacity on press. */
-  activeOpacity?: number;
+    /** Number passed to control opacity on press. */
+    activeOpacity?: number;
 
-  /** Styling for the outer tile container. */
-  containerStyle?: StyleProp<ViewStyle>;
+    /** Styling for the outer tile container. */
+    containerStyle?: StyleProp<ViewStyle>;
 
-  /** Styling for the image. */
-  imageContainerStyle?: StyleProp<ViewStyle>;
+    /** Styling for the image. */
+    imageContainerStyle?: StyleProp<ViewStyle>;
 
-  /** Styling for the outer icon container. */
-  iconContainerStyle?: StyleProp<ViewStyle>;
+    /** Styling for the outer icon container. */
+    iconContainerStyle?: StyleProp<ViewStyle>;
 
-  /** Styling for the overlay container when using featured tile. */
-  overlayContainerStyle?: StyleProp<ViewStyle>;
+    /** Styling for the overlay container when using featured tile. */
+    overlayContainerStyle?: StyleProp<ViewStyle>;
 
-  /** Styling for the title. */
-  titleStyle?: StyleProp<TextStyle>;
+    /** Styling for the title. */
+    titleStyle?: StyleProp<TextStyle>;
 
-  /** Styling for the caption (optional); You only use this if `caption` is a string. */
-  captionStyle?: StyleProp<TextStyle>;
+    /** Styling for the caption (optional); You only use this if `caption` is a string. */
+    captionStyle?: StyleProp<TextStyle>;
 
-  /** Width for the tile. */
-  width?: number;
+    /** Width for the tile. */
+    width?: number;
 
-  /** Height for the tile. */
-  height?: number;
+    /** Height for the tile. */
+    height?: number;
 
-  /** Changes the look of the tile. */
-  featured?: boolean;
+    /** Changes the look of the tile. */
+    featured?: boolean;
 
-  /** Styling for bottom container when not featured tile. */
-  contentContainerStyle?: StyleProp<ViewStyle>;
+    /** Styling for bottom container when not featured tile. */
+    contentContainerStyle?: StyleProp<ViewStyle>;
 
-  /** Number of lines for Title. */
-  titleNumberOfLines?: number;
+    /** Number of lines for Title. */
+    titleNumberOfLines?: number;
 
-  /** Optional properties to pass to the image if provided e.g "resizeMode". */
-  imageProps?: Partial<ImageProps>;
+    /** Optional properties to pass to the image if provided e.g "resizeMode". */
+    imageProps?: Partial<ImageProps>;
 
-  /** Custom ImageComponent for Tile. */
-  ImageComponent?: typeof React.Component;
-};
+    /** Custom ImageComponent for Tile. */
+    ImageComponent?: typeof React.Component;
+  };
 
 /** Tiles like Cards, are a convenient way to display related content about a single subject.
  * Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props. */
@@ -98,7 +99,6 @@ export const Tile: RneFunctionComponent<TileProps> = ({
   imageProps = {},
   width = Dimensions.get('window').width,
   height = width * 0.8,
-  theme,
   ...attributes
 }) => {
   if (featured) {
@@ -123,14 +123,10 @@ export const Tile: RneFunctionComponent<TileProps> = ({
   }
 
   return (
-    <Pressable
-      {...{
-        onPress,
-        android_ripple: androidRipple(
-          Color(theme?.colors?.primary).alpha(activeOpacity).rgb().toString()
-        ),
-        ...attributes,
-      }}
+    <TouchableOpacity
+      {...attributes}
+      onPress={onPress}
+      activeOpacity={activeOpacity}
       style={StyleSheet.flatten([
         {
           width,
@@ -179,7 +175,7 @@ export const Tile: RneFunctionComponent<TileProps> = ({
         </Text>
         {children}
       </View>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 

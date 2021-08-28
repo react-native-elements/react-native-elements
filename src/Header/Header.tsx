@@ -99,7 +99,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
     : ImageBackground,
   theme,
   elevated,
-  ...rest
+  ...attributes
 }) => {
   React.useEffect(() => {
     if (linearGradientProps && !ViewComponent) {
@@ -119,7 +119,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
       />
       <ViewComponent
         testID="headerContainer"
-        {...rest}
+        {...attributes}
         style={StyleSheet.flatten([
           {
             borderBottomColor: '#f2f2f2',

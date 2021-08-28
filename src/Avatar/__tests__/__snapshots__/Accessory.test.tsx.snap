@@ -6,10 +6,8 @@ exports[`Accessory Component should uses Icon 1`] = `
 >
   <View
     accessible={true}
-    focusable={true}
-    onBlur={[Function]}
+    focusable={false}
     onClick={[Function]}
-    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -52,15 +50,6 @@ exports[`Accessory Component should uses Icon 1`] = `
         testID="RNE__ICON__CONTAINER"
       >
         <View
-          accessibilityRole="button"
-          android_ripple={
-            Object {
-              "borderless": false,
-              "color": "rgba(0, 0, 0, 0.3)",
-              "radius": -5,
-            }
-          }
-          disabled={false}
           replaceTheme={[Function]}
           testID="RNE__ICON__CONTAINER_ACTION"
           updateTheme={[Function]}

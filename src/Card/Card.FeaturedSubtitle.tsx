@@ -12,7 +12,7 @@ export type CardFeaturedSubtitleProps = TextProps;
 export const CardFeaturedSubtitle: RneFunctionComponent<CardFeaturedSubtitleProps> = ({
   theme,
   style,
-  ...rest
+  ...props
 }) => (
   <Text
     style={
@@ -33,7 +33,7 @@ export const CardFeaturedSubtitle: RneFunctionComponent<CardFeaturedSubtitleProp
         style,
       ]) as TextStyle
     }
-    {...rest}
+    {...props}
   />
 );
 

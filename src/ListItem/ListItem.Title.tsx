@@ -16,7 +16,7 @@ export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
   style,
   right,
   children,
-  ...rest
+  ...props
 }) => {
   return (
     <Text
@@ -26,7 +26,7 @@ export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
         right && styles.rightTitle,
         style,
       ])}
-      {...rest}
+      {...props}
     >
       {children}
     </Text>

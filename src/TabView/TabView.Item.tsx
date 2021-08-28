@@ -8,9 +8,9 @@ export type TabViewItemProps = ViewProps;
 /** They are individual item of the parent Tab. */
 export const TabViewItem: RneFunctionComponent<TabViewItemProps> = ({
   children,
-  ...rest
+  ...props
 }) => {
-  return <View {...rest}>{React.isValidElement(children) && children}</View>;
+  return <View {...props}>{React.isValidElement(children) && children}</View>;
 };
 
 TabViewItem.displayName = 'TabView.Item';

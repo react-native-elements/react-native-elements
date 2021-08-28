@@ -15,10 +15,11 @@ describe('Chip Component', () => {
     ${'solid'}
     ${'outline'}
   `('should render $type', ({ type }) => {
-    const { queryByText } = renderWithWrapper(
+    const { toJSON, queryByText } = renderWithWrapper(
       <Chip title={type} type={type} />
     );
     expect(queryByText(type)).not.toBeNull();
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('should have onPress function when specified', () => {

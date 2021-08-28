@@ -1,24 +1,18 @@
-import Color from 'color';
 import React from 'react';
 import {
   View,
+  TouchableNativeFeedback,
+  TouchableOpacity,
   Platform,
   StyleSheet,
   ViewStyle,
   StyleProp,
   TextStyle,
-  Pressable,
 } from 'react-native';
-import {
-  normalizeText,
-  color,
-  RneFunctionComponent,
-  androidRipple,
-  InlinePressableProps,
-} from '../helpers';
+import { normalizeText, color, RneFunctionComponent } from '../helpers';
 import Text from '../Text';
 
-export type ButtonGroupProps = InlinePressableProps & {
+export type ButtonGroupProps = {
   /** Button for the component. */
   button?: object;
 
@@ -52,7 +46,7 @@ export type ButtonGroupProps = InlinePressableProps & {
   /** Current selected indexes from the array of buttons. */
   selectedIndexes?: number[];
 
-  /** Add active opacity to the button in buttonGroup. */
+  /** Add active opacity to the button in buttongroup. */
   activeOpacity?: number;
 
   /** Function called on hiding underlay. */
@@ -61,7 +55,7 @@ export type ButtonGroupProps = InlinePressableProps & {
   /** Function called on showing underlay. */
   onShowUnderlay?(): void;
 
-  /** Function to set the opacity. */
+  /** Funtion to set the opacity. */
   setOpacityTo?: (value: number) => void;
 
   /** Update the styling of the interior border of the list of buttons. */
@@ -102,13 +96,12 @@ export type ButtonGroupProps = InlinePressableProps & {
  * Use a ButtonGroup to offer choices that are closely related but mutually exclusive.
  * This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://reactnative.dev/docs/touchablehighlight.html). */
 export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
-  Component = Pressable,
-  pressableProps,
+  Component = Platform.select<typeof React.Component>({
+    android: TouchableNativeFeedback,
+    default: TouchableOpacity,
+  }),
   buttons,
   onPress = () => null,
-  onLongPress,
-  onPressIn,
-  onPressOut,
   selectedIndex = null,
   selectedIndexes = [],
   selectMultiple = false,
@@ -187,6 +180,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
               onShowUnderlay={onShowUnderlay}
+              underlayColor={underlayColor}
               disabled={isDisabled}
               onPress={() => {
                 if (selectMultiple) {
@@ -200,15 +194,6 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                 }
               }}
               style={styles.button}
-              {...{
-                android_ripple: androidRipple(
-                  Color(underlayColor).alpha(activeOpacity).rgb().toString()
-                ),
-                onPressIn,
-                onPressOut,
-                onLongPress,
-                ...pressableProps,
-              }}
             >
               <View
                 style={StyleSheet.flatten([

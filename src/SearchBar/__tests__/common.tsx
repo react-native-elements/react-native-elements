@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
-import { ActivityIndicator, Text, Pressable, View } from 'react-native';
+import { ActivityIndicator, Text, TouchableOpacity, View } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Icon } from '../../Icon';
 
@@ -185,7 +185,9 @@ export function commonPlatformTest(SearchBar) {
             <SearchBar cancelButtonProps={{ disabled: true }} />
           );
           const Wrapper = queryByTestId('RNE__SearchBar-cancelButtonContainer');
-          expect(Wrapper.findByType(Pressable).props.disabled).toBeTruthy();
+          expect(
+            Wrapper.findByType(TouchableOpacity).props.disabled
+          ).toBeTruthy();
         });
         it('cancelButtonProps disabled styles', () => {
           const { queryByTestId } = renderWithWrapper(

@@ -2,7 +2,7 @@ import React from 'react';
 import Avatar from '../../Avatar';
 import { ThemedFeaturedTile as FeaturedTile } from '../components/FeaturedTile';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { Pressable, Image } from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import Icon from '../../Icon';
 
 describe('FeaturedTitle component', () => {
@@ -21,7 +21,7 @@ describe('FeaturedTitle component', () => {
         height={20}
       />
     );
-    expect(wrapper.findByType(Pressable).props.style).toMatchObject({
+    expect(wrapper.findByType(TouchableOpacity).props.style).toMatchObject({
       width: 34,
       height: 20,
     });

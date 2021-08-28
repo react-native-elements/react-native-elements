@@ -28,6 +28,9 @@ exports[`FAB Component should match snapshot 1`] = `
             "overflow": "hidden",
           },
           Object {
+            "borderRadius": 3,
+          },
+          Object {
             "borderRadius": 28,
             "elevation": 4,
           },

@@ -110,6 +110,9 @@ exports[`PricingCard component should match snapshot 1`] = `
               "borderRadius": 3,
               "overflow": "hidden",
             },
+            Object {
+              "borderRadius": 3,
+            },
             undefined,
             false,
           ]
@@ -165,15 +168,6 @@ exports[`PricingCard component should match snapshot 1`] = `
               testID="RNE__ICON__CONTAINER"
             >
               <View
-                accessibilityRole="button"
-                android_ripple={
-                  Object {
-                    "borderless": false,
-                    "color": "rgba(0, 0, 0, 0.3)",
-                    "radius": -5,
-                  }
-                }
-                disabled={false}
                 replaceTheme={[Function]}
                 testID="RNE__ICON__CONTAINER_ACTION"
                 updateTheme={[Function]}
@@ -349,6 +343,9 @@ exports[`PricingCard component should render with props 1`] = `
               "borderRadius": 3,
               "overflow": "hidden",
             },
+            Object {
+              "borderRadius": 3,
+            },
             undefined,
             false,
           ]
@@ -404,15 +401,6 @@ exports[`PricingCard component should render with props 1`] = `
               testID="RNE__ICON__CONTAINER"
             >
               <View
-                accessibilityRole="button"
-                android_ripple={
-                  Object {
-                    "borderless": false,
-                    "color": "rgba(0, 0, 0, 0.3)",
-                    "radius": -5,
-                  }
-                }
-                disabled={false}
                 replaceTheme={[Function]}
                 testID="RNE__ICON__CONTAINER_ACTION"
                 updateTheme={[Function]}

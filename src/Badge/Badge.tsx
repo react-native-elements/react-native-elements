@@ -3,17 +3,13 @@ import {
   StyleSheet,
   Text,
   View,
-  Pressable,
+  TouchableOpacity,
   TextProps,
   StyleProp,
   ViewStyle,
   TextStyle,
 } from 'react-native';
-import {
-  InlinePressableProps,
-  renderNode,
-  RneFunctionComponent,
-} from '../helpers';
+import { renderNode, RneFunctionComponent } from '../helpers';
 
 export type BadgeProps = {
   /** Style for the container. */
@@ -31,12 +27,15 @@ export type BadgeProps = {
   /** Text value to be displayed by badge, defaults to empty. */
   value?: React.ReactNode;
 
+  /** Function called when pressed on the badge. */
+  onPress?: (...args: any[]) => any;
+
   /** Custom component to replace the badge outer component. */
   Component?: typeof React.Component;
 
   /** Determines color of the indicator. */
   status?: 'primary' | 'success' | 'warning' | 'error';
-} & InlinePressableProps;
+};
 
 /** Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user. */
 export const Badge: RneFunctionComponent<BadgeProps> = ({
@@ -45,17 +44,11 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   textProps,
   badgeStyle,
   onPress,
-  onLongPress,
-  onPressOut,
-  onPressIn,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View,
+  Component = onPress ? TouchableOpacity : View,
   value,
   theme,
   status = 'primary',
-  pressableProps,
-  ...rest
+  ...props
 }) => {
   const element = renderNode(Text, value, {
     style: StyleSheet.flatten([styles.text, textStyle && textStyle]),
@@ -67,14 +60,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
       style={StyleSheet.flatten([containerStyle && containerStyle])}
     >
       <Component
-        {...{
-          onPress,
-          onLongPress,
-          onPressOut,
-          onPressIn,
-          ...pressableProps,
-          ...rest,
-        }}
+        {...props}
         testID="RNE__Badge"
         style={StyleSheet.flatten([
           {
@@ -91,6 +77,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
           !element && styles.miniBadge,
           badgeStyle && badgeStyle,
         ])}
+        onPress={onPress}
       >
         {element}
       </Component>
