@@ -48,7 +48,7 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
   rightWidth = ScreenWidth / 3,
   onLeftSwipe,
   onRightSwipe,
-  ...rest
+  ...props
 }) => {
   const { current: panX } = React.useRef(new Animated.Value(0));
   const currValue = React.useRef(0);
@@ -166,7 +166,7 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
         }}
         {..._panResponder.panHandlers}
       >
-        <ListItemBase {...rest}>{children}</ListItemBase>
+        <ListItemBase {...props}>{children}</ListItemBase>
       </Animated.View>
     </View>
   );

@@ -46,7 +46,7 @@ export const ListItemAccordion: RneFunctionComponent<ListItemAccordionProps> = (
     duration: 350,
     type: 'timing',
   },
-  ...rest
+  ...props
 }) => {
   const { current: transition } = React.useRef(new Animated.Value(0));
 
@@ -74,7 +74,7 @@ export const ListItemAccordion: RneFunctionComponent<ListItemAccordionProps> = (
 
   return (
     <>
-      <ListItemBase {...rest}>
+      <ListItemBase {...props}>
         {React.isValidElement(content) ? content : <ListItemContent />}
         {!noIcon && (
           <Animated.View

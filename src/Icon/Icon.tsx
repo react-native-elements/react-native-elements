@@ -1,12 +1,14 @@
 import React from 'react';
 import {
   Platform,
+  TouchableHighlight,
   View,
   StyleSheet,
+  TouchableNativeFeedback,
   ViewStyle,
   StyleProp,
   TextStyle,
-  Pressable,
+  TouchableHighlightProps,
 } from 'react-native';
 import {
   IconButtonProps,
@@ -15,11 +17,7 @@ import {
 import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
-import {
-  androidRipple,
-  InlinePressableProps,
-  RneFunctionComponent,
-} from '../helpers';
+import { RneFunctionComponent } from '../helpers';
 
 export type IconType =
   | 'material'
@@ -36,7 +34,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export type IconObject = {
+export type IconObject = TouchableHighlightProps & {
   /** Name of icon. */
   name?: string;
 
@@ -88,7 +86,7 @@ export type IconProps = IconButtonProps & {
 
   /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
-} & InlinePressableProps;
+};
 
 /** Icons are visual indicators usually used to describe action or intent.
  * They are also used for displaying information. */
@@ -107,17 +105,16 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   disabled = false,
   disabledStyle,
   onPress,
-  onLongPress,
-  onPressIn,
-  onPressOut,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
+  Component = onPress
+    ? Platform.select<typeof React.Component>({
+        android: TouchableNativeFeedback,
+        default: TouchableHighlight,
+      })
     : View,
   solid = false,
   brand = false,
   theme,
-  pressableProps,
-  ...rest
+  ...attributes
 }) => {
   const color = colorProp || theme?.colors?.black;
   const reverseColor = reverseColorProp || theme?.colors?.white;
@@ -140,6 +137,15 @@ export const Icon: RneFunctionComponent<IconProps> = ({
     [size]
   );
 
+  if (Platform.OS === 'android' && !attributes.background) {
+    if (Platform.Version >= 21) {
+      attributes.background = TouchableNativeFeedback.Ripple(
+        Color(color).alpha(0.2).rgb().string(),
+        true
+      );
+    }
+  }
+
   return (
     <View
       style={StyleSheet.flatten([
@@ -157,22 +163,14 @@ export const Icon: RneFunctionComponent<IconProps> = ({
       testID="RNE__ICON__CONTAINER"
     >
       <Component
-        {...{
-          android_ripple: androidRipple(
-            Color(reverse ? color : (underlayColor as string))
-              .alpha(0.3)
-              .rgb()
-              .string()
-          ),
+        {...attributes}
+        {...(onPress && {
           onPress,
-          onLongPress,
-          onPressIn,
-          onPressOut,
           disabled,
+          underlayColor: reverse ? color : underlayColor,
+          activeOpacity: 0.3,
           accessibilityRole: 'button',
-          ...pressableProps,
-          ...rest,
-        }}
+        })}
         testID="RNE__ICON__CONTAINER_ACTION"
       >
         <View

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import { TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import Button, { ButtonProps } from '../Button';
 

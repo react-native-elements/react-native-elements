@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '..';
-import { Pressable, View, Image, Text } from 'react-native';
+import { TouchableOpacity, View, Image, Text } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 import { avatarSizes } from './../Avatar';
@@ -42,7 +42,7 @@ describe('Avatar Component', () => {
         onPress={() => null}
       />
     );
-    expect(wrapper.findByType(Pressable)).toBeTruthy();
+    expect(wrapper.findByType(TouchableOpacity)).toBeTruthy();
   });
 
   it('should apply values from theme', () => {

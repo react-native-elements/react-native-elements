@@ -10,12 +10,12 @@ export type ListItemInputProps = InputProps;
 export const ListItemInput = React.forwardRef<
   TextInput,
   ListItemInputProps & Partial<ThemeProps<ListItemInputProps>>
->(({ inputStyle, inputContainerStyle, containerStyle, ...rest }, ref) => {
+>(({ inputStyle, inputContainerStyle, containerStyle, ...props }, ref) => {
   return (
     <Input
       ref={ref}
       renderErrorMessage={false}
-      {...rest}
+      {...props}
       inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
       inputContainerStyle={StyleSheet.flatten([
         styles.inputContainer,

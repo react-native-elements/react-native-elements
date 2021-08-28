@@ -4,8 +4,7 @@ import {
   Animated,
   StyleSheet,
   SafeAreaView,
-  Pressable,
-  PressableProps,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import FAB, { FABProps } from '../FAB';
 import { IconNode } from '../Icon';
@@ -33,9 +32,6 @@ export type SpeedDialProps = {
 
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
-
-  /** Props for Backdrop Pressable */
-  backdropPressableProps?: PressableProps;
 } & FABProps;
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
@@ -54,8 +50,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme,
-  backdropPressableProps: pressableProps,
-  ...rest
+  ...props
 }) => {
   const animations = React.useRef<Animated.Value[]>(
     [...new Array(React.Children.count(children))].map(
@@ -80,13 +75,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
 
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
-      {/* For overlay  */}
-      <Pressable
-        {...pressableProps}
-        onPress={onClose}
-        style={[StyleSheet.absoluteFillObject]}
-        pointerEvents={isOpen ? 'auto' : 'none'}
-      >
+      <TouchableWithoutFeedback onPress={onClose}>
         <Animated.View
           style={[
             StyleSheet.absoluteFillObject,
@@ -97,8 +86,9 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
                 Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
             },
           ]}
+          pointerEvents={isOpen ? 'auto' : 'none'}
         />
-      </Pressable>
+      </TouchableWithoutFeedback>
 
       <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
         {React.Children.toArray(children).map((ChildAction, i: number) => (
@@ -116,7 +106,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         <FAB
           style={[styles.fab]}
           icon={isOpen ? openIcon : icon}
-          {...rest}
+          {...props}
           onPress={isOpen ? onClose : onOpen}
         />
       </SafeAreaView>

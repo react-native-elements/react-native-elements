@@ -1,7 +1,7 @@
 import React from 'react';
 import Tile from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { Image, Pressable, Text } from 'react-native';
+import { Image, TouchableOpacity, Text } from 'react-native';
 import Icon from '../../Icon';
 
 describe('Tile component', () => {
@@ -58,8 +58,8 @@ describe('Tile component', () => {
     const { wrapper } = renderWithWrapper(
       <Tile imageSrc={{ uri: 'http://google.com' }} activeOpacity={0.9} />
     );
-    expect(wrapper.findByType(Pressable).props.android_ripple).toMatchObject({
-      color: 'rgba(32, 137, 220, 0.9)',
+    expect(wrapper.findByType(TouchableOpacity).props).toMatchObject({
+      activeOpacity: 0.9,
     });
   });
 

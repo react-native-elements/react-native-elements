@@ -9,7 +9,7 @@ export type ListItemChevronProps = Partial<IconProps>;
  * This, Receives all [Icon](icon#props) props. */
 export const ListItemChevron: RneFunctionComponent<ListItemChevronProps> = ({
   containerStyle,
-  ...rest
+  ...props
 }: Partial<IconProps>) => {
   return (
     <Icon
@@ -25,7 +25,7 @@ export const ListItemChevron: RneFunctionComponent<ListItemChevronProps> = ({
         { alignSelf: 'center' },
         containerStyle,
       ])}
-      {...rest}
+      {...props}
     />
   );
 };

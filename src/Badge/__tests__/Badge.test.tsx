@@ -1,6 +1,11 @@
 import React from 'react';
 import Badge from '..';
-import { Text, TouchableWithoutFeedback, Pressable, View } from 'react-native';
+import {
+  Text,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 import { colors } from '../../config';
@@ -48,7 +53,7 @@ describe('Badge Component', () => {
     const { wrapper } = renderWithWrapper(
       <Badge value={10} onPress={handler} />
     );
-    const component = wrapper.findByType(Pressable);
+    const component = wrapper.findByType(TouchableOpacity);
     fireEvent.press(component);
     expect(handler).toBeCalledTimes(1);
   });

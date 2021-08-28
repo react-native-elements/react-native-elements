@@ -9,11 +9,11 @@ export type ListItemCheckBoxProps = CheckBoxProps;
  * This, Receives all [CheckBox](checkbox#props) props. */
 export const ListItemCheckBox: RneFunctionComponent<ListItemCheckBoxProps> = ({
   containerStyle,
-  ...rest
+  ...props
 }) => {
   return (
     <CheckBox
-      {...rest}
+      {...props}
       containerStyle={StyleSheet.flatten([styles.container, containerStyle])}
     />
   );

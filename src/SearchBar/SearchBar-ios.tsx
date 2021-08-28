@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
-  Pressable,
+  TouchableOpacity,
   LayoutAnimation,
   StyleSheet,
   View,
   ActivityIndicator,
   Text,
-  PressableProps,
+  TouchableOpacityProps,
   ViewStyle,
   StyleProp,
   TextStyle,
@@ -36,7 +36,7 @@ const defaultClearIcon = (theme: Theme) => ({
 export type SearchBarIosProps = InputProps &
   SearchBarBaseProps &
   typeof SearchBarIOS.defaultProps & {
-    cancelButtonProps?: Partial<PressableProps> & {
+    cancelButtonProps?: Partial<TouchableOpacityProps> & {
       buttonStyle?: StyleProp<ViewStyle>;
       buttonTextStyle?: StyleProp<TextStyle>;
       color?: string;
@@ -243,7 +243,7 @@ export class SearchBarIOS extends Component<
           }
           testID="RNE__SearchBar-cancelButtonContainer"
         >
-          <Pressable
+          <TouchableOpacity
             accessibilityRole="button"
             onPress={this.cancel}
             disabled={buttonDisabled}
@@ -268,7 +268,7 @@ export class SearchBarIOS extends Component<
                 {cancelButtonTitle}
               </Text>
             </View>
-          </Pressable>
+          </TouchableOpacity>
         </View>
       </View>
     );

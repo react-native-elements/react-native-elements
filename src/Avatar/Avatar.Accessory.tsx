@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Pressable,
+  TouchableHighlight,
   View,
   Platform,
   StyleSheet,
@@ -10,11 +10,7 @@ import {
 } from 'react-native';
 import Image, { ImageProps } from '../Image';
 import Icon, { IconProps } from '../Icon';
-import {
-  androidRipple,
-  InlinePressableProps,
-  RneFunctionComponent,
-} from '../helpers';
+import { RneFunctionComponent } from '../helpers';
 
 export type AccessoryProps = Partial<IconProps> &
   Partial<ImageProps> & {
@@ -23,7 +19,7 @@ export type AccessoryProps = Partial<IconProps> &
 
     /** Add custom styling to the accessory of avatar. */
     style?: StyleProp<ViewStyle>;
-  } & InlinePressableProps;
+  };
 
 /** This is used for adding an accessory to the Avatar.
  * Receives either all [Icon](icon#props) or [Image](image#props) props. */
@@ -33,19 +29,11 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
   underlayColor = '#000',
   onPress,
   onLongPress,
-  onPressIn,
-  onPressOut,
   source,
-  pressableProps,
-  ...rest
+  ...props
 }: AccessoryProps) => {
   return (
-    <Pressable
-      {...{
-        android_ripple:
-          (onPress || onLongPress) && androidRipple(underlayColor),
-        ...pressableProps,
-      }}
+    <TouchableHighlight
       style={[
         styles.accessory,
         {
@@ -55,7 +43,9 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
         },
         style,
       ]}
-      {...{ onPressOut, onPressIn, onPress, onLongPress }}
+      underlayColor={underlayColor}
+      onPress={onPress}
+      onLongPress={onLongPress}
     >
       <View>
         {source ? (
@@ -66,7 +56,7 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
               height: size,
               borderRadius: size / 2,
             }}
-            {...rest}
+            {...props}
           />
         ) : (
           <Icon
@@ -74,11 +64,11 @@ export const Accessory: RneFunctionComponent<AccessoryProps> = ({
             type="material"
             color="#fff"
             size={size * 0.8}
-            {...rest}
+            {...props}
           />
         )}
       </View>
-    </Pressable>
+    </TouchableHighlight>
   );
 };
 

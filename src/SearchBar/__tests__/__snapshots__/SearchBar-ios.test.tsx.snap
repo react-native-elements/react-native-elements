@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Default SearchBar component should match snapshot 1`] = `
+exports[`iOS SearchBar component should match snapshot 1`] = `
 <View
   testID="wrapper"
 >
   <View
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": undefined,
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
-        "padding": 8,
+        "flexDirection": "row",
+        "overflow": "hidden",
+        "paddingBottom": 13,
+        "paddingTop": 13,
       }
     }
     testID="RNE__SearchBar-wrapper"
@@ -33,10 +33,11 @@ exports[`Default SearchBar component should match snapshot 1`] = `
             "backgroundColor": undefined,
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
-            "borderRadius": 3,
+            "borderRadius": 9,
             "flexDirection": "row",
-            "minHeight": 30,
-            "overflow": "hidden",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "minHeight": 36,
             "transform": Array [
               Object {
                 "translateX": 0,
@@ -86,13 +87,13 @@ exports[`Default SearchBar component should match snapshot 1`] = `
                     Array [
                       Object {
                         "color": "#242424",
-                        "fontSize": 18,
+                        "fontSize": 20,
                       },
                       Object {
                         "backgroundColor": "transparent",
                       },
                       Object {
-                        "fontFamily": "Material Icons",
+                        "fontFamily": "Ionicons",
                         "fontStyle": "normal",
                         "fontWeight": "normal",
                       },
@@ -101,7 +102,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
                   }
                   testID="RNE__ICON__Component"
                 >
-                  
+                  
                 </Text>
               </View>
             </View>
@@ -111,16 +112,18 @@ exports[`Default SearchBar component should match snapshot 1`] = `
           allowFontScaling={true}
           editable={true}
           onBlur={[Function]}
+          onCancel={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
           rejectResponderTermination={true}
           style={
             Object {
-              "color": undefined,
+              "color": "#242424",
               "flex": 1,
               "fontSize": 18,
-              "marginLeft": 10,
+              "marginLeft": 6,
               "minHeight": 40,
+              "overflow": "hidden",
             }
           }
           testID="RNE__SearchBar"
@@ -159,6 +162,53 @@ exports[`Default SearchBar component should match snapshot 1`] = `
           }
         }
       />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "opacity": 0,
+          "position": "absolute",
+          "right": null,
+        }
+      }
+      testID="RNE__SearchBar-cancelButtonContainer"
+    >
+      <View
+        accessibilityRole="button"
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={Object {}}
+          testID="RNE__SearchBar-cancelButton"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#007aff",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              }
+            }
+          >
+            Cancel
+          </Text>
+        </View>
+      </View>
     </View>
   </View>
 </View>
