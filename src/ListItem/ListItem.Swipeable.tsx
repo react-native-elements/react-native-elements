@@ -30,11 +30,17 @@ export type ListItemSwipeableProps = ListItemBaseProps & {
   /** Width to swipe right. */
   rightWidth?: number;
 
-  /** Function to call when user swipes left. */
+  /** Handler for left swipe. */
   onLeftSwipe?: () => any;
 
-  /** Function to call when user swipes right. */
+  /** Handler for right swipe. */
   onRightSwipe?: () => any;
+
+  /** Handler for swipe in either direction */
+  onSwipeBegin?: () => any;
+
+  /** Handler for swipe end. */
+  onSwipeEnd?: () => any;
 };
 
 /** We offer a special kind of ListItem which is swipeable from both ends and allows users select an event. */
@@ -48,6 +54,8 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
   rightWidth = ScreenWidth / 3,
   onLeftSwipe,
   onRightSwipe,
+  onSwipeBegin,
+  onSwipeEnd,
   ...props
 }) => {
   const { current: panX } = React.useRef(new Animated.Value(0));
@@ -79,7 +87,7 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
       prevValue.current = currValue.current;
     }
     let newDX = prevValue.current + dx;
-
+    onSwipeBegin?.();
     if (Math.abs(newDX) > ScreenWidth / 2) {
       return;
     }
@@ -88,6 +96,7 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
 
   const onPanResponderRelease = (_: any, { dx }: PanResponderGestureState) => {
     prevValue.current = currValue.current;
+    onSwipeEnd?.();
     if (Math.sign(dx) > 0) {
       onLeftSwipe?.();
     } else if (Math.sign(dx) < 0) {
@@ -115,6 +124,7 @@ export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> = (
       onPanResponderRelease,
     })
   );
+
   return (
     <View
       style={{
