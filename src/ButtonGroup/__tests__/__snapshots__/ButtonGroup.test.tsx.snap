@@ -39,7 +39,9 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         }
         accessible={true}
         focusable={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -49,7 +51,6 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         style={
           Object {
             "flex": 1,
-            "opacity": 1,
           }
         }
         testID="RNE__ButtonGroupItem"
@@ -97,7 +98,9 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         }
         accessible={true}
         focusable={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -107,7 +110,6 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         style={
           Object {
             "flex": 1,
-            "opacity": 1,
           }
         }
         testID="RNE__ButtonGroupItem"
@@ -153,7 +155,9 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         }
         accessible={true}
         focusable={true}
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -163,7 +167,6 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         style={
           Object {
             "flex": 1,
-            "opacity": 1,
           }
         }
         testID="RNE__ButtonGroupItem"

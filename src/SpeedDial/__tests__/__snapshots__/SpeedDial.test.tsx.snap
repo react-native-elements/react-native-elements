@@ -23,7 +23,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
     <View
       accessible={true}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -32,17 +34,31 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       onStartShouldSetResponder={[Function]}
       pointerEvents="auto"
       style={
-        Object {
-          "backgroundColor": "rgba(36, 36, 36, 0.6)",
-          "bottom": 0,
-          "left": 0,
-          "opacity": 1,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(36, 36, 36, 0.6)",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
     <RCTSafeAreaView
       emulateUnlessSupported={true}
       pointerEvents="box-none"
@@ -119,9 +135,6 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     "overflow": "hidden",
                   },
                   Object {
-                    "borderRadius": 3,
-                  },
-                  Object {
                     "borderRadius": 28,
                     "elevation": 4,
                   },
@@ -182,6 +195,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     testID="RNE__ICON__CONTAINER"
                   >
                     <View
+                      accessibilityRole="button"
+                      android_ripple={
+                        Object {
+                          "borderless": false,
+                          "color": "rgba(0, 0, 0, 0.3)",
+                          "radius": -5,
+                        }
+                      }
+                      disabled={false}
                       replaceTheme={[Function]}
                       testID="RNE__ICON__CONTAINER_ACTION"
                       updateTheme={[Function]}
@@ -295,9 +317,6 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     "overflow": "hidden",
                   },
                   Object {
-                    "borderRadius": 3,
-                  },
-                  Object {
                     "borderRadius": 28,
                     "elevation": 4,
                   },
@@ -358,6 +377,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     testID="RNE__ICON__CONTAINER"
                   >
                     <View
+                      accessibilityRole="button"
+                      android_ripple={
+                        Object {
+                          "borderless": false,
+                          "color": "rgba(0, 0, 0, 0.3)",
+                          "radius": -5,
+                        }
+                      }
+                      disabled={false}
                       replaceTheme={[Function]}
                       testID="RNE__ICON__CONTAINER_ACTION"
                       updateTheme={[Function]}
@@ -430,9 +458,6 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 "overflow": "hidden",
               },
               Object {
-                "borderRadius": 3,
-              },
-              Object {
                 "borderRadius": 28,
                 "elevation": 4,
               },
@@ -493,6 +518,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 testID="RNE__ICON__CONTAINER"
               >
                 <View
+                  accessibilityRole="button"
+                  android_ripple={
+                    Object {
+                      "borderless": false,
+                      "color": "rgba(0, 0, 0, 0.3)",
+                      "radius": -5,
+                    }
+                  }
+                  disabled={false}
                   replaceTheme={[Function]}
                   testID="RNE__ICON__CONTAINER_ACTION"
                   updateTheme={[Function]}

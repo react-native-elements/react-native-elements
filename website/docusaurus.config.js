@@ -55,10 +55,6 @@ module.exports = {
       backgroundColor: 'var(--ifm-hero-background-color)', // Defaults to `#fff`.
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
     },
-    prism: {
-      theme: require('prism-react-renderer/themes/vsLight'),
-      darkTheme: require('prism-react-renderer/themes/nightOwl'),
-    },
     colorMode: {
       defaultMode: 'dark',
     },
