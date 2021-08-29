@@ -34,6 +34,7 @@ module.exports = {
       {
         docs: {
           path: 'docs',
+          homePageId: 'getting_started',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
