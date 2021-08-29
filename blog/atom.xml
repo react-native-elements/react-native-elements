@@ -8,8 +8,8 @@
     <subtitle>React Native Elements Blog</subtitle>
     <icon>https://reactnativeelements.com/img/website/logo.png</icon>
     <entry>
-        <title type="html"><![CDATA[Google Summer of Code'21]]></title>
-        <id>Google Summer of Code'21</id>
+        <title type="html"><![CDATA[Google Summer of Code 2021]]></title>
+        <id>Google Summer of Code 2021</id>
         <link href="https://reactnativeelements.com/blog/2021/08/18/google-summer-of-code-khushal-agarwal"/>
         <updated>2021-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Automatically generate documentation out of React/React Native Component]]></summary>

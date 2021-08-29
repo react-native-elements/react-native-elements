@@ -8,9 +8,9 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Google Summer of Code'21]]></title>
+            <title><![CDATA[Google Summer of Code 2021]]></title>
             <link>https://reactnativeelements.com/blog/2021/08/18/google-summer-of-code-khushal-agarwal</link>
-            <guid>Google Summer of Code'21</guid>
+            <guid>Google Summer of Code 2021</guid>
             <pubDate>Wed, 18 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Automatically generate documentation out of React/React Native Component]]></description>
         </item>
