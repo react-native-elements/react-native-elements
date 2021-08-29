@@ -2,14 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://reactnativeelements.com/blog</id>
     <title>React Native Elements Blog</title>
-    <updated>2021-08-18T00:00:00.000Z</updated>
+    <updated>2021-08-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://reactnativeelements.com/blog"/>
     <subtitle>React Native Elements Blog</subtitle>
     <icon>https://reactnativeelements.com/img/website/logo.png</icon>
     <entry>
-        <title type="html"><![CDATA[Google Summer of Code 2021]]></title>
-        <id>Google Summer of Code 2021</id>
+        <title type="html"><![CDATA[Google Summer of Code'21 Arpit Bhalla]]></title>
+        <id>Google Summer of Code'21 Arpit Bhalla</id>
+        <link href="https://reactnativeelements.com/blog/2021/08/23/google-summer-of-code-arpitBhalla"/>
+        <updated>2021-08-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[📑 Project Details]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Summer of Code'21 Khushal Agarwal]]></title>
+        <id>Google Summer of Code'21 Khushal Agarwal</id>
         <link href="https://reactnativeelements.com/blog/2021/08/18/google-summer-of-code-khushal-agarwal"/>
         <updated>2021-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Automatically generate documentation out of React/React Native Component]]></summary>

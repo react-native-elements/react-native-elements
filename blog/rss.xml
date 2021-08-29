@@ -4,13 +4,20 @@
         <title>React Native Elements Blog</title>
         <link>https://reactnativeelements.com/blog</link>
         <description>React Native Elements Blog</description>
-        <lastBuildDate>Wed, 18 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Google Summer of Code 2021]]></title>
+            <title><![CDATA[Google Summer of Code'21 Arpit Bhalla]]></title>
+            <link>https://reactnativeelements.com/blog/2021/08/23/google-summer-of-code-arpitBhalla</link>
+            <guid>Google Summer of Code'21 Arpit Bhalla</guid>
+            <pubDate>Mon, 23 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[📑 Project Details]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Google Summer of Code'21 Khushal Agarwal]]></title>
             <link>https://reactnativeelements.com/blog/2021/08/18/google-summer-of-code-khushal-agarwal</link>
-            <guid>Google Summer of Code 2021</guid>
+            <guid>Google Summer of Code'21 Khushal Agarwal</guid>
             <pubDate>Wed, 18 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Automatically generate documentation out of React/React Native Component]]></description>
         </item>
