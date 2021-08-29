@@ -26,8 +26,7 @@ describe('Card Component', () => {
         <Card.Divider />
         <Card.Image
           source={{
-            uri:
-              'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+            uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
           }}
         />
       </Card>
@@ -45,8 +44,7 @@ describe('Card Component', () => {
         <Card.FeaturedSubtitle>featured sub title</Card.FeaturedSubtitle>
         <Card.Image
           source={{
-            uri:
-              'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+            uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
           }}
         />
       </Card>

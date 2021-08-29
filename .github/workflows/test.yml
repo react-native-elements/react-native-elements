@@ -24,13 +24,8 @@ jobs:
         run: |
           yarn global add codecov
           yarn
-      - name: Docs Install
-        run: |
-          yarn global add codecov
-          cd website && yarn
       - name: Testing
         run: |
           yarn lint
           yarn build
           yarn test:ci && npx codecov --disable=gcov
-          cd website && yarn test

@@ -33,8 +33,6 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 - [iconType](#icontype)
 - [light](#light)
 - [loading](#loading)
-- [onLongPress](#onlongpress)
-- [onPress](#onpress)
 - [raised](#raised)
 - [small](#small)
 - [style](#style)
@@ -50,9 +48,9 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 
 Type of button.
 
-| Type            | Default                    |
-| --------------- | -------------------------- |
-| React Component | TouchableHighlight or View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 
@@ -173,26 +171,6 @@ Shows loading indicator.
 | Type    | Default |
 | ------- | ------- |
 | boolean | None    |
-
----
-
-#### onLongPress
-
-Function to call when pressed for a long time.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
-
----
-
-#### onPress
-
-Function to call when button/icon is pressed.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
 
 ---
 

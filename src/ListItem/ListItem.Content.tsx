@@ -11,11 +11,11 @@ export const ListItemContent: RneFunctionComponent<ListItemContentProps> = ({
   style,
   right,
   children,
-  ...props
+  ...rest
 }) => {
   const containerStyle = right ? styles.rightContainer : styles.container;
   return (
-    <View style={[containerStyle, style]} {...props}>
+    <View style={[containerStyle, style]} {...rest}>
       {children}
     </View>
   );

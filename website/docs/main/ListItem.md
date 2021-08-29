@@ -125,7 +125,7 @@ Replace element with custom element.
 
 #### ViewComponent
 
-Container for linear gradien.
+Container for linear gradient.
 
 | Type            | Default |
 | --------------- | ------- |
@@ -145,7 +145,11 @@ Add divider at the bottom of the list item.
 
 #### children
 
-Add enclosed childrens.
+Either children or a render prop that receives a boolean reflecting whether
+
+the component is currently pressed.
+
+Add enclosed children.
 
 | Type | Default |
 | ---- | ------- |
@@ -213,10 +217,9 @@ Decide whether to show animation.
 | ----------------- | ------- |
 | Boolean or Object | {       |
 
-    duration: 350,
-    type: 'timing',
-
-} |
+      duration: 350,
+      type: 'timing',
+    } |
 
 ---
 

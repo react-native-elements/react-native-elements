@@ -57,10 +57,6 @@ Custom ImageComponent for Tile.
 
 #### activeOpacity
 
-Determines what the opacity of the wrapped view should be when touch is active.
-
-Defaults to 0.2
-
 Number passed to control opacity on press.
 
 | Type   | Default |
@@ -135,7 +131,7 @@ Icon Component Props.
 
 | Type               | Default |
 | ------------------ | ------- |
-| Text Style(Object) | None    |
+| View style(Object) | None    |
 
 ---
 

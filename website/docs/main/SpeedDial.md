@@ -32,6 +32,7 @@ If the FAB is tapped in this state, it should either initiate its default action
 
 ### SpeedDial
 
+- [backdropPressableProps](#backdroppressableprops)
 - [children](#children)
 - [isOpen](#isopen)
 - [onClose](#onclose)
@@ -47,6 +48,16 @@ None
 ## Reference
 
 ### SpeedDial
+
+#### backdropPressableProps
+
+Props for Backdrop Pressable
+
+| Type           | Default |
+| -------------- | ------- |
+| PressableProps | None    |
+
+---
 
 #### children
 

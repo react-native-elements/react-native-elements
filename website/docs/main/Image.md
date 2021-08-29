@@ -41,9 +41,9 @@ images with a placeholder and smooth image load transitioning.
 
 Define the component passed to image.
 
-| Type            | Default                  |
-| --------------- | ------------------------ |
-| React Component | TouchableOpacity or View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 
@@ -89,21 +89,25 @@ Additional styling for the container.
 
 #### onLongPress
 
+Called when a long-tap gesture is detected.
+
 Callback function when long pressing component.
 
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
+| Type                                                      | Default |
+| --------------------------------------------------------- | ------- |
+| ((event: GestureResponderEvent) => void) and (() => void) | None    |
 
 ---
 
 #### onPress
 
+Called when a single tap gesture is detected.
+
 Callback function when pressing component.
 
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
+| Type                                                      | Default |
+| --------------------------------------------------------- | ------- |
+| ((event: GestureResponderEvent) => void) and (() => void) | None    |
 
 ---
 
