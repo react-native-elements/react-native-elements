@@ -5,18 +5,21 @@ exec('yarn docs:build', (err) => {
     console.log('[error]: update and commit docs', err);
     return;
   }
-  exec('git status --porcelain', (err, stdout) => {
-    if (err) {
-      console.log('[error]: update and commit docs', err);
+  exec('git status --porcelain', (gitError, stdout) => {
+    if (gitError) {
+      console.log('[error]: update and commit docs', gitError);
       return;
     }
     if (stdout.length) {
-      exec("git add '*.md' && git commit -m 'Update Documentation'", (err) => {
-        if (err) {
-          console.log('[error]: update and commit docs', err);
-          return;
+      exec(
+        "git add '*.md' && git commit -m 'Update Documentation'",
+        (commitError) => {
+          if (commitError) {
+            console.log('[error]: update and commit docs', commitError);
+            return;
+          }
         }
-      });
+      );
     }
   });
 });
