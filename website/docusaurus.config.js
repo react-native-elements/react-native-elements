@@ -33,7 +33,6 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          homePageId: 'getting_started',
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
