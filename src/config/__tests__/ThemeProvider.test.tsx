@@ -100,8 +100,8 @@ describe('ThemeProvider', () => {
     const { queryByTestId } = render(<TestComp />);
     const updateButton = queryByTestId('updateTheme');
     const textTheme = queryByTestId('themeChild');
-    const themeProvider = queryByTestId('themeChild').parent.parent.parent
-      .parent;
+    const themeProvider =
+      queryByTestId('themeChild').parent.parent.parent.parent;
 
     expect(textTheme.props.accessibilityLabel).toEqual('theme-test');
 

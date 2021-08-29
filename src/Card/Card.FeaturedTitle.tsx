@@ -9,32 +9,29 @@ type CardFeaturedTitleProps = TextProps;
 
 /** Add a featured title to the Card.
  * This, Receives all [Text](text#props) props. */
-export const CardFeaturedTitle: RneFunctionComponent<CardFeaturedTitleProps> = ({
-  theme,
-  style,
-  ...props
-}) => (
-  <Text
-    style={
-      StyleSheet.flatten([
-        {
-          fontSize: normalize(18),
-          marginBottom: 8,
-          color: theme?.colors?.white,
-          ...Platform.select({
-            android: {
-              ...fonts.android.black,
-            },
-            default: {
-              fontWeight: '800',
-            },
-          }),
-        },
-        style,
-      ]) as TextStyle
-    }
-    {...props}
-  />
-);
+export const CardFeaturedTitle: RneFunctionComponent<CardFeaturedTitleProps> =
+  ({ theme, style, ...props }) => (
+    <Text
+      style={
+        StyleSheet.flatten([
+          {
+            fontSize: normalize(18),
+            marginBottom: 8,
+            color: theme?.colors?.white,
+            ...Platform.select({
+              android: {
+                ...fonts.android.black,
+              },
+              default: {
+                fontWeight: '800',
+              },
+            }),
+          },
+          style,
+        ]) as TextStyle
+      }
+      {...props}
+    />
+  );
 
 CardFeaturedTitle.displayName = 'Card.FeaturedTitle';
