@@ -48,12 +48,9 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 
 Type of button.
 
-| Type            | Default    |
-| --------------- | ---------- | ----------- | --- | --------- | --- | ---------- |
-| React Component | onPress \| | onLongPress |     | onPressIn |     | onPressOut |
-
-    ? Pressable
-    : View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 

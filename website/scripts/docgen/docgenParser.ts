@@ -123,7 +123,9 @@ const parserOptions = {
     // Input - onPress || onLongPress ? Pressable : View
     // Output - Pressable or View
     if (
-      prop?.defaultValue?.value === 'onPress || onLongPress ? Pressable : View'
+      /\? Pressable : View/.test(
+        prop?.defaultValue?.value.replace(/\n\s+/g, ' ')
+      )
     ) {
       prop.defaultValue.value = 'Pressable or View';
     }

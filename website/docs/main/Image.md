@@ -41,12 +41,9 @@ images with a placeholder and smooth image load transitioning.
 
 Define the component passed to image.
 
-| Type            | Default    |
-| --------------- | ---------- | ----------- | --- | --------- | --- | ---------- |
-| React Component | onPress \| | onLongPress |     | onPressIn |     | onPressOut |
-
-    ? Pressable
-    : View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 

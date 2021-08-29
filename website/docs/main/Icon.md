@@ -49,12 +49,9 @@ They are also used for displaying information.
 
 Update React Native Component.
 
-| Type            | Default    |
-| --------------- | ---------- | ----------- | --- | --------- | --- | ---------- |
-| React Component | onPress \| | onLongPress |     | onPressIn |     | onPressOut |
-
-    ? Pressable
-    : View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 

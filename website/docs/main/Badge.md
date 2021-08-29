@@ -36,12 +36,9 @@ Badges are small components typically used to communicate a numerical value or i
 
 Custom component to replace the badge outer component.
 
-| Type            | Default    |
-| --------------- | ---------- | ----------- | --- | --------- | --- | ---------- |
-| React Component | onPress \| | onLongPress |     | onPressIn |     | onPressOut |
-
-    ? Pressable
-    : View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 
