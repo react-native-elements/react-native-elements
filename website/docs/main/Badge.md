@@ -23,7 +23,6 @@ Badges are small components typically used to communicate a numerical value or i
 - [Component](#component)
 - [badgeStyle](#badgestyle)
 - [containerStyle](#containerstyle)
-- [onPress](#onpress)
 - [status](#status)
 - [textProps](#textprops)
 - [textStyle](#textstyle)
@@ -37,9 +36,9 @@ Badges are small components typically used to communicate a numerical value or i
 
 Custom component to replace the badge outer component.
 
-| Type            | Default                           |
-| --------------- | --------------------------------- |
-| React Component | onPress ? TouchableOpacity : View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 
@@ -60,16 +59,6 @@ Style for the container.
 | Type               | Default |
 | ------------------ | ------- |
 | View style(Object) | None    |
-
----
-
-#### onPress
-
-Function called when pressed on the badge.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
 
 ---
 

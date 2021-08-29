@@ -40,6 +40,11 @@
       "main/tooltip"
     ],
     "Universe Components": ["universe/circularslider"],
-    "Repo": ["repo/contributing", "repo/testing", "repo/labels"]
+    "Repo": [
+      "repo/contributing",
+      "repo/testing",
+      "repo/labels",
+      "migration_v3_to_v4"
+    ]
   }
 }

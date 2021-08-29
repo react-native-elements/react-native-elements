@@ -1,7 +1,7 @@
 import React from 'react';
 import CheckBox from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { TouchableOpacity, View, Text, Image } from 'react-native';
+import { Pressable, View, Text, Image } from 'react-native';
 import { FullTheme } from '../../config';
 
 describe('CheckBox Component', () => {
@@ -10,9 +10,9 @@ describe('CheckBox Component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('should use TouchableOpacity as default component', () => {
+  it('should use Pressable as default component', () => {
     const { wrapper } = renderWithWrapper(<CheckBox checked />);
-    expect(wrapper.findAllByType(TouchableOpacity).length).toBe(1);
+    expect(wrapper.findAllByType(Pressable).length).toBe(1);
   });
 
   it('should allow to pass custom component', () => {

@@ -90,6 +90,7 @@
     "testPathIgnorePatterns": [
       "./src/SearchBar/__tests__/common.tsx",
       "<rootDir>/node_modules",
+      "<rootDir>/website",
       "<rootDir>/dist"
     ],
     "coveragePathIgnorePatterns": [

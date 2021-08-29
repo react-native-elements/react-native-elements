@@ -9,32 +9,29 @@ export type CardFeaturedSubtitleProps = TextProps;
 
 /** Add a featured subtitle to the Card.
  * This, Receives all [Text](text#props) props. */
-export const CardFeaturedSubtitle: RneFunctionComponent<CardFeaturedSubtitleProps> = ({
-  theme,
-  style,
-  ...props
-}) => (
-  <Text
-    style={
-      StyleSheet.flatten([
-        {
-          fontSize: normalize(13),
-          marginBottom: 8,
-          color: theme?.colors?.white,
-          ...Platform.select({
-            android: {
-              ...fonts.android.black,
-            },
-            default: {
-              fontWeight: '400',
-            },
-          }),
-        },
-        style,
-      ]) as TextStyle
-    }
-    {...props}
-  />
-);
+export const CardFeaturedSubtitle: RneFunctionComponent<CardFeaturedSubtitleProps> =
+  ({ theme, style, ...rest }) => (
+    <Text
+      style={
+        StyleSheet.flatten([
+          {
+            fontSize: normalize(13),
+            marginBottom: 8,
+            color: theme?.colors?.white,
+            ...Platform.select({
+              android: {
+                ...fonts.android.black,
+              },
+              default: {
+                fontWeight: '400',
+              },
+            }),
+          },
+          style,
+        ]) as TextStyle
+      }
+      {...rest}
+    />
+  );
 
 CardFeaturedSubtitle.displayName = 'Card.FeaturedSubtitle';

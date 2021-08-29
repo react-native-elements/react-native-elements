@@ -27,6 +27,7 @@ Also receives all [Button](https://reactnativeelements.com/docs/button#props) pr
 - [color](#color)
 - [placement](#placement)
 - [size](#size)
+- [style](#style)
 - [upperCase](#uppercase)
 - [visible](#visible)
 
@@ -61,6 +62,18 @@ Change Size of FAB.
 | Type               | Default |
 | ------------------ | ------- |
 | "small" or "large" | large   |
+
+---
+
+#### style
+
+//FIXME: not in doc but available in examples
+
+Style for FAB
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 

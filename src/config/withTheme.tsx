@@ -39,9 +39,9 @@ const ThemedComponent = (
               replaceTheme,
               ...deepmerge<FullTheme>(
                 (themeKey &&
-                  (theme[themeKey as keyof Partial<FullTheme>] as Partial<
-                    FullTheme
-                  >)) ||
+                  (theme[
+                    themeKey as keyof Partial<FullTheme>
+                  ] as Partial<FullTheme>)) ||
                   {},
                 rest,
                 {

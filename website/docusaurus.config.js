@@ -33,8 +33,8 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          homePageId: 'getting_started',
           path: 'docs',
+          homePageId: 'getting_started',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
@@ -54,10 +54,6 @@ module.exports = {
         '⭐️ If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐',
       backgroundColor: 'var(--ifm-hero-background-color)', // Defaults to `#fff`.
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
-    },
-    prism: {
-      theme: require('prism-react-renderer/themes/vsLight'),
-      darkTheme: require('prism-react-renderer/themes/nightOwl'),
     },
     colorMode: {
       defaultMode: 'dark',

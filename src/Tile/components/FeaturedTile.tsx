@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  TouchableOpacity,
+  Pressable,
   View,
   StyleSheet,
   Dimensions,
@@ -23,70 +23,28 @@ const renderText = (
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-const FeaturedTile: RneFunctionComponent<TileProps> = (props) => {
-  const {
-    title,
-    icon,
-    caption,
-    imageSrc,
-    containerStyle,
-    imageContainerStyle,
-    overlayContainerStyle,
-    iconContainerStyle,
-    titleStyle,
-    captionStyle,
-    ImageComponent = BackgroundImage,
-    imageProps = {},
-    ...attributes
-  } = props;
-  const {
-    width = Dimensions.get('window').width,
-    height = width * 0.8,
-  } = props;
-  const styles = StyleSheet.create({
-    container: {
-      width,
-      height,
-    },
-    imageContainer: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      width,
-      height,
-    },
-    overlayContainer: {
-      flex: 1,
-      alignItems: 'center',
-      alignSelf: 'stretch',
-      justifyContent: 'center',
-      paddingLeft: 25,
-      paddingRight: 25,
-      paddingTop: 45,
-      paddingBottom: 40,
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-    },
-    text: {
-      color: '#ffffff',
-      backgroundColor: 'rgba(0,0,0,0)',
-      marginBottom: 15,
-      textAlign: 'center',
-    },
-    iconContainer: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignSelf: 'center',
-    },
-  });
-
+const FeaturedTile: RneFunctionComponent<TileProps> = ({
+  title,
+  icon,
+  caption,
+  imageSrc,
+  containerStyle,
+  imageContainerStyle,
+  overlayContainerStyle,
+  iconContainerStyle,
+  titleStyle,
+  captionStyle,
+  ImageComponent = BackgroundImage,
+  imageProps = {},
+  width = Dimensions.get('window').width,
+  height = width * 0.8,
+  ...attributes
+}) => {
   return (
-    <TouchableOpacity
+    <Pressable
       {...attributes}
       style={StyleSheet.flatten([
-        styles.container,
+        { width, height },
         containerStyle && containerStyle,
       ])}
     >
@@ -95,6 +53,7 @@ const FeaturedTile: RneFunctionComponent<TileProps> = (props) => {
         {...imageProps}
         source={imageSrc}
         style={StyleSheet.flatten([
+          { width, height },
           styles.imageContainer,
           imageContainerStyle && imageContainerStyle,
         ])}
@@ -123,10 +82,43 @@ const FeaturedTile: RneFunctionComponent<TileProps> = (props) => {
           {renderText(caption, { style: captionStyle }, styles.text)}
         </View>
       </ImageComponent>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 
 const ThemedFeaturedTile = withTheme(FeaturedTile, 'FeaturedTile');
 
 export { FeaturedTile, ThemedFeaturedTile };
+
+const styles = StyleSheet.create({
+  imageContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  overlayContainer: {
+    flex: 1,
+    alignItems: 'center',
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 45,
+    paddingBottom: 40,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  text: {
+    color: '#ffffff',
+    backgroundColor: 'rgba(0,0,0,0)',
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+});

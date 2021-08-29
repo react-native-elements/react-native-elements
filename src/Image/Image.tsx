@@ -7,51 +7,56 @@ import {
   NativeSyntheticEvent,
   StyleProp,
   StyleSheet,
-  TouchableOpacity,
   View,
+  Pressable,
   ViewStyle,
+  Text,
 } from 'react-native';
-import { Text } from '..';
-import { RneFunctionComponent } from '../helpers';
+import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
-export type ImageProps = RNImageProps & {
-  /** Define the component passed to image. */
-  Component?: typeof React.Component;
+export type ImageProps = RNImageProps &
+  InlinePressableProps & {
+    /** Define the component passed to image. */
+    Component?: typeof React.Component;
 
-  /** Callback function when pressing component. */
-  onPress?(): void;
+    /** Callback function when pressing component. */
+    onPress?(): void;
 
-  /** Callback function when long pressing component. */
-  onLongPress?(): void;
+    /** Callback function when long pressing component. */
+    onLongPress?(): void;
 
-  /** Specify a different component as the Image component. */
-  ImageComponent?: typeof React.Component;
+    /** Specify a different component as the Image component. */
+    ImageComponent?: typeof React.Component;
 
-  /** Content to load when Image is rendering. */
-  PlaceholderContent?: React.ReactElement<any>;
+    /** Content to load when Image is rendering. */
+    PlaceholderContent?: React.ReactElement<any>;
 
-  /** Additional styling for the container. */
-  containerStyle?: StyleProp<ViewStyle>;
+    /** Additional styling for the container. */
+    containerStyle?: StyleProp<ViewStyle>;
 
-  /** Additional styling for the children container. */
-  childrenContainerStyle?: StyleProp<ViewStyle>;
+    /** Additional styling for the children container. */
+    childrenContainerStyle?: StyleProp<ViewStyle>;
 
-  /** Additional styling for the placeholder container. */
-  placeholderStyle?: StyleProp<ViewStyle>;
+    /** Additional styling for the placeholder container. */
+    placeholderStyle?: StyleProp<ViewStyle>;
 
-  /** Perform fade transition on image load. */
-  transition?: boolean;
+    /** Perform fade transition on image load. */
+    transition?: boolean;
 
-  /** Perform fade transition on image load. */
-  transitionDuration?: number;
-};
+    /** Perform fade transition on image load. */
+    transitionDuration?: number;
+  };
 
 /** Drop-in replacement for the standard React Native Image component that displays
 images with a placeholder and smooth image load transitioning. */
 export const Image: RneFunctionComponent<ImageProps> = ({
   onPress,
   onLongPress,
-  Component = onPress || onLongPress ? TouchableOpacity : View,
+  onPressIn,
+  onPressOut,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   placeholderStyle,
   PlaceholderContent,
   containerStyle,
@@ -62,9 +67,9 @@ export const Image: RneFunctionComponent<ImageProps> = ({
   children,
   transition,
   transitionDuration = 360,
+  pressableProps,
   ...props
 }) => {
-  const root = React.useRef<ImageNative>(null);
   const placeholderOpacity = React.useRef(new Animated.Value(1));
 
   const onLoadHandler = useCallback(
@@ -87,13 +92,12 @@ export const Image: RneFunctionComponent<ImageProps> = ({
 
   return (
     <Component
-      onPress={onPress}
-      onLongPress={onLongPress}
+      {...pressableProps}
+      {...{ onPress, onPressIn, onPressOut, onLongPress }}
       accessibilityIgnoresInvertColors={true}
       style={StyleSheet.flatten([styles.container, containerStyle])}
     >
       <ImageComponent
-        ref={root}
         testID="RNE__Image"
         {...props}
         {...{ transition, transitionDuration }}

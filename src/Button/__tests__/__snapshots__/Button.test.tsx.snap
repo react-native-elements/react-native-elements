@@ -11,9 +11,6 @@ exports[`Button Component Button type $type should display disabled undefined bu
           "borderRadius": 3,
           "overflow": "hidden",
         },
-        Object {
-          "borderRadius": 3,
-        },
         undefined,
         false,
       ]
@@ -72,9 +69,6 @@ exports[`Button Component Button type $type should display disabled undefined bu
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,
@@ -135,9 +129,6 @@ exports[`Button Component Button type $type should display disabled undefined bu
           "borderRadius": 3,
           "overflow": "hidden",
         },
-        Object {
-          "borderRadius": 3,
-        },
         undefined,
         false,
       ]
@@ -196,9 +187,6 @@ exports[`Button Component Button type $type should display raised undefined butt
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         Object {
@@ -269,9 +257,6 @@ exports[`Button Component Button type $type should display raised undefined butt
           "borderRadius": 3,
           "overflow": "hidden",
         },
-        Object {
-          "borderRadius": 3,
-        },
         undefined,
         Object {
           "backgroundColor": "#fff",
@@ -340,9 +325,6 @@ exports[`Button Component Button type $type should display raised undefined butt
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         Object {
@@ -413,9 +395,6 @@ exports[`Button Component Button type $type should display undefined button 1`] 
           "borderRadius": 3,
           "overflow": "hidden",
         },
-        Object {
-          "borderRadius": 3,
-        },
         undefined,
         false,
       ]
@@ -475,9 +454,6 @@ exports[`Button Component Button type $type should display undefined button 2`] 
           "borderRadius": 3,
           "overflow": "hidden",
         },
-        Object {
-          "borderRadius": 3,
-        },
         undefined,
         false,
       ]
@@ -536,9 +512,6 @@ exports[`Button Component Button type $type should display undefined button 3`] 
         Object {
           "borderRadius": 3,
           "overflow": "hidden",
-        },
-        Object {
-          "borderRadius": 3,
         },
         undefined,
         false,

@@ -60,9 +60,9 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 Component for enclosing element (eg: TouchableHighlight, View, etc).
 
-| Type            | Default                  |
-| --------------- | ------------------------ |
-| React Component | TouchableOpacity or View |
+| Type            | Default           |
+| --------------- | ----------------- |
+| React Component | Pressable or View |
 
 ---
 
@@ -140,9 +140,11 @@ Optional properties to pass to the avatar e.g "resizeMode".
 
 Callback function when long pressing component.
 
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
+Called when a long-tap gesture is detected.
+
+| Type                                                      | Default |
+| --------------------------------------------------------- | ------- |
+| (() => void) and ((event: GestureResponderEvent) => void) | None    |
 
 ---
 
@@ -150,9 +152,11 @@ Callback function when long pressing component.
 
 Callback function when pressing component.
 
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
+Called when a single tap gesture is detected.
+
+| Type                                                      | Default |
+| --------------------------------------------------------- | ------- |
+| (() => void) and ((event: GestureResponderEvent) => void) | None    |
 
 ---
 
