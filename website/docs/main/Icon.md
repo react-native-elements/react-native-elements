@@ -49,13 +49,12 @@ They are also used for displaying information.
 
 Update React Native Component.
 
-| Type            | Default                                        |
-| --------------- | ---------------------------------------------- |
-| React Component | (ios),(android),(web),TouchableNativeFeedback( |
+| Type            | Default    |
+| --------------- | ---------- | ----------- | --- | --------- | --- | ---------- |
+| React Component | onPress \| | onLongPress |     | onPressIn |     | onPressOut |
 
-android),TouchableHighlight(
-default),undefined(
-) \| View |
+    ? Pressable
+    : View |
 
 ---
 

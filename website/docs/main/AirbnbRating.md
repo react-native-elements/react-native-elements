@@ -14,7 +14,7 @@ Use Rating over an Input where imagery can increase user interaction.
 
 This component is imported from [react-native-ratings](https://github.com/Monte9/react-native-ratings).
 
-There are two tyoes of rating - TapRating and SwipeRating.
+There are two types of rating - TapRating and SwipeRating.
 
 This documentation is for Tap Rating version.
 

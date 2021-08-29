@@ -58,19 +58,15 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 
 Choose other button component such as TouchableOpacity.
 
-| Type            | Default                                        |
-| --------------- | ---------------------------------------------- |
-| React Component | (ios),(android),(web),TouchableNativeFeedback( |
-
-android),TouchableOpacity(
-default),undefined(
-) |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
 
 ---
 
 #### activeOpacity
 
-Add active opacity to the button in buttongroup.
+Add active opacity to the button in buttonGroup.
 
 | Type   | Default |
 | ------ | ------- |
@@ -200,11 +196,13 @@ Function called on hiding underlay.
 
 #### onPress
 
+Called when a single tap gesture is detected.
+
 Method to update Button Group Index.
 
-| Type                     | Default  |
-| ------------------------ | -------- |
-| (...args: any[]) => void | Function |
+| Type                                                                    | Default  |
+| ----------------------------------------------------------------------- | -------- |
+| ((event: GestureResponderEvent) => void) and ((...args: any[]) => void) | Function |
 
 ---
 
@@ -270,7 +268,7 @@ Specify specific styling for text in the selected state.
 
 #### setOpacityTo
 
-Funtion to set the opacity.
+Function to set the opacity.
 
 | Type                    | Default |
 | ----------------------- | ------- |
