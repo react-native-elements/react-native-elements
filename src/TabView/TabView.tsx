@@ -4,10 +4,13 @@ import {
   PanResponder,
   View,
   StyleSheet,
+  useWindowDimensions,
   PanResponderGestureState,
   GestureResponderEvent,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
-import { RneFunctionComponent, ScreenWidth } from '../helpers';
+import { RneFunctionComponent } from '../helpers';
 
 export type TabViewBaseProps = {
   /** Child position index value. */
@@ -24,6 +27,12 @@ export type TabViewBaseProps = {
     Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,
     'toValue'
   >;
+
+  /** Styling for Component container. */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /** Styling for TabView.Item Component container. */
+  tabItemContainerStyle?: StyleProp<ViewStyle>;
 };
 
 /** Tabs organize content across different screens, data sets, and other interactions.
@@ -34,7 +43,10 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   value = 0,
   animationType = 'spring',
   animationConfig = {},
+  containerStyle,
+  tabItemContainerStyle,
 }) => {
+  const { width: screenWidth } = useWindowDimensions();
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
   const length = React.Children.count(children);
@@ -52,7 +64,7 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
     if (Math.abs(dy) > Math.abs(dx)) {
       return;
     }
-    const position = dx / -ScreenWidth;
+    const position = dx / -screenWidth;
     const next = position > value ? Math.ceil(position) : Math.floor(position);
     onChange?.(currentIndex.current + next);
   };
@@ -81,24 +93,29 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   return (
     <Animated.View
       testID="tabView-test"
-      style={[
+      style={StyleSheet.flatten([
         styles.container,
         {
-          width: ScreenWidth * length,
+          width: screenWidth * length,
           transform: [
             {
               translateX: translateX.interpolate({
                 inputRange: [0, 1],
-                outputRange: [0, -ScreenWidth],
+                outputRange: [0, -screenWidth],
               }),
             },
           ],
         },
-      ]}
+        containerStyle,
+      ])}
       {...panResponder.panHandlers}
     >
       {React.Children.map(children, (child) => (
-        <View style={styles.container}>{child}</View>
+        <View
+          style={StyleSheet.flatten([styles.container, tabItemContainerStyle])}
+        >
+          {child}
+        </View>
       ))}
     </Animated.View>
   );
@@ -107,9 +124,9 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
     flexDirection: 'row',
     alignItems: 'stretch',
-    width: ScreenWidth,
   },
 });
 
