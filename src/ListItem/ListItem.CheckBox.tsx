@@ -6,14 +6,14 @@ import { RneFunctionComponent } from '../helpers';
 export type ListItemCheckBoxProps = CheckBoxProps;
 
 /** This allows adding CheckBox to the ListItem.
- * This, Receives all [CheckBox](checkbox.md#props) props. */
+ * This, Receives all [CheckBox](checkbox#props) props. */
 export const ListItemCheckBox: RneFunctionComponent<ListItemCheckBoxProps> = ({
   containerStyle,
-  ...props
+  ...rest
 }) => {
   return (
     <CheckBox
-      {...props}
+      {...rest}
       containerStyle={StyleSheet.flatten([styles.container, containerStyle])}
     />
   );

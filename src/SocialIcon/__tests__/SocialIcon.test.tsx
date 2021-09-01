@@ -1,20 +1,20 @@
 import React from 'react';
 import SocialIcon from '..';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 import Text from '../../Text';
 import Icon from '../../Icon';
 import { fireEvent } from '@testing-library/react-native';
 import { SocialMediaType } from '../SocialIcon';
 
 describe('SocialIcon component', () => {
-  it('should render without issues', () => {
-    const { queryByTestId } = renderWithTheme(<SocialIcon type="twitter" />);
+  it('should match snapshot', () => {
+    const { queryByTestId } = renderWithWrapper(<SocialIcon type="twitter" />);
     const tree = queryByTestId('RNE_SocialIcon');
     expect(tree).not.toBeNull();
   });
 
   it('should show loading indicator', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon type="twitter" loading />
     );
     const component = queryByTestId('RNE_ActivityIndicator');
@@ -22,7 +22,7 @@ describe('SocialIcon component', () => {
   });
 
   it('should show loading indicator in small size', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon loading small="small" />
     );
     const component = queryByTestId('RNE_ActivityIndicator');
@@ -30,7 +30,7 @@ describe('SocialIcon component', () => {
   });
 
   it('should show loading indicator in white color', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon loading iconColor={null} />
     );
     const component = queryByTestId('RNE_ActivityIndicator');
@@ -38,7 +38,7 @@ describe('SocialIcon component', () => {
   });
 
   it('should render light social icon', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon light raised={false} type="medium" />
     );
     const component = queryByTestId('RNE_SocialIcon');
@@ -47,7 +47,7 @@ describe('SocialIcon component', () => {
 
   it('should have width and height based on iconSize', () => {
     const ICON_SIZE = 32;
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon
         button={false}
         light={false}
@@ -62,7 +62,7 @@ describe('SocialIcon component', () => {
   });
 
   it('should use style and font from props', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon
         button
         light
@@ -98,7 +98,7 @@ describe('SocialIcon component', () => {
   });
 
   it('should render social icon button', () => {
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon title="Sign In With Facebook" button type="facebook" />
     );
     const rootComponent = queryByTestId('RNE_SocialIcon');
@@ -109,7 +109,7 @@ describe('SocialIcon component', () => {
 
   it('should have onPress event', () => {
     const onPress = jest.fn();
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon onPress={onPress} type="gitlab" />
     );
     const rootComponent = queryByTestId('RNE_SocialIcon');
@@ -120,7 +120,7 @@ describe('SocialIcon component', () => {
 
   it('should NOT have onPress event when disabled', () => {
     const onPress = jest.fn();
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <SocialIcon onPress={onPress} disabled />
     );
     const rootComponent = queryByTestId('RNE_SocialIcon');
@@ -135,7 +135,7 @@ describe('SocialIcon component', () => {
         type: 'facebook' as SocialMediaType,
       },
     };
-    const { queryByTestId } = renderWithTheme(<SocialIcon />, theme);
+    const { queryByTestId } = renderWithWrapper(<SocialIcon />, '', theme);
     const rootComponent = queryByTestId('RNE_SocialIcon');
     const iconComponent = rootComponent.findByType(Icon);
     expect(iconComponent.props.name).toBe('facebook');

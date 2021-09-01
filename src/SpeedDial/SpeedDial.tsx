@@ -4,7 +4,8 @@ import {
   Animated,
   StyleSheet,
   SafeAreaView,
-  TouchableWithoutFeedback,
+  Pressable,
+  PressableProps,
 } from 'react-native';
 import FAB, { FABProps } from '../FAB';
 import { IconNode } from '../Icon';
@@ -16,10 +17,10 @@ export type SpeedDialProps = {
   isOpen: boolean;
 
   /** Callback fired when the component requests to be open. */
-  onOpen: () => void;
+  onOpen?: () => void;
 
   /** Callback fired when the component requests to be closed. */
-  onClose: () => void;
+  onClose?: () => void;
 
   /** Icon shown on FAB when action stack is open. */
   openIcon?: IconNode;
@@ -27,18 +28,21 @@ export type SpeedDialProps = {
   /** Add overlay color to the speed dial. */
   overlayColor?: string;
 
-  /** Add childen elements to the speed dial. */
-
+  /** SpeedDial Action as children. */
   children?: React.ReactChild[];
 
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
+
+  /** Props for Backdrop Pressable */
+  backdropPressableProps?: PressableProps;
 } & FABProps;
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
  * If more than six actions are needed, something other than a FAB should be used to present them.
  * Upon press, the FAB remains visible and emits a stack of related actions.
- * If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions. */
+ * If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
+ */
 export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   isOpen,
   onOpen = () => {},
@@ -50,7 +54,8 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme,
-  ...props
+  backdropPressableProps: pressableProps,
+  ...rest
 }) => {
   const animations = React.useRef<Animated.Value[]>(
     [...new Array(React.Children.count(children))].map(
@@ -75,7 +80,13 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
 
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
-      <TouchableWithoutFeedback onPress={onClose}>
+      {/* For overlay  */}
+      <Pressable
+        {...pressableProps}
+        onPress={onClose}
+        style={[StyleSheet.absoluteFillObject]}
+        pointerEvents={isOpen ? 'auto' : 'none'}
+      >
         <Animated.View
           style={[
             StyleSheet.absoluteFillObject,
@@ -86,9 +97,8 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
                 Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
             },
           ]}
-          pointerEvents={isOpen ? 'auto' : 'none'}
         />
-      </TouchableWithoutFeedback>
+      </Pressable>
 
       <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
         {React.Children.toArray(children).map((ChildAction, i: number) => (
@@ -106,7 +116,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         <FAB
           style={[styles.fab]}
           icon={isOpen ? openIcon : icon}
-          {...props}
+          {...rest}
           onPress={isOpen ? onClose : onOpen}
         />
       </SafeAreaView>

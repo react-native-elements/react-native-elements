@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon component should apply raised styles 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Object {
+        "borderRadius": 28,
+        "height": 52,
+        "margin": 7,
+        "overflow": "hidden",
+        "shadowColor": "rgba(0,0,0, .4)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 1,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+        "width": 52,
+      }
+    }
+    testID="RNE__ICON__CONTAINER"
+  >
+    <View
+      accessibilityRole="button"
+      android_ripple={
+        Object {
+          "borderless": false,
+          "color": "rgba(0, 0, 0, 0.3)",
+          "radius": -5,
+        }
+      }
+      disabled={false}
+      replaceTheme={[Function]}
+      testID="RNE__ICON__CONTAINER_ACTION"
+      updateTheme={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 28,
+            "height": 52,
+            "justifyContent": "center",
+            "width": 52,
+          }
+        }
+        testID="RNE__ICON"
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#242424",
+                "fontSize": 24,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="RNE__ICON__Component"
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Icon component should apply reverse styles 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Object {
+        "borderRadius": 28,
+        "height": 52,
+        "margin": 7,
+        "overflow": "hidden",
+        "width": 52,
+      }
+    }
+    testID="RNE__ICON__CONTAINER"
+  >
+    <View
+      accessibilityRole="button"
+      android_ripple={
+        Object {
+          "borderless": false,
+          "color": "rgba(36, 36, 36, 0.3)",
+          "radius": -5,
+        }
+      }
+      disabled={false}
+      replaceTheme={[Function]}
+      testID="RNE__ICON__CONTAINER_ACTION"
+      updateTheme={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#242424",
+            "borderRadius": 28,
+            "height": 52,
+            "justifyContent": "center",
+            "width": 52,
+          }
+        }
+        testID="RNE__ICON"
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="RNE__ICON__Component"
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Icon component should render with icon type 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Object {
+        "borderRadius": 30,
+        "height": 52,
+        "margin": 7,
+        "overflow": "hidden",
+        "width": 52,
+      }
+    }
+    testID="RNE__ICON__CONTAINER"
+  >
+    <View
+      accessibilityRole="button"
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      replaceTheme={[Function]}
+      testID="RNE__ICON__CONTAINER_ACTION"
+      updateTheme={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "red",
+            "borderRadius": 28,
+            "height": 52,
+            "justifyContent": "center",
+            "width": 52,
+          }
+        }
+        testID="RNE__ICON"
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#ffffff",
+                "fontSize": 24,
+              },
+              Object {
+                "backgroundColor": "peru",
+                "borderRadius": 30,
+              },
+              Object {
+                "fontFamily": "Octicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="RNE__ICON__Component"
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Icon component should set underlayColor to color when styles when underlayColor absent 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
+    testID="RNE__ICON__CONTAINER"
+  >
+    <View
+      accessibilityRole="button"
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      replaceTheme={[Function]}
+      testID="RNE__ICON__CONTAINER_ACTION"
+      updateTheme={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+          }
+        }
+        testID="RNE__ICON"
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#242424",
+                "fontSize": 24,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "fontFamily": "Material Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+          testID="RNE__ICON__Component"
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

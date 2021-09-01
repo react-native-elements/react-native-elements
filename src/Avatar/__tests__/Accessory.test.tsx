@@ -1,14 +1,14 @@
 import React from 'react';
 import Avatar from '..';
-import { renderWithTheme, renderWithWrapper } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Accessory Component', () => {
   jest.useFakeTimers();
-  it('uses Icon', () => {
-    const component = renderWithTheme(<Avatar.Accessory />);
+  it('should uses Icon', () => {
+    const component = renderWithWrapper(<Avatar.Accessory />);
     expect(component.toJSON()).toMatchSnapshot();
   });
-  it('uses Image', () => {
+  it('should uses Image', () => {
     const { wrapper } = renderWithWrapper(
       <Avatar.Accessory source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }} />,
       'RNE__Image'

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Badge Component should render without issue 1`] = `
+exports[`Badge Component should match snapshot 1`] = `
 <View
   testID="wrapper"
 >

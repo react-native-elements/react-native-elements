@@ -36,7 +36,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   indicatorStyle,
   disableIndicator,
   variant,
-  ...props
+  ...rest
 }) => {
   const [dim, setDim] = React.useState({ width: 0 });
   const { current: animation } = React.useRef(new Animated.Value(0));
@@ -54,7 +54,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   return (
     <>
       <View
-        {...props}
+        {...rest}
         accessibilityRole="tablist"
         style={[
           styles.viewStyle,

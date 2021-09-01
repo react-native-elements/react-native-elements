@@ -1,22 +1,22 @@
 import React from 'react';
 import SearchBar from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('SearchBar wrapper component', () => {
-  it('should render without issues', () => {
-    const component = renderWithTheme(<SearchBar />);
+  it('should match snapshot', () => {
+    const component = renderWithWrapper(<SearchBar />);
     expect(component).not.toBeNull();
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should render an iOS SearchBar', () => {
-    const component = renderWithTheme(<SearchBar platform="ios" />);
+    const component = renderWithWrapper(<SearchBar platform="ios" />);
     expect(component).not.toBeNull();
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should render an Android SearchBar', () => {
-    const component = renderWithTheme(<SearchBar platform="android" />);
+    const component = renderWithWrapper(<SearchBar platform="android" />);
     expect(component).not.toBeNull();
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -27,7 +27,11 @@ describe('SearchBar wrapper component', () => {
         placeholder: 'Enter search term',
       },
     };
-    const component = renderWithTheme(<SearchBar platform="android" />, theme);
+    const component = renderWithWrapper(
+      <SearchBar platform="android" />,
+      '',
+      theme
+    );
     expect(component.queryByTestId('RNE__SearchBar').props.placeholder).toBe(
       'Enter search term'
     );

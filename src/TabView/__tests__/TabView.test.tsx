@@ -1,11 +1,11 @@
 import React from 'react';
 import TabView from '../index';
-import { renderWithTheme } from '../../../.ci/testHelper';
+import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Tab Component', () => {
-  it('should render without issues', () => {
+  it('should match snapshot', () => {
     const onValueChange = jest.fn();
-    const { queryByTestId } = renderWithTheme(
+    const { queryByTestId } = renderWithWrapper(
       <TabView onChange={onValueChange} value={0}>
         <TabView.Item />
         <TabView.Item />

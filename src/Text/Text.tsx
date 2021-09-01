@@ -40,7 +40,7 @@ export type TextProps = TextProperties & {
   h4Style?: StyleProp<TextStyle>;
 };
 
-/** Text displays words and characters at various sizes. */
+/** Text displays words and characters of various sizes. */
 export const Text: RneFunctionComponent<TextProps> = ({
   style = {},
   h1 = false,

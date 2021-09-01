@@ -1,5 +1,7 @@
 import Snack from './snack/index.md'
 
+<!-- To display the available Icon set which is not commented in the component. -->
+
 > Hint: use **reverse** to make your icon look like a button
 
 ## Available Icon Sets

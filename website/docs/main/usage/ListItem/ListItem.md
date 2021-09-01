@@ -2,6 +2,8 @@ import Snack from './snack/index.md'
 
 <Snack />
 
+<!-- Examples of several use cases which are covered here and are not yet added to the snack. -->
+
 ### Using Map Function - Implemented with avatar
 
 ```js
@@ -161,7 +163,6 @@ import { ListItem, Avatar } from 'react-native-elements'
 render () {
   return (
     <ListItem>
-      <Avatar source={require('../images/avatar1.jpg')} />
       <ListItem.Content>
         <ListItem.Title>Limited supply! Its like digital gold!</ListItem.Title>
         <View style={styles.subtitleView}>
@@ -191,8 +192,6 @@ styles = StyleSheet.create({
 ```
 
 ### Badges
-
-<img alt="Badges" src={useBaseUrl('img/list-badges.png')} />
 
 Example badge usage
 

@@ -8,11 +8,12 @@
       "troubleshooting"
     ],
     "Components": [
+      "main/airbnbrating",
       "main/avatar",
       "main/badge",
       "main/bottomsheet",
       "main/button",
-      "main/button_group",
+      "main/buttongroup",
       "main/card",
       "main/checkbox",
       "main/chip",
@@ -22,22 +23,28 @@
       "main/icon",
       "main/image",
       "main/input",
-      "main/linearProgress",
+      "main/linearprogress",
       "main/listitem",
       "main/overlay",
-      "main/pricing",
+      "main/pricingcard",
       "main/rating",
       "main/searchbar",
       "main/slider",
-      "main/social_icon",
+      "main/socialicon",
       "main/speeddial",
       "main/switch",
       "main/tab",
+      "main/tabview",
       "main/text",
       "main/tile",
       "main/tooltip"
     ],
     "Universe Components": ["universe/circularslider"],
-    "Repo": ["repo/contributing", "repo/testing", "repo/labels"]
+    "Repo": [
+      "repo/contributing",
+      "repo/testing",
+      "repo/labels",
+      "migration_v3_to_v4"
+    ]
   }
 }

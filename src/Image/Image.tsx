@@ -1,139 +1,148 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   Animated,
   Image as ImageNative,
+  ImageLoadEventData,
+  ImageProps as RNImageProps,
+  NativeSyntheticEvent,
+  StyleProp,
   StyleSheet,
   View,
-  TouchableOpacity,
-  ImageProps as RNImageProps,
+  Pressable,
   ViewStyle,
-  StyleProp,
-  ImageStyle,
+  Text,
 } from 'react-native';
-import { ThemeProps } from '../config';
+import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
-export type ImageProps = RNImageProps & {
-  Component?: typeof React.Component;
-  onPress?(): void;
-  onLongPress?(): void;
-  ImageComponent?: React.ComponentType<any>;
-  PlaceholderContent?: React.ReactElement<any>;
-  containerStyle?: StyleProp<ViewStyle>;
-  childrenContainerStyle?: StyleProp<ViewStyle>;
-  placeholderStyle?: StyleProp<ViewStyle>;
-  transition?: boolean;
-  transitionDuration?: number;
-};
+export type ImageProps = RNImageProps &
+  InlinePressableProps & {
+    /** Define the component passed to image. */
+    Component?: typeof React.Component;
 
-type ImageState = {
-  placeholderOpacity: Animated.Value;
-};
+    /** Callback function when pressing component. */
+    onPress?(): void;
 
-export class Image extends React.Component<
-  ImageProps & Partial<ThemeProps<ImageProps>>,
-  ImageState
-> {
-  static displayName = 'Image';
-  static getSize = ImageNative.getSize;
-  static getSizeWithHeaders = ImageNative.getSizeWithHeaders;
-  static prefetch = ImageNative.prefetch;
-  static abortPrefetch = ImageNative.abortPrefetch;
-  static queryCache = ImageNative.queryCache;
-  static resolveAssetSource = ImageNative.resolveAssetSource;
+    /** Callback function when long pressing component. */
+    onLongPress?(): void;
 
-  state = {
-    placeholderOpacity: new Animated.Value(1),
+    /** Specify a different component as the Image component. */
+    ImageComponent?: typeof React.Component;
+
+    /** Content to load when Image is rendering. */
+    PlaceholderContent?: React.ReactElement<any>;
+
+    /** Additional styling for the container. */
+    containerStyle?: StyleProp<ViewStyle>;
+
+    /** Additional styling for the children container. */
+    childrenContainerStyle?: StyleProp<ViewStyle>;
+
+    /** Additional styling for the placeholder container. */
+    placeholderStyle?: StyleProp<ViewStyle>;
+
+    /** Perform fade transition on image load. */
+    transition?: boolean;
+
+    /** Perform fade transition on image load. */
+    transitionDuration?: number;
   };
 
-  onLoad = (e: any) => {
-    const { transition, onLoad, transitionDuration } = this.props;
-    if (!transition) {
-      this.state.placeholderOpacity.setValue(0);
-      return;
-    }
+/** Drop-in replacement for the standard React Native Image component that displays
+images with a placeholder and smooth image load transitioning. */
+export const Image: RneFunctionComponent<ImageProps> = ({
+  onPress,
+  onLongPress,
+  onPressIn,
+  onPressOut,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
+  placeholderStyle,
+  PlaceholderContent,
+  containerStyle,
+  childrenContainerStyle = null,
+  style = {},
+  ImageComponent = ImageNative,
+  onLoad,
+  children,
+  transition,
+  transitionDuration = 360,
+  pressableProps,
+  ...props
+}) => {
+  const placeholderOpacity = React.useRef(new Animated.Value(1));
 
-    Animated.timing(this.state.placeholderOpacity, {
-      toValue: 0,
-      duration: transitionDuration,
-      useNativeDriver: true,
-    }).start();
-    onLoad && onLoad(e);
-  };
+  const onLoadHandler = useCallback(
+    (event: NativeSyntheticEvent<ImageLoadEventData>) => {
+      if (transition) {
+        Animated.timing(placeholderOpacity.current, {
+          toValue: 0,
+          duration: transitionDuration,
+          useNativeDriver: true,
+        }).start();
+      } else {
+        placeholderOpacity.current.setValue(0);
+      }
+      onLoad?.(event);
+    },
+    [transition, transitionDuration, onLoad]
+  );
 
-  render() {
-    const {
-      onPress,
-      onLongPress,
-      Component = onPress || onLongPress ? TouchableOpacity : View,
-      placeholderStyle,
-      PlaceholderContent,
-      containerStyle,
-      childrenContainerStyle = null,
-      style = {},
-      ImageComponent = ImageNative,
-      children,
-      ...attributes
-    } = this.props;
+  const hasImage = Boolean(props.source);
 
-    const hasImage = Boolean(attributes.source);
-    const { width, height, ...styleProps } = StyleSheet.flatten(style);
-
-    return (
-      <Component
-        onPress={onPress}
-        onLongPress={onLongPress}
-        accessibilityIgnoresInvertColors={true}
-        style={StyleSheet.flatten([styles.container, containerStyle])}
+  return (
+    <Component
+      {...pressableProps}
+      {...{ onPress, onPressIn, onPressOut, onLongPress }}
+      accessibilityIgnoresInvertColors={true}
+      style={StyleSheet.flatten([styles.container, containerStyle])}
+    >
+      <ImageComponent
+        testID="RNE__Image"
+        {...props}
+        {...{ transition, transitionDuration }}
+        onLoad={onLoadHandler}
+        style={StyleSheet.flatten([StyleSheet.absoluteFill, style])}
+      />
+      {/* Transition placeholder */}
+      <Animated.View
+        pointerEvents={hasImage ? 'none' : 'auto'}
+        accessibilityElementsHidden={hasImage}
+        importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
+        style={[
+          StyleSheet.absoluteFillObject,
+          {
+            opacity: hasImage ? placeholderOpacity.current : 1,
+          },
+        ]}
       >
-        <ImageComponent
-          testID="RNE__Image"
-          transition={true}
-          transitionDuration={360}
-          {...attributes}
-          onLoad={this.onLoad}
-          style={StyleSheet.flatten([
-            StyleSheet.absoluteFill,
-            {
-              width: width,
-              height: height,
-            } as StyleProp<ImageStyle>,
-            styleProps,
-          ])}
-        />
-
-        <Animated.View
-          pointerEvents={hasImage ? 'none' : 'auto'}
-          accessibilityElementsHidden={hasImage}
-          importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
-          style={[
-            styles.placeholderContainer,
-            {
-              opacity: hasImage ? this.state.placeholderOpacity : 1,
-            },
-          ]}
-        >
-          <View
-            testID="RNE__Image__placeholder"
-            style={StyleSheet.flatten([
-              style,
-              styles.placeholder,
-              placeholderStyle,
-            ])}
-          >
-            {PlaceholderContent}
-          </View>
-        </Animated.View>
-
         <View
-          testID="RNE__Image__children__container"
-          style={childrenContainerStyle ?? style}
+          testID="RNE__Image__placeholder"
+          style={StyleSheet.flatten([
+            style,
+            styles.placeholder,
+            placeholderStyle,
+          ])}
         >
-          {children}
+          {React.isValidElement(PlaceholderContent)
+            ? PlaceholderContent
+            : PlaceholderContent && (
+                <Text testID="RNE__Image__Placeholder__Content">
+                  {PlaceholderContent}
+                </Text>
+              )}
         </View>
-      </Component>
-    );
-  }
-}
+      </Animated.View>
+      {/* Children for Image */}
+      <View
+        testID="RNE__Image__children__container"
+        style={childrenContainerStyle ?? style}
+      >
+        {children}
+      </View>
+    </Component>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -141,12 +150,11 @@ const styles = StyleSheet.create({
     position: 'relative',
     overflow: 'hidden',
   },
-  placeholderContainer: {
-    ...StyleSheet.absoluteFillObject,
-  },
   placeholder: {
     backgroundColor: '#bdbdbd',
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
+
+Image.displayName = 'Image';

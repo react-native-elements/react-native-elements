@@ -74,7 +74,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                     "padding": 14,
                   }
                 }
-                testID="padView"
+                testID="RNE__LISTITEM__padView"
               >
                 <View
                   replaceTheme={[Function]}
@@ -181,7 +181,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                     "padding": 14,
                   }
                 }
-                testID="padView"
+                testID="RNE__LISTITEM__padView"
               >
                 <View
                   replaceTheme={[Function]}

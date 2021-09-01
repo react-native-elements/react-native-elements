@@ -51,7 +51,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
   theme,
   trackColor,
   animation = { duration: 2000 },
-  ...props
+  ...rest
 }) => {
   const [width, setWidth] = React.useState<number>(0);
 
@@ -90,11 +90,14 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
     trackColor || Color(tintColor).alpha(0.4).rgb().string();
 
   React.useEffect(() => {
-    startAnimation();
-  }, [startAnimation]);
+    if (animation) {
+      startAnimation();
+    }
+  }, [animation, startAnimation]);
 
   return (
     <View
+      testID="RNE__LinearProgress_Bar"
       accessible
       accessibilityRole="progressbar"
       accessibilityValue={{
@@ -102,7 +105,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
         min: 0,
         max: 1,
       }}
-      {...props}
+      {...rest}
       onLayout={(e) => {
         setWidth(e.nativeEvent.layout.width);
       }}
@@ -119,6 +122,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
     >
       {animation ? (
         <Animated.View
+          testID="RNE__LinearProgress_Progress"
           style={{
             transform: [
               {
@@ -154,6 +158,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
         />
       ) : (
         <View
+          testID="RNE__LinearProgress_Progress"
           style={{
             flex: 1,
             width: width * clamp(value || 0),
