@@ -30,6 +30,7 @@ images with a placeholder and smooth image load transitioning.
 - [onLongPress](#onlongpress)
 - [onPress](#onpress)
 - [placeholderStyle](#placeholderstyle)
+- [pressableProps](#pressableprops)
 - [transition](#transition)
 - [transitionDuration](#transitionduration)
 
@@ -118,6 +119,14 @@ Additional styling for the placeholder container.
 | Type               | Default |
 | ------------------ | ------- |
 | View style(Object) | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---
 

@@ -59,7 +59,7 @@ None
 
 ### Card.Image
 
-None
+- [pressableProps](#pressableprops)
 
 ### Card.Title
 
@@ -103,7 +103,13 @@ None
 
 ### Card.Image
 
-None
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
+
+---
 
 ### Card.Title
 

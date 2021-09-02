@@ -137,7 +137,10 @@ const parserOptions = {
     ) {
       return Boolean(
         prop.declarations.find((declaration) => {
-          return declaration.fileName.includes(component.name);
+          return (
+            declaration.fileName.includes(component.name) ||
+            declaration.fileName.includes('src/helpers')
+          );
         })
       );
     }

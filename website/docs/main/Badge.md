@@ -23,6 +23,7 @@ Badges are small components typically used to communicate a numerical value or i
 - [Component](#component)
 - [badgeStyle](#badgestyle)
 - [containerStyle](#containerstyle)
+- [pressableProps](#pressableprops)
 - [status](#status)
 - [textProps](#textprops)
 - [textStyle](#textstyle)
@@ -59,6 +60,14 @@ Style for the container.
 | Type               | Default |
 | ------------------ | ------- |
 | View style(Object) | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---
 
