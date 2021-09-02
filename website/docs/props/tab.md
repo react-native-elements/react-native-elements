@@ -26,6 +26,8 @@
 - [`onChange`](#onchange)
 - [`animationType`](#animationtype)
 - [`animationConfig`](#animationconfig)
+- [`containerStyle`](#containerStyle)
+- [`tabItemContainerStyle`](#tabItemContainerStyle)
 
 ---
 
@@ -102,5 +104,25 @@ Background Variant
 |   Type   | Default |
 | :------: | :-----: |
 | 'Object' | `none`  |
+
+---
+
+### `containerStyle`
+
+styling for Component container
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
+
+---
+
+### `tabItemContainerStyle`
+
+styling for TabViewItem Component container.
+
+|        Type         | Default |
+| :-----------------: | :-----: |
+| View style (object) |  none   |
 
 ---
