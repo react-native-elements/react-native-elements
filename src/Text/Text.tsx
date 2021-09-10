@@ -11,7 +11,7 @@ import { fonts } from '../config';
 import { patchWebProps, RneFunctionComponent } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
-export type TextProps = TextProperties & {
+export interface TextProps extends TextProperties {
   /**  Add additional styling for Text. */
   style?: StyleProp<TextStyle>;
 
