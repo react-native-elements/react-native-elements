@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import {
   View,
   StyleSheet,
@@ -8,7 +14,6 @@ import {
   Platform,
   ViewStyle,
   StyleProp,
-  PanResponderInstance,
   GestureResponderEvent,
   PanResponderGestureState,
   LayoutChangeEvent,
@@ -504,17 +509,24 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     ]
   );
 
-  const panResponder: PanResponderInstance = useRef(
-    PanResponder.create({
-      onStartShouldSetPanResponder: handleStartShouldSetPanResponder,
-      onMoveShouldSetPanResponder: handleMoveShouldSetPanResponder,
-      onPanResponderGrant: handlePanResponderGrant,
-      onPanResponderMove: handlePanResponderMove,
-      onPanResponderRelease: handlePanResponderEnd,
-      onPanResponderTerminationRequest: handlePanResponderRequestEnd,
-      onPanResponderTerminate: handlePanResponderEnd,
-    })
-  ).current;
+  const panResponder = useMemo(
+    () =>
+      PanResponder.create({
+        onStartShouldSetPanResponder: handleStartShouldSetPanResponder,
+        onMoveShouldSetPanResponder: handleMoveShouldSetPanResponder,
+        onPanResponderGrant: handlePanResponderGrant,
+        onPanResponderMove: handlePanResponderMove,
+        onPanResponderRelease: handlePanResponderEnd,
+        onPanResponderTerminationRequest: handlePanResponderRequestEnd,
+        onPanResponderTerminate: handlePanResponderEnd,
+      }),
+    [
+      handleStartShouldSetPanResponder,
+      handlePanResponderGrant,
+      handlePanResponderMove,
+      handlePanResponderEnd,
+    ]
+  );
 
   const mainStyles = containerStyle ?? styles;
   const appliedTrackStyle = StyleSheet.flatten([styles.track, trackStyle]);
