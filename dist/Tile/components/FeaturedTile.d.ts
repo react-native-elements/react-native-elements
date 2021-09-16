@@ -1,0 +1,73 @@
+import React from 'react';
+import { StyleProp, TextStyle } from 'react-native';
+import { RneFunctionComponent } from '../../helpers';
+import { TileProps } from '../Tile';
+declare const FeaturedTile: RneFunctionComponent<TileProps>;
+declare const ThemedFeaturedTile: React.FunctionComponent<Omit<import("react-native").PressableProps & {
+    title?: string;
+    icon?: import("../../Icon").IconObject & import("react-native-vector-icons/Icon").IconButtonProps & {
+        type?: string;
+        Component?: typeof React.Component;
+        reverse?: boolean;
+        raised?: boolean;
+        containerStyle?: StyleProp<import("react-native").ViewStyle>;
+        iconProps?: import("react-native-vector-icons/Icon").IconProps;
+        reverseColor?: string;
+        disabled?: boolean;
+        disabledStyle?: StyleProp<import("react-native").ViewStyle>;
+        solid?: boolean;
+        brand?: boolean;
+    } & Partial<{
+        pressableProps: Omit<import("react-native").PressableProps, "onPress" | "onLongPress" | "onPressIn" | "onPressOut">;
+    } & Pick<import("react-native").PressableProps, "onPress" | "onLongPress" | "onPressIn" | "onPressOut">>;
+    caption?: React.ReactNode;
+    imageSrc?: string | import("react-native").ImageSourcePropType;
+    activeOpacity?: number;
+    containerStyle?: StyleProp<import("react-native").ViewStyle>;
+    imageContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    iconContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    overlayContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    titleStyle?: StyleProp<TextStyle>;
+    captionStyle?: StyleProp<TextStyle>;
+    width?: number;
+    height?: number;
+    featured?: boolean;
+    contentContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    titleNumberOfLines?: number;
+    imageProps?: Partial<import("react-native").ImageProps>;
+    ImageComponent?: typeof React.Component;
+} & Partial<import("../../config").ThemeProps<TileProps>>, keyof import("../../config").ThemeProps<T>>> | React.ForwardRefExoticComponent<import("react-native").PressableProps & {
+    title?: string;
+    icon?: import("../../Icon").IconObject & import("react-native-vector-icons/Icon").IconButtonProps & {
+        type?: string;
+        Component?: typeof React.Component;
+        reverse?: boolean;
+        raised?: boolean;
+        containerStyle?: StyleProp<import("react-native").ViewStyle>;
+        iconProps?: import("react-native-vector-icons/Icon").IconProps;
+        reverseColor?: string;
+        disabled?: boolean;
+        disabledStyle?: StyleProp<import("react-native").ViewStyle>;
+        solid?: boolean;
+        brand?: boolean;
+    } & Partial<{
+        pressableProps: Omit<import("react-native").PressableProps, "onPress" | "onLongPress" | "onPressIn" | "onPressOut">;
+    } & Pick<import("react-native").PressableProps, "onPress" | "onLongPress" | "onPressIn" | "onPressOut">>;
+    caption?: React.ReactNode;
+    imageSrc?: string | import("react-native").ImageSourcePropType;
+    activeOpacity?: number;
+    containerStyle?: StyleProp<import("react-native").ViewStyle>;
+    imageContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    iconContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    overlayContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    titleStyle?: StyleProp<TextStyle>;
+    captionStyle?: StyleProp<TextStyle>;
+    width?: number;
+    height?: number;
+    featured?: boolean;
+    contentContainerStyle?: StyleProp<import("react-native").ViewStyle>;
+    titleNumberOfLines?: number;
+    imageProps?: Partial<import("react-native").ImageProps>;
+    ImageComponent?: typeof React.Component;
+} & Partial<import("../../config").ThemeProps<TileProps>>>;
+export { FeaturedTile, ThemedFeaturedTile };
