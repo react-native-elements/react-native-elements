@@ -60,7 +60,6 @@ export const Slider = (_a) => {
     // update size rect for given variable
     const handleMeasure = useCallback((name, event) => {
         var _a, _b;
-        console.debug(`handleMeasure: name=${name}, event.nativeEvent.layout=`, event.nativeEvent.layout); //DELETE
         // get current value and setter for the appropriate variable
         const varInfo = {
             containerSize: { size: containerSize, setSize: setContainerSize },
@@ -240,7 +239,6 @@ export const Slider = (_a) => {
     useEffect(() => {
         const _animatedValue = animatedValue.current;
         let listenerID = _animatedValue.addListener((obj) => {
-            console.debug('animatedValue.listener: obj=', obj); //DELETE
             currentPropValue.current = obj.value;
         });
         return () => _animatedValue.removeListener(listenerID);

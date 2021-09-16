@@ -182,10 +182,6 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
   // update size rect for given variable
   const handleMeasure = useCallback(
     (name: SizableVars, event: LayoutChangeEvent) => {
-      console.debug(
-        `handleMeasure: name=${name}, event.nativeEvent.layout=`,
-        event.nativeEvent.layout
-      ); //DELETE
       // get current value and setter for the appropriate variable
       const varInfo = {
         containerSize: { size: containerSize, setSize: setContainerSize },
@@ -458,7 +454,6 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
   useEffect(() => {
     const _animatedValue = animatedValue.current;
     let listenerID = _animatedValue.addListener((obj) => {
-      console.debug('animatedValue.listener: obj=', obj); //DELETE
       currentPropValue.current = obj.value;
     });
     return () => _animatedValue.removeListener(listenerID);
@@ -633,7 +628,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width: TRACK_SIZE,
   },
-
   touchArea: {
     position: 'absolute',
     backgroundColor: 'transparent',
