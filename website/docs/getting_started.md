@@ -21,7 +21,7 @@ and feel.
 <Tabs
 defaultValue="npm"
 values={[
-{ label: 'NPM', value: 'npm', },
+{ label: 'npm', value: 'npm', },
 { label: 'Yarn', value: 'yarn', },
 ]
 }>
@@ -46,7 +46,7 @@ yarn add react-native-elements
 <Tabs
 defaultValue="npm"
 values={[
-{ label: 'NPM', value: 'npm', },
+{ label: 'npm', value: 'npm', },
 { label: 'Yarn', value: 'yarn', },
 ]
 }>
@@ -94,7 +94,7 @@ Manual linking of react-native-vector-icons is not necessary if you're using rea
 <Tabs
 defaultValue="npm"
 values={[
-{ label: 'NPM', value: 'npm', },
+{ label: 'npm', value: 'npm', },
 { label: 'Yarn', value: 'yarn', },
 ]
 }>
@@ -134,7 +134,7 @@ your project you can skip this step. Otherwise run the following command:
 <Tabs
 defaultValue="npm"
 values={[
-{ label: 'NPM', value: 'npm', },
+{ label: 'npm', value: 'npm', },
 { label: 'Yarn', value: 'yarn', },
 ]
 }>

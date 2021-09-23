@@ -79,7 +79,7 @@ You can find all my contributions [here](https://github.com/react-native-element
 
 ### Core Improvements
 
-- [Migrate build to Github Actions (#3101)](https://github.com/react-native-elements/react-native-elements/pull/3101)
+- [Migrate build to GitHub Actions (#3101)](https://github.com/react-native-elements/react-native-elements/pull/3101)
 - [Strict TypeScript (#2930)](https://github.com/react-native-elements/react-native-elements/pull/2930)
 - [Removed ts-ignore and transformed to Functional Component (#2834)](https://github.com/react-native-elements/react-native-elements/pull/2834)
 

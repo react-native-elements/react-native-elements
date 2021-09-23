@@ -14,7 +14,7 @@ const Home: React.FunctionComponent<{}> = () => {
             </div>
             <div className="col col--7 ">
               <p>
-                <b>1. Install the React Native Elements package from the NPM</b>
+                <b>1. Install the React Native Elements package from the npm</b>
                 <p className="margin-vert--md margin-horiz--md">
                   <pre>$ npm install react-native-elements</pre>
                 </p>

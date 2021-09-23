@@ -33,7 +33,7 @@ const Home: React.FunctionComponent<{}> = () => {
                   'https://github.com/react-native-elements/react-native-elements-app'
                 }
               >
-                View on Github
+                View on GitHub
               </Link>
             </div>
           </div>
