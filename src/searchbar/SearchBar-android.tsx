@@ -49,6 +49,7 @@ class SearchBar extends Component<
   SearchBarState
 > {
   input!: TextInput;
+  didKeyboardHideSubscriber!: any;
   static defaultProps = {
     onClear: () => null,
     onCancel: () => null,
@@ -101,7 +102,7 @@ class SearchBar extends Component<
       hasFocus: false,
       isEmpty: value ? value === '' : true,
     };
-    this.didHideSub = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+    this.didKeyboardHideSubscriber = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
   }
 
   _keyboardDidHide = () => {
@@ -109,7 +110,7 @@ class SearchBar extends Component<
   };
 
   componentWillUnmount() {
-    this.didHideSub?.remove();
+    this.didKeyboardHideSubscriber?.remove();
   }
 
   render() {
