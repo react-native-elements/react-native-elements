@@ -376,7 +376,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
 
   const handlePanResponderGrant = useCallback(() => {
     _previousLeft.current = getThumbLeft(currentPropValue.current);
-    onSlidingStart(currentPropValue.current);
+    onSlidingStart?.(currentPropValue.current);
   }, [getThumbLeft, onSlidingStart]);
 
   const handlePanResponderMove = useCallback(
@@ -385,7 +385,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
         return;
       }
       setCurrentValue(getValue(gestureState));
-      onValueChange(currentPropValue.current);
+      onValueChange?.(currentPropValue.current);
     },
     [disabled, getValue, onValueChange, setCurrentValue]
   );
@@ -396,7 +396,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
         return;
       }
       setCurrentValue(getValue(gestureState));
-      onSlidingComplete(currentPropValue.current);
+      onSlidingComplete?.(currentPropValue.current);
     },
     [disabled, getValue, onSlidingComplete, setCurrentValue]
   );
@@ -422,7 +422,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
       if (!trackStyle) {
         setCurrentValue(getOnTouchValue(e));
       }
-      onValueChange(currentPropValue.current);
+      onValueChange?.(currentPropValue.current);
       return true;
     },
     [
