@@ -5,6 +5,7 @@ import {
   ActivityIndicator,
   Keyboard,
   TextInput,
+  EmitterSubscription,
 } from 'react-native';
 import { renderNode } from '../helpers';
 import Input, { InputProps } from '../Input';
@@ -57,6 +58,8 @@ export class SearchBarAndroid extends Component<
     onChangeText: () => null,
   };
 
+  keyboardListener: EmitterSubscription;
+
   focus = () => {
     this.input.focus();
   };
@@ -101,7 +104,10 @@ export class SearchBarAndroid extends Component<
       hasFocus: false,
       isEmpty: value ? value === '' : true,
     };
-    Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+    this.keyboardListener = Keyboard.addListener(
+      'keyboardDidHide',
+      this._keyboardDidHide
+    );
   }
 
   _keyboardDidHide = () => {
@@ -109,7 +115,9 @@ export class SearchBarAndroid extends Component<
   };
 
   componentWillUnmount() {
-    Keyboard.removeListener('keyboardDidHide', this._keyboardDidHide);
+    if (this.keyboardListener) {
+      this.keyboardListener.remove();
+    }
   }
 
   render() {
