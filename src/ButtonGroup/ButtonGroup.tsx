@@ -134,6 +134,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
   ...rest
 }) => {
   let innerBorderWidth = 1;
+  const verticalContainerHeight = 40 * buttons?.length;
   if (
     innerBorderStyle &&
     Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
@@ -147,6 +148,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
       style={StyleSheet.flatten([
         styles.container,
         vertical && styles.verticalContainer,
+        vertical && {height: verticalContainerHeight},
         containerStyle && containerStyle,
       ])}
     >
@@ -289,7 +291,6 @@ const styles = StyleSheet.create({
   },
   verticalContainer: {
     flexDirection: 'column',
-    height: null,
   },
   verticalComponent: {
     height: 40,
