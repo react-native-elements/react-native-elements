@@ -66,6 +66,13 @@ enum SizableVars {
   trackSize = 'trackSize',
 }
 
+// enum to track event types
+enum EventTypes {
+  onSlidingStart = 'onSlidingStart',
+  onValueChange = 'onValueChange',
+  onSlidingComplete = 'onSlidingComplete',
+}
+
 export type SliderProps = {
   /** Initial value of the slider. */
   value?: number;
@@ -141,33 +148,36 @@ export type SliderProps = {
 
 /** Sliders allow users to select a value from a fixed set of values using drag utility.*/
 export const Slider: RneFunctionComponent<SliderProps> = ({
-  allowTouchTrack,
+  allowTouchTrack = false,
   animateTransitions,
   animationConfig,
-  animationType,
+  animationType = 'timing',
   containerStyle,
-  debugTouchArea,
+  debugTouchArea = false,
   disabled,
-  maximumTrackTintColor,
-  maximumValue,
-  minimumTrackTintColor,
-  minimumValue,
+  maximumTrackTintColor = '#b3b3b3',
+  maximumValue = 1,
+  minimumTrackTintColor = '#3f3f3f',
+  minimumValue = 0,
   onSlidingComplete,
   onSlidingStart,
   onValueChange,
-  orientation,
-  step,
+  orientation = 'horizontal',
+  step = 0,
   style,
   thumbProps,
   thumbStyle,
-  thumbTintColor,
-  thumbTouchSize,
+  thumbTintColor = 'red',
+  thumbTouchSize = { height: THUMB_SIZE, width: THUMB_SIZE },
   trackStyle,
-  value: _value,
+  value: _propValue = 0,
   ...other
 }) => {
-  const value = getBoundedValue(_value, maximumValue, minimumValue);
+  const propValue = getBoundedValue(_propValue, maximumValue, minimumValue);
+  const prevPropValue = useRef(propValue);
+  const animatedValue = useRef(new Animated.Value(propValue));
   const _previousLeft = useRef(0);
+  const gestureStartPosition = useRef(0);
   const [allMeasured, setAllMeasured] = useState(false);
   const [containerSize, setContainerSize] = useState<Sizable>({
     width: 0,
@@ -176,8 +186,6 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
   const [trackSize, setTrackSize] = useState<Sizable>({ width: 0, height: 0 });
   const [thumbSize, setThumbSize] = useState<Sizable>({ width: 0, height: 0 });
   const isVertical = orientation === 'vertical';
-
-  const animatedValue = useRef(new Animated.Value(value));
 
   // update size rect for given variable
   const handleMeasure = useCallback(
@@ -239,37 +247,32 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     [handleMeasure]
   );
 
-  const currentPropValue = useRef(value);
-  const prevPropValue = useRef(value);
-
+  // set the current animation value
   const setCurrentValue = useCallback(
     (v: number) => animatedValue.current.setValue(v),
     [animatedValue]
   );
 
-  // update current value if is changed
-  useEffect(() => setCurrentValue(value), [setCurrentValue, value]);
-
+  // animate to the new value
   const setCurrentValueAnimated = useCallback(
-    (v: Animated.Value) => {
+    (v: number) =>
       Animated[animationType](animatedValue.current, {
         ...DEFAULT_ANIMATION_CONFIGS[animationType],
         ...animationConfig,
         toValue: v,
-      }).start();
-    },
+      }).start(),
     [animationConfig, animationType]
   );
 
-  // update animation values if value changed
+  // update animation values if props.value changed
   useEffect(() => {
     // if value prop changed, we need to update
-    if (prevPropValue.current !== value) {
-      prevPropValue.current = value;
+    if (prevPropValue.current !== propValue) {
+      prevPropValue.current = propValue;
       if (animateTransitions) {
-        setCurrentValueAnimated(new Animated.Value(value));
+        setCurrentValueAnimated(propValue);
       } else {
-        setCurrentValue(value);
+        setCurrentValue(propValue);
       }
     }
   }, [
@@ -278,7 +281,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     minimumValue,
     setCurrentValue,
     setCurrentValueAnimated,
-    value,
+    propValue,
   ]);
 
   const getValueForTouch = useCallback(
@@ -289,7 +292,6 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
       if (step) {
         newValue = Math.round(newValue / step) * step;
       }
-
       return getBoundedValue(
         newValue + minimumValue,
         maximumValue,
@@ -310,17 +312,12 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     [getValueForTouch, isVertical]
   );
 
-  const getRatio = useCallback(
-    (value1: number) => (value1 - minimumValue) / (maximumValue - minimumValue),
-    [maximumValue, minimumValue]
-  );
-
   const getThumbLeft = useCallback(
-    (value1: number) => {
-      const ratio = getRatio(value1);
+    (v: number) => {
+      const ratio = (v - minimumValue) / (maximumValue - minimumValue);
       return ratio * (containerSize.width - thumbSize.width);
     },
-    [containerSize.width, getRatio, thumbSize.width]
+    [containerSize.width, maximumValue, minimumValue, thumbSize.width]
   );
 
   const getTouchOverflowSize = useCallback(
@@ -340,66 +337,85 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     ]
   );
 
+  const getCurrentValue = useCallback(
+    () => (animatedValue.current as any).__getValue(),
+    []
+  );
+
   const getThumbTouchRect = useCallback(() => {
     const touchOverflowSize: any = getTouchOverflowSize();
-    const thumbTouchHeight = thumbTouchSize?.height || THUMB_SIZE;
-    const thumbTouchWidth = thumbTouchSize?.width || THUMB_SIZE;
     const height =
       touchOverflowSize.height / 2 +
-      (containerSize.height - thumbTouchHeight) / 2;
+      (containerSize.height - thumbTouchSize.height) / 2;
     const width =
       touchOverflowSize.width / 2 +
-      getThumbLeft(currentPropValue.current) +
-      (thumbSize.width - thumbTouchWidth) / 2;
+      getThumbLeft(getCurrentValue()) +
+      (thumbSize.width - thumbTouchSize.width) / 2;
     return isVertical
-      ? new Rect(height, width, thumbTouchWidth, thumbTouchHeight)
-      : new Rect(width, height, thumbTouchWidth, thumbTouchHeight);
+      ? new Rect(height, width, thumbTouchSize.width, thumbTouchSize.height)
+      : new Rect(width, height, thumbTouchSize.width, thumbTouchSize.height);
   }, [
     containerSize.height,
+    getCurrentValue,
     getThumbLeft,
     getTouchOverflowSize,
     isVertical,
     thumbSize.width,
-    thumbTouchSize?.height,
-    thumbTouchSize?.width,
+    thumbTouchSize.height,
+    thumbTouchSize.width,
   ]);
 
   const getValue = useCallback(
     (gestureState: PanResponderGestureState) => {
-      const location =
-        _previousLeft.current +
-        (isVertical ? gestureState.dy : gestureState.dx);
+      const delta =
+        (isVertical ? gestureState.moveY : gestureState.moveX) -
+        gestureStartPosition.current;
+      const location = _previousLeft.current + delta;
       return getValueForTouch(location);
     },
     [getValueForTouch, isVertical]
   );
 
-  const handlePanResponderGrant = useCallback(() => {
-    _previousLeft.current = getThumbLeft(currentPropValue.current);
-    onSlidingStart?.(currentPropValue.current);
-  }, [getThumbLeft, onSlidingStart]);
+  const fireChangeEvent = useCallback(
+    (event: EventTypes) => {
+      const v = getCurrentValue();
+      if (event === EventTypes.onSlidingStart) {
+        onSlidingStart?.(v);
+      } else if (event === EventTypes.onSlidingComplete) {
+        onSlidingComplete?.(v);
+      } else if (event === EventTypes.onValueChange) {
+        onValueChange?.(v);
+      }
+    },
+    [getCurrentValue, onSlidingComplete, onSlidingStart, onValueChange]
+  );
+
+  const handlePanResponderGrant = useCallback(
+    (e: GestureResponderEvent, gestureState: PanResponderGestureState) => {
+      _previousLeft.current = getThumbLeft(getCurrentValue());
+      gestureStartPosition.current = isVertical
+        ? gestureState.y0
+        : gestureState.x0;
+      fireChangeEvent(EventTypes.onSlidingStart);
+    },
+    [fireChangeEvent, getCurrentValue, getThumbLeft, isVertical]
+  );
 
   const handlePanResponderMove = useCallback(
     (_: GestureResponderEvent, gestureState: PanResponderGestureState) => {
-      if (disabled) {
-        return;
+      if (!disabled) {
+        setCurrentValue(getValue(gestureState));
+        fireChangeEvent(EventTypes.onValueChange);
       }
-      setCurrentValue(getValue(gestureState));
-      onValueChange?.(currentPropValue.current);
     },
-    [disabled, getValue, onValueChange, setCurrentValue]
+    [disabled, fireChangeEvent, getValue, setCurrentValue]
   );
 
-  const handlePanResponderEnd = useCallback(
-    (_: GestureResponderEvent, gestureState: PanResponderGestureState) => {
-      if (disabled) {
-        return;
-      }
-      setCurrentValue(getValue(gestureState));
-      onSlidingComplete?.(currentPropValue.current);
-    },
-    [disabled, getValue, onSlidingComplete, setCurrentValue]
-  );
+  const handlePanResponderEnd = useCallback(() => {
+    if (!disabled) {
+      fireChangeEvent(EventTypes.onSlidingComplete);
+    }
+  }, [disabled, fireChangeEvent]);
 
   const thumbHitTest = useCallback(
     ({ nativeEvent }: GestureResponderEvent) => {
@@ -415,23 +431,19 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
   const handleStartShouldSetPanResponder = useCallback(
     (e: GestureResponderEvent /* gestureState: Object */) => {
       // Should we become active when the user presses down on the thumb?
-
-      if (!allowTouchTrack && !TRACK_STYLE) {
+      if (!allowTouchTrack) {
         return thumbHitTest(e);
       }
-      if (!trackStyle) {
-        setCurrentValue(getOnTouchValue(e));
-      }
-      onValueChange?.(currentPropValue.current);
+      setCurrentValue(getOnTouchValue(e));
+      fireChangeEvent(EventTypes.onValueChange);
       return true;
     },
     [
       allowTouchTrack,
+      fireChangeEvent,
       getOnTouchValue,
-      onValueChange,
       setCurrentValue,
       thumbHitTest,
-      trackStyle,
     ]
   );
 
@@ -450,14 +462,6 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     }
     return touchOverflowStyle;
   }, [debugTouchArea, getTouchOverflowSize]);
-
-  useEffect(() => {
-    const _animatedValue = animatedValue.current;
-    let listenerID = _animatedValue.addListener((obj) => {
-      currentPropValue.current = obj.value;
-    });
-    return () => _animatedValue.removeListener(listenerID);
-  }, []);
 
   const renderDebugThumbTouchRect = useCallback(
     (thumbLeft: Animated.AnimatedInterpolation) => {
@@ -550,7 +554,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
       accessibilityValue={{
         min: minimumValue,
         max: maximumValue,
-        now: currentPropValue.current,
+        now: getCurrentValue(),
       }}
     >
       <View
