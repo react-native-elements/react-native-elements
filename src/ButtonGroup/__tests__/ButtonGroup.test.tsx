@@ -5,12 +5,64 @@ import { Text, View } from 'react-native';
 import { FullTheme } from '../../config';
 
 const buttons = ['Button 1', 'Button 2', 'Button 3'];
+const buttonComponents = [
+  <Text>Button 1</Text>,
+  <Text>Button 2</Text>,
+  <Text>Button 3</Text>,
+];
+const buttonObjects = [
+  {
+    element: () => (
+      <View>
+        <Text>Button 1</Text>
+      </View>
+    ),
+  },
+  {
+    element: () => (
+      <View>
+        <Text>Button 2</Text>
+      </View>
+    ),
+  },
+  {
+    element: () => (
+      <View>
+        <Text>Button 3</Text>
+      </View>
+    ),
+  },
+];
 
 describe('ButtonGroup Component', () => {
   it('should match snapshot', () => {
     const component = renderWithWrapper(
       <ButtonGroup
         buttons={buttons}
+        containerStyle={{ backgroundColor: 'yellow' }}
+        buttonStyle={{ backgroundColor: 'blue' }}
+        textStyle={{ color: 'pink' }}
+      />
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should match snapshot with components', () => {
+    const component = renderWithWrapper(
+      <ButtonGroup
+        buttons={buttonComponents}
+        containerStyle={{ backgroundColor: 'yellow' }}
+        buttonStyle={{ backgroundColor: 'blue' }}
+        textStyle={{ color: 'pink' }}
+      />
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should match snapshot with objects', () => {
+    const component = renderWithWrapper(
+      <ButtonGroup
+        buttons={buttonObjects}
         containerStyle={{ backgroundColor: 'yellow' }}
         buttonStyle={{ backgroundColor: 'blue' }}
         textStyle={{ color: 'pink' }}
