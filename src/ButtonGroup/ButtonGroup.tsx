@@ -8,7 +8,6 @@ import {
   StyleProp,
   TextStyle,
   Pressable,
-  ViewProps,
 } from 'react-native';
 import {
   normalizeText,
@@ -21,7 +20,7 @@ import Text from '../Text';
 
 type ButtonComponent = React.ReactElement;
 type ButtonObject = {
-  element: React.ElementType<Partial<ViewProps> & { isSelected?: boolean }>;
+  element: React.ElementType<any & { isSelected?: boolean }>;
 };
 
 export type ButtonGroupProps = InlinePressableProps & {
