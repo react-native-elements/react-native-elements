@@ -75,7 +75,7 @@ class SearchBar extends Component {
             this.setState({ isEmpty: text === '' });
         };
         this._keyboardDidHide = () => {
-            this.cancel();
+            // this.cancel();
         };
         const { value = '' } = props;
         this.state = {
