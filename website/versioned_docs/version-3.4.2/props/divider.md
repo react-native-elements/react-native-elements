@@ -32,7 +32,7 @@ Adds inset to the divider
 
 |  Type   | Default |
 | :-----: | :-----: |
-| boolean |  left   |
+| boolean |  false  |
 
 ---
 
