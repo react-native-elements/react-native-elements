@@ -1,25 +1,25 @@
+import Color from 'color';
 import React from 'react';
 import {
   Platform,
-  View,
-  StyleSheet,
-  ViewStyle,
-  StyleProp,
-  TextStyle,
   Pressable,
+  StyleProp,
+  StyleSheet,
+  TextStyle,
+  View,
+  ViewStyle,
 } from 'react-native';
 import {
   IconButtonProps,
   IconProps as VectorIconProps,
 } from 'react-native-vector-icons/Icon';
-import Color from 'color';
-import getIconType from '../helpers/getIconType';
-import getIconStyle from '../helpers/getIconStyle';
 import {
   androidRipple,
   InlinePressableProps,
   RneFunctionComponent,
 } from '../helpers';
+import getIconStyle from '../helpers/getIconStyle';
+import getIconType from '../helpers/getIconType';
 
 export type IconType =
   | 'material'
@@ -88,7 +88,7 @@ export type IconProps = IconButtonProps & {
 
   /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
-} & InlinePressableProps;
+} & InlinePressableProps & { color?: string };
 
 /** Icons are visual indicators usually used to describe action or intent.
  * They are also used for displaying information. */
