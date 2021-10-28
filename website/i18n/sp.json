@@ -1,0 +1,375 @@
+{
+  "_comment": "Este archivo es auto-generado por write-translations.js",
+  "localized-strings": {
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "tagline": "Kit de herramientas multiplataforma React Native UI",
+    "docs": {
+      "avatar": {
+        "title": "Avatar"
+      },
+      "badge": {
+        "title": "Insignia"
+      },
+      "button_group": {
+        "title": "Grupo de botones"
+      },
+      "button": {
+        "title": "Botón"
+      },
+      "card": {
+        "title": "Tarjeta"
+      },
+      "checkbox": {
+        "title": "Casilla de verificación"
+      },
+      "contributing": {
+        "title": "Contribuyendo"
+      },
+      "customization": {
+        "title": "Personalización"
+      },
+      "divider": {
+        "title": "Divisor"
+      },
+      "forms": {
+        "title": "Formularios"
+      },
+      "getting_started": {
+        "title": "Empezando",
+        "sidebar_label": "Empezando"
+      },
+      "header": {
+        "title": "Cabecera"
+      },
+      "icon": {
+        "title": "Icono"
+      },
+      "image": {
+        "title": "Imagen"
+      },
+      "input": {
+        "title": "Entrada"
+      },
+      "labels": {
+        "title": "Guía de etiquetas"
+      },
+      "listitem": {
+        "title": "Elemento de lista"
+      },
+      "overlay": {
+        "title": "Superposición"
+      },
+      "overview": {
+        "title": "Descripción general"
+      },
+      "pricing": {
+        "title": "Precios"
+      },
+      "rating": {
+        "title": "Clasificación"
+      },
+      "searchbar": {
+        "title": "Barra de búsqueda"
+      },
+      "slider": {
+        "title": "Slider"
+      },
+      "social_icon": {
+        "title": "Icono social"
+      },
+      "testing": {
+        "title": "Pruebas"
+      },
+      "text": {
+        "title": "Texto"
+      },
+      "tile": {
+        "title": "Embaldosar"
+      },
+      "tooltip": {
+        "title": "Información sobre herramientas"
+      },
+      "troubleshooting": {
+        "title": "Solución de problemas"
+      },
+      "web_usage": {
+        "title": "Uso en la web"
+      },
+      "version-0.19.1/version-0.19.1-avatar": {
+        "title": "Avatar"
+      },
+      "version-0.19.1/version-0.19.1-badge": {
+        "title": "Insignia"
+      },
+      "version-0.19.1/version-0.19.1-button_group": {
+        "title": "Grupo de botones"
+      },
+      "version-0.19.1/version-0.19.1-button": {
+        "title": "Botón"
+      },
+      "version-0.19.1/version-0.19.1-card": {
+        "title": "Tarjeta"
+      },
+      "version-0.19.1/version-0.19.1-checkbox": {
+        "title": "Casilla de verificación"
+      },
+      "version-0.19.1/version-0.19.1-contributing": {
+        "title": "Contribuyendo"
+      },
+      "version-0.19.1/version-0.19.1-customization": {
+        "title": "Personalización"
+      },
+      "version-0.19.1/version-0.19.1-divider": {
+        "title": "Divisor"
+      },
+      "version-0.19.1/version-0.19.1-forms": {
+        "title": "Formularios"
+      },
+      "version-0.19.1/version-0.19.1-getting_started": {
+        "title": "Empezando",
+        "sidebar_label": "Empezando"
+      },
+      "version-0.19.1/version-0.19.1-header": {
+        "title": "Cabecera"
+      },
+      "version-0.19.1/version-0.19.1-icon": {
+        "title": "Icono"
+      },
+      "version-0.19.1/version-0.19.1-labels": {
+        "title": "Guía de etiquetas"
+      },
+      "version-0.19.1/version-0.19.1-lists": {
+        "title": "Listas"
+      },
+      "version-0.19.1/version-0.19.1-overview": {
+        "title": "Descripción general"
+      },
+      "version-0.19.1/version-0.19.1-pricing": {
+        "title": "Precios"
+      },
+      "version-0.19.1/version-0.19.1-rating": {
+        "title": "Clasificación"
+      },
+      "version-0.19.1/version-0.19.1-searchbar": {
+        "title": "Barra de búsqueda"
+      },
+      "version-0.19.1/version-0.19.1-slider": {
+        "title": "Slider"
+      },
+      "version-0.19.1/version-0.19.1-social_icon": {
+        "title": "Icono social"
+      },
+      "version-0.19.1/version-0.19.1-testing": {
+        "title": "Pruebas"
+      },
+      "version-0.19.1/version-0.19.1-text": {
+        "title": "Texto"
+      },
+      "version-0.19.1/version-0.19.1-tile": {
+        "title": "Embaldosar"
+      },
+      "version-0.19.1/version-0.19.1-troubleshooting": {
+        "title": "Solución de problemas"
+      },
+      "version-1.0.0/version-1.0.0-avatar": {
+        "title": "Avatar"
+      },
+      "version-1.0.0/version-1.0.0-badge": {
+        "title": "Insignia"
+      },
+      "version-1.0.0/version-1.0.0-button_group": {
+        "title": "Grupo de botones"
+      },
+      "version-1.0.0/version-1.0.0-button": {
+        "title": "Botón"
+      },
+      "version-1.0.0/version-1.0.0-card": {
+        "title": "Tarjeta"
+      },
+      "version-1.0.0/version-1.0.0-checkbox": {
+        "title": "Casilla de verificación"
+      },
+      "version-1.0.0/version-1.0.0-contributing": {
+        "title": "Contribuyendo"
+      },
+      "version-1.0.0/version-1.0.0-customization": {
+        "title": "Personalización"
+      },
+      "version-1.0.0/version-1.0.0-divider": {
+        "title": "Divisor"
+      },
+      "version-1.0.0/version-1.0.0-header": {
+        "title": "Cabecera"
+      },
+      "version-1.0.0/version-1.0.0-icon": {
+        "title": "Icono"
+      },
+      "version-1.0.0/version-1.0.0-image": {
+        "title": "Imagen"
+      },
+      "version-1.0.0/version-1.0.0-input": {
+        "title": "Entrada"
+      },
+      "version-1.0.0/version-1.0.0-listitem": {
+        "title": "Elemento de lista"
+      },
+      "version-1.0.0/version-1.0.0-overlay": {
+        "title": "Superposición"
+      },
+      "version-1.0.0/version-1.0.0-overview": {
+        "title": "Descripción general"
+      },
+      "version-1.0.0/version-1.0.0-pricing": {
+        "title": "Precios"
+      },
+      "version-1.0.0/version-1.0.0-rating": {
+        "title": "Clasificación"
+      },
+      "version-1.0.0/version-1.0.0-searchbar": {
+        "title": "Barra de búsqueda"
+      },
+      "version-1.0.0/version-1.0.0-slider": {
+        "title": "Slider"
+      },
+      "version-1.0.0/version-1.0.0-social_icon": {
+        "title": "Icono social"
+      },
+      "version-1.0.0/version-1.0.0-text": {
+        "title": "Text"
+      },
+      "version-1.0.0/version-1.0.0-tile": {
+        "title": "Embaldosar"
+      },
+      "version-1.0.0/version-1.0.0-tooltip": {
+        "title": "Información sobre herramientas"
+      },
+      "version-1.1.0/version-1.1.0-checkbox": {
+        "title": "Casilla de verificación"
+      },
+      "version-1.1.0/version-1.1.0-input": {
+        "title": "Entrada"
+      },
+      "version-1.1.0/version-1.1.0-text": {
+        "title": "Texto"
+      },
+      "version-1.2.0/version-1.2.0-avatar": {
+        "title": "Avatar"
+      },
+      "version-1.2.0/version-1.2.0-badge": {
+        "title": "Insignia"
+      },
+      "version-1.2.0/version-1.2.0-card": {
+        "title": "Tarjeta"
+      },
+      "version-1.2.0/version-1.2.0-customization": {
+        "title": "Personalización"
+      },
+      "version-1.2.0/version-1.2.0-getting_started": {
+        "title": "Empezando",
+        "sidebar_label": "Empezando"
+      },
+      "version-1.2.0/version-1.2.0-header": {
+        "title": "Cabecera"
+      },
+      "version-1.2.0/version-1.2.0-image": {
+        "title": "Imagen"
+      },
+      "version-1.2.0/version-1.2.0-input": {
+        "title": "Entrada"
+      },
+      "version-1.2.0/version-1.2.0-listitem": {
+        "title": "Elemento de lista"
+      },
+      "version-1.2.0/version-1.2.0-overlay": {
+        "title": "Superposición"
+      },
+      "version-1.2.0/version-1.2.0-pricing": {
+        "title": "Precios"
+      },
+      "version-1.2.0/version-1.2.0-searchbar": {
+        "title": "Barra de búsqueda"
+      },
+      "version-1.2.0/version-1.2.0-social_icon": {
+        "title": "Icono social"
+      },
+      "version-1.2.0/version-1.2.0-tile": {
+        "title": "Embaldosar"
+      },
+      "version-1.2.0/version-1.2.0-tooltip": {
+        "title": "Información sobre herramientas"
+      },
+      "version-1.2.0/version-1.2.0-troubleshooting": {
+        "title": "Solución de problemas"
+      },
+      "version-1.2.0/version-1.2.0-web_usage": {
+        "title": "Uso en la Web"
+      },
+      "version-2.0.0/version-2.0.0-avatar": {
+        "title": "Avatar"
+      },
+      "version-2.0.0/version-2.0.0-button_group": {
+        "title": "Grupo de botones"
+      },
+      "version-2.0.0/version-2.0.0-checkbox": {
+        "title": "Casilla de verificación"
+      },
+      "version-2.0.0/version-2.0.0-contributing": {
+        "title": "Contribuyendo"
+      },
+      "version-2.0.0/version-2.0.0-customization": {
+        "title": "Personalización"
+      },
+      "version-2.0.0/version-2.0.0-divider": {
+        "title": "Divisor"
+      },
+      "version-2.0.0/version-2.0.0-icon": {
+        "title": "Icono"
+      },
+      "version-2.0.0/version-2.0.0-image": {
+        "title": "Imagen"
+      },
+      "version-2.0.0/version-2.0.0-input": {
+        "title": "Entrada"
+      },
+      "version-2.0.0/version-2.0.0-listitem": {
+        "title": "Elemento de lista"
+      },
+      "version-2.0.0/version-2.0.0-overlay": {
+        "title": "Superposición"
+      },
+      "version-2.0.0/version-2.0.0-rating": {
+        "title": "Clasificación"
+      },
+      "version-2.0.0/version-2.0.0-social_icon": {
+        "title": "Icono social"
+      },
+      "version-2.0.0/version-2.0.0-text": {
+        "title": "Texto"
+      },
+      "version-2.0.0/version-2.0.0-tooltip": {
+        "title": "Información sobre herramientas"
+      },
+      "version-2.0.0/version-2.0.0-web_usage": {
+        "title": "Uso en la web"
+      }
+    },
+    "links": {
+      "Docs": "Documentos",
+      "Components": "Componentes",
+      "Help": "Ayuda",
+      "GitHub": "GitHub",
+      "Blog": "Bitácora"
+    },
+    "categories": {
+      "It Starts Basic": "Inicio básico",
+      "Components": "Componentes",
+      "Repo": "Repositorio"
+    }
+  },
+  "pages-strings": {
+    "Help Translate|recruit community translators for your project": "Ayuda a traducir",
+    "Edit this Doc|recruitment message asking to edit the doc source": "Editar",
+    "Translate this Doc|recruitment message asking to translate the docs": "Traducir"
+  }
+}
