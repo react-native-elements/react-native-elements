@@ -16,7 +16,7 @@ Tabs organize content across different screens, data sets, and other interaction
 ## Usage
 
 ```js
-import { Tab } from 'react-native-elements';
+import { Tab, TabView } from 'react-native-elements';
 ```
 
 ```js
