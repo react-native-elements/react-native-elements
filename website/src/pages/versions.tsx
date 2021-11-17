@@ -67,6 +67,7 @@ const ReleaseNotes: React.FunctionComponent<{ version: string }> = ({
   <a
     href={`https://github.com/react-native-elements/react-native-elements/releases/tag/v${version}`}
     target="_blank"
+    rel="noopener noreferrer"
   >
     Release Notes
   </a>
