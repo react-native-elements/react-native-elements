@@ -1,11 +1,11 @@
 name: Expo Preview
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   publish:
     name: Install and publish
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.repo.full_name == 'react-native-elements/react-native-elements'
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'react-native-elements/react-native-elements'}}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -23,23 +23,18 @@ jobs:
           expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
           expo-cache: true
 
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Install dependencies & build PR
+        run: yarn && tsc
 
-      - name: Check yarn cache
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install dependencies
-        run: yarn
+      - name: Clone RNE-app & install dependencies
+        run: |
+          git clone https://github.com/react-native-elements/react-native-elements-app demo-app
+          cd demo-app
+          npm i
+          mv ../dist/ ./node_modules/react-native-elements/dist
 
       - name: Publish Expo app
-        working-directory: ./example
+        working-directory: demo-app
         run: expo publish --release-channel=pr-${{ github.event.number }}
 
       - name: Get expo link
