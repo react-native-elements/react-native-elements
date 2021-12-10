@@ -29,7 +29,7 @@ export type ButtonGroupProps = InlinePressableProps & {
   onPress?(...args: any[]): void;
 
   /** Array of buttons for component (required), if returning a component, must be an object with { element: componentName }. */
-  buttons?: (string | React.ReactElement<{}>)[];
+  buttons?: (string | React.ReactElement<{}> | {element: React.ReactElement})[];
 
   /** Specify styling for main button container. */
   containerStyle?: StyleProp<ViewStyle>;
