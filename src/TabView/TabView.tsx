@@ -8,7 +8,7 @@ import {
   GestureResponderEvent,
   useWindowDimensions
 } from 'react-native';
-import { RneFunctionComponent, ScreenWidth } from '../helpers';
+import { RneFunctionComponent } from '../helpers';
 
 export type TabViewBaseProps = {
   /** Child position index value. */
