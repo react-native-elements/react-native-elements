@@ -15,7 +15,7 @@
   "jest": {
     "preset": "react-native"
   },
-  "version": "2.0.0",
+  "version": "4.0.0",
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.4",
     "@docusaurus/plugin-client-redirects": "^2.0.0-beta.4",
