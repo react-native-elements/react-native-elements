@@ -88,14 +88,12 @@ export const Image: RneFunctionComponent<ImageProps> = ({
 
   const hasImage = Boolean(props.source);
 
-  const ComponentProp = Component
-    ? Component
-    : onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View;
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
 
   return (
-    <ComponentProp
+    <ContainerComponent
       {...pressableProps}
       {...{ onPress, onPressIn, onPressOut, onLongPress }}
       accessibilityIgnoresInvertColors={true}
@@ -144,7 +142,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
       >
         {children}
       </View>
-    </ComponentProp>
+    </ContainerComponent>
   );
 };
 

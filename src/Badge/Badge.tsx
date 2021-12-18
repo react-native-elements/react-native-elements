@@ -60,18 +60,15 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
     ...textProps,
   });
 
-  const ComponentProp = Component
-    ? Component
-    : onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View;
-
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
   return (
     <View
       testID="RNE__Badge__Container"
       style={StyleSheet.flatten([containerStyle && containerStyle])}
     >
-      <ComponentProp
+      <ContainerComponent
         {...{
           onPress,
           onLongPress,
@@ -98,7 +95,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
         ])}
       >
         {element}
-      </ComponentProp>
+      </ContainerComponent>
     </View>
   );
 };

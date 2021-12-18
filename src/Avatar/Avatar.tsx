@@ -115,11 +115,9 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 }) => {
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
-  const ComponentProp = Component
-    ? Component
-    : onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View;
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
 
   const height = width;
   const titleSize = width / 2;
@@ -162,7 +160,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
   }
 
   return (
-    <ComponentProp
+    <ContainerComponent
       style={StyleSheet.flatten([
         styles.container,
         { height, width },
@@ -197,7 +195,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
         ImageComponent={ImageComponent}
       />
       {children}
-    </ComponentProp>
+    </ContainerComponent>
   );
 };
 

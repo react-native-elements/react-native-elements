@@ -122,11 +122,9 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
 
-  const ComponentProp = Component
-    ? Component
-    : onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View;
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
 
   const getBackgroundColor = React.useMemo(() => {
     if (reverse) {
@@ -160,7 +158,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
       ])}
       testID="RNE__ICON__CONTAINER"
     >
-      <ComponentProp
+      <ContainerComponent
         {...{
           android_ripple: androidRipple(
             Color(reverse ? color : (underlayColor as string))
@@ -205,7 +203,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
             {...iconProps}
           />
         </View>
-      </ComponentProp>
+      </ContainerComponent>
     </View>
   );
 };
