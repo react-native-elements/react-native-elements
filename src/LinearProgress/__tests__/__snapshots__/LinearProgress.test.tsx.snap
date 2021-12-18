@@ -62,7 +62,7 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
       Object {
         "max": 1,
         "min": 0,
-        "now": NaN,
+        "now": 0,
       }
     }
     accessible={true}
