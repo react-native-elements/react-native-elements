@@ -5,6 +5,9 @@ on:
       - next
     paths:
       - 'website/**'
+defaults:
+  run:
+    working-directory: website
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -27,12 +30,10 @@ jobs:
       - name: Install
         if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
         run: |
-          cd website
           yarn
       - name: Build 🔧
         run: |
-          cd website
-          npx docusaurus build
+          yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
