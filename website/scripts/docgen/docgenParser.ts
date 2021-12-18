@@ -91,11 +91,6 @@ const parserOptions = {
       prop.type.name = 'Boolean or Object';
     }
 
-    // To replace '\r\n' which breaks the markdown for certain props to ''
-    if (prop?.defaultValue?.value.includes('\r\n')) {
-      prop.defaultValue.value = prop.defaultValue.value.replace(/\r\n/g, '');
-    }
-
     // To deal with the Badge Component with prop name onPress
     // Input - (...args: any[]) => an
     // Output - Function
@@ -117,17 +112,6 @@ const parserOptions = {
     // Output - Color(Primary)
     if (prop?.defaultValue?.value === 'theme?.colors?.primary') {
       prop.defaultValue.value = 'Color(Primary)';
-    }
-
-    // To deal with the prop of default value onPress || onLongPress ? Pressable : View in Avatar
-    // Input - onPress || onLongPress ? Pressable : View
-    // Output - Pressable or View
-    if (
-      /\? Pressable : View/.test(
-        prop?.defaultValue?.value.replace(/\n\s+/g, ' ')
-      )
-    ) {
-      prop.defaultValue.value = 'Pressable or View';
     }
 
     // Filter to show the props of the components only related to the src and ignore the props of the noe modules

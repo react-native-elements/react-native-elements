@@ -60,9 +60,9 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 Component for enclosing element (eg: TouchableHighlight, View, etc).
 
-| Type            | Default           |
-| --------------- | ----------------- |
-| React Component | Pressable or View |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
 
 ---
 
