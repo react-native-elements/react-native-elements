@@ -48,9 +48,9 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 
 Type of button.
 
-| Type            | Default           |
-| --------------- | ----------------- |
-| React Component | Pressable or View |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
 
 ---
 

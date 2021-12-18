@@ -54,9 +54,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
   onLongPress,
   onPressIn,
   onPressOut,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View,
+  Component,
   placeholderStyle,
   PlaceholderContent,
   containerStyle,
@@ -90,8 +88,14 @@ export const Image: RneFunctionComponent<ImageProps> = ({
 
   const hasImage = Boolean(props.source);
 
+  const ComponentProp = Component
+    ? Component
+    : onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View;
+
   return (
-    <Component
+    <ComponentProp
       {...pressableProps}
       {...{ onPress, onPressIn, onPressOut, onLongPress }}
       accessibilityIgnoresInvertColors={true}
@@ -140,7 +144,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
       >
         {children}
       </View>
-    </Component>
+    </ComponentProp>
   );
 };
 
