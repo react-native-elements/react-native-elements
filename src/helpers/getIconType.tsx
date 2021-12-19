@@ -1,4 +1,4 @@
-import { IconType } from '../icons/Icon';
+import { IconType } from '../Icon';
 
 const customIcons: any = {};
 

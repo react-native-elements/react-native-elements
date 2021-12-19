@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component should have Card title without image 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    replaceTheme={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      }
+    }
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          Object {
+            "color": "#43484d",
+            "fontSize": 18,
+            "fontWeight": "bold",
+            "marginBottom": 15,
+            "textAlign": "center",
+          }
+        }
+        testID="cardTitle"
+      >
+        Card Title
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Card Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    replaceTheme={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 0,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 1,
+      }
+    }
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+    />
+  </View>
+</View>
+`;

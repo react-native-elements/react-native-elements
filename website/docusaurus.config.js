@@ -12,54 +12,79 @@ module.exports = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
+  clientModules: [require.resolve('./snackPlayerInitializer.js')],
   /* path to images for header/footer */
-  favicon: 'img/favicon.png',
+  favicon: '/img/website/logo.png',
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    { src: 'https://snack.expo.io/embed.js', defer: true },
+  ],
   plugins: [
     [
-    '@docusaurus/plugin-client-redirects',
+      '@docusaurus/plugin-client-redirects',
       {
         fromExtensions: ['html'],
       },
-    ]
+    ],
   ],
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
-          homePageId: 'getting_started',
           path: 'docs',
+          homePageId: 'getting_started',
           sidebarPath: require.resolve('./sidebars.json'),
-          editUrl: 'https://github.com/react-native-elements/react-native-elements/edit/next/website/'
+          remarkPlugins: [require('./plugins/remark-snackplayer')],
+          editUrl:
+            'https://github.com/react-native-elements/react-native-elements/edit/next/website/',
+          sidebarCollapsible: false,
         },
         theme: {
           customCss: require.resolve('./static/css/custom.css'),
-        }
-      }
-    ]
+        },
+      },
+    ],
   ],
   themeConfig: {
-    sidebarCollapsible: false,
+    announcementBar: {
+      id: 'support_us', // Any value that will identify this message.
+      content:
+        '⭐️ If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐',
+      backgroundColor: 'var(--ifm-hero-background-color)', // Defaults to `#fff`.
+      textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
+    },
+    colorMode: {
+      defaultMode: 'dark',
+    },
     navbar: {
       title: 'React Native Elements',
       logo: {
         alt: 'React Native Elements Logo',
-        src: 'img/logo-icon.svg'
+        src: '/img/website/logo.png',
       },
+      hideOnScroll: true,
       items: [
-        { to: 'docs/', label: 'Docs', position: 'right' },
-        { to: 'docs/overview', label: 'Components', position: 'right' },
-        { to: 'help', label: 'Help', position: 'right' },
+        { to: 'docs/', label: 'Documentation', position: 'right' },
         {
-          href: 'https://github.com/react-native-elements/react-native-elements',
+          href:
+            'https://github.com/react-native-elements/react-native-elements',
           label: 'GitHub',
-          position: 'right'
+          position: 'right',
         },
+        { to: 'help', label: 'Help', position: 'right' },
         { to: 'blog', label: 'Blog', position: 'right' },
-        { to: 'versions', label: 'Versions'}
-      ]
+        {
+          type: 'docsVersionDropdown',
+
+          position: 'left',
+          dropdownItemsAfter: [{ to: 'versions', label: 'All versions' }],
+          // Do not add the link active class when browsing docs.
+          dropdownActiveClassDisabled: true,
+          docsPluginId: 'default',
+        },
+      ],
     },
     algolia: {
       apiKey: '89e04a9445d16350e100c2d2421f2d39',
@@ -71,7 +96,7 @@ module.exports = {
     footer: {
       style: 'dark',
       logo: {
-        src: 'img/logo.png'
+        src: 'img/logo.png',
       },
       links: [
         {
@@ -79,41 +104,53 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'docs/'
+              to: 'docs/',
             },
             {
               label: 'Components',
-              to: 'docs/overview'
-            }
-          ]
+              to: 'docs/overview',
+            },
+          ],
         },
         {
           title: 'Community',
           items: [
             {
               label: 'Chat with us on Slack',
-              to: 'https://react-native-elements-slack.herokuapp.com/'
+              to: 'https://react-native-elements-slack.herokuapp.com/',
             },
             {
               label: 'Submit a bug or feature',
-              to: 'https://github.com/react-native-elements/react-native-elements/issues/'
+              to:
+                'https://github.com/react-native-elements/react-native-elements/issues/',
             },
             {
               label: 'Support us on Open Collective',
-              to: 'https://opencollective.com/react-native-elements'
-            }
-          ]
+              to: 'https://opencollective.com/react-native-elements',
+            },
+          ],
         },
         {
           title: 'More',
           items: [
             {
               label: 'GitHub',
-              to: 'https://github.com/react-native-elements/react-native-elements'
-            }
-          ]
-        }
-      ]
-    }
-  }
+              to:
+                'https://github.com/react-native-elements/react-native-elements',
+            },
+            {
+              label: 'StackOverflow',
+              to:
+                'https://stackoverflow.com/questions/tagged/react-native-elements',
+            },
+            {
+              label: 'VS Code Extension',
+              to:
+                'https://marketplace.visualstudio.com/items?itemName=rne.snippets',
+            },
+          ],
+        },
+      ],
+    },
+  },
 };

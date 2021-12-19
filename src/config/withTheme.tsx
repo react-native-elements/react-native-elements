@@ -39,9 +39,9 @@ const ThemedComponent = (
               replaceTheme,
               ...deepmerge<FullTheme>(
                 (themeKey &&
-                  (theme[themeKey as keyof Partial<FullTheme>] as Partial<
-                    FullTheme
-                  >)) ||
+                  (theme[
+                    themeKey as keyof Partial<FullTheme>
+                  ] as Partial<FullTheme>)) ||
                   {},
                 rest,
                 {
@@ -50,6 +50,7 @@ const ThemedComponent = (
               ),
               children,
             };
+
             if (isClassComponent(WrappedComponent)) {
               return <WrappedComponent ref={forwardedRef} {...newProps} />;
             }
@@ -64,7 +65,7 @@ const ThemedComponent = (
 
 function withTheme<P = {}, T = {}>(
   WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
-  themeKey: string
+  themeKey?: string
 ):
   | React.FunctionComponent<Omit<P, keyof ThemeProps<T>>>
   | React.ForwardRefExoticComponent<P> {

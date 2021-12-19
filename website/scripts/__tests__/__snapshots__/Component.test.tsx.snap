@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validate generated markdown 1`] = `
+"---
+
+
+id: component
+
+
+title: Component
+
+
+slug: /component
+
+---
+
+
+
+import Usage from './usage/Component/Component.md'
+
+
+
+The docs of the Component.
+
+
+
+## Usage
+
+
+<Usage />
+
+---
+
+
+## Props
+
+### Component
+
+
+ - [color](#color)
+    
+ - [type](#type)
+    
+
+
+## Reference
+
+### Component
+#### color
+
+
+Color of the Component.
+
+| Type | Default |
+| ---- | ------- |
+| string | demoColor |
+
+---
+#### type
+
+
+Type of the Component.
+
+| Type | Default |
+| ---- | ------- |
+| string | demoType |
+
+---
+
+"
+`;
