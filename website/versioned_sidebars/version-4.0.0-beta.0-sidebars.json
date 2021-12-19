@@ -1,5 +1,5 @@
 {
-  "version-4.0.0/docs": [
+  "version-4.0.0-beta.0/docs": [
     {
       "type": "category",
       "collapsed": false,
@@ -8,23 +8,23 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-4.0.0/getting_started"
+          "id": "version-4.0.0-beta.0/getting_started"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/overview"
+          "id": "version-4.0.0-beta.0/overview"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/customization"
+          "id": "version-4.0.0-beta.0/customization"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/web_usage"
+          "id": "version-4.0.0-beta.0/web_usage"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/troubleshooting"
+          "id": "version-4.0.0-beta.0/troubleshooting"
         }
       ]
     },
@@ -36,123 +36,123 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-4.0.0/main/airbnbrating"
+          "id": "version-4.0.0-beta.0/main/airbnbrating"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/avatar"
+          "id": "version-4.0.0-beta.0/main/avatar"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/badge"
+          "id": "version-4.0.0-beta.0/main/badge"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/bottomsheet"
+          "id": "version-4.0.0-beta.0/main/bottomsheet"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/button"
+          "id": "version-4.0.0-beta.0/main/button"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/buttongroup"
+          "id": "version-4.0.0-beta.0/main/buttongroup"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/card"
+          "id": "version-4.0.0-beta.0/main/card"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/checkbox"
+          "id": "version-4.0.0-beta.0/main/checkbox"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/chip"
+          "id": "version-4.0.0-beta.0/main/chip"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/divider"
+          "id": "version-4.0.0-beta.0/main/divider"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/fab"
+          "id": "version-4.0.0-beta.0/main/fab"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/header"
+          "id": "version-4.0.0-beta.0/main/header"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/icon"
+          "id": "version-4.0.0-beta.0/main/icon"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/image"
+          "id": "version-4.0.0-beta.0/main/image"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/input"
+          "id": "version-4.0.0-beta.0/main/input"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/linearprogress"
+          "id": "version-4.0.0-beta.0/main/linearprogress"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/listitem"
+          "id": "version-4.0.0-beta.0/main/listitem"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/overlay"
+          "id": "version-4.0.0-beta.0/main/overlay"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/pricingcard"
+          "id": "version-4.0.0-beta.0/main/pricingcard"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/rating"
+          "id": "version-4.0.0-beta.0/main/rating"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/searchbar"
+          "id": "version-4.0.0-beta.0/main/searchbar"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/slider"
+          "id": "version-4.0.0-beta.0/main/slider"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/socialicon"
+          "id": "version-4.0.0-beta.0/main/socialicon"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/speeddial"
+          "id": "version-4.0.0-beta.0/main/speeddial"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/switch"
+          "id": "version-4.0.0-beta.0/main/switch"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/tab"
+          "id": "version-4.0.0-beta.0/main/tab"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/tabview"
+          "id": "version-4.0.0-beta.0/main/tabview"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/text"
+          "id": "version-4.0.0-beta.0/main/text"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/tile"
+          "id": "version-4.0.0-beta.0/main/tile"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/main/tooltip"
+          "id": "version-4.0.0-beta.0/main/tooltip"
         }
       ]
     },
@@ -164,7 +164,7 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-4.0.0/universe/circularslider"
+          "id": "version-4.0.0-beta.0/universe/circularslider"
         }
       ]
     },
@@ -176,19 +176,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-4.0.0/repo/contributing"
+          "id": "version-4.0.0-beta.0/repo/contributing"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/repo/testing"
+          "id": "version-4.0.0-beta.0/repo/testing"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/repo/labels"
+          "id": "version-4.0.0-beta.0/repo/labels"
         },
         {
           "type": "doc",
-          "id": "version-4.0.0/migration_v3_to_v4"
+          "id": "version-4.0.0-beta.0/migration_v3_to_v4"
         }
       ]
     }
