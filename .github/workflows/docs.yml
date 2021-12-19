@@ -27,8 +27,10 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-rne-docs-deploy-
+
       - name: Install
-#         if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
         run: |
           yarn
       - name: Build 🔧
