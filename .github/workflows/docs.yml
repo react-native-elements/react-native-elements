@@ -38,7 +38,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./website/build
           user_name: 'React Native Elements CI'
           user_email: 'react-native-elements-ci@users.noreply.github.com'
           cname: reactnativeelements.com
