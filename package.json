@@ -6,6 +6,9 @@
       "example"
     ]
   },
+  "scripts": {
+    "start": "yarn --cwd example start"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }
