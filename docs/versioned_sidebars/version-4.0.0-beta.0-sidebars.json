@@ -1,0 +1,196 @@
+{
+  "version-4.0.0-beta.0/docs": [
+    {
+      "type": "category",
+      "collapsed": false,
+      "collapsible": false,
+      "label": "It Starts Basic",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/getting_started"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/overview"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/customization"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/web_usage"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/troubleshooting"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "collapsed": false,
+      "collapsible": false,
+      "label": "Components",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/airbnbrating"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/avatar"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/badge"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/bottomsheet"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/button"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/buttongroup"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/card"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/checkbox"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/chip"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/divider"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/fab"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/header"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/icon"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/image"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/input"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/linearprogress"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/listitem"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/overlay"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/pricingcard"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/rating"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/searchbar"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/slider"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/socialicon"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/speeddial"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/switch"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/tab"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/tabview"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/text"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/tile"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/main/tooltip"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "collapsed": false,
+      "collapsible": false,
+      "label": "Universe Components",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/universe/circularslider"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "collapsed": false,
+      "collapsible": false,
+      "label": "Repo",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/repo/contributing"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/repo/testing"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/repo/labels"
+        },
+        {
+          "type": "doc",
+          "id": "version-4.0.0-beta.0/migration_v3_to_v4"
+        }
+      ]
+    }
+  ]
+}

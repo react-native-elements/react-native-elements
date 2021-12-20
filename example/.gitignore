@@ -1,0 +1,15 @@
+.idea
+.vscode
+.DS_Store
+web-build/
+web-report/
+
+node_modules/*
+dist/*
+.expo/*
+npm-debug.*
+*.log
+
+/beta
+
+.expo-shared/

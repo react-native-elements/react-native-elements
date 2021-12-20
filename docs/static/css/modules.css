@@ -1,0 +1,12 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroButton {
+  color: #fff !important;
+}
+
+.heroButton:hover {
+  color: #2089dc !important;
+}
