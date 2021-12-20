@@ -16,7 +16,9 @@ import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
 export type ImageProps = RNImageProps &
   InlinePressableProps & {
-    /** Define the component passed to image. */
+    /** Define the component passed to image.
+     *  @default `Press handlers present then Pressable else View`
+     */
     Component?: typeof React.Component;
 
     /** Callback function when pressing component. */
@@ -54,7 +56,9 @@ export const Image: RneFunctionComponent<ImageProps> = ({
   onLongPress,
   onPressIn,
   onPressOut,
-  Component,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   placeholderStyle,
   PlaceholderContent,
   containerStyle,
@@ -88,12 +92,8 @@ export const Image: RneFunctionComponent<ImageProps> = ({
 
   const hasImage = Boolean(props.source);
 
-  const ContainerComponent =
-    Component ||
-    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
-
   return (
-    <ContainerComponent
+    <Component
       {...pressableProps}
       {...{ onPress, onPressIn, onPressOut, onLongPress }}
       accessibilityIgnoresInvertColors={true}
@@ -142,7 +142,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
       >
         {children}
       </View>
-    </ContainerComponent>
+    </Component>
   );
 };
 

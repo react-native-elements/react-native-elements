@@ -2,11 +2,7 @@ import React from 'react';
 import LinearProgress from '../index';
 import { renderWithWrapper, fireEvent, act } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
-
-/**
- * Keep value between 0 and 1
- */
-const clamp = (value: number): number => Math.max(0, Math.min(value, 1)) || 0;
+import { clamp } from '../LinearProgress';
 
 describe('LinearProgress Component', () => {
   it('should clamp', () => {

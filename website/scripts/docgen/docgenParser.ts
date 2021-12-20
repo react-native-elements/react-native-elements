@@ -1,17 +1,22 @@
-import { withDefaultConfig } from 'react-docgen-typescript';
+import { withDefaultConfig, ParserOptions } from 'react-docgen-typescript';
 
 const themeProps = ['theme', 'updateTheme', 'replaceTheme'];
 const componentsWithParentsTypeToBeParsed = ['AirbnbRating'];
 
 // The config object is passed to the parser.
-const parserOptions = {
+const parserOptions: ParserOptions = {
   savePropValueAsString: true,
+  shouldIncludePropTagMap: true,
   propFilter: (prop, component) => {
     // This removes the theme props(theme, updateTheme, replaceTheme) from the documentation as they are common to all
     if (themeProps.includes(prop.name)) {
       return false;
     }
 
+    // To replace @default tag with component default value
+    if ((prop?.tags as { default?: string })?.default) {
+      prop.defaultValue.value = (prop?.tags as { default?: string })?.default;
+    }
     // To replace all the '|' in props with 'or'
     // Input - TouchableOpacity | View
     // Output - TouchableOpacity or View

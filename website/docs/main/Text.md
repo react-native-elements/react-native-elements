@@ -118,8 +118,6 @@ Styling when h3 is set.
 
 Add additional styling for Text.
 
-@see https://reactnative.dev/docs/text#style
-
 | Type               | Default |
 | ------------------ | ------- |
 | Text Style(Object) | {}      |

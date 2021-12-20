@@ -41,9 +41,9 @@ images with a placeholder and smooth image load transitioning.
 
 Define the component passed to image.
 
-| Type            | Default |
-| --------------- | ------- |
-| React Component | None    |
+| Type            | Default                                           |
+| --------------- | ------------------------------------------------- |
+| React Component | `Press handlers present then Pressable else View` |
 
 ---
 
