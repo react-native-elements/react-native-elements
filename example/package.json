@@ -5,7 +5,7 @@
   "author": "Monte Thakkar",
   "private": true,
   "homepage": "https://react-native-elements.github.io/react-native-elements-app/",
-  "main": "../node_modules/expo/AppEntry.js",
+  "main": "index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -20,6 +20,7 @@
     "clean-install": "rm -rf node_modules && npm cache clean --force && watchman watch-del-all && yarn"
   },
   "dependencies": {
+    "@babel/runtime": "^7.16.5",
     "@expo/vector-icons": "^12.0.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/drawer": "^5.11.4",
