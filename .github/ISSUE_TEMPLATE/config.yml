@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: ⚛️ React Native Issues
-    url:  https://github.com/facebook/react-native/issues
-    about: Please report bugs or issues in the React Native repository.
-  - name: 🤔 Questions and Help
-    url: https://react-native-elements-slack.herokuapp.com/
-    about: Looking for help with your app? Please refer to the React Native Element's slack.

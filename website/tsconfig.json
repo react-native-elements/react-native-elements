@@ -1,8 +1,0 @@
-{
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
-  "compilerOptions": {
-    "resolveJsonModule": true
-  },
-  "include": ["src/"],
-  "exclude": ["node_modules"]
-}
