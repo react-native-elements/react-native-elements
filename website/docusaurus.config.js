@@ -147,15 +147,19 @@ const config = {
   baseUrlIssueBanner: false,
   trailingSlash: false,
   i18n: {
-    defaultLocale: 'en-US',
-    locales: ['en-US'],
-    localeConfigs: undefined,
+    defaultLocale: 'en',
+    locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
   onDuplicateRoutes: 'ignore',
-  noIndex: false,
-  staticDirectories: [],
+  staticDirectories: ['static'],
 };
 
 module.exports = config;
