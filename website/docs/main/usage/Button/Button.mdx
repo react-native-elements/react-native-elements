@@ -1,6 +1,5 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import { Button } from 'react-native-elements';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 ### Button by types
@@ -15,9 +14,6 @@ values={[
 >
 
 <TabItem value="solid">
-    <div componentType="button">
-      <Button title="Solid Button" />
-    </div>
 
 ```jsx live
 <Button title="Solid Button" />
@@ -25,24 +21,15 @@ values={[
 
   </TabItem>
   <TabItem value="outline">
-    <div componentType="button">
-      <Button
-        title="Outline Button"
-        type="outline"
-      />
-    </div>
 
-```js
+```jsx live
 <Button title="Outline Button" type="outline" />
 ```
 
   </TabItem>
   <TabItem value="clear">
-    <div componentType="button">
-      <Button title="Clear Button" type="clear"/>
-    </div>
 
-```js
+```jsx live
 <Button title="Clear Button" type="clear" />
 ```
 
@@ -51,18 +38,7 @@ values={[
 
 ### Button with icon object
 
-<div componentType="button">
-  <Button
-    icon={{
-      name: 'add',
-      size: 20,
-      color: 'white',
-    }}
-    title="Button with icon object"
-  />
-</div>
-
-```js
+```jsx live
 <Button
   icon={{
     name: 'add',
@@ -77,19 +53,7 @@ values={[
 
 Add `iconRight` to show the icon on the right side of the button.
 
-<div componentType="button">
-  <Button
-    icon={{
-      name: 'add',
-      size: 20,
-      color: 'white',
-    }}
-    title="Button with right icon"
-    iconRight
-  />
-</div>
-
-```js
+```jsx live
 <Button
   icon={{
     name: 'add',
@@ -106,16 +70,7 @@ Add `iconRight` to show the icon on the right side of the button.
 You can use external `Icon` components inside the button.
 Example:
 
-<div componentType="button">
-  <Button
-    icon={<FontAwesomeIcon name="arrow-right" size={16} color="white" />}
-    title="Button with icon component"
-    iconRight
-    titleStyle={{ marginHorizontal: 8 }}
-  />
-</div>
-
-```js
+```jsx live
 <Button
   icon={<FontAwesomeIcon name="arrow-right" size={16} color="white" />}
   title="Button with icon component"
@@ -129,15 +84,6 @@ Example:
 For handling button loading add `loading` or `loading={true}` to the button. Also you can combine `loading` and `disabled`
 props to make the button unclickable.
 
-<div componentType="button">
-  <Button
-    title="Loading button"
-    buttonStyle={{ width: 150 }}
-    loading
-    disabled
-  />
-</div>
-
-```js
+```jsx live
 <Button title="Loading button" buttonStyle={{ width: 150 }} loading disabled />
 ```
