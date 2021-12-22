@@ -1,0 +1,143 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { Button } from 'react-native-elements';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+
+### Button by types
+
+<Tabs
+defaultValue="solid"
+values={[
+{ label: 'Solid', value: 'solid' },
+{ label: 'Outline', value: 'outline' },
+{ label: 'Clear', value: 'clear' },
+]}
+>
+
+<TabItem value="solid">
+    <div componentType="button">
+      <Button title="Solid Button" />
+    </div>
+
+```jsx live
+<Button title="Solid Button" />
+```
+
+  </TabItem>
+  <TabItem value="outline">
+    <div componentType="button">
+      <Button
+        title="Outline Button"
+        type="outline"
+      />
+    </div>
+
+```js
+<Button title="Outline Button" type="outline" />
+```
+
+  </TabItem>
+  <TabItem value="clear">
+    <div componentType="button">
+      <Button title="Clear Button" type="clear"/>
+    </div>
+
+```js
+<Button title="Clear Button" type="clear" />
+```
+
+  </TabItem>
+</Tabs>
+
+### Button with icon object
+
+<div componentType="button">
+  <Button
+    icon={{
+      name: 'add',
+      size: 20,
+      color: 'white',
+    }}
+    title="Button with icon object"
+  />
+</div>
+
+```js
+<Button
+  icon={{
+    name: 'add',
+    size: 20,
+    color: 'white',
+  }}
+  title="Button with icon object"
+/>
+```
+
+### Button with right icon
+
+Add `iconRight` to show the icon on the right side of the button.
+
+<div componentType="button">
+  <Button
+    icon={{
+      name: 'add',
+      size: 20,
+      color: 'white',
+    }}
+    title="Button with right icon"
+    iconRight
+  />
+</div>
+
+```js
+<Button
+  icon={{
+    name: 'add',
+    size: 20,
+    color: 'white',
+  }}
+  title="Button with right icon"
+  iconRight
+/>
+```
+
+### Button with icon object
+
+You can use external `Icon` components inside the button.
+Example:
+
+<div componentType="button">
+  <Button
+    icon={<FontAwesomeIcon name="arrow-right" size={16} color="white" />}
+    title="Button with icon component"
+    iconRight
+    titleStyle={{ marginHorizontal: 8 }}
+  />
+</div>
+
+```js
+<Button
+  icon={<FontAwesomeIcon name="arrow-right" size={16} color="white" />}
+  title="Button with icon component"
+  iconRight
+  titleStyle={{ marginHorizontal: 8 }}
+/>
+```
+
+### Button with loading
+
+For handling button loading add `loading` or `loading={true}` to the button. Also you can combine `loading` and `disabled`
+props to make the button unclickable.
+
+<div componentType="button">
+  <Button
+    title="Loading button"
+    buttonStyle={{ width: 150 }}
+    loading
+    disabled
+  />
+</div>
+
+```js
+<Button title="Loading button" buttonStyle={{ width: 150 }} loading disabled />
+```

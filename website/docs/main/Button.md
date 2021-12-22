@@ -6,7 +6,7 @@ title: Button
 slug: /button
 ---
 
-import Usage from './usage/Button/Button.md'
+import Usage from './usage/Button/Button.mdx'
 
 Buttons are touchable elements used to interact with the screen and to perform and operation.
 
@@ -24,26 +24,31 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 ### Button
 
-- [TouchableComponent](#touchablecomponent)
-- [ViewComponent](#viewcomponent)
-- [buttonStyle](#buttonstyle)
-- [containerStyle](#containerstyle)
-- [disabled](#disabled)
-- [disabledStyle](#disabledstyle)
-- [disabledTitleStyle](#disabledtitlestyle)
-- [icon](#icon)
-- [iconContainerStyle](#iconcontainerstyle)
-- [iconPosition](#iconposition)
-- [iconRight](#iconright)
-- [linearGradientProps](#lineargradientprops)
-- [loading](#loading)
-- [loadingProps](#loadingprops)
-- [loadingStyle](#loadingstyle)
-- [raised](#raised)
-- [title](#title)
-- [titleProps](#titleprops)
-- [titleStyle](#titlestyle)
-- [type](#type)
+- [Usage](#usage)
+- [Props](#props)
+  - [Button](#button)
+- [Reference](#reference)
+  - [Button](#button-1)
+    - [TouchableComponent](#touchablecomponent)
+    - [ViewComponent](#viewcomponent)
+    - [buttonStyle](#buttonstyle)
+    - [containerStyle](#containerstyle)
+    - [disabled](#disabled)
+    - [disabledStyle](#disabledstyle)
+    - [disabledTitleStyle](#disabledtitlestyle)
+    - [icon](#icon)
+    - [iconContainerStyle](#iconcontainerstyle)
+    - [iconPosition](#iconposition)
+    - [iconRight](#iconright)
+    - [linearGradientProps](#lineargradientprops)
+    - [loading](#loading)
+    - [loadingProps](#loadingprops)
+    - [loadingStyle](#loadingstyle)
+    - [raised](#raised)
+    - [title](#title)
+    - [titleProps](#titleprops)
+    - [titleStyle](#titlestyle)
+    - [type](#type)
 
 ## Reference
 
