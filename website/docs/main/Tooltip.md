@@ -158,9 +158,9 @@ Style to be applied on the pointer.
 
 Component to be rendered as the display container.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type                   | Default |
+| ---------------------- | ------- |
+| React.ReactElement<{}> | None    |
 
 ---
 

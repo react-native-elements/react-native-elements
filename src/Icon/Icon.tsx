@@ -7,6 +7,7 @@ import {
   StyleProp,
   TextStyle,
   Pressable,
+  ColorValue,
 } from 'react-native';
 import {
   IconButtonProps,
@@ -181,7 +182,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           style={StyleSheet.flatten([
             (reverse || raised) && buttonStyles,
             {
-              backgroundColor: getBackgroundColor,
+              backgroundColor: getBackgroundColor as ColorValue,
               alignItems: 'center',
               justifyContent: 'center',
             },
