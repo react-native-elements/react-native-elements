@@ -32,7 +32,6 @@ This documentation is for Tap Rating version.
 - [defaultRating](#defaultrating)
 - [isDisabled](#isdisabled)
 - [onFinishRating](#onfinishrating)
-- [ratingContainerStyle](#ratingcontainerstyle)
 - [reviewColor](#reviewcolor)
 - [reviewSize](#reviewsize)
 - [reviews](#reviews)
@@ -89,18 +88,6 @@ Callback method when the user finishes rating. Gives you the final rating value 
 | Type                  | Default |
 | --------------------- | ------- |
 | (number: any) => void | None    |
-
----
-
-#### ratingContainerStyle
-
-Style for rating container
-
-Default is none
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
 
 ---
 

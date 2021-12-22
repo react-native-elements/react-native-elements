@@ -89,9 +89,7 @@ export type SocialMediaType =
   | 'reddit';
 
 export type SocialIconProps = {
-  /** Type of button.
-   *  @default `Press handlers present then Pressable else View`
-   */
+  /** Type of button. */
   Component?: typeof React.Component;
 
   /** Social media type. */
@@ -167,9 +165,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   onPress,
   onPressOut,
   onPressIn,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View,
+  Component,
   raised = true,
   small,
   style,
@@ -181,8 +177,11 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
 }) => {
   const shouldShowExpandedButton = button && title;
 
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
   return (
-    <Component
+    <ContainerComponent
       {...{
         onLongPress,
         onPress,
@@ -259,7 +258,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
           />
         )}
       </View>
-    </Component>
+    </ContainerComponent>
   );
 };
 

@@ -60,9 +60,7 @@ export type IconProps = IconButtonProps & {
   /** Type of icon set. [Supported sets here](#available-icon-sets). */
   type?: IconType;
 
-  /** Update React Native Component.
-   *  @default `Press handlers present then Pressable else View`
-   */
+  /** Update React Native Component. */
   Component?: typeof React.Component;
 
   /** Reverses color scheme. */
@@ -113,9 +111,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   onLongPress,
   onPressIn,
   onPressOut,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View,
+  Component,
   solid = false,
   brand = false,
   theme,
@@ -126,6 +122,10 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   const reverseColor = reverseColorProp || theme?.colors?.white;
   const IconComponent = getIconType(type);
   const iconSpecificStyle = getIconStyle(type, { solid, brand });
+
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
 
   const getBackgroundColor = React.useMemo(() => {
     if (reverse) {
@@ -159,7 +159,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
       ])}
       testID="RNE__ICON__CONTAINER"
     >
-      <Component
+      <ContainerComponent
         {...{
           android_ripple: androidRipple(
             Color(reverse ? color : (underlayColor as string))
@@ -204,7 +204,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
             {...iconProps}
           />
         </View>
-      </Component>
+      </ContainerComponent>
     </View>
   );
 };

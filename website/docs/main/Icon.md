@@ -49,9 +49,9 @@ They are also used for displaying information.
 
 Update React Native Component.
 
-| Type            | Default                                           |
-| --------------- | ------------------------------------------------- |
-| React Component | `Press handlers present then Pressable else View` |
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
 
 ---
 
@@ -59,9 +59,9 @@ Update React Native Component.
 
 Background color of the button
 
-| Type                 | Default   |
-| -------------------- | --------- |
-| number or ColorValue | '#007AFF' |
+| Type   | Default   |
+| ------ | --------- |
+| string | '#007AFF' |
 
 ---
 
@@ -93,9 +93,9 @@ Text and icon color
 
 Use iconStyle or nest a Text component if you need different colors.
 
-| Type                 | Default |
-| -------------------- | ------- |
-| number or ColorValue | 'white' |
+| Type   | Default |
+| ------ | ------- |
+| string | 'white' |
 
 ---
 
@@ -203,7 +203,7 @@ Size of the icon, can also be passed as fontSize in the style object.
 
 | Type   | Default |
 | ------ | ------- |
-| number | 12      |
+| number | 24      |
 
 ---
 

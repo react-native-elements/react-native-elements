@@ -10,6 +10,11 @@ import {
 import Color from 'color';
 import { RneFunctionComponent } from '../helpers';
 
+/**
+ * Keep value between 0 and 1
+ */
+const clamp = (value: number): number => Math.max(0, Math.min(value, 1)) || 0;
+
 export type LinearProgressProps = ViewProps & {
   /** The value of the progress indicator for the determinate variant. Value between 0 and 1. */
   value?: number;
@@ -166,9 +171,3 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
 };
 
 LinearProgress.displayName = 'LinearProgress';
-
-/**
- * Keep value between 0 and 1
- */
-export const clamp = (value: number): number =>
-  Math.max(0, Math.min(value, 1)) || 0;
