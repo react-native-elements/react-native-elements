@@ -165,9 +165,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
   onPress,
   onPressOut,
   onPressIn,
-  Component = onPress || onLongPress || onPressIn || onPressOut
-    ? Pressable
-    : View,
+  Component,
   raised = true,
   small,
   style,
@@ -179,8 +177,11 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
 }) => {
   const shouldShowExpandedButton = button && title;
 
+  const ContainerComponent =
+    Component ||
+    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
   return (
-    <Component
+    <ContainerComponent
       {...{
         onLongPress,
         onPress,
@@ -257,7 +258,7 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
           />
         )}
       </View>
-    </Component>
+    </ContainerComponent>
   );
 };
 

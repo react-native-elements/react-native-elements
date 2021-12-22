@@ -3,7 +3,18 @@ import LinearProgress from '../index';
 import { renderWithWrapper, fireEvent, act } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 
+/**
+ * Keep value between 0 and 1
+ */
+const clamp = (value: number): number => Math.max(0, Math.min(value, 1)) || 0;
+
 describe('LinearProgress Component', () => {
+  it('should clamp', () => {
+    expect(clamp(3)).toBe(1);
+    expect(clamp(undefined)).toBe(0);
+    expect(clamp(-1)).toBe(0);
+    expect(clamp(0.6)).toBe(0.6);
+  });
   it('should have apply color', () => {
     const { wrapper } = renderWithWrapper(
       <LinearProgress color="red" trackColor="blue" />,

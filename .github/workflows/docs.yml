@@ -5,6 +5,9 @@ on:
       - next
     paths:
       - 'website/**'
+defaults:
+  run:
+    working-directory: website
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -18,20 +21,23 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Cache Dependencies
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
         uses: actions/cache@v2
-        id: rne-docs-deploy
         with:
-          path: node_modules
-          key: ${{ runner.os }}-rne-docs-deploy-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
+
       - name: Install
-        if: steps.rne-docs-deploy.outputs.cache-hit != 'true' # Over here!
         run: |
-          cd website
           yarn
       - name: Build 🔧
         run: |
-          cd website
           yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
