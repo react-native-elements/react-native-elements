@@ -4,6 +4,7 @@
   </a>
 </p>
 
+
 <p align="center">
   Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 </p>
@@ -15,6 +16,7 @@
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
+
 
 <p align="center">
   <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
