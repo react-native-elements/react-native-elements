@@ -32,7 +32,10 @@ type AvatarIcon = IconObject & {
 };
 
 export type AvatarProps = {
-  /** Component for enclosing element (eg: TouchableHighlight, View, etc). */
+  /** Component for enclosing element (eg: TouchableHighlight, View, etc).
+   *
+   *  @default `Press handlers present then Pressable else View`
+   */
   Component?: typeof React.Component;
 
   /** Callback function when pressing component. */
@@ -94,7 +97,9 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
   onLongPress,
   onPressIn,
   onPressOut,
-  Component,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   containerStyle,
   icon,
   iconStyle,
@@ -115,9 +120,6 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 }) => {
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
-  const ContainerComponent =
-    Component ||
-    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
 
   const height = width;
   const titleSize = width / 2;
@@ -160,7 +162,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
   }
 
   return (
-    <ContainerComponent
+    <Component
       style={StyleSheet.flatten([
         styles.container,
         { height, width },
@@ -195,7 +197,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
         ImageComponent={ImageComponent}
       />
       {children}
-    </ContainerComponent>
+    </Component>
   );
 };
 

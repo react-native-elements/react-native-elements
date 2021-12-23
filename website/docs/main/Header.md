@@ -122,7 +122,7 @@ Add children component to the header.
 
 | Type                                 | Default |
 | ------------------------------------ | ------- |
-| (Element or Element[]) and ReactNode | []      |
+| ReactNode and (Element or Element[]) | []      |
 
 ---
 

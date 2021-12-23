@@ -31,7 +31,9 @@ export type BadgeProps = {
   /** Text value to be displayed by badge, defaults to empty. */
   value?: React.ReactNode;
 
-  /** Custom component to replace the badge outer component. */
+  /** Custom component to replace the badge outer component.
+   *  @default `Press handlers present then Pressable else View`
+   */
   Component?: typeof React.Component;
 
   /** Determines color of the indicator. */
@@ -48,7 +50,9 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
   onLongPress,
   onPressOut,
   onPressIn,
-  Component,
+  Component = onPress || onLongPress || onPressIn || onPressOut
+    ? Pressable
+    : View,
   value,
   theme,
   status = 'primary',
@@ -60,15 +64,12 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
     ...textProps,
   });
 
-  const ContainerComponent =
-    Component ||
-    (onPress || onLongPress || onPressIn || onPressOut ? Pressable : View);
   return (
     <View
       testID="RNE__Badge__Container"
       style={StyleSheet.flatten([containerStyle && containerStyle])}
     >
-      <ContainerComponent
+      <Component
         {...{
           onPress,
           onLongPress,
@@ -95,7 +96,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
         ])}
       >
         {element}
-      </ContainerComponent>
+      </Component>
     </View>
   );
 };
