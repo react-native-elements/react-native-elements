@@ -1,5 +1,6 @@
 const { exec } = require('child_process');
 
+
 exec('yarn docs:build', (err) => {
   if (err) {
     console.log('[error]: update and commit docs', err);
@@ -20,3 +21,5 @@ exec('yarn docs:build', (err) => {
     }
   });
 });
+
+
