@@ -1,20 +1,21 @@
 name: Expo Preview
-on: [pull_request, push]
+on: 
+    pull_request: '*'
+    push: '*'
+      paths:
+      - 'src/**'
 
 jobs:
   publish:
     name: Install and publish
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'react-native-elements/react-native-elements'}}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-
+          node-version: '14'
       - name: Setup Expo
         uses: expo/expo-github-action@v5
         with:
