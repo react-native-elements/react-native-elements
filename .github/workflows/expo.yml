@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14'
       - name: Setup Expo
-        uses: expo/expo-github-action@v5
+        uses: expo/expo-github-action@v6
         with:
           expo-version: 5.x
           username: ${{ secrets.EXPO_CLI_USERNAME }}
