@@ -6,7 +6,7 @@ title: Avatar
 slug: /avatar
 ---
 
-import Usage from './usage/Avatar/Avatar.md'
+import Usage from './usage/Avatar/Avatar.mdx'
 
 Avatars are found all over ui design from lists to profile screens.
 
@@ -28,24 +28,34 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar
 
-- [Component](#component)
-- [ImageComponent](#imagecomponent)
-- [activeOpacity](#activeopacity)
-- [avatarStyle](#avatarstyle)
-- [containerStyle](#containerstyle)
-- [icon](#icon)
-- [iconStyle](#iconstyle)
-- [imageProps](#imageprops)
-- [onLongPress](#onlongpress)
-- [onPress](#onpress)
-- [overlayContainerStyle](#overlaycontainerstyle)
-- [placeholderStyle](#placeholderstyle)
-- [renderPlaceholderContent](#renderplaceholdercontent)
-- [rounded](#rounded)
-- [size](#size)
-- [source](#source)
-- [title](#title)
-- [titleStyle](#titlestyle)
+- [Components](#components)
+- [Usage](#usage)
+- [Props](#props)
+  - [Avatar](#avatar)
+  - [Avatar.Accessory](#avataraccessory)
+- [Reference](#reference)
+  - [Avatar](#avatar-1)
+    - [Component](#component)
+    - [ImageComponent](#imagecomponent)
+    - [activeOpacity](#activeopacity)
+    - [avatarStyle](#avatarstyle)
+    - [containerStyle](#containerstyle)
+    - [icon](#icon)
+    - [iconStyle](#iconstyle)
+    - [imageProps](#imageprops)
+    - [onLongPress](#onlongpress)
+    - [onPress](#onpress)
+    - [overlayContainerStyle](#overlaycontainerstyle)
+    - [placeholderStyle](#placeholderstyle)
+    - [renderPlaceholderContent](#renderplaceholdercontent)
+    - [rounded](#rounded)
+    - [size](#size)
+    - [source](#source)
+    - [title](#title)
+    - [titleStyle](#titlestyle)
+  - [Avatar.Accessory](#avataraccessory-1)
+    - [style](#style)
+    - [underlayColor](#underlaycolor)
 
 ### Avatar.Accessory
 
