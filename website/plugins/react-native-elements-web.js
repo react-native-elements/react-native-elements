@@ -7,7 +7,7 @@ const a = function () {
   return {
     name: 'docs-plugin-react-native-elements-web',
     configureWebpack(config, isServer, utils) {
-      const { getBabelLoader } = utils;
+      const { getJSLoader } = utils;
       return {
         module: {
           rules: [
@@ -22,7 +22,7 @@ const a = function () {
             {
               test: /\.(t|j)sx?$/,
               use: [
-                getBabelLoader(isServer, {
+                getJSLoader(isServer, {
                   plugins: ['@babel/plugin-proposal-class-properties'],
                   presets: ['@babel/preset-react'],
                 }),
