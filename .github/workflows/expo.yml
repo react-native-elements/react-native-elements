@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish:
-    name: Install and publish
+    name: Install and publish Expo preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
