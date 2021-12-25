@@ -1,11 +1,5 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-module.exports = {
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: 'React Native Elements' /* title for your website */,
   tagline: 'Cross Platform React Native UI Toolkit',
   url: 'https://reactnativeelements.com/' /* your website url */,
@@ -20,6 +14,7 @@ module.exports = {
     'https://buttons.github.io/buttons.js',
     { src: 'https://snack.expo.io/embed.js', defer: true },
   ],
+  themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
     [
       '@docusaurus/plugin-client-redirects',
@@ -27,6 +22,7 @@ module.exports = {
         fromExtensions: ['html'],
       },
     ],
+    './plugins/a.js',
   ],
   presets: [
     [
@@ -34,7 +30,7 @@ module.exports = {
       {
         docs: {
           path: 'docs',
-          homePageId: 'getting_started',
+          // homePageId: 'getting_started',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
@@ -49,10 +45,10 @@ module.exports = {
   ],
   themeConfig: {
     announcementBar: {
-      id: 'support_us', // Any value that will identify this message.
+      id: 'support_us',
       content:
         '⭐️ If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐',
-      backgroundColor: 'var(--ifm-hero-background-color)', // Defaults to `#fff`.
+      backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
     },
     colorMode: {
@@ -68,8 +64,7 @@ module.exports = {
       items: [
         { to: 'docs/', label: 'Documentation', position: 'right' },
         {
-          href:
-            'https://github.com/react-native-elements/react-native-elements',
+          href: 'https://github.com/react-native-elements/react-native-elements',
           label: 'GitHub',
           position: 'right',
         },
@@ -121,8 +116,7 @@ module.exports = {
             },
             {
               label: 'Submit a bug or feature',
-              to:
-                'https://github.com/react-native-elements/react-native-elements/issues/',
+              to: 'https://github.com/react-native-elements/react-native-elements/issues/',
             },
             {
               label: 'Support us on Open Collective',
@@ -135,22 +129,37 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              to:
-                'https://github.com/react-native-elements/react-native-elements',
+              to: 'https://github.com/react-native-elements/react-native-elements',
             },
             {
               label: 'StackOverflow',
-              to:
-                'https://stackoverflow.com/questions/tagged/react-native-elements',
+              to: 'https://stackoverflow.com/questions/tagged/react-native-elements',
             },
             {
               label: 'VS Code Extension',
-              to:
-                'https://marketplace.visualstudio.com/items?itemName=rne.snippets',
+              to: 'https://marketplace.visualstudio.com/items?itemName=rne.snippets',
             },
           ],
         },
       ],
     },
   },
+  baseUrlIssueBanner: false,
+  trailingSlash: false,
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
+  },
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
+  onDuplicateRoutes: 'ignore',
+  staticDirectories: ['static'],
 };
+
+module.exports = config;

@@ -6,8 +6,9 @@ import {
   StyleSheet,
   PanResponderGestureState,
   GestureResponderEvent,
+  useWindowDimensions
 } from 'react-native';
-import { RneFunctionComponent, ScreenWidth } from '../helpers';
+import { RneFunctionComponent } from '../helpers';
 
 export type TabViewBaseProps = {
   /** Child position index value. */
@@ -38,6 +39,7 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
   const length = React.Children.count(children);
+  const window = useWindowDimensions();
 
   const onPanResponderRelease = (
     _: GestureResponderEvent,
@@ -52,7 +54,7 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
     if (Math.abs(dy) > Math.abs(dx)) {
       return;
     }
-    const position = dx / -ScreenWidth;
+    const position = dx / -window.width;
     const next = position > value ? Math.ceil(position) : Math.floor(position);
     onChange?.(currentIndex.current + next);
   };
@@ -84,12 +86,12 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
       style={[
         styles.container,
         {
-          width: ScreenWidth * length,
+          width: window.width * length,
           transform: [
             {
               translateX: translateX.interpolate({
                 inputRange: [0, 1],
-                outputRange: [0, -ScreenWidth],
+                outputRange: [0, -window.width],
               }),
             },
           ],
@@ -98,7 +100,7 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
       {...panResponder.panHandlers}
     >
       {React.Children.map(children, (child) => (
-        <View style={styles.container}>{child}</View>
+        <View style={[styles.container, { width: window.width }]}>{child}</View>
       ))}
     </Animated.View>
   );
@@ -108,8 +110,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'stretch',
-    width: ScreenWidth,
+    alignItems: 'stretch'
   },
 });
 
