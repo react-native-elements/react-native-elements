@@ -6,7 +6,7 @@ import {
   StyleSheet,
   PanResponderGestureState,
   GestureResponderEvent,
-  useWindowDimensions
+  useWindowDimensions,
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
   },
 });
 
