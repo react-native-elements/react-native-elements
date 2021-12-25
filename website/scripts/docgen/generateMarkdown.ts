@@ -1,5 +1,6 @@
 import json2md from 'json2md';
 import _ from 'lodash';
+import { tagToTab, snippetToCode } from './utils';
 
 json2md.converters.header = function (input) {
   return input.id
@@ -64,36 +65,23 @@ json2md.converters.imports = function (input) {
 };
 
 json2md.converters.usage = function (input) {
-  return json2md([
-    { h2: `Usage` },
-    { p: `\`\`\`jsx live\n${input?.live}\n\`\`\`` || '' },
-    { h3: input?.tab },
-    { p: tagToTab(input?.tabItem) },
+  const tabName = input.tabName;
+  const tabItem = input.tabItem;
+  const tabLabel = eval(input?.tabLabel);
+
+  const tags = [
+    (tabName || input?.usage) && { h2: `Usage` },
+    tabName && { h3: tabName },
+    tabName && { p: tagToTab(tabLabel, tabItem) },
     { hr: '' },
-    { p: input?.usage },
+    { p: snippetToCode(input?.usage) || '' },
     { h2: `Example` },
     { p: `<Usage />` },
-  ]);
+  ].filter(Boolean);
+
+  return json2md(tags);
 };
 
-const tagToTab = (tabs: string) => {
-  if (!tabs) return '';
-  const rows = tabs
-    ?.split('\n')
-    .map((tab) => tab.split('@').map((val) => val.trim()));
-  return (
-    `<Tabs defaultValue="${rows[0][0]}" values={[${rows.map(
-      ([label]) => `{label: '${label}',value: '${label}'}`
-    )}]}>\n` +
-    rows
-      .map(
-        ([label, value]) =>
-          `<TabItem value="${label}">\n\`\`\`jsx live\n${value}\n\`\`\`\n</TabItem>`
-      )
-      .join('\n') +
-    '</Tabs>'
-  );
-};
 function generatePropsLinks(props) {
   const propLinks = props
     ? Object.keys(props).map((key) => {
@@ -181,7 +169,7 @@ export const generateMarkdown = (data) => {
         component: data.displayName,
       },
     },
-    { p: data.description },
+    { p: snippetToCode(data.description) },
     {
       components: {
         childrens: data.childrens,
