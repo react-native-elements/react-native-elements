@@ -1,13 +1,12 @@
 name: Expo Preview
 on: 
-    pull_request: '*'
-    push: '*'
-      paths:
-      - 'src/**'
+    pull_request: 
+      branches: 'next'
+      paths: 'src/**'
 
 jobs:
   publish:
-    name: Install and publish
+    name: Install and publish Expo preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,11 +16,11 @@ jobs:
         with:
           node-version: '14'
       - name: Setup Expo
-        uses: expo/expo-github-action@v5
+        uses: expo/expo-github-action@v6
         with:
-          expo-version: 3.x
-          expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-          expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+          expo-version: 5.x
+          username: ${{ secrets.EXPO_CLI_USERNAME }}
+          password: ${{ secrets.EXPO_CLI_PASSWORD }}
           expo-cache: true
 
       - name: Install dependencies & build PR
@@ -36,7 +35,9 @@ jobs:
 
       - name: Publish Expo app
         working-directory: demo-app
-        run: expo publish --release-channel=pr-${{ github.event.number }}
+        run: |
+          expo login -u ${{ secrets.EXPO_CLI_USERNAME }} -p ${{ secrets.EXPO_CLI_PASSWORD }}
+          expo publish --release-channel=pr-${{ github.event.number }}
 
       - name: Get expo link
         id: expo
