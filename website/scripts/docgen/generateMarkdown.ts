@@ -75,7 +75,7 @@ json2md.converters.usage = function (input) {
     tabName && { p: tagToTab(tabLabel, tabItem) },
     (tabName || input?.usage) && { hr: '' },
     { p: snippetToCode(input?.usage) || '' },
-    { h2: `Example` },
+    { h2: `Usage` },
     { p: `<Usage />` },
   ].filter(Boolean);
 
