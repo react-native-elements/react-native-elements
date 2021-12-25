@@ -1,5 +1,7 @@
 name: Build and Deploy docs
 on:
+  pull_request:
+    branches: '*'
   push:
     branches:
       - next
