@@ -25,7 +25,7 @@
     "clean-install": "rimraf node_modules && yarn",
     "changelog": "auto-changelog -p",
     "docs": "yarn docs:build && cd website && yarn start",
-    "docs:lint": "prettier --write '**/*.md'",
+    "docs:lint": "prettier --write './website/docs/**/*.md'",
     "docs:build": "ts-node website/scripts/docgen/index.ts && yarn docs:lint",
     "docs:test": "cd website && jest --runInBand"
   },

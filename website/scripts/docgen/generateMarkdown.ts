@@ -48,7 +48,16 @@ json2md.converters.imports = function (input) {
   return input.component
     ? json2md([
         {
-          p: `import Usage from './usage/${input.component}/${input.component}.md'`,
+          p: `import Usage from './usage/${input.component}/${input.component}.mdx'`,
+        },
+        {
+          p: `import { ${input.component} } from 'react-native-elements'`,
+        },
+        {
+          p: `import Tabs from '@theme/Tabs';`,
+        },
+        {
+          p: `import TabItem from '@theme/TabItem';`,
         },
       ])
     : '';
@@ -57,13 +66,34 @@ json2md.converters.imports = function (input) {
 json2md.converters.usage = function (input) {
   return json2md([
     { h2: `Usage` },
-    {
-      p: `<Usage />`,
-    },
+    { p: `\`\`\`jsx live\n${input?.live}\n\`\`\`` || '' },
+    { h3: input?.tab },
+    { p: tagToTab(input?.tabItem) },
     { hr: '' },
+    { p: input?.usage },
+    { h2: `Example` },
+    { p: `<Usage />` },
   ]);
 };
 
+const tagToTab = (tabs: string) => {
+  if (!tabs) return '';
+  const rows = tabs
+    ?.split('\n')
+    .map((tab) => tab.split('@').map((val) => val.trim()));
+  return (
+    `<Tabs defaultValue="${rows[0][0]}" values={[${rows.map(
+      ([label]) => `{label: '${label}',value: '${label}'}`
+    )}]}>\n` +
+    rows
+      .map(
+        ([label, value]) =>
+          `<TabItem value="${label}">\n\`\`\`jsx live\n${value}\n\`\`\`\n</TabItem>`
+      )
+      .join('\n') +
+    '</Tabs>'
+  );
+};
 function generatePropsLinks(props) {
   const propLinks = props
     ? Object.keys(props).map((key) => {
@@ -157,7 +187,7 @@ export const generateMarkdown = (data) => {
         childrens: data.childrens,
       },
     },
-    { usage: '' },
+    { usage: data?.tags || {} },
     { props: data },
     { propsData: data },
   ]);

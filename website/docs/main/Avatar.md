@@ -6,61 +6,131 @@ title: Avatar
 slug: /avatar
 ---
 
-import Usage from './usage/Avatar/Avatar.mdx'
+import Usage from "./usage/Avatar/Avatar.mdx";
+
+import { Avatar } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 Avatars are found all over ui design from lists to profile screens.
 
 They are commonly used to represent a user and can contain photos, icons, or even text.
 
-## Components
-
-- [Avatar.Accessory](#avataraccessory)
-  This is used for adding an accessory to the Avatar.
-  Receives either all [Icon](icon#props) or [Image](image#props) props.
-
 ## Usage
 
-<Usage />
+```jsx live
+<Avatar
+  size="medium"
+  rounded
+  containerStyle={{ backgroundColor: "#6733b9" }}
+  title="R"
+/>
+```
+
+### Variants
+
+<Tabs defaultValue="Basic" values={[{label: 'Basic',value: 'Basic'},{label: 'Title',value: 'Title'},{label: 'Icon',value: 'Icon'}]}>
+
+<TabItem value="Basic">
+
+```jsx live
+<Avatar
+  size="medium"
+  rounded
+  source={{ uri: "https://randomuser.me/api/portraits/" }}
+/>
+```
+
+</TabItem>
+
+<TabItem value="Title">
+
+```jsx live
+<Avatar
+  size="medium"
+  rounded
+  source={{ uri: "https://randomuser.me/api/portraits/" }}
+  title="R"
+/>
+```
+
+</TabItem>
+
+<TabItem value="Icon">
+
+```jsx live
+<Avatar
+  size="medium"
+  rounded
+  source={{ uri: "https://randomuser.me/api/portraits/" }}
+  icon={{ name: "home" }}
+/>
+```
+
+</TabItem></Tabs>
 
 ---
+
+### Avatar with title and icon
+
+```jsx
+<Avatar
+  size="medium"
+  rounded
+  source={{ uri: "https://randomuser.me/api/portraits/" }}
+  title="R"
+/>
+```
+
+### Avatar with icon
+
+```jsx
+<Avatar
+  size="medium"
+  rounded
+  source={{ uri: "https://randomuser.me/api/portraits/" }}
+  icon={{ name: "home" }}
+/>
+```
+
+### Avatar with image
+
+```jsx
+<Avatar
+  size="medium"
+  rounded
+  source={{ uri: "https://randomuser.me/api/portraits/" }}
+/>
+```
+
+## Example
+
+<Usage />
 
 ## Props
 
 ### Avatar
 
-- [Components](#components)
-- [Usage](#usage)
-- [Props](#props)
-  - [Avatar](#avatar)
-  - [Avatar.Accessory](#avataraccessory)
-- [Reference](#reference)
-  - [Avatar](#avatar-1)
-    - [Component](#component)
-    - [ImageComponent](#imagecomponent)
-    - [activeOpacity](#activeopacity)
-    - [avatarStyle](#avatarstyle)
-    - [containerStyle](#containerstyle)
-    - [icon](#icon)
-    - [iconStyle](#iconstyle)
-    - [imageProps](#imageprops)
-    - [onLongPress](#onlongpress)
-    - [onPress](#onpress)
-    - [overlayContainerStyle](#overlaycontainerstyle)
-    - [placeholderStyle](#placeholderstyle)
-    - [renderPlaceholderContent](#renderplaceholdercontent)
-    - [rounded](#rounded)
-    - [size](#size)
-    - [source](#source)
-    - [title](#title)
-    - [titleStyle](#titlestyle)
-  - [Avatar.Accessory](#avataraccessory-1)
-    - [style](#style)
-    - [underlayColor](#underlaycolor)
-
-### Avatar.Accessory
-
-- [style](#style)
-- [underlayColor](#underlaycolor)
+- [Component](#component)
+- [ImageComponent](#imagecomponent)
+- [activeOpacity](#activeopacity)
+- [avatarStyle](#avatarstyle)
+- [containerStyle](#containerstyle)
+- [icon](#icon)
+- [iconStyle](#iconstyle)
+- [imageProps](#imageprops)
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [overlayContainerStyle](#overlaycontainerstyle)
+- [placeholderStyle](#placeholderstyle)
+- [renderPlaceholderContent](#renderplaceholdercontent)
+- [rounded](#rounded)
+- [size](#size)
+- [source](#source)
+- [title](#title)
+- [titleStyle](#titlestyle)
 
 ## Reference
 
@@ -80,9 +150,9 @@ Component for enclosing element (eg: TouchableHighlight, View, etc).
 
 Custom ImageComponent for Avatar.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type                 | Default |
+| -------------------- | ------- |
+| React.ComponentClass | None    |
 
 ---
 
@@ -194,9 +264,9 @@ Adds style to the placeholder wrapper.
 
 Custom placeholder element (by default, it's the title).
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type                   | Default |
+| ---------------------- | ------- |
+| React.ReactElement<{}> | None    |
 
 ---
 
@@ -247,35 +317,5 @@ Style for the title.
 | Type               | Default |
 | ------------------ | ------- |
 | Text Style(Object) | None    |
-
----
-
-### Avatar.Accessory
-
-#### style
-
-Style prop inherited from TextProps and TouchableWithoutFeedbackProperties
-
-Only exist here so we can have ViewStyle or TextStyle
-
-Style
-
-Add custom styling to the accessory of avatar.
-
-| Type               | Default |
-| ------------------ | ------- |
-| Text Style(Object) | None    |
-
----
-
-#### underlayColor
-
-The color of the underlay that will show through when the touch is active.
-
-Add underlay color to the accessory of avatar.
-
-| Type       | Default |
-| ---------- | ------- |
-| ColorValue | #000    |
 
 ---
