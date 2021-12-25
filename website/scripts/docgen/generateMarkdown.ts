@@ -73,7 +73,7 @@ json2md.converters.usage = function (input) {
     (tabName || input?.usage) && { h2: `Usage` },
     tabName && { h3: tabName },
     tabName && { p: tagToTab(tabLabel, tabItem) },
-    { hr: '' },
+    (tabName || input?.usage) && { hr: '' },
     { p: snippetToCode(input?.usage) || '' },
     { h2: `Example` },
     { p: `<Usage />` },

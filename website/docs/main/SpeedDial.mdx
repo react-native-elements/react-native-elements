@@ -6,7 +6,13 @@ title: SpeedDial
 slug: /speeddial
 ---
 
-import Usage from './usage/SpeedDial/SpeedDial.md'
+import Usage from "./usage/SpeedDial/SpeedDial.mdx";
+
+import { SpeedDial } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 When pressed, a floating action button can display three to six related actions in the form of a speed dial.
 
@@ -22,11 +28,9 @@ If the FAB is tapped in this state, it should either initiate its default action
   Adds Action to the SpeedDial.
   This, Receieve all [Fab](fab#props) props.
 
-## Usage
+## Example
 
 <Usage />
-
----
 
 ## Props
 
@@ -63,9 +67,9 @@ Props for Backdrop Pressable
 
 SpeedDial Action as children.
 
-| Type                | Default |
-| ------------------- | ------- |
-| any[] and ReactNode | None    |
+| Type                             | Default |
+| -------------------------------- | ------- |
+| React.ReactChild[] and ReactNode | None    |
 
 ---
 

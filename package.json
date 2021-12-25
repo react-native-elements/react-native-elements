@@ -26,7 +26,7 @@
     "changelog": "auto-changelog -p",
     "docs": "yarn docs:build && cd website && yarn start",
     "docs:lint": "prettier --write './website/docs/**/*.md'",
-    "docs:build": "ts-node website/scripts/docgen/index.ts && yarn docs:lint",
+    "docs:build": "ts-node website/scripts/docgen/index.ts",
     "docs:test": "cd website && jest --runInBand"
   },
   "author": "Nader Dabit & Monte Thakkar",

@@ -18,8 +18,6 @@ Avatars are found all over ui design from lists to profile screens.
 
 They are commonly used to represent a user and can contain photos, icons, or even text.
 
-## Usage
-
 ```jsx live
 <Avatar
   size="medium"
@@ -28,6 +26,14 @@ They are commonly used to represent a user and can contain photos, icons, or eve
   title="R"
 />
 ```
+
+## Components
+
+- [Avatar.Accessory](#avataraccessory)
+  This is used for adding an accessory to the Avatar.
+  Receives either all [Icon](icon#props) or [Image](image#props) props.
+
+## Usage
 
 ### Variants
 
@@ -75,7 +81,7 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar with title and icon
 
-```jsx
+```jsx live
 <Avatar
   size="medium"
   rounded
@@ -86,7 +92,7 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar with icon
 
-```jsx
+```jsx live
 <Avatar
   size="medium"
   rounded
@@ -97,7 +103,7 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar with image
 
-```jsx
+```jsx live
 <Avatar
   size="medium"
   rounded
@@ -131,6 +137,11 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 - [source](#source)
 - [title](#title)
 - [titleStyle](#titlestyle)
+
+### Avatar.Accessory
+
+- [style](#style)
+- [underlayColor](#underlaycolor)
 
 ## Reference
 
@@ -317,5 +328,35 @@ Style for the title.
 | Type               | Default |
 | ------------------ | ------- |
 | Text Style(Object) | None    |
+
+---
+
+### Avatar.Accessory
+
+#### style
+
+Style prop inherited from TextProps and TouchableWithoutFeedbackProperties
+
+Only exist here so we can have ViewStyle or TextStyle
+
+Style
+
+Add custom styling to the accessory of avatar.
+
+| Type               | Default |
+| ------------------ | ------- |
+| Text Style(Object) | None    |
+
+---
+
+#### underlayColor
+
+The color of the underlay that will show through when the touch is active.
+
+Add underlay color to the accessory of avatar.
+
+| Type       | Default |
+| ---------- | ------- |
+| ColorValue | #000    |
 
 ---

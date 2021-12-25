@@ -27,7 +27,7 @@ export const generateDocumentation = (filePaths) => {
     const markdownData = generateMarkdown(componentDoc);
 
     nodefs.writeFileSync(
-      path.join(__dirname, `../../docs/main/${componentDisplayName}.md`),
+      path.join(__dirname, `../../docs/main/${componentDisplayName}.mdx`),
       prettier.format(markdownData, { parser: 'mdx' })
     );
   });

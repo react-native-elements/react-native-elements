@@ -6,7 +6,13 @@ title: Header
 slug: /header
 ---
 
-import Usage from './usage/Header/Header.md'
+import Usage from "./usage/Header/Header.mdx";
+
+import { Header } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 Headers are navigation components that display information and actions relating to the current screen.
 
@@ -14,11 +20,9 @@ Headers are navigation components that display information and actions relating 
 
 Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react-native-safe-area-context) in the setup guide before using `Header`.
 
-## Usage
+## Example
 
 <Usage />
-
----
 
 ## Props
 
@@ -122,7 +126,7 @@ Add children component to the header.
 
 | Type                                 | Default |
 | ------------------------------------ | ------- |
-| ReactNode and (Element or Element[]) | []      |
+| (Element or Element[]) and ReactNode | []      |
 
 ---
 

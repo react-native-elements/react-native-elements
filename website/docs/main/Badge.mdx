@@ -6,15 +6,19 @@ title: Badge
 slug: /badge
 ---
 
-import Usage from './usage/Badge/Badge.md'
+import Usage from "./usage/Badge/Badge.mdx";
+
+import { Badge } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user.
 
-## Usage
+## Example
 
 <Usage />
-
----
 
 ## Props
 
@@ -96,8 +100,8 @@ Extra styling for icon component.
 
 Text value to be displayed by badge, defaults to empty.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React.ReactNode | None    |
 
 ---

@@ -6,17 +6,21 @@ title: Tile
 slug: /tile
 ---
 
-import Usage from './usage/Tile/Tile.md'
+import Usage from "./usage/Tile/Tile.mdx";
+
+import { Tile } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 Tiles like Cards, are a convenient way to display related content about a single subject.
 
 Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
 
-## Usage
+## Example
 
 <Usage />
-
----
 
 ## Props
 
@@ -69,9 +73,9 @@ Number passed to control opacity on press.
 
 Text inside the tilt when tile is featured.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React.ReactNode | None    |
 
 ---
 

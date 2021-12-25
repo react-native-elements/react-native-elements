@@ -6,17 +6,21 @@ title: Image
 slug: /image
 ---
 
-import Usage from './usage/Image/Image.md'
+import Usage from "./usage/Image/Image.mdx";
+
+import { Image } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 Drop-in replacement for the standard React Native Image component that displays
 
 images with a placeholder and smooth image load transitioning.
 
-## Usage
+## Example
 
 <Usage />
-
----
 
 ## Props
 
@@ -61,9 +65,9 @@ Specify a different component as the Image component.
 
 Content to load when Image is rendering.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type                    | Default |
+| ----------------------- | ------- |
+| React.ReactElement<any> | None    |
 
 ---
 

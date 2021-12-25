@@ -6,7 +6,13 @@ title: ListItem
 slug: /listitem
 ---
 
-import Usage from './usage/ListItem/ListItem.md'
+import Usage from "./usage/ListItem/ListItem.mdx";
+
+import { ListItem } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
 
 ListItems are used to display rows of information, such as a contact list, playlist, or menu.
 
@@ -40,11 +46,9 @@ They are very customizable and can contain switches, avatars, badges, icons, and
   This allows adding Title to the ListItem.
   This, Receives all [Text](text#props) props.
 
-## Usage
+## Example
 
 <Usage />
-
----
 
 ## Props
 
@@ -227,9 +231,9 @@ Decide whether to show animation.
 
 Similar to ListItem's child.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React.ReactNode | None    |
 
 ---
 
@@ -325,9 +329,9 @@ None
 
 Left Content.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React.ReactNode | None    |
 
 ---
 
@@ -375,9 +379,9 @@ Function to call when user swipes right.
 
 Right Content.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type            | Default |
+| --------------- | ------- |
+| React.ReactNode | None    |
 
 ---
 
