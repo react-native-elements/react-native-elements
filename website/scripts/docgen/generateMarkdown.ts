@@ -1,5 +1,6 @@
 import json2md from 'json2md';
 import _ from 'lodash';
+import { tagToTab, snippetToCode } from './utils';
 
 json2md.converters.header = function (input) {
   return input.id
@@ -48,20 +49,37 @@ json2md.converters.imports = function (input) {
   return input.component
     ? json2md([
         {
-          p: `import Usage from './usage/${input.component}/${input.component}.md'`,
+          p: `import Usage from './usage/${input.component}/${input.component}.mdx'`,
+        },
+        {
+          p: `import { ${input.component} } from 'react-native-elements'`,
+        },
+        {
+          p: `import Tabs from '@theme/Tabs';`,
+        },
+        {
+          p: `import TabItem from '@theme/TabItem';`,
         },
       ])
     : '';
 };
 
 json2md.converters.usage = function (input) {
-  return json2md([
+  const tabName = input.tabName;
+  const tabItem = input.tabItem;
+  const tabLabel = eval(input?.tabLabel);
+
+  const tags = [
+    (tabName || input?.usage) && { h2: `Usage` },
+    tabName && { h3: tabName },
+    tabName && { p: tagToTab(tabLabel, tabItem) },
+    (tabName || input?.usage) && { hr: '' },
+    { p: snippetToCode(input?.usage) || '' },
     { h2: `Usage` },
-    {
-      p: `<Usage />`,
-    },
-    { hr: '' },
-  ]);
+    { p: `<Usage />` },
+  ].filter(Boolean);
+
+  return json2md(tags);
 };
 
 function generatePropsLinks(props) {
@@ -151,13 +169,13 @@ export const generateMarkdown = (data) => {
         component: data.displayName,
       },
     },
-    { p: data.description },
+    { p: snippetToCode(data.description) },
     {
       components: {
         childrens: data.childrens,
       },
     },
-    { usage: '' },
+    { usage: data?.tags || {} },
     { props: data },
     { propsData: data },
   ]);

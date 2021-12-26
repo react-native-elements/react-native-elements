@@ -1,26 +1,27 @@
 name: Expo Preview
-on: [pull_request, push]
+on:
+  pull_request:
+    branches: "next"
+    paths: "src/**"
 
 jobs:
   publish:
-    name: Install and publish
+    name: Install and publish Expo preview
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'react-native-elements/react-native-elements'}}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-
+          node-version: "14"
       - name: Setup Expo
-        uses: expo/expo-github-action@v5
+        uses: expo/expo-github-action@v6
         with:
-          expo-version: 3.x
-          expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-          expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+          expo-version: 5.x
+          username: ${{ secrets.EXPO_CLI_USERNAME }}
+          password: ${{ secrets.EXPO_CLI_PASSWORD }}
           expo-cache: true
 
       - name: Install dependencies & build PR
@@ -35,7 +36,9 @@ jobs:
 
       - name: Publish Expo app
         working-directory: demo-app
-        run: expo publish --release-channel=pr-${{ github.event.number }}
+        run: |
+          expo login -u ${{ secrets.EXPO_CLI_USERNAME }} -p ${{ secrets.EXPO_CLI_PASSWORD }}
+          expo publish --release-channel=pr-${{ github.event.number }}
 
       - name: Get expo link
         id: expo

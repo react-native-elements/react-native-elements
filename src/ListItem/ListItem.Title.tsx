@@ -34,7 +34,7 @@ export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
 };
 
 /** Allows adding a title to the ListItem.
- * This, Receives all [Text](text.md#props) props. */
+ * This, Receives all [Text](text.mdx#props) props. */
 const styles = StyleSheet.create({
   title: {
     backgroundColor: 'transparent',

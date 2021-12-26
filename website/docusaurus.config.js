@@ -9,6 +9,7 @@ const config = {
   clientModules: [require.resolve('./snackPlayerInitializer.js')],
   /* path to images for header/footer */
   favicon: '/img/website/logo.png',
+
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   scripts: [
     'https://buttons.github.io/buttons.js',
@@ -22,7 +23,7 @@ const config = {
         fromExtensions: ['html'],
       },
     ],
-    './plugins/a.js',
+    './plugins/react-native-elements-web.js',
   ],
   presets: [
     [
@@ -30,6 +31,7 @@ const config = {
       {
         docs: {
           path: 'docs',
+          routeBasePath: 'docs',
           // homePageId: 'getting_started',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
@@ -156,9 +158,9 @@ const config = {
       },
     },
   },
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
-  onDuplicateRoutes: 'ignore',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
+  onDuplicateRoutes: 'warn',
   staticDirectories: ['static'],
 };
 

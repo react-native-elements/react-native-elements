@@ -30,8 +30,9 @@ export type ImageProps = RNImageProps &
     /** Specify a different component as the Image component. */
     ImageComponent?: typeof React.Component;
 
-    /** Content to load when Image is rendering. */
-    PlaceholderContent?: React.ReactElement<any>;
+    /** Content to load when Image is rendering.
+     */
+    PlaceholderContent?: React.ReactElement;
 
     /** Additional styling for the container. */
     containerStyle?: StyleProp<ViewStyle>;

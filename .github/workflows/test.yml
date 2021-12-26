@@ -19,6 +19,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-tests-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-tests-
       - name: Install
         if: steps.rne-tests.outputs.cache-hit != 'true' # Over here!
         run: |
