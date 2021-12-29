@@ -4,7 +4,7 @@ on:
     branches:
       - next
     paths:
-      - 'website/**'
+      - "website/**"
 defaults:
   run:
     working-directory: website
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "14"
       - name: Get yarn cache
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -44,6 +44,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
-          user_name: 'React Native Elements CI'
-          user_email: 'react-native-elements-ci@users.noreply.github.com'
+          user_name: "React Native Elements CI"
+          user_email: "react-native-elements-ci@users.noreply.github.com"
           cname: reactnativeelements.com

@@ -24,6 +24,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-rne-dists-deploy-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-rne-dists-deploy-
       - name: Install
         if: steps.rne-dists-deploy.outputs.cache-hit != 'true' # Over here!
         run: yarn
