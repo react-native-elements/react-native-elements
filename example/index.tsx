@@ -2,7 +2,7 @@ import React from 'react';
 import { registerRootComponent } from 'expo';
 import { Text, View, StyleSheet } from 'react-native';
 import { ButtonComp } from '@react-native-elements/theme';
-// import { Tab } from '@react-native-elements/base';
+import { TabBase } from '@react-native-elements/base/src/Tab/Tab';
 
 // import App from './App';
 

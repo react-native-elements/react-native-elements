@@ -20,7 +20,7 @@
     "clean-install": "rm -rf node_modules && npm cache clean --force && watchman watch-del-all && yarn"
   },
   "dependencies": {
-    "@expo/vector-icons": "^12.0.0",
+    "@expo/vector-icons": "^12.0.5",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/drawer": "^5.11.4",
     "@react-navigation/native": "^5.8.10",
