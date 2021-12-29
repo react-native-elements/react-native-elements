@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig",
+  "references": [
+    {
+      "path": "../packages/base"
+    }
+  ],
+  "compilerOptions": {
+    // Avoid expo-cli auto-generating a tsconfig
+  },
+  "include": ["../packages/*/src"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "website"
+  ]
+}
