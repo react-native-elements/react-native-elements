@@ -4,7 +4,9 @@
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "prepublish": "tsc",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "prepublish": "tsc --composite false",
   "files": [
     "dist"
   ],
@@ -15,7 +17,7 @@
     "bootstrap"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --composite false",
     "test": "jest",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
@@ -134,9 +136,6 @@
     "**/*.md": [
       "prettier --single-quote --trailing-comma=es5 --write"
     ]
-  },
-  "directories": {
-    "doc": "docs"
   },
   "repository": {
     "type": "git",

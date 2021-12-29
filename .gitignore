@@ -13,3 +13,4 @@ build
 *.orig
 dist/
 .docgen/
+.expo/*

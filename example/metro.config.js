@@ -33,7 +33,7 @@ const modules = ['@expo/vector-icons']
   .filter(
     (m, i, self) =>
       // Remove duplicates and package names of the packages in the monorepo
-      self.lastIndexOf(m) === i && !m.startsWith('@react-navigation/')
+      self.lastIndexOf(m) === i && !m.startsWith('@react-native-elements/')
   );
 
 module.exports = {
@@ -47,7 +47,7 @@ module.exports = {
   resolver: {
     // We need to blacklist the peerDependencies we've collected in packages' node_modules
     blacklistRE: blacklist(
-      [/docs\/.*/].concat(
+      [/website\/.*/].concat(
         ...workspaces.map((it) =>
           modules.map(
             (m) =>

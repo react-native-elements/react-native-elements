@@ -5,10 +5,10 @@
       "@react-native-elements/*": ["./packages/*/src"]
     },
     "composite": true,
+    "declaration": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
-    // "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-native",
     "lib": ["esnext", "dom"],
@@ -18,12 +18,12 @@
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
     "noStrictGenericChecks": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
+    // "strict": true,
     "target": "esnext"
   },
-  "exclude": ["packages/*/dist"]
+  "exclude": ["website", "node_modules"]
 }
