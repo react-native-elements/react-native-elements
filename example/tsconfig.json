@@ -3,9 +3,6 @@
   "references": [
     {
       "path": "../packages/base"
-    },
-    {
-      "path": "../packages/theme"
     }
   ],
   "compilerOptions": {

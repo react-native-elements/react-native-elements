@@ -7,7 +7,14 @@
     ]
   },
   "scripts": {
-    "start": "yarn --cwd example start"
+    "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "rimraf node_modules && yarn",
+    "start:demo": "yarn --cwd example start",
+    "docs": "yarn docs:build && yarn docs:serve",
+    "docs:build": "yarn --cwd website build",
+    "docs:serve": "yarn --cwd website start",
+    "docs:lint": "prettier --write 'website/docs/**/*.md'",
+    "docs:test": "yarn --cwd website test"
   },
   "devDependencies": {
     "lerna": "^4.0.0"

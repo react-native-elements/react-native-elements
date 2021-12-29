@@ -25,11 +25,7 @@
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog -p",
-    "docs": "yarn docs:build && cd website && yarn start",
-    "docs:lint": "prettier --write '**/*.md'",
-    "docs:build": "ts-node website/scripts/docgen/index.ts && yarn docs:lint",
-    "docs:test": "cd website && jest --runInBand"
+    "changelog": "auto-changelog -p"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -143,8 +139,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "node updateDocumentation.js"
+      "pre-commit": "lint-staged"
     }
   }
 }

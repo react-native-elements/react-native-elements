@@ -3,6 +3,7 @@
   "scripts": {
     "examples": "docusaurus examples",
     "start": "docusaurus start",
+    "prebuild": "npm run docs:build",
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
     "swizzle": "docusaurus swizzle",
