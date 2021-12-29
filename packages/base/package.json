@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "react-native": "src/index.ts",
-  "source": "src/index.ts",
   "prepublish": "tsc --composite false",
   "files": [
     "dist"
@@ -68,7 +67,7 @@
     "metro-react-native-babel-preset": "^0.63.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "0.64.3",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-vector-icons": "^7.0.0",
     "react-test-renderer": "^16.13.1",

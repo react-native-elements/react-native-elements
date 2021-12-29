@@ -8,6 +8,7 @@
   "compilerOptions": {
     // Avoid expo-cli auto-generating a tsconfig
   },
+  "include": ["../packages/*/src"],
   "exclude": [
     "node_modules",
     "babel.config.js",
