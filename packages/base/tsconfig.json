@@ -4,7 +4,8 @@
     "allowJs": true /* Allow javascript files to be compiled. */,
     "outDir": "dist",
     "declaration": true,
-    "composite": true
+    "composite": true,
+    "rootDir": "src"
   },
   "include": ["src/**/*.tsx", "src/**/*.ts", "src/index.ts"],
   "exclude": [

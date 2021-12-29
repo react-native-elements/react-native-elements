@@ -28,11 +28,5 @@
     "allowJs": true
   },
 
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js",
-    "website"
-  ]
+  "exclude": ["node_modules", "website"]
 }
