@@ -7,6 +7,7 @@
       "@react-native-elements/theme": ["./packages/theme/src"],
       "@react-native-elements/*": ["./packages/*/src"]
     },
+    "outDir": "dist",
     "composite": true,
     "declaration": true,
     "allowUnreachableCode": false,
@@ -26,6 +27,12 @@
     "target": "esnext",
     "allowJs": true
   },
-
-  "exclude": ["node_modules", "website"]
+  "include": ["packages/*/src/**/*.ts", "packages/*/src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "website",
+    "example",
+    "packages/*/.ci",
+    "packages/*/src/**/__tests__"
+  ]
 }

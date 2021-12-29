@@ -8,6 +8,8 @@
   },
   "scripts": {
     "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
+    "build": "bash -c tsc --noEmit true --composite false",
+    "test": "jest --runInBand",
     "clean-install": "rimraf node_modules && yarn",
     "start:demo": "yarn --cwd example start",
     "docs": "yarn docs:build && yarn docs:serve",
@@ -17,6 +19,68 @@
     "docs:test": "yarn --cwd website test"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "husky": "^7.0.4"
+  },
+  "jest": {
+    "preset": "react-native",
+    "timers": "fake",
+    "coverageDirectory": "./coverage/",
+    "testPathIgnorePatterns": [
+      "./packages/base/src/SearchBar/__tests__/common.tsx",
+      "<rootDir>/node_modules",
+      "<rootDir>/website",
+      "<rootDir>/dist"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./packages/base/src/searchbar/__tests__/common.tsx"
+    ],
+    "collectCoverageFrom": [
+      "packages/base/src/**/*.tsx",
+      "!packages/base/src/index.tsx",
+      "!packages/base/src/helpers/*.tsx"
+    ],
+    "collectCoverage": true,
+    "globals": {
+      "__DEV__": true
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/packages/base/.ci/setupTests.ts"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "bash -c tsc --noEmit true",
+      "jest --bail --findRelatedTests"
+    ],
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
+    ],
+    "**/*.md": [
+      "prettier --single-quote --trailing-comma=es5 --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
