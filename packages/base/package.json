@@ -49,7 +49,7 @@
     "hoist-non-react-statics": "^3.3.2",
     "lodash.isequal": "^4.5.0",
     "opencollective-postinstall": "^2.0.3",
-    "react-native-ratings": "8.0.4",
+    "react-native-ratings": "^8.1.0",
     "react-native-size-matters": "^0.3.1"
   },
   "devDependencies": {
@@ -63,8 +63,8 @@
     "@types/react-test-renderer": "^17.0.0",
     "auto-changelog": "^2.2.1",
     "babel-jest": "^26.3.0",
-    "eslint": "^7.9.0",
     "child_process": "^1.0.2",
+    "eslint": "^7.9.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "jest-transform-stub": "^2.0.0",

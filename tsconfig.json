@@ -1,9 +1,13 @@
 {
+  "Display": "React Native Elements",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@react-native-elements/base": ["./packages/base/src"],
+      "@react-native-elements/theme": ["./packages/theme/src"],
       "@react-native-elements/*": ["./packages/*/src"]
     },
+    "rootDir": "./packages",
     "composite": true,
     "declaration": true,
     "allowUnreachableCode": false,
@@ -18,12 +22,17 @@
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
     "noStrictGenericChecks": false,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    // "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "allowJs": true
   },
-  "exclude": ["website", "node_modules"]
+
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "website"
+  ]
 }
