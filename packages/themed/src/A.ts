@@ -1,0 +1,1 @@
+import { AvatarProps } from './B';

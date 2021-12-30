@@ -1,4 +1,4 @@
-import { withTheme } from 'react-native-elements';
+import { withTheme } from '@react-native-elements/base';
 import CircularSlider from './CircularSlider';
 
 export type { CircularSliderProps } from './CircularSlider';

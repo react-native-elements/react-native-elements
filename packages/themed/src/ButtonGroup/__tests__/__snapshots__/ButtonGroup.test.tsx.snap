@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    replaceTheme={[Function]}
+    style={
+      Object {
+        "backgroundColor": "yellow",
+        "borderColor": "#e3e3e3",
+        "borderRadius": 3,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "height": 40,
+        "marginHorizontal": 10,
+        "marginVertical": 5,
+        "overflow": "hidden",
+      }
+    }
+    testID="RNE__ButtonGroupContainer"
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "borderRightColor": "#bdc6cf",
+          "borderRightWidth": 1,
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        testID="RNE__ButtonGroupItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "blue",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            style={
+              Object {
+                "color": "pink",
+                "fontSize": 16.714285714285715,
+                "fontWeight": "500",
+              }
+            }
+            testID="buttonGroupItemText"
+          >
+            Button 1
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "borderRightColor": "#bdc6cf",
+          "borderRightWidth": 1,
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        testID="RNE__ButtonGroupItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "blue",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            style={
+              Object {
+                "color": "pink",
+                "fontSize": 16.714285714285715,
+                "fontWeight": "500",
+              }
+            }
+            testID="buttonGroupItemText"
+          >
+            Button 2
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        testID="RNE__ButtonGroupItem"
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "blue",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            accessibilityRole="text"
+            style={
+              Object {
+                "color": "pink",
+                "fontSize": 16.714285714285715,
+                "fontWeight": "500",
+              }
+            }
+            testID="buttonGroupItemText"
+          >
+            Button 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

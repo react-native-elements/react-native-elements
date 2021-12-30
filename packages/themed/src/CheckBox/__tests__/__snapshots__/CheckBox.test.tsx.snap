@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessibilityRole="checkbox"
+    accessibilityState={
+      Object {
+        "checked": true,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    replaceTheme={[Function]}
+    style={
+      Object {
+        "margin": 5,
+        "marginLeft": 10,
+        "marginRight": 10,
+        "padding": 10,
+      }
+    }
+    testID="RNE__CheckBox__Wrapper"
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#2089dc",
+              "fontSize": 24,
+            },
+            Object {
+              "minWidth": 24,
+            },
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+        testID="RNE__Checkbox__Icon"
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
