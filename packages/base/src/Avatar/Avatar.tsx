@@ -17,7 +17,7 @@ import {
   renderNode,
   RneFunctionComponent,
 } from '../helpers';
-import Icon, { IconObject } from '../Icon';
+import { IconObject, Icon } from '../Icon';
 import Image, { ImageProps } from '../Image';
 
 export const avatarSizes = {

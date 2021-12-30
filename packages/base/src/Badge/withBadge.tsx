@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
-import Badge, { BadgeProps } from './index';
+import { BadgeProps, Badge } from './Badge';
 
 type withBadgeOptions = {
   bottom?: number;

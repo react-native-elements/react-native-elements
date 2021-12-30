@@ -9,7 +9,7 @@ import {
   ColorValue,
 } from 'react-native';
 import Image, { ImageProps } from '../Image';
-import Icon, { IconProps } from '../Icon';
+import { IconProps, Icon } from '../Icon';
 import {
   androidRipple,
   InlinePressableProps,

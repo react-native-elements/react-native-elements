@@ -1,13 +1,8 @@
 import { Avatar, AvatarProps } from './Avatar';
 import { Accessory, AccessoryProps } from './Avatar.Accessory';
-import { withTheme } from '../config';
 
-const ThemedAccessory = withTheme(Accessory, 'Accessory');
-
-const ThemedAvatar = Object.assign(withTheme(Avatar, 'Avatar'), {
-  Accessory: ThemedAccessory,
+const DefaultAvatar = Object.assign(Avatar, {
+  Accessory,
 });
-
-export { Avatar, Accessory };
+export { DefaultAvatar as Avatar, Accessory };
 export type { AccessoryProps, AvatarProps };
-export default ThemedAvatar;
