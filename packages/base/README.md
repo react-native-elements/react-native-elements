@@ -37,24 +37,15 @@ Follow
 [these instructions](https://reactnativeelements.com/docs/)
 to install React Native Elements!
 
-### Versions
-
-| Package                                    | Version                                                                                                                                                          |
-| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **@react-native-elements/base**            | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)            |
-| **@react-native-elements/themed**          | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed)        |
-| **@react-native-elements/universe**        | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe)        |
-| **@react-native-elements/universe-themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe-themed) |
-
 ### Usage
 
 Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from '@react-native-elements/base';
+import { Button } from 'react-native-elements';
 
-const App = () => <Button title="Hello World!" />;
+<Button />;
 ```
 
 ## Components included:
