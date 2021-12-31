@@ -10,6 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 import {
+  defaultTheme,
   InlinePressableProps,
   renderNode,
   RneFunctionComponent,
@@ -54,7 +55,7 @@ export const Badge: RneFunctionComponent<BadgeProps> = ({
     ? Pressable
     : View,
   value,
-  theme,
+  theme = defaultTheme,
   status = 'primary',
   pressableProps,
   ...rest

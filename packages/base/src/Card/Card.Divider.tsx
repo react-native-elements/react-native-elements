@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Divider, { DividerProps } from '../Divider';
+import { DividerProps, Divider } from '../Divider';
 import { RneFunctionComponent } from '../helpers';
 
 export type CardDividerProps = DividerProps;

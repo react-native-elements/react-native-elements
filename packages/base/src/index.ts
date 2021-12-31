@@ -58,7 +58,7 @@ import {
   FullTheme,
   Theme,
   ThemeProps,
-} from './config';
+} from './helpers';
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 

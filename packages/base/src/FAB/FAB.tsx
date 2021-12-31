@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Animated, StyleProp, ViewStyle } from 'react-native';
-import Button, { ButtonProps } from '../Button';
-import { RneFunctionComponent } from '../helpers';
+import { Button, ButtonProps } from '../Button';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type FABProps = ButtonProps & {
   /** Change the color of the FAB. */
@@ -32,7 +32,7 @@ export const FAB: RneFunctionComponent<FABProps> = ({
   visible = true,
   disabled,
   upperCase,
-  theme,
+  theme = defaultTheme,
   style,
   titleStyle,
   buttonStyle,

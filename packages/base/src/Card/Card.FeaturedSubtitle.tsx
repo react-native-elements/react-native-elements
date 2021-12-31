@@ -1,9 +1,9 @@
 import React from 'react';
 import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
-import { fonts } from '../config';
-import Text, { TextProps } from '../Text';
-import { RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers/index-config';
+import { Text, TextProps } from '../Text';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type CardFeaturedSubtitleProps = TextProps;
 
@@ -11,7 +11,7 @@ export type CardFeaturedSubtitleProps = TextProps;
  * This, Receives all [Text](text#props) props. */
 export const CardFeaturedSubtitle: RneFunctionComponent<
   CardFeaturedSubtitleProps
-> = ({ theme, style, ...rest }) => (
+> = ({ theme = defaultTheme, style, ...rest }) => (
   <Text
     style={
       StyleSheet.flatten([

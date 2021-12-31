@@ -10,7 +10,8 @@ import {
   TextInput,
 } from 'react-native';
 import { IconNode } from '../Icon';
-import { ThemeProps } from '../config';
+import { ThemeProps } from '../helpers/index-config';
+import { Theme } from '../helpers';
 
 const SEARCHBAR_COMPONENTS = {
   ios: SearchBarIOS,
@@ -36,6 +37,7 @@ export type SearchBarBaseProps = React.ComponentPropsWithRef<
   onBlur?(): void;
   onChangeText?(text: string): void;
   onCancel?(): void;
+  theme: Theme;
 };
 
 export type SearchBarProps =

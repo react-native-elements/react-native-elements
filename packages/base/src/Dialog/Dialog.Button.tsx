@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Button, { ButtonProps } from '../Button';
+import { ButtonProps, Button } from '../Button';
 import { RneFunctionComponent } from '../helpers';
 
-type DialogButtonProps = ButtonProps;
+export type DialogButtonProps = ButtonProps;
 
 /** This is used to add a button to the Dialog.
  * Receives all [Button](button#props) props. */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
-import { ThemeProps } from '../config';
+import { ThemeProps } from '../helpers/index-config';
 import Input, { InputProps } from '../Input';
 
 export type ListItemInputProps = InputProps;

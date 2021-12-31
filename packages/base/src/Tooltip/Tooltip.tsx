@@ -84,7 +84,6 @@ export type TooltipProps = {
 /** Tooltips display informative text when users tap on an element. */
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   withOverlay = true,
-  theme,
   overlayColor = '#fafafa14',
   highlightColor = 'transparent',
   withPointer = true,

@@ -7,9 +7,9 @@ import {
   TextStyle,
   StyleProp,
 } from 'react-native';
-import { normalizeText, RneFunctionComponent } from '../helpers';
-import { fonts } from '../config';
-import Text from '../Text';
+import { defaultTheme, normalizeText, RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers/index-config';
+import { Text } from '../Text';
 import { ButtonProps } from '../Button';
 import { PricingButton } from './components/PricingButton';
 
@@ -63,7 +63,7 @@ export const PricingCard: RneFunctionComponent<PricingCardProps> = ({
   price,
   info = [],
   button,
-  theme,
+  theme = defaultTheme,
   color = theme?.colors?.primary,
   titleStyle,
   pricingStyle,

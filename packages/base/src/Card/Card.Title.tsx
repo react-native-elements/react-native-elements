@@ -1,9 +1,9 @@
 import React from 'react';
 import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
-import { fonts } from '../config';
-import Text, { TextProps } from '../Text';
-import { RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers/index-config';
+import { Text, TextProps } from '../Text';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 type CardTitleProps = TextProps;
 
@@ -11,8 +11,8 @@ type CardTitleProps = TextProps;
  * This, Receives all [Text](text#props) props. */
 export const CardTitle: RneFunctionComponent<CardTitleProps> = ({
   style,
-  theme,
-  ...props
+  theme = defaultTheme,
+  ...rest
 }) => (
   <Text
     testID="cardTitle"
@@ -35,7 +35,7 @@ export const CardTitle: RneFunctionComponent<CardTitleProps> = ({
         style,
       ]) as TextStyle
     }
-    {...props}
+    {...rest}
   />
 );
 

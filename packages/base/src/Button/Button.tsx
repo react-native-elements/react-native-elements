@@ -15,14 +15,19 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { Theme } from '../config/theme';
-import { color, renderNode, RneFunctionComponent } from '../helpers';
-import Icon, { IconNode } from '../Icon';
+import {
+  color,
+  defaultTheme,
+  renderNode,
+  Theme,
+  RneFunctionComponent,
+} from '../helpers';
+import { IconNode, Icon } from '../Icon';
 import { TextProps } from '../Text';
 
 const defaultLoadingProps = (
   type: 'solid' | 'clear' | 'outline',
-  theme: Theme<ButtonProps> | undefined
+  theme: Theme
 ): ActivityIndicatorProps => ({
   color: type === 'solid' ? 'white' : theme?.colors?.primary,
   size: 'small',
@@ -137,7 +142,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   raised = false,
   linearGradientProps,
   ViewComponent = View,
-  theme,
+  theme = defaultTheme,
   iconPosition = 'left',
   ...rest
 }) => {

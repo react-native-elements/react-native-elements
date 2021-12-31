@@ -8,7 +8,7 @@ import {
   ViewStyle,
   ColorValue,
 } from 'react-native';
-import Image, { ImageProps } from '../Image';
+import { ImageProps, Image } from '../Image';
 import { IconProps, Icon } from '../Icon';
 import {
   androidRipple,

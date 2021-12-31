@@ -7,10 +7,10 @@ import {
   Pressable,
   PressableProps,
 } from 'react-native';
-import FAB, { FABProps } from '../FAB';
+import { FAB, FABProps } from '../FAB';
 import { IconNode } from '../Icon';
 import Color from 'color';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type SpeedDialProps = {
   /** Opens the action stack. */
@@ -53,7 +53,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   transitionDuration = 150,
   style,
   overlayColor,
-  theme,
+  theme = defaultTheme,
   backdropPressableProps: pressableProps,
   ...rest
 }) => {

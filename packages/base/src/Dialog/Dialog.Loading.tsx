@@ -7,7 +7,7 @@ import {
   StyleProp,
   View,
 } from 'react-native';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type DialogLoadingProps = {
   /** Add additional styling for loading component. */
@@ -21,7 +21,7 @@ export type DialogLoadingProps = {
 export const DialogLoading: RneFunctionComponent<DialogLoadingProps> = ({
   loadingStyle,
   loadingProps,
-  theme,
+  theme = defaultTheme,
 }) => {
   return (
     <View style={styles.loadingView}>

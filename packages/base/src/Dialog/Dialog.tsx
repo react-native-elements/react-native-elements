@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
-import Overlay, { OverlayProps } from '../Overlay';
+import { Overlay, OverlayProps } from '../Overlay';
 import { RneFunctionComponent } from '../helpers';
 
 export type DialogBaseProps = Omit<OverlayProps, 'fullScreen'> & {
@@ -19,7 +19,6 @@ export type DialogBaseProps = Omit<OverlayProps, 'fullScreen'> & {
  * Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) props except `fullscreen`. */
 export const DialogBase: RneFunctionComponent<DialogBaseProps> = ({
   children,
-  theme,
   overlayStyle,
   onBackdropPress,
   isVisible,

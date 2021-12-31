@@ -9,9 +9,9 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import Icon from '../Icon';
-import Text from '../Text';
-import fonts from '../config/fonts';
+import { Icon } from '../Icon';
+import { Text } from '../Text';
+import fonts from '../helpers/fonts';
 import {
   androidRipple,
   InlinePressableProps,
