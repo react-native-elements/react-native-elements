@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import ButtonGroup, { ButtonGroupProps } from '../ButtonGroup';
+import { ButtonGroupProps, ButtonGroup } from '../ButtonGroup';
 import { RneFunctionComponent } from '../helpers';
 
 export type ListItemButtonGroupProps = ButtonGroupProps;

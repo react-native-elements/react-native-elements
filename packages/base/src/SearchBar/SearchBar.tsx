@@ -10,7 +10,6 @@ import {
   TextInput,
 } from 'react-native';
 import { IconNode } from '../Icon';
-import { ThemeProps } from '../helpers/index-config';
 import { Theme } from '../helpers';
 
 const SEARCHBAR_COMPONENTS = {
@@ -47,7 +46,7 @@ export type SearchBarProps =
   | SearchBarIosProps;
 
 export class SearchBar extends React.Component<
-  SearchBarProps & Partial<ThemeProps<SearchBarProps>>
+  SearchBarProps & { theme?: Theme }
 > {
   searchbar!: SearchBarIOS;
   static defaultProps = {

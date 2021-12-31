@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import CheckBox, { CheckBoxProps } from '../CheckBox';
+import { CheckBoxProps, CheckBox } from '../CheckBox';
 import { RneFunctionComponent } from '../helpers';
 
 export type ListItemCheckBoxProps = CheckBoxProps;
