@@ -38,4 +38,4 @@ jobs:
           git config --local user.email "react-native-elements-ci@users.noreply.github.com"
           git config --local user.name "React Native Elements CI"
           git commit -m "New build" -a
-          git push origin `git subtree split --prefix packages/base rne-base`:rne-base --force
+          git push origin `git subtree split --prefix packages/base base`:base --force
