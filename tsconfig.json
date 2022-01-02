@@ -3,8 +3,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@react-native-elements/base": ["./packages/base/src"],
-      "@react-native-elements/theme": ["./packages/theme/src"],
       "@react-native-elements/*": ["./packages/*/src"]
     },
     "composite": true,
@@ -26,7 +24,6 @@
     "target": "esnext",
     "allowJs": true
   },
-  "include": ["packages/*/src/**/*.ts", "packages/*/src/**/*.tsx"],
   "exclude": [
     "node_modules",
     "website",
