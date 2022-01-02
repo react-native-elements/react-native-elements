@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-        # with:
-        #   persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-        #   fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
         with:
@@ -42,9 +39,3 @@ jobs:
           git config --local user.name "React Native Elements CI"
           git commit -m "New build" -a
           git subtree push --prefix packages/base origin rne-base
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: dist
-      #     force: true
