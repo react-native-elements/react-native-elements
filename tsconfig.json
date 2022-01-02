@@ -7,7 +7,6 @@
       "@react-native-elements/theme": ["./packages/theme/src"],
       "@react-native-elements/*": ["./packages/*/src"]
     },
-    "outDir": "dist",
     "composite": true,
     "declaration": true,
     "allowUnreachableCode": false,

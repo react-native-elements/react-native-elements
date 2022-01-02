@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
-    "build": "bash -c tsc --noEmit true --composite false",
+    "build": "lerna run build",
     "test": "jest --runInBand",
     "clean-install": "rimraf node_modules && yarn",
     "start:demo": "yarn --cwd example start",
