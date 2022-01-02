@@ -1,3 +1,4 @@
+dist/
 node_modules
 .DS_Store
 *.log
@@ -7,10 +8,8 @@ jsconfig.json
 .vscode/
 .idea/
 website/build
-.idea/
 package-lock.json
 build
 *.orig
-dist/
 .docgen/
 .expo/*
