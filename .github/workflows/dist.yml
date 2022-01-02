@@ -32,10 +32,13 @@ jobs:
       - name: Create local changes
         run: |
           sed -i -e '/dist/d' .gitignore
-          git add .
-      - name: Deploy changes
+      - name: Config git
         run: |
           git config --local user.email "react-native-elements-ci@users.noreply.github.com"
           git config --local user.name "React Native Elements CI"
-          git commit -m "New build" -a
-          git push origin `git subtree split --prefix packages/base -b base`:base --force
+      - name: Deploy '@react-native-elements/base'
+        run: |
+          git push origin `git subtree split --prefix packages/base -b base`:refs/heads/base --force
+      # - name: Deploy '@react-native-elements/universe'
+      #   run: |
+      #     git push origin `git subtree split --prefix packages/universe -b base`:refs/heads/universe --force
