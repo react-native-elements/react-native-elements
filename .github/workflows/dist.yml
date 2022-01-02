@@ -2,7 +2,7 @@ name: Build and Deploy next version
 on:
   push:
     branches:
-      - "*"
+      - "next"
     paths-ignore:
       - "website/**"
       - "example/**"
