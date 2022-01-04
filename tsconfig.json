@@ -5,7 +5,6 @@
     "paths": {
       "@react-native-elements/*": ["./packages/*/src"]
     },
-    "outDir": "dist",
     "composite": true,
     "declaration": true,
     "allowUnreachableCode": false,
