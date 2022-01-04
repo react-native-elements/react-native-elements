@@ -152,6 +152,7 @@ export class SearchBarAndroid extends Component<
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
+          // @ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}

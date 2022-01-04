@@ -1,8 +1,10 @@
 name: Expo Preview
 on:
   pull_request:
-    branches: "next"
-    paths: "src/**"
+    branches:
+      - "next"
+    paths:
+      - "src/**"
 
 jobs:
   publish:

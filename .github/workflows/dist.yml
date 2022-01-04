@@ -37,6 +37,8 @@ jobs:
       - name: Create local changes
         run: |
           sed -i -e 's/dist/src/g' .gitignore
+          echo "tsconfig.json" >> .gitignore
+          echo "*.config.json" >> .gitignore
           git add .
           git commit -m "Bleeding Edge Version" -a
       - name: Deploy '@react-native-elements/*' packages

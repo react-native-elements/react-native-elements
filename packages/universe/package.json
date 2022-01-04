@@ -17,7 +17,7 @@
     "bootstrap"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --composite false",
     "test": "jest",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
@@ -50,6 +50,7 @@
     "react-native-size-matters": "^0.3.1"
   },
   "devDependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -70,21 +71,21 @@
     "metro-react-native-babel-preset": "^0.63.0",
     "react": "^17.0.2",
     "react-native": "^0.64.0",
+    "react-native-svg": "^12.1.1",
     "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.5.5",
     "typescript": "^4.1.3",
-    "utility-types": "^3.10.0",
-    "react-native-svg": "^12.1.1"
+    "utility-types": "^3.10.0"
   },
   "peerDependencies": {
+    "@react-native-elements/base": "^4.0.0",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-reanimated": "^2.1.0",
     "react-native-svg": "^12.1.1",
-    "react-native-vector-icons": "*",
-    "@react-native-elements/base": "^4.0.0"
+    "react-native-vector-icons": "*"
   },
   "jest": {
     "preset": "react-native",

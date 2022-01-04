@@ -13,6 +13,7 @@ export const ListItemInput = React.forwardRef<
 >(({ inputStyle, inputContainerStyle, containerStyle, ...rest }, ref) => {
   return (
     <Input
+      // @ts-ignore
       ref={ref}
       renderErrorMessage={false}
       {...rest}
