@@ -22,7 +22,6 @@
   "dependencies": {
     "@expo/vector-icons": "^12.0.5",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-native-elements/base": "*",
     "@react-navigation/drawer": "^5.11.4",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
