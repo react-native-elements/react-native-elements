@@ -2,7 +2,7 @@ name: Bleeding Edge version
 on:
   push:
     branches:
-      - "*"
+      - "next"
     paths-ignore:
       - "website/**"
       - "example/**"
@@ -41,7 +41,7 @@ jobs:
           echo "*.config.json" >> .gitignore
           git add .
           git commit -m "Bleeding Edge Version" -a
-      - name: Deploy '@react-native-elements/*' packages
+      - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
         run: |
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
                echo "Deploying @react-native-elements/$pkg"
