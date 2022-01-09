@@ -11,7 +11,7 @@ import { BackgroundImage, withTheme } from '../../config';
 import { renderNode, RneFunctionComponent } from '../../helpers';
 import Text from '../../Text';
 import Icon from '../../Icon';
-import { TileProps } from '../Tile';
+import { TileProps } from '..';
 
 const renderText = (
   content: React.ReactNode,

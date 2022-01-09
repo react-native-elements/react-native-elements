@@ -3,7 +3,10 @@
 // https://material.io/guidelines/components/buttons.html#buttons-raised-buttons
 // https://material.angularjs.org/latest/demo/button
 // Core
-import AirbnbRating, { TapRatingProps } from './AirbnbRating';
+import {
+  TapRatingProps,
+  AirbnbRatingDefault as AirbnbRating,
+} from './AirbnbRating';
 import Avatar, { AvatarProps } from './Avatar';
 import Badge, { BadgeProps, withBadge } from './Badge';
 import BottomSheet, { BottomSheetProps } from './BottomSheet';

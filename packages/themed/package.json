@@ -38,7 +38,16 @@
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/react-native-vector-icons": "^6.4.6",
+    "color": "^3.1.2",
+    "deepmerge": "^4.2.2",
+    "hoist-non-react-statics": "^3.3.2",
+    "lodash.isequal": "^4.5.0",
+    "opencollective-postinstall": "^2.0.3",
+    "react-native-ratings": "^8.1.0",
+    "react-native-size-matters": "^0.3.1"
+  },
   "devDependencies": {
     "@react-native-elements/base": "^4.0.0-beta.0",
     "@react-native-community/eslint-config": "^2.0.0",
@@ -70,7 +79,9 @@
     "utility-types": "^3.10.0"
   },
   "peerDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.0"
+    "@react-native-elements/base": "^4.0.0-beta.0",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-vector-icons": ">7.0.0"
   },
   "jest": {
     "preset": "react-native",
