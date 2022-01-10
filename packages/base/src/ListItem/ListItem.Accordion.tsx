@@ -24,7 +24,9 @@ export type ListItemAccordionProps = ListItemBaseProps & {
   /** Don't show accordion icon. */
   noIcon?: boolean;
 
-  /** Decide whether to show animation. */
+  /** Decide whether to show animation.
+   * @default Object with duration 350ms and type timing
+   */
   animation?:
     | {
         type?: 'timing' | 'spring';
