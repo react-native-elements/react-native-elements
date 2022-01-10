@@ -8,7 +8,7 @@ import {
   ViewProps,
 } from 'react-native';
 import Color from 'color';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type LinearProgressProps = ViewProps & {
   /** The value of the progress indicator for the determinate variant. Value between 0 and 1. */
@@ -43,7 +43,7 @@ export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
   variant = value === undefined ? 'indeterminate' : 'determinate',
   color = 'secondary',
   style,
-  theme,
+  theme = defaultTheme,
   trackColor,
   animation = { duration: 2000 },
   ...rest

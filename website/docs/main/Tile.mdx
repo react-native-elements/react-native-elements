@@ -53,9 +53,17 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 Custom ImageComponent for Tile.
 
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
+| Type | Default                |
+| ---- | ---------------------- |
+| any  | Object.assign(Image, { |
+
+getSize: ImageNative.getSize,
+getSizeWithHeaders: ImageNative.getSizeWithHeaders,
+prefetch: ImageNative.prefetch,
+abortPrefetch: ImageNative.abortPrefetch,
+queryCache: ImageNative.queryCache,
+resolveAssetSource: ImageNative.resolveAssetSource,
+}) |
 
 ---
 

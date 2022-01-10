@@ -1,5 +1,4 @@
-import { withTheme } from 'react-native-elements';
-import CircularSlider from './CircularSlider';
+import CircularSlider, { CircularSliderProps } from './CircularSlider';
 
-export type { CircularSliderProps } from './CircularSlider';
-export default withTheme(CircularSlider, 'CircularSlider');
+export type { CircularSliderProps };
+export default CircularSlider;

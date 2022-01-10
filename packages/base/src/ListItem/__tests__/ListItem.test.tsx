@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from '..';
+import { ListItem } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Avatar, Icon } from '../..';
 import { TextInput } from 'react-native';

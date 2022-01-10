@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
-import Button, { ButtonProps } from '../Button';
+import { ButtonProps, Button } from '../Button';
 
 export type ChipProps = Omit<
   ButtonProps,

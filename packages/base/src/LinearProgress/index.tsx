@@ -1,8 +1,5 @@
-import { withTheme } from '../config';
 import { LinearProgress, LinearProgressProps } from './LinearProgress';
 
-export { LinearProgress };
-export type { LinearProgressProps };
 /**
  * ### Linear Progress
  *
@@ -12,7 +9,10 @@ export type { LinearProgressProps };
  *
  * [API Documentation](https://reactnativeelements.com/docs/linearProgress)
  */
-export default Object.assign(withTheme(LinearProgress, 'LinearProgress'), {
+const Default = Object.assign(LinearProgress, {
   INDETERMINATE: 'indeterminate' as LinearProgressProps['variant'],
   DETERMINATE: 'determinate' as LinearProgressProps['variant'],
 });
+
+export { Default as LinearProgress };
+export type { LinearProgressProps };

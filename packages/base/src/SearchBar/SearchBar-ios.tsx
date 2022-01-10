@@ -12,12 +12,11 @@ import {
   TextStyle,
   TextInput,
 } from 'react-native';
-import Input, { InputProps } from '../Input';
-import Icon from '../Icon';
-import { renderNode } from '../helpers';
+import { InputProps, Input } from '../Input';
+import { Icon } from '../Icon';
+import { defaultTheme, renderNode } from '../helpers';
 import { SearchBarBaseProps } from './SearchBar';
-import { Theme } from '../config/theme';
-import { ThemeProps } from '../config';
+import { Theme } from '../helpers';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
@@ -53,10 +52,7 @@ type SearchBarState = {
   cancelButtonWidth: number | null;
 };
 
-export class SearchBarIOS extends Component<
-  SearchBarIosProps & Partial<ThemeProps<SearchBarIosProps>>,
-  SearchBarState
-> {
+export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
   input!: TextInput;
   static defaultProps = {
     value: '',
@@ -136,7 +132,7 @@ export class SearchBarIOS extends Component<
 
   render() {
     const {
-      theme,
+      theme = defaultTheme,
       cancelButtonProps,
       cancelButtonTitle,
       clearIcon,
@@ -180,6 +176,7 @@ export class SearchBarIOS extends Component<
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
+          // @ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}

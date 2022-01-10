@@ -7,7 +7,7 @@ import {
   ViewProps,
   StyleSheet,
 } from 'react-native';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
 
 export type TabBaseProps = ViewProps & {
@@ -29,7 +29,7 @@ export type TabBaseProps = ViewProps & {
 
 /** Tabs organize content across different screens, data sets, and other interactions. */
 export const TabBase: RneFunctionComponent<TabBaseProps> = ({
-  theme,
+  theme = defaultTheme,
   children,
   value,
   onChange = () => {},

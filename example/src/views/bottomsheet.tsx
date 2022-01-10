@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BottomSheet, Button, ListItem } from '@react-native-elements/base';
+import { BottomSheet, Button, ListItem } from '@react-native-elements/themed';
 import { StyleSheet } from 'react-native';
 import { Header } from '../components/header';
 

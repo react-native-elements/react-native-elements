@@ -11,7 +11,7 @@ import {
   Text,
   Divider,
   Switch,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 import { ThemeReducerContext } from '../helpers/ThemeReducer';
 import { SafeAreaView } from 'react-native-safe-area-context';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Button, { ButtonProps } from '../Button';
-import { RneFunctionComponent } from '../helpers';
+import { Button, ButtonProps } from '../Button';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 import Color from 'color';
 
 export type TabItemProps = ButtonProps & {
@@ -17,7 +17,7 @@ export type TabItemProps = ButtonProps & {
  * Receives all [Button](https://reactnativeelements.com/docs/button#props) props. */
 export const TabItem: RneFunctionComponent<TabItemProps> = ({
   active,
-  theme,
+  theme = defaultTheme,
   titleStyle,
   containerStyle,
   buttonStyle,

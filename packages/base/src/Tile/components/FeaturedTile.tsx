@@ -7,10 +7,10 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import { BackgroundImage, withTheme } from '../../config';
+import { BackgroundImage } from '../../helpers/index-config';
 import { renderNode, RneFunctionComponent } from '../../helpers';
-import Text from '../../Text';
-import Icon from '../../Icon';
+import { Text } from '../../Text';
+import { Icon } from '../../Icon';
 import { TileProps } from '../Tile';
 
 const renderText = (
@@ -86,9 +86,7 @@ const FeaturedTile: RneFunctionComponent<TileProps> = ({
   );
 };
 
-const ThemedFeaturedTile = withTheme(FeaturedTile, 'FeaturedTile');
-
-export { FeaturedTile, ThemedFeaturedTile };
+export { FeaturedTile };
 
 const styles = StyleSheet.create({
   imageContainer: {

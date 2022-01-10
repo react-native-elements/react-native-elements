@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
-import Image, { ImageProps } from '../Image';
+import { ImageProps, Image } from '../Image';
 
-type CardImageProps = ImageProps;
+export type CardImageProps = ImageProps;
 
 /** Add information in the form of image to the card.
  * This, Receives all [Image](Image.mdx#props) props. */

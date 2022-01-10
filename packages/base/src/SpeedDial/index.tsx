@@ -1,8 +1,8 @@
-import { withTheme } from '../config';
 import { SpeedDial, SpeedDialProps } from './SpeedDial';
 import { SpeedDialAction, SpeedDialActionProps } from './SpeedDial.Action';
 
-export type { SpeedDialProps, SpeedDialActionProps };
-export default Object.assign(withTheme(SpeedDial, 'SpeedDial'), {
-  Action: withTheme(SpeedDialAction, 'SpeedDialAction'),
+const DefaultSpeedDial = Object.assign(SpeedDial, {
+  Action: SpeedDialAction,
 });
+export { DefaultSpeedDial as SpeedDial };
+export type { SpeedDialProps, SpeedDialActionProps };

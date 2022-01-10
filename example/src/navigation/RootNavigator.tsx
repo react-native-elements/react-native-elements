@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { ThemeContext } from '@react-native-elements/base';
+import { ThemeContext } from '@react-native-elements/themed';
 import { ThemeReducerContext } from '../helpers/ThemeReducer';
 import DrawerNavigator from './DrawerNavigator';
 import Avatars from '../views/avatars';

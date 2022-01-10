@@ -5,7 +5,7 @@ import {
   Platform,
   ColorValue,
 } from 'react-native';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type SwitchProps = NativeSwitchProps & {
   /**  The color of the Switch component. */
@@ -24,7 +24,7 @@ export const Switch: RneFunctionComponent<SwitchProps> = ({
   onValueChange,
   color = 'primary',
   style,
-  theme,
+  theme = defaultTheme,
   ...rest
 }) => {
   // switchedOnColor deals with picking up a color provided as props by user or picks up default theme

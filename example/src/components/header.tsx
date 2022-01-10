@@ -14,7 +14,7 @@ import {
   Header as HeaderRNE,
   HeaderProps,
   Icon,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 type HeaderComponentProps = {
@@ -37,7 +37,7 @@ const Header: React.FunctionComponent<HeaderComponentProps> = (props) => {
 
   const playgroundNavigate = () => {
     Linking.openURL(
-      `https://@react-native-elements/base.js.org/#/${props.view}`
+      `https://@react-native-elements/themed.js.org/#/${props.view}`
     );
   };
 

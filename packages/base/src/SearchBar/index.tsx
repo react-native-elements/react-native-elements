@@ -1,4 +1,3 @@
-import { withTheme } from '../config';
 import { SearchBar, SearchBarProps } from './SearchBar';
 import { SearchBarAndroidProps } from './SearchBar-android';
 import { SearchBarIosProps } from './SearchBar-ios';
@@ -11,4 +10,3 @@ export type {
   SearchBarDefaultProps,
   SearchBarIosProps,
 };
-export default withTheme(SearchBar, 'SearchBar');

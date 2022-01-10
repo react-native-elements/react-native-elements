@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
-import Icon, { IconProps } from '../Icon';
+import { IconProps, Icon } from '../Icon';
 
 export type ListItemChevronProps = Partial<IconProps>;
 

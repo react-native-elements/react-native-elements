@@ -5,7 +5,7 @@ import {
   CheckBox,
   ListItem,
   Avatar,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 import { View, Text, StyleSheet } from 'react-native';
 import { Header } from '../components/header';
 

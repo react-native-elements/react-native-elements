@@ -10,10 +10,10 @@ import {
   StyleProp,
   PressableProps,
 } from 'react-native';
-import TextElement from '../Text';
+import { Text as TextElement } from '../Text';
 import { CheckBoxIcon, CheckBoxIconProps } from './components/CheckBoxIcon';
-import { fonts } from '../config';
-import { RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers/index-config';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type CheckBoxProps = PressableProps &
   CheckBoxIconProps & {
@@ -66,7 +66,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
   textStyle,
   checkedTitle,
   fontFamily,
-  theme,
+  theme = defaultTheme,
   onPress,
   onLongPress,
   checkedColor = theme?.colors?.primary,

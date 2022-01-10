@@ -3,7 +3,7 @@ import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
-import { ThemeProps } from '../config';
+import { colors, Colors } from './index-config';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
@@ -11,8 +11,20 @@ const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
 
 export type RneFunctionComponent<T> = React.FunctionComponent<
-  T & Partial<ThemeProps<T>>
+  T & {
+    theme?: {
+      colors: Colors;
+    };
+  }
 >;
+
+export const defaultTheme = {
+  colors,
+};
+
+export type Theme = {
+  colors: Colors;
+};
 
 export const androidRipple = (
   rippleColor?: string | ColorValue

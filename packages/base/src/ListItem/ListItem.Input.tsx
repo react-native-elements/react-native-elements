@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
-import { ThemeProps } from '../config';
-import Input, { InputProps } from '../Input';
+import { Theme } from '../helpers';
+import { Input, InputProps } from '../Input';
 
 export type ListItemInputProps = InputProps;
 
@@ -9,10 +9,11 @@ export type ListItemInputProps = InputProps;
  * This, Receives all [Input](Input.mdx#props) props. */
 export const ListItemInput = React.forwardRef<
   TextInput,
-  ListItemInputProps & Partial<ThemeProps<ListItemInputProps>>
+  ListItemInputProps & { theme?: Theme }
 >(({ inputStyle, inputContainerStyle, containerStyle, ...rest }, ref) => {
   return (
     <Input
+      // @ts-ignore
       ref={ref}
       renderErrorMessage={false}
       {...rest}

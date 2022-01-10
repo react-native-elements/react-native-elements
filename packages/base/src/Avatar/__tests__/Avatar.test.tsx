@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '..';
+import { Avatar } from '..';
 import { Pressable, View, Image, Text } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';

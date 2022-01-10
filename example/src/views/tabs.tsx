@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../components/header';
-import { Tab, Text, TabView } from '@react-native-elements/base';
+import { Tab, Text, TabView } from '@react-native-elements/themed';
 
 export default () => {
   const [index, setIndex] = React.useState(0);

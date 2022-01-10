@@ -1,11 +1,7 @@
 import { Image as ImageNative } from 'react-native';
-import { withTheme } from '../config';
 import { Image, ImageProps } from './Image';
 
-export { Image };
-export type { ImageProps };
-
-const ThemedImage = Object.assign(withTheme(Image, 'Image'), {
+const DefaultImage = Object.assign(Image, {
   getSize: ImageNative.getSize,
   getSizeWithHeaders: ImageNative.getSizeWithHeaders,
   prefetch: ImageNative.prefetch,
@@ -14,4 +10,5 @@ const ThemedImage = Object.assign(withTheme(Image, 'Image'), {
   resolveAssetSource: ImageNative.resolveAssetSource,
 });
 
-export default ThemedImage;
+export { DefaultImage as Image };
+export type { ImageProps };

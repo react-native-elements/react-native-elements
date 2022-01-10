@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem component should render with title and subtitle 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    replaceTheme={[Function]}
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#bcbbc1",
+          "flexDirection": "row",
+          "padding": 14,
+        }
+      }
+      testID="RNE__LISTITEM__padView"
+    >
+      <View
+        replaceTheme={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+        theme={
+          Object {
+            "colors": Object {
+              "black": "#242424",
+              "disabled": "hsl(208, 8%, 90%)",
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "platform": Object {
+                "android": Object {
+                  "error": "#f44336",
+                  "grey": "rgba(0, 0, 0, 0.54)",
+                  "primary": "#2196f3",
+                  "searchBg": "#dcdce1",
+                  "secondary": "#9C27B0",
+                  "success": "#4caf50",
+                  "warning": "#ffeb3b",
+                },
+                "default": Object {
+                  "error": "#ff3b30",
+                  "grey": "#7d7d7d",
+                  "primary": "#007aff",
+                  "searchBg": "#dcdce1",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+                "ios": Object {
+                  "error": "#ff3b30",
+                  "grey": "#7d7d7d",
+                  "primary": "#007aff",
+                  "searchBg": "#dcdce1",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+                "web": Object {
+                  "error": "#ff190c",
+                  "grey": "#393e42",
+                  "primary": "#2089dc",
+                  "searchBg": "#303337",
+                  "secondary": "#ca71eb",
+                  "success": "#52c41a",
+                  "warning": "#faad14",
+                },
+              },
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#ca71eb",
+              "success": "#52c41a",
+              "warning": "#faad14",
+              "white": "#ffffff",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        <Text
+          accessibilityRole="text"
+          numberOfLines={5}
+          style={
+            Object {
+              "backgroundColor": "peru",
+              "color": "#242424",
+              "fontSize": 17,
+            }
+          }
+          testID="listItemTitle"
+        >
+          title test
+        </Text>
+        <Text
+          accessibilityRole="text"
+          style={
+            Object {
+              "backgroundColor": "peru",
+              "color": "#242424",
+              "fontSize": 15,
+            }
+          }
+          testID="listItemTitle"
+        >
+          title test
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 16,
+          }
+        }
+      />
+      <View
+        replaceTheme={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "flex-end",
+              "flex": 0.5,
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+        theme={
+          Object {
+            "colors": Object {
+              "black": "#242424",
+              "disabled": "hsl(208, 8%, 90%)",
+              "divider": "#bcbbc1",
+              "error": "#ff190c",
+              "grey0": "#393e42",
+              "grey1": "#43484d",
+              "grey2": "#5e6977",
+              "grey3": "#86939e",
+              "grey4": "#bdc6cf",
+              "grey5": "#e1e8ee",
+              "greyOutline": "#bbb",
+              "platform": Object {
+                "android": Object {
+                  "error": "#f44336",
+                  "grey": "rgba(0, 0, 0, 0.54)",
+                  "primary": "#2196f3",
+                  "searchBg": "#dcdce1",
+                  "secondary": "#9C27B0",
+                  "success": "#4caf50",
+                  "warning": "#ffeb3b",
+                },
+                "default": Object {
+                  "error": "#ff3b30",
+                  "grey": "#7d7d7d",
+                  "primary": "#007aff",
+                  "searchBg": "#dcdce1",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+                "ios": Object {
+                  "error": "#ff3b30",
+                  "grey": "#7d7d7d",
+                  "primary": "#007aff",
+                  "searchBg": "#dcdce1",
+                  "secondary": "#5856d6",
+                  "success": "#4cd964",
+                  "warning": "#ffcc00",
+                },
+                "web": Object {
+                  "error": "#ff190c",
+                  "grey": "#393e42",
+                  "primary": "#2089dc",
+                  "searchBg": "#303337",
+                  "secondary": "#ca71eb",
+                  "success": "#52c41a",
+                  "warning": "#faad14",
+                },
+              },
+              "primary": "#2089dc",
+              "searchBg": "#303337",
+              "secondary": "#ca71eb",
+              "success": "#52c41a",
+              "warning": "#faad14",
+              "white": "#ffffff",
+            },
+          }
+        }
+        updateTheme={[Function]}
+      >
+        <Text
+          accessibilityRole="text"
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "rgba(0, 0, 0, 0.54)",
+              "fontSize": 17,
+            }
+          }
+          testID="listItemTitle"
+        >
+          title
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    replaceTheme={[Function]}
+    updateTheme={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#bcbbc1",
+          "flexDirection": "row",
+          "padding": 14,
+        }
+      }
+      testID="RNE__LISTITEM__padView"
+    />
+  </View>
+</View>
+`;

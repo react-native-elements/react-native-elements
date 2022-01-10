@@ -15,8 +15,9 @@ import {
   RneFunctionComponent,
   androidRipple,
   InlinePressableProps,
+  defaultTheme,
 } from '../helpers';
-import Text from '../Text';
+import { Text } from '../Text';
 
 export type ButtonGroupProps = InlinePressableProps & {
   /** Button for the component. */
@@ -129,7 +130,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
   disabledSelectedStyle,
   disabledSelectedTextStyle,
   vertical = false,
-  theme,
+  theme = defaultTheme,
   underlayColor = theme?.colors?.primary,
   ...rest
 }) => {

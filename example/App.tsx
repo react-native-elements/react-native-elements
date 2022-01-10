@@ -1,5 +1,5 @@
 import React, { useState, useReducer, useEffect } from 'react';
-import { ThemeProvider } from '@react-native-elements/base';
+import { ThemeProvider } from '@react-native-elements/themed';
 import { useColorScheme } from 'react-native-appearance';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';

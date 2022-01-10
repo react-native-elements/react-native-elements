@@ -1,17 +1,17 @@
 import React from 'react';
 import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
-import { fonts } from '../config';
-import Text, { TextProps } from '../Text';
-import { RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers/index-config';
+import { Text, TextProps } from '../Text';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-type CardFeaturedTitleProps = TextProps;
+export type CardFeaturedTitleProps = TextProps;
 
 /** Add a featured title to the Card.
  * This, Receives all [Text](text#props) props. */
 export const CardFeaturedTitle: RneFunctionComponent<
   CardFeaturedTitleProps
-> = ({ theme, style, ...props }) => (
+> = ({ theme = defaultTheme, style, ...rest }) => (
   <Text
     style={
       StyleSheet.flatten([
@@ -31,7 +31,7 @@ export const CardFeaturedTitle: RneFunctionComponent<
         style,
       ]) as TextStyle
     }
-    {...props}
+    {...rest}
   />
 );
 

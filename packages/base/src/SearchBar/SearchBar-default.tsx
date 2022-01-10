@@ -6,12 +6,11 @@ import {
   TextInputProps,
   View,
 } from 'react-native';
-import { renderNode } from '../helpers';
-import Input from '../Input';
-import Icon from '../Icon';
+import { defaultTheme, renderNode } from '../helpers';
+import { Input } from '../Input';
+import { Icon } from '../Icon';
 import { SearchBarBaseProps } from './SearchBar';
-import { Theme } from '../config/theme';
-import { ThemeProps } from '../config';
+import { Theme } from '../helpers';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
@@ -36,7 +35,7 @@ type SearchBarState = {
 };
 
 export class SearchBarDefault extends React.Component<
-  SearchBarDefaultProps & Partial<ThemeProps<SearchBarDefaultProps>>,
+  SearchBarDefaultProps,
   SearchBarState
 > {
   input!: TextInput;
@@ -89,7 +88,7 @@ export class SearchBarDefault extends React.Component<
   };
 
   render() {
-    const { theme, ...rest } = this.props;
+    const { theme = defaultTheme, ...rest } = this.props;
     const {
       lightTheme,
       round,
@@ -135,6 +134,7 @@ export class SearchBarDefault extends React.Component<
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
+          // @ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}

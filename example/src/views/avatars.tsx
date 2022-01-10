@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import _ from 'lodash';
-import { Avatar } from '@react-native-elements/base';
+import { Avatar } from '@react-native-elements/themed';
 import { Header, SubHeader } from '../components/header';
 
 type AvatarData = {

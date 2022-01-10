@@ -9,7 +9,7 @@ import {
   LayoutAnimation,
   UIManager,
 } from 'react-native';
-import { Input, Button, Icon, InputProps } from '@react-native-elements/base';
+import { Input, Button, Icon, InputProps } from '@react-native-elements/themed';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;

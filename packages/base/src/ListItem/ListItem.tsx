@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { PadView } from './components/PadView';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export type ListItemBaseProps = PressableProps & {
   /** Additional main container styling. */
@@ -57,7 +57,7 @@ export const ListItemBase: RneFunctionComponent<ListItemBaseProps> = (
     pad = 16,
     linearGradientProps,
     ViewComponent = View,
-    theme,
+    theme = defaultTheme,
     children,
     ...rest
   } = props;

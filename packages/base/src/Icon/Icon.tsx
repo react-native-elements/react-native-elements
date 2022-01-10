@@ -18,6 +18,7 @@ import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
 import {
   androidRipple,
+  defaultTheme,
   InlinePressableProps,
   RneFunctionComponent,
 } from '../helpers';
@@ -118,7 +119,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
     : View,
   solid = false,
   brand = false,
-  theme,
+  theme = defaultTheme,
   pressableProps,
   ...rest
 }) => {

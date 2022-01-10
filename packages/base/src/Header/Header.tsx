@@ -15,7 +15,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { RneFunctionComponent } from '../helpers';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { Children } from './components/HeaderChildren';
 import { HeaderIcon } from './components/HeaderIcon';
 
@@ -97,7 +97,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
   ViewComponent = linearGradientProps || !backgroundImage
     ? View
     : ImageBackground,
-  theme,
+  theme = defaultTheme,
   elevated,
   ...rest
 }) => {

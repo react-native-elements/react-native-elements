@@ -12,11 +12,11 @@ import {
   ImageURISource,
   ImageSourcePropType,
 } from 'react-native';
-import Image from '../Image';
-import Text from '../Text';
-import Icon, { IconObject, IconProps } from '../Icon';
-import { ThemedFeaturedTile } from './components/FeaturedTile';
-import { androidRipple, RneFunctionComponent } from '../helpers';
+import { Image } from '../Image';
+import { Text } from '../Text';
+import { Icon, IconObject, IconProps } from '../Icon';
+import { FeaturedTile } from './components/FeaturedTile';
+import { androidRipple, defaultTheme, RneFunctionComponent } from '../helpers';
 import Color from 'color';
 
 export type TileProps = PressableProps & {
@@ -98,7 +98,7 @@ export const Tile: RneFunctionComponent<TileProps> = ({
   imageProps = {},
   width = Dimensions.get('window').width,
   height = width * 0.8,
-  theme,
+  theme = defaultTheme,
   ...attributes
 }) => {
   if (featured) {
@@ -119,7 +119,7 @@ export const Tile: RneFunctionComponent<TileProps> = ({
       imageProps,
       ImageComponent,
     };
-    return <ThemedFeaturedTile {...(featuredProps as TileProps)} />;
+    return <FeaturedTile {...(featuredProps as TileProps)} />;
   }
 
   return (

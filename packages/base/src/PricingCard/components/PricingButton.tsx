@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Button, { ButtonProps } from '../../Button';
-import Icon, { IconProps } from '../../Icon';
+import { ButtonProps, Button } from '../../Button';
+import { IconProps, Icon } from '../../Icon';
 
 export const PricingButton = (
   props: ButtonProps & {

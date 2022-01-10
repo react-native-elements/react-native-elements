@@ -5,7 +5,7 @@ import {
   ButtonGroup,
   withTheme,
   Text,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 import { Header, SubHeader } from '../components/header';
 import { LinearGradient } from '../components/LinearGradient';
 

@@ -9,7 +9,7 @@ import {
   ListItemProps,
   Button,
   Switch,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 import { LinearGradient } from '../components/LinearGradient';
 import { Header } from '../components/header';
 import colors from '../config/colors';

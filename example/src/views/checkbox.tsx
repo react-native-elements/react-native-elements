@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckBox, Icon } from '@react-native-elements/base';
+import { CheckBox, Icon } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
 type CheckboxComponentProps = {};

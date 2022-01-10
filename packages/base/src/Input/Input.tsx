@@ -12,10 +12,9 @@ import {
   TextStyle,
   TextInputProps,
 } from 'react-native';
-import { renderNode, patchWebProps } from '../helpers';
-import { fonts } from '../config';
-import Icon, { IconNode } from '../Icon';
-import { ThemeProps } from '../config';
+import { renderNode, patchWebProps, defaultTheme, Theme } from '../helpers';
+import { fonts } from '../helpers/index-config';
+import { Icon, IconNode } from '../Icon';
 
 const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
   renderNode(Text, content, {
@@ -43,9 +42,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   renderErrorMessage?: boolean;
 };
 
-export class Input extends React.Component<
-  InputProps & Partial<ThemeProps<InputProps>>
-> {
+export class Input extends React.Component<InputProps & { theme: Theme }> {
   static displayName = 'Input';
   input: any;
   shakeAnimationValue = new Animated.Value(0);
@@ -101,7 +98,7 @@ export class Input extends React.Component<
       label,
       labelStyle,
       labelProps,
-      theme,
+      theme = defaultTheme,
       renderErrorMessage = true,
       style,
       ...attributes

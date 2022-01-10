@@ -6,11 +6,11 @@ import {
   Keyboard,
   TextInput,
 } from 'react-native';
-import { renderNode } from '../helpers';
-import Input, { InputProps } from '../Input';
-import Icon, { IconNode } from '../Icon';
+import { defaultTheme, renderNode } from '../helpers';
+import { Input, InputProps } from '../Input';
+import { IconNode, Icon } from '../Icon';
 import { SearchBarBaseProps } from './SearchBar';
-import { Theme, ThemeProps } from '../config';
+import { Theme } from '../helpers';
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
@@ -45,10 +45,11 @@ type SearchBarState = {
 };
 
 export class SearchBarAndroid extends Component<
-  SearchBarAndroidProps & Partial<ThemeProps<SearchBarAndroidProps>>,
+  SearchBarAndroidProps,
   SearchBarState
 > {
   input!: TextInput;
+  _keyboardDidHideListener;
   static defaultProps = {
     onClear: () => null,
     onCancel: () => null,
@@ -101,20 +102,22 @@ export class SearchBarAndroid extends Component<
       hasFocus: false,
       isEmpty: value ? value === '' : true,
     };
-    Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
+    this._keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      this._keyboardDidHide
+    );
   }
-
   _keyboardDidHide = () => {
     this.cancel();
   };
 
   componentWillUnmount() {
-    Keyboard.removeListener('keyboardDidHide', this._keyboardDidHide);
+    this._keyboardDidHideListener.remove();
   }
 
   render() {
     const {
-      theme,
+      theme = defaultTheme,
       clearIcon = { name: 'clear' },
       containerStyle,
       leftIconContainerStyle,
@@ -149,6 +152,7 @@ export class SearchBarAndroid extends Component<
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           onChangeText={this.onChangeText}
+          // @ts-ignore
           ref={(input: TextInput) => {
             this.input = input;
           }}
