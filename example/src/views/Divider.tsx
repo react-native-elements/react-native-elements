@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Text, Divider, useTheme } from '@react-native-elements/base';
+import { Text, Divider, useTheme } from '@react-native-elements/themed';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { Header, SubHeader } from '../components/header';
 

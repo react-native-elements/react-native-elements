@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { FAB } from '@react-native-elements/base';
+import { FAB } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
 export default () => {

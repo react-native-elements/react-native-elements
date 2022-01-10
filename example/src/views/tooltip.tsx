@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip, Text, TooltipProps } from '@react-native-elements/base';
+import { Tooltip, Text, TooltipProps } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 import { View, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import colors from '../config/colors';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
-import { Text, Tile } from '@react-native-elements/base';
+import { Text, Tile } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
 type TilesComponentProps = {};

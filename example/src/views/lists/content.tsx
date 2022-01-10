@@ -7,7 +7,7 @@ import {
   Icon,
   Theme,
   withTheme,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 
 type UserData = {
   name: string;

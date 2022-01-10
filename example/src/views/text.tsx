@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Text, useTheme } from '@react-native-elements/base';
+import { Text, useTheme } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
 type TextComponentProps = {};

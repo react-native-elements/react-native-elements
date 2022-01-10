@@ -6,6 +6,9 @@
     },
     {
       "path": "../packages/universe"
+    },
+    {
+      "path": "../packages/themed"
     }
   ],
   "compilerOptions": {

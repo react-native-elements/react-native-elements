@@ -14,7 +14,7 @@ import {
   Text,
   Badge,
   Tab,
-} from '@react-native-elements/base';
+} from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
 const ScreenWidth = Dimensions.get('window').width;

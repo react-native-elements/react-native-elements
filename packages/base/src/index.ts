@@ -11,7 +11,7 @@
 // Core
 import { AirbnbRating, TapRatingProps } from './AirbnbRating';
 import { Avatar, AvatarProps } from './Avatar';
-import { Badge, BadgeProps } from './Badge';
+import { Badge, BadgeProps, withBadge } from './Badge';
 import { BottomSheet, BottomSheetProps } from './BottomSheet';
 import { Button, ButtonProps } from './Button';
 import { ButtonGroup, ButtonGroupProps } from './ButtonGroup';
@@ -49,6 +49,7 @@ export {
   AirbnbRating,
   Avatar,
   Badge,
+  withBadge,
   BottomSheet,
   Button,
   ButtonGroup,

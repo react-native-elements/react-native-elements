@@ -5,7 +5,7 @@
   "author": "Monte Thakkar",
   "private": true,
   "homepage": "https://react-native-elements.github.io/react-native-elements-app/",
-  "main": "./index.tsx",
+  "main": "./index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
-import { Image } from '@react-native-elements/base';
+import { Image } from '@react-native-elements/themed';
 import AppLoading from 'expo-app-loading';
 import { Header } from '../components/header';
 

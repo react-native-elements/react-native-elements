@@ -18,8 +18,11 @@ config.resolver.nodeModulesPaths = [
   path.resolve(workspaceRoot, 'node_modules'),
 ];
 
+config.projectRoot = projectRoot;
+
 config.resolver.blacklistRE = [
   /website\/.*/,
+  /coverage\/.*/,
   // /packages\/.*\/node_modules\/.*/,
 ];
 
