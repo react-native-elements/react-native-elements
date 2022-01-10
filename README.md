@@ -89,9 +89,9 @@ const App = () => <Button title="Hello World!" />;
 - [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+## Universe Components
 
-- [x] [Circular Slider](https://reactnativeelements.com/docs/)
+- [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
 ## React Native Web support
 
@@ -105,9 +105,13 @@ Checkout the official
 [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app)
 on Expo which uses all of the React Native Elements components.
 
-If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements-app) to
-view the implementation & run the RNE expo app locally.
+If you are looking to contribute to the React Native Elements App,
+[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
+view the implementation & Use this command to start demo app locally
+
+```bash
+yarn start:demo
+```
 
 ## Documentation
 
