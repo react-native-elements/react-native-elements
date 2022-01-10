@@ -86,7 +86,7 @@ const App = () => <Button title="Hello World!" />;
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
+- [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
 ## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
