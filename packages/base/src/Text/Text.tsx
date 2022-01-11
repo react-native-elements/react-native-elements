@@ -11,7 +11,7 @@ import { fonts } from '../helpers/index-config';
 import { defaultTheme, patchWebProps, RneFunctionComponent } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
-export type TextProps = TextProperties & {
+export interface TextProps extends TextProperties {
   /**  Add additional styling for Text. */
   style?: StyleProp<TextStyle>;
 
@@ -38,7 +38,7 @@ export type TextProps = TextProperties & {
 
   /**  Styling when h3 is set. */
   h4Style?: StyleProp<TextStyle>;
-};
+}
 
 /** Text displays words and characters of various sizes. */
 export const Text: RneFunctionComponent<TextProps> = ({
