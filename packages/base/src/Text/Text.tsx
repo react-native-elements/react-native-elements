@@ -38,7 +38,7 @@ export interface TextProps extends TextProperties {
 
   /**  Styling when h3 is set. */
   h4Style?: StyleProp<TextStyle>;
-}
+};
 
 /** Text displays words and characters of various sizes. */
 export const Text: RneFunctionComponent<TextProps> = ({
