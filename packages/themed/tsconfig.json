@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig",
+  "references": [
+    {
+      "path": "../base"
+    }
+  ],
+  "compilerOptions": {
+    "allowJs": true /* Allow javascript files to be compiled. */,
+    "outDir": "dist",
+    "declaration": true,
+    "composite": true
+  },
+  "include": ["src/**/*.tsx", "src/**/*.ts", "src/index.ts"],
+  "exclude": [
+    ".ci",
+    "dist",
+    "node_modules",
+    "babel.config.js",
+    "jest.config.js",
+    "src/index.d.ts",
+    "src/**/__tests__"
+  ]
+}

@@ -14,6 +14,7 @@
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
+  <a href="https://lerna.js.org/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg"></a>
 </p>
 
 <p align="center">
@@ -37,15 +38,24 @@ Follow
 [these instructions](https://reactnativeelements.com/docs/)
 to install React Native Elements!
 
+### Versions
+
+| Package                                    | Version                                                                                                                                                          |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@react-native-elements/base**            | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)            |
+| **@react-native-elements/themed**          | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed)        |
+| **@react-native-elements/universe**        | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe)        |
+| **@react-native-elements/universe-themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe-themed) |
+
 ### Usage
 
 Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from 'react-native-elements';
+import { Button } from '@react-native-elements/base';
 
-<Button />;
+const App = () => <Button title="Hello World!" />;
 ```
 
 ## Components included:
@@ -76,7 +86,7 @@ import { Button } from 'react-native-elements';
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
+- [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
 ## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
