@@ -1,0 +1,577 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Speed Dial Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "justifyContent": "flex-end",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      pointerEvents="auto"
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(36, 36, 36, 0.6)",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      pointerEvents="box-none"
+      style={
+        Object {
+          "alignItems": "flex-end",
+        }
+      }
+    >
+      <View
+        pointerEvents="auto"
+        style={
+          Object {
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "flex-end",
+              "marginBottom": 16,
+              "marginRight": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 5,
+                  "color": "black",
+                  "elevation": 2,
+                  "marginHorizontal": 16,
+                  "marginVertical": 8,
+                  "paddingHorizontal": 12,
+                  "paddingVertical": 6,
+                },
+                undefined,
+              ]
+            }
+          >
+            Add
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderRadius": 28,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "opacity": 1,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 3,
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "borderRadius": 28,
+                    "elevation": 4,
+                  },
+                  false,
+                ]
+              }
+              testID="RNE_BUTTON_WRAPPER"
+            >
+              <View
+                accessibilityRole="button"
+                accessibilityState={
+                  Object {
+                    "busy": false,
+                    "disabled": false,
+                  }
+                }
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#ca71eb",
+                      "borderColor": "#2089dc",
+                      "borderRadius": 3,
+                      "borderWidth": 0,
+                      "flexDirection": "row",
+                      "height": 40,
+                      "justifyContent": "center",
+                      "padding": 8,
+                      "width": 40,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 40,
+                        "marginHorizontal": 5,
+                        "overflow": "hidden",
+                        "padding": 8,
+                        "width": 40,
+                      }
+                    }
+                    testID="RNE__ICON__CONTAINER"
+                  >
+                    <View
+                      accessibilityRole="button"
+                      android_ripple={
+                        Object {
+                          "borderless": false,
+                          "color": "rgba(0, 0, 0, 0.3)",
+                          "radius": -5,
+                        }
+                      }
+                      disabled={false}
+                      replaceTheme={[Function]}
+                      testID="RNE__ICON__CONTAINER_ACTION"
+                      updateTheme={[Function]}
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "justifyContent": "center",
+                          }
+                        }
+                        testID="RNE__ICON"
+                      >
+                        <Text
+                          allowFontScaling={false}
+                          style={
+                            Array [
+                              Object {
+                                "color": "#fff",
+                                "fontSize": 24,
+                              },
+                              Object {
+                                "backgroundColor": "transparent",
+                              },
+                              Object {
+                                "fontFamily": "Material Icons",
+                                "fontStyle": "normal",
+                                "fontWeight": "normal",
+                              },
+                              Object {},
+                            ]
+                          }
+                          testID="RNE__ICON__Component"
+                        >
+                          
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        pointerEvents="auto"
+        style={
+          Object {
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "flex-end",
+              "marginBottom": 16,
+              "marginRight": 24,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 5,
+                  "color": "black",
+                  "elevation": 2,
+                  "marginHorizontal": 16,
+                  "marginVertical": 8,
+                  "paddingHorizontal": 12,
+                  "paddingVertical": 6,
+                },
+                undefined,
+              ]
+            }
+          >
+            Delete
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderRadius": 28,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "opacity": 1,
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 3,
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "borderRadius": 28,
+                    "elevation": 4,
+                  },
+                  false,
+                ]
+              }
+              testID="RNE_BUTTON_WRAPPER"
+            >
+              <View
+                accessibilityRole="button"
+                accessibilityState={
+                  Object {
+                    "busy": false,
+                    "disabled": false,
+                  }
+                }
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#ca71eb",
+                      "borderColor": "#2089dc",
+                      "borderRadius": 3,
+                      "borderWidth": 0,
+                      "flexDirection": "row",
+                      "height": 40,
+                      "justifyContent": "center",
+                      "padding": 8,
+                      "width": 40,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "height": 40,
+                        "marginHorizontal": 5,
+                        "overflow": "hidden",
+                        "padding": 8,
+                        "width": 40,
+                      }
+                    }
+                    testID="RNE__ICON__CONTAINER"
+                  >
+                    <View
+                      accessibilityRole="button"
+                      android_ripple={
+                        Object {
+                          "borderless": false,
+                          "color": "rgba(0, 0, 0, 0.3)",
+                          "radius": -5,
+                        }
+                      }
+                      disabled={false}
+                      replaceTheme={[Function]}
+                      testID="RNE__ICON__CONTAINER_ACTION"
+                      updateTheme={[Function]}
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "justifyContent": "center",
+                          }
+                        }
+                        testID="RNE__ICON"
+                      >
+                        <Text
+                          allowFontScaling={false}
+                          style={
+                            Array [
+                              Object {
+                                "color": "#fff",
+                                "fontSize": 24,
+                              },
+                              Object {
+                                "backgroundColor": "transparent",
+                              },
+                              Object {
+                                "fontFamily": "Material Icons",
+                                "fontStyle": "normal",
+                                "fontWeight": "normal",
+                              },
+                              Object {},
+                            ]
+                          }
+                          testID="RNE__ICON__Component"
+                        >
+                          
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 28,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 16,
+            "marginTop": 0,
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 3,
+                "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 28,
+                "elevation": 4,
+              },
+              false,
+            ]
+          }
+          testID="RNE_BUTTON_WRAPPER"
+        >
+          <View
+            accessibilityRole="button"
+            accessibilityState={
+              Object {
+                "busy": false,
+                "disabled": false,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#ca71eb",
+                  "borderColor": "#2089dc",
+                  "borderRadius": 3,
+                  "borderWidth": 0,
+                  "flexDirection": "row",
+                  "height": 56,
+                  "justifyContent": "center",
+                  "padding": 16,
+                  "width": 56,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "height": 56,
+                    "marginHorizontal": 5,
+                    "overflow": "hidden",
+                    "padding": 16,
+                    "width": 56,
+                  }
+                }
+                testID="RNE__ICON__CONTAINER"
+              >
+                <View
+                  accessibilityRole="button"
+                  android_ripple={
+                    Object {
+                      "borderless": false,
+                      "color": "rgba(0, 0, 0, 0.3)",
+                      "radius": -5,
+                    }
+                  }
+                  disabled={false}
+                  replaceTheme={[Function]}
+                  testID="RNE__ICON__CONTAINER_ACTION"
+                  updateTheme={[Function]}
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "justifyContent": "center",
+                      }
+                    }
+                    testID="RNE__ICON"
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#fff",
+                            "fontSize": 24,
+                          },
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          Object {
+                            "fontFamily": "Material Icons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                      testID="RNE__ICON__Component"
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTSafeAreaView>
+  </View>
+</View>
+`;
