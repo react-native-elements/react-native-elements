@@ -83,7 +83,7 @@ yarn add https://github.com/react-native-elements/react-native-elements#base
 ```
 
 </TabItem>
-<TabItem value="base">
+<TabItem value="themed">
 
 ```bash
 npm install https://github.com/react-native-elements/react-native-elements#themed
