@@ -29,7 +29,7 @@ dialogs.
 ## Props
 
 > This component inherits
-> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput), 
+> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput),
 > along with the following:
 
 - [`containerStyle`](#containerstyle)

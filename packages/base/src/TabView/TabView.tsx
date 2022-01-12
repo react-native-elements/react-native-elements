@@ -7,6 +7,8 @@ import {
   PanResponderGestureState,
   GestureResponderEvent,
   useWindowDimensions,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 
@@ -25,6 +27,12 @@ export type TabViewBaseProps = {
     Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,
     'toValue'
   >;
+
+  /** Styling for Component container. */
+  containerStyle?: StyleProp<ViewStyle>;
+
+  /** Styling for TabView.Item Component container. */
+  tabItemContainerStyle?: StyleProp<ViewStyle>;
 };
 
 /** Tabs organize content across different screens, data sets, and other interactions.
@@ -35,6 +43,8 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   value = 0,
   animationType = 'spring',
   animationConfig = {},
+  containerStyle,
+  tabItemContainerStyle,
 }) => {
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
@@ -83,7 +93,7 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   return (
     <Animated.View
       testID="tabView-test"
-      style={[
+      style={StyleSheet.flatten([
         styles.container,
         {
           width: window.width * length,
@@ -96,11 +106,20 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
             },
           ],
         },
-      ]}
+        containerStyle,
+      ])}
       {...panResponder.panHandlers}
     >
       {React.Children.map(children, (child) => (
-        <View style={[styles.container, { width: window.width }]}>{child}</View>
+        <View
+          style={StyleSheet.flatten([
+            styles.container,
+            { width: window.width },
+            tabItemContainerStyle,
+          ])}
+        >
+          {child}
+        </View>
       ))}
     </Animated.View>
   );
