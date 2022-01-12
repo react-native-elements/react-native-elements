@@ -9,11 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a> 
+  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a> 
   <a href="https://lerna.js.org/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg"></a>
 </p>
 
@@ -22,8 +21,7 @@
   <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
   <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-  
+
 </p>
 
 <br />
@@ -40,12 +38,11 @@ to install React Native Elements!
 
 ### Versions
 
-| Package                                    | Version                                                                                                                                                          |
-| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **@react-native-elements/base**            | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)            |
-| **@react-native-elements/themed**          | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed)        |
-| **@react-native-elements/universe**        | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe)        |
-| **@react-native-elements/universe-themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe-themed) |
+| Package                             | Version                                                                                                                                                   |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@react-native-elements/base**     | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
+| **@react-native-elements/themed**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
+| **@react-native-elements/universe** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe) |
 
 ### Usage
 
