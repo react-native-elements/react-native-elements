@@ -111,7 +111,15 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
       {...panResponder.panHandlers}
     >
       {React.Children.map(children, (child) => (
-        <View style={StyleSheet.flatten([styles.container, { width: window.width }, tabItemContainerStyle])}>{child}</View>
+        <View
+          style={StyleSheet.flatten([
+            styles.container,
+            { width: window.width },
+            tabItemContainerStyle,
+          ])}
+        >
+          {child}
+        </View>
       ))}
     </Animated.View>
   );
