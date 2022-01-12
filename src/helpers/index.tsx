@@ -45,6 +45,10 @@ export {
 
 type Inline<T, K extends keyof T> = Partial<
   {
+    /**
+     * @default {}
+     * @type PressableProps except click handlers
+     */
     pressableProps: Omit<T, K>;
   } & Pick<T, K>
 >;
