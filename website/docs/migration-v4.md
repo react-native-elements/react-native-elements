@@ -59,13 +59,28 @@ Earlier React Native Elements was using `Touchable` as touch handler, but since 
 
 ### Pressable
 
+These components are now using `Pressable` instead of `Touchable`
+
+- Avatar
+- Badge
+- ButtonGroup
+- CheckBox
+- Icon
+- Image
+- ListItem
+- SearchBar
+- SpeedDial
+- Tile
+
 > [Pressable](https://reactnative.dev/docs/pressable) is a Core Component wrapper that can detect various stages of press interactions on any of its defined children.
 
-This change would let you use `onPressIn` & `onPressOut` APIs in RNE components, For example
+This change would let you use `onPressIn` & `onPressOut` APIs in components, For example
 
 ```diff
   <CheckBox
     title="I agree"
+    onPress={()=>{}}
+    onLongPress={()=>{}}
 +   onPressIn={()=>{}}
 +   onPressOut={()=>{}}
     onPress={() => {}}
@@ -77,9 +92,10 @@ and the rest of props for `Pressable` can be added via `pressableProps` API
 ```diff
   <ButtonGroup
 +   pressableProps={{android_ripple:{radius:2}}}
--   overlayColor="red"
   />
 ```
+
+few other props (like `underlayColor`) will not be supported, you can remove them.
 
 :::info
 
