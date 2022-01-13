@@ -11,7 +11,7 @@
     "build": "lerna run build",
     "test": "jest --runInBand",
     "clean-install": "rimraf node_modules && yarn",
-    "start:demo": "yarn --cwd example start",
+    "start:example": "yarn --cwd example start",
     "docs": "yarn docs:build && yarn docs:serve",
     "docs:build": "yarn --cwd website build",
     "docs:serve": "yarn --cwd website start",

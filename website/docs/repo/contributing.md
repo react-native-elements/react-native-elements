@@ -178,7 +178,19 @@ setup on your local machine:
 - Clone the forked repo
 
 ```bash
- git clone <your-forked-repo-url>  cd react-native-elements
+ git clone <your-forked-repo-url>
+ cd react-native-elements
+```
+
+You have a file structure that looks like this:
+
+```text
+example/
+packages/
+  base/
+  themed/
+  universe/
+website/
 ```
 
 - Install dependencies
@@ -190,7 +202,7 @@ setup on your local machine:
 While developing, you can run the example app with Expo to test your changes:
 
 ```bash
-yarn example start
+yarn start:example
 ```
 
 Make sure your code passes TypeScript and ESLint. Run the following to verify:
