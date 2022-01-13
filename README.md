@@ -57,6 +57,8 @@ const App = () => <Button title="Hello World!" />;
 
 ## Components included:
 
+### Base
+
 - [x] [Avatar](https://reactnativeelements.com/docs/avatar)
 - [x] [Badge](https://reactnativeelements.com/docs/badge)
 - [x] [BottomSheet](https://reactnativeelements.com/docs/bottomsheet)
@@ -86,7 +88,7 @@ const App = () => <Button title="Hello World!" />;
 - [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-## Universe Components
+## Universe
 
 - [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
@@ -117,7 +119,7 @@ yarn start:demo
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!
