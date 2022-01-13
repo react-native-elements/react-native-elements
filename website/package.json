@@ -3,6 +3,7 @@
   "scripts": {
     "examples": "docusaurus examples",
     "start": "docusaurus start",
+    "docs:build": "ts-node scripts/docgen/index.ts",
     "prebuild": "npm run docs:build",
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
@@ -11,7 +12,6 @@
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus docs:version",
     "rename-version": "docusaurus rename-version",
-    "docs:build": "ts-node scripts/docgen/index.ts",
     "test": "jest --runInBand"
   },
   "jest": {

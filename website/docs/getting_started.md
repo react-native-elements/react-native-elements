@@ -25,7 +25,6 @@ values={[
 { label: 'Base', value: 'base', },
 { label: 'Themed', value: 'themed', },
 { label: 'Universe', value: 'universe', },
-{ label: 'Universe-Themed', value: 'universe-themed', },
 ]
 }>
 <TabItem value="base">
@@ -36,6 +35,17 @@ npm install @react-native-elements/base
 
 ```bash
 yarn add @react-native-elements/base
+```
+
+</TabItem>
+<TabItem value="themed">
+
+```bash
+npm install @react-native-elements/themed
+```
+
+```bash
+yarn add @react-native-elements/themed
 ```
 
 </TabItem>
@@ -60,7 +70,6 @@ values={[
 { label: 'Base', value: 'base', },
 { label: 'Themed', value: 'themed', },
 { label: 'Universe', value: 'universe', },
-{ label: 'Universe-Themed', value: 'universe-themed', },
 ]
 }>
 <TabItem value="base">
@@ -71,6 +80,17 @@ npm install https://github.com/react-native-elements/react-native-elements#base
 
 ```bash
 yarn add https://github.com/react-native-elements/react-native-elements#base
+```
+
+</TabItem>
+<TabItem value="themed">
+
+```bash
+npm install https://github.com/react-native-elements/react-native-elements#themed
+```
+
+```bash
+yarn add https://github.com/react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>

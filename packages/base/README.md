@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/@react-native-elements/base.svg"></a>
   <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
@@ -79,10 +79,6 @@ import { Button } from 'react-native-elements';
 - [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
-
-- [x] [Circular Slider](https://reactnativeelements.com/docs/)
-
 ## React Native Web support
 
 As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
@@ -96,17 +92,17 @@ Checkout the official
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements-app) to
+[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
 view the implementation & run the RNE expo app locally.
 
 ## Documentation
 
-[View the full docs here](https://reactnativeelements.com/docs/overview)
+[View the full docs here](https://reactnativeelements.com/docs)
 
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!

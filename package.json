@@ -11,7 +11,7 @@
     "build": "lerna run build",
     "test": "jest --runInBand",
     "clean-install": "rimraf node_modules && yarn",
-    "start:demo": "yarn --cwd example start",
+    "start:example": "yarn --cwd example start",
     "docs": "yarn docs:build && yarn docs:serve",
     "docs:build": "yarn --cwd website build",
     "docs:serve": "yarn --cwd website start",
@@ -61,12 +61,12 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "packages/**/*.{ts,tsx}": [
       "eslint --fix",
       "bash -c tsc --noEmit true",
       "jest --bail --findRelatedTests"
     ],
-    "src/**/*.{js,jsx}": [
+    "packages/**/*.{js,jsx}": [
       "eslint --fix",
       "jest --bail --findRelatedTests"
     ],

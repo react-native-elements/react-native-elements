@@ -38,7 +38,7 @@ instead of the built-in component.
 
 ```jsx
 import React from 'react';
-import { Button } from 'react-native-elements';
+import { Button } from '@react-native-elements/themed';
 
 const RaisedButton = (props) => <Button raised {...props} />;
 
@@ -62,7 +62,7 @@ Elements ships with a 3 utilities for large-scale theming.
 Firstly you'll want to set up your `ThemeProvider`.
 
 ```jsx
-import { ThemeProvider, Button } from 'react-native-elements';
+import { ThemeProvider, Button } from '@react-native-elements/themed';
 
 const theme = {
   Button: {
@@ -144,7 +144,7 @@ Theme styles are the values that are set by the ThemeProvider If present, these
 are applied second.
 
 ```jsx
-import { ThemeProvider, Button } from 'react-native-elements';
+import { ThemeProvider, Button } from '@react-native-elements/themed';
 
 const theme = {
   Button: {
@@ -171,7 +171,7 @@ External styles are the styles which are set through the component props. These
 are applied last and have the highest precedence.
 
 ```jsx
-import { ThemeProvider, Button } from 'react-native-elements';
+import { ThemeProvider, Button } from '@react-native-elements/themed';
 
 const theme = {
   Button: {
@@ -251,7 +251,7 @@ Setting styles in the theme is as simple as using the name of the component, as
 a key and the props you want to change as the value.
 
 ```jsx
-import { ThemeProvider } from 'react-native-elements';
+import { ThemeProvider } from '@react-native-elements/themed';
 
 const theme = {
   Avatar: {
@@ -296,7 +296,7 @@ props to the component it wraps - `theme`, `updateTheme` and `replaceTheme`.
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { withTheme } from 'react-native-elements';
+import { withTheme } from '@react-native-elements/themed';
 
 function MyComponent(props) {
   const { theme, updateTheme, replaceTheme } = props;
@@ -327,7 +327,7 @@ which uses render props!
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { ThemeConsumer } from 'react-native-elements';
+import { ThemeConsumer } from '@react-native-elements/themed';
 
 const MyComponent = () => (
   <ThemeConsumer>
@@ -343,7 +343,7 @@ You can also use `useTheme()` if you use hooks.
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { useTheme } from 'react-native-elements';
+import { useTheme } from '@react-native-elements/themed';
 
 const MyComponent = () => {
   const { theme } = useTheme();
@@ -361,7 +361,7 @@ If you want to keep your styles outside the component use `makeStyles()` (hook g
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { makeStyles } from 'react-native-elements';
+import { makeStyles } from '@react-native-elements/themed';
 
 type Params = {
   fullWidth?: boolean,
@@ -397,7 +397,7 @@ using the `colors` object and the `Platform` API.
 
 ```jsx
 import { Platform } from 'react-native';
-import { Button, colors, ThemeProvider } from 'react-native-elements';
+import { Button, colors, ThemeProvider } from '@react-native-elements/themed';
 
 const theme = {
   colors: {

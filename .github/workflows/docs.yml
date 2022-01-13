@@ -5,9 +5,7 @@ on:
       - next
     paths:
       - "website/**"
-defaults:
-  run:
-    working-directory: website
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -36,7 +34,7 @@ jobs:
           yarn
       - name: Build 🔧
         run: |
-          yarn build
+          yarn docs:build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
