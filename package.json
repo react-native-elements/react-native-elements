@@ -61,12 +61,12 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "packages/**/*.{ts,tsx}": [
       "eslint --fix",
       "bash -c tsc --noEmit true",
       "jest --bail --findRelatedTests"
     ],
-    "src/**/*.{js,jsx}": [
+    "packages/**/*.{js,jsx}": [
       "eslint --fix",
       "jest --bail --findRelatedTests"
     ],
