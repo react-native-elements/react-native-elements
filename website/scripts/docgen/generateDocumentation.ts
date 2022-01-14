@@ -2,6 +2,7 @@ import path from 'path';
 import { generateComponentDocs } from './generateComponentDocs';
 import { generateMarkdown } from './generateMarkdown';
 import nodefs from 'fs';
+import prettier from 'prettier';
 
 export const generateDocumentation = (filePaths) => {
   const componentDocs = generateComponentDocs(filePaths);
@@ -26,8 +27,8 @@ export const generateDocumentation = (filePaths) => {
     const markdownData = generateMarkdown(componentDoc);
 
     nodefs.writeFileSync(
-      path.join(__dirname, `../../docs/main/${componentDisplayName}.md`),
-      markdownData
+      path.join(__dirname, `../../docs/main/${componentDisplayName}.mdx`),
+      prettier.format(markdownData, { parser: 'mdx' })
     );
   });
 };

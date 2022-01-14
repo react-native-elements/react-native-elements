@@ -13,8 +13,9 @@ title: Migration from v3 to v4
     - [The Reason](#the-reason)
   - [Tests migrated to React Native Testing library](#tests-migrated-to-react-native-testing-library)
 - [Handling breaking changes](#handling-breaking-changes)
+  - [Package has been renamed](#package-has-been-renamed)
+  - [Pressable](#pressable)
   - [Tooltip](#tooltip)
-  - [Text](#text)
 
 ## What's New?
 
@@ -49,13 +50,37 @@ Earlier React Native Elements was using `Touchable` as touch handler, but since 
 
 ## Handling breaking changes
 
+### Package has been renamed
+
+```diff
+- import {} from 'react-native-elements'
++ import {} from '@react-native-elements/base'
+```
+
+### Pressable
+
+These components are now using `Pressable` instead of `Touchable`
+
+- Avatar
+- Badge
+- ButtonGroup
+- CheckBox
+- Icon
+- Image
+- ListItem
+- SearchBar
+- SpeedDial
+- Tile
+
 > [Pressable](https://reactnative.dev/docs/pressable) is a Core Component wrapper that can detect various stages of press interactions on any of its defined children.
 
-This change would let you use `onPressIn` & `onPressOut` APIs in RNE components, For example
+This change would let you use `onPressIn` & `onPressOut` APIs in components, For example
 
 ```diff
   <CheckBox
     title="I agree"
+    onPress={()=>{}}
+    onLongPress={()=>{}}
 +   onPressIn={()=>{}}
 +   onPressOut={()=>{}}
     onPress={() => {}}
@@ -69,6 +94,8 @@ and the rest of props for `Pressable` can be added via `pressableProps` API
 +   pressableProps={{android_ripple:{radius:2}}}
   />
 ```
+
+few other props (like `underlayColor`) will not be supported, you can remove them.
 
 :::info
 
@@ -111,17 +138,4 @@ const ControlledTooltip: React.FC<TooltipProps> = (props) => {
     />
   );
 };
-```
-
-### Text
-
-`variant` can be => h1 h2 h3 h4 caption props
-
-```diff
-  <Text
--  h1
--  h1style={{}}
-+  variant="h1"
-   style={{}}
-  />
 ```
