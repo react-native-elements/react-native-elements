@@ -9,15 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements-universe"><img src="https://img.shields.io/npm/v/react-native-elements-universe.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements-universe"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements-universe/master.svg"></a>
-  <a href="https://github.com/react-native-elements/react-native-elements-universe"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements-universe"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements-universe"><img src="https://img.shields.io/npm/dm/react-native-elements-universe.svg"></a>
+  <a href="https://www.npmjs.com/package/@react-native-elements/universe"><img src="https://img.shields.io/npm/v/@react-native-elements/universe.svg"></a>
+  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
+  <a href="https://www.npmjs.com/package/@react-native-elements/universe"><img src="https://img.shields.io/npm/dm/@react-native-elements/universe.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
 
 <p align="center">
- <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements-universe/coverage.svg"></a>
+ <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
   
@@ -41,7 +40,7 @@ Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { CircularSlider } from 'react-native-elements-universe';
+import { CircularSlider } from '@react-native-elements/universe';
 
 <CircularSlider />;
 ```
@@ -78,17 +77,17 @@ and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!
 
-<a href="https://github.com/react-native-elements/react-native-elements-universe/graphs/contributors"><img src="https://opencollective.com/react-native-elements-universe/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/react-native-elements/react-native-elements/graphs/contributors"><img src="https://opencollective.com/react-native-elements/contributors.svg?width=890&button=false" /></a>
 
 ### First Contributors
 
 We encourage everyone to contribute & submit PR's especially first-time
 contributors. Look for the label `Good First Issue` on the issues. Click
-[here](https://github.com/react-native-elements/react-native-elements-universe/labels/%F0%9F%91%B6%20Good%20First%20Issue)
+[here](https://github.com/react-native-elements/react-native-elements/labels/%F0%9F%91%B6%20Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit
 an
-[issue](https://github.com/react-native-elements/react-native-elements-universe/issues/new)
+[issue](https://github.com/react-native-elements/react-native-elements/issues/new)
 or a
-[pull request](https://github.com/react-native-elements/react-native-elements-universe/pulls).
+[pull request](https://github.com/react-native-elements/react-native-elements/pulls).

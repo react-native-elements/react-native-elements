@@ -103,6 +103,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>/.ci/setupTests.ts"
     ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?@react-native|react-native|react-native-elements/*)"
+    ],
     "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"

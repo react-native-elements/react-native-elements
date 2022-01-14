@@ -42,7 +42,7 @@
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
       "eslint --fix",
-      "bash -c tsc --noEmit true",
+      "tsc --noEmit --composite false",
       "jest --bail --findRelatedTests"
     ],
     "packages/**/*.{js,jsx}": [
