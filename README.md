@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a> 
+  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a> 
+  <a href="https://lerna.js.org/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg"></a>
 </p>
 
 <p align="center">
@@ -21,8 +21,7 @@
   <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
   <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-  
+
 </p>
 
 <br />
@@ -37,18 +36,28 @@ Follow
 [these instructions](https://reactnativeelements.com/docs/)
 to install React Native Elements!
 
+### Versions
+
+| Package                             | Version                                                                                                                                                   |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@react-native-elements/base**     | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
+| **@react-native-elements/themed**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
+| **@react-native-elements/universe** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe) |
+
 ### Usage
 
 Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from 'react-native-elements';
+import { Button } from '@react-native-elements/base';
 
-<Button />;
+const App = () => <Button title="Hello World!" />;
 ```
 
 ## Components included:
+
+### Base
 
 - [x] [Avatar](https://reactnativeelements.com/docs/avatar)
 - [x] [Badge](https://reactnativeelements.com/docs/badge)
@@ -76,12 +85,12 @@ import { Button } from 'react-native-elements';
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
+- [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+### Universe
 
-- [x] [Circular Slider](https://reactnativeelements.com/docs/)
+- [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
 ## React Native Web support
 
@@ -95,9 +104,13 @@ Checkout the official
 [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app)
 on Expo which uses all of the React Native Elements components.
 
-If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements-app) to
-view the implementation & run the RNE expo app locally.
+If you are looking to contribute to the React Native Elements App,
+[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
+view the implementation & Use this command to start example app locally
+
+```bash
+yarn start:example
+```
 
 ## Documentation
 
@@ -106,7 +119,7 @@ view the implementation & run the RNE expo app locally.
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!

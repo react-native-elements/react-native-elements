@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <RCTSwitch
+    accessibilityRole="switch"
+    accessibilityState={
+      Object {
+        "checked": true,
+        "disabled": false,
+      }
+    }
+    disabled={false}
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onTintColor="green"
+    replaceTheme={[Function]}
+    style={
+      Object {
+        "height": 31,
+        "width": 51,
+      }
+    }
+    testID="RNE__SWITCH"
+    tintColor=""
+    updateTheme={[Function]}
+    value={true}
+  />
+</View>
+`;
