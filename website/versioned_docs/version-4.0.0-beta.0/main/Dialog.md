@@ -39,6 +39,7 @@ Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) 
 - [children](#children)
 - [isVisible](#isvisible)
 - [overlayStyle](#overlaystyle)
+- [pressableProps](#pressableprops)
 
 ### Dialog.Actions
 
@@ -94,6 +95,14 @@ Add additional styling to the internal Overlay component.
 | Type               | Default |
 | ------------------ | ------- |
 | View style(Object) | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---
 

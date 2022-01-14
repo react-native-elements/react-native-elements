@@ -72,7 +72,7 @@ They are very customizable and can contain switches, avatars, badges, icons, and
 
 ### ListItem.ButtonGroup
 
-None
+- [pressableProps](#pressableprops)
 
 ### ListItem.CheckBox
 
@@ -80,7 +80,7 @@ None
 
 ### ListItem.Chevron
 
-None
+- [pressableProps](#pressableprops)
 
 ### ListItem.Content
 
@@ -285,7 +285,13 @@ Don't rotate when Accordion is expanded.
 
 ### ListItem.ButtonGroup
 
-None
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
+
+---
 
 ### ListItem.CheckBox
 
@@ -293,7 +299,13 @@ None
 
 ### ListItem.Chevron
 
-None
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
+
+---
 
 ### ListItem.Content
 

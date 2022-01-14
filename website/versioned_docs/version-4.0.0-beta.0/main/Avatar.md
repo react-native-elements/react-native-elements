@@ -40,6 +40,7 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 - [onPress](#onpress)
 - [overlayContainerStyle](#overlaycontainerstyle)
 - [placeholderStyle](#placeholderstyle)
+- [pressableProps](#pressableprops)
 - [renderPlaceholderContent](#renderplaceholdercontent)
 - [rounded](#rounded)
 - [size](#size)
@@ -49,6 +50,7 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar.Accessory
 
+- [pressableProps](#pressableprops)
 - [style](#style)
 - [underlayColor](#underlaycolor)
 
@@ -180,6 +182,14 @@ Adds style to the placeholder wrapper.
 
 ---
 
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
+
+---
+
 #### renderPlaceholderContent
 
 Custom placeholder element (by default, it's the title).
@@ -241,6 +251,14 @@ Style for the title.
 ---
 
 ### Avatar.Accessory
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
+
+---
 
 #### style
 
