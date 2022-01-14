@@ -105,7 +105,7 @@ Checkout the official
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App,
-[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
+[here](https://github.com/react-native-elements/react-native-elements/tree/next/example) to
 view the implementation & Use this command to start example app locally
 
 ```bash
