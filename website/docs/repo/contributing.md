@@ -9,10 +9,18 @@ contribute!
 Here are some of some of ways you can help:
 
 - [Reporting Bugs](#reporting-bugs)
-- [Suggesting a Feature](#suggesting-a-feature)
+- [Suggesting a feature](#suggesting-a-feature)
 - [Responding to Issues](#responding-to-issues)
 - [Improving the Documentation](#improving-the-documentation)
+  - [Changes for an existing doc on a version not yet released](#changes-for-an-existing-doc-on-a-version-not-yet-released)
+  - [Adding documentation for a new component](#adding-documentation-for-a-new-component)
+  - [Rewording, adding missed info, or making a typo for a released version](#rewording-adding-missed-info-or-making-a-typo-for-a-released-version)
+  - [Editing an existing page that's not docs or components](#editing-an-existing-page-thats-not-docs-or-components)
+  - [Editing a document that appears the same in all versions](#editing-a-document-that-appears-the-same-in-all-versions)
 - [Implementing Bug Fixes and Improvements](#implementing-bug-fixes-and-improvements)
+  - [Setup](#setup)
+  - [Committing and Pushing Changes](#committing-and-pushing-changes)
+  - [Branching Strategy](#branching-strategy)
 
 ## Reporting Bugs
 
@@ -80,12 +88,6 @@ Since all documents are versioned, it might be bit tricky to find which file
 needs changing. You can use the rule below to figure out which file you need to
 edit.
 
-- [Changes for an existing doc on a version not yet released](#changes-for-an-existing-doc-on-a-version-not-yet-released)
-- [Adding documentation for a new component](#adding-documentation-for-a-new-component)
-- [Rewording, adding missed info, or making a typo for a released version](#rewording-adding-missed-info-or-making-a-typo-for-a-released-version)
-- [Editing an existing page that's not docs or components](#editing-an-existing-page-that-s-not-docs-or-components)
-- [Editing a document that appears the same in all versions](#editing-a-document-that-appears-the-same-in-all-versions)
-
 ### Changes for an existing doc on a version not yet released
 
 These files are located in the `/docs` folder. So if I wanted to add a new prop
@@ -93,11 +95,12 @@ on the Avatar component, I'll need to document that in `/docs/avatar.md`.
 
 ### Adding documentation for a new component
 
-You'll be creating your `.md` file in the `/docs` folder. Be sure to fill out
+You'll be creating your `.mdx` file in the `/docs/main` folder. Be sure to fill out
 the header at the top of the file:
 
 ```
 ---
+slug: /component
 id: my-component
 title: My Component
 ---
@@ -126,7 +129,7 @@ will simply point to the old version from `0.19.0`.
 
 ### Editing an existing page that's not docs or components
 
-These files are located in: `/website/pages/en/`.
+These files are located in: `/website/docs/`.
 
 ### Editing a document that appears the same in all versions
 
@@ -169,12 +172,57 @@ setup on your local machine:
 ### Setup
 
 - Install [Node.js](https://nodejs.org/) and and [yarn](https://yarnpkg.com) if you have not already. (_We suggest
-  you to use node v6.x.x_)
+  you to use node v14x_)
 - Fork the **react-native-elements** repo
   [here](https://github.com/react-native-elements/react-native-elements)
-- `git clone <your-forked-repo-url> && cd react-native-elements`
-- `yarn install`
-- `yarn test`
+- Clone the forked repo
+
+```bash
+ git clone <your-forked-repo-url>
+ cd react-native-elements
+```
+
+You have a file structure that looks like this:
+
+```text
+example/
+packages/
+  base/
+  themed/
+  universe/
+website/
+```
+
+- Install dependencies
+
+```bash
+  yarn install
+```
+
+While developing, you can run the example app with Expo to test your changes:
+
+```bash
+yarn start:example
+```
+
+Make sure your code passes TypeScript and ESLint. Run the following to verify:
+
+```bash
+yarn build
+yarn lint
+```
+
+To fix formatting errors, run the following:
+
+```bash
+yarn lint --fix
+```
+
+Remember to add tests for your change if possible. Run the unit tests by:
+
+```bash
+yarn test
+```
 
 Now create a new branch with a name that loosely describes
 the issue on which you will be working. Once you think you have addressed

@@ -26,6 +26,7 @@ const OpenCollective: React.FC<{}> = () => (
           <a
             href="https://opencollective.com/react-native-elements#backers"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img src="https://opencollective.com/react-native-elements/backers.svg?width=695" />
           </a>
@@ -45,6 +46,7 @@ const OpenCollective: React.FC<{}> = () => (
           <a
             href="https://opencollective.com/react-native-elements#sponsors"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img src="https://opencollective.com/react-native-elements/sponsors.svg" />
           </a>

@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 'stable'
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - website/node_modules
+branches:
+  only:
+    - master
+    - next
+    - patch
+install:
+  - yarn global add codecov
+  - yarn
+script:
+  - yarn lint
+  - yarn build
+  - yarn test:ci && codecov --disable=gcov
+after_success:
+  - |
+    if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "next" ]; then
+      git config --global user.name "React Native Elements CI"
+      echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
+      cd website && yarn && GIT_USER=react-native-elements-ci yarn publish-gh-pages
+    fi

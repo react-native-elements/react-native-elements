@@ -18,7 +18,7 @@ defined in one central place? And so the idea behind theming with React Native
 Elements was born!
 
 ```jsx
-import { Button, ThemeProvider } from 'react-native-elements';
+import { Button, ThemeProvider } from '@react-native-elements/themed';
 
 const MyApp = () => {
   return (
