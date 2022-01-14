@@ -28,6 +28,9 @@
     "node_modules",
     "website",
     "example",
+    "coverage",
+    ".expo",
+    ".github",
     "packages/*/.ci",
     "packages/*/src/**/__tests__"
   ]

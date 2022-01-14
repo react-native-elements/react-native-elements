@@ -12,7 +12,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watchAll",
     "build:web": "expo build:web --config ./app.web-build.json --polyfill",
     "deploy": "gh-pages -d web-build",
     "prettify": "prettier --write .  --config ./.prettierrc",
