@@ -27,8 +27,7 @@ jobs:
         run: |
           yarn global add codecov
           yarn
-      - name: Testing
-        run: |
-          yarn lint
-          yarn build
-          yarn test && npx codecov --disable=gcov
+      - run: yarn lint
+      - run: yarn typescript
+      - run: yarn prettier
+      - run: yarn test && npx codecov --disable=gcov

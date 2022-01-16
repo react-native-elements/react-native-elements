@@ -105,11 +105,11 @@ Checkout the official
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App,
-[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
+[here](https://github.com/react-native-elements/react-native-elements/tree/next/example) to
 view the implementation & Use this command to start example app locally
 
 ```bash
-yarn start:example
+yarn example start
 ```
 
 ## Documentation
@@ -119,7 +119,7 @@ yarn start:example
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing), [Setup Guide](https://reactnativeelements.com/docs/repo/contributing#setup)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!
@@ -130,7 +130,7 @@ A big shoutout to all our contributors! You could be here too!
 
 We encourage everyone to contribute & submit PR's especially first-time
 contributors. Look for the label `Good First Issue` on the issues. Click
-[here](https://github.com/react-native-elements/react-native-elements/labels/%F0%9F%91%B6%20Good%20First%20Issue)
+[here](https://github.com/react-native-elements/react-native-elements/labels/Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit

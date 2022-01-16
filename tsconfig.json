@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@react-native-elements/*": ["./packages/*/src"]
+      "@react-native-elements/*": ["./packages/*/src"],
+      "@react-native-elements/base/dist/*": ["./packages/base/src/*"]
     },
     "composite": true,
     "declaration": true,
@@ -28,7 +29,7 @@
     "node_modules",
     "website",
     "example",
-    "packages/*/.ci",
+    "coverage",
     "packages/*/src/**/__tests__"
   ]
 }

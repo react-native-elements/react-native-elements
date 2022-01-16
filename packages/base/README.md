@@ -92,7 +92,7 @@ Checkout the official
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
+[here](https://github.com/react-native-elements/react-native-elements/tree/next/example) to
 view the implementation & run the RNE expo app locally.
 
 ## Documentation

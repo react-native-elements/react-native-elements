@@ -5,21 +5,18 @@
 </p>
 
 <p align="center">
-  Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
+ Universal Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@react-native-elements/themed"><img src="https://img.shields.io/npm/v/@react-native-elements/universe.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
+  <a href="https://www.npmjs.com/package/@react-native-elements/universe"><img src="https://img.shields.io/npm/v/@react-native-elements/universe.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
+  <a href="https://www.npmjs.com/package/@react-native-elements/universe"><img src="https://img.shields.io/npm/dm/@react-native-elements/universe.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
 
 <p align="center">
-  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
-  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
-  <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
+ <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
   
@@ -43,41 +40,14 @@ Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from 'react-native-elements';
+import { CircularSlider } from '@react-native-elements/universe';
 
-<Button />;
+<CircularSlider />;
 ```
 
 ## Components included:
 
-- [x] [Avatar](https://reactnativeelements.com/docs/avatar)
-- [x] [Badge](https://reactnativeelements.com/docs/badge)
-- [x] [BottomSheet](https://reactnativeelements.com/docs/bottomsheet)
-- [x] [Button](https://reactnativeelements.com/docs/button)
-- [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
-- [x] [Card](https://reactnativeelements.com/docs/card)
-- [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
-- [x] [Divider](https://reactnativeelements.com/docs/divider)
-- [x] [FAB](https://reactnativeelements.com/docs/fab)
-- [x] [Header](https://reactnativeelements.com/docs/header)
-- [x] [HTML style headings](https://reactnativeelements.com/docs/text)
-- [x] [Icon](https://reactnativeelements.com/docs/icon)
-- [x] [Image](https://reactnativeelements.com/docs/image)
-- [x] [Input](https://reactnativeelements.com/docs/input)
-- [x] [ListItem](https://reactnativeelements.com/docs/listitem)
-- [x] [Linear Progress](https://reactnativeelements.com/docs/linearProgress)
-- [x] [Overlay](https://reactnativeelements.com/docs/overlay)
-- [x] [Pricing](https://reactnativeelements.com/docs/pricing)
-- [x] [Rating](https://reactnativeelements.com/docs/rating)
-- [x] [SearchBar](https://reactnativeelements.com/docs/searchbar)
-- [x] [Slider](https://reactnativeelements.com/docs/slider)
-- [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
-- [x] [Speed Dial](https://reactnativeelements.com/docs/speeddial)
-- [x] [Switch](https://reactnativeelements.com/docs/switch)
-- [x] [Tile](https://reactnativeelements.com/docs/tile)
-- [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
-- [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
+- [x] [CircularSlider](https://reactnativeelements.com/docs/circularslider)
 
 ## React Native Web support
 
@@ -92,12 +62,12 @@ Checkout the official
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements/tree/example) to
+[here](https://github.com/react-native-elements/react-native-elements/tree/next/example) to
 view the implementation & run the RNE expo app locally.
 
 ## Documentation
 
-[View the full docs here](https://reactnativeelements.com/docs)
+[View the full docs here](https://reactnativeelements.com/docs/overview)
 
 ## Contributing
 
@@ -113,7 +83,7 @@ A big shoutout to all our contributors! You could be here too!
 
 We encourage everyone to contribute & submit PR's especially first-time
 contributors. Look for the label `Good First Issue` on the issues. Click
-[here](https://github.com/react-native-elements/react-native-elements/labels/%F0%9F%91%B6%20Good%20First%20Issue)
+[here](https://github.com/react-native-elements/react-native-elements/labels/Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit

@@ -12,7 +12,6 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watchAll",
     "build:web": "expo build:web --config ./app.web-build.json --polyfill",
     "deploy": "gh-pages -d web-build",
     "prettify": "prettier --write .  --config ./.prettierrc",
@@ -22,6 +21,7 @@
   "dependencies": {
     "@expo/vector-icons": "^12.0.5",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-native-elements/base": "^4.0.0-beta.0",
     "@react-navigation/drawer": "^5.11.4",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
