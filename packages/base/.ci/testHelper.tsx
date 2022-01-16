@@ -22,7 +22,7 @@ export const renderWithWrapper = (
     }),
     ...renderOptions,
   };
-  const renderApi = render(<View>{children}</View>, options);
+  const renderApi = render(children, options);
   const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');
   return { wrapper, ...renderApi };
 };
