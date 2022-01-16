@@ -169,7 +169,7 @@ export const generateMarkdown = (data) => {
         component: data.displayName,
       },
     },
-    { p: snippetToCode(data.description) },
+    // { p: snippetToCode(data.description) },
     {
       components: {
         childrens: data.childrens,
