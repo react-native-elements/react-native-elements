@@ -1,5 +1,4 @@
 import { withTheme } from '../config';
-import { RneFunctionComponent } from '../helpers';
 import {
   CardBase,
   CardBaseProps,
@@ -31,17 +30,9 @@ const ThemedCardFeaturedTitle = withTheme(
 const ThemedCardImage = withTheme<CardImageProps>(CardImage, 'CardImage');
 const ThemedCardTitle = withTheme(CardTitle, 'CardTitle');
 
-export type CardProps = RneFunctionComponent<CardBaseProps> & {
-  Divider: typeof ThemedCardDivider;
-  Image: typeof ThemedCardImage;
-  Title: typeof ThemedCardTitle;
-  FeaturedTitle: typeof ThemedCardFeaturedTitle;
-  FeaturedSubTitle: typeof ThemedCardFeaturedSubtitle;
-};
+export type CardProps = CardBaseProps;
 
-export const Card: CardProps = Object.assign(CardBase);
-
-const ThemedCard = Object.assign(withTheme(Card, 'Card'), {
+const ThemedCard = Object.assign(withTheme(CardBase, 'Card'), {
   Divider: ThemedCardDivider,
   Image: ThemedCardImage,
   Title: ThemedCardTitle,

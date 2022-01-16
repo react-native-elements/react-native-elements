@@ -6,4 +6,4 @@ import {
 
 export { Rating };
 export type { SwipeRatingProps };
-export default withTheme<RatingProps>(Rating, 'Rating');
+export default withTheme(Rating, 'Rating');

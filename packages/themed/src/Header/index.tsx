@@ -6,4 +6,4 @@ import {
 
 export { Header };
 export type { HeaderProps };
-export default withTheme<HeaderProps, {}>(Header, 'Header');
+export default withTheme<HeaderProps>(Header, 'Header');
