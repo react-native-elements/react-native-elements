@@ -27,7 +27,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dist-
       - name: Install Dependencies
-        run: yarn
+        run: |
+          yarn global add codecov
+          yarn
+      - run: yarn lint
+      - run: yarn typescript
+      - run: yarn test && npx codecov --disable=gcov
       - name: Build packages
         run: yarn build
       - name: Config git
