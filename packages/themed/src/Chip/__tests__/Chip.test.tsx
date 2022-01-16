@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chip } from '../index';
+import Chip from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
 

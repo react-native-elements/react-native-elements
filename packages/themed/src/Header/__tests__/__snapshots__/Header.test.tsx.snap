@@ -332,9 +332,7 @@ exports[`Header Component should render left component by passing a config throu
             }
             disabled={false}
             icon="home"
-            replaceTheme={[Function]}
             testID="RNE__ICON__CONTAINER_ACTION"
-            updateTheme={[Function]}
           >
             <View
               style={
@@ -474,9 +472,7 @@ exports[`Header Component should render right component by passing a config thro
             }
             disabled={false}
             icon="home"
-            replaceTheme={[Function]}
             testID="RNE__ICON__CONTAINER_ACTION"
-            updateTheme={[Function]}
           >
             <View
               style={

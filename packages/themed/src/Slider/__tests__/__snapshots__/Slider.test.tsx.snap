@@ -84,7 +84,6 @@ exports[`Slider component should match snapshot 1`] = `
       }
     }
     updateTheme={[Function]}
-    value={0}
   >
     <View
       onLayout={[Function]}
@@ -103,7 +102,6 @@ exports[`Slider component should match snapshot 1`] = `
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "height": 0,
-          "marginTop": -0,
           "position": "absolute",
           "width": 0,
         }
@@ -146,6 +144,10 @@ exports[`Slider component should match snapshot 1`] = `
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
+          "marginBottom": -0,
+          "marginLeft": -0,
+          "marginRight": -0,
+          "marginTop": -0,
           "position": "absolute",
           "right": 0,
           "top": 0,
@@ -242,7 +244,6 @@ exports[`Slider component should render vertically 1`] = `
       }
     }
     updateTheme={[Function]}
-    value={0}
   >
     <View
       onLayout={[Function]}
@@ -263,7 +264,6 @@ exports[`Slider component should render vertically 1`] = `
           "borderRadius": 2,
           "flex": 1,
           "height": 0,
-          "marginLeft": -0,
           "position": "absolute",
           "width": 0,
         }
@@ -306,6 +306,10 @@ exports[`Slider component should render vertically 1`] = `
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
+          "marginBottom": -0,
+          "marginLeft": -0,
+          "marginRight": -0,
+          "marginTop": -0,
           "position": "absolute",
           "right": 0,
           "top": 0,
@@ -401,7 +405,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       }
     }
     updateTheme={[Function]}
-    value={0}
   >
     <View
       onLayout={[Function]}
@@ -420,7 +423,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "height": 0,
-          "marginTop": -0,
           "position": "absolute",
           "width": 0,
         }
@@ -463,6 +465,10 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
           "backgroundColor": "orange",
           "bottom": 0,
           "left": 0,
+          "marginBottom": -0,
+          "marginLeft": -0,
+          "marginRight": -0,
+          "marginTop": -0,
           "opacity": 0.5,
           "position": "absolute",
           "right": 0,
@@ -477,7 +483,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
           Object {
             "height": 40,
             "left": 0,
-            "top": NaN,
+            "top": -20,
             "width": 40,
           }
         }

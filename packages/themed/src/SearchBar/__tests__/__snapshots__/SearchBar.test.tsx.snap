@@ -69,9 +69,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                 }
               }
               disabled={false}
-              replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
-              updateTheme={[Function]}
             >
               <View
                 style={
@@ -246,9 +244,7 @@ exports[`SearchBar wrapper component should match snapshot 1`] = `
                 }
               }
               disabled={false}
-              replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
-              updateTheme={[Function]}
             >
               <View
                 style={
@@ -415,9 +411,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
                 }
               }
               disabled={false}
-              replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
-              updateTheme={[Function]}
             >
               <View
                 style={
@@ -592,9 +586,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
                 }
               }
               disabled={false}
-              replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
-              updateTheme={[Function]}
             >
               <View
                 style={
@@ -704,6 +696,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
       <View
         accessibilityRole="button"
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}

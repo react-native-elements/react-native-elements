@@ -1,6 +1,6 @@
 import React from 'react';
 import { Animated, View } from 'react-native';
-import FAB from '..';
+import { FAB } from '..';
 import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 import { Icon } from '../../Icon';
 

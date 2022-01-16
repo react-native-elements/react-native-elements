@@ -14,7 +14,6 @@ exports[`Slider component should handle all onLayout actions 1`] = `
       }
     }
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
         "height": 40,
@@ -22,68 +21,6 @@ exports[`Slider component should handle all onLayout actions 1`] = `
       }
     }
     testID="RNE__Slider_Container"
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#242424",
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "grey": "rgba(0, 0, 0, 0.54)",
-              "primary": "#2196f3",
-              "searchBg": "#dcdce1",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "default": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "web": Object {
-              "error": "#ff190c",
-              "grey": "#393e42",
-              "primary": "#2089dc",
-              "searchBg": "#303337",
-              "secondary": "#ca71eb",
-              "success": "#52c41a",
-              "warning": "#faad14",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#ca71eb",
-          "success": "#52c41a",
-          "warning": "#faad14",
-          "white": "#ffffff",
-        },
-      }
-    }
-    updateTheme={[Function]}
   >
     <View
       onLayout={[Function]}
@@ -174,7 +111,6 @@ exports[`Slider component should handle all onLayout actions with vertical orien
       }
     }
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -183,68 +119,6 @@ exports[`Slider component should handle all onLayout actions with vertical orien
       }
     }
     testID="RNE__Slider_Container"
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#242424",
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "grey": "rgba(0, 0, 0, 0.54)",
-              "primary": "#2196f3",
-              "searchBg": "#dcdce1",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "default": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "web": Object {
-              "error": "#ff190c",
-              "grey": "#393e42",
-              "primary": "#2089dc",
-              "searchBg": "#303337",
-              "secondary": "#ca71eb",
-              "success": "#52c41a",
-              "warning": "#faad14",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#ca71eb",
-          "success": "#52c41a",
-          "warning": "#faad14",
-          "white": "#ffffff",
-        },
-      }
-    }
-    updateTheme={[Function]}
   >
     <View
       onLayout={[Function]}
@@ -337,7 +211,6 @@ exports[`Slider component should match snapshot 1`] = `
       }
     }
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
         "height": 40,
@@ -345,68 +218,6 @@ exports[`Slider component should match snapshot 1`] = `
       }
     }
     testID="RNE__Slider_Container"
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#242424",
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "grey": "rgba(0, 0, 0, 0.54)",
-              "primary": "#2196f3",
-              "searchBg": "#dcdce1",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "default": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "web": Object {
-              "error": "#ff190c",
-              "grey": "#393e42",
-              "primary": "#2089dc",
-              "searchBg": "#303337",
-              "secondary": "#ca71eb",
-              "success": "#52c41a",
-              "warning": "#faad14",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#ca71eb",
-          "success": "#52c41a",
-          "warning": "#faad14",
-          "white": "#ffffff",
-        },
-      }
-    }
-    updateTheme={[Function]}
   >
     <View
       onLayout={[Function]}
@@ -496,7 +307,6 @@ exports[`Slider component should render vertically 1`] = `
       }
     }
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -505,68 +315,6 @@ exports[`Slider component should render vertically 1`] = `
       }
     }
     testID="RNE__Slider_Container"
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#242424",
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "grey": "rgba(0, 0, 0, 0.54)",
-              "primary": "#2196f3",
-              "searchBg": "#dcdce1",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "default": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "web": Object {
-              "error": "#ff190c",
-              "grey": "#393e42",
-              "primary": "#2089dc",
-              "searchBg": "#303337",
-              "secondary": "#ca71eb",
-              "success": "#52c41a",
-              "warning": "#faad14",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#ca71eb",
-          "success": "#52c41a",
-          "warning": "#faad14",
-          "white": "#ffffff",
-        },
-      }
-    }
-    updateTheme={[Function]}
   >
     <View
       onLayout={[Function]}
@@ -658,7 +406,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       }
     }
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
         "height": 40,
@@ -666,68 +413,6 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       }
     }
     testID="RNE__Slider_Container"
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#242424",
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "grey": "rgba(0, 0, 0, 0.54)",
-              "primary": "#2196f3",
-              "searchBg": "#dcdce1",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "default": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "web": Object {
-              "error": "#ff190c",
-              "grey": "#393e42",
-              "primary": "#2089dc",
-              "searchBg": "#303337",
-              "secondary": "#ca71eb",
-              "success": "#52c41a",
-              "warning": "#faad14",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#ca71eb",
-          "success": "#52c41a",
-          "warning": "#faad14",
-          "white": "#ffffff",
-        },
-      }
-    }
-    updateTheme={[Function]}
   >
     <View
       onLayout={[Function]}
@@ -826,7 +511,7 @@ exports[`Slider component should support value changes 1`] = `
       Object {
         "max": 10,
         "min": 1,
-        "now": 5,
+        "now": 1,
       }
     }
     onLayout={[Function]}
@@ -837,67 +522,6 @@ exports[`Slider component should support value changes 1`] = `
       }
     }
     testID="RNE__Slider_Container"
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#242424",
-          "disabled": "hsl(208, 8%, 90%)",
-          "divider": "#bcbbc1",
-          "error": "#ff190c",
-          "grey0": "#393e42",
-          "grey1": "#43484d",
-          "grey2": "#5e6977",
-          "grey3": "#86939e",
-          "grey4": "#bdc6cf",
-          "grey5": "#e1e8ee",
-          "greyOutline": "#bbb",
-          "platform": Object {
-            "android": Object {
-              "error": "#f44336",
-              "grey": "rgba(0, 0, 0, 0.54)",
-              "primary": "#2196f3",
-              "searchBg": "#dcdce1",
-              "secondary": "#9C27B0",
-              "success": "#4caf50",
-              "warning": "#ffeb3b",
-            },
-            "default": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "ios": Object {
-              "error": "#ff3b30",
-              "grey": "#7d7d7d",
-              "primary": "#007aff",
-              "searchBg": "#dcdce1",
-              "secondary": "#5856d6",
-              "success": "#4cd964",
-              "warning": "#ffcc00",
-            },
-            "web": Object {
-              "error": "#ff190c",
-              "grey": "#393e42",
-              "primary": "#2089dc",
-              "searchBg": "#303337",
-              "secondary": "#ca71eb",
-              "success": "#52c41a",
-              "warning": "#faad14",
-            },
-          },
-          "primary": "#2089dc",
-          "searchBg": "#303337",
-          "secondary": "#ca71eb",
-          "success": "#52c41a",
-          "warning": "#faad14",
-          "white": "#ffffff",
-        },
-      }
-    }
   >
     <View
       onLayout={[Function]}

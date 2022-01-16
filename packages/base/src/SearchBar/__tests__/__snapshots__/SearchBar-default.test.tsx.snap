@@ -7,7 +7,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": undefined,
+        "backgroundColor": "#393e42",
         "borderBottomColor": "#000",
         "borderBottomWidth": 1,
         "borderTopColor": "#000",
@@ -30,7 +30,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": undefined,
+            "backgroundColor": "#303337",
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
             "borderRadius": 3,
@@ -75,9 +75,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
                 }
               }
               disabled={false}
-              replaceTheme={[Function]}
               testID="RNE__ICON__CONTAINER_ACTION"
-              updateTheme={[Function]}
             >
               <View
                 style={
@@ -94,7 +92,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
                   style={
                     Array [
                       Object {
-                        "color": "#242424",
+                        "color": "#86939e",
                         "fontSize": 18,
                       },
                       Object {
@@ -122,10 +120,11 @@ exports[`Default SearchBar component should match snapshot 1`] = `
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
+          placeholderTextColor="#86939e"
           rejectResponderTermination={true}
           style={
             Object {
-              "color": undefined,
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 10,

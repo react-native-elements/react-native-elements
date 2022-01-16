@@ -1,0 +1,39 @@
+// const base = {
+//   roots: ['<rootDir>/src', '<rootDir>/tests'],
+//   transform: {
+//     '^.+\\.ts$': 'ts-jest',
+//   },
+//   testRegex: '(/tests/.*.(test|spec)).(jsx?|tsx?)$',
+//   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+//   collectCoverage: true,
+//   coveragePathIgnorePatterns: ['(tests/.*.mock).(jsx?|tsx?)$'],
+//   verbose: true,
+// };
+const base = {
+  preset: 'react-native',
+  timers: 'fake',
+  coverageDirectory: './coverage/',
+  testPathIgnorePatterns: [
+    './src/searchbar/__tests__/common.js',
+    '<rootDir>/node_modules',
+    '<rootDir>/dist',
+  ],
+  coveragePathIgnorePatterns: ['./src/searchbar/__tests__/common.js'],
+  collectCoverageFrom: ['src/**/*.tsx', '!src/index.tsx', '!src/helpers/*.tsx'],
+  collectCoverage: true,
+  globals: {
+    __DEV__: true,
+  },
+  transform: {
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+      'jest-transform-stub',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+};
+
+exports.base = base;
+module.exports = {
+  ...base,
+  projects: ['<rootDir>/packages/*/jest.config.js'],
+  coverageDirectory: '<rootDir>/coverage/',
+};

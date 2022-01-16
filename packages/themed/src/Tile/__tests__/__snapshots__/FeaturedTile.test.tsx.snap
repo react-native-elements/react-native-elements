@@ -6,6 +6,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}

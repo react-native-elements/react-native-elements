@@ -6,3 +6,5 @@ jest.mock(
 jest.mock(
   '../../../node_modules/react-native/Libraries/Animated/NativeAnimatedHelper.js'
 );
+
+jest.useFakeTimers('legacy');

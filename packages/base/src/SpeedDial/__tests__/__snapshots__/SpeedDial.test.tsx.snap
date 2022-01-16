@@ -22,6 +22,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -204,9 +205,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                         }
                       }
                       disabled={false}
-                      replaceTheme={[Function]}
                       testID="RNE__ICON__CONTAINER_ACTION"
-                      updateTheme={[Function]}
                     >
                       <View
                         style={
@@ -386,9 +385,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                         }
                       }
                       disabled={false}
-                      replaceTheme={[Function]}
                       testID="RNE__ICON__CONTAINER_ACTION"
-                      updateTheme={[Function]}
                     >
                       <View
                         style={
@@ -527,9 +524,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     }
                   }
                   disabled={false}
-                  replaceTheme={[Function]}
                   testID="RNE__ICON__CONTAINER_ACTION"
-                  updateTheme={[Function]}
                 >
                   <View
                     style={

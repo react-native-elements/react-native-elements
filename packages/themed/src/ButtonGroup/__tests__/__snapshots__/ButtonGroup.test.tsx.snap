@@ -38,6 +38,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -97,6 +98,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -154,6 +156,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}

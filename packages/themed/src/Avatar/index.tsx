@@ -7,13 +7,15 @@ import {
   AccessoryProps,
 } from '@react-native-elements/base/dist/Avatar/Avatar.Accessory';
 import { withTheme } from '../config';
+import {} from '../helpers';
 
-const ThemedAccessory = withTheme(Accessory, 'Accessory');
-
-const ThemedAvatar = Object.assign(withTheme(Avatar, 'Avatar'), {
-  Accessory: ThemedAccessory,
+export default Object.assign(withTheme(Avatar, 'Avatar'), {
+  Accessory: withTheme(Accessory, 'Accessory'),
 });
 
-export { Avatar, Accessory };
+const S = withTheme(Avatar, 'Avatar');
+import React from 'react';
+
+() => <S theme={{}} />;
+
 export type { AccessoryProps, AvatarProps };
-export default ThemedAvatar;

@@ -3,7 +3,7 @@ import { Badge } from '..';
 import { Text, TouchableWithoutFeedback, Pressable, View } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
-import { colors } from '../../config';
+import { colors } from '../../helpers';
 
 describe('Badge Component', () => {
   it('should match snapshot', () => {
@@ -74,18 +74,6 @@ describe('Badge Component', () => {
         'RNE__Badge'
       );
       expect(wrapper.props.style.backgroundColor).toBe(colors[status]);
-    });
-  });
-
-  it('should use values set by the theme', () => {
-    const testTheme = {
-      Badge: {
-        textStyle: { color: 'red' },
-      },
-    };
-    const { wrapper } = renderWithWrapper(<Badge value="red" />, '', testTheme);
-    expect(wrapper.findByType(Text).props.style).toMatchObject({
-      color: 'red',
     });
   });
 });
