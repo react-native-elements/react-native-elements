@@ -6,4 +6,4 @@ import {
 
 export { Tooltip };
 export type { TooltipProps };
-export default withTheme(Tooltip, 'Tooltip');
+export default withTheme<TooltipProps>(Tooltip, 'Tooltip');

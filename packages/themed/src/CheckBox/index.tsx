@@ -6,4 +6,4 @@ import {
 
 export { CheckBox };
 export type { CheckBoxProps };
-export default withTheme(CheckBox, 'CheckBox');
+export default withTheme<CheckBoxProps>(CheckBox, 'CheckBox');

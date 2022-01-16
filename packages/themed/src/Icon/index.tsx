@@ -9,4 +9,4 @@ import {
 
 export { Icon };
 export type { IconProps, IconNode, IconObject, IconType };
-export default withTheme(Icon, 'Icon');
+export default withTheme<IconProps>(Icon, 'Icon');

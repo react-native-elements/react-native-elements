@@ -3,4 +3,4 @@ import { Tile, TileProps } from '@react-native-elements/base/dist/Tile/Tile';
 
 export { Tile };
 export type { TileProps };
-export default withTheme(Tile, 'Tile');
+export default withTheme<TileProps>(Tile, 'Tile');

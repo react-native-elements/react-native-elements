@@ -6,4 +6,4 @@ import {
 
 export { PricingCard };
 export type { PricingCardProps };
-export default withTheme(PricingCard, 'PricingCard');
+export default withTheme<PricingCardProps>(PricingCard, 'PricingCard');

@@ -3,4 +3,7 @@ import { AirbnbRating, TapRatingProps } from './AirbnbRating';
 
 export { AirbnbRating };
 export type { TapRatingProps };
-export const AirbnbRatingDefault = withTheme(AirbnbRating, 'AirbnbRating');
+export const AirbnbRatingDefault = withTheme<AirbnbRatingProps>(
+  AirbnbRating,
+  'AirbnbRating'
+);

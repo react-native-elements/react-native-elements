@@ -9,13 +9,8 @@ import {
 import { withTheme } from '../config';
 import {} from '../helpers';
 
-export default Object.assign(withTheme(Avatar, 'Avatar'), {
-  Accessory: withTheme(Accessory, 'Accessory'),
+export default Object.assign(withTheme<AvatarProps>(Avatar, 'Avatar'), {
+  Accessory: withTheme<AccessoryProps>(Accessory, 'Accessory'),
 });
-
-const S = withTheme(Avatar, 'Avatar');
-import React from 'react';
-
-() => <S theme={{}} />;
 
 export type { AccessoryProps, AvatarProps };

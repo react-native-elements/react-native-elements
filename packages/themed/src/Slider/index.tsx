@@ -6,4 +6,4 @@ import {
 
 export { Slider };
 export type { SliderProps };
-export default withTheme(Slider, 'Slider');
+export default withTheme<SliderProps>(Slider, 'Slider');

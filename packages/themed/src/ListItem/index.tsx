@@ -20,16 +20,34 @@ import {
 } from '@react-native-elements/base/dist/ListItem/ListItem.Accordion';
 import { RneFunctionComponent } from '../helpers';
 
-const ThemedListItemContent = withTheme(ListItemContent, 'ListItemContent');
-const ThemedListItemChevron = withTheme(ListItemChevron, 'ListItemChevron');
-const ThemedListItemInput = withTheme(ListItemInput, 'ListItemInput');
-const ThemedListItemCheckBox = withTheme(ListItemCheckBox, 'ListItemCheckBox');
+const ThemedListItemContent = withTheme<ListItemContentProps>(
+  ListItemContent,
+  'ListItemContent'
+);
+const ThemedListItemChevron = withTheme<ListItemChevronProps>(
+  ListItemChevron,
+  'ListItemChevron'
+);
+const ThemedListItemInput = withTheme<ListItemInputProps>(
+  ListItemInput,
+  'ListItemInput'
+);
+const ThemedListItemCheckBox = withTheme<ListItemCheckBoxProps>(
+  ListItemCheckBox,
+  'ListItemCheckBox'
+);
 const ThemedListItemButtonGroup = withTheme(
   ListItemButtonGroup,
   'ListItemButtonGroup'
 );
-const ThemedListItemTitle = withTheme(ListItemTitle, 'ListItemTitle');
-const ThemedListItemSubtitle = withTheme(ListItemSubtitle, 'ListItemSubtitle');
+const ThemedListItemTitle = withTheme<ListItemTitleProps>(
+  ListItemTitle,
+  'ListItemTitle'
+);
+const ThemedListItemSubtitle = withTheme<ListItemSubtitleProps>(
+  ListItemSubtitle,
+  'ListItemSubtitle'
+);
 const ThemedListItemSwipeable = withTheme(
   ListItemSwipeable,
   'ListItemSwipeable'
@@ -55,16 +73,19 @@ export const ListItem: ListItemProps = Object.assign(ListItemBase);
 
 export type { ListItemAccordionProps, ListItemSwipeableProps };
 
-const ThemedListItem = Object.assign(withTheme(ListItem, 'ListItem'), {
-  Accordion: ThemedListItemAccordion,
-  Chevron: ThemedListItemChevron,
-  Content: ThemedListItemContent,
-  Input: ThemedListItemInput,
-  Title: ThemedListItemTitle,
-  Subtitle: ThemedListItemSubtitle,
-  Swipeable: ThemedListItemSwipeable,
-  CheckBox: ThemedListItemCheckBox,
-  ButtonGroup: ThemedListItemButtonGroup,
-});
+const ThemedListItem = Object.assign(
+  withTheme<ListItemProps>(ListItem, 'ListItem'),
+  {
+    Accordion: ThemedListItemAccordion,
+    Chevron: ThemedListItemChevron,
+    Content: ThemedListItemContent,
+    Input: ThemedListItemInput,
+    Title: ThemedListItemTitle,
+    Subtitle: ThemedListItemSubtitle,
+    Swipeable: ThemedListItemSwipeable,
+    CheckBox: ThemedListItemCheckBox,
+    ButtonGroup: ThemedListItemButtonGroup,
+  }
+);
 
 export default ThemedListItem;

@@ -10,7 +10,10 @@ import {
   TabViewItemProps,
 } from '@react-native-elements/base/dist/TabView/TabView.Item';
 
-const ThemedTabViewItem = withTheme(TabViewItem, 'TabViewItem');
+const ThemedTabViewItem = withTheme<TabViewItemProps>(
+  TabViewItem,
+  'TabViewItem'
+);
 
 export type TabViewProps = RneFunctionComponent<TabViewBaseProps> & {
   Item: typeof ThemedTabViewItem;
@@ -20,8 +23,11 @@ export const TabView: TabViewProps = Object.assign(TabViewBase);
 
 export type { TabViewBaseProps, TabViewItemProps };
 
-export const ThemedTabView = Object.assign(withTheme(TabView, 'TabView'), {
-  Item: ThemedTabViewItem,
-});
+export const ThemedTabView = Object.assign(
+  withTheme<TabViewProps>(TabView, 'TabView'),
+  {
+    Item: ThemedTabViewItem,
+  }
+);
 
 export default ThemedTabView;

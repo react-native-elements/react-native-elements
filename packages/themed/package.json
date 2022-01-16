@@ -62,7 +62,6 @@
       "<rootDir>/node_modules",
       "<rootDir>/dist"
     ],
-    "coverageDirectory": "<rootDir>/../../coverage/",
     "moduleNameMapper": {
       "@react-native-elements/base/dist/([^/]+)": "<rootDir>/../base/src/$1",
       "@react-native-elements/([^/]+)": "<rootDir>/../$1/src"
@@ -70,9 +69,7 @@
     "transformIgnorePatterns": [
       "<rootDir>/../../node_modules/(?!(@react-native|react-native|@react-native-elements/base)/)"
     ],
-    "coveragePathIgnorePatterns": [
-      ""
-    ],
+    "coveragePathIgnorePatterns": [],
     "setupFilesAfterEnv": [
       "<rootDir>/.ci/setupTests.ts"
     ],

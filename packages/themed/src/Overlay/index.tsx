@@ -6,4 +6,4 @@ import {
 
 export { Overlay };
 export type { OverlayProps };
-export default withTheme(Overlay, 'Overlay');
+export default withTheme<OverlayProps>(Overlay, 'Overlay');
