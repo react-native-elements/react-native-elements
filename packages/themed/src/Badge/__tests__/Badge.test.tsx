@@ -10,7 +10,7 @@ describe('Badge Component', () => {
         textStyle: { color: 'red' },
       },
     };
-    const { wrapper } = renderWithWrapper(<Badge />, '', testTheme);
+    const { wrapper } = renderWithWrapper(<Badge value="red" />, '', testTheme);
     expect(wrapper.findByType(Text).props.style).toMatchObject({
       color: 'red',
     });
