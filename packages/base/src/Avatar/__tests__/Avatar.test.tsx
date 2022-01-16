@@ -2,7 +2,6 @@ import React from 'react';
 import { Avatar } from '..';
 import { Pressable, View, Image, Text } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config';
 import { avatarSizes } from './../Avatar';
 import { Icon } from '../../Icon';
 
@@ -43,18 +42,6 @@ describe('Avatar Component', () => {
       />
     );
     expect(wrapper.findByType(Pressable)).toBeTruthy();
-  });
-
-  it('should apply values from theme', () => {
-    const theme: Partial<FullTheme> = {
-      Avatar: {
-        source: { uri: 'https://i.imgur.com/0y8Ftya.jpg' },
-      },
-    };
-    const { wrapper } = renderWithWrapper(<Avatar />, '', theme);
-    expect(wrapper.findByType(Image).props.source.uri).toBe(
-      'https://i.imgur.com/0y8Ftya.jpg'
-    );
   });
 
   describe('Sizes', () => {

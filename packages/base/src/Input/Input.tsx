@@ -42,7 +42,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   renderErrorMessage?: boolean;
 };
 
-export class Input extends React.Component<InputProps & { theme: Theme }> {
+export class Input extends React.Component<InputProps & { theme?: Theme }> {
   static displayName = 'Input';
   input: any;
   shakeAnimationValue = new Animated.Value(0);

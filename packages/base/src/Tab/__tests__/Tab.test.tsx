@@ -1,7 +1,7 @@
 import React from 'react';
-import Tab from '../index';
+import { Tab } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import theme from '../../config/theme';
+import { colors } from '../../helpers';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Tab Component', () => {
@@ -29,7 +29,7 @@ describe('Tab Component', () => {
     const TabItemComponent = queryByA11yRole('tablist');
 
     expect(TabItemComponent.props.style).toContainEqual({
-      backgroundColor: theme?.colors?.primary,
+      backgroundColor: colors?.primary,
     });
   });
 

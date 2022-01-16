@@ -60,6 +60,7 @@ export interface FullTheme {
   CardTitle: Partial<TextProps>;
   CheckBox: Partial<CheckBoxProps>;
   Chip: Partial<ChipProps>;
+  colors: RecursivePartial<Colors>;
   Dialog: Partial<DialogProps>;
   DialogActions: Partial<DialogActionsProps>;
   DialogButton: Partial<ButtonProps>;
@@ -67,6 +68,7 @@ export interface FullTheme {
   DialogTitle: Partial<DialogTitleProps>;
   Divider: Partial<DividerProps>;
   FAB: Partial<FABProps>;
+  FeaturedTile: Partial<TileProps>;
   Header: Partial<HeaderProps>;
   Icon: Partial<IconProps>;
   Image: Partial<ImageProps>;
@@ -97,7 +99,6 @@ export interface FullTheme {
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
   Tooltip: Partial<TooltipProps>;
-  colors: RecursivePartial<Colors>;
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;

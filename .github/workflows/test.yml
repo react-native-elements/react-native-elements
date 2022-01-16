@@ -1,11 +1,11 @@
-name: Test & Coverage
+name: PR Checks
 on:
-  push:
   pull_request:
-    branches-ignore:
-      - master
+    branches:
+      - next
 jobs:
   test:
+    name: "Unit-test Check"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +27,73 @@ jobs:
         run: |
           yarn global add codecov
           yarn
-      - run: yarn lint
-      - run: yarn typescript
-      - run: yarn prettier
       - run: yarn test && npx codecov --disable=gcov
+  typescript:
+    name: "Typescript check"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js Env
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Install
+        run: yarn
+      - run: yarn typescript
+  lint:
+    name: "Lint check"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js Env
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Install
+        run: yarn
+      - run: yarn lint
+      - run: yarn prettier
+  docs-api:
+    name: "Docs API build check"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js Env
+        uses: actions/setup-node@v2
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
+      - name: Install dependencies
+        run: yarn install
+      - name: Build 🔧
+        run: yarn build:api

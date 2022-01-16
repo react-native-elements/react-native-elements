@@ -6,4 +6,4 @@ import { withTheme } from '../config';
 
 export { Switch };
 export type { SwitchProps };
-export default withTheme(Switch, 'Switch');
+export default withTheme<SwitchProps>(Switch, 'Switch');

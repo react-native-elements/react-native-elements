@@ -9,7 +9,6 @@ exports[`Badge Component should match snapshot 1`] = `
     testID="RNE__Badge__Container"
   >
     <View
-      replaceTheme={[Function]}
       style={
         Object {
           "alignItems": "center",
@@ -24,7 +23,6 @@ exports[`Badge Component should match snapshot 1`] = `
         }
       }
       testID="RNE__Badge"
-      updateTheme={[Function]}
     >
       <Text
         style={

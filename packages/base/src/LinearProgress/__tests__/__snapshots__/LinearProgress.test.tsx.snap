@@ -15,7 +15,6 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
     }
     accessible={true}
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Array [
         Object {
@@ -29,7 +28,6 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
       ]
     }
     testID="RNE__LinearProgress_Bar"
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -67,7 +65,6 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
     }
     accessible={true}
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Array [
         Object {
@@ -81,7 +78,6 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
       ]
     }
     testID="RNE__LinearProgress_Bar"
-    updateTheme={[Function]}
   >
     <View
       style={

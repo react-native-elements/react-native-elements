@@ -1,5 +1,5 @@
 import React from 'react';
-import TabView from '../index';
+import { TabView } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Tab Component', () => {

@@ -5,7 +5,6 @@ exports[`Divider Component should match snapshot 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "borderBottomColor": "#bcbbc1",
@@ -13,7 +12,6 @@ exports[`Divider Component should match snapshot 1`] = `
       }
     }
     testID="RNE__Divider"
-    updateTheme={[Function]}
   />
 </View>
 `;
@@ -23,7 +21,6 @@ exports[`Divider Component should render with subHeader and subHeaderStyle 1`] =
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "borderBottomColor": "#bcbbc1",
@@ -31,7 +28,6 @@ exports[`Divider Component should render with subHeader and subHeaderStyle 1`] =
       }
     }
     testID="RNE__Divider"
-    updateTheme={[Function]}
   />
   <Text
     style={
@@ -51,7 +47,6 @@ exports[`Divider Component should render with subHeader and subHeaderStyle and i
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "borderBottomColor": "#bcbbc1",
@@ -60,7 +55,6 @@ exports[`Divider Component should render with subHeader and subHeaderStyle and i
       }
     }
     testID="RNE__Divider"
-    updateTheme={[Function]}
   />
   <Text
     style={

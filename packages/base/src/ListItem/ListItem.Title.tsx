@@ -5,14 +5,14 @@ import { Text } from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-type TitleProps = TextProps & {
+export type ListItemTitleProps = TextProps & {
   /**Add right title. */
   right?: boolean;
 };
 
 /** This allows adding Title to the ListItem.
  * This, Receives all [Text](text#props) props. */
-export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
+export const ListItemTitle: RneFunctionComponent<ListItemTitleProps> = ({
   style,
   right,
   children,

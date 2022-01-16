@@ -8,7 +8,7 @@ import {
 export { Image };
 export type { ImageProps };
 
-const ThemedImage = Object.assign(withTheme(Image, 'Image'), {
+const ThemedImage = Object.assign(withTheme<ImageProps>(Image, 'Image'), {
   getSize: ImageNative.getSize,
   getSizeWithHeaders: ImageNative.getSizeWithHeaders,
   prefetch: ImageNative.prefetch,

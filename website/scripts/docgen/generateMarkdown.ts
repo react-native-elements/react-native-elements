@@ -129,8 +129,8 @@ function generatePropsReference(props) {
               headers: ['Type', 'Default'],
               rows: [
                 {
-                  Type: prop.type ? prop.type.name : 'None',
-                  Default: prop.defaultValue ? prop.defaultValue.value : 'None',
+                  Type: prop?.type?.name || 'None',
+                  Default: prop?.defaultValue?.value || 'None',
                 },
               ],
             },

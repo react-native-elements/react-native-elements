@@ -3,4 +3,4 @@ import { withTheme } from '../config';
 
 export { Text };
 export type { TextProps };
-export default withTheme(Text, 'Text');
+export default withTheme<TextProps>(Text, 'Text');

@@ -29,9 +29,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-
+            ${{ runner.os }}-website-
       - name: Install dependencies
         run: yarn install
       - name: Build 🔧

@@ -9,6 +9,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}

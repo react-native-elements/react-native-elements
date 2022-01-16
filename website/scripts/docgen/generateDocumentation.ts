@@ -12,7 +12,7 @@ export const generateDocumentation = (filePaths) => {
     let componentDoc = componentDocs[componentDisplayName];
     const [componentName, childComponentName] = componentDisplayName.split('.');
     if (childComponentName) {
-      let parentComponent = componentDocs[componentName];
+      let parentComponent = componentDocs[componentName] || {};
       if (!('childrens' in parentComponent)) parentComponent['childrens'] = {};
       parentComponent['childrens'][componentDisplayName] = componentDoc;
       componentDocs[componentName] = parentComponent;
@@ -25,6 +25,7 @@ export const generateDocumentation = (filePaths) => {
     // Condition check for compound components display name.
     let componentDoc = componentDocs[componentDisplayName];
     const markdownData = generateMarkdown(componentDoc);
+    console.log(' Done', componentDisplayName);
 
     nodefs.writeFileSync(
       path.join(__dirname, `../../docs/main/${componentDisplayName}.mdx`),

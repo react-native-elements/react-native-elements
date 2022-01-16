@@ -52,6 +52,7 @@ export {
   ScreenWidth,
   ScreenHeight,
   isIOS,
+  colors,
   color,
 };
 

@@ -33,9 +33,7 @@ exports[`Icon component should apply raised styles 1`] = `
         }
       }
       disabled={false}
-      replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
-      updateTheme={[Function]}
     >
       <View
         style={
@@ -105,9 +103,7 @@ exports[`Icon component should apply reverse styles 1`] = `
         }
       }
       disabled={false}
-      replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
-      updateTheme={[Function]}
     >
       <View
         style={
@@ -170,6 +166,7 @@ exports[`Icon component should render with icon type 1`] = `
     <View
       accessibilityRole="button"
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -180,9 +177,7 @@ exports[`Icon component should render with icon type 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
-      updateTheme={[Function]}
     >
       <View
         style={
@@ -242,6 +237,7 @@ exports[`Icon component should set underlayColor to color when styles when under
     <View
       accessibilityRole="button"
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -252,9 +248,7 @@ exports[`Icon component should set underlayColor to color when styles when under
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      replaceTheme={[Function]}
       testID="RNE__ICON__CONTAINER_ACTION"
-      updateTheme={[Function]}
     >
       <View
         style={

@@ -1,10 +1,9 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
-import { ActivityIndicator, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config/theme';
-import Icon from '../../Icon';
-import Button from '../index';
+import { Icon } from '../../Icon';
+import { Button } from '../index';
 
 describe('Button Component', () => {
   it('should match snapshot', () => {
@@ -61,52 +60,25 @@ describe('Button Component', () => {
     expect(onPress).not.toHaveBeenCalled();
   });
 
-  describe('Button type', () => {
-    // Test for each type of button variant
-    describe.each`
-      should have type as
-      ${'solid'}
-      ${'outline'}
-      ${'clear'}
-    `('$type', ({ type }) => {
-      it(`should display ${type} button`, () => {
-        const { toJSON } = renderWithWrapper(<Button title={type} />);
-        expect(toJSON()).toMatchSnapshot();
-      });
-
-      it(`should display raised ${type} button`, () => {
-        const { toJSON } = renderWithWrapper(<Button title={type} raised />);
-        expect(toJSON()).toMatchSnapshot();
-      });
-
-      it(`should display disabled ${type} button`, () => {
-        const { toJSON } = renderWithWrapper(<Button title={type} disabled />);
-        expect(toJSON()).toMatchSnapshot();
-      });
+  describe.each`
+    type
+    ${'solid'}
+    ${'outline'}
+    ${'clear'}
+  `('$type', ({ type }) => {
+    it(`should display ${type} button`, () => {
+      const { toJSON } = renderWithWrapper(<Button title={type} />);
+      expect(toJSON()).toMatchSnapshot();
     });
-  });
 
-  it('should apply props from theme', () => {
-    const testTheme: Partial<FullTheme> = {
-      Button: {
-        loading: true,
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <Button />,
-      'RNE_BUTTON_WRAPPER',
-      testTheme
-    );
-    expect(wrapper.findByType(ActivityIndicator)).toBeTruthy();
-  });
+    it(`should display raised ${type} button`, () => {
+      const { toJSON } = renderWithWrapper(<Button title={type} raised />);
+      expect(toJSON()).toMatchSnapshot();
+    });
 
-  it('should apply title from theme', () => {
-    const testTheme: Partial<FullTheme> = {
-      Button: {
-        title: 'Custom Button',
-      },
-    };
-    const { queryByText } = renderWithWrapper(<Button />, '', testTheme);
-    expect(queryByText(String(testTheme.Button.title))).toBeTruthy();
+    it(`should display disabled ${type} button`, () => {
+      const { toJSON } = renderWithWrapper(<Button title={type} disabled />);
+      expect(toJSON()).toMatchSnapshot();
+    });
   });
 });

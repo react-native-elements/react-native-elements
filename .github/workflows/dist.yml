@@ -27,7 +27,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dist-
       - name: Install Dependencies
-        run: yarn
+        run: |
+          yarn global add codecov
+          yarn
+      - run: yarn lint
+      - run: yarn typescript
+      - run: yarn test && npx codecov --disable=gcov
       - name: Build packages
         run: yarn build
       - name: Config git
@@ -37,10 +42,8 @@ jobs:
       - name: Create local changes
         run: |
           sed -i -e 's/dist/src/g' .gitignore
-          echo "tsconfig.json" >> .gitignore
-          echo "*.config.json" >> .gitignore
           git add .
-          git commit -m "Bleeding Edge Version" -a
+          git commit -m "Bleeding Edge Version" -a --no-verify
       - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
         run: |
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do

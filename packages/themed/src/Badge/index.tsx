@@ -7,4 +7,4 @@ import { withBadge } from '@react-native-elements/base/dist/Badge/withBadge';
 
 export { Badge, withBadge };
 export type { BadgeProps };
-export default withTheme(Badge, 'Badge');
+export default withTheme<BadgeProps>(Badge, 'Badge');

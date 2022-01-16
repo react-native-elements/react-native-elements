@@ -1,5 +1,5 @@
 import React from 'react';
-import SpeedDial from '..';
+import { SpeedDial } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Speed Dial Component', () => {

@@ -1,7 +1,6 @@
 import React from 'react';
-import Divider from '../index';
+import { Divider } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config';
 
 describe('Divider Component', () => {
   it('should match snapshot', () => {
@@ -96,17 +95,5 @@ describe('Divider Component', () => {
       />
     );
     expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it('should apply values from theme', () => {
-    const theme: Partial<FullTheme> = {
-      Divider: {
-        style: {
-          backgroundColor: 'red',
-        },
-      },
-    };
-    const { wrapper } = renderWithWrapper(<Divider />, 'RNE__Divider', theme);
-    expect(wrapper.props.style).toMatchObject({ backgroundColor: 'red' });
   });
 });
