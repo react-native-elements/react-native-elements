@@ -1,7 +1,7 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, ThemeProps } from './ThemeProvider';
+import { ThemeConsumer } from './ThemeProvider';
 import DefaultTheme, { FullTheme } from './theme';
 
 const isClassComponent = (Component: any) =>
@@ -64,7 +64,8 @@ const ThemedComponent = (
 };
 
 function withTheme<P = {}>(
-  WrappedComponent: React.ComponentType<P & Partial<ThemeProps<P>>>,
+  WrappedComponent: React.ComponentType<P>,
+  // WrappedComponent: React.ComponentType<P & Partial<ThemeProps<P>>>,
   themeKey?: string
 ): React.FunctionComponent<P> | React.ForwardRefExoticComponent<P> {
   const name = themeKey

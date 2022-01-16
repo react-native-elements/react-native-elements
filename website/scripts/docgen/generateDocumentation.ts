@@ -24,6 +24,7 @@ export const generateDocumentation = (filePaths) => {
   Object.keys(componentDocs).map((componentDisplayName) => {
     // Condition check for compound components display name.
     let componentDoc = componentDocs[componentDisplayName];
+    console.log(' Done', componentDisplayName);
     const markdownData = generateMarkdown(componentDoc);
 
     nodefs.writeFileSync(

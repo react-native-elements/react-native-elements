@@ -13,7 +13,10 @@ import {
   CardImage,
   CardImageProps,
 } from '@react-native-elements/base/dist/Card/Card.Image';
-import { CardTitle } from '@react-native-elements/base/dist/Card/Card.Title';
+import {
+  CardTitle,
+  CardTitleProps,
+} from '@react-native-elements/base/dist/Card/Card.Title';
 
 const ThemedCardDivider = withTheme<CardDividerProps>(
   CardDivider,
@@ -27,8 +30,8 @@ const ThemedCardFeaturedTitle = withTheme(
   CardFeaturedTitle,
   'CardFeaturedTitle'
 );
+const ThemedCardTitle = withTheme<CardTitleProps>(CardTitle, 'CardTitle');
 const ThemedCardImage = withTheme<CardImageProps>(CardImage, 'CardImage');
-const ThemedCardTitle = withTheme(CardTitle, 'CardTitle');
 
 export type CardProps = CardBaseProps;
 
