@@ -93,7 +93,7 @@ jobs:
             ${{ runner.os }}-
       - name: Install
         run: yarn
-      - run: yarn prettier
+      - run: yarn format
   docs-api:
     name: "check_docs_api"
     runs-on: ubuntu-latest

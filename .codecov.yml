@@ -16,5 +16,4 @@ coverage:
         target: 80%
         flags: universe
 
-comment:
-  require_changes: true
+comment: false
