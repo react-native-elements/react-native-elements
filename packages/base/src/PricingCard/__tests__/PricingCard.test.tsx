@@ -1,9 +1,8 @@
 import React from 'react';
-import PricingCard from '../index';
-import Icon from '../../Icon';
-import Button from '../../Button';
+import { PricingCard } from '../index';
+import { Icon } from '../../Icon';
+import { Button } from '../../Button';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../..';
 
 describe('PricingCard component', () => {
   it('should match snapshot', () => {
@@ -47,24 +46,6 @@ describe('PricingCard component', () => {
       />
     );
     expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it('should apply values from theme', () => {
-    const theme: Partial<FullTheme> = {
-      PricingCard: {
-        title: 'ALL YOU CAN EAT',
-      },
-    };
-    const { queryByText } = renderWithWrapper(
-      <PricingCard
-        price="$0"
-        info={['1 User', 'Basic Support', 'All Core Features']}
-        button={{ title: 'GET STARTED', icon: 'flight-takeoff' }}
-      />,
-      '',
-      theme
-    );
-    expect(queryByText('ALL YOU CAN EAT')).not.toBeNull();
   });
 
   it('button with custom component', () => {

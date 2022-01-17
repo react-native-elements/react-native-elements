@@ -6,4 +6,4 @@ import {
 
 export { Input };
 export type { InputProps };
-export default withTheme(Input, 'Input');
+export default withTheme<InputProps>(Input, 'Input');

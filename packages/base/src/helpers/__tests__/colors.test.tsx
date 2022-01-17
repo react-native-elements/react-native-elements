@@ -1,4 +1,5 @@
-import { colors, colorsDark } from '..';
+import colors from '../colors';
+import colorsDark from '../colorsDark';
 
 describe('Color', () => {
   it('Colors (Light) should exist', () => {

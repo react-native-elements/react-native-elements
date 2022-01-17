@@ -99,22 +99,4 @@ describe('ListItem component', () => {
     const input = wrapper.findByType(TextInput);
     expect(input.props.placeholder).toBe('Enter Text');
   });
-
-  it('should apply values from theme', () => {
-    const theme = {
-      ListItemTitle: {
-        style: {
-          color: 'red',
-        },
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <ListItem>
-        <ListItem.Title />
-      </ListItem>,
-      'listItemTitle',
-      theme
-    );
-    expect(wrapper.props.style.color).toBe('red');
-  });
 });

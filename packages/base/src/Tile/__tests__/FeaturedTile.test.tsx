@@ -1,9 +1,9 @@
 import React from 'react';
-import Avatar from '../../Avatar';
-import { ThemedFeaturedTile as FeaturedTile } from '../components/FeaturedTile';
+import { Avatar } from '../../Avatar';
+import { FeaturedTile } from '../components/FeaturedTile';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Pressable, Image } from 'react-native';
-import Icon from '../../Icon';
+import { Icon } from '../../Icon';
 
 describe('FeaturedTitle component', () => {
   it('should match snapshot', () => {
@@ -44,21 +44,6 @@ describe('FeaturedTitle component', () => {
       name: 'play-circle',
       type: 'font-awesome',
     });
-  });
-
-  it('should apply values from theme', () => {
-    const theme = {
-      FeaturedTile: {
-        title: 'I am featured',
-      },
-    };
-    const { queryByText } = renderWithWrapper(
-      <FeaturedTile imageSrc={{ uri: 'http://google.com' }} />,
-      '',
-      // @ts-ignore
-      theme
-    );
-    expect(queryByText('I am featured')).not.toBeNull();
   });
 
   it('should render component in caption', () => {

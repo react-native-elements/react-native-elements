@@ -1,7 +1,6 @@
 import React from 'react';
-import Switch from '../index';
+import { Switch } from '../index';
 import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config';
 
 describe('Switch Component', () => {
   it('should match snapshot', () => {
@@ -22,7 +21,7 @@ describe('Switch Component', () => {
   it('should have an onValueChange event', () => {
     const onValueChange = jest.fn();
     const { wrapper } = renderWithWrapper(
-      <Switch value disabled onValueChange={onValueChange} />,
+      <Switch value onValueChange={onValueChange} />,
       'RNE__SWITCH'
     );
     fireEvent(wrapper, 'onValueChange');
@@ -54,18 +53,6 @@ describe('Switch Component', () => {
     expect(disabledSwitch.props.accessibilityState).toMatchObject({
       checked: false,
       disabled: true,
-    });
-  });
-
-  it('should apply from theme', () => {
-    const theme: Partial<FullTheme> = {
-      Switch: {
-        color: 'purple',
-      },
-    };
-    const { wrapper } = renderWithWrapper(<Switch />, 'RNE__SWITCH', theme);
-    expect(wrapper.props).toMatchObject({
-      onTintColor: 'purple',
     });
   });
 });

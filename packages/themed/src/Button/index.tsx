@@ -6,4 +6,4 @@ import {
 
 export { Button };
 export type { ButtonProps };
-export default withTheme(Button, 'Button');
+export default withTheme<ButtonProps>(Button, 'Button');

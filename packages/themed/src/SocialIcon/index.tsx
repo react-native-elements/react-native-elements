@@ -6,4 +6,4 @@ import {
 
 export { SocialIcon };
 export type { SocialIconProps };
-export default withTheme(SocialIcon, 'SocialIcon');
+export default withTheme<SocialIconProps>(SocialIcon, 'SocialIcon');

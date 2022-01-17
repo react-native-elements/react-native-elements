@@ -1,6 +1,7 @@
 import React from 'react';
-import SearchBar from '../index';
+import { SearchBar } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
+import { Keyboard } from 'react-native';
 
 describe('SearchBar wrapper component', () => {
   it('should match snapshot', () => {
@@ -21,20 +22,32 @@ describe('SearchBar wrapper component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('should apply values from theme', () => {
-    const theme = {
-      SearchBar: {
-        placeholder: 'Enter search term',
-      },
+  describe('keyboard eventListener', () => {
+    const mockListener = {
+      remove: jest.fn(),
     };
-    const component = renderWithWrapper(
-      <SearchBar platform="android" />,
-      '',
-      theme
-    );
-    expect(component.queryByTestId('RNE__SearchBar').props.placeholder).toBe(
-      'Enter search term'
-    );
-    expect(component.toJSON()).toMatchSnapshot();
+    const originalAddListener = Keyboard.addListener;
+    const mockAddListener = jest.fn().mockReturnValue(mockListener);
+
+    beforeAll(() => {
+      Keyboard.addListener = mockAddListener;
+    });
+    beforeEach(() => {
+      mockAddListener.mockClear();
+      mockListener.remove.mockClear();
+    });
+    afterAll(() => {
+      Keyboard.addListener = originalAddListener;
+    });
+    it('should subscribe to KeyboardDidClose event', () => {
+      renderWithWrapper(<SearchBar platform="android" />);
+      expect(Keyboard.addListener).toHaveBeenCalled();
+    });
+
+    it('should call listener.remove on unmount', () => {
+      const component = renderWithWrapper(<SearchBar platform="android" />);
+      component.unmount();
+      expect(mockListener.remove).toHaveBeenCalled();
+    });
   });
 });

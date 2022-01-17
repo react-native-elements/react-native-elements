@@ -1,11 +1,11 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, ThemeProps } from './ThemeProvider';
+import { ThemeConsumer } from './ThemeProvider';
 import DefaultTheme, { FullTheme } from './theme';
 
 const isClassComponent = (Component: any) =>
-  Boolean(Component.prototype && Component.prototype.isReactComponent);
+  Boolean(Component?.prototype?.isReactComponent);
 
 export interface ThemedComponent {
   displayName: string;
@@ -63,17 +63,17 @@ const ThemedComponent = (
   );
 };
 
-function withTheme<P = {}, T = {}>(
-  WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
+function withTheme<P = {}>(
+  WrappedComponent: React.ComponentType<P>,
+  // WrappedComponent: React.ComponentType<P & Partial<ThemeProps<P>>>,
   themeKey?: string
-):
-  | React.FunctionComponent<Omit<P, keyof ThemeProps<T>>>
-  | React.ForwardRefExoticComponent<P> {
+): React.FunctionComponent<P> | React.ForwardRefExoticComponent<P> {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
         WrappedComponent.displayName || WrappedComponent.name || 'Component'
       }`;
+
   const Component = ThemedComponent(WrappedComponent, themeKey, name);
 
   if (isClassComponent(WrappedComponent)) {

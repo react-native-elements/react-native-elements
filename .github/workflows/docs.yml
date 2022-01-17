@@ -5,6 +5,9 @@ on:
       - next
     paths:
       - "website/**"
+defaults:
+  run:
+    working-directory: website
 
 jobs:
   docs:
@@ -26,16 +29,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-
-      - name: Install
-        run: |
-          yarn
+            ${{ runner.os }}-website-
+      - name: Install dependencies
+        run: yarn install
       - name: Build 🔧
-        run: |
-          yarn docs:build
-      - name: Deploy
+        run: yarn build
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -6,4 +6,4 @@ import { withTheme } from '../config';
 
 export { BottomSheet };
 export type { BottomSheetProps };
-export default withTheme(BottomSheet, 'BottomSheet');
+export default withTheme<BottomSheetProps>(BottomSheet, 'BottomSheet');

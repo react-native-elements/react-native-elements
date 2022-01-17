@@ -5,7 +5,6 @@ exports[`PricingCard component should match snapshot 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "backgroundColor": "#ffffff",
@@ -23,7 +22,6 @@ exports[`PricingCard component should match snapshot 1`] = `
         "shadowRadius": 0.5,
       }
     }
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -174,9 +172,7 @@ exports[`PricingCard component should match snapshot 1`] = `
                   }
                 }
                 disabled={false}
-                replaceTheme={[Function]}
                 testID="RNE__ICON__CONTAINER_ACTION"
-                updateTheme={[Function]}
               >
                 <View
                   style={
@@ -239,7 +235,6 @@ exports[`PricingCard component should render with props 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "backgroundColor": "peru",
@@ -257,7 +252,6 @@ exports[`PricingCard component should render with props 1`] = `
         "shadowRadius": 0.5,
       }
     }
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -413,9 +407,7 @@ exports[`PricingCard component should render with props 1`] = `
                   }
                 }
                 disabled={false}
-                replaceTheme={[Function]}
                 testID="RNE__ICON__CONTAINER_ACTION"
-                updateTheme={[Function]}
               >
                 <View
                   style={

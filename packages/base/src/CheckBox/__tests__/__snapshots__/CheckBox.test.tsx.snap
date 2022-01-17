@@ -12,6 +12,7 @@ exports[`CheckBox Component should match snapshot 1`] = `
       }
     }
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -22,7 +23,6 @@ exports[`CheckBox Component should match snapshot 1`] = `
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
         "margin": 5,
@@ -32,7 +32,6 @@ exports[`CheckBox Component should match snapshot 1`] = `
       }
     }
     testID="RNE__CheckBox__Wrapper"
-    updateTheme={[Function]}
   >
     <View
       style={

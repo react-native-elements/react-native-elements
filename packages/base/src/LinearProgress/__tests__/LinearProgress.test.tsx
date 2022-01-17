@@ -1,7 +1,6 @@
 import React from 'react';
-import LinearProgress from '../index';
+import { LinearProgress } from '../index';
 import { renderWithWrapper, fireEvent, act } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config';
 import { clamp } from '../LinearProgress';
 
 describe('LinearProgress Component', () => {
@@ -88,22 +87,6 @@ describe('LinearProgress Component', () => {
         min: 0,
         max: 1,
       },
-    });
-  });
-
-  it('should apply props from theme', () => {
-    const theme: Partial<FullTheme> = {
-      LinearProgress: {
-        color: 'rgb(255, 0, 0)',
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <LinearProgress animation={false} />,
-      'RNE__LinearProgress_Progress',
-      theme
-    );
-    expect(wrapper.props.style).toMatchObject({
-      backgroundColor: 'rgb(255, 0, 0)',
     });
   });
 });

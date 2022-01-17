@@ -6,4 +6,4 @@ import {
 
 export { ButtonGroup };
 export type { ButtonGroupProps };
-export default withTheme(ButtonGroup, 'ButtonGroup');
+export default withTheme<ButtonGroupProps>(ButtonGroup, 'ButtonGroup');

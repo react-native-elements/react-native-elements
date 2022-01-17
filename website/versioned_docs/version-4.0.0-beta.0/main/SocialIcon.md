@@ -33,6 +33,7 @@ SocialIcons are visual cues to online and social media networks. We offer a vari
 - [iconType](#icontype)
 - [light](#light)
 - [loading](#loading)
+- [pressableProps](#pressableprops)
 - [raised](#raised)
 - [small](#small)
 - [style](#style)
@@ -171,6 +172,14 @@ Shows loading indicator.
 | Type    | Default |
 | ------- | ------- |
 | boolean | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---
 

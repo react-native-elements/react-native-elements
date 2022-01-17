@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../index';
+import { Icon } from '../index';
 import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 
 describe('Icon component', () => {
@@ -80,19 +80,5 @@ describe('Icon component', () => {
   it('should apply raised styles', () => {
     const component = renderWithWrapper(<Icon name="wifi" raised />);
     expect(component.toJSON()).toMatchSnapshot();
-  });
-
-  it('should apply values from theme', () => {
-    const localTheme = {
-      Icon: {
-        size: 26,
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <Icon name="edit" />,
-      'RNE__ICON__Component',
-      localTheme
-    );
-    expect(wrapper.props.style[0].fontSize).toBe(26);
   });
 });

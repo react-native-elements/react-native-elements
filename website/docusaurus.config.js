@@ -49,7 +49,7 @@ const config = {
     announcementBar: {
       id: 'support_us',
       content:
-        '⭐️ If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐',
+        'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐ and support us via <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/react-native-elements">Github Sponsor</a>!',
       backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
     },

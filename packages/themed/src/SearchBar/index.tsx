@@ -14,4 +14,4 @@ export type {
   SearchBarDefaultProps,
   SearchBarIosProps,
 };
-export default withTheme(SearchBar, 'SearchBar');
+export default withTheme<SearchBarProps>(SearchBar, 'SearchBar');

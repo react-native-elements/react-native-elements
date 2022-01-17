@@ -1,5 +1,5 @@
 import React from 'react';
-import Tooltip from '../index';
+import { Tooltip } from '../index';
 import { Text, Modal, Pressable } from 'react-native';
 import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 
@@ -57,25 +57,6 @@ describe('Tooltip component', () => {
       </Tooltip>
     );
     expect(queryByTestId('RNE__Tooltip_Triangle')).toBeNull();
-  });
-
-  it('should apply values from theme', () => {
-    const theme = {
-      Tooltip: {
-        backgroundColor: 'pink',
-      },
-    };
-    const Info = () => <Text>Info here</Text>;
-    const { queryByTestId } = renderWithWrapper(
-      <Tooltip height={100} width={200} popover={<Info />}>
-        <Text>Press me</Text>
-      </Tooltip>,
-      '',
-      theme
-    );
-    expect(
-      queryByTestId('tooltipPopoverContainer').props.style.backgroundColor
-    ).toBe('pink');
   });
 
   it('should return children for Falsy toggleOnPress', () => {
