@@ -3,21 +3,18 @@ coverage:
     project:
       default: off
       base:
-        flags: base
+        paths:
+          - packages/base
       themed:
+        paths:
+          - packages/themed
         target: 80%
         flags: themed
       universe:
+        paths:
+          - packages/universe
         target: 80%
         flags: universe
 
-flags:
-  base:
-    paths:
-      - packages/base/
-  themed:
-    paths:
-      - packages/themed/
-  universe:
-    paths:
-      - packages/universe/
+comment:
+  require_changes: true

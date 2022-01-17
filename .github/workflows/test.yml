@@ -1,11 +1,11 @@
-name: PR Checks
+name: ci
 on:
   pull_request:
     branches:
       - next
 jobs:
   test:
-    name: "Unit-test Check"
+    name: "check_unit_tests"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
           yarn
       - run: yarn test && npx codecov --disable=gcov
   typescript:
-    name: "Typescript check"
+    name: "check_types"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -51,7 +51,7 @@ jobs:
         run: yarn
       - run: yarn typescript
   lint:
-    name: "Lint check"
+    name: "check_lint"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -72,8 +72,8 @@ jobs:
       - name: Install
         run: yarn
       - run: yarn lint
-  prettier:
-    name: "Lint check"
+  formatting:
+    name: "check_format"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -95,7 +95,7 @@ jobs:
         run: yarn
       - run: yarn prettier
   docs-api:
-    name: "Docs API build check"
+    name: "check_docs_api"
     runs-on: ubuntu-latest
     defaults:
       run:
