@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
     "typescript": "tsc --noEmit --composite false",
-    "prettier": "prettier --check ./packages",
+    "format": "prettier --check ./packages",
     "test": "lerna run test",
     "build": "lerna run build",
     "clean-install": "rimraf node_modules && yarn",
@@ -17,7 +17,7 @@
     "docs:build": "yarn --cwd website build",
     "docs:build:api": "yarn --cwd website build:api",
     "docs:serve": "yarn --cwd website start",
-    "docs:prettier": "prettier --write 'website/docs/**/*.md'",
+    "docs:format": "prettier --write 'website/docs/**/*.md'",
     "docs:test": "yarn --cwd website test",
     "postinstall": "husky install",
     "lint-staged": "lint-staged"
