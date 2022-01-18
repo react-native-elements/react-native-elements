@@ -76,9 +76,6 @@ jobs:
   docs-api:
     name: "check_docs_api"
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: website
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js Env
@@ -95,7 +92,10 @@ jobs:
             ${{ runner.os }}-website-
       - name: Install dependencies
         run: yarn install
+      - name: Install website dependencies
+        run: yarn install
+        working-directory: website
       - name: Build 🔧
-        run: yarn build:api
+        run: yarn docs:build:api
       - name: Check for API changes
         run: git diff --exit-code
