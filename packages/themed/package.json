@@ -73,6 +73,7 @@
     "setupFilesAfterEnv": [
       "<rootDir>/.ci/setupTests.ts"
     ],
+    "collectCoverage": true,
     "globals": {
       "__DEV__": true
     },

@@ -69,6 +69,7 @@
       "<rootDir>/node_modules",
       "<rootDir>/dist"
     ],
+    "collectCoverage": true,
     "transformIgnorePatterns": [
       "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
     ],
