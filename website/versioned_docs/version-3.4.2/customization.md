@@ -99,6 +99,7 @@ TypeScript definitions for your theme can be extended by using TypeScript's [dec
 i.e. below we add a custom p1Style to the Text theme object and we add a bunch of colors to the colors object.
 
 ```typescript
+import 'react-native-elements'
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 declare module 'react-native-elements' {
