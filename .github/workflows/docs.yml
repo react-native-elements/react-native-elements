@@ -5,9 +5,6 @@ on:
       - next
     paths:
       - "website/**"
-defaults:
-  run:
-    working-directory: website
 
 jobs:
   docs:
@@ -34,8 +31,11 @@ jobs:
             ${{ runner.os }}-website-
       - name: Install dependencies
         run: yarn install
+      - name: Install website dependencies
+        run: yarn install
+        working-directory: website
       - name: Build 🔧
-        run: yarn build
+        run: yarn docs:build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:

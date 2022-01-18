@@ -39,7 +39,6 @@
       "main/tile",
       "main/tooltip"
     ],
-    "Universe Components": ["universe/circularslider"],
     "Repo": [
       "repo/contributing",
       "repo/testing",
