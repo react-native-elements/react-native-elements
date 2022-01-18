@@ -4,16 +4,17 @@ coverage:
       default: off
       base:
         paths:
-          - packages/base
+          - packages/base/*
       themed:
         paths:
-          - packages/themed
+          - packages/themed/*
         target: 80%
         flags: themed
       universe:
         paths:
-          - packages/universe
+          - packages/universe/*
         target: 80%
         flags: universe
 
-comment: false
+comment:
+  require_changes: true
