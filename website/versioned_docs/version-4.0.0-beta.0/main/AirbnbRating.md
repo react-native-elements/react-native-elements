@@ -71,7 +71,7 @@ Default is 3
 
 #### isDisabled
 
-Whether the rating can be modiefied by the user
+Whether the rating can be modified by the user
 
 Default is false
 
