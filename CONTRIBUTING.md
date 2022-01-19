@@ -272,9 +272,12 @@ yarn docs:build:api
 
 ### Checks and how to fix them
 
-| **Check Name** | **Description** | **Fix using** | o   |
-| -------------- | --------------- | ------------- | --- |
-| ok             | pl              | l             | p   |
+| **Check Name**     | **Description** | **Fix using** |     |
+| ------------------ | --------------- | ------------- | --- |
+| `check_unit_tests` |                 |               |     |
+| `check_types`      |                 |               |     |
+| `check_lint`       |                 |               |     |
+| `check_docs_api`   |                 |               |     |
 
 ### Committing and Pushing Changes
 
