@@ -11,9 +11,14 @@
     "dist"
   ],
   "keywords": [
-    "react-native",
-    "reactjs",
-    "reactnative",
+    "react",
+    "native",
+    "react native",
+    "react native ui",
+    "react native components",
+    "ui library",
+    "ios",
+    "android",
     "bootstrap"
   ],
   "scripts": {

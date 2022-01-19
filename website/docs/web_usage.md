@@ -18,7 +18,7 @@ The major difference is that React Native can support JSX and advanced javascrip
 After creating a new create-react-app project, run the following commands.
 
 ```bash
-yarn add react-native-elements react-native-web react-native-vector-icons
+yarn add  @react-native-elements/base @react-native-elements/themed react-native-web react-native-vector-icons
 ```
 
 ```bash
@@ -34,7 +34,8 @@ const { override, addBabelPlugins, babelInclude } = require('customize-cra');
 module.exports = override(
   ...addBabelPlugins('@babel/plugin-proposal-class-properties'),
   babelInclude([
-    path.resolve(__dirname, 'node_modules/react-native-elements'),
+    path.resolve(__dirname, 'node_modules/@react-native-elements/base'),
+    path.resolve(__dirname, 'node_modules/@react-native-elements/themed'),
     path.resolve(__dirname, 'node_modules/react-native-vector-icons'),
     path.resolve(__dirname, 'node_modules/react-native-ratings'),
     path.resolve(__dirname, 'src'),

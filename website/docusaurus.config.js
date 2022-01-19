@@ -49,12 +49,27 @@ const config = {
     announcementBar: {
       id: 'support_us',
       content:
-        'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐ and support us via <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/react-native-elements">Github Sponsor</a>!',
+        'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐' +
+        ' and support us via <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/react-native-elements">Github Sponsor</a>!',
       backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
+      isCloseable: false,
     },
     colorMode: {
       defaultMode: 'dark',
+      disableSwitch: false,
+      switchConfig: {
+        darkIcon: '🌙',
+        darkIconStyle: {
+          marginLeft: '2px',
+        },
+        // Unicode icons such as '\u2600' will work
+        // Unicode with 5 chars require brackets: '\u{1F602}'
+        lightIcon: '🌞',
+        lightIconStyle: {
+          marginLeft: '1px',
+        },
+      },
     },
     navbar: {
       title: 'React Native Elements',
@@ -64,24 +79,37 @@ const config = {
       },
       hideOnScroll: true,
       items: [
-        { to: 'docs/', label: 'Documentation', position: 'right' },
-        {
-          href: 'https://github.com/react-native-elements/react-native-elements',
-          label: 'GitHub',
-          position: 'right',
-        },
-        { to: 'help', label: 'Help', position: 'right' },
-        { to: 'blog', label: 'Blog', position: 'right' },
         {
           type: 'docsVersionDropdown',
-
           position: 'left',
           dropdownItemsAfter: [{ to: 'versions', label: 'All versions' }],
           // Do not add the link active class when browsing docs.
           dropdownActiveClassDisabled: true,
           docsPluginId: 'default',
         },
+        { type: 'search', position: 'right' },
+        { to: 'docs/', label: 'Docs', position: 'right' },
+        { to: 'help', label: 'Help', position: 'right' },
+        { to: 'blog', label: 'Blog', position: 'right' },
+        {
+          href: 'https://github.com/sponsors/react-native-elements',
+          // label: 'Sponsor',
+          position: 'right',
+          className: 'header-github-sponsor-link',
+          'aria-label': 'GitHub Sponsor',
+        },
+        {
+          href: 'https://github.com/react-native-elements/react-native-elements',
+          // label: 'GitHub',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+        },
       ],
+    },
+    prism: {
+      darkTheme: require('prism-react-renderer/themes/vsDark'),
+      theme: require('prism-react-renderer/themes/vsLight'),
     },
     algolia: {
       apiKey: '89e04a9445d16350e100c2d2421f2d39',
@@ -106,6 +134,10 @@ const config = {
             {
               label: 'Components',
               to: 'docs/overview',
+            },
+            {
+              label: 'Contribution Guide',
+              to: 'docs/repo/contributing',
             },
           ],
         },
