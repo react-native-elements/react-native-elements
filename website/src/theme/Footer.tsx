@@ -159,12 +159,12 @@ export default function Footer() {
           <div className="margin-bottom--sm">
             <Link
               to="https://opencollective.com/react-native-elements"
-              className="button button--secondary button--outline button--lg  margin-horiz--md margin-vert--sm "
+              className="button button--secondary button--outline button--md  margin-horiz--md margin-vert--sm "
             >
               Open Collective
               <svg
                 style={{ margin: '0 5px -3px 8px ' }}
-                width={20}
+                width={18}
                 fill="#7FADF2"
                 role="img"
                 viewBox="0 0 24 24"
@@ -176,12 +176,12 @@ export default function Footer() {
             </Link>
             <Link
               to="https://github.com/sponsors/react-native-elements"
-              className="button button--secondary button--outline button--lg margin-horiz--md margin-vert--sm "
+              className="button button--secondary button--outline button--md margin-horiz--md margin-vert--sm "
             >
               GitHub Sponsor
               <svg
                 style={{ margin: '0 5px -3px 8px ' }}
-                width={20}
+                width={16}
                 fill="#EA4AAA"
                 role="img"
                 viewBox="0 0 24 24"

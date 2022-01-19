@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../static/css/components.css';
+import Link from '@docusaurus/Link';
 
 type FeatureTypes = {
   title: string;
@@ -41,6 +42,31 @@ const Home: React.FunctionComponent<{}> = () => {
           <h1 className="hero__title gradient clip-text">
             Why React Native Elements?
           </h1>
+          {/* <div>
+            <Link
+              className={'margin-horiz--md margin-vert--sm heroButton'}
+              to={
+                'https://github.com/react-native-elements/react-native-elements/stargazers'
+              }
+            >
+              <img
+                alt="GitHub Repo stars"
+                src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?color=white&label=Github%20Stars&logo=github&style=for-the-badge"
+              />
+            </Link>
+            <Link
+              className={'margin-horiz--md margin-vert--sm heroButton'}
+              to={
+                'https://github.com/react-native-elements/react-native-elements/stargazers'
+              }
+            >
+              <img
+                alt="npm"
+                src="https://img.shields.io/npm/dm/react-native-elements?color=white&label=installs&logo=npm&style=for-the-badge"
+              />
+            </Link>
+          </div> */}
+
           {/* <div className="row">
             <div className="col col--10 ">
               <p className="p--desc margin-vert--md">

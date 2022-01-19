@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 * {
   font-family: 'Inter', sans-serif !important;
   scrollbar-width: 8px;
