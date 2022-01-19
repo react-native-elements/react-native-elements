@@ -40,11 +40,17 @@
   }
 }
 
+/* html[data-theme='dark'] .gradient {
+  background: linear-gradient(120deg, #164b99, #00a2ff);
+}
+html[data-theme='light'] .gradient {
+  background: linear-gradient(120deg, #164b99, #00a2ff);
+} */
 .gradient {
-  background: linear-gradient(120deg, #0068ff, #00a2ff);
+  background: linear-gradient(120deg, var(--ifm-color-primary), #00a2ff);
 }
 
-.clip-text {
+.gradient.clip-text {
   font-weight: bolder;
   background-clip: text;
   -webkit-background-clip: text;

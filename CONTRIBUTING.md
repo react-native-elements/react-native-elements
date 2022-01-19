@@ -1,7 +1,4 @@
----
-id: contributing
-title: Contributing
----
+# Contributing to React Native Elements
 
 Thanks for taking the time to checkout this project and being willing to
 contribute!
@@ -12,15 +9,7 @@ Here are some of some of ways you can help:
 - [Suggesting a feature](#suggesting-a-feature)
 - [Responding to Issues](#responding-to-issues)
 - [Improving the Documentation](#improving-the-documentation)
-  - [Changes for an existing doc on a version not yet released](#changes-for-an-existing-doc-on-a-version-not-yet-released)
-  - [Adding documentation for a new component](#adding-documentation-for-a-new-component)
-  - [Rewording, adding missed info, or making a typo for a released version](#rewording-adding-missed-info-or-making-a-typo-for-a-released-version)
-  - [Editing an existing page that's not docs or components](#editing-an-existing-page-thats-not-docs-or-components)
-  - [Editing a document that appears the same in all versions](#editing-a-document-that-appears-the-same-in-all-versions)
 - [Implementing Bug Fixes and Improvements](#implementing-bug-fixes-and-improvements)
-  - [Setup](#setup)
-  - [Committing and Pushing Changes](#committing-and-pushing-changes)
-  - [Branching Strategy](#branching-strategy)
 
 ## Reporting Bugs
 
@@ -171,62 +160,121 @@ setup on your local machine:
 
 ### Setup
 
-- Install [Node.js](https://nodejs.org/) and and [yarn](https://yarnpkg.com) if you have not already. (_We suggest
-  you to use node v14x_)
-- Fork the **react-native-elements** repo
-  [here](https://github.com/react-native-elements/react-native-elements)
-- Clone the forked repo
+1. Install [Node.js](https://nodejs.org/) and and [yarn](https://yarnpkg.com) if you have not already. (_We suggest
+   you to use node v14x_)
+2. Fork the **react-native-elements** repo
+   [here](https://github.com/react-native-elements/react-native-elements)
+3. Clone the forked repo
+
+   ```bash
+    git clone <your-forked-repo-url>
+    cd react-native-elements
+   ```
+
+   You have a file structure that looks like this:
+
+   ```text
+   .
+      example
+      packages
+           base
+           themed
+           universe
+      website
+           docs
+           scripts
+   ```
+
+   ```bash
+   .
+   |-- example
+   |-- packages
+   |   |-- base
+   |   |-- themed
+   |   `-- universe
+   `-- website
+       |-- docs
+       `-- scripts
+   .
+   ├── example
+   ├── packages
+   │   ├── base
+   │   ├── themed
+   │   └── universe
+   └── website
+       ├── docs
+       └── scripts
+   ```
+
+4. Install dependencies
+
+   ```bash
+     yarn install
+   ```
+
+5. Create a new topic branch:
+
+   ```bash
+   git checkout -b my-topic-branch
+   ```
+
+6. While developing, you can run the example app with Expo to test your changes:
+
+   ```bash
+   yarn example start
+   ```
+
+   Make sure your code passes TypeScript and ESLint. Run the following to verify:
+
+   ```bash
+   yarn typescript
+   yarn lint
+   ```
+
+   To fix lint or formatting errors, run the following:
+
+   ```bash
+   yarn lint --fix
+   yarn format --write
+   ```
+
+   Remember to add tests for your change if possible. Run the unit tests by:
+
+   ```bash
+   yarn test
+   ```
+
+7. Now create a new branch with a name that loosely describes
+   the issue on which you will be working. Once you think you have addressed
+   the issue in question, submit a pull request to the `next` branch.
+8. You are done :tada:
+
+### Commonly used scripts for contributions
+
+Scripts can be executed via `npm run [script]` or `yarn [script]`.
+
+- `build` - compiles all packages ready for publishing to npm
+- `lint`- builds just Preact itself
+- `format`- builds just Preact itself
+- `typescript`- builds just Preact itself
+- `docs:serve`- builds the hook addon only
+- `docs:format`- builds the hook addon only
+- `docs:build`- builds the hook addon only
+- `docs:build:api`- builds the hook addon only
+
+### Updating the component API documentation
+
+The component API in the `docs/main/` is auto-generated from the TSDoc in the TypeScript declarations. Be sure to update the documentation in the corresponding, run:
 
 ```bash
- git clone <your-forked-repo-url>
- cd react-native-elements
+yarn docs:build:api
 ```
 
-You have a file structure that looks like this:
+### Checks and how to fix them
 
-```text
-example/
-packages/
-  base/
-  themed/
-  universe/
-website/
-```
-
-- Install dependencies
-
-```bash
-  yarn install
-```
-
-While developing, you can run the example app with Expo to test your changes:
-
-```bash
-yarn start:example
-```
-
-Make sure your code passes TypeScript and ESLint. Run the following to verify:
-
-```bash
-yarn build
-yarn lint
-```
-
-To fix formatting errors, run the following:
-
-```bash
-yarn lint --fix
-```
-
-Remember to add tests for your change if possible. Run the unit tests by:
-
-```bash
-yarn test
-```
-
-Now create a new branch with a name that loosely describes
-the issue on which you will be working. Once you think you have addressed
-the issue in question, submit a pull request to the `next` branch.
+| **Check Name** | **Description** | **Fix using** | o   |
+| -------------- | --------------- | ------------- | --- |
+| ok             | pl              | l             | p   |
 
 ### Committing and Pushing Changes
 

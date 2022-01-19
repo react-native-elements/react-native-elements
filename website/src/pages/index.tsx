@@ -18,8 +18,8 @@ const Home: React.FunctionComponent<{}> = () => {
       <Installation />
       <Features />
       <RunOnExpo />
-      <VSCodeExt />
       <OpenCollective />
+      {/* <VSCodeExt /> */}
     </Layout>
   );
 };

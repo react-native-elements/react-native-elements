@@ -37,13 +37,13 @@ const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
       <section className="margin-vert--xl">
-        <div className="container ">
-          <h1 className="hero__title gradient clip-text text--center">
+        <div className="container text--center">
+          <h1 className="hero__title gradient clip-text">
             Why React Native Elements?
           </h1>
-          <div className="row">
-            <div className="col col--10 col--offset-1">
-              <p className="p--desc margin-vert--md text--center">
+          {/* <div className="row">
+            <div className="col col--10 ">
+              <p className="p--desc margin-vert--md">
                 React Native Elements is an implementation of the Material
                 Design System. The framework contains a set of general-purpose
                 UI components styled in a similar way. The most awesome thing
@@ -53,7 +53,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 your product.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="container">
           <div className="row">
@@ -73,7 +73,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 >
                   <div className="card__image padding-horiz--lg  margin-vert--lg ">
                     <img
-                      height={'220px'}
+                      height={'120px'}
                       src={img}
                       alt="Image alt text"
                       title="Logo Title Text 1"
