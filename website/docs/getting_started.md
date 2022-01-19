@@ -1,6 +1,6 @@
 ---
 id: getting_started
-title: Getting Started
+title: Installation
 slug: /
 ---
 
