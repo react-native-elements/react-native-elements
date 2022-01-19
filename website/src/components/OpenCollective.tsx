@@ -3,11 +3,6 @@ import Link from '@docusaurus/Link';
 
 const OpenCollective: React.FC<{}> = () => (
   <div className="container">
-    <div className="text--center">
-      <h1 className="hero__title gradient clip-text ">Our Sponsors</h1>
-      <h4 className="subtitle ">Built with passion, backed by the community</h4>
-    </div>
-
     <div className="row" id="sponsor">
       <div className="col col--6">
         <div className="backers-section text--center">
