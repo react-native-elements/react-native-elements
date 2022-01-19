@@ -180,14 +180,14 @@ setup on your local machine:
 
    ```text
    .
-      example
+      example # demo expo app
       packages
-           base
-           themed
-           universe
+           base     # component without theme
+           themed   # component using withTheme HOC
+           universe # component having universal device support
       website
-           docs
-           scripts
+           docs     # prop API docs
+           scripts  # scripts for autoDocGen
    ```
 
 4. Install dependencies
@@ -196,13 +196,7 @@ setup on your local machine:
      yarn install
    ```
 
-5. Create a new topic branch:
-
-   ```bash
-   git checkout -b my-topic-branch
-   ```
-
-6. While developing, you can run the example app with Expo to test your changes:
+5. While developing, you can run the example app with Expo to test your changes:
 
    ```bash
    yarn example start
@@ -228,10 +222,10 @@ setup on your local machine:
    yarn test
    ```
 
-7. Now create a new branch with a name that loosely describes
+6. Now create a new branch with a name that loosely describes
    the issue on which you will be working. Once you think you have addressed
    the issue in question, submit a pull request to the `next` branch.
-8. You are done :tada:
+7. You are done :tada:
 
 ### Commonly used scripts for contributions
 
