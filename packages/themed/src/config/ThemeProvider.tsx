@@ -1,118 +1,112 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import deepmerge from 'deepmerge';
-import colors from './colors';
-import darkColors from './colorsDark';
-import { FullTheme, Theme } from './theme';
+import { colors, darkColors, Colors } from './colors';
+import { Theme, ThemeMode, RecursivePartial } from './theme';
 
-type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+export type { RecursivePartial };
 
-export interface ThemeProps<T> {
+export type CreateTheme = Theme<{
+  darkColors?: RecursivePartial<Colors>;
+}>;
+
+export type UpdateTheme = (
+  myNewTheme: CreateTheme | ((myTheme: Theme) => CreateTheme)
+) => void;
+
+export type ReplaceTheme = (
+  updates: CreateTheme | ((myTheme: Theme) => CreateTheme)
+) => void;
+
+export type ThemeProps<T = {}> = {
   theme: Theme<T>;
-  updateTheme: (updates: RecursivePartial<FullTheme>) => void;
-  replaceTheme: (updates: RecursivePartial<FullTheme>) => void;
-}
+  updateTheme: UpdateTheme;
+  replaceTheme: ReplaceTheme;
+};
 
-export const ThemeContext: React.Context<ThemeProps<{}>> = React.createContext({
+type ProviderProps = {
+  theme?: CreateTheme;
+};
+
+export const ThemeContext: React.Context<ThemeProps> = React.createContext({
   theme: {
     colors,
   },
-} as ThemeProps<{}>);
+} as ThemeProps);
 
-export type ThemeProviderProps = {
-  useDark?: boolean;
+export const createTheme = (theme: CreateTheme): CreateTheme => {
+  return deepmerge({ colors, darkColors, mode: 'light' } as CreateTheme, theme);
 };
 
-type ThemeProviderState = {
-  theme: Theme;
-  useDark: boolean;
+const separateColors = (theme: CreateTheme, themeMode?: ThemeMode): Theme => {
+  const {
+    darkColors: themeDarkColors = {},
+    colors: themeLightColors = {},
+    mode = themeMode,
+    ...restTheme
+  } = theme;
+
+  const themeColors = mode === 'dark' ? themeDarkColors : themeLightColors;
+  return { colors: themeColors, mode, ...restTheme };
 };
 
-export default class ThemeProvider extends React.Component<
-  ThemeProviderProps,
-  ThemeProviderState
-> {
-  static defaultProps = {
-    theme: {},
-    useDark: false,
-  };
-  defaultTheme: Partial<FullTheme>;
+/**
+ * const myTheme = createTheme({
+ *  mode: 'light'|'dark',
+ *  colors: {},
+ *  darkColors: {},
+ * });
+ *
+ * <ThemeProvider theme={myTheme}>
+ *   <MyComponent />
+ * </ThemeProvider>
+ *
+ */
+export const ThemeProvider: React.FC<ProviderProps> = ({
+  theme = {},
+  children,
+}) => {
+  const [themeState, setThemeState] = React.useState<CreateTheme>(theme);
+  const isMounted = React.useRef<boolean>(false);
 
-  constructor(props: { theme: Theme; useDark?: boolean }) {
-    super(props);
-    const defaultColors = props.useDark ? darkColors : colors;
-    this.defaultTheme = deepmerge(
-      {
-        colors: defaultColors,
-      },
-      props.theme
-    );
-    this.state = {
-      theme: this.defaultTheme,
-      useDark: Boolean(props.useDark),
-    };
-  }
-
-  static getDerivedStateFromProps(
-    props: {
-      theme: Theme;
-      useDark?: boolean;
-    },
-    state: ThemeProviderState
-  ) {
-    const { useDark } = props;
-    const isTheme = (theme: Partial<FullTheme>) => {
-      return !(Object.keys(theme).length === 0 && theme.constructor === Object);
-    };
-    //isTheme will check if the theme is provided by user and will update the theme only if its provided by user
-    //Not checking if the theme exist or not will always result in if statement getting executed as props.theme !== state.theme if theme is not provided
-    if (
-      useDark !== state.useDark ||
-      (isTheme(props.theme) && props.theme !== state.theme)
-    ) {
-      const defaultColors = useDark ? darkColors : colors;
-      return {
-        theme: deepmerge(
-          state.theme,
-          deepmerge(
-            {
-              colors: defaultColors,
-            },
-            props.theme
-          )
-        ),
-        useDark,
-      };
+  useEffect(() => {
+    if (isMounted.current) {
+      setThemeState(theme);
+    } else {
+      isMounted.current = true;
     }
-    return null;
-  }
+  }, [theme.mode, theme.colors, theme.darkColors, theme]);
 
-  updateTheme = (updates: RecursivePartial<FullTheme>) => {
-    this.setState(({ theme }) => ({
-      theme: deepmerge(theme, updates),
-    }));
-  };
+  const updateTheme: UpdateTheme = React.useCallback((updatedTheme) => {
+    setThemeState((oldTheme) => {
+      const newTheme =
+        typeof updatedTheme === 'function'
+          ? updatedTheme(oldTheme)
+          : updatedTheme;
+      return deepmerge({ ...oldTheme }, newTheme);
+    });
+  }, []);
 
-  replaceTheme = (theme: RecursivePartial<FullTheme>) => {
-    this.setState(() => ({
-      theme: deepmerge(this.defaultTheme, theme),
-    }));
-  };
+  const replaceTheme: ReplaceTheme = React.useCallback((replacedTheme) => {
+    setThemeState((oldTheme) => {
+      const newTheme =
+        typeof replacedTheme === 'function'
+          ? replacedTheme(oldTheme)
+          : replacedTheme;
+      return deepmerge(createTheme({}), newTheme);
+    });
+  }, []);
 
-  getTheme = () => this.state.theme;
-
-  render() {
-    return (
-      <ThemeContext.Provider
-        value={{
-          theme: this.state.theme,
-          updateTheme: this.updateTheme,
-          replaceTheme: this.replaceTheme,
-        }}
-      >
-        {this.props.children}
-      </ThemeContext.Provider>
-    );
-  }
-}
+  return (
+    <ThemeContext.Provider
+      value={{
+        theme: separateColors(themeState),
+        updateTheme,
+        replaceTheme,
+      }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
 export const ThemeConsumer = ThemeContext.Consumer;
