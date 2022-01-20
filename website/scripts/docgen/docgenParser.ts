@@ -44,7 +44,7 @@ const parserOptions: ParserOptions = {
 
     // To deal with the props of type `() => void` or `() => any`
     // Input - () => void or () => any
-    // Ouput - Function
+    // Output - Function
     if (prop?.type?.name === '() => void' || prop?.type?.name === '() => any') {
       prop.type.name = 'Function';
     }
