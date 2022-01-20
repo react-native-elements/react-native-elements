@@ -146,10 +146,10 @@ const App = () => {
   };
 
   return (
-    <ThemeProvider theme={myTheme}>
+    <>
       <Button title="Toggle Theme" onPress={toggleTheme} />
       <Button title="Dark" onPress={switchToDarkMode} />
-    </ThemeProvider>
+    </>
   );
 };
 ```
