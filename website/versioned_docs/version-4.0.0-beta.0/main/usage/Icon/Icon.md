@@ -26,6 +26,8 @@ The current list of available icons sets are:
 - [simple-line-icon](https://simplelineicons.github.io/)
 - [zocial](http://weloveiconfonts.com/)
 
+To check all the supported icons, visit [react-native-vector-icons directory](https://oblador.github.io/react-native-vector-icons/)
+
 ## Custom Icon Fonts
 
 Register your own custom icons by calling
