@@ -62,13 +62,17 @@ Elements ships with a 3 utilities for large-scale theming.
 Firstly you'll want to set up your `ThemeProvider`.
 
 ```jsx
-import { ThemeProvider, Button } from '@react-native-elements/themed';
+import {
+  ThemeProvider,
+  Button,
+  createTheme,
+} from '@react-native-elements/themed';
 
-const theme = {
+const theme = createTheme({
   Button: {
     raised: true,
   },
-};
+});
 
 // Your App
 const App = () => {
@@ -91,6 +95,64 @@ This is extremely convenient and is made possible through
 [React's Context API](https://reactjs.org/docs/context.html).
 
 ---
+
+### Light and dark mode
+
+```jsx
+import {
+  ThemeProvider,
+  Button,
+  createTheme,
+} from '@react-native-elements/themed';
+
+const myTheme = createTheme({
+  colors: {
+    primary: '#f2f2f2',
+  },
+  darkColors: {
+    primary: '#121212',
+  },
+  mode: 'dark',
+});
+
+// Your App
+const App = () => {
+  return (
+    <ThemeProvider theme={myTheme}>
+      <Button title="My Button" />
+    </ThemeProvider>
+  );
+};
+```
+
+But how to switch modes?
+
+```jsx
+import { useTheme } from '@react-native-elements/themed';
+
+const App = () => {
+  const { updateTheme } = useTheme();
+
+  const switchToDarkMode = () => {
+    updateTheme({
+      mode: 'dark',
+    });
+  };
+
+  const toggleTheme = () => {
+    updateTheme((theme) => ({
+      mode: theme.mode === 'light' ? 'dark' : 'light',
+    }));
+  };
+
+  return (
+    <>
+      <Button title="Toggle Theme" onPress={toggleTheme} />
+      <Button title="Dark" onPress={switchToDarkMode} />
+    </>
+  );
+};
+```
 
 ### TypeScript Definitions (extending the default theme)
 

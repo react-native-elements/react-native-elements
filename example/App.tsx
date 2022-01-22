@@ -1,26 +1,11 @@
-import React, { useState, useReducer, useEffect } from 'react';
-import { ThemeProvider } from '@react-native-elements/themed';
-import { useColorScheme } from 'react-native-appearance';
+import React, { useState } from 'react';
+import { ThemeProvider, createTheme } from '@react-native-elements/themed';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
 import vectorFonts from './src/helpers/vector-fonts';
-import {
-  ThemeReducer,
-  initialState,
-  ThemeReducerContext,
-} from './src/helpers/ThemeReducer';
 
 export default () => {
-  const [ThemeState, dispatch] = useReducer(ThemeReducer, initialState);
-  const colorScheme = useColorScheme();
-
-  useEffect(() => {
-    if (colorScheme === 'dark') {
-      dispatch({ type: 'set-theme', payload: 'dark' });
-    }
-  }, [colorScheme]);
-
   const [isReady, setIsReady] = useState(false);
 
   const loadAssetsAsync = async () => {
@@ -61,10 +46,14 @@ export default () => {
   }
 
   return (
-    <ThemeReducerContext.Provider value={{ ThemeState, dispatch }}>
-      <ThemeProvider useDark={ThemeState.themeMode === 'dark' ? true : false}>
-        <RootNavigator />
-      </ThemeProvider>
-    </ThemeReducerContext.Provider>
+    <ThemeProvider theme={myTheme}>
+      <RootNavigator />
+    </ThemeProvider>
   );
 };
+const myTheme = createTheme({
+  colors: {
+    primary: '#00a680',
+  },
+  mode: 'dark',
+});
