@@ -356,24 +356,21 @@ If you want to keep your styles outside the component use `makeStyles()` (hook g
 
 ```jsx
 import React from 'react';
-import { Text } from 'react-native';
-import { makeStyles } from 'react-native-elements';
+import { Text, View } from 'react-native';
+import { makeStyles, useTheme } from 'react-native-elements';
 
-type Params = {
-  fullWidth?: boolean,
-};
-
-const MyComponent = (props: Props) => {
-  const styles = useStyles(props);
+const MyComponent = (props) => {
+  const { theme } = useTheme();
+  const styles = useStyles(theme,props);
 
   return (
     <View style={styles.container}>
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
+      <Text style={styles.text}>Yo!</Text>
     </View>
   );
 };
 
-const useStyles = makeStyles((theme, props: Props) => ({
+const useStyles = makeStyles((theme, props) => ({
   container: {
     background: theme.colors.white,
     width: props.fullWidth ? '100%' : 'auto',
@@ -382,6 +379,8 @@ const useStyles = makeStyles((theme, props: Props) => ({
     color: theme.colors.primary,
   },
 }));
+
+export default MyComponent;
 ```
 
 ---
