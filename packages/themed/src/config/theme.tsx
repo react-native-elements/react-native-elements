@@ -35,16 +35,12 @@ import { TextProps } from '../Text';
 import { TileProps } from '../Tile';
 import { TooltipProps } from '../Tooltip';
 import { ViewProps } from 'react-native';
+import { Colors } from './colors';
 
-import colors, { Colors } from './colors';
-
-export default {
-  colors,
-};
-
-type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export interface FullTheme {
+  colors: RecursivePartial<Colors>;
   AirbnbRating: Partial<TapRatingProps>;
   Avatar: Partial<AvatarProps>;
   AvatarAccessory: Partial<AccessoryProps>;
@@ -60,7 +56,6 @@ export interface FullTheme {
   CardTitle: Partial<TextProps>;
   CheckBox: Partial<CheckBoxProps>;
   Chip: Partial<ChipProps>;
-  colors: RecursivePartial<Colors>;
   Dialog: Partial<DialogProps>;
   DialogActions: Partial<DialogActionsProps>;
   DialogButton: Partial<ButtonProps>;
@@ -99,10 +94,9 @@ export interface FullTheme {
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
   Tooltip: Partial<TooltipProps>;
+  mode?: ThemeMode;
 }
 
+export type ThemeMode = 'light' | 'dark';
+
 export type Theme<T = {}> = Partial<FullTheme> & T;
-
-export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
-
-export type ReplaceTheme = (updates: RecursivePartial<FullTheme>) => void;

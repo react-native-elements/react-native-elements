@@ -1,15 +1,17 @@
 import BackgroundImage from './BackgroundImage';
-import colors, { Colors } from './colors';
-import colorsDark from './colorsDark';
+import { Colors, colors, darkColors as colorsDark } from './colors';
 import fonts from './fonts';
-import ThemeProvider, {
+import {
+  ThemeProvider,
   ThemeConsumer,
   ThemeContext,
   ThemeProps,
+  UpdateTheme,
+  ReplaceTheme,
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles, useTheme } from './makeStyles';
-import { Theme, FullTheme, UpdateTheme, ReplaceTheme } from './theme';
+import { Theme, FullTheme } from './theme';
 
 export {
   BackgroundImage,

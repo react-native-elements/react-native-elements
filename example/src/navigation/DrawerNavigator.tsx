@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { View, Image } from 'react-native';
 import {
   DrawerContentScrollView,
@@ -6,21 +6,19 @@ import {
   DrawerContentComponentProps,
   DrawerContentOptions,
 } from '@react-navigation/drawer';
-import {
-  ThemeContext,
-  Text,
-  Divider,
-  Switch,
-} from '@react-native-elements/themed';
-import { ThemeReducerContext } from '../helpers/ThemeReducer';
+import { Text, Divider, Switch, useTheme } from '@react-native-elements/themed';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useColorScheme } from 'react-native-appearance';
 
 function CustomContentComponent(
   props: DrawerContentComponentProps<DrawerContentOptions>
 ) {
-  const { ThemeState, dispatch } = useContext(ThemeReducerContext);
-  const { theme } = useContext(ThemeContext);
+  const { updateTheme, theme } = useTheme();
+  const colorScheme = useColorScheme();
 
+  React.useEffect(() => {
+    updateTheme({ mode: colorScheme === 'dark' ? 'dark' : 'light' });
+  }, [colorScheme, updateTheme]);
   return (
     <SafeAreaView
       style={{
@@ -66,13 +64,11 @@ function CustomContentComponent(
             position: 'absolute',
             right: 5,
           }}
-          value={ThemeState.themeMode === 'dark'}
-          onValueChange={(val) => {
-            if (val === true) {
-              dispatch({ type: 'set-theme', payload: 'dark' });
-            } else {
-              dispatch({ type: 'set-theme', payload: 'light' });
-            }
+          value={theme.mode === 'dark'}
+          onValueChange={() => {
+            updateTheme((myTheme) => ({
+              mode: myTheme.mode === 'dark' ? 'light' : 'dark',
+            }));
           }}
         />
       </View>

@@ -62,6 +62,8 @@ import {
   Theme,
   ThemeProps,
 } from './config';
+import { CreateTheme, createTheme } from './config/ThemeProvider';
+
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
 
@@ -113,6 +115,7 @@ export {
   withTheme,
   useTheme,
   makeStyles,
+  createTheme,
 };
 
 // Components Props exports
@@ -160,4 +163,11 @@ export type {
 };
 
 // Theme props export
-export type { FullTheme, ReplaceTheme, Theme, ThemeProps, UpdateTheme };
+export type {
+  FullTheme,
+  ReplaceTheme,
+  Theme,
+  ThemeProps,
+  UpdateTheme,
+  CreateTheme,
+};
