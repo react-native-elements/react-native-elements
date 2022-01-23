@@ -1,0 +1,87 @@
+name: 🐛 Bug report
+description: Create a report to help us improve
+labels: ["status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug means that there is something broken or outside expectations in `react-native-elements`. If you only need help writing your own components, check out the [Slack channel](https://react-native-elements-slack.herokuapp.com/) FIRST.
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please [search the history](https://github.com/react-native-elements/react-native-elements/issues) to see if an issue already exists for the same problem.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    attributes:
+      label: Explain what you did
+      description: What you were trying to accomplish.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: Describe what happens instead of the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      render: markdown
+      description: |
+        We highly recommend that you re-create the bug on [Snack](https://snack.expo.io). If not, list the steps that a reviewer can take to reproduce the behaviour:
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+  # - type: dropdown
+  #   attributes:
+  #     label: Version
+  #     description: What version of our software are you running?
+  #     multiple: false
+  #     options:
+  #       - Bleeding Edge
+  #       - v4.0.0-beta.0
+  #       - v3.4.x
+  #   validations:
+  #     required: true
+  - type: textarea
+    attributes:
+      label: Your Environment
+      description: |
+        examples:
+          - **react-native-elements**: 3.4.0
+          - **react-native**: 0.64
+      value: |
+        - react-native-elements:
+        - react-native:
+      render: markdown
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/react-native-elements/react-native-elements/blob/next/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Sponsor us
+        Love our work and want to support us? you can sponsor us on [Github Sponsor](https://github.com/sponsors/react-native-elements) or [Open Collective](https://opencollective.com/react-native-elements/)
+
+        Is there a bug that's been hanging around a long time? Get it to the top of the list with a one-time sponsorship tier! [sponsorship tier!](https://github.com/sponsors/react-native-elements?frequency=one-time)
