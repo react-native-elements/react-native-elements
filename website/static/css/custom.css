@@ -352,7 +352,7 @@ html[data-theme='dark'] .header-github-link:after {
   opacity: 0.8;
 }
 a.navbar__item.navbar__link {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .header-github-link:after,
 .navbar-community-link:after {
