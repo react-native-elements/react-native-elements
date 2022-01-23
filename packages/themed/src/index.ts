@@ -169,5 +169,5 @@ export type {
   Theme,
   ThemeProps,
   UpdateTheme,
-  ThemeOptions as CreateTheme,
+  ThemeOptions,
 };

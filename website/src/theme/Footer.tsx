@@ -1,54 +1,7 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
 import useThemeContext from '@theme/hooks/useThemeContext';
-import Sponsor from '../components/Sponsor';
 
-const communities = [
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/nativebase',
-  },
-  {
-    name: 'StackOverflow',
-    url: 'https://stackoverflow.com/questions/tagged/native-base',
-  },
-  {
-    name: 'Discord',
-    url: 'https://discord.com/invite/TSgCw2UPmb',
-  },
-  {
-    name: 'VS Code Extension',
-    url: 'https://marketplace.visualstudio.com/items?itemName=NativeBase.nativebase-v3-vscode-extension&ssr=false#review-details',
-  },
-];
-const docs = [
-  {
-    name: 'Introduction',
-    url: 'https://docs.nativebase.io/',
-  },
-  {
-    name: 'Examples',
-    url: 'https://docs.nativebase.io/todo-example',
-  },
-];
-const more = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/GeekyAnts/NativeBase',
-  },
-  {
-    name: 'Contribution Guidelines',
-    url: 'https://github.com/GeekyAnts/NativeBase/blob/master/CONTRIBUTING.md',
-  },
-  {
-    name: 'Privacy Policy',
-    url: 'https://nativebase.io/privacy-policy',
-  },
-  {
-    name: 'Cookie Policy',
-    url: 'https://nativebase.io/cookie-policy',
-  },
-];
 export default function Footer() {
   const { isDarkTheme } = useThemeContext();
   const darkFooter = isDarkTheme ? 'footer-dark' : '';
@@ -113,7 +66,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="footer__item">
-                <a href="/#sponsor" className="footer__link-item">
+                <a href="/sponsor" className="footer__link-item">
                   Our Sponsors
                 </a>
               </li>

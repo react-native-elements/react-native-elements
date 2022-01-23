@@ -2,17 +2,17 @@ coverage:
   status:
     project:
       default:
-        target: 80% #overall project/ repo coverage
+        target: 78% #overall project/ repo coverage
       base:
-        target: 80%
+        target: 75%
         flags:
           - base
       themed:
-        target: 80%
+        target: 75%
         flags:
           - themed
       universe:
-        target: 80%
+        target: 75%
         flags:
           - universe
 

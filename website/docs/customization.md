@@ -98,6 +98,10 @@ This is extremely convenient and is made possible through
 
 ### Light and dark mode
 
+React Native Elements also provides a preset dark mode palette to get you started with using dark mode in your app.
+Use the prop `mode` in `createTheme` to set the default dark theme. You may want to set this by using a button,
+or by using the user's configured settings
+
 ```jsx
 import {
   ThemeProvider,
@@ -206,15 +210,19 @@ Theme styles are the values that are set by the ThemeProvider If present, these
 are applied second.
 
 ```jsx
-import { ThemeProvider, Button } from '@react-native-elements/themed';
+import {
+  ThemeProvider,
+  Button,
+  createTheme,
+} from '@react-native-elements/themed';
 
-const theme = {
+const theme = createTheme({
   Button: {
     titleStyle: {
       color: 'red',
     },
   },
-};
+});
 
 const App = () => {
   return (
@@ -313,16 +321,16 @@ Setting styles in the theme is as simple as using the name of the component, as
 a key and the props you want to change as the value.
 
 ```jsx
-import { ThemeProvider } from '@react-native-elements/themed';
+import { ThemeProvider ,createTheme} from '@react-native-elements/themed';
 
-const theme = {
+const theme = createTheme({
   Avatar: {
     rounded: true,
   },
   Badge: {
     textStyle: { fontSize: 30 },
   },
-};
+});
 
 ...
 
@@ -331,54 +339,61 @@ const theme = {
 
 ---
 
-### Dark Mode
-
-React Native Elements also provides a preset dark mode palette to get you started with using dark mode in your app.
-Use the prop `useDark` in `ThemeProvider` to set the default dark theme. You may want to set this by using a button,
-or by using the user's configured settings
-
-```jsx
-import { useColorScheme } from 'react-native-appearance';
-
-...
-  let colorScheme = useColorScheme();
-...
-  <ThemeProvider useDark={colorScheme === 'dark'}>
-...
-```
-
----
-
 ### Using the theme in your own components
 
-You may want to make use of the theming utilities in your own components. For
-this you can use the `withTheme` HOC exported from this library. It adds three
-props to the component it wraps - `theme`, `updateTheme` and `replaceTheme`.
+You may want to make use of the theming utilities in your own components. For this you can use the withTheme HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
 
-```jsx
-import React from 'react';
-import { Text } from 'react-native';
-import { withTheme } from '@react-native-elements/themed';
+```tsx title='MyComponent.tsx'
+import { Button, createTheme } from '@react-native-elements/themed';
 
-function MyComponent(props) {
-  const { theme, updateTheme, replaceTheme } = props;
-  return <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
-}
-
-export default withTheme(MyComponent);
-```
-
-The `updateTheme` function merges the theme passed in with the current theme.
-
-```jsx
-const theme = {
-  colors: {
-    primary: 'pink',
-  },
+type MyCustomComponentProps = {
+  title: string;
+  titleStyle: StyleProps<TextStyle>;
 };
 
-// We can update the primary color
-updateTheme({ colors: { primary: 'red' } });
+export const MyCustomComponent = withTheme<MyCustomComponentProps>((props) => {
+  // Access theme from props
+  const { theme, updateTheme, replaceTheme } = props;
+  // ...
+});
+
+declare module 'react-native-elements' {
+  export interface FullTheme {
+    MyCustomComponent: Partial<MyCustomComponentProps>;
+  }
+}
+```
+
+```tsx title='App.tsx'
+import { ThemeProvider, createTheme } from '@react-native-elements/themed';
+
+const myTheme = createTheme({
+  MyCustomComponent: {
+    titleStyle: {
+      color: 'red',
+    },
+  },
+});
+
+const App = () => {
+  return (
+    <ThemeProvider theme={myTheme}>
+      <MyCustomComponent title="My Component" />
+    </ThemeProvider>
+  );
+};
+```
+
+The updateTheme function merges the theme passed in with the current theme.
+
+```tsx
+updateTheme({
+  MyCustomComponent: {
+    titleStyle: {
+      color: 'blue',
+    },
+  },
+});
 ```
 
 The `replaceTheme` function merges the theme passed in with the default theme.
