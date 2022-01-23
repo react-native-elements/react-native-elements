@@ -55,8 +55,7 @@
     "packages/**/*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write",
-      "tsc --noEmit --composite false",
-      "jest --bail --findRelatedTests"
+      "tsc --noEmit --composite false"
     ],
     "packages/**/*.{js,jsx}": [
       "eslint --fix",

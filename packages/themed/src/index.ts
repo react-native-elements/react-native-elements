@@ -62,7 +62,7 @@ import {
   Theme,
   ThemeProps,
 } from './config';
-import { CreateTheme, createTheme } from './config/ThemeProvider';
+import { ThemeOptions, createTheme } from './config/ThemeProvider';
 
 import getIconType, { registerCustomIconType } from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
@@ -169,5 +169,5 @@ export type {
   Theme,
   ThemeProps,
   UpdateTheme,
-  CreateTheme,
+  ThemeOptions,
 };

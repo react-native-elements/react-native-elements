@@ -81,10 +81,16 @@
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
     "collectCoverageFrom": [
-      "src/**/*.tsx",
+      "src/**/*.{js,jsx,ts,tsx}",
       "!src/index.tsx",
       "!src/helpers/*.tsx"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "statements": 90
+      }
+    }
   },
   "repository": {
     "type": "git",
