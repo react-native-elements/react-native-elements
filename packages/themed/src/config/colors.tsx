@@ -1,3 +1,5 @@
+import { StyleSheet } from 'react-native';
+
 interface PlatformColors {
   primary: string;
   secondary: string;
@@ -25,6 +27,7 @@ export interface Colors {
   readonly warning: string;
   readonly error: string;
   readonly disabled: string;
+  readonly divider: string;
   readonly platform: {
     ios: PlatformColors;
     android: PlatformColors;
@@ -51,6 +54,7 @@ export const colors: Colors = {
   warning: '#faad14',
   disabled: 'hsl(208, 8%, 90%)',
   // Darker color if hairlineWidth is not thin enough
+  divider: StyleSheet.hairlineWidth < 1 ? '#bcbbc1' : 'rgba(0, 0, 0, 0.12)',
   platform: {
     ios: {
       primary: '#007aff',
@@ -109,7 +113,7 @@ export const darkColors: Colors = {
   warning: '#cfbe27',
   disabled: 'hsl(208, 8%, 90%)',
   // Darker color if hairlineWidth is not thin enough
-  // divider: StyleSheet.hairlineWidth < 1 ? '#84838a' : 'rgba(0, 0, 0, 0.12)',
+  divider: StyleSheet.hairlineWidth < 1 ? '#84838a' : 'rgba(0, 0, 0, 0.12)',
   platform: {
     ios: {
       primary: '#1b262c',

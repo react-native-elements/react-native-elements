@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import deepmerge from 'deepmerge';
 import { colors, darkColors, Colors } from './colors';
 import { Theme, ThemeMode, RecursivePartial } from './theme';
 
 export type { RecursivePartial };
 
-export type CreateTheme = Theme<{
+export type ThemeOptions = Theme<{
   darkColors?: RecursivePartial<Colors>;
 }>;
 
 export type UpdateTheme = (
-  myNewTheme: CreateTheme | ((myTheme: Theme) => CreateTheme)
+  myNewTheme: ThemeOptions | ((myTheme: Theme) => ThemeOptions)
 ) => void;
 
 export type ReplaceTheme = (
-  updates: CreateTheme | ((myTheme: Theme) => CreateTheme)
+  updates: ThemeOptions | ((myTheme: Theme) => ThemeOptions)
 ) => void;
 
 export type ThemeProps<T = {}> = {
@@ -23,21 +23,20 @@ export type ThemeProps<T = {}> = {
   replaceTheme: ReplaceTheme;
 };
 
-type ProviderProps = {
-  theme?: CreateTheme;
-};
-
 export const ThemeContext: React.Context<ThemeProps> = React.createContext({
   theme: {
     colors,
   },
 } as ThemeProps);
 
-export const createTheme = (theme: CreateTheme): CreateTheme => {
-  return deepmerge({ colors, darkColors, mode: 'light' } as CreateTheme, theme);
+export const createTheme = (theme: ThemeOptions): ThemeOptions => {
+  return deepmerge(
+    { colors, darkColors, mode: 'light' } as ThemeOptions,
+    theme
+  );
 };
 
-const separateColors = (theme: CreateTheme, themeMode?: ThemeMode): Theme => {
+const separateColors = (theme: ThemeOptions, themeMode?: ThemeMode): Theme => {
   const {
     darkColors: themeDarkColors = {},
     colors: themeLightColors = {},
@@ -50,31 +49,16 @@ const separateColors = (theme: CreateTheme, themeMode?: ThemeMode): Theme => {
 };
 
 /**
- * const myTheme = createTheme({
- *  mode: 'light'|'dark',
- *  colors: {},
- *  darkColors: {},
- * });
- *
  * <ThemeProvider theme={myTheme}>
  *   <MyComponent />
  * </ThemeProvider>
- *
  */
-export const ThemeProvider: React.FC<ProviderProps> = ({
-  theme = {},
-  children,
-}) => {
-  const [themeState, setThemeState] = React.useState<CreateTheme>(theme);
-  const isMounted = React.useRef<boolean>(false);
-
-  useEffect(() => {
-    if (isMounted.current) {
-      setThemeState(theme);
-    } else {
-      isMounted.current = true;
-    }
-  }, [theme.mode, theme.colors, theme.darkColors, theme]);
+export const ThemeProvider: React.FC<{
+  theme?: ThemeOptions;
+}> = ({ theme = {}, children }) => {
+  const [themeState, setThemeState] = React.useState<ThemeOptions>(
+    createTheme(theme)
+  );
 
   const updateTheme: UpdateTheme = React.useCallback((updatedTheme) => {
     setThemeState((oldTheme) => {
