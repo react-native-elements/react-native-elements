@@ -83,15 +83,6 @@ const App = () => {
 };
 ```
 
-### Migration to Functional
-
-These components are converted to Functional Components,
-
-- Button
-- Slider
-- Tooltip
-- Image
-
 ### Pressable
 
 These components are now using `Pressable` instead of `Touchable`
@@ -131,12 +122,6 @@ and the rest of props for `Pressable` can be added via `pressableProps` API
 ```
 
 few other props (like `underlayColor`) will not be supported, you can remove them.
-
-:::info
-
-`Button` Component still uses Touchable, As `Pressable` works differently compared to `TouchableNativeFeedback`, for instance, the Button will apply the primary color as the button background color, however, the pressable ripple effect will then render behind the button, which results in no ripple.
-
-:::
 
 ### Tooltip
 
