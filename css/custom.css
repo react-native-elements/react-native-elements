@@ -351,15 +351,6 @@ html[data-theme='dark'] .header-github-link:after {
 .header-github-link:hover:after {
   opacity: 0.8;
 }
-a.navbar__item.navbar__link {
-  font-weight: bold;
-}
-.header-github-link:after,
-.navbar-community-link:after {
-  border-style: none !important;
-  margin-left: -5px !important;
-  margin-right: 5px;
-}
 
 .header-github-sponsor-link:after {
   transition: opacity 0.2s;
