@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "react-native-elements-app",
+    "slug": "react-native-elements-app",
+    "description": "A demo app for React Native Elements UI Library",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
+    "platforms": ["web"],
+    "version": "1.1.0",
+    "primaryColor": "#cccccc",
+    "web": {
+      "publicPath": "/react-native-elements-app/"
+    }
+  }
+}

@@ -18,7 +18,7 @@ The major difference is that React Native can support JSX and advanced javascrip
 After creating a new create-react-app project, run the following commands.
 
 ```bash
-yarn add react-native-elements react-native-web react-native-vector-icons
+yarn add  @react-native-elements/base @react-native-elements/themed react-native-web react-native-vector-icons
 ```
 
 ```bash
@@ -34,7 +34,8 @@ const { override, addBabelPlugins, babelInclude } = require('customize-cra');
 module.exports = override(
   ...addBabelPlugins('@babel/plugin-proposal-class-properties'),
   babelInclude([
-    path.resolve(__dirname, 'node_modules/react-native-elements'),
+    path.resolve(__dirname, 'node_modules/@react-native-elements/base'),
+    path.resolve(__dirname, 'node_modules/@react-native-elements/themed'),
     path.resolve(__dirname, 'node_modules/react-native-vector-icons'),
     path.resolve(__dirname, 'node_modules/react-native-ratings'),
     path.resolve(__dirname, 'src'),
@@ -45,7 +46,7 @@ module.exports = override(
 Also you should keep in mind that not all of React Native components are implemented for web-platform out-of-box.
 For example, `Modal` component is not yet implemented in `react-native-web`. Therefore, to use some of our components
 you may need to install additional third-party libraries that implement the missing functionality.
-For [`Overlay`](/main/overlay.md) and [`Tooltip`](/main/tooltip.md) components `Modal` implementation is required.
+For [`Overlay`](/main/Overlay.mdx) and [`Tooltip`](/main/Tooltip.mdx) components `Modal` implementation is required.
 
 Lastly, change your scripts in `package.json` to use react-app-rewired:
 

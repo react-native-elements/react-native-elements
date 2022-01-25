@@ -1,0 +1,26 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - invalid
+      - Blocked
+    authors:
+      - dependabot
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - breaking change
+    - title: New Features
+      labels:
+        - "PR: feature"
+    - title: Bug fixes
+      labels:
+        - "PR: fix"
+    - title: Cleanup ♻️
+      labels:
+        - "PR: chore"
+        - "PR: docs"
+        - "PR: refactor"
+    - title: Other Changes
+      labels:
+        - "*"

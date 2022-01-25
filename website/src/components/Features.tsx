@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../static/css/components.css';
+import Link from '@docusaurus/Link';
 
 type FeatureTypes = {
   title: string;
@@ -11,7 +12,7 @@ const features: FeatureTypes[] = [
   {
     title: 'Cross-Platform',
     description:
-      'Consistent design across android, iOS, and web. 30+ components designed to save development time',
+      'Consistent design across android, iOS, and web. 30+ components designed to save development time.',
     img: '/img/website/tweak.svg',
   },
   {
@@ -37,23 +38,48 @@ const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
       <section className="margin-vert--xl">
-        <div className="container ">
-          <h1 className="hero__title gradient clip-text text--center">
+        <div className="container text--center">
+          <h1 className="hero__title gradient clip-text">
             Why React Native Elements?
           </h1>
-          <div className="row">
-            <div className="col col--10 col--offset-1">
-              <p className="p--desc margin-vert--md text--center">
+          {/* <div>
+            <Link
+              className={'margin-horiz--md margin-vert--sm heroButton'}
+              to={
+                'https://github.com/react-native-elements/react-native-elements/stargazers'
+              }
+            >
+              <img
+                alt="GitHub Repo stars"
+                src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?color=white&label=Github%20Stars&logo=github&style=for-the-badge"
+              />
+            </Link>
+            <Link
+              className={'margin-horiz--md margin-vert--sm heroButton'}
+              to={
+                'https://github.com/react-native-elements/react-native-elements/stargazers'
+              }
+            >
+              <img
+                alt="npm"
+                src="https://img.shields.io/npm/dm/react-native-elements?color=white&label=installs&logo=npm&style=for-the-badge"
+              />
+            </Link>
+          </div> */}
+
+          {/* <div className="row">
+            <div className="col col--10 ">
+              <p className="p--desc margin-vert--md">
                 React Native Elements is an implementation of the Material
                 Design System. The framework contains a set of general-purpose
                 UI components styled in a similar way. The most awesome thing
                 about is that the themes can be changed in the runtime without
                 reloading the application. This way, you may easily focus on
-                business logic, while we takes care of the visual appearance of
+                business logic, while we take care of the visual appearance of
                 your product.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="container">
           <div className="row">
@@ -73,7 +99,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 >
                   <div className="card__image padding-horiz--lg  margin-vert--lg ">
                     <img
-                      height={'220px'}
+                      height={'120px'}
                       src={img}
                       alt="Image alt text"
                       title="Logo Title Text 1"
