@@ -1,5 +1,6 @@
 {
   "private": true,
+  "packageManager": "yarn@3.1.1",
   "workspaces": {
     "packages": [
       "packages/*",
@@ -29,11 +30,13 @@
     "@types/jest": "^27.4.0",
     "@types/react-native": "*",
     "babel-jest": "^27.4.6",
+    "codecov": "^3.8.3",
     "eslint": "^7.9.0",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "lerna": "^4.0.0",
     "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-native": "^0.64.0",
     "react-test-renderer": "^16.13.1",
