@@ -165,7 +165,7 @@ label or React Component used instead of simple string in `label` prop
 
 |                                             Type                                              | Default |
 | :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://reactnative.dev/docs/text.html#props)} **OR** passed component props |  none   |
+| {[...Text props](https://reactnative.dev/docs/text#props)} **OR** passed component props |  none   |
 
 ---
 
