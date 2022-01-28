@@ -41,6 +41,7 @@ export default () => {
           title="Navigate"
           upperCase
           icon={{ name: 'place', color: 'white' }}
+          size="small"
         />
 
         <Text style={{ color: '#397af8', paddingVertical: 10 }}>Disabled</Text>
