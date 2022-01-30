@@ -16,20 +16,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
           key: ${{ runner.os }}-dist-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-dist-
       - name: Install Dependencies
-        run: |
-          yarn global add codecov
-          yarn
+        run: yarn
       - run: yarn lint
       - run: yarn typescript
       - run: yarn test && npx codecov --disable=gcov

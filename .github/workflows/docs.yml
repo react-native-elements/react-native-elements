@@ -19,18 +19,22 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
           key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-website-
       - name: Install dependencies
         run: yarn install
+      - name: Cache website dependencies
+        uses: actions/cache@v2
+        with:
+          path: website/.yarn/cache
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
       - name: Install website dependencies
         run: yarn install
         working-directory: website
