@@ -10,7 +10,7 @@ type AvatarData = {
 
 const dataList: AvatarData[] = [
   {
-    image_url: 'https://uifaces.co/our-content/donated/6MWH9Xi_.jpg',
+    image_url: 'https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg',
   },
   {
     image_url: 'https://randomuser.me/api/portraits/men/36.jpg',
