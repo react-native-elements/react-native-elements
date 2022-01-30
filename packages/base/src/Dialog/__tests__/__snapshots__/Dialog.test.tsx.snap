@@ -52,7 +52,7 @@ exports[`Dialog Component should render without any children 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "rgb(0, 0, 0)",
             "borderRadius": 3,
             "padding": 20,
             "shadowColor": "rgba(0, 0, 0, .3)",

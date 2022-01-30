@@ -9,6 +9,7 @@ import {
   ViewStyle,
   StyleProp,
 } from 'react-native';
+import Color from 'color';
 import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
 export type OverlayProps = Omit<ModalProps, 'visible'> & {
@@ -45,6 +46,7 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
   onPressOut,
   onPressIn,
   onLongPress,
+  theme,
   ...rest
 }) => (
   <ModalComponent
@@ -72,6 +74,12 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
           styles.overlay,
           fullScreen && styles.fullscreen,
           overlayStyle,
+          {
+            backgroundColor: Color(theme?.colors?.white)
+              .lighten(10)
+              .rgb()
+              .toString(),
+          },
         ])}
       >
         {children}

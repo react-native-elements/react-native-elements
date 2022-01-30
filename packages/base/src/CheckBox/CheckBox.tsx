@@ -92,8 +92,11 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
+        {
+          backgroundColor: theme.colors.white,
+          borderColor: theme.colors.white,
+        },
         styles.container,
-        title && styles.containerHasTitle,
         containerStyle && containerStyle,
       ])}
     >
