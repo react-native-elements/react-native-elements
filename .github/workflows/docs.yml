@@ -35,7 +35,7 @@ jobs:
         run: yarn install
         working-directory: website
       - name: Build 🔧
-        run: yarn docs:build
+        run: yarn docs-build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
