@@ -1,0 +1,22 @@
+name: Comment when opened
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      # - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     ISSUE: ${{ github.event.issue.html_url }}
+      # To reference old commits, fetch-depth: 0 is required.
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: arpitBhalla/monorepo-changelog@master
+        with:
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
+          from: "v4.0.0-beta.0"
+      - run: echo

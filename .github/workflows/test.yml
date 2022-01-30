@@ -23,10 +23,6 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-
-      - run: gh pr  comment $ISSUE --body "Thank you for opening this issue!"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE: ${{ github.event.pull_request.html_url }}
       - name: Install
         run: |
           yarn
