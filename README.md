@@ -88,7 +88,7 @@ const App = () => <Button title="Hello World!" />;
 - [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-### Universe
+### Other Components
 
 - [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
