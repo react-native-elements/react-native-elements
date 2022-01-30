@@ -72,5 +72,16 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  },
+  "changelog": {
+    "nextVersion": "TODO version name",
+    "cacheDir": ".changelog",
+    "labels": {
+      "PR: Breaking Change :boom:": ":boom: Breaking Change",
+      "PR: New Feature :tada:": ":rocket: New Feature",
+      "PR: Docs :memo:": ":memo: Documentation",
+      "PR: Bug Fix :bug:": ":bug: Bug Fix",
+      "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
+    }
   }
 }
