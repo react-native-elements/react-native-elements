@@ -15,7 +15,7 @@ jobs:
           node-version: "14"
       - name: Get yarn cache
         id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -25,7 +25,6 @@ jobs:
             ${{ runner.os }}-
       - name: Install
         run: |
-          yarn global add codecov
           yarn
       - run: yarn test && npx codecov --disable=gcov
   typescript:
@@ -39,7 +38,7 @@ jobs:
           node-version: "14"
       - name: Get yarn cache
         id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -61,7 +60,7 @@ jobs:
           node-version: "14"
       - name: Get yarn cache
         id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -82,7 +81,7 @@ jobs:
         uses: actions/setup-node@v2
       - name: Get yarn cache
         id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -96,6 +95,6 @@ jobs:
         run: yarn install
         working-directory: website
       - name: Build 🔧
-        run: yarn docs:build:api
+        run: yarn docs-build-api
       - name: Check for API changes
         run: git diff --exit-code

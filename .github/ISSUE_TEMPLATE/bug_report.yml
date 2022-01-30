@@ -1,6 +1,6 @@
 name: 🐛 Bug report
 description: Create a report to help us improve
-labels: ["status: triage"]
+labels: ["Needs Triage"]
 body:
   - type: markdown
     attributes:
@@ -47,29 +47,25 @@ body:
     attributes:
       label: Screenshots
       description: If applicable, add screenshots to help explain your problem.
-  # - type: dropdown
-  #   attributes:
-  #     label: Version
-  #     description: What version of our software are you running?
-  #     multiple: false
-  #     options:
-  #       - Bleeding Edge
-  #       - v4.0.0-beta.0
-  #       - v3.4.x
-  #   validations:
-  #     required: true
+  - type: dropdown
+    attributes:
+      label: Package
+      description: What package?
+      multiple: false
+      options:
+        - "@react-native-elements/base"
+        - "@react-native-elements/themed"
+        - "@react-native-elements/circular-slider"
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Your Environment
       description: |
         examples:
-          - **react-native-elements**: 3.4.0
+          - **@react-native-elements/base**: 3.4.0
           - **react-native**: 0.64
-      value: |
-        - react-native-elements:
-        - react-native:
       render: markdown
-
   - type: checkboxes
     id: terms
     attributes:
@@ -81,7 +77,4 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Sponsor us
-        Love our work and want to support us? you can sponsor us on [Github Sponsor](https://github.com/sponsors/react-native-elements) or [Open Collective](https://opencollective.com/react-native-elements/)
-
-        Is there a bug that's been hanging around a long time? Get it to the top of the list with a one-time sponsorship tier! [sponsorship tier!](https://github.com/sponsors/react-native-elements?frequency=one-time)
+        If you like React Native Elements, give us a star! ⭐ and sponsor us via [Github Sponsor](https://github.com/sponsors/react-native-elements) or [Open Collective](https://opencollective.com/react-native-elements/)

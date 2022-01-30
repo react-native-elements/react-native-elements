@@ -24,8 +24,7 @@
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog -p"
+    "clean-install": "rimraf node_modules && yarn"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",
@@ -38,22 +37,19 @@
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.0"
+  },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "@react-native-elements/base": "^4.0.0-beta.0",
     "@types/color": "^3.0.1",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/lodash.isequal": "^4.5.5",
     "@types/react-test-renderer": "^17.0.0",
-    "auto-changelog": "^2.2.1",
     "babel-jest": "^26.3.0",
     "metro-react-native-babel-preset": "^0.63.0",
     "react-test-renderer": "^16.13.1",
     "utility-types": "^3.10.0"
-  },
-  "peerDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.0"
   },
   "jest": {
     "displayName": "@react-native-elements/themed",

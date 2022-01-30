@@ -21,7 +21,7 @@ jobs:
           node-version: "14"
       - name: Get yarn cache
         id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -35,7 +35,7 @@ jobs:
         run: yarn install
         working-directory: website
       - name: Build 🔧
-        run: yarn docs:build
+        run: yarn docs-build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:

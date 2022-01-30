@@ -10,16 +10,22 @@ changelog:
     - title: Breaking Changes 🛠
       labels:
         - breaking change
-    - title: New Features
+    - title: New Features 🎉
       labels:
         - "PR: feature"
-    - title: Bug fixes
+        - ":sparkles: Enhancement"
+        - ":bulbNew: Component"
+    - title: Bug fixes 🐛
       labels:
         - "PR: fix"
+        - ":bug: Bug"
+    - title: Docs 📖
+      labels:
+        - ":book: Docs"
+        - "PR: docs"
     - title: Cleanup ♻️
       labels:
         - "PR: chore"
-        - "PR: docs"
         - "PR: refactor"
     - title: Other Changes
       labels:

@@ -1,5 +1,6 @@
 {
   "private": true,
+  "packageManager": "yarn@3.1.1",
   "workspaces": {
     "packages": [
       "packages/*",
@@ -14,11 +15,8 @@
     "build": "lerna run build",
     "clean-install": "rimraf node_modules && yarn",
     "example": "yarn --cwd example",
-    "docs:build": "yarn --cwd website build",
-    "docs:build:api": "yarn --cwd website build:api",
-    "docs:serve": "yarn --cwd website start",
-    "docs:format": "prettier --write 'website/docs/**/*.md'",
-    "docs:test": "yarn --cwd website test",
+    "docs-build": "cd website && yarn run build",
+    "docs-build-api": "cd website && yarn run build-api",
     "postinstall": "husky install",
     "lint-staged": "lint-staged"
   },
@@ -29,11 +27,13 @@
     "@types/jest": "^27.4.0",
     "@types/react-native": "*",
     "babel-jest": "^27.4.6",
+    "codecov": "^3.8.3",
     "eslint": "^7.9.0",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "lerna": "^4.0.0",
     "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-native": "^0.64.0",
     "react-test-renderer": "^16.13.1",
@@ -69,5 +69,16 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  },
+  "changelog": {
+    "nextVersion": "TODO version name",
+    "cacheDir": ".changelog",
+    "labels": {
+      "PR: Breaking Change :boom:": ":boom: Breaking Change",
+      "PR: New Feature :tada:": ":rocket: New Feature",
+      "PR: Docs :memo:": ":memo: Documentation",
+      "PR: Bug Fix :bug:": ":bug: Bug Fix",
+      "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
+    }
   }
 }
