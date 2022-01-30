@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-elements/universe",
+  "name": "@react-native-elements/circular-slider",
   "version": "0.0.0",
   "description": "React Native Elements Next Gen Components",
   "main": "dist/index.js",
@@ -39,7 +39,6 @@
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
-  "dependencies": {},
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "@react-native-elements/base": "^4.0.0-beta.0",
