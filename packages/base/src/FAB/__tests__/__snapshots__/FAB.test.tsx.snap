@@ -68,10 +68,10 @@ exports[`FAB Component should match snapshot 1`] = `
               "borderRadius": 3,
               "borderWidth": 0,
               "flexDirection": "row",
-              "height": 48,
+              "height": 40,
               "justifyContent": "center",
               "padding": 8,
-              "paddingHorizontal": 16,
+              "paddingHorizontal": 12,
             }
           }
         >
