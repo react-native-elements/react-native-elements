@@ -53,6 +53,7 @@ export default () => {
             name: 'place',
             color: 'white',
           }}
+          size="small"
         />
         <FAB
           visible={visible}

@@ -73,7 +73,9 @@ export const FAB: RneFunctionComponent<FABProps> = ({
       <Button
         buttonStyle={StyleSheet.flatten([
           rest.title
-            ? styles.extendedLabel
+            ? size === 'small'
+              ? styles.smallExtendedLabel
+              : styles.extendedLabel
             : size === 'small'
             ? styles.smallFAB
             : styles.largeFAB,
@@ -139,6 +141,10 @@ const styles = StyleSheet.create({
   extendedLabel: {
     height: 48,
     paddingHorizontal: 16,
+  },
+  smallExtendedLabel: {
+    height: 40,
+    paddingHorizontal: 12,
   },
   disabled: {
     elevation: 0,
