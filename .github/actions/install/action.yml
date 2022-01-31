@@ -1,0 +1,23 @@
+name: Install dependencies
+author: arpitBhalla
+description: ""
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js Env
+      uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      id: cache
+      with:
+        path: "**/node_modules"
+        key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-
+    - name: Install
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install
+      shell: bash
