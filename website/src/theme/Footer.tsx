@@ -113,7 +113,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="footer__item">
-                <a href="/#sponsor" className="footer__link-item">
+                <a href="/sponsor" className="footer__link-item">
                   Our Sponsors
                 </a>
               </li>

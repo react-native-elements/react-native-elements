@@ -29,8 +29,7 @@
     "test:watch": "jest --watch",
     "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "clean-install": "rimraf node_modules && yarn",
-    "changelog": "auto-changelog -p"
+    "clean-install": "rimraf node_modules && yarn"
   },
   "author": "Nader Dabit & Monte Thakkar",
   "license": "MIT",

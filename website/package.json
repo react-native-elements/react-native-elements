@@ -3,9 +3,8 @@
   "scripts": {
     "examples": "docusaurus examples",
     "start": "docusaurus start",
-    "build:api": "ts-node scripts/docgen/index.ts",
-    "prebuild": "yarn build:api",
-    "build": "docusaurus build",
+    "build-api": "ts-node scripts/docgen/index.ts",
+    "build": "yarn run build-api && docusaurus build",
     "deploy": "docusaurus deploy",
     "swizzle": "docusaurus swizzle",
     "publish-gh-pages": "docusaurus deploy",

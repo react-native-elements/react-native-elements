@@ -4,7 +4,7 @@ on:
     branches:
       - next
     paths:
-      - "website/**"
+      - 'website/**'
 
 jobs:
   docs:
@@ -18,29 +18,33 @@ jobs:
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: '14'
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
           key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-website-
       - name: Install dependencies
         run: yarn install
+      - name: Cache website dependencies
+        uses: actions/cache@v2
+        with:
+          path: website/.yarn/cache
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
       - name: Install website dependencies
         run: yarn install
         working-directory: website
       - name: Build 🔧
-        run: yarn docs:build
+        run: yarn docs-build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
-          user_name: "React Native Elements CI"
-          user_email: "react-native-elements-ci@users.noreply.github.com"
+          user_name: 'React Native Elements CI'
+          user_email: 'react-native-elements-ci@users.noreply.github.com'
           cname: reactnativeelements.com

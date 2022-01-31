@@ -43,7 +43,7 @@
       "repo/contributing",
       "repo/testing",
       "repo/labels",
-      "migration_v3_to_v4"
+      "migration_guide"
     ]
   }
 }

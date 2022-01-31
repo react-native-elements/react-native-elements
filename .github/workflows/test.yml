@@ -5,45 +5,38 @@ on:
       - next
 jobs:
   test:
-    name: "check_unit_tests"
+    name: 'check_unit_tests'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: '14'
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-
       - name: Install
         run: |
-          yarn global add codecov
           yarn
       - run: yarn test && npx codecov --disable=gcov
   typescript:
-    name: "check_types"
+    name: 'check_types'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: '14'
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-
@@ -51,21 +44,18 @@ jobs:
         run: yarn
       - run: yarn typescript
   lint:
-    name: "check_lint"
+    name: 'check_lint'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: '14'
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-
@@ -74,19 +64,23 @@ jobs:
       - run: yarn lint
       - run: yarn format
   docs-api:
-    name: "check_docs_api"
+    name: 'check_docs_api'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js Env
         uses: actions/setup-node@v2
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: .yarn/cache
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Cache website dependencies
+        uses: actions/cache@v2
+        with:
+          path: website/.yarn/cache
           key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-website-
@@ -96,6 +90,6 @@ jobs:
         run: yarn install
         working-directory: website
       - name: Build 🔧
-        run: yarn docs:build:api
+        run: yarn docs-build-api
       - name: Check for API changes
         run: git diff --exit-code

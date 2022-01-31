@@ -283,6 +283,7 @@ const ListContent = (props: ListContentType) => {
                   width: 120,
                   backgroundColor: 'rgba(222, 223, 226, 1)',
                   borderRadius: 5,
+                  paddingVertical: 5,
                 }}
                 titleStyle={{
                   fontFamily: 'regular',
@@ -300,6 +301,7 @@ const ListContent = (props: ListContentType) => {
                   width: 120,
                   backgroundColor: 'rgba(113, 154, 112, 1)',
                   borderRadius: 5,
+                  paddingVertical: 5,
                 }}
                 titleStyle={{
                   fontFamily: 'regular',
