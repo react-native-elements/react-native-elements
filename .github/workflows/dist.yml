@@ -7,27 +7,16 @@ on:
       - "website/**"
       - "example/**"
 jobs:
+  checks:
+    uses: ./.github/workflows/test.yml
   build:
+    needs: checks
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-dist-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-dist-
-      - name: Install Dependencies
-        run: yarn
-      - run: yarn lint
-      - run: yarn typescript
-      - run: yarn test && npx codecov --disable=gcov
+      - name: Install dependencies
+        uses: ./.github/actions/install
       - name: Build packages
         run: yarn build
       - name: Config git

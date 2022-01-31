@@ -1,0 +1,41 @@
+name: Install dependencies
+author: arpitBhalla
+description: ""
+inputs:
+  install_website:
+    description: ""
+    required: false
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js Env
+      uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      id: root_cache
+      with:
+        path: "node_modules"
+        key: ${{ runner.os }}-rne-cache-${{ hashFiles('yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-rne-cache
+    - name: Install
+      if: steps.root_cache.outputs.cache-hit != 'true'
+      run: yarn install
+      shell: bash
+    - name: Cache website dependencies
+      uses: actions/cache@v2
+      if: inputs.install_website == 'true'
+      id: website_cache
+      with:
+        path: "website/node_modules"
+        key: ${{ runner.os }}-rne-website-${{ hashFiles('website/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-rne-website-
+    - name: Install website dependencies
+      if: steps.website_cache.outputs.cache-hit != 'true' && inputs.install_website == 'true'
+      run: yarn install
+      working-directory: website
+      shell: bash

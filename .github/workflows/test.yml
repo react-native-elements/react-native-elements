@@ -6,90 +6,54 @@ on:
 jobs:
   test:
     name: "check_unit_tests"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-
-      - name: Install
-        run: |
-          yarn
-      - run: yarn test && npx codecov --disable=gcov
+      - name: Install dependencies
+        uses: ./.github/actions/install
+      - run: yarn test
+      - name: Upload Coverage
+        run: npx codecov --disable=gcov
   typescript:
     name: "check_types"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-
-      - name: Install
-        run: yarn
+      - name: Install dependencies
+        uses: ./.github/actions/install
       - run: yarn typescript
   lint:
     name: "check_lint"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-
-      - name: Install
-        run: yarn
+      - name: Install dependencies
+        uses: ./.github/actions/install
       - run: yarn lint
       - run: yarn format
   docs-api:
     name: "check_docs_api"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-
-      - name: Cache website dependencies
-        uses: actions/cache@v2
-        with:
-          path: website/.yarn/cache
-          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-website-
       - name: Install dependencies
-        run: yarn install
-      - name: Install website dependencies
-        run: yarn install
-        working-directory: website
+        uses: ./.github/actions/install
+        with:
+          install_website: true
       - name: Build 🔧
         run: yarn docs-build-api
       - name: Check for API changes
         run: git diff --exit-code
+
+  # If dep changes this will cache them, else each job will try to update cache
+  install:
+    name: "yarn_install"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: ./.github/actions/install
