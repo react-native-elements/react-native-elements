@@ -12,6 +12,14 @@ export interface ThemedComponent {
   displayName: string;
 }
 
+const combineByStyles = (key = '') => {
+  if (key.endsWith('style') || key.endsWith('Style')) {
+    return (a, b) => {
+      return [a, b].flat();
+    };
+  }
+};
+
 const ThemedComponent = (
   WrappedComponent: any,
   themeKey?: string,
@@ -46,6 +54,7 @@ const ThemedComponent = (
                   {},
                 rest,
                 {
+                  customMerge: combineByStyles,
                   clone: false,
                 }
               ),

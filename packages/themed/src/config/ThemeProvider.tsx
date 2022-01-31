@@ -80,14 +80,17 @@ export const ThemeProvider: React.FC<{
     });
   }, []);
 
+  const ThemeContextValue = React.useMemo(
+    () => ({
+      theme: separateColors(themeState, themeState.mode),
+      updateTheme,
+      replaceTheme,
+    }),
+    [themeState, updateTheme, replaceTheme]
+  );
+
   return (
-    <ThemeContext.Provider
-      value={{
-        theme: separateColors(themeState),
-        updateTheme,
-        replaceTheme,
-      }}
-    >
+    <ThemeContext.Provider value={ThemeContextValue}>
       {children}
     </ThemeContext.Provider>
   );

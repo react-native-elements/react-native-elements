@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { FullTheme } from './theme';
 import { ThemeContext } from './ThemeProvider';
@@ -13,7 +13,9 @@ export const makeStyles =
   ) =>
   (props: V = {} as any): T => {
     const { theme } = useTheme();
-    const css = typeof styles === 'function' ? styles(theme, props) : styles;
 
-    return StyleSheet.create(css);
+    return useMemo(() => {
+      const css = typeof styles === 'function' ? styles(theme, props) : styles;
+      return StyleSheet.create(css);
+    }, [props, theme]);
   };
