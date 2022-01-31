@@ -4,7 +4,7 @@ on:
     branches:
       - next
     paths:
-      - 'website/**'
+      - "website/**"
 
 jobs:
   docs:
@@ -15,29 +15,10 @@ jobs:
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: .yarn/cache
-          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-website-
       - name: Install dependencies
-        run: yarn install
-      - name: Cache website dependencies
-        uses: actions/cache@v2
+        uses: ./.github/actions/install
         with:
-          path: website/.yarn/cache
-          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-website-
-      - name: Install website dependencies
-        run: yarn install
-        working-directory: website
+          install_website: true
       - name: Build 🔧
         run: yarn docs-build
       - name: Deploy to gh-pages
@@ -45,6 +26,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
-          user_name: 'React Native Elements CI'
-          user_email: 'react-native-elements-ci@users.noreply.github.com'
+          user_name: "React Native Elements CI"
+          user_email: "react-native-elements-ci@users.noreply.github.com"
           cname: reactnativeelements.com
