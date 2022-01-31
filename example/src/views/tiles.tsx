@@ -50,7 +50,7 @@ const Tiles: React.FunctionComponent<TilesComponentProps> = () => {
               titleStyle={{
                 fontSize: 20,
                 textAlign: 'center',
-                paddingBottom: 5,
+                paddingBottom: 3,
               }}
               activeOpacity={1}
               width={310}
