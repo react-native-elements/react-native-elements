@@ -6,6 +6,7 @@ on:
 jobs:
   test:
     name: "check_unit_tests"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,6 +17,7 @@ jobs:
         run: npx codecov --disable=gcov
   typescript:
     name: "check_types"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +26,7 @@ jobs:
       - run: yarn typescript
   lint:
     name: "check_lint"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -33,14 +36,23 @@ jobs:
       - run: yarn format
   docs-api:
     name: "check_docs_api"
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
       - name: Install dependencies
         uses: ./.github/actions/install
+        with:
+          install_website: true
       - name: Build 🔧
         run: yarn docs-build-api
       - name: Check for API changes
         run: git diff --exit-code
+  # If dep changes this will cache them, else each job will try to update cache
+  install:
+    name: "yarn_install"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: ./.github/actions/install
