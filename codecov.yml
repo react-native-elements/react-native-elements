@@ -11,10 +11,6 @@ coverage:
         target: 75%
         flags:
           - themed
-      universe:
-        target: 75%
-        flags:
-          - universe
 
 # adding Flags to your `layout` configuration to show up in the PR comment
 comment:
@@ -32,8 +28,4 @@ flags:
   themed:
     paths: #note, accepts globs, not regexes
       - packages/themed/
-    carryforward: true
-  universe:
-    paths: #note, accepts globs, not regexes
-      - packages/universe/
     carryforward: true

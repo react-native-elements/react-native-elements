@@ -184,7 +184,7 @@ setup on your local machine:
       packages
            base     # component without theme
            themed   # component using withTheme HOC
-           universe # component having universal device support
+           ....     # rest components having universal device support
       website
            docs     # prop API docs
            scripts  # scripts for autoDocGen

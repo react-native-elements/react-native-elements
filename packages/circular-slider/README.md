@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@react-native-elements/universe"><img src="https://img.shields.io/npm/v/@react-native-elements/universe.svg"></a>
+  <a href="https://www.npmjs.com/package/@react-native-elements/circular-slider"><img src="https://img.shields.io/npm/v/@react-native-elements/circular-slider.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/@react-native-elements/universe"><img src="https://img.shields.io/npm/dm/@react-native-elements/universe.svg"></a>
+  <a href="https://www.npmjs.com/package/@react-native-elements/circular-slider"><img src="https://img.shields.io/npm/dm/@react-native-elements/circular-slider.svg"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
 </p>
 
@@ -40,7 +40,7 @@ Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { CircularSlider } from '@react-native-elements/universe';
+import { CircularSlider } from '@react-native-elements/circular-slider';
 
 <CircularSlider />;
 ```

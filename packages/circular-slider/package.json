@@ -60,7 +60,7 @@
     "react-native-vector-icons": "*"
   },
   "jest": {
-    "displayName": "@react-native-elements/universe",
+    "displayName": "@react-native-elements/circular-slider",
     "preset": "react-native",
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules",

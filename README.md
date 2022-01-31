@@ -38,11 +38,10 @@ to install React Native Elements!
 
 ### Versions
 
-| Package                             | Version                                                                                                                                                   |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **@react-native-elements/base**     | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
-| **@react-native-elements/themed**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
-| **@react-native-elements/universe** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe) |
+| Package                           | Version                                                                                                                                                   |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@react-native-elements/base**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
+| **@react-native-elements/themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
 
 ### Usage
 
