@@ -22,7 +22,7 @@ describe('FAB Component', () => {
     );
     expect(queryByText('test')).toBeTruthy();
     expect(wrapper.findAllByType(View)[1].props.style).toMatchObject({
-      height: 48,
+      height: 40,
     });
   });
 
