@@ -149,17 +149,6 @@
     {
       "collapsed": true,
       "type": "category",
-      "label": "Universe Components",
-      "items": [
-        {
-          "type": "doc",
-          "id": "version-3.4.2/circularslider"
-        }
-      ]
-    },
-    {
-      "collapsed": true,
-      "type": "category",
       "label": "Repo",
       "items": [
         {

@@ -39,8 +39,13 @@
       "main/tile",
       "main/tooltip"
     ],
+    "Universe": ["universe/getting_started", "universe/circularslider"],
     "Repo": [
-      "repo/contributing",
+      {
+        "type": "doc",
+        "id": "repo/contributing",
+        "label": "Contributing"
+      },
       "repo/testing",
       "repo/labels",
       "migration_guide"

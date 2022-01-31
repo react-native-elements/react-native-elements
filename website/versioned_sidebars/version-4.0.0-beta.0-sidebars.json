@@ -160,18 +160,6 @@
       "type": "category",
       "collapsed": false,
       "collapsible": false,
-      "label": "Universe Components",
-      "items": [
-        {
-          "type": "doc",
-          "id": "version-4.0.0-beta.0/universe/circularslider"
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "collapsed": false,
-      "collapsible": false,
       "label": "Repo",
       "items": [
         {

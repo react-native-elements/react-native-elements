@@ -1,6 +1,6 @@
 ---
 id: getting_started
-title: Installation
+title: Getting Started
 slug: /
 ---
 
@@ -20,11 +20,11 @@ and feel.
 ### Stable
 
 <Tabs
+groupId='component'
 defaultValue="base"
 values={[
 { label: 'Base', value: 'base', },
 { label: 'Themed', value: 'themed', },
-{ label: 'Universe', value: 'universe', },
 ]
 }>
 <TabItem value="base">
@@ -49,27 +49,16 @@ yarn add @react-native-elements/themed
 ```
 
 </TabItem>
-<TabItem value="universe">
-
-```bash
-npm install @react-native-elements/universe
-```
-
-```bash
-yarn add @react-native-elements/universe
-```
-
-</TabItem>
 </Tabs>
 
 ### Bleeding Edge
 
 <Tabs
+groupId='component'
 defaultValue="base"
 values={[
 { label: 'Base', value: 'base', },
 { label: 'Themed', value: 'themed', },
-{ label: 'Universe', value: 'universe', },
 ]
 }>
 <TabItem value="base">
@@ -91,17 +80,6 @@ npm install https://github.com/react-native-elements/react-native-elements#theme
 
 ```bash
 yarn add https://github.com/react-native-elements/react-native-elements#themed
-```
-
-</TabItem>
-<TabItem value="universe">
-
-```bash
-npm install https://github.com/react-native-elements/react-native-elements#universe
-```
-
-```bash
-yarn add https://github.com/react-native-elements/react-native-elements#universe
 ```
 
 </TabItem>

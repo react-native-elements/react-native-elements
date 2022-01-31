@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - "website/**"
       - "example/**"
+      - ".github/**"
 jobs:
   checks:
     uses: ./.github/workflows/test.yml
