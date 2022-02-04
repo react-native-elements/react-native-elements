@@ -1,5 +1,13 @@
+dist/
 node_modules
 .DS_Store
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 *.log
 site
 coverage
@@ -7,9 +15,9 @@ jsconfig.json
 .vscode/
 .idea/
 website/build
-.idea/
 package-lock.json
 build
 *.orig
-dist/
+.changelog
 .docgen/
+.expo/*

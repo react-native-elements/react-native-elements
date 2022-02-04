@@ -1,17 +1,15 @@
-## Props
-
 - [`value`](#value)
-- [`maximumValue`](#minimumvalue)
-- [`minimumValue`](#maximumvalue)
-- [`maxAngle`](#minangle)
-- [`minAngle`](#maxangle)
-- [`trackRadius`](#trackadius)
+- [`maximumValue`](#maximumvalue)
+- [`minimumValue`](#minimumvalue)
+- [`minAngle`](#minangle)
+- [`maxAngle`](#maxangle)
+- [`trackRadius`](#trackradius)
 - [`thumbRadius`](#thumbradius)
 - [`trackWidth`](#trackwidth)
 - [`trackColor`](#trackcolor)
 - [`thumbColor`](#thumbcolor)
 - [`trackTintColor`](#tracktintcolor)
-- [`thumbTextColor`](#thumbmarkercolor)
+- [`thumbTextColor`](#thumbtextcolor)
 - [`thumbTextSize`](#thumbtextsize)
 - [`noThumb`](#nothumb)
 - [`showText`](#showtext)
@@ -20,8 +18,6 @@
 - [`textSize`](#textsize)
 
 ---
-
-## Reference
 
 ### `value`
 
