@@ -3,13 +3,7 @@
     {
       "type": "category",
       "label": "Overview",
-      "items": [
-        "installation",
-        "usage",
-        "customization",
-        "web_usage",
-        "troubleshooting"
-      ]
+      "items": ["installation", "usage", "web_usage", "troubleshooting"]
     },
     {
       "type": "category",

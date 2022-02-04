@@ -27,9 +27,9 @@
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
 
-  --ifm-hero-background-color: #f5f5f5;
+  --ifm-hero-background-color: #f5f5f573;
 
-  --ifm-navbar-background-color: var(--ifm-hero-background-color);
+  --ifm-navbar-background-color: #f5f5f573;
 }
 
 :root[data-theme='dark'] {
@@ -40,7 +40,8 @@
   --ifm-color-primary-light: #7dbbec;
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
-  --ifm-hero-background-color: #27292b;
+  --ifm-hero-background-color: #27292b7e;
+  --ifm-navbar-background-color: #27292b7e;
 }
 
 .label {
@@ -613,4 +614,13 @@ div[class^='sidebar_']
 .DocSearch-Button-Placeholder {
   font-family: var(--ifm-font-family-base);
   line-height: 10px;
+}
+.navbar {
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .navbar {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
