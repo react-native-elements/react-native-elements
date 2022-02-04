@@ -1,6 +1,6 @@
 ---
-id: getting_started
-title: Getting Started
+id: installation
+title: Installation
 slug: /
 ---
 
@@ -21,31 +21,23 @@ and feel.
 
 <Tabs
 groupId='component'
-defaultValue="base"
+defaultValue="npm"
 values={[
-{ label: 'Base', value: 'base', },
-{ label: 'Themed', value: 'themed', },
+{ label: 'npm', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
 ]
 }>
-<TabItem value="base">
+<TabItem value="npm">
 
 ```bash
-npm install @react-native-elements/base
-```
-
-```bash
-yarn add @react-native-elements/base
+npm install @react-native-elements/themed @react-native-elements/base
 ```
 
 </TabItem>
-<TabItem value="themed">
+<TabItem value="yarn">
 
 ```bash
-npm install @react-native-elements/themed
-```
-
-```bash
-yarn add @react-native-elements/themed
+yarn add @react-native-elements/themed @react-native-elements/base
 ```
 
 </TabItem>
@@ -55,31 +47,56 @@ yarn add @react-native-elements/themed
 
 <Tabs
 groupId='component'
-defaultValue="base"
+defaultValue="npm"
 values={[
-{ label: 'Base', value: 'base', },
-{ label: 'Themed', value: 'themed', },
+{ label: 'npm', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
 ]
 }>
-<TabItem value="base">
+<TabItem value="npm">
 
 ```bash
 npm install https://github.com/react-native-elements/react-native-elements#base
 ```
 
 ```bash
-yarn add https://github.com/react-native-elements/react-native-elements#base
+npm install https://github.com/react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
-<TabItem value="themed">
+<TabItem value="yarn">
 
 ```bash
-npm install https://github.com/react-native-elements/react-native-elements#themed
+yarn add https://github.com/react-native-elements/react-native-elements#base
 ```
 
 ```bash
 yarn add https://github.com/react-native-elements/react-native-elements#themed
+```
+
+</TabItem>
+</Tabs>
+
+### Expo template
+
+<Tabs
+defaultValue="edge"
+values={[
+{ label: 'Stable', value: 'stable', },
+{ label: 'Bleeding Edge', value: 'edge', },
+]
+}>
+<TabItem value="stable">
+
+```bash
+expo init app --template react-native-elements-template
+```
+
+</TabItem>
+<TabItem value="edge">
+
+```bash
+expo init app --template react-native-elements-template@bleeding-edge
 ```
 
 </TabItem>
@@ -180,7 +197,7 @@ Manual linking of react-native-safe-area-context is not necessary if you're usin
 :::
 
 ```bash
-react-native link react-native-safe-area-context
+npx react-native link react-native-safe-area-context
 ```
 
 It is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is

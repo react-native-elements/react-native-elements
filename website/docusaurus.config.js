@@ -29,15 +29,17 @@ const config = {
     [
       '@docusaurus/preset-classic',
       {
+        /** https://github.com/facebook/docusaurus/pull/5832 */
+        googleAnalytics: {
+          trackingID: 'UA-173589068-1',
+        },
         docs: {
           path: 'docs',
           routeBasePath: 'docs',
-          // homePageId: 'getting_started',
           sidebarPath: require.resolve('./sidebars.json'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
             'https://github.com/react-native-elements/react-native-elements/edit/next/website/',
-          sidebarCollapsible: false,
         },
         theme: {
           customCss: require.resolve('./static/css/custom.css'),
@@ -87,7 +89,6 @@ const config = {
           dropdownActiveClassDisabled: true,
           docsPluginId: 'default',
         },
-        { type: 'search', position: 'right' },
         { to: 'docs/', label: 'Docs', position: 'right' },
         { to: 'help', label: 'Help', position: 'right' },
         { to: 'blog', label: 'Blog', position: 'right' },
@@ -105,19 +106,18 @@ const config = {
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
+        { type: 'search', position: 'right' },
       ],
     },
     prism: {
       darkTheme: require('prism-react-renderer/themes/vsDark'),
-      theme: require('prism-react-renderer/themes/vsLight'),
+      theme: require('prism-react-renderer/themes/vsDark'),
     },
     algolia: {
       apiKey: '89e04a9445d16350e100c2d2421f2d39',
       indexName: 'react_native_elements',
     },
-    googleAnalytics: {
-      trackingID: 'UA-173589068-1',
-    },
+
     footer: {
       style: 'dark',
       logo: {
