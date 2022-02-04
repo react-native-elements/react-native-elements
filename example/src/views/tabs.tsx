@@ -15,10 +15,11 @@ export default () => {
           backgroundColor: 'white',
           height: 3,
         }}
+        tabScrolling={true}
         variant="primary"
       >
         <Tab.Item
-          title="Recent"
+          title="Recent Example tab 1"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
         />
@@ -29,6 +30,21 @@ export default () => {
         />
         <Tab.Item
           title="cart"
+          titleStyle={{ fontSize: 12 }}
+          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+        />
+        <Tab.Item
+          title="Example tab 1"
+          titleStyle={{ fontSize: 12 }}
+          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+        />
+        <Tab.Item
+          title="Example tab 2"
+          titleStyle={{ fontSize: 12 }}
+          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+        />
+        <Tab.Item
+          title="Example tab 3"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
         />
@@ -43,6 +59,15 @@ export default () => {
         </TabView.Item>
         <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
           <Text h1>Cart</Text>
+        </TabView.Item>
+        <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
+          <Text h1>Example tab 1</Text>
+        </TabView.Item>
+        <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
+          <Text h1>Example tab 2</Text>
+        </TabView.Item>
+        <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
+          <Text h1>Example tab 3</Text>
         </TabView.Item>
       </TabView>
     </>

@@ -6,6 +6,7 @@ import {
   ViewStyle,
   ViewProps,
   StyleSheet,
+  ScrollView,
 } from 'react-native';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
@@ -13,6 +14,9 @@ import { TabItemProps } from './Tab.Item';
 export type TabBaseProps = ViewProps & {
   /** Child position index value. */
   value?: number;
+
+  /** Makes Tab Scrolling */
+  tabScrolling?: boolean;
 
   /** On Index Change Callback. */
   onChange?: (value: number) => void;
@@ -32,6 +36,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   theme = defaultTheme,
   children,
   value,
+  tabScrolling,
   onChange = () => {},
   indicatorStyle,
   disableIndicator,
@@ -39,6 +44,9 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   ...rest
 }) => {
   const [dim, setDim] = React.useState({ width: 0 });
+  const [childCoords, setChildCoords] = React.useState([]);
+  const [tabXPosition, setTabXPosition] = React.useState(null);
+  const [scrollViewRef, setScrollViewRef] = React.useState(null);
   const { current: animation } = React.useRef(new Animated.Value(0));
 
   React.useEffect(() => {
@@ -47,7 +55,32 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
       useNativeDriver: true,
       duration: 170,
     }).start();
+
+    scrollHandler();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animation, value]);
+
+  const scrollHandler = () => {
+    if (tabScrolling && childCoords.length > value) {
+      let start = value === 0 ? 0 : childCoords[value - 1];
+      let end = childCoords[value];
+      let scrollX = 0;
+      if (start < tabXPosition) {
+        scrollX = start - tabXPosition;
+      } else if (tabXPosition + dim.width < end) {
+        scrollX = end - (tabXPosition + dim.width);
+      }
+      scrollX += tabXPosition;
+      setTabXPosition(scrollX);
+      scrollViewRef.scrollTo({
+        x: scrollX,
+        y: 0,
+        animated: true,
+      });
+    } else {
+      // alert('Out of Max Index');
+    }
+  };
 
   const WIDTH = dim.width / React.Children.count(children);
 
@@ -64,14 +97,56 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
         ]}
         onLayout={({ nativeEvent: { layout } }) => setDim(Object(layout))}
       >
-        {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child as React.ReactElement<TabItemProps>, {
-            onPress: () => onChange(index),
-            active: index === value,
-            variant,
-          });
-        })}
-        {!disableIndicator && (
+        {tabScrolling ? (
+          <ScrollView
+            onScroll={(event) => {
+              setTabXPosition(event.nativeEvent.contentOffset.x);
+            }}
+            ref={(ref) => setScrollViewRef(ref)}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+          >
+            {React.Children.map(children, (child, index) => {
+              return React.cloneElement(
+                child as React.ReactElement<TabItemProps>,
+                {
+                  onPress: () => onChange(index),
+                  onLayout: (event) => {
+                    const layout = event.nativeEvent.layout;
+                    childCoords[index] =
+                      index === 0
+                        ? layout.width
+                        : childCoords[index - 1] + layout.width;
+                    setChildCoords(childCoords);
+                  },
+                  active: index === value,
+                  variant,
+                }
+              );
+            })}
+          </ScrollView>
+        ) : (
+          React.Children.map(children, (child, index) => {
+            return React.cloneElement(
+              child as React.ReactElement<TabItemProps>,
+              {
+                onPress: () => onChange(index),
+                onLayout: (event) => {
+                  const layout = event.nativeEvent.layout;
+                  childCoords[index] =
+                    index === 0
+                      ? layout.width
+                      : childCoords[index - 1] + layout.width;
+                  setChildCoords(childCoords);
+                },
+                active: index === value,
+                variant,
+              }
+            );
+          })
+        )}
+
+        {!disableIndicator && !tabScrolling && (
           <Animated.View
             style={[
               styles.indicator,
