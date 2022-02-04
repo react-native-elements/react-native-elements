@@ -77,8 +77,6 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
         y: 0,
         animated: true,
       });
-    } else {
-      // alert('Out of Max Index');
     }
   };
 
@@ -131,14 +129,6 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
               child as React.ReactElement<TabItemProps>,
               {
                 onPress: () => onChange(index),
-                onLayout: (event) => {
-                  const layout = event.nativeEvent.layout;
-                  childCoords[index] =
-                    index === 0
-                      ? layout.width
-                      : childCoords[index - 1] + layout.width;
-                  setChildCoords(childCoords);
-                },
                 active: index === value,
                 variant,
               }
