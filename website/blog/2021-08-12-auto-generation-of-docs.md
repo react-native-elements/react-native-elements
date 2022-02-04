@@ -26,7 +26,7 @@ Well to make the script to work automatically what we have done is as follows:
 
 1. When you push your changes to your branch. A script `updateDocumentation.js` runs.
 
-2. This invokes the `yarn docs:build` command which calls the scripts of auto-generation of docs and this also _lints_ the markdown files generated at the same time.
+2. This invokes the `yarn docs-build` command which calls the scripts of auto-generation of docs and this also _lints_ the markdown files generated at the same time.
 
 3. Now, if there is any changes in the markdown files. A commit with message `Update Documentation` is done and pushed after your commit is done to the branch.
 

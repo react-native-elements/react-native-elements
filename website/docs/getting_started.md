@@ -1,6 +1,7 @@
 ---
 id: getting_started
 title: Getting Started
+slug: /
 ---
 
 import Tabs from '@theme/Tabs';
@@ -19,23 +20,32 @@ and feel.
 ### Stable
 
 <Tabs
-defaultValue="npm"
+groupId='component'
+defaultValue="base"
 values={[
-{ label: 'NPM', value: 'npm', },
-{ label: 'Yarn', value: 'yarn', },
+{ label: 'Base', value: 'base', },
+{ label: 'Themed', value: 'themed', },
 ]
 }>
-<TabItem value="npm">
+<TabItem value="base">
 
 ```bash
-npm install react-native-elements
+npm install @react-native-elements/base
+```
+
+```bash
+yarn add @react-native-elements/base
 ```
 
 </TabItem>
-<TabItem value="yarn">
+<TabItem value="themed">
 
 ```bash
-yarn add react-native-elements
+npm install @react-native-elements/themed
+```
+
+```bash
+yarn add @react-native-elements/themed
 ```
 
 </TabItem>
@@ -44,23 +54,32 @@ yarn add react-native-elements
 ### Bleeding Edge
 
 <Tabs
-defaultValue="npm"
+groupId='component'
+defaultValue="base"
 values={[
-{ label: 'NPM', value: 'npm', },
-{ label: 'Yarn', value: 'yarn', },
+{ label: 'Base', value: 'base', },
+{ label: 'Themed', value: 'themed', },
 ]
 }>
-<TabItem value="npm">
+<TabItem value="base">
 
 ```bash
-npm install https://github.com/react-native-elements/react-native-elements#dist
+npm install https://github.com/react-native-elements/react-native-elements#base
+```
+
+```bash
+yarn add https://github.com/react-native-elements/react-native-elements#base
 ```
 
 </TabItem>
-<TabItem value="yarn">
+<TabItem value="themed">
 
 ```bash
-yarn add  https://github.com/react-native-elements/react-native-elements#dist
+npm install https://github.com/react-native-elements/react-native-elements#themed
+```
+
+```bash
+yarn add https://github.com/react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>

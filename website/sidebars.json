@@ -1,6 +1,6 @@
 {
   "docs": {
-    "It Starts Basic": [
+    "Getting Started": [
       "getting_started",
       "overview",
       "customization",
@@ -39,12 +39,16 @@
       "main/tile",
       "main/tooltip"
     ],
-    "Universe Components": ["universe/circularslider"],
+    "Universe": ["universe/getting_started", "universe/circularslider"],
     "Repo": [
-      "repo/contributing",
+      {
+        "type": "doc",
+        "id": "repo/contributing",
+        "label": "Contributing"
+      },
       "repo/testing",
       "repo/labels",
-      "migration_v3_to_v4"
+      "migration_guide"
     ]
   }
 }

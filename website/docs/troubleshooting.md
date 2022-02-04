@@ -8,7 +8,11 @@ hassle-free, time to time you may encounter some problems along the way.
 
 On this page you can find solutions to commonly encountered issues.
 
-## |> Invariant Violation: Element type is invalid
+:::note
+
+Invariant Violation: Element type is invalid
+
+:::
 
 This error occurs when trying to import a component that doesn't exist. This
 usually happens for a few reasons:
@@ -17,12 +21,12 @@ usually happens for a few reasons:
 
 Spelling a component incorrectly though very simple, happens occasionally.
 
-```
+```jsx
 // Incorrect
-import { Listitem } from 'react-native-elements'
+import { Listitem } from 'react-native-elements';
 
 // Correct
-import { ListItem } from 'react-native-elements'
+import { ListItem } from 'react-native-elements';
 ```
 
 ### Importing a component from the wrong version
@@ -50,7 +54,11 @@ To fix this, follow these steps:
 
 ---
 
-## |> "fontFamily (font-name) is not a system font
+:::note
+
+fontFamily (font-name) is not a system font
+
+:::
 
 This is a general error in react native, where you in your code, or a package
 you are using, is trying to use a font that is not bundled with the platform or
@@ -72,30 +80,30 @@ They're a couple ways to solve this depending on your setup.
 
 1. Delete everything to be sure
 
-```bash
-rm -rf node_modules yarn.lock
-```
+   ```bash
+   rm -rf node_modules yarn.lock
+   ```
 
 2. Install React Native Elements
 
-```bash
-# yarn
-yarn && yarn add react-native-elements
-```
+   ```bash
+   # yarn
+   yarn && yarn add @react-native-elements/base @react-native-elements/themed
+   ```
 
 3. Install react-native-vector-icons
 
-```bash
-# yarn
-yarn add react-native-vector-icons
-```
+   ```bash
+   # yarn
+   yarn add react-native-vector-icons
+   ```
 
 4. Link react-native-vector-icons. Learn more about
    [linking](https://reactnative.dev/docs/linking.html).
 
-```
-react-native link react-native-vector-icons
-```
+   ```
+   react-native link react-native-vector-icons
+   ```
 
 If you encounter any red error screens during the process, try running these
 commands:

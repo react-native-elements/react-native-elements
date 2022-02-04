@@ -1,10 +1,22 @@
 ---
 id: overview
-title: Overview
+title: Usage
 ---
 
 This section of the documentation describes the props and examples for all the
 components from React Native Elements. Please take some time and explore all of the components that are at your disposal!
+
+## Quick start
+
+Here's a quick example to get you started, **it's literally all you need:**
+
+```ts
+import { Button } from '@react-native-elements/base';
+
+const App = () => {
+  return <Button title="Hello World" />;
+};
+```
 
 ## Using React Native Elements
 
@@ -18,7 +30,7 @@ defined in one central place? And so the idea behind theming with React Native
 Elements was born!
 
 ```jsx
-import { Button, ThemeProvider } from 'react-native-elements';
+import { Button, ThemeProvider } from '@react-native-elements/themed';
 
 const MyApp = () => {
   return (

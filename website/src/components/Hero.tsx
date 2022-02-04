@@ -19,16 +19,18 @@ const Home: React.FunctionComponent<{}> = () => {
               />
             </div>
             <div className="col col--6 col--offset-1">
-              <h1 className="hero__title gradient clip-text">
-                {siteConfig.tagline}
+              <h1 className="hero__title">
+                Cross Platform <br />
+                <span className="gradient clip-text">React Native</span> UI
+                toolkit
               </h1>
-              <h1 className="hero__subtitle">
+              <h3 className="">
                 A React Native framework for making cross platform applications
-              </h1>
+              </h3>
               <div>
                 <Link
                   className={
-                    'button button--primary button--lg margin-horiz--sm margin-vert--sm '
+                    'button button--primary button--lg margin-vert--sm '
                   }
                   style={{ color: 'white' }}
                   to={useBaseUrl('/docs')}
@@ -38,7 +40,7 @@ const Home: React.FunctionComponent<{}> = () => {
 
                 <Link
                   className={
-                    'button button--secondary button--outline button--lg  margin-horiz--sm margin-vert--sm heroButton'
+                    'button button--secondary button--outline button--lg  margin-horiz--md margin-vert--sm heroButton'
                   }
                   to={'https://react-native-elements.js.org/'}
                 >
@@ -80,7 +82,7 @@ const demoCode = `import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button, Image, Text } from 'react-native-elements';
 
-const uri ='https://rne.gallerycdn.vsassets.io/extensions/rne/snippets/1.2.1/1622009552732/Microsoft.VisualStudio.Services.Icons.Default';
+const uri ='https://reactnativeelements.com/img/website/logo.png';
 
 const App = () => (
   <View style={styles.box}>

@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a> 
+  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a> 
+  <a href="https://lerna.js.org/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg"></a>
 </p>
 
 <p align="center">
@@ -21,8 +21,7 @@
   <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
   <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-  
+
 </p>
 
 <br />
@@ -37,18 +36,27 @@ Follow
 [these instructions](https://reactnativeelements.com/docs/)
 to install React Native Elements!
 
+### Versions
+
+| Package                           | Version                                                                                                                                                   |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@react-native-elements/base**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
+| **@react-native-elements/themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
+
 ### Usage
 
 Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from 'react-native-elements';
+import { Button } from '@react-native-elements/base';
 
-<Button />;
+const App = () => <Button title="Hello World!" />;
 ```
 
 ## Components included:
+
+### Base
 
 - [x] [Avatar](https://reactnativeelements.com/docs/avatar)
 - [x] [Badge](https://reactnativeelements.com/docs/badge)
@@ -76,12 +84,12 @@ import { Button } from 'react-native-elements';
 - [x] [Switch](https://reactnativeelements.com/docs/switch)
 - [x] [Tile](https://reactnativeelements.com/docs/tile)
 - [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
+- [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+### Other Components
 
-- [x] [Circular Slider](https://reactnativeelements.com/docs/)
+- [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
 ## React Native Web support
 
@@ -95,9 +103,13 @@ Checkout the official
 [React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app)
 on Expo which uses all of the React Native Elements components.
 
-If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements-app) to
-view the implementation & run the RNE expo app locally.
+If you are looking to contribute to the React Native Elements App,
+[here](https://github.com/react-native-elements/react-native-elements/tree/next/example) to
+view the implementation & Use this command to start example app locally
+
+```bash
+yarn example start
+```
 
 ## Documentation
 
@@ -106,7 +118,7 @@ view the implementation & run the RNE expo app locally.
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing), [Setup Guide](https://reactnativeelements.com/docs/repo/contributing#setup)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!
@@ -117,7 +129,7 @@ A big shoutout to all our contributors! You could be here too!
 
 We encourage everyone to contribute & submit PR's especially first-time
 contributors. Look for the label `Good First Issue` on the issues. Click
-[here](https://github.com/react-native-elements/react-native-elements/labels/%F0%9F%91%B6%20Good%20First%20Issue)
+[here](https://github.com/react-native-elements/react-native-elements/labels/Good%20First%20Issue)
 to see them.
 
 If there is something you's like to see or request a new feature, please submit
@@ -175,7 +187,7 @@ See you on the other side! 👋😃
 
 ## Sponsors
 
-Do you use React Native Elements in production? If so, consider supporting this project as it will allow the maintainers to dedicate more time to maintaining this project and also building new features for everyone. Also, your app or company's logo will show [on GitHub](https://github.com/react-native-elements/react-native-elements#sponsors) and link to your website - who doesn't want a little extra exposure? [Here's the info](https://opencollective.com/react-native-elements#sponsor).
+Do you use React Native Elements in production? If so, consider supporting this project as it will allow the maintainers to dedicate more time to maintaining this project and also building new features for everyone. Also, your app or company's logo will show [on GitHub](https://github.com/react-native-elements/react-native-elements#sponsors) and link to your website - who doesn't want a little extra exposure? [Here's the info](https://opencollective.com/react-native-elements#sponsor). Check our sponsors on [website](http://localhost:3000/#sponsor)
 
 [![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/0/avatar)](https://opencollective.com/react-native-elements/sponsor/0/website)
 [![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/1/avatar)](https://opencollective.com/react-native-elements/sponsor/1/website)

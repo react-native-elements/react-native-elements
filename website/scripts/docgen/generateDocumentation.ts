@@ -2,6 +2,7 @@ import path from 'path';
 import { generateComponentDocs } from './generateComponentDocs';
 import { generateMarkdown } from './generateMarkdown';
 import nodefs from 'fs';
+import prettier from 'prettier';
 
 export const generateDocumentation = (filePaths) => {
   const componentDocs = generateComponentDocs(filePaths);
@@ -11,7 +12,7 @@ export const generateDocumentation = (filePaths) => {
     let componentDoc = componentDocs[componentDisplayName];
     const [componentName, childComponentName] = componentDisplayName.split('.');
     if (childComponentName) {
-      let parentComponent = componentDocs[componentName];
+      let parentComponent = componentDocs[componentName] || {};
       if (!('childrens' in parentComponent)) parentComponent['childrens'] = {};
       parentComponent['childrens'][componentDisplayName] = componentDoc;
       componentDocs[componentName] = parentComponent;
@@ -24,10 +25,11 @@ export const generateDocumentation = (filePaths) => {
     // Condition check for compound components display name.
     let componentDoc = componentDocs[componentDisplayName];
     const markdownData = generateMarkdown(componentDoc);
+    console.log(' Done', componentDisplayName);
 
     nodefs.writeFileSync(
-      path.join(__dirname, `../../docs/main/${componentDisplayName}.md`),
-      markdownData
+      path.join(__dirname, `../../docs/main/${componentDisplayName}.mdx`),
+      prettier.format(markdownData, { parser: 'mdx' })
     );
   });
 };

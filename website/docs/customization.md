@@ -38,7 +38,7 @@ instead of the built-in component.
 
 ```jsx
 import React from 'react';
-import { Button } from 'react-native-elements';
+import { Button } from '@react-native-elements/themed';
 
 const RaisedButton = (props) => <Button raised {...props} />;
 
@@ -62,13 +62,17 @@ Elements ships with a 3 utilities for large-scale theming.
 Firstly you'll want to set up your `ThemeProvider`.
 
 ```jsx
-import { ThemeProvider, Button } from 'react-native-elements';
+import {
+  ThemeProvider,
+  Button,
+  createTheme,
+} from '@react-native-elements/themed';
 
-const theme = {
+const theme = createTheme({
   Button: {
     raised: true,
   },
-};
+});
 
 // Your App
 const App = () => {
@@ -92,13 +96,79 @@ This is extremely convenient and is made possible through
 
 ---
 
+### Light and dark mode
+
+React Native Elements also provides a preset dark mode palette to get you started with using dark mode in your app.
+Use the prop `mode` in `createTheme` to set the default dark theme. You may want to set this by using a button,
+or by using the user's configured settings
+
+```jsx
+import {
+  ThemeProvider,
+  Button,
+  createTheme,
+} from '@react-native-elements/themed';
+
+const myTheme = createTheme({
+  colors: {
+    primary: '#f2f2f2',
+  },
+  darkColors: {
+    primary: '#121212',
+  },
+  mode: 'dark',
+});
+
+// Your App
+const App = () => {
+  return (
+    <ThemeProvider theme={myTheme}>
+      <Button title="My Button" />
+    </ThemeProvider>
+  );
+};
+```
+
+But how to switch modes?
+
+```jsx
+import { useTheme } from '@react-native-elements/themed';
+
+const App = () => {
+  const { updateTheme } = useTheme();
+
+  const switchToDarkMode = () => {
+    updateTheme({
+      mode: 'dark',
+    });
+  };
+
+  const toggleTheme = () => {
+    updateTheme((theme) => ({
+      mode: theme.mode === 'light' ? 'dark' : 'light',
+    }));
+  };
+
+  return (
+    <>
+      <Button title="Toggle Theme" onPress={toggleTheme} />
+      <Button title="Dark" onPress={switchToDarkMode} />
+    </>
+  );
+};
+```
+
 ### TypeScript Definitions (extending the default theme)
 
 TypeScript definitions for your theme can be extended by using TypeScript's [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) feature. First you need to create a declaration file called `react-native-elements.d.ts` and then declare the module `react-native-elements` and 're-export' the types that you want to extend.
 
-i.e. below we add a custom p1Style to the Text theme object and we add a bunch of colors to the colors object.
+i.e. below we add a custom `p1Style` to the `Text` theme object and we add a bunch of colors to the `colors` object.
 
 ```typescript
+// react-native-elements.d.ts
+
+export * from 'patch/to/node_modules/react-native-elements';
+
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 declare module 'react-native-elements' {
@@ -140,15 +210,19 @@ Theme styles are the values that are set by the ThemeProvider If present, these
 are applied second.
 
 ```jsx
-import { ThemeProvider, Button } from 'react-native-elements';
+import {
+  ThemeProvider,
+  Button,
+  createTheme,
+} from '@react-native-elements/themed';
 
-const theme = {
+const theme = createTheme({
   Button: {
     titleStyle: {
       color: 'red',
     },
   },
-};
+});
 
 const App = () => {
   return (
@@ -167,7 +241,7 @@ External styles are the styles which are set through the component props. These
 are applied last and have the highest precedence.
 
 ```jsx
-import { ThemeProvider, Button } from 'react-native-elements';
+import { ThemeProvider, Button } from '@react-native-elements/themed';
 
 const theme = {
   Button: {
@@ -247,16 +321,16 @@ Setting styles in the theme is as simple as using the name of the component, as
 a key and the props you want to change as the value.
 
 ```jsx
-import { ThemeProvider } from 'react-native-elements';
+import { ThemeProvider ,createTheme} from '@react-native-elements/themed';
 
-const theme = {
+const theme = createTheme({
   Avatar: {
     rounded: true,
   },
   Badge: {
     textStyle: { fontSize: 30 },
   },
-};
+});
 
 ...
 
@@ -265,54 +339,61 @@ const theme = {
 
 ---
 
-### Dark Mode
-
-React Native Elements also provides a preset dark mode palette to get you started with using dark mode in your app.
-Use the prop `useDark` in `ThemeProvider` to set the default dark theme. You may want to set this by using a button,
-or by using the user's configured settings
-
-```jsx
-import { useColorScheme } from 'react-native-appearance';
-
-...
-  let colorScheme = useColorScheme();
-...
-  <ThemeProvider useDark={colorScheme === 'dark'}>
-...
-```
-
----
-
 ### Using the theme in your own components
 
-You may want to make use of the theming utilities in your own components. For
-this you can use the `withTheme` HOC exported from this library. It adds three
-props to the component it wraps - `theme`, `updateTheme` and `replaceTheme`.
+You may want to make use of the theming utilities in your own components. For this you can use the withTheme HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
 
-```jsx
-import React from 'react';
-import { Text } from 'react-native';
-import { withTheme } from 'react-native-elements';
+```tsx title='MyComponent.tsx'
+import { Button, createTheme } from '@react-native-elements/themed';
 
-function MyComponent(props) {
-  const { theme, updateTheme, replaceTheme } = props;
-  return <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
-}
-
-export default withTheme(MyComponent);
-```
-
-The `updateTheme` function merges the theme passed in with the current theme.
-
-```jsx
-const theme = {
-  colors: {
-    primary: 'pink',
-  },
+type MyCustomComponentProps = {
+  title: string;
+  titleStyle: StyleProps<TextStyle>;
 };
 
-// We can update the primary color
-updateTheme({ colors: { primary: 'red' } });
+export const MyCustomComponent = withTheme<MyCustomComponentProps>((props) => {
+  // Access theme from props
+  const { theme, updateTheme, replaceTheme } = props;
+  // ...
+});
+
+declare module 'react-native-elements' {
+  export interface FullTheme {
+    MyCustomComponent: Partial<MyCustomComponentProps>;
+  }
+}
+```
+
+```tsx title='App.tsx'
+import { ThemeProvider, createTheme } from '@react-native-elements/themed';
+
+const myTheme = createTheme({
+  MyCustomComponent: {
+    titleStyle: {
+      color: 'red',
+    },
+  },
+});
+
+const App = () => {
+  return (
+    <ThemeProvider theme={myTheme}>
+      <MyCustomComponent title="My Component" />
+    </ThemeProvider>
+  );
+};
+```
+
+The updateTheme function merges the theme passed in with the current theme.
+
+```tsx
+updateTheme({
+  MyCustomComponent: {
+    titleStyle: {
+      color: 'blue',
+    },
+  },
+});
 ```
 
 The `replaceTheme` function merges the theme passed in with the default theme.
@@ -323,7 +404,7 @@ which uses render props!
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { ThemeConsumer } from 'react-native-elements';
+import { ThemeConsumer } from '@react-native-elements/themed';
 
 const MyComponent = () => (
   <ThemeConsumer>
@@ -339,7 +420,7 @@ You can also use `useTheme()` if you use hooks.
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { useTheme } from 'react-native-elements';
+import { useTheme } from '@react-native-elements/themed';
 
 const MyComponent = () => {
   const { theme } = useTheme();
@@ -357,7 +438,7 @@ If you want to keep your styles outside the component use `makeStyles()` (hook g
 ```jsx
 import React from 'react';
 import { Text } from 'react-native';
-import { makeStyles } from 'react-native-elements';
+import { makeStyles } from '@react-native-elements/themed';
 
 type Params = {
   fullWidth?: boolean,
@@ -393,7 +474,7 @@ using the `colors` object and the `Platform` API.
 
 ```jsx
 import { Platform } from 'react-native';
-import { Button, colors, ThemeProvider } from 'react-native-elements';
+import { Button, colors, ThemeProvider } from '@react-native-elements/themed';
 
 const theme = {
   colors: {

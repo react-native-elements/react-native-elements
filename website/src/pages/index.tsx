@@ -7,6 +7,7 @@ import Installation from '../components/Installation';
 import RunOnExpo from '../components/RunOnExpo';
 import VSCodeExt from '../components/VSCodeExt';
 import OpenCollective from '../components/OpenCollective';
+import Sponsor from '../components/Sponsor';
 import '../../static/css/components.css';
 
 const Home: React.FunctionComponent<{}> = () => {
@@ -18,8 +19,9 @@ const Home: React.FunctionComponent<{}> = () => {
       <Installation />
       <Features />
       <RunOnExpo />
-      <VSCodeExt />
+      <Sponsor />
       <OpenCollective />
+      {/* <VSCodeExt /> */}
     </Layout>
   );
 };
