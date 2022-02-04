@@ -1,9 +1,9 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
-import useThemeContext from '@theme/hooks/useThemeContext';
+import { useColorMode } from '@docusaurus/theme-common';
 
 export default function Footer() {
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useColorMode();
   const darkFooter = isDarkTheme ? 'footer-dark' : '';
   return (
     <footer className={'footer ' + darkFooter}>

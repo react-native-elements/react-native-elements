@@ -39,7 +39,7 @@ const Home: React.FunctionComponent<{}> = () => {
                       getLineProps,
                       getTokenProps,
                     }) => (
-                      <pre>
+                      <pre className={className} style={style}>
                         {tokens.map((line, i) => (
                           <div {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (

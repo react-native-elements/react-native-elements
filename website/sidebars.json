@@ -1,54 +1,74 @@
 {
-  "docs": {
-    "Getting Started": [
-      "getting_started",
-      "overview",
-      "customization",
-      "web_usage",
-      "troubleshooting"
-    ],
-    "Components": [
-      "main/airbnbrating",
-      "main/avatar",
-      "main/badge",
-      "main/bottomsheet",
-      "main/button",
-      "main/buttongroup",
-      "main/card",
-      "main/checkbox",
-      "main/chip",
-      "main/divider",
-      "main/fab",
-      "main/header",
-      "main/icon",
-      "main/image",
-      "main/input",
-      "main/linearprogress",
-      "main/listitem",
-      "main/overlay",
-      "main/pricingcard",
-      "main/rating",
-      "main/searchbar",
-      "main/slider",
-      "main/socialicon",
-      "main/speeddial",
-      "main/switch",
-      "main/tab",
-      "main/tabview",
-      "main/text",
-      "main/tile",
-      "main/tooltip"
-    ],
-    "Universe": ["universe/getting_started", "universe/circularslider"],
-    "Repo": [
-      {
-        "type": "doc",
-        "id": "repo/contributing",
-        "label": "Contributing"
-      },
-      "repo/testing",
-      "repo/labels",
-      "migration_guide"
-    ]
-  }
+  "docs": [
+    {
+      "type": "category",
+      "label": "Overview",
+      "items": ["installation", "usage", "web_usage", "troubleshooting"]
+    },
+    {
+      "type": "category",
+      "label": "Components",
+      "items": [
+        "main/airbnbrating",
+        "main/avatar",
+        "main/badge",
+        "main/bottomsheet",
+        "main/button",
+        "main/buttongroup",
+        "main/card",
+        "main/checkbox",
+        "main/chip",
+        "main/divider",
+        "main/fab",
+        "main/header",
+        "main/icon",
+        "main/image",
+        "main/input",
+        "main/linearprogress",
+        "main/listitem",
+        "main/overlay",
+        "main/pricingcard",
+        "main/rating",
+        "main/searchbar",
+        "main/slider",
+        "main/socialicon",
+        "main/speeddial",
+        "main/switch",
+        "main/tab",
+        "main/tabview",
+        "main/text",
+        "main/tile",
+        "main/tooltip"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Customization",
+      "items": ["customization"]
+    },
+    {
+      "type": "category",
+      "label": "More Components",
+      "items": ["universe/getting_started", "universe/circularslider"]
+    },
+    {
+      "type": "category",
+      "label": "See also",
+      "items": [
+        {
+          "type": "doc",
+          "id": "repo/contributing",
+          "label": "Contributing"
+        },
+        "repo/testing",
+        "repo/labels",
+        "migration_guide",
+        {
+          "type": "link",
+          "label": "Sponsors",
+          "href": "/sponsor"
+        }
+      ]
+    }
+  ]
 }
