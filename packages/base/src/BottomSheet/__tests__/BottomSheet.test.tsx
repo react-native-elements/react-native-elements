@@ -2,9 +2,8 @@ import React from 'react';
 import { BottomSheet } from '../index';
 import { Modal, ScrollView } from 'react-native';
 import { ListItem } from '../../ListItem/index';
-import { renderWithWrapper } from '../../../.ci/testHelper';
+import { fireEvent, renderWithWrapper } from '../../../.ci/testHelper';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { shallow } from 'enzyme';
 
 describe('BottomSheet Component', () => {
   it('renders correctly', () => {
@@ -58,7 +57,7 @@ describe('BottomSheet Component', () => {
   it('should click the backdrop and use passed handler', () => {
     const onBackdropPress = jest.fn();
     const list = [{ title: 'test' }, { title: 'test2' }];
-    const wrapper = shallow(
+    const { wrapper } = renderWithWrapper(
       <BottomSheet isVisible onBackdropPress={onBackdropPress}>
         {list.map((l, i) => (
           <ListItem key={i}>
@@ -67,9 +66,10 @@ describe('BottomSheet Component', () => {
             </ListItem.Content>
           </ListItem>
         ))}
-      </BottomSheet>
+      </BottomSheet>,
+      'RNE__Overlay__backdrop'
     );
-    wrapper.dive().find({ testID: 'RNE__Overlay__backdrop' }).simulate('press');
+    fireEvent.press(wrapper);
     expect(onBackdropPress).toHaveBeenCalled();
   });
 
