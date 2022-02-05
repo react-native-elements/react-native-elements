@@ -58,7 +58,7 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
     >
       <Pressable
         onPress={onBackdropPress}
-        style={[StyleSheet.absoluteFill, styles.backdrop, backdropStyle]}
+        style={[StyleSheet.absoluteFill, backdropStyle]}
         testID="RNE__Overlay__backdrop"
       />
 
@@ -67,7 +67,7 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
           styles.safeAreaView,
           containerStyle && containerStyle,
         ])}
-        pointerEvents="box-none"       
+        pointerEvents="box-none"
         {...rest}
       >
         <View>
@@ -79,22 +79,11 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
 };
 
 const styles = StyleSheet.create({
-  backdrop: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, .4)',
-  },
   safeAreaView: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.2)',
     flexDirection: 'column-reverse',
   },
-  listContainer: { backgroundColor: 'white' },
 });
 
 BottomSheet.displayName = 'BottomSheet';
