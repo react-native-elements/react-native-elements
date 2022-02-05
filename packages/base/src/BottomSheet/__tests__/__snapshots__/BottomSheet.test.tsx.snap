@@ -7,10 +7,39 @@ exports[`BottomSheet Component renders correctly 1`] = `
   <Modal
     animationType="slide"
     hardwareAccelerated={false}
+    onRequestClose={[Function]}
     transparent={true}
     visible={true}
   >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+      testID="RNE__Overlay__backdrop"
+    />
     <RNCSafeAreaView
+      pointerEvents="box-none"
       style={
         Object {
           "backgroundColor": "rgba(0,0,0,0.2)",
