@@ -118,7 +118,7 @@ yarn example start
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing), [Setup Guide](https://reactnativeelements.com/docs/repo/contributing#setup)
+[Contributing Guide](https://reactnativeelements.com/docs/contributing), [Setup Guide](https://reactnativeelements.com/docs/contributing#setup)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!

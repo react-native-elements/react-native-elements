@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
 * {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'IBM Plex Sans', sans-serif !important;
   scrollbar-width: 8px;
   scrollbar-color: var(--ifm-hero-background-color);
 }
@@ -478,13 +478,14 @@ a.menu__link.menu__link--sublist.menu__link {
 }
 .menu > ul.menu__list ul.menu__list .menu__link {
   border-radius: 0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   padding-left: 0rem;
+  font-weight: 500;
 }
 .menu > ul.menu__list > li > ul.menu__list {
   border-left: 0px none;
   padding-left: 0;
-  margin: 0;
+  margin: 4px 0;
 }
 .menu .menu__link,
 .menu .menu__link:hover,
@@ -501,7 +502,7 @@ a.menu__link.menu__link--sublist.menu__link {
 .menu__link {
   /* padding: 0;
   margin: 0; */
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 /*

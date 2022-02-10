@@ -4,10 +4,10 @@
       "type": "category",
       "label": "Getting Started",
       "items": ["overview", "installation", "troubleshooting"],
-      "collapsed": true
+      "collapsed": false
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "type": "category",
       "label": "Customization",
       "items": [
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "type": "category",
       "label": "Components",
       "items": [
@@ -57,7 +57,7 @@
 
     {
       "type": "category",
-      "collapsed": true,
+      "collapsed": false,
       "label": "More Components",
       "items": [
         {
@@ -68,7 +68,7 @@
     },
     {
       "type": "category",
-      "collapsed": true,
+      "collapsed": false,
       "label": "See also",
       "items": [
         "repo/contributing",

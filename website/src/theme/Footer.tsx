@@ -30,13 +30,13 @@ export default function Footer() {
               <li className="footer__item">
                 <a
                   className="footer__link-item"
-                  href="/docs/repo/contributing#setup"
+                  href="/docs/contributing#setup"
                 >
                   Setup Guide
                 </a>
               </li>
               <li className="footer__item">
-                <a className="footer__link-item" href="/docs/repo/contributing">
+                <a className="footer__link-item" href="/docs/contributing">
                   Contribution Guide
                 </a>
               </li>
