@@ -1,9 +1,9 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
-import useThemeContext from '@theme/hooks/useThemeContext';
+import { useColorMode } from '@docusaurus/theme-common';
 
 export default function Footer() {
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useColorMode();
   const darkFooter = isDarkTheme ? 'footer-dark' : '';
   return (
     <footer className={'footer ' + darkFooter}>
@@ -30,13 +30,13 @@ export default function Footer() {
               <li className="footer__item">
                 <a
                   className="footer__link-item"
-                  href="/docs/repo/contributing#setup"
+                  href="/docs/contributing#setup"
                 >
                   Setup Guide
                 </a>
               </li>
               <li className="footer__item">
-                <a className="footer__link-item" href="/docs/repo/contributing">
+                <a className="footer__link-item" href="/docs/contributing">
                   Contribution Guide
                 </a>
               </li>

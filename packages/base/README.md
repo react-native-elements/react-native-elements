@@ -102,7 +102,7 @@ view the implementation & run the RNE expo app locally.
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing)
+[Contributing Guide](https://reactnativeelements.com/docs/contributing)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!

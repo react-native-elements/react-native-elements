@@ -1,0 +1,86 @@
+{
+  "name": "@react-native-elements/circular-slider",
+  "version": "0.0.0",
+  "description": "React Native Elements Next Gen Components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "prepublish": "tsc",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react-native",
+    "reactjs",
+    "reactnative",
+    "bootstrap"
+  ],
+  "scripts": {
+    "build": "tsc --composite false",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "postinstall": "opencollective-postinstall || exit 0",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prettify": "prettier --single-quote --trailing-comma=es5 --write './**/*.md'",
+    "clean-install": "rimraf node_modules && yarn"
+  },
+  "author": "Nader Dabit & Monte Thakkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-elements/react-native-elements/issues"
+  },
+  "homepage": "https://reactnativeelements.com/",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@react-native-elements/base": "^4.0.0-beta.0",
+    "@types/color": "^3.0.1",
+    "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/lodash.isequal": "^4.5.5",
+    "@types/react-test-renderer": "^17.0.0",
+    "jest-transform-stub": "^2.0.0",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "react-native-svg": "^12.1.1",
+    "utility-types": "^3.10.0"
+  },
+  "dependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.0"
+  },
+  "peerDependencies": {
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-reanimated": "^2.1.0",
+    "react-native-svg": "^12.1.1",
+    "react-native-vector-icons": "*"
+  },
+  "jest": {
+    "displayName": "@react-native-elements/circular-slider",
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ],
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
+    ],
+    "coveragePathIgnorePatterns": [
+      ""
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "!src/index.tsx",
+      "!src/helpers/*.tsx"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  }
+}

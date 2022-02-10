@@ -3407,26 +3407,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-elements/themed@workspace:packages/themed":
+"@react-native-elements/circular-slider@workspace:packages/circular-slider":
   version: 0.0.0-use.local
-  resolution: "@react-native-elements/themed@workspace:packages/themed"
-  dependencies:
-    "@react-native-community/eslint-config": ^2.0.0
-    "@react-native-elements/base": ^4.0.0-beta.0
-    "@types/color": ^3.0.1
-    "@types/hoist-non-react-statics": ^3.3.1
-    "@types/lodash.isequal": ^4.5.5
-    "@types/react-test-renderer": ^17.0.0
-    babel-jest: ^26.3.0
-    metro-react-native-babel-preset: ^0.63.0
-    react-test-renderer: ^16.13.1
-    utility-types: ^3.10.0
-  languageName: unknown
-  linkType: soft
-
-"@react-native-elements/universe@workspace:packages/universe":
-  version: 0.0.0-use.local
-  resolution: "@react-native-elements/universe@workspace:packages/universe"
+  resolution: "@react-native-elements/circular-slider@workspace:packages/circular-slider"
   dependencies:
     "@react-native-community/eslint-config": ^2.0.0
     "@react-native-elements/base": ^4.0.0-beta.0
@@ -3443,6 +3426,23 @@ __metadata:
     react-native-reanimated: ^2.1.0
     react-native-svg: ^12.1.1
     react-native-vector-icons: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-native-elements/themed@workspace:packages/themed":
+  version: 0.0.0-use.local
+  resolution: "@react-native-elements/themed@workspace:packages/themed"
+  dependencies:
+    "@react-native-community/eslint-config": ^2.0.0
+    "@react-native-elements/base": ^4.0.0-beta.0
+    "@types/color": ^3.0.1
+    "@types/hoist-non-react-statics": ^3.3.1
+    "@types/lodash.isequal": ^4.5.5
+    "@types/react-test-renderer": ^17.0.0
+    babel-jest: ^26.3.0
+    metro-react-native-babel-preset: ^0.63.0
+    react-test-renderer: ^16.13.1
+    utility-types: ^3.10.0
   languageName: unknown
   linkType: soft
 

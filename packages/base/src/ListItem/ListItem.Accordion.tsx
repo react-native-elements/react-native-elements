@@ -82,6 +82,7 @@ export const ListItemAccordion: RneFunctionComponent<
         {React.isValidElement(content) ? content : <ListItemContent />}
         {!noIcon && (
           <Animated.View
+            testID="RNE__ListItem__Accordion__Icon"
             style={{
               transform: [
                 {
@@ -105,6 +106,7 @@ export const ListItemAccordion: RneFunctionComponent<
         )}
       </ListItemBase>
       <Animated.View
+        testID="RNE__ListItem__Accordion__Children"
         style={[
           Boolean(animation) && {
             maxHeight: transition.interpolate({

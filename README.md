@@ -38,11 +38,10 @@ to install React Native Elements!
 
 ### Versions
 
-| Package                             | Version                                                                                                                                                   |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **@react-native-elements/base**     | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
-| **@react-native-elements/themed**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
-| **@react-native-elements/universe** | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/universe) |
+| Package                           | Version                                                                                                                                                   |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@react-native-elements/base**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
+| **@react-native-elements/themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
 
 ### Usage
 
@@ -88,7 +87,7 @@ const App = () => <Button title="Hello World!" />;
 - [x] [TabView](https://reactnativeelements.com/docs/tabview)
 - [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
-### Universe
+### Other Components
 
 - [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
@@ -119,7 +118,7 @@ yarn example start
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/repo/contributing), [Setup Guide](https://reactnativeelements.com/docs/repo/contributing#setup)
+[Contributing Guide](https://reactnativeelements.com/docs/contributing), [Setup Guide](https://reactnativeelements.com/docs/contributing#setup)
 and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!
