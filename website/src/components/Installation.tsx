@@ -1,12 +1,10 @@
 import React from 'react';
 import '../../static/css/components.css';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-const exampleCode = `
-import React from 'react';
+const exampleCode = `import React from 'react';
 import { Button } from '@react-native-elements/base';
 
-const AwesomeButton = () => (<Button title='Welcome'/>)
-`;
+const AwesomeButton = () => (<Button title='Welcome'/>)`;
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
@@ -25,7 +23,7 @@ const Home: React.FunctionComponent<{}> = () => {
                   <Highlight
                     {...defaultProps}
                     code={
-                      '$ yarn add @react-native-elements/base @react-native-elements/themed'
+                      'npm install @react-native-elements/base @react-native-elements/themed'
                     }
                     language="bash"
                     theme={
