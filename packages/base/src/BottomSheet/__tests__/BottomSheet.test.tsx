@@ -2,7 +2,7 @@ import React from 'react';
 import { BottomSheet } from '../index';
 import { Modal, ScrollView } from 'react-native';
 import { ListItem } from '../../ListItem/index';
-import { renderWithWrapper } from '../../../.ci/testHelper';
+import { fireEvent, renderWithWrapper } from '../../../.ci/testHelper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 describe('BottomSheet Component', () => {
@@ -52,6 +52,25 @@ describe('BottomSheet Component', () => {
       </BottomSheet>
     );
     expect(component.wrapper.findByType(Modal).props.visible).toBeFalsy();
+  });
+
+  it('should click the backdrop and use passed handler', () => {
+    const onBackdropPress = jest.fn();
+    const list = [{ title: 'test' }, { title: 'test2' }];
+    const { wrapper } = renderWithWrapper(
+      <BottomSheet isVisible onBackdropPress={onBackdropPress}>
+        {list.map((l, i) => (
+          <ListItem key={i}>
+            <ListItem.Content>
+              <ListItem.Title>{l.title}</ListItem.Title>
+            </ListItem.Content>
+          </ListItem>
+        ))}
+      </BottomSheet>,
+      'RNE__Overlay__backdrop'
+    );
+    fireEvent.press(wrapper);
+    expect(onBackdropPress).toHaveBeenCalled();
   });
 
   it('should render with the provided containerStyle', () => {

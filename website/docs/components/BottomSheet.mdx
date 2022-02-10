@@ -28,14 +28,26 @@ Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react
 
 ### BottomSheet
 
+- [backdropStyle](#backdropstyle)
 - [containerStyle](#containerstyle)
 - [isVisible](#isvisible)
 - [modalProps](#modalprops)
+- [onBackdropPress](#onbackdroppress)
 - [scrollViewProps](#scrollviewprops)
 
 ## Reference
 
 ### BottomSheet
+
+#### backdropStyle
+
+Style of the backdrop container.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
 
 #### containerStyle
 
@@ -64,6 +76,16 @@ Additional props handed to the `Modal`.
 | Type       | Default |
 | ---------- | ------- |
 | ModalProps | {}      |
+
+---
+
+#### onBackdropPress
+
+Handler for backdrop press.
+
+| Type     | Default  |
+| -------- | -------- |
+| Function | Function |
 
 ---
 

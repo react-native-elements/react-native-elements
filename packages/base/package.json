@@ -1,6 +1,6 @@
 {
   "name": "@react-native-elements/base",
-  "version": "4.0.0-beta.0",
+  "version": "4.0.0-beta.1",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

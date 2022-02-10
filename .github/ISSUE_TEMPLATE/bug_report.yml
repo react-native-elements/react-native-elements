@@ -47,33 +47,14 @@ body:
     attributes:
       label: Screenshots
       description: If applicable, add screenshots to help explain your problem.
-  - type: dropdown
-    attributes:
-      label: Package
-      description: What package?
-      multiple: false
-      options:
-        - "@react-native-elements/base"
-        - "@react-native-elements/themed"
-        - "@react-native-elements/circular-slider"
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: Your Environment
       description: |
         examples:
-          - **@react-native-elements/base**: 3.4.0
+          - **react-native-elements**: 3.4.0
           - **react-native**: 0.64
       render: markdown
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/react-native-elements/react-native-elements/blob/next/CODE_OF_CONDUCT.md)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
   - type: markdown
     attributes:
       value: |
