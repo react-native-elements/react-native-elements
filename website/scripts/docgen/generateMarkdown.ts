@@ -8,7 +8,7 @@ json2md.converters.header = function (input) {
         { hr: '' },
         { p: `id: ${input.id.toLowerCase()}` },
         { p: `title: ${input.id}` },
-        { p: `slug: /${input.id.toLowerCase()}` },
+        // { p: `slug: /${input.id.toLowerCase()}` },
         { hr: '' },
       ])
     : '';
