@@ -35,8 +35,6 @@ export type OverlayProps = Omit<ModalProps, 'visible'> & {
 /** The Overlay is a view that floats above an app’s content.
  * Overlays are an easy way to inform or request information from the user. */
 
-/** https://reactnative.dev/docs/modal#animationtype animationType="fade" | "slide" | "none" */
-
 export const Overlay: RneFunctionComponent<OverlayProps> = ({
   children,
   animationType,
