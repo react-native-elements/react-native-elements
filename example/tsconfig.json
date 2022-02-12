@@ -1,0 +1,24 @@
+{
+  "extends": "../tsconfig",
+  "references": [
+    {
+      "path": "../packages/base"
+    },
+    {
+      "path": "../packages/circular-slider"
+    },
+    {
+      "path": "../packages/themed"
+    }
+  ],
+  "compilerOptions": {
+    // Avoid expo-cli auto-generating a tsconfig
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "website"
+  ]
+}

@@ -1,0 +1,198 @@
+---
+id: tab
+
+title: Tab
+---
+
+import Usage from "./usage/Tab/Tab.mdx";
+
+import { Tab } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
+
+Tabs organize content across different screens, data sets, and other interactions.
+
+:::note
+
+This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
+
+:::
+
+```jsx
+<Tab.Item
+  title="Tab 1"
+  buttonStyle={(active) => {
+    backgroundColor: active ? "red" : "blue";
+  }}
+/>
+```
+
+## Components
+
+- [Tab.Item](#tabitem)
+  They are individual item of the parent Tab.
+  They are clickable and allows users to click and change Tab.
+  Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
+
+## Usage
+
+<Usage />
+
+## Props
+
+### Tab
+
+- [containerStyle](#containerstyle)
+- [disableIndicator](#disableindicator)
+- [indicatorStyle](#indicatorstyle)
+- [onChange](#onchange)
+- [scrollable](#scrollable)
+- [value](#value)
+- [variant](#variant)
+
+### Tab.Item
+
+- [active](#active)
+- [buttonStyle](#buttonstyle)
+- [containerStyle](#containerstyle)
+- [iconContainerStyle](#iconcontainerstyle)
+- [titleStyle](#titlestyle)
+- [variant](#variant)
+
+## Reference
+
+### Tab
+
+#### containerStyle
+
+Style for Tab container
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### disableIndicator
+
+Disable the indicator below.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### indicatorStyle
+
+Additional styling for tab indicator.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### onChange
+
+On Index Change Callback.
+
+| Type                    | Default  |
+| ----------------------- | -------- |
+| (value: number) => void | Function |
+
+---
+
+#### scrollable
+
+Makes Tab Scrolling
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
+
+---
+
+#### value
+
+Child position index value.
+
+| Type   | Default |
+| ------ | ------- |
+| number | None    |
+
+---
+
+#### variant
+
+Define the background Variant.
+
+| Type                   | Default |
+| ---------------------- | ------- |
+| "primary" or "default" | None    |
+
+---
+
+### Tab.Item
+
+#### active
+
+Allows to define if TabItem is active.
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### buttonStyle
+
+Additional button style
+
+| Type                                          | Default |
+| --------------------------------------------- | ------- |
+| `ViewStyle or (active: boolean) => ViewStyle` | None    |
+
+---
+
+#### containerStyle
+
+Additional Styling for button container.
+
+| Type                                        | Default |
+| ------------------------------------------- | ------- |
+| ViewStyle or (active: boolean) => ViewStyle | None    |
+
+---
+
+#### iconContainerStyle
+
+Additional Styling for Icon Component container.
+
+| Type                                        | Default |
+| ------------------------------------------- | ------- |
+| ViewStyle or (active: boolean) => ViewStyle | None    |
+
+---
+
+#### titleStyle
+
+Additional button title style
+
+| Type                                        | Default |
+| ------------------------------------------- | ------- |
+| TextStyle or (active: boolean) => TextStyle | None    |
+
+---
+
+#### variant
+
+Define the background Variant.
+
+| Type                   | Default |
+| ---------------------- | ------- |
+| "primary" or "default" | None    |
+
+---

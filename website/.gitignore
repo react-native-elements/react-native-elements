@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+node_modules
 
 # production
 /build
@@ -18,6 +18,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 website/docs/main/Component.md
 website/translated_docs

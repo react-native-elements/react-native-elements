@@ -1,0 +1,32 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - invalid
+      - Blocked
+    authors:
+      - dependabot
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - breaking change
+    - title: New Features 🎉
+      labels:
+        - "PR: feature"
+        - ":sparkles: Enhancement"
+        - ":bulbNew: Component"
+    - title: Bug fixes 🐛
+      labels:
+        - "PR: fix"
+        - ":bug: Bug"
+    - title: Docs 📖
+      labels:
+        - ":book: Docs"
+        - "PR: docs"
+    - title: Cleanup ♻️
+      labels:
+        - "PR: chore"
+        - "PR: refactor"
+    - title: Other Changes
+      labels:
+        - "*"
