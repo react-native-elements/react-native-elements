@@ -49,7 +49,7 @@ json2md.converters.imports = function (input) {
   return input.component
     ? json2md([
         {
-          p: `import Usage from './usage/${input.component}/${input.component}.mdx'`,
+          p: `import Snack from './snacks/${input.component}.mdx'`,
         },
         {
           p: `import { ${input.component} } from 'react-native-elements'`,
@@ -76,7 +76,7 @@ json2md.converters.usage = function (input) {
     (tabName || input?.usage) && { hr: '' },
     { p: snippetToCode(input?.usage) || '' },
     { h2: `Usage` },
-    { p: `<Usage />` },
+    { p: `<Snack />` },
   ].filter(Boolean);
 
   return json2md(tags);
