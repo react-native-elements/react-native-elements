@@ -18,6 +18,7 @@ const combineByStyles = (key = '') => {
       return [a, b].flat();
     };
   }
+  return undefined;
 };
 
 const ThemedComponent = (
@@ -88,7 +89,8 @@ function withTheme<P = {}, T = {}>(
   if (isClassComponent(WrappedComponent)) {
     return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
-  return Component;
+
+  return React.memo(Component);
 }
 
 export default withTheme;

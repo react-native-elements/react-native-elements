@@ -29,7 +29,7 @@
     "expo-app-loading": "~1.3.0",
     "expo-asset": "~8.4.4",
     "expo-font": "~10.0.4",
-    "expo-linear-gradient": "~11.0.0",
+    "expo-linear-gradient": "~11.0.3",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
