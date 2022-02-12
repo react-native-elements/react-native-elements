@@ -61,11 +61,38 @@ describe('Tab Component', () => {
           iconPosition="bottom"
           icon={{ name: 'book' }}
         />
+        <Tab.Item
+          title={'World'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
       </Tab>
     );
 
     const tabs = queryAllByRole('tab');
     fireEvent(tabs[0], 'press');
-    expect(tabs.length).toBe(1);
+    expect(tabs.length).toBe(2);
+  });
+
+  it('should render as scrollable', () => {
+    const changeTab = jest.fn();
+    const { queryAllByRole } = renderWithWrapper(
+      <Tab scrollable onChange={changeTab}>
+        <Tab.Item
+          title={'Hello'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
+        <Tab.Item
+          title={'World'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
+      </Tab>
+    );
+
+    const tabs = queryAllByRole('tab');
+    fireEvent(tabs[1], 'press');
+    expect(tabs.length).toBe(2);
   });
 });

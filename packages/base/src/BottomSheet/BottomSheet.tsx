@@ -3,6 +3,7 @@ import {
   Modal,
   View,
   StyleSheet,
+  Pressable,
   ScrollView,
   StyleProp,
   ViewStyle,
@@ -19,6 +20,12 @@ export type BottomSheetProps = {
   /** Additional props handed to the `Modal`. */
   modalProps?: ModalProps;
 
+  /** Style of the backdrop container. */
+  backdropStyle?: StyleProp<ViewStyle>;
+
+  /** Handler for backdrop press. */
+  onBackdropPress?(): void;
+
   /** Is the modal component shown. */
   isVisible?: boolean;
 
@@ -26,13 +33,14 @@ export type BottomSheetProps = {
   scrollViewProps?: ScrollViewProps;
 };
 
-/** Overlay Modal that displays content from the bottom of the screen.
+/**
+ * Overlay Modal that displays content from the bottom of the screen.
  * This opens from the bottom of the screen.
- * **Note:**
- * Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react-native-safe-area-context) in the setup guide before using `BottomSheet`.
  */
 export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   containerStyle,
+  backdropStyle,
+  onBackdropPress = () => null,
   isVisible = false,
   modalProps = {},
   children,
@@ -42,15 +50,23 @@ export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   return (
     <Modal
       animationType="slide"
+      onRequestClose={onBackdropPress}
       transparent={true}
       visible={isVisible}
       {...modalProps}
     >
+      <Pressable
+        onPress={onBackdropPress}
+        style={[StyleSheet.absoluteFill, backdropStyle]}
+        testID="RNE__Overlay__backdrop"
+      />
+
       <SafeAreaView
         style={StyleSheet.flatten([
           styles.safeAreaView,
           containerStyle && containerStyle,
         ])}
+        pointerEvents="box-none"
         {...rest}
       >
         <View>
@@ -67,7 +83,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.2)',
     flexDirection: 'column-reverse',
   },
-  listContainer: { backgroundColor: 'white' },
 });
 
 BottomSheet.displayName = 'BottomSheet';
