@@ -18,7 +18,8 @@
     "docs-build": "cd website && yarn run build",
     "docs-build-api": "cd website && yarn run build-api",
     "postinstall": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "release": "lerna version --no-push --no-git-tag-version  --conventional-commits --allow-branch=\"*\" --no-private"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.10",

@@ -3444,7 +3444,7 @@ __metadata:
     react-test-renderer: ^16.13.1
     utility-types: ^3.10.0
   peerDependencies:
-    "@react-native-elements/base": ^4.0.0-beta.1
+    "@react-native-elements/base": "*"
   languageName: unknown
   linkType: soft
 
@@ -15385,7 +15385,7 @@ __metadata:
     "@expo/webpack-config": ~0.16.2
     "@react-native-community/eslint-config": ^2.0.0
     "@react-native-community/masked-view": 0.1.10
-    "@react-native-elements/base": ^4.0.0-beta.0
+    "@react-native-elements/base": ^4.0.0-beta.1
     "@react-navigation/drawer": ^5.11.4
     "@react-navigation/native": ^5.8.10
     "@react-navigation/stack": ^5.12.8
