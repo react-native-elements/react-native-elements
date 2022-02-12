@@ -18,16 +18,28 @@ export type TabItemProps = Omit<
   /** Define the background Variant. */
   variant?: 'primary' | 'default';
 
-  /** Additional button style */
+  /**
+   * Additional button style
+   * @type `ViewStyle or (active: boolean) => ViewStyle`
+   */
   buttonStyle?: ActiveTabItemStyle<ViewStyle>;
 
-  /** Additional button title style */
+  /**
+   * Additional button title style
+   *  @type TextStyle or (active: boolean) => TextStyle
+   */
   titleStyle?: ActiveTabItemStyle<TextStyle>;
 
-  /** Additional Styling for button container. */
+  /**
+   * Additional Styling for button container.
+   * @type ViewStyle or (active: boolean) => ViewStyle
+   */
   containerStyle?: ActiveTabItemStyle<ViewStyle>;
 
-  /** Additional Styling for Icon Component container. */
+  /**
+   * Additional Styling for Icon Component container.
+   * @type ViewStyle or (active: boolean) => ViewStyle
+   */
   iconContainerStyle?: ActiveTabItemStyle<ViewStyle>;
 };
 

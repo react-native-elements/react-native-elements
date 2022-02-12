@@ -33,10 +33,9 @@ export type BottomSheetProps = {
   scrollViewProps?: ScrollViewProps;
 };
 
-/** Overlay Modal that displays content from the bottom of the screen.
+/**
+ * Overlay Modal that displays content from the bottom of the screen.
  * This opens from the bottom of the screen.
- * **Note:**
- * Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react-native-safe-area-context) in the setup guide before using `BottomSheet`.
  */
 export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
   containerStyle,
