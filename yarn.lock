@@ -3379,7 +3379,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@workspace:packages/base":
+"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@^4.0.0-beta.1, @react-native-elements/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@react-native-elements/base@workspace:packages/base"
   dependencies:
@@ -3434,7 +3434,7 @@ __metadata:
   resolution: "@react-native-elements/themed@workspace:packages/themed"
   dependencies:
     "@react-native-community/eslint-config": ^2.0.0
-    "@react-native-elements/base": ^4.0.0-beta.0
+    "@react-native-elements/base": ^4.0.0-beta.1
     "@types/color": ^3.0.1
     "@types/hoist-non-react-statics": ^3.3.1
     "@types/lodash.isequal": ^4.5.5
@@ -3443,6 +3443,8 @@ __metadata:
     metro-react-native-babel-preset: ^0.63.0
     react-test-renderer: ^16.13.1
     utility-types: ^3.10.0
+  peerDependencies:
+    "@react-native-elements/base": ^4.0.0-beta.1
   languageName: unknown
   linkType: soft
 
@@ -8298,12 +8300,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-linear-gradient@npm:~11.0.0":
-  version: 11.0.0
-  resolution: "expo-linear-gradient@npm:11.0.0"
+"expo-linear-gradient@npm:~11.0.3":
+  version: 11.0.3
+  resolution: "expo-linear-gradient@npm:11.0.3"
   peerDependencies:
     expo: "*"
-  checksum: b2d125c6d2a493a48f0becb654391bd6ec7e23086000e0d9b29df32065c8b13bf193db750f6f7ba65ffb836837dc4941f65a7e59fca22961e20862345c5ecd49
+  checksum: 0728a0ef16210f0998b0fd309880e411f873542ca8878f069adfb8356f9e6bc808a00fef2aec8094be1bbdb094a359c9a281abd0894cd601991c3e82925704de
   languageName: node
   linkType: hard
 
@@ -15396,7 +15398,7 @@ __metadata:
     expo-app-loading: ~1.3.0
     expo-asset: ~8.4.4
     expo-font: ~10.0.4
-    expo-linear-gradient: ~11.0.0
+    expo-linear-gradient: ~11.0.3
     gh-pages: ^2.1.1
     jest-expo: ^44.0.0
     lodash: ^4.17.20
