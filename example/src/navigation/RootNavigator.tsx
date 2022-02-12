@@ -4,7 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { ThemeContext } from '@react-native-elements/themed';
 import { ThemeReducerContext } from '../helpers/ThemeReducer';
 import DrawerNavigator from './DrawerNavigator';
-import Avatars from '../views/avatars';
+import Avatars from '../views/tabs';
 import Cards from '../views/cards';
 import Tiles from '../views/tiles';
 import Buttons from '../views/buttons';

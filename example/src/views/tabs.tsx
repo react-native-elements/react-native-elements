@@ -19,7 +19,10 @@ export default () => {
         variant="primary"
       >
         <Tab.Item
-          title="Recent Example tab 1"
+          containerStyle={(active) => ({
+            backgroundColor: active ? '#208990' : '#2088dc',
+          })}
+          title="Recent"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
         />

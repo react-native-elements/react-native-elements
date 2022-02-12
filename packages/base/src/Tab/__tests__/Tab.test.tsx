@@ -61,11 +61,16 @@ describe('Tab Component', () => {
           iconPosition="bottom"
           icon={{ name: 'book' }}
         />
+        <Tab.Item
+          title={'World'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
       </Tab>
     );
 
     const tabs = queryAllByRole('tab');
     fireEvent(tabs[0], 'press');
-    expect(tabs.length).toBe(1);
+    expect(tabs.length).toBe(2);
   });
 });

@@ -28,7 +28,7 @@ export type TabBaseProps = ViewProps & {
   /** Additional styling for tab indicator. */
   indicatorStyle?: StyleProp<ViewStyle>;
 
-  /** Style for container */
+  /** Style for Tab container */
   containerStyle?: StyleProp<ViewStyle>;
 
   /** Define the background Variant. */
@@ -41,6 +41,8 @@ export type TabBaseProps = ViewProps & {
  * :::note
  * This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
  * :::
+ * %jsx <Tab.Item title="Tab 1" buttonStyle={(active)=>{backgroundColor: active ? 'red' : 'blue'}} />
+ *
  *  */
 export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   theme = defaultTheme,
@@ -58,24 +60,29 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   const scrollViewPosition = React.useRef(0);
 
   const tabContainerWidth = React.useRef(0);
-  const tabItemsWidth = React.useRef<Array<number>>([]);
+  const tabItemsPosition = React.useRef<Array<number>>([]);
 
   const { current: animation } = React.useRef(new Animated.Value(0));
 
   const scrollHandler = React.useCallback(() => {
-    if (tabItemsWidth.current.length > value) {
-      let start = value === 0 ? 0 : tabItemsWidth.current[value - 1];
-      let end = tabItemsWidth.current[value];
+    if (tabItemsPosition.current.length > value) {
+      let itemStartPosition =
+        value === 0 ? 0 : tabItemsPosition.current[value - 1];
+      let itemEndPosition = tabItemsPosition.current[value];
 
       const scrollCurrentPosition = scrollViewPosition.current;
       const tabContainerCurrentWidth = tabContainerWidth.current;
 
       let scrollX = scrollCurrentPosition;
 
-      if (start < scrollCurrentPosition) {
-        scrollX += start - scrollCurrentPosition;
-      } else if (scrollCurrentPosition + tabContainerCurrentWidth < end) {
-        scrollX += end - (scrollCurrentPosition + tabContainerCurrentWidth);
+      if (itemStartPosition < scrollCurrentPosition) {
+        scrollX += itemStartPosition - scrollCurrentPosition;
+      } else if (
+        scrollCurrentPosition + tabContainerCurrentWidth <
+        itemEndPosition
+      ) {
+        scrollX +=
+          itemEndPosition - (scrollCurrentPosition + tabContainerCurrentWidth);
       }
 
       scrollViewRef.current.scrollTo({
@@ -96,14 +103,30 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
     scrollable && scrollHandler();
   }, [animation, scrollHandler, value, scrollable]);
 
-  const WIDTH = React.useMemo(
-    () => tabContainerWidth.current / React.Children.count(children),
-    [children]
-  );
-
   const onScrollHandler = React.useCallback((event) => {
     scrollViewPosition.current = event.nativeEvent.contentOffset.x;
   }, []);
+
+  const indicatorTransitionInterpolate = React.useMemo(() => {
+    const countItems = React.Children.count(children);
+    const inputRange = [...Array(countItems < 2 ? 2 : countItems).keys()];
+    const outputRange =
+      tabItemsPosition.current.length === countItems
+        ? tabItemsPosition.current
+        : inputRange;
+
+    return animation.interpolate({
+      inputRange,
+      outputRange: [0, ...outputRange].slice(0, -1),
+    });
+  }, [animation, children]);
+
+  const WIDTH = React.useMemo(
+    () =>
+      tabItemsPosition.current[value] -
+        (tabItemsPosition.current[value - 1] || 0) || 0,
+    [value]
+  );
 
   return (
     <View
@@ -120,60 +143,50 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
         tabContainerWidth.current = layout.width;
       }}
     >
-      {scrollable ? (
-        <ScrollView
-          horizontal
-          ref={scrollViewRef}
-          onScroll={onScrollHandler}
-          showsHorizontalScrollIndicator={false}
-        >
-          {React.Children.map(children, (child, index) => {
-            return React.cloneElement(
-              child as React.ReactElement<TabItemProps>,
-              {
-                onPress: () => onChange(index),
-                onLayout: (event: LayoutChangeEvent) => {
-                  const layout = event.nativeEvent.layout;
-                  tabItemsWidth.current[index] =
-                    (tabItemsWidth.current[index - 1] || 0) + layout.width;
-                },
-                active: index === value,
-                variant,
-              }
-            );
-          })}
-        </ScrollView>
-      ) : (
-        React.Children.map(children, (child, index) => {
-          return React.cloneElement(child as React.ReactElement<TabItemProps>, {
-            onPress: () => onChange(index),
-            active: index === value,
-            variant,
-          });
-        })
-      )}
-
-      {!disableIndicator && !scrollable && (
-        <Animated.View
-          style={[
-            styles.indicator,
-            {
-              backgroundColor: theme?.colors?.secondary,
-              transform: [
+      {React.createElement(scrollable ? ScrollView : React.Fragment, {
+        ...(scrollable && {
+          horizontal: true,
+          ref: scrollViewRef,
+          onScroll: onScrollHandler,
+          showsHorizontalScrollIndicator: false,
+        }),
+        children: (
+          <>
+            {React.Children.map(children, (child, index) => {
+              return React.cloneElement(
+                child as React.ReactElement<TabItemProps>,
                 {
-                  translateX: animation.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [0, WIDTH],
-                  }),
-                },
-              ],
-            },
-            indicatorStyle,
-          ]}
-        >
-          <View style={{ width: WIDTH }} />
-        </Animated.View>
-      )}
+                  onPress: () => onChange(index),
+                  onLayout: (event: LayoutChangeEvent) => {
+                    const layout = event.nativeEvent.layout;
+                    tabItemsPosition.current[index] =
+                      (tabItemsPosition.current[index - 1] || 0) + layout.width;
+                  },
+                  active: index === value,
+                  variant,
+                }
+              );
+            })}
+            {!disableIndicator && (
+              <Animated.View
+                style={[
+                  styles.indicator,
+                  {
+                    backgroundColor: theme?.colors?.secondary,
+                    transform: [
+                      {
+                        translateX: indicatorTransitionInterpolate,
+                      },
+                    ],
+                    width: WIDTH,
+                  },
+                  indicatorStyle,
+                ]}
+              />
+            )}
+          </>
+        ),
+      })}
     </View>
   );
 };

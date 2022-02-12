@@ -20,10 +20,19 @@ This component is not for (complex) navigation. Use [React Navigation](https://r
 
 :::
 
+```jsx
+<Tab.Item
+  title="Tab 1"
+  buttonStyle={(active) => {
+    backgroundColor: active ? "red" : "blue";
+  }}
+/>
+```
+
 ## Components
 
 - [Tab.Item](#tabitem)
-  They are indivual item of the parent Tab.
+  They are individual item of the parent Tab.
   They are clickable and allows users to click and change Tab.
   Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
 
@@ -46,6 +55,10 @@ This component is not for (complex) navigation. Use [React Navigation](https://r
 ### Tab.Item
 
 - [active](#active)
+- [buttonStyle](#buttonstyle)
+- [containerStyle](#containerstyle)
+- [iconContainerStyle](#iconcontainerstyle)
+- [titleStyle](#titlestyle)
 - [variant](#variant)
 
 ## Reference
@@ -54,7 +67,7 @@ This component is not for (complex) navigation. Use [React Navigation](https://r
 
 #### containerStyle
 
-Style for container
+Style for Tab container
 
 | Type               | Default |
 | ------------------ | ------- |
@@ -131,6 +144,46 @@ Allows to define if TabItem is active.
 | Type    | Default |
 | ------- | ------- |
 | boolean | None    |
+
+---
+
+#### buttonStyle
+
+Additional button style
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<ViewStyle> | None    |
+
+---
+
+#### containerStyle
+
+Additional Styling for button container.
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<ViewStyle> | None    |
+
+---
+
+#### iconContainerStyle
+
+Additional Styling for Icon Component container.
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<ViewStyle> | None    |
+
+---
+
+#### titleStyle
+
+Additional button title style
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<TextStyle> | None    |
 
 ---
 
