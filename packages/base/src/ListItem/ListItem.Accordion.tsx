@@ -58,7 +58,7 @@ export const ListItemAccordion: RneFunctionComponent<
     if (typeof animation !== 'boolean') {
       Animated[animation.type || 'timing'](transition, {
         toValue: Number(isExpanded),
-        useNativeDriver: false,
+        useNativeDriver: true,
         duration: animation.duration || 350,
       }).start();
     }
