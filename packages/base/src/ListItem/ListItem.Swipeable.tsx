@@ -12,16 +12,26 @@ import { ListItemBase, ListItemBaseProps } from './ListItem';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
 export type ListItemSwipeableProps = ListItemBaseProps & {
-  /** Left Content. */
-  leftContent?: React.ReactNode;
+  /**
+   * Left Content.
+   * @type ReactNode or resetCallback => ReactNode
+   */
+  leftContent?: React.ReactNode | ((reset: () => void) => React.ReactNode);
 
-  /** Right Content. */
-  rightContent?: React.ReactNode;
+  /**
+   *  Right Content.
+   * @type ReactNode or resetCallback => ReactNode
+   */
+  rightContent?: React.ReactNode | ((reset: () => void) => React.ReactNode);
 
-  /** Style of left container. */
+  /** Style of left container.
+   * @type ReactNode or resetCallback => ReactNode
+   */
   leftStyle?: StyleProp<ViewStyle>;
 
-  /** Style of right container. */
+  /** Style of right container.
+   * @type ReactNode or resetCallback => ReactNode
+   */
   rightStyle?: StyleProp<ViewStyle>;
 
   /** Width to swipe left. */
@@ -30,14 +40,8 @@ export type ListItemSwipeableProps = ListItemBaseProps & {
   /** Width to swipe right. */
   rightWidth?: number;
 
-  /** Handler for left swipe. */
-  onLeftSwipe?: () => any;
-
-  /** Handler for right swipe. */
-  onRightSwipe?: () => any;
-
   /** Handler for swipe in either direction */
-  onSwipeBegin?: () => any;
+  onSwipeBegin?: (direction: 'left' | 'right') => any;
 
   /** Handler for swipe end. */
   onSwipeEnd?: () => any;
@@ -54,8 +58,6 @@ export const ListItemSwipeable: RneFunctionComponent<
   rightContent,
   leftWidth = ScreenWidth / 3,
   rightWidth = ScreenWidth / 3,
-  onLeftSwipe,
-  onRightSwipe,
   onSwipeBegin,
   onSwipeEnd,
   ...rest
@@ -63,15 +65,6 @@ export const ListItemSwipeable: RneFunctionComponent<
   const { current: panX } = React.useRef(new Animated.Value(0));
   const currValue = React.useRef(0);
   const prevValue = React.useRef(0);
-
-  React.useEffect(() => {
-    let subs = panX.addListener(({ value }) => {
-      currValue.current = value;
-    });
-    return () => {
-      panX.removeListener(subs);
-    };
-  }, [panX]);
 
   const slideAnimation = React.useCallback(
     (toValue: number) => {
@@ -84,12 +77,31 @@ export const ListItemSwipeable: RneFunctionComponent<
     [panX]
   );
 
+  const resetCallBack = () => {
+    slideAnimation(0);
+  };
+
+  React.useEffect(() => {
+    let subs = panX.addListener(({ value }) => {
+      currValue.current = value;
+    });
+    return () => {
+      panX.removeListener(subs);
+    };
+  }, [panX]);
+
   const onPanResponderMove = (_: any, { dx }: PanResponderGestureState) => {
+    if (dx > 0 && !leftContent) {
+      return;
+    }
+    if (dx < 0 && !rightContent) {
+      return;
+    }
+
     if (!prevValue.current) {
       prevValue.current = currValue.current;
     }
     let newDX = prevValue.current + dx;
-    onSwipeBegin?.();
     if (Math.abs(newDX) > ScreenWidth / 2) {
       return;
     }
@@ -98,12 +110,6 @@ export const ListItemSwipeable: RneFunctionComponent<
 
   const onPanResponderRelease = (_: any, { dx }: PanResponderGestureState) => {
     prevValue.current = currValue.current;
-    onSwipeEnd?.();
-    if (Math.sign(dx) > 0) {
-      onLeftSwipe?.();
-    } else if (Math.sign(dx) < 0) {
-      onRightSwipe?.();
-    }
     if (
       (Math.sign(dx) > 0 && !leftContent) ||
       (Math.sign(dx) < 0 && !rightContent)
@@ -121,7 +127,12 @@ export const ListItemSwipeable: RneFunctionComponent<
   const { current: _panResponder } = React.useRef(
     PanResponder.create({
       onMoveShouldSetPanResponderCapture: () => true,
-      onPanResponderGrant: () => false,
+      onPanResponderGrant: (_event, { vx }) => {
+        if (vx !== 0) {
+          onSwipeBegin?.(vx > 0 ? 'left' : 'right');
+        }
+      },
+      onPanResponderEnd: onSwipeEnd,
       onPanResponderMove,
       onPanResponderRelease,
     })
@@ -152,7 +163,9 @@ export const ListItemSwipeable: RneFunctionComponent<
             leftStyle,
           ]}
         >
-          {leftContent}
+          {typeof leftContent === 'function'
+            ? leftContent(resetCallBack)
+            : leftContent}
         </View>
         <View style={{ flex: 0 }} />
         <View
@@ -164,7 +177,9 @@ export const ListItemSwipeable: RneFunctionComponent<
             rightStyle,
           ]}
         >
-          {rightContent}
+          {typeof rightContent === 'function'
+            ? rightContent(resetCallBack)
+            : rightContent}
         </View>
       </View>
       <Animated.View

@@ -101,8 +101,6 @@ None
 - [leftContent](#leftcontent)
 - [leftStyle](#leftstyle)
 - [leftWidth](#leftwidth)
-- [onLeftSwipe](#onleftswipe)
-- [onRightSwipe](#onrightswipe)
 - [onSwipeBegin](#onswipebegin)
 - [onSwipeEnd](#onswipeend)
 - [rightContent](#rightcontent)
@@ -337,9 +335,9 @@ None
 
 Left Content.
 
-| Type            | Default |
-| --------------- | ------- |
-| React.ReactNode | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
@@ -347,9 +345,9 @@ Left Content.
 
 Style of left container.
 
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
@@ -363,33 +361,13 @@ Width to swipe left.
 
 ---
 
-#### onLeftSwipe
-
-Handler for left swipe.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
-
----
-
-#### onRightSwipe
-
-Handler for right swipe.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
-
----
-
 #### onSwipeBegin
 
 Handler for swipe in either direction
 
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
+| Type                                  | Default |
+| ------------------------------------- | ------- |
+| (direction: "left" or "right") => any | None    |
 
 ---
 
@@ -407,9 +385,9 @@ Handler for swipe end.
 
 Right Content.
 
-| Type            | Default |
-| --------------- | ------- |
-| React.ReactNode | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
@@ -417,9 +395,9 @@ Right Content.
 
 Style of right container.
 
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
