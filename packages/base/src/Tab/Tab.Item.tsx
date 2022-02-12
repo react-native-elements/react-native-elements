@@ -1,31 +1,62 @@
+import Color from 'color';
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleProp, StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { Button, ButtonProps } from '../Button';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
-import Color from 'color';
 
-export type TabItemProps = ButtonProps & {
+type ActiveTabItemStyle<T = {}> =
+  | ((active: boolean) => StyleProp<T>)
+  | StyleProp<T>;
+
+export type TabItemProps = Omit<
+  ButtonProps,
+  'buttonStyle' | 'titleStyle' | 'containerStyle' | 'iconContainerStyle'
+> & {
   /** Allows to define if TabItem is active. */
   active?: boolean;
 
   /** Define the background Variant. */
   variant?: 'primary' | 'default';
+
+  /** Additional button style */
+  buttonStyle?: ActiveTabItemStyle<ViewStyle>;
+
+  /** Additional button title style */
+  titleStyle?: ActiveTabItemStyle<TextStyle>;
+
+  /** Additional Styling for button container. */
+  containerStyle?: ActiveTabItemStyle<ViewStyle>;
+
+  /** Additional Styling for Icon Component container. */
+  iconContainerStyle?: ActiveTabItemStyle<ViewStyle>;
 };
 
-/** They are indivual item of the parent Tab.
+/**
+ * They are individual item of the parent Tab.
  * They are clickable and allows users to click and change Tab.
- * Receives all [Button](https://reactnativeelements.com/docs/button#props) props. */
+ * Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
+ *  */
 export const TabItem: RneFunctionComponent<TabItemProps> = ({
   active,
   theme = defaultTheme,
   titleStyle,
   containerStyle,
   buttonStyle,
+  iconContainerStyle,
   variant,
   iconPosition = 'top',
   title,
   ...rest
 }) => {
+  /**
+   * Allow user to define custom style for active Tab Item.
+   * buttonStyle={(active) => ({ backgroundColor: active ? 'red' : 'blue' })}
+   */
+  const activeStyle = React.useCallback(
+    (type) => (typeof type === 'function' ? type(active) : type),
+    [active]
+  );
+
   return (
     <Button
       accessibilityRole="tab"
@@ -33,24 +64,25 @@ export const TabItem: RneFunctionComponent<TabItemProps> = ({
       accessibilityValue={
         typeof title === 'string' ? { text: title } : undefined
       }
-      buttonStyle={[styles.buttonStyle, buttonStyle]}
+      buttonStyle={[styles.buttonStyle, activeStyle(buttonStyle)]}
       titleStyle={[
         styles.titleStyle,
         {
           color: variant === 'primary' ? 'white' : theme?.colors?.secondary,
           paddingVertical: !rest.icon ? 8 : 2,
         },
-        titleStyle,
+        activeStyle(titleStyle),
       ]}
       containerStyle={[
         styles.containerStyle,
         {
           backgroundColor: active
-            ? Color(theme?.colors?.secondary).alpha(0.2).rgb().toString()
+            ? Color(theme?.colors?.primary).darken(0.05).rgb().toString()
             : 'transparent',
         },
-        containerStyle,
+        activeStyle(containerStyle),
       ]}
+      iconContainerStyle={[activeStyle(iconContainerStyle)]}
       iconPosition={iconPosition}
       title={title}
       {...rest}
@@ -66,7 +98,6 @@ const styles = StyleSheet.create({
   titleStyle: {
     paddingHorizontal: 16,
     paddingVertical: 8,
-    textTransform: 'uppercase',
   },
   containerStyle: {
     flex: 1,

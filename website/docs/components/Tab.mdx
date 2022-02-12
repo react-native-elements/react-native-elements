@@ -14,10 +14,25 @@ import TabItem from "@theme/TabItem";
 
 Tabs organize content across different screens, data sets, and other interactions.
 
+:::note
+
+This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
+
+:::
+
+```jsx
+<Tab.Item
+  title="Tab 1"
+  buttonStyle={(active) => {
+    backgroundColor: active ? "red" : "blue";
+  }}
+/>
+```
+
 ## Components
 
 - [Tab.Item](#tabitem)
-  They are indivual item of the parent Tab.
+  They are individual item of the parent Tab.
   They are clickable and allows users to click and change Tab.
   Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
 
@@ -29,20 +44,36 @@ Tabs organize content across different screens, data sets, and other interaction
 
 ### Tab
 
+- [containerStyle](#containerstyle)
 - [disableIndicator](#disableindicator)
 - [indicatorStyle](#indicatorstyle)
 - [onChange](#onchange)
+- [scrollable](#scrollable)
 - [value](#value)
 - [variant](#variant)
 
 ### Tab.Item
 
 - [active](#active)
+- [buttonStyle](#buttonstyle)
+- [containerStyle](#containerstyle)
+- [iconContainerStyle](#iconcontainerstyle)
+- [titleStyle](#titlestyle)
 - [variant](#variant)
 
 ## Reference
 
 ### Tab
+
+#### containerStyle
+
+Style for Tab container
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
 
 #### disableIndicator
 
@@ -71,6 +102,16 @@ On Index Change Callback.
 | Type                    | Default  |
 | ----------------------- | -------- |
 | (value: number) => void | Function |
+
+---
+
+#### scrollable
+
+Makes Tab Scrolling
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | false   |
 
 ---
 
@@ -103,6 +144,46 @@ Allows to define if TabItem is active.
 | Type    | Default |
 | ------- | ------- |
 | boolean | None    |
+
+---
+
+#### buttonStyle
+
+Additional button style
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<ViewStyle> | None    |
+
+---
+
+#### containerStyle
+
+Additional Styling for button container.
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<ViewStyle> | None    |
+
+---
+
+#### iconContainerStyle
+
+Additional Styling for Icon Component container.
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<ViewStyle> | None    |
+
+---
+
+#### titleStyle
+
+Additional button title style
+
+| Type                          | Default |
+| ----------------------------- | ------- |
+| ActiveTabItemStyle<TextStyle> | None    |
 
 ---
 
