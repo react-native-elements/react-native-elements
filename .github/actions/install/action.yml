@@ -20,7 +20,7 @@ runs:
         path: "node_modules"
         key: ${{ runner.os }}-rne-cache-${{ hashFiles('./yarn.lock') }}
         restore-keys: |
-          ${{ runner.os }}-rne-cache
+          ${{ runner.os }}-rne-cache-
     - name: Install
       if: steps.root_cache.outputs.cache-hit != 'true'
       run: yarn install
