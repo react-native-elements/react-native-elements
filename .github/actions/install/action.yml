@@ -18,7 +18,7 @@ runs:
       id: root_cache
       with:
         path: "node_modules"
-        key: ${{ runner.os }}-rne-cache-${{ hashFiles('yarn.lock') }}
+        key: ${{ runner.os }}-rne-cache-${{ hashFiles('./yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-rne-cache
     - name: Install
@@ -31,7 +31,7 @@ runs:
       id: website_cache
       with:
         path: "website/node_modules"
-        key: ${{ runner.os }}-rne-website-${{ hashFiles('website/yarn.lock') }}
+        key: ${{ runner.os }}-rne-website-${{ hashFiles('./website/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-rne-website-
     - name: Install website dependencies
