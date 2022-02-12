@@ -80,45 +80,39 @@ export const ListItemAccordion: RneFunctionComponent<
     <>
       <ListItemBase {...rest}>
         {React.isValidElement(content) ? content : <ListItemContent />}
-        {!noIcon && (
-          <Animated.View
-            testID="RNE__ListItem__Accordion__Icon"
-            style={{
-              transform: [
-                {
-                  rotate,
-                },
-              ],
-            }}
-          >
-            {icon ? (
-              <Icon
-                {...((expandIcon
-                  ? isExpanded
-                    ? expandIcon
-                    : icon
-                  : icon) as IconProps)}
-              />
-            ) : (
+        {!noIcon &&
+          (icon ? (
+            React.createElement(
+              Icon,
+              (isExpanded ? expandIcon : icon) as IconProps
+            )
+          ) : (
+            <Animated.View
+              testID="RNE__ListItem__Accordion__Icon"
+              style={{
+                transform: [
+                  {
+                    rotate,
+                  },
+                ],
+              }}
+            >
               <Icon name={'chevron-down'} type="material-community" />
-            )}
-          </Animated.View>
-        )}
+            </Animated.View>
+          ))}
       </ListItemBase>
-      <Animated.View
-        testID="RNE__ListItem__Accordion__Children"
-        style={[
-          Boolean(animation) && {
-            maxHeight: transition.interpolate({
-              inputRange: [0, 1],
-              outputRange: ['0%', '100%'],
-            }),
-            opacity: transition,
-          },
-        ]}
-      >
-        {children}
-      </Animated.View>
+      {isExpanded && (
+        <Animated.View
+          testID="RNE__ListItem__Accordion__Children"
+          style={[
+            {
+              opacity: transition,
+            },
+          ]}
+        >
+          {children}
+        </Animated.View>
+      )}
     </>
   );
 };
