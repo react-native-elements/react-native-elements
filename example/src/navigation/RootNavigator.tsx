@@ -29,6 +29,7 @@ import Dialogs from '../views/dialogs';
 import Overlay from '../views/overlay';
 import CheckBox from '../views/checkbox';
 import FAB from '../views/fab';
+import Theme from '../views/theme';
 import Text from '../views/text';
 import Tabs from '../views/tabs';
 import Badge from '../views/badge';
@@ -99,6 +100,7 @@ function RootNavigator() {
         <Drawer.Screen name="Speed Dial" component={SpeedDial} />
         <Drawer.Screen name="Tabs" component={Tabs} />
         <Drawer.Screen name="Text" component={Text} />
+        <Drawer.Screen name="Theme" component={Theme} />
         <Drawer.Screen name="Tiles" component={Tiles} />
         <Drawer.Screen name="Tooltip" component={Tooltip} />
         <Drawer.Screen name="Whatsapp Clone" component={WhatsappClone} />
