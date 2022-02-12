@@ -15,7 +15,7 @@ export default () => {
           backgroundColor: 'white',
           height: 3,
         }}
-        tabScrolling={true}
+        scrollable
         variant="primary"
       >
         <Tab.Item

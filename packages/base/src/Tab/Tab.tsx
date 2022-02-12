@@ -7,6 +7,7 @@ import {
   ViewProps,
   StyleSheet,
   ScrollView,
+  LayoutChangeEvent,
 } from 'react-native';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
@@ -16,7 +17,7 @@ export type TabBaseProps = ViewProps & {
   value?: number;
 
   /** Makes Tab Scrolling */
-  tabScrolling?: boolean;
+  scrollable?: boolean;
 
   /** On Index Change Callback. */
   onChange?: (value: number) => void;
@@ -27,27 +28,63 @@ export type TabBaseProps = ViewProps & {
   /** Additional styling for tab indicator. */
   indicatorStyle?: StyleProp<ViewStyle>;
 
+  /** Style for container */
+  containerStyle?: StyleProp<ViewStyle>;
+
   /** Define the background Variant. */
   variant?: 'primary' | 'default';
 };
 
-/** Tabs organize content across different screens, data sets, and other interactions. */
+/**
+ * Tabs organize content across different screens, data sets, and other interactions.
+ *
+ * :::note
+ * This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
+ * :::
+ *  */
 export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   theme = defaultTheme,
   children,
   value,
-  tabScrolling,
+  scrollable = false,
   onChange = () => {},
   indicatorStyle,
   disableIndicator,
   variant,
+  containerStyle,
   ...rest
 }) => {
-  const [dim, setDim] = React.useState({ width: 0 });
-  const [childCoords, setChildCoords] = React.useState([]);
-  const [tabXPosition, setTabXPosition] = React.useState(null);
-  const [scrollViewRef, setScrollViewRef] = React.useState(null);
+  const scrollViewRef = React.useRef<ScrollView>(null);
+  const scrollViewPosition = React.useRef(0);
+
+  const tabContainerWidth = React.useRef(0);
+  const tabItemsWidth = React.useRef<Array<number>>([]);
+
   const { current: animation } = React.useRef(new Animated.Value(0));
+
+  const scrollHandler = React.useCallback(() => {
+    if (tabItemsWidth.current.length > value) {
+      let start = value === 0 ? 0 : tabItemsWidth.current[value - 1];
+      let end = tabItemsWidth.current[value];
+
+      const scrollCurrentPosition = scrollViewPosition.current;
+      const tabContainerCurrentWidth = tabContainerWidth.current;
+
+      let scrollX = scrollCurrentPosition;
+
+      if (start < scrollCurrentPosition) {
+        scrollX += start - scrollCurrentPosition;
+      } else if (scrollCurrentPosition + tabContainerCurrentWidth < end) {
+        scrollX += end - (scrollCurrentPosition + tabContainerCurrentWidth);
+      }
+
+      scrollViewRef.current.scrollTo({
+        x: scrollX,
+        y: 0,
+        animated: true,
+      });
+    }
+  }, [value]);
 
   React.useEffect(() => {
     Animated.timing(animation, {
@@ -56,109 +93,88 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
       duration: 170,
     }).start();
 
-    scrollHandler();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [animation, value]);
+    scrollable && scrollHandler();
+  }, [animation, scrollHandler, value, scrollable]);
 
-  const scrollHandler = () => {
-    if (tabScrolling && childCoords.length > value) {
-      let start = value === 0 ? 0 : childCoords[value - 1];
-      let end = childCoords[value];
-      let scrollX = 0;
-      if (start < tabXPosition) {
-        scrollX = start - tabXPosition;
-      } else if (tabXPosition + dim.width < end) {
-        scrollX = end - (tabXPosition + dim.width);
-      }
-      scrollX += tabXPosition;
-      setTabXPosition(scrollX);
-      scrollViewRef.scrollTo({
-        x: scrollX,
-        y: 0,
-        animated: true,
-      });
-    }
-  };
+  const WIDTH = React.useMemo(
+    () => tabContainerWidth.current / React.Children.count(children),
+    [children]
+  );
 
-  const WIDTH = dim.width / React.Children.count(children);
+  const onScrollHandler = React.useCallback((event) => {
+    scrollViewPosition.current = event.nativeEvent.contentOffset.x;
+  }, []);
 
   return (
-    <>
-      <View
-        {...rest}
-        accessibilityRole="tablist"
-        style={[
-          styles.viewStyle,
-          variant === 'primary' && {
-            backgroundColor: theme?.colors?.primary,
-          },
-        ]}
-        onLayout={({ nativeEvent: { layout } }) => setDim(Object(layout))}
-      >
-        {tabScrolling ? (
-          <ScrollView
-            onScroll={(event) => {
-              setTabXPosition(event.nativeEvent.contentOffset.x);
-            }}
-            ref={(ref) => setScrollViewRef(ref)}
-            horizontal={true}
-            showsHorizontalScrollIndicator={false}
-          >
-            {React.Children.map(children, (child, index) => {
-              return React.cloneElement(
-                child as React.ReactElement<TabItemProps>,
-                {
-                  onPress: () => onChange(index),
-                  onLayout: (event) => {
-                    const layout = event.nativeEvent.layout;
-                    childCoords[index] =
-                      index === 0
-                        ? layout.width
-                        : childCoords[index - 1] + layout.width;
-                    setChildCoords(childCoords);
-                  },
-                  active: index === value,
-                  variant,
-                }
-              );
-            })}
-          </ScrollView>
-        ) : (
-          React.Children.map(children, (child, index) => {
+    <View
+      {...rest}
+      accessibilityRole="tablist"
+      style={[
+        variant === 'primary' && {
+          backgroundColor: theme?.colors?.primary,
+        },
+        styles.viewStyle,
+        containerStyle,
+      ]}
+      onLayout={({ nativeEvent: { layout } }) => {
+        tabContainerWidth.current = layout.width;
+      }}
+    >
+      {scrollable ? (
+        <ScrollView
+          horizontal
+          ref={scrollViewRef}
+          onScroll={onScrollHandler}
+          showsHorizontalScrollIndicator={false}
+        >
+          {React.Children.map(children, (child, index) => {
             return React.cloneElement(
               child as React.ReactElement<TabItemProps>,
               {
                 onPress: () => onChange(index),
+                onLayout: (event: LayoutChangeEvent) => {
+                  const layout = event.nativeEvent.layout;
+                  tabItemsWidth.current[index] =
+                    (tabItemsWidth.current[index - 1] || 0) + layout.width;
+                },
                 active: index === value,
                 variant,
               }
             );
-          })
-        )}
+          })}
+        </ScrollView>
+      ) : (
+        React.Children.map(children, (child, index) => {
+          return React.cloneElement(child as React.ReactElement<TabItemProps>, {
+            onPress: () => onChange(index),
+            active: index === value,
+            variant,
+          });
+        })
+      )}
 
-        {!disableIndicator && !tabScrolling && (
-          <Animated.View
-            style={[
-              styles.indicator,
-              {
-                backgroundColor: theme?.colors?.secondary,
-                transform: [
-                  {
-                    translateX: animation.interpolate({
-                      inputRange: [0, 1],
-                      outputRange: [0, WIDTH],
-                    }),
-                  },
-                ],
-              },
-              indicatorStyle,
-            ]}
-          >
-            <View style={{ width: WIDTH }} />
-          </Animated.View>
-        )}
-      </View>
-    </>
+      {!disableIndicator && !scrollable && (
+        <Animated.View
+          style={[
+            styles.indicator,
+            {
+              backgroundColor: theme?.colors?.secondary,
+              transform: [
+                {
+                  translateX: animation.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [0, WIDTH],
+                  }),
+                },
+              ],
+            },
+            indicatorStyle,
+          ]}
+        >
+          <View style={{ width: WIDTH }} />
+        </Animated.View>
+      )}
+    </View>
   );
 };
 
