@@ -19,34 +19,50 @@ export default () => {
         variant="primary"
       >
         <Tab.Item
-          containerStyle={(active) => ({
-            backgroundColor: active ? '#208990' : '#2088dc',
-          })}
+          containerStyle={{
+            width: 180,
+          }}
           title="Recent"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
         />
         <Tab.Item
-          title="favorite"
+          title="Custom"
+          containerStyle={(active) => ({
+            backgroundColor: active ? '#208990' : 'transparent',
+            width: 180,
+          })}
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'heart', type: 'ionicon', color: 'white' }}
         />
         <Tab.Item
-          title="cart"
+          containerStyle={{
+            width: 180,
+          }}
+          title="Cart"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
         />
         <Tab.Item
+          containerStyle={{
+            width: 180,
+          }}
           title="Example tab 1"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
         />
         <Tab.Item
+          containerStyle={{
+            width: 180,
+          }}
           title="Example tab 2"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
         />
         <Tab.Item
+          containerStyle={{
+            width: 180,
+          }}
           title="Example tab 3"
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'cart', type: 'ionicon', color: 'white' }}

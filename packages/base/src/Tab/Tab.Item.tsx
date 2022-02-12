@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
   titleStyle: {
     paddingHorizontal: 16,
     paddingVertical: 8,
-    textTransform: 'uppercase',
   },
   containerStyle: {
     flex: 1,

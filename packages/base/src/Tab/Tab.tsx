@@ -56,22 +56,23 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   containerStyle,
   ...rest
 }) => {
+  const animationRef = React.useRef(new Animated.Value(0));
   const scrollViewRef = React.useRef<ScrollView>(null);
   const scrollViewPosition = React.useRef(0);
 
-  const tabContainerWidth = React.useRef(0);
-  const tabItemsPosition = React.useRef<Array<number>>([]);
-
-  const { current: animation } = React.useRef(new Animated.Value(0));
+  const tabItemsPosition = React.useRef<
+    Array<{ position: number; width: number }>
+  >([]);
+  const [tabContainerWidth, setTabContainerWidth] = React.useState(0);
 
   const scrollHandler = React.useCallback(() => {
     if (tabItemsPosition.current.length > value) {
       let itemStartPosition =
-        value === 0 ? 0 : tabItemsPosition.current[value - 1];
-      let itemEndPosition = tabItemsPosition.current[value];
+        value === 0 ? 0 : tabItemsPosition.current[value - 1].position;
+      let itemEndPosition = tabItemsPosition.current[value].position;
 
       const scrollCurrentPosition = scrollViewPosition.current;
-      const tabContainerCurrentWidth = tabContainerWidth.current;
+      const tabContainerCurrentWidth = tabContainerWidth;
 
       let scrollX = scrollCurrentPosition;
 
@@ -91,17 +92,16 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
         animated: true,
       });
     }
-  }, [value]);
+  }, [tabContainerWidth, value]);
 
   React.useEffect(() => {
-    Animated.timing(animation, {
+    Animated.timing(animationRef.current, {
       toValue: value as number,
       useNativeDriver: true,
       duration: 170,
     }).start();
-
-    scrollable && scrollHandler();
-  }, [animation, scrollHandler, value, scrollable]);
+    scrollable && requestAnimationFrame(scrollHandler);
+  }, [animationRef, scrollHandler, value, scrollable]);
 
   const onScrollHandler = React.useCallback((event) => {
     scrollViewPosition.current = event.nativeEvent.contentOffset.x;
@@ -109,24 +109,23 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
 
   const indicatorTransitionInterpolate = React.useMemo(() => {
     const countItems = React.Children.count(children);
-    const inputRange = [...Array(countItems < 2 ? 2 : countItems).keys()];
-    const outputRange =
-      tabItemsPosition.current.length === countItems
-        ? tabItemsPosition.current
-        : inputRange;
-
-    return animation.interpolate({
+    if (countItems < 2 || !tabItemsPosition.current.length) {
+      return 0;
+    }
+    const inputRange = [...Array(countItems).keys()];
+    const outputRange = tabItemsPosition.current.map(
+      ({ position }) => position
+    );
+    if (inputRange.length !== outputRange.length) {
+      return 0;
+    }
+    return animationRef.current.interpolate({
       inputRange,
       outputRange: [0, ...outputRange].slice(0, -1),
     });
-  }, [animation, children]);
+  }, [animationRef, children]);
 
-  const WIDTH = React.useMemo(
-    () =>
-      tabItemsPosition.current[value] -
-        (tabItemsPosition.current[value - 1] || 0) || 0,
-    [value]
-  );
+  const WIDTH = tabItemsPosition.current[value]?.width;
 
   return (
     <View
@@ -140,7 +139,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
         containerStyle,
       ]}
       onLayout={({ nativeEvent: { layout } }) => {
-        tabContainerWidth.current = layout.width;
+        setTabContainerWidth(layout.width);
       }}
     >
       {React.createElement(scrollable ? ScrollView : React.Fragment, {
@@ -158,9 +157,14 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
                 {
                   onPress: () => onChange(index),
                   onLayout: (event: LayoutChangeEvent) => {
-                    const layout = event.nativeEvent.layout;
-                    tabItemsPosition.current[index] =
-                      (tabItemsPosition.current[index - 1] || 0) + layout.width;
+                    const { width } = event.nativeEvent.layout;
+                    const previousItemPosition =
+                      tabItemsPosition.current[index - 1]?.position || 0;
+
+                    tabItemsPosition.current[index] = {
+                      position: previousItemPosition + width,
+                      width,
+                    };
                   },
                   active: index === value,
                   variant,
