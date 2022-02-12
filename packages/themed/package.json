@@ -1,6 +1,6 @@
 {
   "name": "@react-native-elements/themed",
-  "version": "4.0.0-beta.0",
+  "version": "4.0.0-beta.1",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -37,10 +37,11 @@
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
-  "dependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.0"
+  "peerDependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.1"
   },
   "devDependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.1",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/color": "^3.0.1",
     "@types/hoist-non-react-statics": "^3.3.1",

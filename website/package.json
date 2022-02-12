@@ -18,12 +18,12 @@
   },
   "version": "4.0.0",
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.14",
-    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.14",
-    "@docusaurus/plugin-google-analytics": "^2.0.0-beta.14",
-    "@docusaurus/preset-classic": "^2.0.0-beta.14",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.14",
-    "@docusaurus/types": "^2.0.0-beta.14",
+    "@docusaurus/core": "^2.0.0-beta.15",
+    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.15",
+    "@docusaurus/plugin-google-analytics": "^2.0.0-beta.15",
+    "@docusaurus/preset-classic": "^2.0.0-beta.15",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-beta.15",
+    "@docusaurus/types": "^2.0.0-beta.15",
     "css-loader": "^6.5.1",
     "dedent": "^0.7.0",
     "object.fromentries": "^2.0.5",
@@ -40,7 +40,7 @@
     "style-loader": "^3.3.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.0.0-beta.14",
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.15",
     "@tsconfig/docusaurus": "^1.0.4",
     "@types/jest": "^27.0.3",
     "@types/node": "^17.0.2",

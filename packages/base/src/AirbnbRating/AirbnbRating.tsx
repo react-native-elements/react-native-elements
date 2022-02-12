@@ -12,8 +12,8 @@ export type TapRatingProps = RatingProps;
  * This component is imported from [react-native-ratings](https://github.com/Monte9/react-native-ratings).
  * There are two types of rating - TapRating and SwipeRating.
  * This documentation is for Tap Rating version. */
-export const AirbnbRating: RneFunctionComponent<TapRatingProps> = () => {
-  return <TapRating />;
+export const AirbnbRating: RneFunctionComponent<TapRatingProps> = (props) => {
+  return <TapRating {...props} />;
 };
 
 AirbnbRating.displayName = 'AirbnbRating';
