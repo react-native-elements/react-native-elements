@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 import { Row } from 'react-native-table-component';
-import { RneFunctionComponent } from '../helpers';
+import { RneFunctionComponent } from '@react-native-elements/base/src/helpers';
 
 export type DataRowProps = {
   style?: StyleProp<ViewStyle>;

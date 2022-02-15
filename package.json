@@ -80,5 +80,8 @@
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
     }
+  },
+  "dependencies": {
+    "react-native-table-component": "^1.2.2"
   }
 }
