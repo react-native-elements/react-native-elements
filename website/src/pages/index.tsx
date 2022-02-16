@@ -19,7 +19,7 @@ const Home: React.FunctionComponent<{}> = () => {
       <Hero />
       <Features />
       <Installation />
-      <SnackDemo />
+      {/* <SnackDemo /> */}
       <RunOnExpo />
       <VSCodeExt />
       <Sponsor />
