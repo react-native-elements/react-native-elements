@@ -27,7 +27,7 @@ const Home: React.FunctionComponent<{}> = () => {
                     }
                     language="bash"
                     theme={
-                      require('prism-react-renderer/themes/vsDark').default
+                      require('prism-react-renderer/themes/dracula').default
                     }
                   >
                     {({
@@ -57,7 +57,7 @@ const Home: React.FunctionComponent<{}> = () => {
                     code={exampleCode}
                     language="tsx"
                     theme={
-                      require('prism-react-renderer/themes/vsDark').default
+                      require('prism-react-renderer/themes/dracula').default
                     }
                   >
                     {({

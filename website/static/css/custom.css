@@ -29,6 +29,7 @@ pre {
   --ifm-color-primary-light: #3495e1;
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
+  --ifm-hero-background-color: #eeeeee;
 
   --ifm-navbar-background-color: var(--ifm-hero-background-color);
 }
@@ -364,6 +365,16 @@ html[data-theme='dark'] .header-github-link:after {
   background-position: center;
 }
 
+.position-relative {
+  position: relative;
+}
+
+.card__icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 50px;
+}
 /**
 sidebar
 */

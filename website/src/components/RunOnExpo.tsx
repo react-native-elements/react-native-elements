@@ -11,7 +11,7 @@ const Home: React.FunctionComponent<{}> = () => {
             <img src="/img/website/app-preview3.png" width={'60%'} />
           </div>
           <div className="col col--8 text--center">
-            <h1 className="hero__title gradient clip-text">The Demo App</h1>
+            <h1 className="hero__title gradient clip-text">Try now</h1>
             <p className="p--desc">
               To see React Native Elements in action, play a live demo published
               on Expo Go or run it by cloning the GitHub repo.
