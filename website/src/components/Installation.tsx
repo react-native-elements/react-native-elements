@@ -12,9 +12,9 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="container ">
           <div className="row" style={{ alignItems: 'center' }}>
             <div className="col col--5 text--center">
-              <h1 className="hero__title gradient clip-text">
+              <h6 className="hero__title gradient clip-text">
                 How to get started?
-              </h1>
+              </h6>
             </div>
             <div className="col col--7 ">
               <p>
@@ -27,7 +27,7 @@ const Home: React.FunctionComponent<{}> = () => {
                     }
                     language="bash"
                     theme={
-                      require('prism-react-renderer/themes/vsDark').default
+                      require('prism-react-renderer/themes/dracula').default
                     }
                   >
                     {({
@@ -57,7 +57,7 @@ const Home: React.FunctionComponent<{}> = () => {
                     code={exampleCode}
                     language="tsx"
                     theme={
-                      require('prism-react-renderer/themes/vsDark').default
+                      require('prism-react-renderer/themes/dracula').default
                     }
                   >
                     {({

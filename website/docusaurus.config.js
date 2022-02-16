@@ -110,8 +110,7 @@ const config = {
       ],
     },
     prism: {
-      darkTheme: require('prism-react-renderer/themes/vsDark'),
-      theme: require('prism-react-renderer/themes/vsDark'),
+      theme: require('prism-react-renderer/themes/dracula'),
     },
     algolia: {
       apiKey: '89e04a9445d16350e100c2d2421f2d39',

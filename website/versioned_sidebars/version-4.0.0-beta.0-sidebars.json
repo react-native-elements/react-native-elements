@@ -2,7 +2,7 @@
   "version-4.0.0-beta.0/docs": [
     {
       "type": "category",
-      "collapsed": true,
+      "collapsed": false,
       "collapsible": true,
       "label": "It Starts Basic",
       "items": [
@@ -30,7 +30,7 @@
     },
     {
       "type": "category",
-      "collapsed": true,
+      "collapsed": false,
       "collapsible": true,
       "label": "Components",
       "items": [
@@ -158,13 +158,13 @@
     },
     {
       "type": "category",
-      "collapsed": true,
+      "collapsed": false,
       "collapsible": true,
       "label": "Repo",
       "items": [
         {
           "type": "doc",
-          "id": "version-4.0.0-beta.0/repo/contributing"
+          "id": "version-4.0.0-beta.0/contributing"
         },
         {
           "type": "doc",

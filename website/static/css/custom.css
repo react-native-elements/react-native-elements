@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap');
 * {
-  font-family: 'IBM Plex Sans', sans-serif !important;
+  font-family: 'DM Sans', sans-serif !important;
   scrollbar-width: 8px;
   scrollbar-color: var(--ifm-hero-background-color);
+}
+pre {
+  font-family: 'DM Mono', sans-serif !important;
 }
 *::-webkit-scrollbar {
   width: 8px;
@@ -28,6 +29,7 @@
   --ifm-color-primary-light: #3495e1;
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
+  --ifm-hero-background-color: #eeeeee;
 
   --ifm-navbar-background-color: var(--ifm-hero-background-color);
 }
@@ -363,6 +365,16 @@ html[data-theme='dark'] .header-github-link:after {
   background-position: center;
 }
 
+.position-relative {
+  position: relative;
+}
+
+.card__icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 40px;
+}
 /**
 sidebar
 */
