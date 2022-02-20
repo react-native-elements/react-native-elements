@@ -1,6 +1,11 @@
-import { withDefaultConfig, ParserOptions } from 'react-docgen-typescript';
+import path from 'path';
+import {
+  withDefaultConfig,
+  ParserOptions,
+  withCustomConfig,
+} from 'react-docgen-typescript';
 
-const themeProps = ['theme', 'updateTheme', 'replaceTheme'];
+const themeProps = ['theme'];
 const componentsWithParentsTypeToBeParsed = ['AirbnbRating'];
 
 // The config object is passed to the parser.
@@ -16,19 +21,6 @@ const parserOptions: ParserOptions = {
     // To replace @default tag with component default value
     if ((prop?.tags as { default?: string })?.default) {
       prop.defaultValue.value = (prop?.tags as { default?: string })?.default;
-    }
-    // To replace all the '|' in props with 'or'
-    // Input - TouchableOpacity | View
-    // Output - TouchableOpacity or View
-    if (prop?.type?.name?.includes('|')) {
-      prop.type.name = prop.type.name.replace(/\|/g, 'or');
-    }
-
-    // To replace all the '&' in props with 'and'
-    // Input - TouchableOpacity & View
-    // Output - TouchableOpacity and View
-    if (prop?.type?.name?.includes('&')) {
-      prop.type.name = prop.type.name.replace(/&/g, 'and');
     }
 
     // To deal with the props of type StyleProp<ViewStyle> and StyleProp<TextStyle> which breaks the markdown
@@ -78,24 +70,6 @@ const parserOptions: ParserOptions = {
       prop.type.name = 'React Component';
     }
 
-    // To replace the containerStyle props with 'typeof styles'(Object) to Style Object
-    // Input - typeof styles
-    // Output - Style Object
-    if (component.name === 'Slider' && prop.name === 'containerStyle') {
-      prop.type.name = 'Style Object';
-    }
-
-    // To replace the animation prop to a valid type of ListItem.Accordion
-    // Input - {
-    //     type?: 'timing' | 'spring';
-    //     duration?: number;
-    //   }
-    // | boolean;
-    // Output -  Boolean or Object
-    if (component.name === 'ListItem.Accordion' && prop.name == 'animation') {
-      prop.type.name = 'Boolean or Object';
-    }
-
     // To deal with the Badge Component with prop name onPress
     // Input - (...args: any[]) => an
     // Output - Function
@@ -103,20 +77,11 @@ const parserOptions: ParserOptions = {
       prop.type.name = 'Function';
     }
 
-    // To deal with the ViewComponent prop default value in Header
-    // linearGradientProps || !backgroundImage
-    // ? View
-    // : ImageBackground
-    // Output - ImageBackground or View Component
-    if (component.name === 'Header' && prop.name === 'ViewComponent') {
-      prop.defaultValue.value = 'ImageBackground or View Component';
-    }
-
     // Replace all the props with default value theme?.colors?.primary to Color(Primary)
     // Input - theme?.colors?.primary
     // Output - Color(Primary)
     if (prop?.defaultValue?.value === 'theme?.colors?.primary') {
-      prop.defaultValue.value = 'Color(Primary)';
+      prop.defaultValue.value = 'Color [Primary]';
     }
 
     // Filter to show the props of the components only related to the src and ignore the props of the noe modules
@@ -137,4 +102,7 @@ const parserOptions: ParserOptions = {
   },
 };
 
-export const docgenParser = withDefaultConfig(parserOptions);
+export const docgenParser = withCustomConfig(
+  path.join(__dirname, '../../../tsconfig.json'),
+  parserOptions
+);

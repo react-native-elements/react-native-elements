@@ -50,14 +50,8 @@
     "react-native-svg": "^12.1.1",
     "utility-types": "^3.10.0"
   },
-  "dependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.0"
-  },
   "peerDependencies": {
-    "react-native-gesture-handler": "^1.10.3",
-    "react-native-reanimated": "^2.1.0",
-    "react-native-svg": "^12.1.1",
-    "react-native-vector-icons": "*"
+    "react-native-svg": "^12.1.1"
   },
   "jest": {
     "displayName": "@react-native-elements/circular-slider",

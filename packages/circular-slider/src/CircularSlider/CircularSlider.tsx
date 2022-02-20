@@ -26,6 +26,37 @@ export type CircularSliderProps = {
   minAngle?: number;
 };
 
+/**
+ * Sliders allow users to make selections from a range of values.
+ *
+ * ## Installation
+ *  ```bash
+ * npm install @react-native-elements/circular-slider
+ * ```
+ * ```bash
+ * yarn add @react-native-elements/circular-slider
+ * ```
+ * @usage
+ * ```tsx
+ * import { CircularSlider } from '@react-native-elements/circular-slider';
+ * ```
+ * ## Preview
+
+
+<div className="component-preview component-preview--grid component-preview--grid-10">
+  <figure>
+    <img src="/img/circularSlider1.gif" alt="Circular Slider" />
+    <figcaption>With Thumb (as a slider)</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/circularSlider2.gif" alt="Circular Slider" />
+    <figcaption>Without Thumb (as a Progress Indicator)</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/arcSlider.png" alt="Arc Slider" />
+  </figure>
+</div>
+ */
 const CircularSlider: RneFunctionComponent<CircularSliderProps> = ({
   thumbRadius = 12,
   trackRadius = 100,

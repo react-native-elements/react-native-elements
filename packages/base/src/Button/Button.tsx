@@ -103,17 +103,28 @@ export type ButtonProps = TouchableOpacityProps &
     iconPosition?: 'left' | 'right' | 'top' | 'bottom';
   };
 
-/** Buttons are touchable elements used to interact with the screen and to perform and operation.
+/**
+ * Buttons are touchable elements used to interact with the screen and to perform and operation.
  * They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
  * Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
+ *
  * %jsx <Button title="Solid Button" />
- * @tabName Types
- * @tabLabel ['Solid','Outline','Clear']
- * @tabItem
- * <Button title="Solid" type="solid" />
- * <Button title="Outline" type="outline" />
- * <Button title="Clear" type="clear" />
+ *
+ * @include TouchableOpacityProps, TouchableNativeFeedbackProps
+ * @imports Button
  * @usage
+ * <tab>
+ * <item value='Solid'>
+ *  <Button title="Solid Button" />
+ * </item>
+ * <item value='Clear'>
+ * <Button title="Clear Button" type="clear" />
+ * </item>
+ * <item value='Outline'>
+ * <Button title="Outline Button" type="outline" />
+ * </item>
+ * </tab>
+ *
  * ### Button with icon
  * %live <Button title="Solid" type="solid" icon="home" />
  * ### Button with right icon

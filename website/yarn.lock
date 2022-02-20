@@ -2903,6 +2903,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/dedent@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@types/dedent@npm:0.7.0"
+  checksum: b9b7f0c42d99da764be75dd00b2f2be162f5a0ca43aafe0c740efa76b5f37f8a4f4e2ccc84883054e06e05c1169733aa8ee7750da0334c9cba26d9e10ae844f1
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.0":
   version: 3.7.3
   resolution: "@types/eslint-scope@npm:3.7.3"
@@ -7228,13 +7235,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"indento@npm:^1.1.13":
-  version: 1.1.13
-  resolution: "indento@npm:1.1.13"
-  checksum: 37523498f57b531c81d4f1366defa9559169f1a4c3e1e9901947439df39e2fd65dfbbc52253e61e9288b1cc78bee7194c008c619ccb8fd39f4fb5dc8d0e20ded
-  languageName: node
-  linkType: hard
-
 "infer-owner@npm:^1.0.4":
   version: 1.0.4
   resolution: "infer-owner@npm:1.0.4"
@@ -8422,15 +8422,6 @@ __metadata:
   version: 1.0.0
   resolution: "json-schema-traverse@npm:1.0.0"
   checksum: 02f2f466cdb0362558b2f1fd5e15cce82ef55d60cd7f8fa828cf35ba74330f8d767fcae5c5c2adb7851fa811766c694b9405810879bc4e1ddd78a7c0e03658ad
-  languageName: node
-  linkType: hard
-
-"json2md@npm:^1.12.0":
-  version: 1.12.0
-  resolution: "json2md@npm:1.12.0"
-  dependencies:
-    indento: ^1.1.13
-  checksum: 8a3f58ce409c6a1ce776f800e7a7688b6d6a1f145e650a79c092355bad731f7540ea59177444e57b6d4c520d96c1179b891c55e157f720314fd3ec19a831aa51
   languageName: node
   linkType: hard
 
@@ -11415,6 +11406,7 @@ __metadata:
     "@docusaurus/theme-live-codeblock": ^2.0.0-beta.15
     "@docusaurus/types": ^2.0.0-beta.15
     "@tsconfig/docusaurus": ^1.0.4
+    "@types/dedent": ^0.7.0
     "@types/jest": ^27.0.3
     "@types/node": ^17.0.2
     "@types/react": ^17.0.37
@@ -11424,7 +11416,6 @@ __metadata:
     dedent: ^0.7.0
     fast-glob: ^3.2.7
     jest: ^27.4.5
-    json2md: ^1.12.0
     object.fromentries: ^2.0.5
     prettier: ^2.5.1
     prism-react-renderer: ^1.2.1

@@ -36,7 +36,7 @@ const config = {
         docs: {
           path: 'docs',
           routeBasePath: 'docs',
-          sidebarPath: require.resolve('./sidebars.json'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
           editUrl:
             'https://github.com/react-native-elements/react-native-elements/edit/next/website/',

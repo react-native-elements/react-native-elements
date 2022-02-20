@@ -99,7 +99,7 @@ const Home: React.FunctionComponent<{}> = () => {
             {features.map(({ title, description, img: Img, color }, index) => (
               <div
                 key={index}
-                className="col col--3 "
+                className="col col--3  margin-vert--md "
                 style={{
                   alignItems: 'stretch',
                   justifyContent: 'center',
@@ -113,7 +113,7 @@ const Home: React.FunctionComponent<{}> = () => {
                         style={{
                           backgroundColor: color + '33',
                           borderRadius: '6px',
-                          padding: '6px 8px',
+                          padding: '8px',
                           marginRight: 8,
                         }}
                       >

@@ -3379,7 +3379,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@workspace:packages/base":
+"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@^4.0.0-beta.1, @react-native-elements/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@react-native-elements/base@workspace:packages/base"
   dependencies:
@@ -3422,10 +3422,7 @@ __metadata:
     react-native-svg: ^12.1.1
     utility-types: ^3.10.0
   peerDependencies:
-    react-native-gesture-handler: ^1.10.3
-    react-native-reanimated: ^2.1.0
     react-native-svg: ^12.1.1
-    react-native-vector-icons: "*"
   languageName: unknown
   linkType: soft
 
@@ -3434,7 +3431,7 @@ __metadata:
   resolution: "@react-native-elements/themed@workspace:packages/themed"
   dependencies:
     "@react-native-community/eslint-config": ^2.0.0
-    "@react-native-elements/base": ^4.0.0-beta.0
+    "@react-native-elements/base": ^4.0.0-beta.1
     "@types/color": ^3.0.1
     "@types/hoist-non-react-statics": ^3.3.1
     "@types/lodash.isequal": ^4.5.5
@@ -3443,6 +3440,8 @@ __metadata:
     metro-react-native-babel-preset: ^0.63.0
     react-test-renderer: ^16.13.1
     utility-types: ^3.10.0
+  peerDependencies:
+    "@react-native-elements/base": ^4.0.0-beta.1
   languageName: unknown
   linkType: soft
 
