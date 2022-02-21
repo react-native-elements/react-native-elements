@@ -96,24 +96,27 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
       <ListItem.Swipeable
         onPress={log}
         bottomDivider
-        onSwipeBegin={(d) => console.log('onSwipeBegin ', d)}
+        onSwipeBegin={(swipeDirection) =>
+          console.log('onSwipeBegin ', swipeDirection)
+        }
         onSwipeEnd={() => console.log('onSwipeEnd')}
-        leftContent={(reset) => (
+        // use as callback
+        leftContent={(resetToDefault) => (
           <Button
             title="Info"
-            onPress={() => reset()}
+            onPress={() => resetToDefault()}
             icon={{ name: 'info', color: 'white' }}
             buttonStyle={{ minHeight: '100%' }}
           />
         )}
-        rightContent={(reset) => (
+        // or pass component
+        rightContent={
           <Button
             title="Delete"
             icon={{ name: 'delete', color: 'white' }}
-            onPress={() => reset()}
             buttonStyle={{ minHeight: '100%', backgroundColor: 'red' }}
           />
-        )}
+        }
       >
         <Icon name={item.icon} />
         <ListItem.Content>
