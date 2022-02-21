@@ -8,6 +8,7 @@ import {
   MdAccessibleForward,
   MdPeopleOutline,
 } from 'react-icons/md';
+import { IconTag } from './IconTag';
 
 type FeatureTypes = {
   title: string;
@@ -48,13 +49,12 @@ const features: FeatureTypes[] = [
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
-    <>
-      <section className="margin-vert--sm" id="why">
-        <div className="container text--center">
-          <h1 className="hero__title gradient clip-text">
-            Why React Native Elements?
-          </h1>
-          {/* <div>
+    <section className="margin-vert--sm" id="why">
+      <div className="container text--center">
+        <h1 className="hero__title gradient clip-text">
+          Why React Native Elements?
+        </h1>
+        {/* <div>
             <Link
               className={'margin-horiz--md margin-vert--sm heroButton'}
               to={
@@ -79,7 +79,7 @@ const Home: React.FunctionComponent<{}> = () => {
             </Link>
           </div> */}
 
-          {/* <div className="row">
+        {/* <div className="row">
             <div className="col col--10 ">
               <p className="p--desc margin-vert--md">
                 React Native Elements is an implementation of the Material
@@ -92,54 +92,34 @@ const Home: React.FunctionComponent<{}> = () => {
               </p>
             </div>
           </div> */}
-        </div>
-
-        <div className="container">
-          <div className="row is-multiline">
-            {features.map(({ title, description, img: Img, color }, index) => (
-              <div
-                key={index}
-                className="col col--3 "
-                style={{
-                  alignItems: 'stretch',
-                  justifyContent: 'center',
-                  display: 'flex',
-                }}
-              >
-                <div className="card shadow--md">
-                  <div className="card__body  margin-vert--sm">
-                    <b className=" gradient clip-text">
-                      <span
-                        style={{
-                          backgroundColor: color + '33',
-                          borderRadius: '6px',
-                          padding: '6px 8px',
-                          marginRight: 8,
-                        }}
-                      >
-                        <Img
-                          style={{
-                            width: 16,
-                            fill: color,
-                          }}
-                        />
-                      </span>
-                      {title}
-                    </b>
-                    <p
-                      className="p--desc margin-top--md"
-                      style={{ lineHeight: 1.4, fontSize: '0.8rem' }}
-                    >
-                      {description}
-                    </p>
-                  </div>
+      </div>
+      <div className="container">
+        <div className="row is-multiline">
+          {features.map(({ title, description, img, color }, index) => (
+            <div className="col col--3" key={index}>
+              <Link className="card shadow--md" style={{ height: '100%' }}>
+                <div className="card__body">
+                  <h4 className="gradient clip-text inline-flex-center">
+                    <IconTag
+                      icon={img}
+                      color={color}
+                      style={{ marginRight: 8 }}
+                    />
+                    {title}
+                  </h4>
+                  <p
+                    className="p--desc"
+                    style={{ lineHeight: 1.4, fontSize: '0.8rem' }}
+                  >
+                    {description}
+                  </p>
                 </div>
-              </div>
-            ))}
-          </div>
+              </Link>
+            </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

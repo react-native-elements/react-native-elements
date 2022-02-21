@@ -52,7 +52,7 @@ const config = {
       id: 'support_us',
       content:
         'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐' +
-        ' and support us via <a target="_blank" rel="noopener noreferrer" href="https://github.com/sponsors/react-native-elements">Github Sponsor</a>!',
+        ' and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/rne_org">Twitter</a>!',
       backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
       isCloseable: false,
@@ -98,6 +98,13 @@ const config = {
           position: 'right',
           className: 'header-github-sponsor-link',
           'aria-label': 'GitHub Sponsor',
+        },
+        {
+          href: 'https://twitter.com/rne_org',
+          // label: 'Sponsor',
+          position: 'right',
+          className: 'header-twitter-link',
+          'aria-label': 'Twitter',
         },
         {
           href: 'https://github.com/react-native-elements/react-native-elements',
