@@ -4,12 +4,8 @@
   scrollbar-width: 8px;
   scrollbar-color: var(--ifm-hero-background-color);
 }
-<<<<<<< HEAD
 pre,
 code {
-=======
-pre {
->>>>>>> origin/next
   font-family: 'DM Mono', sans-serif !important;
 }
 *::-webkit-scrollbar {
