@@ -1,6 +1,7 @@
 ---
 sidebar_position: 0
 id: getting_started
+slug: /universe
 title: Getting Started
 ---
 
