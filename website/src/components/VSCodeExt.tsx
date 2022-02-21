@@ -4,10 +4,7 @@ import '../../static/css/components.css';
 import { SectionHeader } from './SectionHeader';
 import { SiVisualstudiocode } from 'react-icons/si';
 
-const Home: React.FunctionComponent<{ color?: string; Icon: IconType }> = ({
-  color = '#00b85c',
-  Icon = MdOutlineDevices,
-}) => {
+const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
       <section className="margin-vert--xl">
