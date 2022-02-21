@@ -114,23 +114,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default () => {
-  return (
-    <View style={{ margin: 8 }}>
-      <View
-        style={{
-          flexDirection: 'row',
-          marginVertical: 2,
-        }}
-      >
-        <Skeleton circle width={35} />
-        <View style={{ marginHorizontal: 8 }}>
-          <Skeleton style={{ marginBottom: 5 }} />
-          <Skeleton height={8} />
-        </View>
-      </View>
-
-      <Skeleton height={200} />
-    </View>
-  );
-};
+export default Skeleton;
