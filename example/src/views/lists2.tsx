@@ -91,25 +91,29 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
   const [expanded, setExpanded] = React.useState(false);
 
   const listItemProps = {};
-  const renderRow = ({ item }: { item: List1Data }) => {
+  const RenderRow = ({ item }: { item: List1Data }) => {
     return (
       <ListItem.Swipeable
         onPress={log}
         bottomDivider
-        leftContent={
+        onSwipeBegin={(d) => console.log('onSwipeBegin ', d)}
+        onSwipeEnd={() => console.log('onSwipeEnd')}
+        leftContent={(reset) => (
           <Button
             title="Info"
+            onPress={() => reset()}
             icon={{ name: 'info', color: 'white' }}
             buttonStyle={{ minHeight: '100%' }}
           />
-        }
-        rightContent={
+        )}
+        rightContent={(reset) => (
           <Button
             title="Delete"
             icon={{ name: 'delete', color: 'white' }}
+            onPress={() => reset()}
             buttonStyle={{ minHeight: '100%', backgroundColor: 'red' }}
           />
-        }
+        )}
       >
         <Icon name={item.icon} />
         <ListItem.Content>
@@ -278,7 +282,7 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
         }
         data={list1}
         keyExtractor={(a: List1Data, index: number) => index.toString()}
-        renderItem={renderRow}
+        renderItem={RenderRow}
       />
     </>
   );
