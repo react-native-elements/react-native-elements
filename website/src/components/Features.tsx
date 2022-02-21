@@ -1,11 +1,19 @@
 import React from 'react';
 import '../../static/css/components.css';
 import Link from '@docusaurus/Link';
+import {
+  MdOutlineDevices,
+  MdCode,
+  MdEdit,
+  MdAccessibleForward,
+  MdPeopleOutline,
+} from 'react-icons/md';
 
 type FeatureTypes = {
   title: string;
   description: string;
-  img: string;
+  img?: ({ ...props }: React.SVGProps<SVGSVGElement>) => JSX.Element;
+  color: string;
 };
 
 const features: FeatureTypes[] = [
@@ -13,31 +21,35 @@ const features: FeatureTypes[] = [
     title: 'Cross-Platform',
     description:
       'Consistent design across android, iOS, and web. 30+ components designed to save development time.',
-    img: '/img/website/tweak.svg',
+    img: MdOutlineDevices,
+    color: '#894cff',
   },
   {
     title: 'Easy to use',
     description:
       'Built completely in TypeScript. Starting your react native app has never been easier. Supports Expo too! ',
-    img: '/img/website/explore.svg',
+    img: MdCode,
+    color: '#ff5381',
   },
   {
     title: 'Customizable',
     description: 'Easily style any of our components just the way you want.',
-    img: '/img/website/design.svg',
+    img: MdEdit,
+    color: '#00b85c',
   },
   {
     title: 'Community-Driven',
     description:
       "100% built by the community. We're here because we love open source.",
-    img: '/img/website/bootstrap.svg',
+    img: MdPeopleOutline,
+    color: '#328aff',
   },
 ];
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
-      <section className="margin-vert--xl">
+      <section className="margin-vert--sm" id="why">
         <div className="container text--center">
           <h1 className="hero__title gradient clip-text">
             Why React Native Elements?
@@ -81,9 +93,10 @@ const Home: React.FunctionComponent<{}> = () => {
             </div>
           </div> */}
         </div>
+
         <div className="container">
-          <div className="row">
-            {features.map(({ title, description, img }, index) => (
+          <div className="row is-multiline">
+            {features.map(({ title, description, img: Img, color }, index) => (
               <div
                 key={index}
                 className="col col--3 "
@@ -93,21 +106,32 @@ const Home: React.FunctionComponent<{}> = () => {
                   display: 'flex',
                 }}
               >
-                <div
-                  style={{ justifyContent: 'stretch' }}
-                  className="card margin-vert--lg text--center shadow--sm"
-                >
-                  <div className="card__image padding-horiz--lg  margin-vert--lg ">
-                    <img
-                      height={'120px'}
-                      src={img}
-                      alt="Image alt text"
-                      title="Logo Title Text 1"
-                    />
-                  </div>
-                  <div className="card__body">
-                    <h3 className=" gradient clip-text">{title}</h3>
-                    <p className="p--desc">{description}</p>
+                <div className="card shadow--md">
+                  <div className="card__body  margin-vert--sm">
+                    <b className=" gradient clip-text">
+                      <span
+                        style={{
+                          backgroundColor: color + '33',
+                          borderRadius: '6px',
+                          padding: '6px 8px',
+                          marginRight: 8,
+                        }}
+                      >
+                        <Img
+                          style={{
+                            width: 16,
+                            fill: color,
+                          }}
+                        />
+                      </span>
+                      {title}
+                    </b>
+                    <p
+                      className="p--desc margin-top--md"
+                      style={{ lineHeight: 1.4, fontSize: '0.8rem' }}
+                    >
+                      {description}
+                    </p>
                   </div>
                 </div>
               </div>

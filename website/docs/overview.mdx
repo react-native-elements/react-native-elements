@@ -9,44 +9,75 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { SiExpo, SiReact, SiNextdotjs } from 'react-icons/si';
+import Admonition from '@theme/Admonition';
 
-:::info
-The aim of React Native Elements is to provide an all-in-one UI kit for creating apps in react native. There are many great ui components made by developers all around open source. React Native Elements takes the hassle of assembling these packages together by giving you a ready made kit with consistent api and look and feel.
-:::
+<div className="admonition admonition-info alert alert--info">
+  <div className="admonition-content">
+    The aim of React Native Elements is to provide an all-in-one UI kit for
+    creating apps in react native. There are many great ui components made by
+    developers all around open source. React Native Elements takes the hassle of
+    assembling these packages together by giving you a ready made kit with
+    consistent api and look and feel.
+  </div>
+</div>
 
 ## Installation
 
 <div class="container" style={{ padding: 0 }}>
   <div class="row is-multiline">
-    <div class="col col--4">
+    <div class="col col--6">
       <Link
         class="card"
         to="installation#using-expo"
         style={{ height: '100%' }}
       >
-        <div class="card__body">
-          <h4>Expo CLI</h4>
+        <div class="card__body position-relative">
+          <h4>
+            Expo CLI
+            <SiExpo class="card__icon" />
+          </h4>
           <p>Guide to install with expo-cli</p>
         </div>
       </Link>
     </div>
-    <div class="col col--4">
+    <div class="col col--6">
       <Link class="card" to="installation" style={{ height: '100%' }}>
-        <div class="card__body">
-          <h4>React Native CLI</h4>
+        <div class="card__body  position-relative">
+          <h4>
+            React Native CLI <SiReact class="card__icon" />
+          </h4>
           <p>Guide to install with react-native cli</p>
         </div>
       </Link>
     </div>
-    <div class="col col--4">
+    <div class="col col--6">
       <Link
         class="card"
         to="installation#using-on-web"
         style={{ height: '100%' }}
       >
-        <div class="card__body">
-          <h4>React app</h4>
-          <p>Guide to install with create-react-app</p>
+        <div class="card__body position-relative">
+          <h4>
+            React JS <SiReact class="card__icon" />
+          </h4>
+          <p>
+            Guide to install with <code>create-react-app</code>
+          </p>
+        </div>
+      </Link>
+    </div>
+    <div class="col col--6">
+      <Link
+        class="card"
+        to="installation#using-on-web"
+        style={{ height: '100%' }}
+      >
+        <div class="card__body position-relative">
+          <h4>
+            Next JS (comming soon) <SiNextdotjs class="card__icon" />
+          </h4>
+          <p>Guide to install with create-next-app</p>
         </div>
       </Link>
     </div>
