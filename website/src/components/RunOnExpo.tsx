@@ -1,10 +1,19 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import '../../static/css/components.css';
+import { SectionHeader } from './SectionHeader';
+import { SiExpo } from 'react-icons/si';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <section className="margin-vert--xl" id="expo">
+      <div className="container">
+        <SectionHeader
+          header="Expo demo"
+          subheader="See React Native Elements in action, play a live demo published on Expo "
+          icon={SiExpo}
+        />
+      </div>
       <div className="container ">
         <div className="row" style={{ alignItems: 'center' }}>
           <div className="col col--3 col--offset-1 text--center">
