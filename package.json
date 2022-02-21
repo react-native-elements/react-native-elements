@@ -32,6 +32,7 @@
     "eslint": "^7.9.0",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
+    "jest-transform-stub": "^2.0.0",
     "lerna": "^4.0.0",
     "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",

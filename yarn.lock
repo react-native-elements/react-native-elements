@@ -11290,6 +11290,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jest-transform-stub@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "jest-transform-stub@npm:2.0.0"
+  checksum: c46134257e5fb047f5952e4a4a1339925dd009da15aa8d3310ba1d3e4d22266ed6c675cd18e58c9d5ca2246718d6cc8ff00ea6a4b6f3b2a6b285b6426f6ae8fe
+  languageName: node
+  linkType: hard
+
 "jest-util@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-util@npm:26.6.2"
@@ -16454,6 +16461,7 @@ __metadata:
     eslint: ^7.9.0
     husky: ^7.0.4
     jest: ^27.4.7
+    jest-transform-stub: ^2.0.0
     lerna: ^4.0.0
     lint-staged: ^12.1.7
     prettier: ^2.5.1
