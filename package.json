@@ -26,6 +26,7 @@
     "@testing-library/react-native": "^7.0.2",
     "@types/jest": "^27.4.0",
     "@types/react-native": "*",
+    "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^27.5.1",
     "codecov": "^3.8.3",
     "eslint": "^7.9.0",
@@ -80,12 +81,5 @@
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
     }
-  },
-  "dependencies": {
-    "@react-native-community/eslint-config": "^3.0.1",
-    "@types/react-test-renderer": "^17.0.1",
-    "jest-transform-stub": "^2.0.0",
-    "metro-react-native-babel-preset": "^0.68.0",
-    "utility-types": "^3.10.0"
   }
 }
