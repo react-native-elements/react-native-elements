@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-elements/circular-slider",
+  "name": "@react-native-elements/skeleton",
   "version": "0.0.0",
   "description": "React Native Elements Next Gen Components",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build": "tsc --composite false",
-    "test": "jest",
+    "test:no": "jest",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
@@ -43,34 +43,11 @@
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
-  "devDependencies": {
-    "react-native-svg": "^12.1.1"
-  },
-  "peerDependencies": {
-    "react-native-svg": "^12.1.1"
-  },
-  "jest": {
-    "displayName": "@react-native-elements/circular-slider",
-    "preset": "react-native",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules",
-      "<rootDir>/dist"
-    ],
-    "collectCoverage": true,
-    "transformIgnorePatterns": [
-      "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
-    ],
-    "coveragePathIgnorePatterns": [
-      ""
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.tsx",
-      "!src/index.tsx",
-      "!src/helpers/*.tsx"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  },
+  "dependencies": {
+    "expo-linear-gradient": "^11.0.3"
   }
 }
