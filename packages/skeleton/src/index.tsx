@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useEffect, useRef } from 'react';
 import {
   Animated,
   View,
@@ -8,23 +8,57 @@ import {
   ViewStyle,
   StyleSheet,
 } from 'react-native';
+// TODO: find way to remove these deps
+import Color from 'color';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const AnimatedGradient = Animated.createAnimatedComponent(LinearGradient);
 
-type SkeletonProps = {
+export type SkeletonProps = {
+  /**
+   * show circular variant
+   */
   circle?: boolean;
+  /**
+   * Width of Skeleton View
+   */
   width?: number;
+  /**
+   * Height of Skeleton View
+   * @default 12
+   */
   height?: number;
+  /**
+   * Type of animation
+   */
   animation?: 'none' | 'pulse' | 'wave';
+  /**
+   * Custom style for skeleton gradient
+   */
   skeletonStyle?: StyleProp<ViewStyle>;
+  /**
+   * Skeleton color
+   * @default theme.colors.grey5
+   */
+  color?: string;
+  /**
+   * @ignore
+   */
+  theme?: {
+    colors?: {
+      grey5?: string;
+    };
+  } & any;
 } & ViewProps;
 
-const AnimationGradient = {
-  wave: ['#f5f6f7', '#dedfe0', '#f5f6f7'],
-  pulse: ['#dedfe0', '#dedfe0'],
-};
-
+/**
+ * A placeholder preview for content before the data gets loaded, an alternative for spinners.
+ *
+ * @installation @react-native-elements/skeleton
+ * @usage
+ * <Skeleton variant="circular" width={40} height={40} />
+ * <Skeleton variant="rectangular" width={210} height={118} />
+ */
 const Skeleton: React.FC<SkeletonProps> = ({
   circle,
   width = '100%',
@@ -32,11 +66,13 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animation = 'wave',
   style,
   skeletonStyle,
+  theme,
+  color = theme?.colors?.grey5 || '#dedfe0',
   ...rest
 }) => {
-  const animationRef = React.useRef(new Animated.Value(0));
+  const animationRef = useRef(new Animated.Value(0));
 
-  React.useEffect(() => {
+  useEffect(() => {
     Animated.loop(
       Animated.timing(animationRef.current, {
         toValue: 2,
@@ -50,6 +86,14 @@ const Skeleton: React.FC<SkeletonProps> = ({
     ).start();
   }, []);
 
+  const AnimationGradient = useMemo(() => {
+    const alphaColor = Color(color).alpha(0.4);
+    return {
+      wave: [alphaColor, color, alphaColor],
+      pulse: [color, color],
+    };
+  }, [color]);
+
   return (
     <View
       accessibilityRole="none"
@@ -61,6 +105,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
         {
           width: width,
           height: height || 12,
+          backgroundColor: '#f5f6f7',
         },
         circle && {
           borderRadius: 50,
@@ -104,7 +149,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#f5f6f7',
     overflow: 'hidden',
     borderRadius: 2,
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import CircularSlider from './../CircularSlider';
+import CircularSlider from '..';
 import { render } from '@testing-library/react-native';
 
 test('CircularSlider Component', () => {

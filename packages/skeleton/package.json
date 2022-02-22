@@ -17,6 +17,7 @@
     "bootstrap"
   ],
   "scripts": {
+    "test": "jest",
     "build": "tsc --composite false",
     "test:no": "jest",
     "test:update": "jest -u",
@@ -48,6 +49,30 @@
     "url": "git+https://github.com/react-native-elements/react-native-elements.git"
   },
   "dependencies": {
+    "color": "^4.2.1",
     "expo-linear-gradient": "^11.0.3"
+  },
+  "jest": {
+    "displayName": "@react-native-elements/skeleton",
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ],
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
+    ],
+    "coveragePathIgnorePatterns": [
+      ""
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "!src/index.tsx",
+      "!src/helpers/*.tsx"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/.ci/setupTests.ts"
+    ]
   }
 }
