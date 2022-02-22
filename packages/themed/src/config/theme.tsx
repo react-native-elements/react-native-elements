@@ -28,6 +28,7 @@ import { SocialIconProps } from '../SocialIcon';
 import { SpeedDialProps, SpeedDialActionProps } from '../SpeedDial';
 import { SwipeRatingProps } from '../Rating';
 import { SwitchProps } from '../Switch';
+import { SkeletonProps } from '../Skeleton';
 import { TabItemProps, TabProps } from '../Tab';
 import { TabViewProps } from '../TabView';
 import { TapRatingProps } from '../AirbnbRating';
@@ -86,6 +87,7 @@ export interface FullTheme {
   SocialIcon: Partial<SocialIconProps>;
   SpeedDial: Partial<SpeedDialProps>;
   SpeedDialAction: Partial<SpeedDialActionProps>;
+  Skeleton: Partial<SkeletonProps>;
   Switch: Partial<SwitchProps>;
   Tab: Partial<TabProps>;
   TabItem: Partial<TabItemProps>;

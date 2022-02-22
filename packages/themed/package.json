@@ -72,16 +72,13 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/index.tsx",
       "!src/helpers/*.tsx"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "lines": 90,
-        "statements": 90
-      }
-    }
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  },
+  "dependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.1"
   }
 }

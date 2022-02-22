@@ -1,0 +1,102 @@
+---
+id: skeleton
+
+title: Skeleton
+---
+
+import Usage from "./usage/Skeleton.mdx";
+
+import { Skeleton } from "react-native-elements";
+
+import Tabs from "@theme/Tabs";
+
+import TabItem from "@theme/TabItem";
+
+A placeholder preview for content before the data gets loaded, an alternative for spinners.
+
+## Usage
+
+---
+
+<Skeleton variant="circular" width={40} height={40} />
+
+<Skeleton variant="rectangular" width={210} height={118} />
+
+## Usage
+
+<Usage />
+
+## Props
+
+### Skeleton
+
+- [LinearGradientComponent](#lineargradientcomponent)
+- [animation](#animation)
+- [circle](#circle)
+- [height](#height)
+- [skeletonStyle](#skeletonstyle)
+- [width](#width)
+
+## Reference
+
+### Skeleton
+
+#### LinearGradientComponent
+
+Custom Linear Gradient Component
+
+| Type            | Default |
+| --------------- | ------- |
+| React Component | None    |
+
+---
+
+#### animation
+
+Type of animation
+
+| Type                        | Default |
+| --------------------------- | ------- |
+| "none" or "pulse" or "wave" | wave    |
+
+---
+
+#### circle
+
+show circular variant
+
+| Type    | Default |
+| ------- | ------- |
+| boolean | None    |
+
+---
+
+#### height
+
+Height of Skeleton View
+
+| Type   | Default |
+| ------ | ------- |
+| number | 12      |
+
+---
+
+#### skeletonStyle
+
+Custom style for skeleton gradient
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### width
+
+Width of Skeleton View
+
+| Type   | Default |
+| ------ | ------- |
+| number | 100%    |
+
+---

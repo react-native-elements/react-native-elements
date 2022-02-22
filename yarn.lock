@@ -3449,14 +3449,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-elements/skeleton@workspace:packages/skeleton":
-  version: 0.0.0-use.local
-  resolution: "@react-native-elements/skeleton@workspace:packages/skeleton"
-  dependencies:
-    expo-linear-gradient: ^11.0.3
-  languageName: unknown
-  linkType: soft
-
 "@react-native-elements/themed@workspace:packages/themed":
   version: 0.0.0-use.local
   resolution: "@react-native-elements/themed@workspace:packages/themed"
@@ -8349,15 +8341,6 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: d2cd813b3af21cdba5d20db45163a81216c9e19bfdd087dddbc1bfc292494f3610f67d24850b587e4286508ca9e4fb360e5d9e19a8e6abb169182872052d38d4
-  languageName: node
-  linkType: hard
-
-"expo-linear-gradient@npm:^11.0.3":
-  version: 11.2.0
-  resolution: "expo-linear-gradient@npm:11.2.0"
-  peerDependencies:
-    expo: "*"
-  checksum: 049a88b4cb8e7d64440c8bb694f576b4c24af2e9271f26999f1f4cdda790b3a437d68a69005a486ab960a80b6ec074923ae9fa10feeeb8a60b0c265787a52fee
   languageName: node
   linkType: hard
 
