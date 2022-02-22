@@ -87,6 +87,7 @@ module.exports = {
         'components/overlay',
         'components/pricingcard',
         'components/slider',
+        'components/skeleton',
         'components/socialicon',
         {
           collapsible: false,

@@ -19,6 +19,7 @@ export const tabify = (str: string) => {
               const name = path.node.openingElement.name.name;
               if (name === 'tab') {
                 path.node.openingElement.name.name = 'Tabs';
+                path.node.closingElement.name.name = 'Tabs';
                 let items = [];
                 path.node.children.forEach((child) => {
                   if (child.type === 'JSXElement') {

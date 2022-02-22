@@ -35,8 +35,8 @@ export const generateMarkdown = (doc: ComponentDoc): string => {
 
   import Tabs from "@theme/Tabs";
   import TabItem from "@theme/TabItem";
-  import { ${parentComp}, ${imports} } from 'react-native-elements';
-  ${usageFileExists ? `import Usage from '../usage/${displayName}.mdx'` : ''}
+  import { ${imports} } from 'react-native-elements';
+  ${usageFileExists ? `import Usage from './usage/${displayName}.mdx'` : ''}
 
   ${snippetToCode(description)}
 
@@ -45,7 +45,7 @@ export const generateMarkdown = (doc: ComponentDoc): string => {
   ${usageFileExists ? `<Usage/>` : ''}
 
 
-  ${snippetToCode(tabify(usage))}
+  ${tabify(snippetToCode(usage))}
 
 
   ${propsTable(props)}   

@@ -45,8 +45,8 @@ export type SkeletonProps = {
  *
  * @installation @react-native-elements/skeleton
  * @usage
- * <Skeleton variant="circular" width={40} height={40} />
- * <Skeleton variant="rectangular" width={210} height={118} />
+ * %jsx <Skeleton variant="circular" width={40} height={40} />
+ * %jsx <Skeleton variant="rectangular" width={210} height={118} />
  */
 export const Skeleton: RneFunctionComponent<SkeletonProps> = ({
   circle,
