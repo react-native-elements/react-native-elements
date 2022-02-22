@@ -13,6 +13,7 @@
     "format": "prettier --check ./packages",
     "test": "lerna run test",
     "build": "lerna run build",
+    "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
     "example": "yarn --cwd example",
     "docs-build": "cd website && yarn run build",

@@ -1,63 +1,110 @@
 import React from 'react';
 import { PanResponder, PanResponderGestureState, View } from 'react-native';
-import { RneFunctionComponent } from '@react-native-elements/base/src/helpers';
 import Svg, { Path, Circle, G, Text } from 'react-native-svg';
 
 export type CircularSliderProps = {
+  /**
+   * Radius of the slider track
+   */
   trackRadius?: number;
+  /**
+   * Radius of the slider thumb
+   */
   thumbRadius?: number;
+  /**
+   * Width of the slider track
+   */
   trackWidth?: number;
+  /**
+   * value of the slider
+   */
   value?: number;
-  onChange?: (x: number) => any;
+  /**
+   * Handler for the value change
+   */
+  onChange?: (value: number) => void;
+  /**
+   * color of the slider track
+   */
   trackColor?: string;
+  /**
+   * color of the slider thumb
+   */
   thumbColor?: string;
+  /**
+   * color of the slider background
+   */
   trackTintColor?: string;
+  /**
+   * color of thumb text
+   */
   thumbTextColor?: string;
+  /**
+   * text size of thumb text
+   */
   thumbTextSize?: number;
+  /**
+   * Show thumb
+   */
   noThumb?: boolean;
+  /**
+   * show text on center of slider
+   */
   showText?: boolean;
+  /**
+   * show text on thumb
+   */
   showThumbText?: boolean;
+  /**
+   * color for text on center of slider
+   */
   textColor?: string;
+  /**
+   * text size for text on center of slider
+   */
   textSize?: number;
+  /**
+   * Minimum value of the slider
+   */
   minimumValue?: number;
+  /**
+   * Maximum value of the slider
+   */
   maximumValue?: number;
-  // Angles in Radians
+  /**
+   * Max angle in radians
+   */
   maxAngle?: number;
+  /**
+   * Min angle in radians
+   */
   minAngle?: number;
+  /**
+   * @ignore
+   */
+  theme?: {
+    colors: {
+      primary?: string;
+      grey5?: string;
+      white?: string;
+    };
+  } & any;
 };
-
 /**
- * Sliders allow users to make selections from a range of values.
+ * A slider with circular track and thumb
  *
- * ## Installation
- *  ```bash
- * npm install @react-native-elements/circular-slider
- * ```
- * ```bash
- * yarn add @react-native-elements/circular-slider
- * ```
+ * @installation @react-native-elements/circular-slider
  * @usage
- * ```tsx
  * import { CircularSlider } from '@react-native-elements/circular-slider';
- * ```
- * ## Preview
-
-
-<div className="component-preview component-preview--grid component-preview--grid-10">
-  <figure>
-    <img src="/img/circularSlider1.gif" alt="Circular Slider" />
-    <figcaption>With Thumb (as a slider)</figcaption>
-  </figure>
-  <figure>
-    <img src="/img/circularSlider2.gif" alt="Circular Slider" />
-    <figcaption>Without Thumb (as a Progress Indicator)</figcaption>
-  </figure>
-  <figure>
-    <img src="/img/arcSlider.png" alt="Arc Slider" />
-  </figure>
-</div>
+ * <CircularSlider value={value} onChange={setValue} />;
+ *
+ * <CircularSlider value={value} noThumb />;
+ *
+ * // 90 deg Arc
+ * <CircularSlider maxAngle={90} />;
+ * Either use percentage (0 to 100) in value or specify maximumValue & minimumValue
  */
-const CircularSlider: RneFunctionComponent<CircularSliderProps> = ({
+const CircularSlider: React.FC<CircularSliderProps> = ({
   thumbRadius = 12,
   trackRadius = 100,
   trackWidth = 5,

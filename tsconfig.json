@@ -6,6 +6,7 @@
       "@react-native-elements/*": ["./packages/*/src"],
       "@react-native-elements/base/dist/*": ["./packages/base/src/*"]
     },
+    "removeComments": true,
     "composite": true,
     "declaration": true,
     "allowUnreachableCode": false,
@@ -14,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-native",
     "lib": ["esnext", "dom"],
-    "module": "esnext",
+    "module": "ES6",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,

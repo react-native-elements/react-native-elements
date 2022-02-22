@@ -21,6 +21,7 @@ import Ratings from '../views/ratings';
 import Settings from '../views/settings';
 import SpeedDial from '../views/speedDial';
 import Sliders from '../views/sliders';
+import Skeleton from '../views/skeleton';
 import SocialIcons from '../views/social_icons';
 import Fonts from '../views/fonts';
 import BottomSheet from '../views/bottomsheet';
@@ -96,6 +97,7 @@ function RootNavigator() {
         <Drawer.Screen name="Ratings" component={Ratings} />
         <Drawer.Screen name="Settings" component={Settings} />
         <Drawer.Screen name="Slider" component={Sliders} />
+        <Drawer.Screen name="Skeleton" component={Skeleton} />
         <Drawer.Screen name="Social Icons" component={SocialIcons} />
         <Drawer.Screen name="Speed Dial" component={SpeedDial} />
         <Drawer.Screen name="Tabs" component={Tabs} />
