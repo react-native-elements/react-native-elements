@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   Animated,
   View,
@@ -8,11 +8,8 @@ import {
   ViewStyle,
   StyleSheet,
 } from 'react-native';
-// TODO: find way to remove these deps
+import { defaultTheme, RneFunctionComponent } from '../helpers';
 import Color from 'color';
-import { LinearGradient } from 'expo-linear-gradient';
-
-const AnimatedGradient = Animated.createAnimatedComponent(LinearGradient);
 
 export type SkeletonProps = {
   /**
@@ -36,19 +33,8 @@ export type SkeletonProps = {
    * Custom style for skeleton gradient
    */
   skeletonStyle?: StyleProp<ViewStyle>;
-  /**
-   * Skeleton color
-   * @default theme.colors.grey5
-   */
-  color?: string;
-  /**
-   * @ignore
-   */
-  theme?: {
-    colors?: {
-      grey5?: string;
-    };
-  } & any;
+  LinearGradientComponent?: React.ComponentType<any>;
+  withLinearGradient?: boolean;
 } & ViewProps;
 
 /**
@@ -59,40 +45,36 @@ export type SkeletonProps = {
  * <Skeleton variant="circular" width={40} height={40} />
  * <Skeleton variant="rectangular" width={210} height={118} />
  */
-const Skeleton: React.FC<SkeletonProps> = ({
+export const Skeleton: RneFunctionComponent<SkeletonProps> = ({
   circle,
   width = '100%',
   height,
   animation = 'wave',
   style,
   skeletonStyle,
-  theme,
-  color = theme?.colors?.grey5 || '#dedfe0',
+  theme = defaultTheme,
+  LinearGradientComponent,
+  withLinearGradient,
   ...rest
 }) => {
   const animationRef = useRef(new Animated.Value(0));
+  const animationLoop = useRef<Animated.CompositeAnimation>();
+
+  const [layoutWidth, setLayoutWidth] = React.useState<number>(0);
 
   useEffect(() => {
-    Animated.loop(
-      Animated.timing(animationRef.current, {
-        toValue: 2,
-        delay: 400,
-        duration: 1500,
-        useNativeDriver: !!Platform.select({
-          web: false,
-          native: true,
-        }),
-      })
-    ).start();
+    animationLoop.current = Animated.timing(animationRef.current, {
+      toValue: 2,
+      delay: 400,
+      duration: 1500,
+      useNativeDriver: !!Platform.select({
+        web: false,
+        native: true,
+      }),
+    });
+    animationRef.current.setValue(0);
+    Animated.loop(animationLoop.current).start();
   }, []);
-
-  const AnimationGradient = useMemo(() => {
-    const alphaColor = Color(color).alpha(0.4);
-    return {
-      wave: [alphaColor, color, alphaColor],
-      pulse: [color, color],
-    };
-  }, [color]);
 
   return (
     <View
@@ -100,12 +82,15 @@ const Skeleton: React.FC<SkeletonProps> = ({
       accessibilityLabel="loading..."
       accessible={false}
       testID="RNE__Skeleton"
+      onLayout={({ nativeEvent }) => {
+        setLayoutWidth(nativeEvent.layout.width);
+      }}
       style={[
         styles.container,
         {
           width: width,
           height: height || 12,
-          backgroundColor: '#f5f6f7',
+          backgroundColor: theme?.colors?.grey4,
         },
         circle && {
           borderRadius: 50,
@@ -116,17 +101,20 @@ const Skeleton: React.FC<SkeletonProps> = ({
       {...rest}
     >
       {animation !== 'none' && (
-        <AnimatedGradient
-          colors={AnimationGradient[animation]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
+        <Animated.View
           style={[
             styles.skeleton,
+            !LinearGradientComponent && {
+              backgroundColor: Color(theme?.colors?.grey4)
+                .darken(0.1)
+                .rgb()
+                .string(),
+            },
             animation === 'pulse' && {
               width: '100%',
               opacity: animationRef.current.interpolate({
                 inputRange: [0, 1, 2],
-                outputRange: [1, 0.3, 1],
+                outputRange: [1, 0, 1],
               }),
             },
             animation === 'wave' && {
@@ -134,14 +122,27 @@ const Skeleton: React.FC<SkeletonProps> = ({
                 {
                   translateX: animationRef.current.interpolate({
                     inputRange: [0, 2],
-                    outputRange: ['-150%', '150%'],
+                    outputRange: [-layoutWidth * 2, layoutWidth * 2],
                   }),
                 },
               ],
             },
             skeletonStyle,
           ]}
-        />
+        >
+          {LinearGradientComponent && (
+            <LinearGradientComponent
+              style={styles.skeleton}
+              colors={[
+                theme.colors.grey4,
+                theme.colors.grey5,
+                theme.colors.grey4,
+              ]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+            />
+          )}
+        </Animated.View>
       )}
     </View>
   );
@@ -153,9 +154,6 @@ const styles = StyleSheet.create({
     borderRadius: 2,
   },
   skeleton: {
-    width: 200,
     height: '100%',
   },
 });
-
-export default Skeleton;

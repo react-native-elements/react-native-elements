@@ -41,6 +41,7 @@ import Slider, { SliderProps } from './Slider';
 import SocialIcon, { SocialIconProps } from './SocialIcon';
 import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 import Switch, { SwitchProps } from './Switch';
+import Skeleton, { SkeletonProps } from './Skeleton';
 import Tab, { TabItemProps, TabProps } from './Tab';
 import TabView, { TabViewProps } from './TabView';
 import Text, { TextProps } from './Text';
@@ -94,6 +95,7 @@ export {
   Slider,
   SocialIcon,
   SpeedDial,
+  Skeleton,
   Switch,
   Tab,
   TabView,
@@ -148,6 +150,7 @@ export type {
   SearchBarIosProps,
   SearchBarProps,
   SliderProps,
+  SkeletonProps,
   SocialIconProps,
   SpeedDialActionProps,
   SpeedDialProps,

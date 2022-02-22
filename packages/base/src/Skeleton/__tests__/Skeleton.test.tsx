@@ -1,5 +1,5 @@
 import React from 'react';
-import Skeleton from '..';
+import { Skeleton } from '..';
 import { render } from '@testing-library/react-native';
 
 test('Skeleton Component', () => {
