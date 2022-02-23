@@ -9,8 +9,9 @@ const Home: React.FunctionComponent<{}> = () => {
     <section className="margin-vert--xl" id="expo">
       <div className="container">
         <SectionHeader
+          color="#000020"
           header="Expo demo"
-          subheader="See React Native Elements in action, play a live demo published on Expo "
+          subheader="See in action, play a live demo published on Expo "
           icon={SiExpo}
         />
       </div>
@@ -27,7 +28,7 @@ const Home: React.FunctionComponent<{}> = () => {
             </p>
             <Link
               className={
-                'button button--secondary button--outline button--lg heroButton margin-horiz--sm margin-vert--sm'
+                'button button--secondary button--outline button--sm  margin-horiz--sm margin-vert--sm'
               }
               to={'https://expo.io/@flyingcircle/react-native-elements-app'}
             >
@@ -35,7 +36,7 @@ const Home: React.FunctionComponent<{}> = () => {
             </Link>
             <Link
               className={
-                'button button--secondary button--lg heroButton margin-horiz--sm margin-vert--sm'
+                'button button--secondary button--sm margin-horiz--sm margin-vert--sm'
               }
               to={
                 'https://github.com/react-native-elements/react-native-elements-app'
