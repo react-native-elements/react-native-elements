@@ -22,7 +22,7 @@ const Home: React.FunctionComponent<{}> = () => {
       <Installation />
       {/* <SnackDemo /> */}
       <RunOnExpo />
-      <FigmaKit />
+      {/* <FigmaKit /> */}
       <VScodeExt />
       <Sponsor />
       {/* <OpenCollective /> */}

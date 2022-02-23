@@ -9,7 +9,7 @@ const Home: React.FunctionComponent<{}> = () => {
     <section className="margin-vert--xl" id="expo">
       <div className="container">
         <SectionHeader
-          color="#000020"
+          color="#5c5cbd"
           header="Expo demo"
           subheader="See in action, play a live demo published on Expo "
           icon={SiExpo}

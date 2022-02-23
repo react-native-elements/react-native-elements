@@ -18,9 +18,10 @@ export const FigmaKit: React.FunctionComponent<{}> = () => {
             icon={SiFigma}
           />
           <div className="text--center">
-            <Link className="button disabled button--secondary button--sm">
+            <p>Coming Soon</p>
+            {/* <Link className="button disabled button--secondary button--sm">
               Coming Soon
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
