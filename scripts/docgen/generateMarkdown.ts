@@ -22,9 +22,8 @@ const ALLOWED_INCLUDES = {
   TouchableOpacityProps: 'Touch',
 };
 
-const pkgPath = path.join(__dirname, '../../../packages');
-const docsPath = path.join(__dirname, `../../docs`);
-const componentPath = path.join(docsPath, 'components');
+const pkgPath = path.join(__dirname, '../../packages');
+const docsPath = path.join(__dirname, '../../website/docs');
 
 export class Markdown implements ComponentDoc {
   description: string;
@@ -51,7 +50,7 @@ export class Markdown implements ComponentDoc {
     const isUniverse = !this.filePath.startsWith(pkgPath + '/base');
     const mdFilePath = path.join(
       docsPath,
-      isUniverse ? `universe` : `components`,
+      isUniverse ? 'universe' : 'components',
       `${this.displayName}.mdx`
     );
     console.log(this.displayName);
@@ -65,7 +64,9 @@ export class Markdown implements ComponentDoc {
     const { usage = '', imports = '', installation = '' } = this.tags || {};
 
     const usageFileExists = Boolean(
-      fs.existsSync(path.join(componentPath, `usage/${this.displayName}.mdx`))
+      fs.existsSync(
+        path.join(docsPath, `component_usage/${this.displayName}.mdx`)
+      )
     );
 
     let mdContent = dedent`
@@ -87,7 +88,7 @@ export class Markdown implements ComponentDoc {
   
   ## Usage
   
-  ${usageFileExists ? `<Usage/>` : ''}
+  ${usageFileExists ? '<Usage/>' : ''}
   
   ${tabify(snippetToCode(usage)).trim()}
   
@@ -99,7 +100,9 @@ export class Markdown implements ComponentDoc {
 
   private get propTable() {
     const orderedProps = orderBy(Object.values(this.props), ['name'], ['asc']);
-    if (!orderedProps.length) return '';
+    if (!orderedProps.length) {
+      return '';
+    }
 
     const includes = new Set<string>();
     const rows = [];
@@ -111,20 +114,22 @@ export class Markdown implements ComponentDoc {
       defaultValue,
       declarations,
     } of orderedProps) {
-      let shouldSkip = declarations.every(({ fileName, name }) => {
+      let shouldSkip = declarations.every(({ fileName, name: typeName }) => {
         if (/node_modules/.test(fileName)) {
-          const allowedProp = ALLOWED_INCLUDES[name];
+          const allowedProp = ALLOWED_INCLUDES[typeName];
           if (allowedProp) {
             includes.add(allowedProp);
           }
           return true;
         } else if (!this.filePath.includes(fileName)) {
-          includes.add(name);
+          includes.add(typeName);
           return true;
         }
         return false;
       });
-      if (shouldSkip) continue;
+      if (shouldSkip) {
+        continue;
+      }
 
       rows.push(
         [

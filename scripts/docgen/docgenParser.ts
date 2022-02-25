@@ -1,13 +1,7 @@
 import path from 'path';
-import {
-  withDefaultConfig,
-  withCompilerOptions,
-  ParserOptions,
-  withCustomConfig,
-} from 'react-docgen-typescript';
+import { ParserOptions, withCustomConfig } from 'react-docgen-typescript';
 
 const themeProps = ['theme'];
-const componentsWithParentsTypeToBeParsed = ['AirbnbRating'];
 
 // The config object is passed to the parser.
 const parserOptions: ParserOptions = {
@@ -99,6 +93,6 @@ const parserOptions: ParserOptions = {
 };
 
 export const docgenParser = withCustomConfig(
-  path.join(__dirname, '../../../tsconfig.json'),
+  path.join(__dirname, '../../tsconfig.json'),
   parserOptions
 );

@@ -83,5 +83,13 @@
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
     }
+  },
+  "dependencies": {
+    "@types/dedent": "^0.7.0",
+    "@types/lodash.orderby": "^4.6.6",
+    "dedent": "^0.7.0",
+    "lodash.orderby": "^4.6.0",
+    "react-docgen-typescript": "^2.2.2",
+    "ts-node": "^10.5.0"
   }
 }

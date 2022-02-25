@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-native",
     "lib": ["esnext", "dom"],
-    "module": "ES6",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,

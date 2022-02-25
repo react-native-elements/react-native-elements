@@ -1,12 +1,10 @@
 import glob from 'fast-glob';
 import path from 'path';
-import fs from 'fs';
 import { Markdown } from './generateMarkdown';
 import { docgenParser } from './docgenParser';
 import yargs from 'yargs';
 
-const rootPath = path.join(__dirname, '../../../packages/');
-const docsPath = path.join(__dirname, `../../docs`);
+const rootPath = path.join(__dirname, '../../packages/');
 
 const ignore = [
   // Ignore themed package
