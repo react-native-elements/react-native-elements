@@ -5,6 +5,7 @@ const exampleCode = `import React from 'react';
 import { Button } from '@react-native-elements/base';
 
 const AwesomeButton = () => (<Button title='Welcome'/>)`;
+
 const Home: React.FunctionComponent<{}> = () => {
   return (
     <>
