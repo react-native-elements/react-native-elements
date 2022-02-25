@@ -42,7 +42,11 @@ export const VScodeExt: React.FunctionComponent<{}> = () => {
           />
           <div className="col col--12 text--center">
             <div>
-              <img src="/img/website/vsc_ext.png" width={600} />
+              <img
+                src="/img/website/vsc_ext.png"
+                width={800}
+                style={{ borderRadius: 12, pointerEvents: 'none' }}
+              />
             </div>
             <Link
               className={
