@@ -1,9 +1,5 @@
 import { transform, types as t } from '@babel/core';
-
-export const snippetToCode = (snippet = '') =>
-  snippet
-    .replace(/%live (.*)/g, '```jsx live\n$1\n```')
-    .replace(/%jsx (.*)/g, '```jsx\n$1\n```');
+import dedent from 'dedent';
 
 export const tabify = (str: string) => {
   return transform(`<>\n${str}\n</>`, {
@@ -15,49 +11,118 @@ export const tabify = (str: string) => {
       function () {
         return {
           visitor: {
-            JSXElement(path) {
-              const name = path.node.openingElement.name.name;
-              if (name === 'tab') {
-                path.node.openingElement.name.name = 'Tabs';
-                path.node.closingElement.name.name = 'Tabs';
-                let items = [];
-                path.node.children.forEach((child) => {
-                  if (child.type === 'JSXElement') {
-                    child.openingElement.name.name = 'TabItem';
-                    child.closingElement.name.name = 'TabItem';
-                    child.openingElement.attributes.forEach((attr) => {
-                      if (attr.name.name === 'value') {
-                        items.push(attr.value.value);
-                      }
-                    });
-                  }
-                });
-                path.node.openingElement.attributes.push(
-                  t.jSXAttribute(
-                    t.jSXIdentifier('values'),
-                    t.jSXExpressionContainer(
-                      t.arrayExpression(
-                        items.map((c) =>
-                          t.identifier(
-                            `{label: '${c}',value: '${c
-                              ?.replace(' ', '')
-                              .toLowerCase()}'}`
+            JSXExpressionContainer(path) {
+              const { node } = path;
+              if (node.expression.type === 'BinaryExpression') {
+                const { left, right, operator } = node.expression;
+                if (left.name === '$' && operator === '+') {
+                  const { properties } = right;
+                  const keys = [];
+                  properties.forEach(({ key, value }) => {
+                    keys.push(key.value);
+                  });
+                  if (keys.length < 1) return;
+                  const element = t.jsxElement(
+                    t.jsxOpeningElement(t.jsxIdentifier('Tabs'), [
+                      t.jsxAttribute(
+                        t.jsxIdentifier('defaultValue'),
+                        t.stringLiteral(keys[0])
+                      ),
+                      t.jsxAttribute(
+                        t.jsxIdentifier('values'),
+                        t.jsxExpressionContainer(
+                          t.arrayExpression(
+                            keys.map((key) =>
+                              t.objectExpression([
+                                t.objectProperty(
+                                  t.identifier('label'),
+                                  t.stringLiteral(key)
+                                ),
+                                t.objectProperty(
+                                  t.identifier('value'),
+                                  t.stringLiteral(key)
+                                ),
+                              ])
+                            )
                           )
                         )
-                      )
-                    )
-                  )
-                );
+                      ),
+                    ]),
+                    t.jsxClosingElement(t.jsxIdentifier('Tabs')),
+                    [
+                      ...properties.map(({ key, value }) => {
+                        return t.jsxElement(
+                          t.jsxOpeningElement(t.jsxIdentifier('TabItem'), [
+                            t.jsxAttribute(
+                              t.jsxIdentifier('value'),
+                              t.stringLiteral(key.value)
+                            ),
+                          ]),
+                          t.jsxClosingElement(t.jsxIdentifier('TabItem')),
+                          [value]
+                        );
+                      }),
+                    ]
+                  );
+                  path.replaceWith(element);
+                }
               }
             },
           },
         };
       },
     ],
-  })
-    .code.replace('<>', '')
-    .replace('</>;', '');
+  }).code.replace(/<>|<\/>;|{" "}/g, '');
 };
 
-export const code = (str: string) => (str ? `\`${str?.trim()}\`` : '');
+export const installationTab = (str: string) => {
+  if (!str) return '';
+  return dedent`
+    ## Installation
+    
+    <Tabs
+    groupId='component'
+    defaultValue="npm"
+    values={[
+    { label: 'NPM', value: 'npm', },
+    { label: 'Yarn', value: 'yarn', },
+    ]
+    }>
+    <TabItem value="npm">
+
+    \`\`\`bash
+    npm install @react-native-elements/${str}
+    \`\`\`
+
+    </TabItem>
+    <TabItem value="yarn">
+
+    \`\`\`bash
+    yarn add @react-native-elements/${str}
+    \`\`\`
+
+    </TabItem>
+    </Tabs>
+    ${str}
+  `;
+};
+
+export const codify = (str: string) => (str ? `\`${str?.trim()}\`` : '');
+
 export const removeNewline = (str: string) => str?.replace(/\n/g, '');
+
+export const snippetToCode = (snippet = '') =>
+  snippet
+    .replace(/%live (.*)/g, '```jsx live\n$1\n```')
+    .replace(/%jsx (.*)/g, '```jsx\n$1\n```');
+
+export const filterPropType = (value: string) => {
+  if (!value) return '`None`';
+  if (value.includes('|')) {
+    return value.replace(/"/g, '').split('|').map(codify).join(' or ');
+  }
+  if (value.includes('&')) {
+    return value.replace(/"/g, '').split('&').map(codify).join(' and ');
+  }
+  return value;
+};

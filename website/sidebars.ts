@@ -66,6 +66,7 @@ module.exports = {
         'components/header',
         'components/icon',
         'components/image',
+        'components/input',
         'components/linearprogress',
         {
           collapsible: false,
@@ -86,6 +87,7 @@ module.exports = {
         },
         'components/overlay',
         'components/pricingcard',
+        'components/searchbar',
         'components/slider',
         'components/skeleton',
         'components/socialicon',

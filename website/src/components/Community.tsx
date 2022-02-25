@@ -2,12 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import '../../static/css/components.css';
 import { SectionHeader } from './SectionHeader';
-import {
-  SiVisualstudiocode,
-  SiSlack,
-  SiTwitter,
-  SiGithub,
-} from 'react-icons/si';
+import { SiTwitter, SiStackoverflow } from 'react-icons/si';
 import { MdOutlinePeopleAlt } from 'react-icons/md';
 
 const Home: React.FunctionComponent<{}> = () => {
@@ -24,7 +19,7 @@ const Home: React.FunctionComponent<{}> = () => {
         </div>
         <div className="container">
           <div className="row margin-horiz--lg is-multiline">
-            <div className="col col--6">
+            <div className="col col--4">
               <Link
                 style={{
                   height: '100%',
@@ -43,7 +38,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 </div>
               </Link>
             </div>
-            <div className="col col--6">
+            <div className="col col--4">
               <Link
                 style={{ backgroundColor: '#4A154B', color: 'white' }}
                 href="https://react-native-elements-slack.herokuapp.com/"
@@ -52,6 +47,24 @@ const Home: React.FunctionComponent<{}> = () => {
                 <div className="card__body padding--lg">
                   <h3 className="margin-bottom--sm ">
                     <img src="/img/website/slack.png" width={24} />
+                  </h3>
+                  <h4>Talk to us</h4>
+                  <b>
+                    Have any other question? or like to say Hi! to the RNE
+                    community,
+                  </b>
+                </div>
+              </Link>
+            </div>
+            <div className="col col--4">
+              <Link
+                style={{ backgroundColor: '#F58025', color: 'white' }}
+                href="https://stackoverflow.com/questions/tagged/react-native-elements"
+                className="card shadow--md"
+              >
+                <div className="card__body padding--lg">
+                  <h3 className="margin-bottom--sm ">
+                    <SiStackoverflow fill="#fff" />
                   </h3>
                   <h4>Any question?</h4>
                   <b>

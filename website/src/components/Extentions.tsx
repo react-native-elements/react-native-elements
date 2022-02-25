@@ -41,6 +41,9 @@ export const VScodeExt: React.FunctionComponent<{}> = () => {
             icon={SiVisualstudiocode}
           />
           <div className="col col--12 text--center">
+            <div>
+              <img src="/img/website/vsc_ext.png" width={600} />
+            </div>
             <Link
               className={
                 'button button--primary  button--sm margin-horiz--sm margin-vert--sm'

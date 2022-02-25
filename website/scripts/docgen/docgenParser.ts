@@ -1,6 +1,7 @@
 import path from 'path';
 import {
   withDefaultConfig,
+  withCompilerOptions,
   ParserOptions,
   withCustomConfig,
 } from 'react-docgen-typescript';
@@ -28,9 +29,9 @@ const parserOptions: ParserOptions = {
     // Output - View style(Object)
     if (prop?.type?.name?.includes('StyleProp')) {
       if (prop.type.name.includes('TextStyle')) {
-        prop.type.name = 'Text Style(Object)';
+        prop.type.name = 'Text Style';
       } else {
-        prop.type.name = 'View style(Object)';
+        prop.type.name = 'View Style';
       }
     }
 
@@ -84,20 +85,15 @@ const parserOptions: ParserOptions = {
       prop.defaultValue.value = 'Color [Primary]';
     }
 
-    // Filter to show the props of the components only related to the src and ignore the props of the noe modules
-    if (
-      prop?.declarations?.length > 0 &&
-      !componentsWithParentsTypeToBeParsed.includes(component.name)
-    ) {
-      return Boolean(
-        prop.declarations.find((declaration) => {
-          return (
-            declaration.fileName.includes(component.name) ||
-            declaration.fileName.includes('src/helpers')
-          );
-        })
-      );
-    }
+    // Filter to show the props of the components only related to the src and ignore the props of the node modules
+    // if (
+    //   prop?.declarations?.length > 0 &&
+    //   !componentsWithParentsTypeToBeParsed.includes(component.name)
+    // ) {
+    //   return prop.declarations.some((declaration) => {
+    //     return /packages\/.*\/src/.test(declaration.fileName);
+    //   });
+    // }
     return true;
   },
 };
