@@ -36,9 +36,9 @@ function generateComponentsDescriptions(input) {
 json2md.converters.components = function (input) {
   if (input.childrens) {
     let markdown = json2md({ h2: 'Components' });
-    markdown += json2md({
+    markdown += json2md([{
       ul: generateComponentsDescriptions(input.childrens),
-    });
+    }]);
     return markdown;
   } else {
     return '';

@@ -30,7 +30,7 @@ const Home: React.FunctionComponent<{}> = () => {
               <div>
                 <Link
                   className={
-                    'button button--primary button--lg margin-vert--sm margin-right--md '
+                    'button button--primary margin-vert--sm margin-right--md '
                   }
                   style={{ color: 'white' }}
                   to={useBaseUrl('/docs')}
@@ -40,7 +40,7 @@ const Home: React.FunctionComponent<{}> = () => {
 
                 <Link
                   className={
-                    'button button--secondary button--outline button--lg   margin-vert--sm heroButton'
+                    'button button--secondary button--outline   margin-vert--sm heroButton'
                   }
                   to={'https://react-native-elements.js.org/'}
                 >

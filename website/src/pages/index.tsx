@@ -4,9 +4,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Installation from '../components/Installation';
-import SnackDemo from '../components/SnackDemo';
+import StartNow from '../components/StartNow';
 import RunOnExpo from '../components/RunOnExpo';
-import VSCodeExt from '../components/VSCodeExt';
+import Community from '../components/Community';
+import { FigmaKit, VScodeExt } from '../components/Extentions';
 import OpenCollective from '../components/OpenCollective';
 import Sponsor from '../components/Sponsor';
 import '../../static/css/components.css';
@@ -19,11 +20,13 @@ const Home: React.FunctionComponent<{}> = () => {
       <Hero />
       <Features />
       <Installation />
-      {/* <SnackDemo /> */}
       <RunOnExpo />
-      <VSCodeExt />
+      {/* <FigmaKit /> */}
+      <VScodeExt />
       <Sponsor />
-      <OpenCollective />
+      {/* <OpenCollective /> */}
+      <Community />
+      <StartNow />
     </Layout>
   );
 };

@@ -12,6 +12,7 @@ const filesToExclude = [
   path.join(basePath, 'SearchBar', 'SearchBar-default.tsx'),
   path.join(basePath, 'SearchBar', 'SearchBar-ios.tsx'),
   path.join(basePath, 'SearchBar', 'SearchBar.tsx'),
+  path.join(basePath, 'Skeleton', 'Skeleton.tsx'),
 ];
 
 export const runFileScript = (filesAsInput: string[] = []): string[] => {
