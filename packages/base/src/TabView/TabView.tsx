@@ -34,8 +34,8 @@ export type TabViewBaseProps = {
   /** Styling for TabView.Item Component container. */
   tabItemContainerStyle?: StyleProp<ViewStyle>;
 
-  /** Swipe enabled or not */
-  swipeEnabled?: Boolean;
+  /** Swipe disabled or not */
+  disableSwipe?: Boolean;
 };
 
 /** Tabs organize content across different screens, data sets, and other interactions.
@@ -48,7 +48,7 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   animationConfig = {},
   containerStyle,
   tabItemContainerStyle,
-  swipeEnabled = true,
+  disableSwipe = false,
 }) => {
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
@@ -70,7 +70,9 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
     }
     const position = dx / -window.width;
     const next = position > value ? Math.ceil(position) : Math.floor(position);
-    onChange?.(currentIndex.current + next);
+    if (!disableSwipe) {
+      onChange?.(currentIndex.current + next);
+    }
   };
 
   const { current: panResponder } = React.useRef(
@@ -95,72 +97,37 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   }, [animate, value]);
 
   return (
-    <>
-      {swipeEnabled ? (
-        <Animated.View
-          testID="tabView-test"
+    <Animated.View
+      testID="tabView-test"
+      style={StyleSheet.flatten([
+        styles.container,
+        {
+          width: window.width * length,
+          transform: [
+            {
+              translateX: translateX.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, -window.width],
+              }),
+            },
+          ],
+        },
+        containerStyle,
+      ])}
+      {...panResponder.panHandlers}
+    >
+      {React.Children.map(children, (child) => (
+        <View
           style={StyleSheet.flatten([
             styles.container,
-            {
-              width: window.width * length,
-              transform: [
-                {
-                  translateX: translateX.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [0, -window.width],
-                  }),
-                },
-              ],
-            },
-            containerStyle,
-          ])}
-          {...panResponder.panHandlers}
-        >
-          {React.Children.map(children, (child) => (
-            <View
-              style={StyleSheet.flatten([
-                styles.container,
-                { width: window.width },
-                tabItemContainerStyle,
-              ])}
-            >
-              {child}
-            </View>
-          ))}
-        </Animated.View>
-      ) : (
-        <Animated.View
-          testID="tabView-test"
-          style={StyleSheet.flatten([
-            styles.container,
-            {
-              width: window.width * length,
-              transform: [
-                {
-                  translateX: translateX.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [0, -window.width],
-                  }),
-                },
-              ],
-            },
-            containerStyle,
+            { width: window.width },
+            tabItemContainerStyle,
           ])}
         >
-          {React.Children.map(children, (child) => (
-            <View
-              style={StyleSheet.flatten([
-                styles.container,
-                { width: window.width },
-                tabItemContainerStyle,
-              ])}
-            >
-              {child}
-            </View>
-          ))}
-        </Animated.View>
-      )}
-    </>
+          {child}
+        </View>
+      ))}
+    </Animated.View>
   );
 };
 
