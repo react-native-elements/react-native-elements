@@ -97,7 +97,6 @@ export class Markdown implements ComponentDoc {
   ${snippetToCode(this.description)}
   
   ${installationTab(installation)}
-  
 
   ${this.usage(usageFileExists)}
   
@@ -108,11 +107,12 @@ export class Markdown implements ComponentDoc {
     const { usage = '' } = this.tags || {};
 
     return dedent`
-    ${isTrue(usageFileExists || !!usage, '## Usage')}
-  
-    ${isTrue(usageFileExists, '<Usage/>')}
-    
-    ${tabify(snippetToCode(usage)).trim()}`;
+${isTrue(usageFileExists || !!usage, '## Usage')}
+
+${isTrue(usageFileExists, '<Usage/>')}
+
+${tabify(snippetToCode(usage)).trim()}
+    `;
   }
 
   private get propTable() {
