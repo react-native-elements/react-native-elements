@@ -41,6 +41,7 @@ export class Markdown implements ComponentDoc {
   props: Props;
   tags?: StringIndexedObject<string>;
   methods: Method[];
+  static packageName: string;
 
   constructor(component: ComponentDoc) {
     this.displayName = component.displayName;
@@ -49,33 +50,40 @@ export class Markdown implements ComponentDoc {
     this.props = component.props;
     this.methods = component.methods;
     this.tags = component.tags;
-    // const [_, pkg] = this.filePath.match(
-    //   new RegExp(path.join(__dirname, '../../../packages/(.*)/src'))
-    // );
-    // const parentComp = this.displayName.split('.')[0];
   }
 
-  printFiles(mdContent: string) {
+  save() {
+    this.print(this.generate());
+  }
+
+  private print(mdContent: string) {
+    const pkgRegExp = new RegExp('packages/(.*)/src');
+    const [, pkg] = this.filePath.match(pkgRegExp);
+    const [parentComp = '', childComp = ''] = this.displayName.split('.');
+    if (pkg !== Markdown.packageName) {
+      Markdown.packageName = pkg;
+      console.log();
+      console.log(`@react-native-elements/${pkg}`);
+    }
     const isUniverse = !this.filePath.startsWith(pkgPath + '/base');
     const mdFilePath = path.join(
       docsPath,
       isUniverse ? 'universe' : 'components',
       `${this.displayName}.mdx`
     );
-    console.log(this.displayName);
+    console.log('', childComp ? '  ' + childComp : parentComp);
 
     fs.writeFileSync(mdFilePath, prettier.format(mdContent, { parser: 'mdx' }));
   }
 
-  generateMarkdown() {
+  private generate() {
     const id = this.displayName.toLowerCase().replace('.', '_');
-    const { usage = '', imports = '', installation = '' } = this.tags || {};
+    const { imports = '', installation = '' } = this.tags || {};
 
-    const usageFileExists = fs.existsSync(
-      path.join(docsPath, `component_usage/${this.displayName}.mdx`)
-    );
+    const usagePath = `component_usage/${this.displayName}.mdx`;
+    const usageFileExists = fs.existsSync(path.join(docsPath, usagePath));
 
-    let mdContent = dedent`
+    return dedent`
   ---
   id: ${id}
   title: ${this.displayName}
@@ -84,25 +92,27 @@ export class Markdown implements ComponentDoc {
   import Tabs from "@theme/Tabs";
   import TabItem from "@theme/TabItem";
   import { ${imports} } from 'react-native-elements';
-  ${isTrue(
-    usageFileExists,
-    `import Usage from './usage/${this.displayName}.mdx'`
-  )}
+  ${isTrue(usageFileExists, `import Usage from '../${usagePath}';`)}
   
   ${snippetToCode(this.description)}
   
   ${installationTab(installation)}
   
-  ## Usage
-  
-  ${isTrue(usageFileExists, '<Usage/>')}
-  
-  ${tabify(snippetToCode(usage)).trim()}
-  
-  ${this.propTable}   
-  `;
 
-    this.printFiles(mdContent);
+  ${this.usage(usageFileExists)}
+  
+  ${this.propTable}`;
+  }
+
+  private usage(usageFileExists: boolean) {
+    const { usage = '' } = this.tags || {};
+
+    return dedent`
+    ${isTrue(usageFileExists || !!usage, '## Usage')}
+  
+    ${isTrue(usageFileExists, '<Usage/>')}
+    
+    ${tabify(snippetToCode(usage)).trim()}`;
   }
 
   private get propTable() {

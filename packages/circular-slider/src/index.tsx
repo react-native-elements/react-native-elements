@@ -94,7 +94,7 @@ export type CircularSliderProps = {
 /**
  * A slider with circular track and thumb
  *
- * @installation react-native-elements/circular-slider
+ * @installation circular-slider
  * @usage
  * ```jsx
  * import { CircularSlider } from '@react-native-elements/circular-slider';

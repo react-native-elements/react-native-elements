@@ -107,7 +107,6 @@ export const installationTab = (str: string) => {
 
     </TabItem>
     </Tabs>
-    ${str}
   `;
 };
 

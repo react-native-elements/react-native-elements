@@ -32,8 +32,7 @@ function main(sourcePath: string) {
   const componentDocs = docgenParser.parse(filePaths);
 
   componentDocs.forEach((componentDoc) => {
-    const md = new Markdown(componentDoc);
-    md.generateMarkdown();
+    new Markdown(componentDoc).save();
   });
 }
 
