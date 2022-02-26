@@ -6,7 +6,7 @@ import { Text } from '../Text';
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 export interface ListItemSubtitleProps extends TextProps {
-  right: boolean;
+  right?: boolean;
 }
 
 /** This allows adding SubTitle to the ListItem.
