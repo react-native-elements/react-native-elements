@@ -127,6 +127,8 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 - [imageProps](#imageprops)
 - [onLongPress](#onlongpress)
 - [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [overlayContainerStyle](#overlaycontainerstyle)
 - [placeholderStyle](#placeholderstyle)
 - [pressableProps](#pressableprops)
@@ -139,6 +141,10 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar.Accessory
 
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 - [style](#style)
 - [underlayColor](#underlaycolor)
@@ -247,6 +253,26 @@ Callback function when pressing component.
 
 ---
 
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
 #### overlayContainerStyle
 
 Style for the view outside image or icon.
@@ -336,6 +362,46 @@ Style for the title.
 ---
 
 ### Avatar.Accessory
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
+
+Called when a single tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
 
 #### pressableProps
 

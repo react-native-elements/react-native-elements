@@ -39,6 +39,9 @@ Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) 
 ### Dialog
 
 - [children](#children)
+- [onLongPress](#onlongpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [overlayStyle](#overlaystyle)
 - [pressableProps](#pressableprops)
 
@@ -72,6 +75,36 @@ Add Enclosed components.
 | Type      | Default |
 | --------- | ------- |
 | ReactNode | None    |
+
+---
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 
