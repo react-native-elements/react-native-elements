@@ -5,10 +5,10 @@ import { Text } from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-export type ListItemTitleProps = TextProps & {
+export interface ListItemTitleProps extends TextProps {
   /**Add right title. */
   right?: boolean;
-};
+}
 
 /** This allows adding Title to the ListItem.
  * This, Receives all [Text](text#props) props. */

@@ -18,7 +18,7 @@ const SEARCHBAR_COMPONENTS = {
   default: SearchBarDefault,
 };
 
-export type SearchBarBaseProps = React.ComponentPropsWithRef<
+export interface SearchBarBaseProps extends  React.ComponentPropsWithRef<
   typeof TextInput
 > & {
   platform?: 'default' | 'ios' | 'android';
@@ -39,7 +39,7 @@ export type SearchBarBaseProps = React.ComponentPropsWithRef<
   theme: Theme;
 };
 
-export type SearchBarProps =
+export interface SearchBarProps extends 
   | SearchBarBaseProps
   | SearchBarDefaultProps
   | SearchBarAndroidProps

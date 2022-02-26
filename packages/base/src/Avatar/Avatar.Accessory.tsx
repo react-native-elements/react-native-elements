@@ -16,14 +16,16 @@ import {
   RneFunctionComponent,
 } from '../helpers';
 
-export type AccessoryProps = Partial<IconProps> &
-  Partial<ImageProps> & {
-    /** Add underlay color to the accessory of avatar. */
-    underlayColor?: ColorValue;
+export interface AccessoryProps
+  extends Partial<IconProps>,
+    Partial<ImageProps>,
+    InlinePressableProps {
+  /** Add underlay color to the accessory of avatar. */
+  underlayColor?: ColorValue;
 
-    /** Add custom styling to the accessory of avatar. */
-    style?: StyleProp<ViewStyle>;
-  } & InlinePressableProps;
+  /** Add custom styling to the accessory of avatar. */
+  style?: StyleProp<ViewStyle>;
+}
 
 /** This is used for adding an accessory to the Avatar.
  * Receives either all [Icon](icon#props) or [Image](image#props) props. */

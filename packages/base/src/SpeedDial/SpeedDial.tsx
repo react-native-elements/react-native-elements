@@ -12,7 +12,7 @@ import { IconNode } from '../Icon';
 import Color from 'color';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type SpeedDialProps = {
+export interface SpeedDialProps extends FABProps {
   /** Opens the action stack. */
   isOpen: boolean;
 
@@ -36,7 +36,7 @@ export type SpeedDialProps = {
 
   /** Props for Backdrop Pressable */
   backdropPressableProps?: PressableProps;
-} & FABProps;
+}
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
  * If more than six actions are needed, something other than a FAB should be used to present them.

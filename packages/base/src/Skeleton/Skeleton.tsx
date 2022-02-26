@@ -11,7 +11,7 @@ import {
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import Color from 'color';
 
-export type SkeletonProps = {
+export interface SkeletonProps extends ViewProps {
   /**
    * show circular variant
    */
@@ -38,7 +38,7 @@ export type SkeletonProps = {
    * @type React Component
    */
   LinearGradientComponent?: React.ComponentType<any>;
-} & ViewProps;
+}
 
 /**
  * A placeholder preview for content before the data gets loaded, an alternative for spinners.

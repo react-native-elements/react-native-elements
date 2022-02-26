@@ -18,11 +18,11 @@ const ALIGN_STYLE: Record<Placement, FlexAlignType> = {
 
 type Placement = 'left' | 'center' | 'right';
 
-export type HeaderChildrenProps = {
+export interface HeaderChildrenProps {
   placement: Placement;
   style: StyleProp<ViewStyle>;
   children: any;
-};
+}
 
 export const Children = ({
   style,

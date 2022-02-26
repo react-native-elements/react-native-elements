@@ -8,10 +8,11 @@ type ActiveTabItemStyle<T = {}> =
   | ((active: boolean) => StyleProp<T>)
   | StyleProp<T>;
 
-export type TabItemProps = Omit<
-  ButtonProps,
-  'buttonStyle' | 'titleStyle' | 'containerStyle' | 'iconContainerStyle'
-> & {
+export interface TabItemProps
+  extends Omit<
+    ButtonProps,
+    'buttonStyle' | 'titleStyle' | 'containerStyle' | 'iconContainerStyle'
+  > {
   /** Allows to define if TabItem is active. */
   active?: boolean;
 
@@ -41,7 +42,7 @@ export type TabItemProps = Omit<
    * @type ViewStyle or (active: boolean) => ViewStyle
    */
   iconContainerStyle?: ActiveTabItemStyle<ViewStyle>;
-};
+}
 
 /**
  * They are individual item of the parent Tab.

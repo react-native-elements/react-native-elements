@@ -20,7 +20,7 @@ type ButtonInformation = {
   titleStyle?: StyleProp<TextStyle>;
 };
 
-export type PricingCardProps = {
+export interface PricingCardProps {
   /** Outer component styling. */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -53,7 +53,7 @@ export type PricingCardProps = {
 
   /** Specify pricing information style. */
   infoStyle?: StyleProp<TextStyle>;
-};
+}
 
 /** Pricing is a convenience component used to display features and pricing tables in a beautiful and engaging way. */
 export const PricingCard: RneFunctionComponent<PricingCardProps> = ({

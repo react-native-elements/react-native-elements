@@ -5,7 +5,7 @@ import { ListItemContent } from './ListItem.Content';
 import { Icon, IconNode, IconProps } from '../Icon';
 import { RneFunctionComponent } from '../helpers';
 
-export type ListItemAccordionProps = ListItemBaseProps & {
+export interface ListItemAccordionProps extends ListItemBaseProps {
   /** Decide if Accordion is Expanded. */
   isExpanded?: boolean;
 
@@ -33,7 +33,7 @@ export type ListItemAccordionProps = ListItemBaseProps & {
         duration?: number;
       }
     | boolean;
-};
+}
 
 /** This allows making a accordion list which can show/hide content. */
 export const ListItemAccordion: RneFunctionComponent<

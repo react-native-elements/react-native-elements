@@ -34,7 +34,7 @@ const defaultClearIcon = (theme: Theme) => ({
   name: 'clear',
 });
 
-export type SearchBarAndroidProps = InputProps &
+export interface SearchBarAndroidProps extends  InputProps &
   SearchBarBaseProps &
   typeof SearchBarAndroid.defaultProps & {
     cancelIcon?: IconNode;
