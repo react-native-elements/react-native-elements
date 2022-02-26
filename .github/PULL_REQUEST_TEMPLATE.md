@@ -1,20 +1,39 @@
-<!-- Thanks for submitting a pull request! Please provide enough information so that others can review your pull request. -->
+## Motivation
 
-**What kind of change does this PR introduce?**
+<!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]  Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change. -->
 
-<!-- E.g. a bugfix, feature, refactoring, build related change, etc… -->
+Fixes # (issue)
 
-**Did you add tests for your changes?**
 
-**If relevant, did you update the documentation?**
+## Type of change
 
-**Summary**
+<!-- Please delete options that are not relevant. -->
 
-<!-- Explain the **motivation** for making this change. What existing problem does the pull request solve? -->
-<!-- Try to link to an open issue for more information. -->
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
 
-**Does this PR introduce a breaking change?**
+# How Has This Been Tested?
 
-<!-- If this PR introduces a breaking change, please describe the impact and a migration path for existing applications. -->
+<!-- Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration -->
 
-**Other information**
+- [ ] Jest Unit Test
+- [ ] Checked with `example` app
+
+
+## Checklist
+
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation using `yarn docs-build-api`
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+- [ ] Any dependent changes have been merged and published in downstream modules
+
+## Additional context
+
+<!-- Add any other context or screenshots about the feature request here. -->
+
