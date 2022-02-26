@@ -20,12 +20,6 @@ export interface ImageProps extends RNImageProps, InlinePressableProps {
    */
   Component?: typeof React.Component;
 
-  /** Callback function when pressing component. */
-  onPress?(): void;
-
-  /** Callback function when long pressing component. */
-  onLongPress?(): void;
-
   /** Specify a different component as the Image component. */
   ImageComponent?: typeof React.Component;
 

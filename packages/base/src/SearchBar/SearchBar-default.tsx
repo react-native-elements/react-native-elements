@@ -26,7 +26,7 @@ const defaultClearIcon = (theme: Theme) => ({
   color: theme?.colors?.grey3,
 });
 
-export interface SearchBarDefaultProps extends  typeof SearchBarDefault.defaultProps &
+export type SearchBarDefaultProps = typeof SearchBarDefault.defaultProps &
   SearchBarBaseProps &
   TextInputProps;
 
