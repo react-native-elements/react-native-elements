@@ -78,7 +78,7 @@ export interface InlinePressableProps {
 
   /**
    * @default None
-   * @type PressableProps except click handlers
+   * @type `PressableProps` except click handlers
    */
   pressableProps?: Omit<
     PressableProps,

@@ -18,10 +18,6 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 
 ## Props
 
-:::note
-Include all props from InlinePressableProps
-:::
-
 <div class='table-responsive'>
 
 | Name                        | Type                                                                       | Default           | Description                                                                                                                          |
@@ -40,8 +36,12 @@ Include all props from InlinePressableProps
 | `disabledTextStyle`         | Text Style                                                                 |                   | Styling for the text of each button when disabled.                                                                                   |
 | `innerBorderStyle`          | { color?: string; width?: number; }                                        |                   | Update the styling of the interior border of the list of buttons.                                                                    |
 | `onHideUnderlay`            | Function                                                                   |                   | Function called on hiding underlay.                                                                                                  |
+| `onLongPress`               | GestureResponderEventHandler                                               |                   | Called when a long-tap gesture is detected.                                                                                          |
 | `onPress`                   | (...args: any[]) => void                                                   | `Function`        | Method to update Button Group Index.                                                                                                 |
+| `onPressIn`                 | GestureResponderEventHandler                                               |                   | Called when a touch is engaged before `onPress`.                                                                                     |
+| `onPressOut`                | GestureResponderEventHandler                                               |                   | Called when a touch is released before `onPress`.                                                                                    |
 | `onShowUnderlay`            | Function                                                                   |                   | Function called on showing underlay.                                                                                                 |
+| `pressableProps`            | `PressableProps` except click handlers                                     | `None`            |                                                                                                                                      |
 | `selectMultiple`            | boolean                                                                    | `false`           | Allows the user to select multiple buttons.                                                                                          |
 | `selectedButtonStyle`       | View Style                                                                 |                   | Specify styling for selected button.                                                                                                 |
 | `selectedIndex`             | number                                                                     | `null`            | Current selected index of array of buttons.                                                                                          |

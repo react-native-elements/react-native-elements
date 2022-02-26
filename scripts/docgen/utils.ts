@@ -18,10 +18,12 @@ export const tabify = (str: string) => {
                 if (left.name === '$' && operator === '+') {
                   const { properties } = right;
                   const keys = [];
-                  properties.forEach(({ key, value }) => {
+                  properties.forEach(({ key }) => {
                     keys.push(key.value);
                   });
-                  if (keys.length < 1) return;
+                  if (keys.length < 1) {
+                    return;
+                  }
                   const element = t.jsxElement(
                     t.jsxOpeningElement(t.jsxIdentifier('Tabs'), [
                       t.jsxAttribute(
@@ -76,7 +78,9 @@ export const tabify = (str: string) => {
 };
 
 export const installationTab = (str: string) => {
-  if (!str) return '';
+  if (!str) {
+    return '';
+  }
   return dedent`
     ## Installation
     
@@ -108,7 +112,8 @@ export const installationTab = (str: string) => {
 };
 
 export const codify = (str: string) => (str ? `\`${str?.trim()}\`` : '');
-
+export const isTrue = (cond: number | boolean, value: string) =>
+  cond ? dedent(value) : '';
 export const removeNewline = (str: string) => str?.replace(/\n/g, '');
 
 export const snippetToCode = (snippet = '') =>
@@ -117,7 +122,9 @@ export const snippetToCode = (snippet = '') =>
     .replace(/%jsx (.*)/g, '```jsx\n$1\n```');
 
 export const filterPropType = (value: string) => {
-  if (!value) return '`None`';
+  if (!value) {
+    return '`None`';
+  }
   if (value.includes('|')) {
     return value.replace(/"/g, '').split('|').map(codify).join(' or ');
   }

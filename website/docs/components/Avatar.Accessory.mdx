@@ -15,14 +15,17 @@ Receives either all [Icon](icon#props) or [Image](image#props) props.
 ## Props
 
 :::note
-Include all props from IconProps, ImageProps, Acc, InlinePressableProps
+Includes all props from [IconProps](/docs/documentation/icon#props), [ImageProps](/docs/documentation/image#props), [TextProps](https://reactnative.dev/docs/text#props)
 :::
 
 <div class='table-responsive'>
 
-| Name            | Type       | Default | Description                                                                                                                                                                        |
-| --------------- | ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `style`         | Text Style |         | Style prop inherited from TextProps and TouchableWithoutFeedbackPropertiesOnly exist here so we can have ViewStyle or TextStyleStyleAdd custom styling to the accessory of avatar. |
-| `underlayColor` | ColorValue | `#000`  | The color of the underlay that will show through when the touch is active.Add underlay color to the accessory of avatar.                                                           |
+| Name             | Type                                   | Default | Description                                       |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------- |
+| `onLongPress`    | GestureResponderEventHandler           |         | Called when a long-tap gesture is detected.       |
+| `onPress`        | GestureResponderEventHandler           |         | Called when a single tap gesture is detected.     |
+| `onPressIn`      | GestureResponderEventHandler           |         | Called when a touch is engaged before `onPress`.  |
+| `onPressOut`     | GestureResponderEventHandler           |         | Called when a touch is released before `onPress`. |
+| `pressableProps` | `PressableProps` except click handlers | `None`  |                                                   |
 
 </div>

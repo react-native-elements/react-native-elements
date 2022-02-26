@@ -15,12 +15,16 @@ This, Receives all [ButtonGroup](buttongroup#props) props.
 ## Props
 
 :::note
-Include all props from ButtonGroupProps, InlinePressableProps
+Includes all props from [ButtonGroupProps](/docs/documentation/buttongroup#props)
 :::
 
 <div class='table-responsive'>
 
-| Name | Type | Default | Description |
-| ---- | ---- | ------- | ----------- |
+| Name             | Type                                   | Default | Description                                       |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------- |
+| `onLongPress`    | GestureResponderEventHandler           |         | Called when a long-tap gesture is detected.       |
+| `onPressIn`      | GestureResponderEventHandler           |         | Called when a touch is engaged before `onPress`.  |
+| `onPressOut`     | GestureResponderEventHandler           |         | Called when a touch is released before `onPress`. |
+| `pressableProps` | `PressableProps` except click handlers | `None`  |                                                   |
 
 </div>

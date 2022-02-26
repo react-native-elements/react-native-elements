@@ -83,10 +83,6 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ## Props
 
-:::note
-Include all props from InlinePressableProps
-:::
-
 <div class='table-responsive'>
 
 | Name                       | Type                                                       | Default                                           | Description                                                                                                                                                  |
@@ -101,8 +97,11 @@ Include all props from InlinePressableProps
 | `imageProps`               | ImageProps(Object)                                         |                                                   | Optional properties to pass to the avatar e.g "resizeMode".                                                                                                  |
 | `onLongPress`              | Function                                                   |                                                   | Callback function when long pressing component.                                                                                                              |
 | `onPress`                  | Function                                                   |                                                   | Callback function when pressing component.                                                                                                                   |
+| `onPressIn`                | GestureResponderEventHandler                               |                                                   | Called when a touch is engaged before `onPress`.                                                                                                             |
+| `onPressOut`               | GestureResponderEventHandler                               |                                                   | Called when a touch is released before `onPress`.                                                                                                            |
 | `overlayContainerStyle`    | Text Style                                                 |                                                   | Style for the view outside image or icon.                                                                                                                    |
 | `placeholderStyle`         | View Style                                                 |                                                   | Adds style to the placeholder wrapper.                                                                                                                       |
+| `pressableProps`           | `PressableProps` except click handlers                     | `None`                                            |                                                                                                                                                              |
 | `renderPlaceholderContent` | `ReactElement<{}, string` or `JSXElementConstructor<any>>` |                                                   | Custom placeholder element (by default, it's the title).                                                                                                     |
 | `rounded`                  | boolean                                                    |                                                   | Makes the avatar circular.                                                                                                                                   |
 | `size`                     | `number` or `small` or `medium` or `large` or `xlarge`     | `small`                                           | Size of the avatar.                                                                                                                                          |

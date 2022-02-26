@@ -1,4 +1,5 @@
 import {
+  isTrue,
   tabify,
   codify,
   snippetToCode,
@@ -18,12 +19,20 @@ import {
 } from 'react-docgen-typescript/lib/parser';
 
 const ALLOWED_INCLUDES = {
-  AccessibilityProps: 'Acc',
-  TouchableOpacityProps: 'Touch',
+  TextProps: '[TextProps](https://reactnative.dev/docs/text#props)',
+  ViewProps: '[ViewProps](https://reactnative.dev/docs/view#props)',
+  ImageProps:
+    '[React Native ImageProps](https://reactnative.dev/docs/image#props)',
+  TouchableOpacityProps:
+    '[TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props)',
+  TextInputProps:
+    '[React Native TextInputProps](https://reactnative.dev/docs/textinput#props)',
 };
 
 const pkgPath = path.join(__dirname, '../../packages');
 const docsPath = path.join(__dirname, '../../website/docs');
+
+const mustAddProps = ['InlinePressableProps'];
 
 export class Markdown implements ComponentDoc {
   description: string;
@@ -59,14 +68,11 @@ export class Markdown implements ComponentDoc {
   }
 
   generateMarkdown() {
-    // console.log(JSON.stringify(this.props, null, 2));
     const id = this.displayName.toLowerCase().replace('.', '_');
     const { usage = '', imports = '', installation = '' } = this.tags || {};
 
-    const usageFileExists = Boolean(
-      fs.existsSync(
-        path.join(docsPath, `component_usage/${this.displayName}.mdx`)
-      )
+    const usageFileExists = fs.existsSync(
+      path.join(docsPath, `component_usage/${this.displayName}.mdx`)
     );
 
     let mdContent = dedent`
@@ -78,9 +84,10 @@ export class Markdown implements ComponentDoc {
   import Tabs from "@theme/Tabs";
   import TabItem from "@theme/TabItem";
   import { ${imports} } from 'react-native-elements';
-  ${
-    usageFileExists ? `import Usage from './usage/${this.displayName}.mdx'` : ''
-  }
+  ${isTrue(
+    usageFileExists,
+    `import Usage from './usage/${this.displayName}.mdx'`
+  )}
   
   ${snippetToCode(this.description)}
   
@@ -88,7 +95,7 @@ export class Markdown implements ComponentDoc {
   
   ## Usage
   
-  ${usageFileExists ? '<Usage/>' : ''}
+  ${isTrue(usageFileExists, '<Usage/>')}
   
   ${tabify(snippetToCode(usage)).trim()}
   
@@ -112,23 +119,27 @@ export class Markdown implements ComponentDoc {
       type,
       description,
       defaultValue,
-      declarations,
+      parent,
     } of orderedProps) {
-      let shouldSkip = declarations.every(({ fileName, name: typeName }) => {
-        if (/node_modules/.test(fileName)) {
-          const allowedProp = ALLOWED_INCLUDES[typeName];
-          if (allowedProp) {
-            includes.add(allowedProp);
+      if (parent) {
+        const { name: parentName, fileName: parentFileName } = parent;
+        if (!mustAddProps.includes(parentName)) {
+          if (parentFileName.includes('node_modules')) {
+            if (ALLOWED_INCLUDES[parentName]) {
+              includes.add(ALLOWED_INCLUDES[parentName]);
+            }
+            continue;
+          } else if (
+            parentFileName.includes('base/src') &&
+            !this.filePath.includes(parentFileName)
+          ) {
+            const parentID = parentName.toLowerCase().replace('props', '');
+            includes.add(
+              `[${parentName}](/docs/documentation/${parentID}#props)`
+            );
+            continue;
           }
-          return true;
-        } else if (!this.filePath.includes(fileName)) {
-          includes.add(typeName);
-          return true;
         }
-        return false;
-      });
-      if (shouldSkip) {
-        continue;
       }
 
       rows.push(
@@ -143,26 +154,28 @@ export class Markdown implements ComponentDoc {
       );
     }
 
-    const includedProps = includes.size
-      ? dedent`
-      :::note
-      Include all props from ${[...includes].join(', ')}
-      :::`
-      : '';
-
     return dedent`
   
       ## Props
   
-      ${includedProps}
-  
-      <div class='table-responsive'>
-  
-      | Name | Type | Default | Description |
-      | ---- | ---- | ------- | ----------- |
-      ${rows.join('\n')}
-  
-      </div>
+      ${isTrue(
+        includes.size,
+        `:::note
+        Includes all props from ${[...includes].sort().join(', ')}
+        :::`
+      )}
+
+      ${isTrue(
+        rows.length,
+        `<div class='table-responsive'>
+      
+         | Name | Type | Default | Description |
+         | ---- | ---- | ------- | ----------- |
+         ${rows.join('\n')}
+      
+         </div>`
+      )}
+
       `;
   }
 }
