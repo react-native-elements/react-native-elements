@@ -10,7 +10,7 @@ import {
 import Color from 'color';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type LinearProgressProps = ViewProps & {
+export interface LinearProgressProps extends ViewProps {
   /** The value of the progress indicator for the determinate variant. Value between 0 and 1. */
   value?: number;
 
@@ -32,7 +32,7 @@ export type LinearProgressProps = ViewProps & {
         duration?: number;
       }
     | boolean;
-};
+}
 
 /** Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates.
  * They communicate an app’s state and indicate available actions, such as whether users can navigate away from the current screen.

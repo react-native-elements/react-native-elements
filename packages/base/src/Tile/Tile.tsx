@@ -19,7 +19,7 @@ import { FeaturedTile } from './components/FeaturedTile';
 import { androidRipple, defaultTheme, RneFunctionComponent } from '../helpers';
 import Color from 'color';
 
-export type TileProps = PressableProps & {
+export interface TileProps extends PressableProps {
   /** Text inside the tile. */
   title?: string;
 
@@ -81,7 +81,7 @@ export type TileProps = PressableProps & {
    * @default RNE Image
    */
   ImageComponent?: typeof React.Component;
-};
+}
 
 /** Tiles like Cards, are a convenient way to display related content about a single subject.
  * Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props. */

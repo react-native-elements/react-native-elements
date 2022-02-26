@@ -31,7 +31,7 @@ type AvatarIcon = IconObject & {
   iconStyle?: StyleProp<TextStyle>;
 };
 
-export type AvatarProps = {
+export interface AvatarProps extends InlinePressableProps {
   /** Component for enclosing element (eg: TouchableHighlight, View, etc).
    *
    *  @default `Press handlers present then Pressable else View`
@@ -88,7 +88,7 @@ export type AvatarProps = {
 
   /** Custom ImageComponent for Avatar. */
   ImageComponent?: React.ComponentClass;
-} & InlinePressableProps;
+}
 
 /**
  * Avatars are found all over ui design from lists to profile screens.

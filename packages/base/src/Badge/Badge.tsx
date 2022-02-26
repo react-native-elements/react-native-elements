@@ -16,7 +16,7 @@ import {
   RneFunctionComponent,
 } from '../helpers';
 
-export type BadgeProps = {
+export interface BadgeProps extends InlinePressableProps {
   /** Style for the container. */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -39,7 +39,7 @@ export type BadgeProps = {
 
   /** Determines color of the indicator. */
   status?: 'primary' | 'success' | 'warning' | 'error';
-} & InlinePressableProps;
+}
 
 /** Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user. */
 export const Badge: RneFunctionComponent<BadgeProps> = ({

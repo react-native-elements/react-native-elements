@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type SwitchProps = NativeSwitchProps & {
+export interface SwitchProps extends NativeSwitchProps {
   /**  The color of the Switch component. */
   color?: string;
-};
+}
 
 /**
  * Switch represents user's decision of a process and indicates whether a state is on/off.

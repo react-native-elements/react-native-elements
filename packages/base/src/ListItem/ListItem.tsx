@@ -11,7 +11,7 @@ import {
 import { PadView } from './components/PadView';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type ListItemBaseProps = PressableProps & {
+export interface ListItemBaseProps extends PressableProps {
   /** Additional main container styling. */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -38,7 +38,7 @@ export type ListItemBaseProps = PressableProps & {
 
   /** Add enclosed children. */
   children?: any;
-};
+}
 
 /** ListItems are used to display rows of information, such as a contact list, playlist, or menu.
  * They are very customizable and can contain switches, avatars, badges, icons, and more. */

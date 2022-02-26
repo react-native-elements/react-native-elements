@@ -21,7 +21,7 @@ import { HeaderIcon } from './components/HeaderIcon';
 
 type HeaderSubComponent = React.ReactElement<{}> | TextProps | HeaderIcon;
 
-export type HeaderProps = ViewProps & {
+export interface HeaderProps extends ViewProps {
   /** Component for container.
    *
    * @default View
@@ -75,7 +75,7 @@ export type HeaderProps = ViewProps & {
 
   /** Elevation for header */
   elevated?: boolean;
-};
+}
 
 /** Headers are navigation components that display information and actions relating to the current screen.
  * **Note:**

@@ -13,7 +13,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { RneFunctionComponent } from '../helpers';
 
-export type BottomSheetProps = {
+export interface BottomSheetProps {
   /** Style of the bottom sheet's container. Use this to change the color of the underlay. */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -31,7 +31,7 @@ export type BottomSheetProps = {
 
   /** Used to add props to Scroll view. */
   scrollViewProps?: ScrollViewProps;
-};
+}
 
 /**
  * Overlay Modal that displays content from the bottom of the screen.
