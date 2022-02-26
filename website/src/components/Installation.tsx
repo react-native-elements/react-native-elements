@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../static/css/components.css';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import CodeBlock from '@theme/CodeBlock';
+
 const exampleCode = `import React from 'react';
 import { Button } from '@react-native-elements/base';
 
@@ -21,64 +23,15 @@ const Home: React.FunctionComponent<{}> = () => {
               <p>
                 <b>1. Install the React Native Elements package from the NPM</b>
                 <p className="margin-vert--md margin-horiz--md">
-                  <Highlight
-                    {...defaultProps}
-                    code={
-                      'npm install @react-native-elements/base @react-native-elements/themed'
-                    }
-                    language="bash"
-                    theme={
-                      require('prism-react-renderer/themes/dracula').default
-                    }
-                  >
-                    {({
-                      className,
-                      style,
-                      tokens,
-                      getLineProps,
-                      getTokenProps,
-                    }) => (
-                      <pre className={className} style={style}>
-                        {tokens.map((line, i) => (
-                          <div {...getLineProps({ line, key: i })}>
-                            {line.map((token, key) => (
-                              <span {...getTokenProps({ token, key })} />
-                            ))}
-                          </div>
-                        ))}
-                      </pre>
-                    )}
-                  </Highlight>
+                  <CodeBlock language="bash">
+                    npm install @react-native-elements/base
+                    @react-native-elements/themed
+                  </CodeBlock>
                 </p>
 
                 <b>2. Import the component and use it in your project</b>
                 <p className="margin-vert--md margin-horiz--md">
-                  <Highlight
-                    {...defaultProps}
-                    code={exampleCode}
-                    language="tsx"
-                    theme={
-                      require('prism-react-renderer/themes/dracula').default
-                    }
-                  >
-                    {({
-                      className,
-                      style,
-                      tokens,
-                      getLineProps,
-                      getTokenProps,
-                    }) => (
-                      <pre className={className} style={style}>
-                        {tokens.map((line, i) => (
-                          <div {...getLineProps({ line, key: i })}>
-                            {line.map((token, key) => (
-                              <span {...getTokenProps({ token, key })} />
-                            ))}
-                          </div>
-                        ))}
-                      </pre>
-                    )}
-                  </Highlight>
+                  <CodeBlock language="tsx">{exampleCode}</CodeBlock>
                 </p>
               </p>
             </div>
