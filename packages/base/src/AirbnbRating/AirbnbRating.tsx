@@ -5,7 +5,7 @@ import {
 } from 'react-native-ratings';
 import { RneFunctionComponent } from '../helpers';
 
-export type TapRatingProps = RatingProps;
+export interface TapRatingProps extends RatingProps {}
 
 /** Ratings are used to collect measurable feedback from users.
  * Use Rating over an Input where imagery can increase user interaction.

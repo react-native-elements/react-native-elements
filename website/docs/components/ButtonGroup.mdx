@@ -40,7 +40,10 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 - [disabledTextStyle](#disabledtextstyle)
 - [innerBorderStyle](#innerborderstyle)
 - [onHideUnderlay](#onhideunderlay)
+- [onLongPress](#onlongpress)
 - [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [onShowUnderlay](#onshowunderlay)
 - [pressableProps](#pressableprops)
 - [selectMultiple](#selectmultiple)
@@ -197,15 +200,43 @@ Function called on hiding underlay.
 
 ---
 
-#### onPress
+#### onLongPress
 
-Called when a single tap gesture is detected.
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
 
 Method to update Button Group Index.
 
-| Type                                                                    | Default  |
-| ----------------------------------------------------------------------- | -------- |
-| ((event: GestureResponderEvent) => void) and ((...args: any[]) => void) | Function |
+| Type                     | Default  |
+| ------------------------ | -------- |
+| (...args: any[]) => void | Function |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 

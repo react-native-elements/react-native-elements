@@ -35,6 +35,10 @@ They are also used for displaying information.
 - [iconProps](#iconprops)
 - [iconStyle](#iconstyle)
 - [name](#name)
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 - [raised](#raised)
 - [reverse](#reverse)
@@ -114,8 +118,6 @@ Add styling to container holding icon.
 
 #### disabled
 
-If true, disable all interactions for this component.
-
 Disables onPress events. Only works when `onPress` has a handler.
 
 | Type    | Default |
@@ -167,6 +169,46 @@ See Icon Explorer app
 | Type   | Default |
 | ------ | ------- |
 | string | None    |
+
+---
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
+
+Called when a single tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 

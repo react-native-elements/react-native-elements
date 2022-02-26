@@ -9,13 +9,13 @@ import {
 } from 'react-native';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type DialogLoadingProps = {
+export interface DialogLoadingProps {
   /** Add additional styling for loading component. */
   loadingStyle?: StyleProp<ViewStyle>;
 
   /** Add additional props for ActivityIndicator component */
   loadingProps?: ActivityIndicatorProps;
-};
+}
 
 /** `DialogLoader` allows adding loader to the Dialog. Loader is simply ActivityIndicator. */
 export const DialogLoading: RneFunctionComponent<DialogLoadingProps> = ({

@@ -25,6 +25,10 @@ Badges are small components typically used to communicate a numerical value or i
 - [Component](#component)
 - [badgeStyle](#badgestyle)
 - [containerStyle](#containerstyle)
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 - [status](#status)
 - [textProps](#textprops)
@@ -62,6 +66,46 @@ Style for the container.
 | Type               | Default |
 | ------------------ | ------- |
 | View style(Object) | None    |
+
+---
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
+
+Called when a single tap gesture is detected.
+
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 

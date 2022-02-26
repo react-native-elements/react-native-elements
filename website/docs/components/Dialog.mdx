@@ -39,7 +39,9 @@ Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) 
 ### Dialog
 
 - [children](#children)
-- [isVisible](#isvisible)
+- [onLongPress](#onlongpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [overlayStyle](#overlaystyle)
 - [pressableProps](#pressableprops)
 
@@ -76,21 +78,37 @@ Add Enclosed components.
 
 ---
 
-#### isVisible
+#### onLongPress
 
-If true, the overlay is visible.
+Called when a long-tap gesture is detected.
 
-If true, the dialog is visible.
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
-| Type    | Default |
-| ------- | ------- |
-| boolean | None    |
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 
 #### overlayStyle
-
-Style of the actual overlay.
 
 Add additional styling to the internal Overlay component.
 

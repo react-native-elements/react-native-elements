@@ -127,6 +127,8 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 - [imageProps](#imageprops)
 - [onLongPress](#onlongpress)
 - [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [overlayContainerStyle](#overlaycontainerstyle)
 - [placeholderStyle](#placeholderstyle)
 - [pressableProps](#pressableprops)
@@ -139,6 +141,10 @@ They are commonly used to represent a user and can contain photos, icons, or eve
 
 ### Avatar.Accessory
 
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 - [style](#style)
 - [underlayColor](#underlaycolor)
@@ -231,11 +237,9 @@ Optional properties to pass to the avatar e.g "resizeMode".
 
 Callback function when long pressing component.
 
-Called when a long-tap gesture is detected.
-
-| Type                                                      | Default |
-| --------------------------------------------------------- | ------- |
-| (() => void) and ((event: GestureResponderEvent) => void) | None    |
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
 ---
 
@@ -243,11 +247,29 @@ Called when a long-tap gesture is detected.
 
 Callback function when pressing component.
 
-Called when a single tap gesture is detected.
+| Type     | Default |
+| -------- | ------- |
+| Function | None    |
 
-| Type                                                      | Default |
-| --------------------------------------------------------- | ------- |
-| (() => void) and ((event: GestureResponderEvent) => void) | None    |
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 
@@ -340,6 +362,46 @@ Style for the title.
 ---
 
 ### Avatar.Accessory
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
+
+Called when a single tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
 
 #### pressableProps
 

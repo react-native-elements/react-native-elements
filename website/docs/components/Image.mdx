@@ -31,6 +31,8 @@ images with a placeholder and smooth image load transitioning.
 - [containerStyle](#containerstyle)
 - [onLongPress](#onlongpress)
 - [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [placeholderStyle](#placeholderstyle)
 - [pressableProps](#pressableprops)
 - [transition](#transition)
@@ -94,11 +96,9 @@ Additional styling for the container.
 
 Called when a long-tap gesture is detected.
 
-Callback function when long pressing component.
-
-| Type                                                      | Default |
-| --------------------------------------------------------- | ------- |
-| ((event: GestureResponderEvent) => void) and (() => void) | None    |
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 
@@ -106,11 +106,29 @@ Callback function when long pressing component.
 
 Called when a single tap gesture is detected.
 
-Callback function when pressing component.
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
-| Type                                                      | Default |
-| --------------------------------------------------------- | ------- |
-| ((event: GestureResponderEvent) => void) and (() => void) | None    |
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 

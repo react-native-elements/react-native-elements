@@ -29,6 +29,9 @@ Overlays are an easy way to inform or request information from the user.
 - [fullScreen](#fullscreen)
 - [isVisible](#isvisible)
 - [onBackdropPress](#onbackdroppress)
+- [onLongPress](#onlongpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [overlayStyle](#overlaystyle)
 - [pressableProps](#pressableprops)
 
@@ -83,6 +86,36 @@ Handler for backdrop press (only works when `fullscreen` is false).
 | Type     | Default  |
 | -------- | -------- |
 | Function | Function |
+
+---
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
 
 ---
 

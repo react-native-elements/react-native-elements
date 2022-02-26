@@ -17,7 +17,7 @@ import { ScreenWidth, isIOS, RneFunctionComponent } from '../helpers';
 import { getElementVisibleWidth } from './helpers/getTooltipCoordinate';
 import { getTooltipStyle } from './helpers/getTooltipStyle';
 
-export type TooltipProps = {
+export interface TooltipProps {
   /** To show the tooltip. */
   visible?: boolean;
 
@@ -79,7 +79,7 @@ export type TooltipProps = {
 
   /** Style to be applied on the pointer. */
   pointerStyle?: StyleProp<ViewStyle>;
-};
+}
 
 /** Tooltips display informative text when users tap on an element. */
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({

@@ -88,7 +88,7 @@ export type SocialMediaType =
   | 'microsoft'
   | 'reddit';
 
-export type SocialIconProps = {
+export interface SocialIconProps extends InlinePressableProps {
   /** Type of button.
    *  @default `Press handlers present then Pressable else View`
    */
@@ -147,7 +147,7 @@ export type SocialIconProps = {
 
   /** Specify different font family. */
   fontFamily?: string;
-} & InlinePressableProps;
+}
 
 /** SocialIcons are visual cues to online and social media networks. We offer a varied range of social icons. */
 export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({

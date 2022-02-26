@@ -3,7 +3,7 @@ import { StyleSheet, Animated, StyleProp, ViewStyle } from 'react-native';
 import { Button, ButtonProps } from '../Button';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type FABProps = ButtonProps & {
+export interface FABProps extends ButtonProps {
   /** Change the color of the FAB. */
   color?: string;
 
@@ -21,7 +21,7 @@ export type FABProps = ButtonProps & {
 
   /** Style for FAB */
   style?: StyleProp<ViewStyle>;
-};
+}
 
 /** A floating action button (FAB) performs the primary, or most common, action on a screen.
  * It appears in front of all screen content, typically as a circular shape with an icon in its center.

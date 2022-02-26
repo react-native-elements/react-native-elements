@@ -3,7 +3,9 @@ import { StyleSheet, View } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import { TextProps } from '../Text';
 
-export type ListItemContentProps = TextProps & { right?: boolean };
+export interface ListItemContentProps extends TextProps {
+  right?: boolean;
+}
 
 /** This allows adding content to the ListItem.
  * This, Receives all [View](https://reactnative.dev/docs/view#props) props. */

@@ -74,6 +74,9 @@ They are very customizable and can contain switches, avatars, badges, icons, and
 
 ### ListItem.ButtonGroup
 
+- [onLongPress](#onlongpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 
 ### ListItem.CheckBox
@@ -82,6 +85,10 @@ None
 
 ### ListItem.Chevron
 
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 
 ### ListItem.Content
@@ -146,10 +153,6 @@ Add divider at the bottom of the list item.
 ---
 
 #### children
-
-Either children or a render prop that receives a boolean reflecting whether
-
-the component is currently pressed.
 
 Add enclosed children.
 
@@ -283,6 +286,36 @@ Don't rotate when Accordion is expanded.
 
 ### ListItem.ButtonGroup
 
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
 #### pressableProps
 
 | Type                                 | Default |
@@ -296,6 +329,46 @@ Don't rotate when Accordion is expanded.
 None
 
 ### ListItem.Chevron
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
+
+Called when a single tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
 
 #### pressableProps
 

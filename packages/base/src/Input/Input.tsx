@@ -22,7 +22,8 @@ const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
-export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
+export interface InputProps
+  extends React.ComponentPropsWithRef<typeof TextInput> {
   containerStyle?: StyleProp<ViewStyle>;
   disabled?: boolean;
   disabledInputStyle?: StyleProp<TextStyle>;
@@ -40,7 +41,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   labelStyle?: StyleProp<TextStyle>;
   labelProps?: object;
   renderErrorMessage?: boolean;
-};
+}
 
 export class Input extends React.Component<InputProps & { theme?: Theme }> {
   static displayName = 'Input';
