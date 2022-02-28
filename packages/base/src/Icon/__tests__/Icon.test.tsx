@@ -81,4 +81,11 @@ describe('Icon component', () => {
     const component = renderWithWrapper(<Icon name="wifi" raised />);
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  it('should have overridable testID', () => {
+    const { queryByTestId } = renderWithWrapper(
+      <Icon name="wifi" testID="wifiIcon" />
+    );
+    expect(queryByTestId('wifiIcon')).toBeTruthy();
+  });
 });
