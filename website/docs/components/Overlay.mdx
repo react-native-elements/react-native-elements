@@ -1,19 +1,14 @@
 ---
 id: overlay
-
 title: Overlay
 ---
 
-import Usage from "./usage/Overlay.mdx";
-
-import { Overlay } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/Overlay.mdx";
 
 The Overlay is a view that floats above an app’s content.
-
 Overlays are an easy way to inform or request information from the user.
 
 ## Usage
@@ -22,117 +17,23 @@ Overlays are an easy way to inform or request information from the user.
 
 ## Props
 
-### Overlay
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
 
-- [ModalComponent](#modalcomponent)
-- [backdropStyle](#backdropstyle)
-- [fullScreen](#fullscreen)
-- [isVisible](#isvisible)
-- [onBackdropPress](#onbackdroppress)
-- [onLongPress](#onlongpress)
-- [onPressIn](#onpressin)
-- [onPressOut](#onpressout)
-- [overlayStyle](#overlaystyle)
-- [pressableProps](#pressableprops)
+<div class='table-responsive'>
 
-## Reference
+| Name              | Type                                 | Default    | Description                                                                |
+| ----------------- | ------------------------------------ | ---------- | -------------------------------------------------------------------------- |
+| `ModalComponent`  | typeof Component                     |            | Override React Native `Modal` component (usable for web-platform).         |
+| `backdropStyle`   | View Style                           |            | Style of the backdrop container.                                           |
+| `fullScreen`      | boolean                              | `false`    | If set to true, the modal will take up the entire screen width and height. |
+| `isVisible`       | boolean                              |            | If true, the overlay is visible.                                           |
+| `onBackdropPress` | Function                             | `Function` | Handler for backdrop press (only works when `fullscreen` is false).        |
+| `onLongPress`     | GestureResponderEventHandler         |            | Called when a long-tap gesture is detected.                                |
+| `onPressIn`       | GestureResponderEventHandler         |            | Called when a touch is engaged before `onPress`.                           |
+| `onPressOut`      | GestureResponderEventHandler         |            | Called when a touch is released before `onPress`.                          |
+| `overlayStyle`    | View Style                           |            | Style of the actual overlay.                                               |
+| `pressableProps`  | PressableProps except click handlers | `None`     |                                                                            |
 
-### Overlay
-
-#### ModalComponent
-
-Override React Native `Modal` component (usable for web-platform).
-
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
-
----
-
-#### backdropStyle
-
-Style of the backdrop container.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### fullScreen
-
-If set to true, the modal will take up the entire screen width and height.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### isVisible
-
-If true, the overlay is visible.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | None    |
-
----
-
-#### onBackdropPress
-
-Handler for backdrop press (only works when `fullscreen` is false).
-
-| Type     | Default  |
-| -------- | -------- |
-| Function | Function |
-
----
-
-#### onLongPress
-
-Called when a long-tap gesture is detected.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### onPressIn
-
-Called when a touch is engaged before `onPress`.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### onPressOut
-
-Called when a touch is released before `onPress`.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### overlayStyle
-
-Style of the actual overlay.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### pressableProps
-
-| Type                                 | Default |
-| ------------------------------------ | ------- |
-| PressableProps except click handlers | None    |
-
----
+</div>

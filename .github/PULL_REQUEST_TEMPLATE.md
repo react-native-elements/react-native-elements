@@ -4,7 +4,6 @@
 
 Fixes # (issue)
 
-
 ## Type of change
 
 <!-- Please delete options that are not relevant. -->
@@ -21,7 +20,6 @@ Fixes # (issue)
 - [ ] Jest Unit Test
 - [ ] Checked with `example` app
 
-
 ## Checklist
 
 - [ ] My code follows the style guidelines of this project
@@ -36,4 +34,3 @@ Fixes # (issue)
 ## Additional context
 
 <!-- Add any other context or screenshots about the feature request here. -->
-

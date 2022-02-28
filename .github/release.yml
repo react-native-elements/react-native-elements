@@ -7,26 +7,18 @@ changelog:
     authors:
       - dependabot
   categories:
-    - title: Breaking Changes 🛠
+    - title: ":boom: Breaking Change"
       labels:
-        - breaking change
-    - title: New Features 🎉
+        - "PR: Breaking Change :boom:"
+    - title: ":rocket: New Feature"
       labels:
-        - "PR: feature"
-        - ":sparkles: Enhancement"
-        - ":bulbNew: Component"
-    - title: Bug fixes 🐛
+        - "PR: New Feature :tada:"
+    - title: ":bug: Bug Fix"
       labels:
-        - "PR: fix"
-        - ":bug: Bug"
-    - title: Docs 📖
+        - "PR: Bug Fix :bug:"
+    - title: ":memo: Documentation"
       labels:
-        - ":book: Docs"
-        - "PR: docs"
-    - title: Cleanup ♻️
-      labels:
-        - "PR: chore"
-        - "PR: refactor"
+        - "PR: Docs :memo:"
     - title: Other Changes
       labels:
         - "*"

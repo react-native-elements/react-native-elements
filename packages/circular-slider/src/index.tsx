@@ -90,21 +90,25 @@ export type CircularSliderProps = {
     };
   } & any;
 };
+
 /**
  * A slider with circular track and thumb
  *
- * @installation @react-native-elements/circular-slider
+ * @installation circular-slider
  * @usage
+ * ```jsx
  * import { CircularSlider } from '@react-native-elements/circular-slider';
- * <CircularSlider value={value} onChange={setValue} />;
+ * ```
+ * ```jsx
+ * <CircularSlider value={value} onChange={setValue} />
  *
- * <CircularSlider value={value} noThumb />;
+ * <CircularSlider value={value} noThumb />
  *
- * // 90 deg Arc
- * <CircularSlider maxAngle={90} />;
+ * <CircularSlider maxAngle={90} />
+ * ```
  * Either use percentage (0 to 100) in value or specify maximumValue & minimumValue
  */
-const CircularSlider: React.FC<CircularSliderProps> = ({
+export const CircularSlider: React.FC<CircularSliderProps> = ({
   thumbRadius = 12,
   trackRadius = 100,
   trackWidth = 5,
@@ -269,4 +273,4 @@ const CircularSlider: React.FC<CircularSliderProps> = ({
   );
 };
 
-export default CircularSlider;
+CircularSlider.displayName = 'CircularSlider';

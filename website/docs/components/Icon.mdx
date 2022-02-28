@@ -1,19 +1,14 @@
 ---
 id: icon
-
 title: Icon
 ---
 
-import Usage from "./usage/Icon.mdx";
-
-import { Icon } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/Icon.mdx";
 
 Icons are visual indicators usually used to describe action or intent.
-
 They are also used for displaying information.
 
 ## Usage
@@ -22,272 +17,29 @@ They are also used for displaying information.
 
 ## Props
 
-### Icon
-
-- [Component](#component)
-- [backgroundColor](#backgroundcolor)
-- [borderRadius](#borderradius)
-- [brand](#brand)
-- [color](#color)
-- [containerStyle](#containerstyle)
-- [disabled](#disabled)
-- [disabledStyle](#disabledstyle)
-- [iconProps](#iconprops)
-- [iconStyle](#iconstyle)
-- [name](#name)
-- [onLongPress](#onlongpress)
-- [onPress](#onpress)
-- [onPressIn](#onpressin)
-- [onPressOut](#onpressout)
-- [pressableProps](#pressableprops)
-- [raised](#raised)
-- [reverse](#reverse)
-- [reverseColor](#reversecolor)
-- [size](#size)
-- [solid](#solid)
-- [style](#style)
-- [type](#type)
-
-## Reference
-
-### Icon
-
-#### Component
-
-Update React Native Component.
-
-| Type            | Default                                           |
-| --------------- | ------------------------------------------------- |
-| React Component | `Press handlers present then Pressable else View` |
-
----
-
-#### backgroundColor
-
-Background color of the button
-
-| Type                 | Default   |
-| -------------------- | --------- |
-| number or ColorValue | '#007AFF' |
-
----
-
-#### borderRadius
-
-Border radius of the button
-
-Set to 0 to disable.
-
-| Type   | Default |
-| ------ | ------- |
-| number | 5       |
-
----
-
-#### brand
-
-Uses the brands font (FontAwesome5 only).
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### color
-
-Text and icon color
-
-Use iconStyle or nest a Text component if you need different colors.
-
-| Type                 | Default |
-| -------------------- | ------- |
-| number or ColorValue | 'white' |
-
----
-
-#### containerStyle
-
-Add styling to container holding icon.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### disabled
-
-Disables onPress events. Only works when `onPress` has a handler.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### disabledStyle
-
-Style for the button when disabled. Only works when `onPress` has a handler.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### iconProps
-
-Provide all props from react-native Icon component.
-
-| Type      | Default |
-| --------- | ------- |
-| IconProps | None    |
-
----
-
-#### iconStyle
-
-Styles applied to the icon only
-
-Good for setting margins or a different color.
-
-| Type      | Default           |
-| --------- | ----------------- |
-| TextStyle | {marginRight: 10} |
-
----
-
-#### name
-
-Name of the icon to show
-
-See Icon Explorer app
-
-{@link https ://github.com/oblador/react-native-vector-icons/tree/master/Examples/IconExplorer}
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### onLongPress
-
-Called when a long-tap gesture is detected.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### onPress
-
-Called when a single tap gesture is detected.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### onPressIn
-
-Called when a touch is engaged before `onPress`.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### onPressOut
-
-Called when a touch is released before `onPress`.
-
-| Type                         | Default |
-| ---------------------------- | ------- |
-| GestureResponderEventHandler | None    |
-
----
-
-#### pressableProps
-
-| Type                                 | Default |
-| ------------------------------------ | ------- |
-| PressableProps except click handlers | None    |
-
----
-
-#### raised
-
-Adds box shadow to button.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### reverse
-
-Reverses color scheme.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### reverseColor
-
-Specify reverse icon color.
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### size
-
-Size of the icon, can also be passed as fontSize in the style object.
-
-| Type   | Default |
-| ------ | ------- |
-| number | 12      |
-
----
-
-#### solid
-
-Uses the solid font.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### style
-
-Style prop inherited from TextProps and TouchableWithoutFeedbackProperties
-
-Only exist here so we can have ViewStyle or TextStyle
-
-| Type                   | Default |
-| ---------------------- | ------- |
-| ViewStyle or TextStyle | None    |
-
----
-
-#### type
-
-Type of icon set. [Supported sets here](#available-icon-sets).
-
-| Type   | Default  |
-| ------ | -------- |
-| string | material |
-
----
+:::note
+Includes all [Text](https://reactnative.dev/docs/text#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name             | Type                                 | Default                                           | Description                                                                  |
+| ---------------- | ------------------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `Component`      | React Component                      | `Press handlers present then Pressable else View` | Update React Native Component.                                               |
+| `brand`          | boolean                              | `false`                                           | Uses the brands font (FontAwesome5 only).                                    |
+| `containerStyle` | View Style                           |                                                   | Add styling to container holding icon.                                       |
+| `disabled`       | boolean                              | `false`                                           | Disables onPress events. Only works when `onPress` has a handler.            |
+| `disabledStyle`  | View Style                           |                                                   | Style for the button when disabled. Only works when `onPress` has a handler. |
+| `iconProps`      | IconProps                            |                                                   | Provide all props from react-native Icon component.                          |
+| `onLongPress`    | GestureResponderEventHandler         |                                                   | Called when a long-tap gesture is detected.                                  |
+| `onPress`        | GestureResponderEventHandler         |                                                   | Called when a single tap gesture is detected.                                |
+| `onPressIn`      | GestureResponderEventHandler         |                                                   | Called when a touch is engaged before `onPress`.                             |
+| `onPressOut`     | GestureResponderEventHandler         |                                                   | Called when a touch is released before `onPress`.                            |
+| `pressableProps` | PressableProps except click handlers | `None`                                            |                                                                              |
+| `raised`         | boolean                              | `false`                                           | Adds box shadow to button.                                                   |
+| `reverse`        | boolean                              | `false`                                           | Reverses color scheme.                                                       |
+| `reverseColor`   | string                               |                                                   | Specify reverse icon color.                                                  |
+| `solid`          | boolean                              | `false`                                           | Uses the solid font.                                                         |
+| `type`           | string                               | `material`                                        | Type of icon set. [Supported sets here](#available-icon-sets).               |
+
+</div>

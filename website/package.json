@@ -50,9 +50,6 @@
     "babel-loader": "^8.2.3",
     "fast-glob": "^3.2.7",
     "jest": "^27.4.5",
-    "json2md": "^1.12.0",
-    "react-docgen-typescript": "^2.2.2",
-    "ts-node": "^10.4.0",
     "typescript": "^4.3.5"
   }
 }

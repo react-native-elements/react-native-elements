@@ -1,19 +1,14 @@
 ---
 id: chip
-
 title: Chip
 ---
 
-import Usage from "./usage/Chip.mdx";
-
-import { Chip } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/Chip.mdx";
 
 Chips are compact elements that represent an input, attribute, or action.
-
 They may display text, icons, or both.
 
 ## Usage
@@ -22,20 +17,14 @@ They may display text, icons, or both.
 
 ## Props
 
-### Chip
+:::note
+Includes all [Button](/docs/documentation/button#props) props.
+:::
 
-- [type](#type)
+<div class='table-responsive'>
 
-## Reference
+| Name   | Type                 | Default | Description     |
+| ------ | -------------------- | ------- | --------------- |
+| `type` | `solid` or `outline` |         | Type of button. |
 
-### Chip
-
-#### type
-
-Type of button.
-
-| Type                 | Default |
-| -------------------- | ------- |
-| "solid" or "outline" | None    |
-
----
+</div>

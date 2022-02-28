@@ -93,20 +93,7 @@ export interface AvatarProps extends InlinePressableProps {
 /**
  * Avatars are found all over ui design from lists to profile screens.
  * They are commonly used to represent a user and can contain photos, icons, or even text.
- * %live <Avatar size="medium" rounded  containerStyle={{ backgroundColor: '#6733b9' }} title="R" />
- * @tabName Variants
- * @tabLabel ['Basic','Title','Icon']
- * @tabItem
- * <Avatar size="medium" rounded source={{ uri: 'https://randomuser.me/api/portraits/' }} />
- * <Avatar size="medium" rounded source={{ uri: 'https://randomuser.me/api/portraits/' }} title="R" />
- * <Avatar size="medium" rounded source={{ uri: 'https://randomuser.me/api/portraits/' }} icon={{ name: 'home' }} />
- * @usage
- * ### Avatar with title and icon
- * %live <Avatar size="medium" rounded source={{ uri: 'https://randomuser.me/api/portraits/' }} title="R" />
- * ### Avatar with icon
- * %live <Avatar size="medium" rounded source={{ uri: 'https://randomuser.me/api/portraits/' }} icon={{ name: 'home' }} />
- * ### Avatar with image
- * %live <Avatar size="medium" rounded source={{ uri: 'https://randomuser.me/api/portraits/' }} />
+ * @imports Avatar
  * */
 export const Avatar: RneFunctionComponent<AvatarProps> = ({
   onPress,

@@ -1,28 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap');
-* {
-  font-family: 'DM Sans', sans-serif !important;
-  scrollbar-width: 8px;
-  scrollbar-color: var(--ifm-hero-background-color);
-}
-pre,
-code {
-  font-family: 'DM Mono', sans-serif !important;
-}
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--ifm-hero-background-color); /* color of the tracking area */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgb(100, 100, 100); /* color of the scroll thumb */
-  border-radius: 1px; /* roundness of the scroll thumb */
-  /* border: 1px solid #000066;  */ /* creates padding around scroll thumb */
-}
 
 :root {
+  --ifm-scrollbar-size: 5px;
+  --ifm-scrollbar-track-background-color: #444444;
+  --ifm-scrollbar-thumb-background-color: #686868;
+  --ifm-scrollbar-thumb-hover-background-color: #7a7a7a;
+  --ifm-font-family-base: 'DM Sans', sans-serif;
+  --ifm-font-family-monospace: 'DM mono';
   --ifm-color-primary: #2089dc;
   --ifm-color-primary-dark: #1d7bc6;
   --ifm-color-primary-darker: #1b74bb;

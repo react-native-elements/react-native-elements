@@ -1,19 +1,14 @@
 ---
 id: bottomsheet
-
 title: BottomSheet
 ---
 
-import Usage from "./usage/BottomSheet.mdx";
-
-import { BottomSheet } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/BottomSheet.mdx";
 
 Overlay Modal that displays content from the bottom of the screen.
-
 This opens from the bottom of the screen.
 
 ## Usage
@@ -22,75 +17,15 @@ This opens from the bottom of the screen.
 
 ## Props
 
-### BottomSheet
+<div class='table-responsive'>
 
-- [backdropStyle](#backdropstyle)
-- [containerStyle](#containerstyle)
-- [isVisible](#isvisible)
-- [modalProps](#modalprops)
-- [onBackdropPress](#onbackdroppress)
-- [scrollViewProps](#scrollviewprops)
+| Name              | Type            | Default    | Description                                                                          |
+| ----------------- | --------------- | ---------- | ------------------------------------------------------------------------------------ |
+| `backdropStyle`   | View Style      |            | Style of the backdrop container.                                                     |
+| `containerStyle`  | View Style      |            | Style of the bottom sheet's container. Use this to change the color of the underlay. |
+| `isVisible`       | boolean         | `false`    | Is the modal component shown.                                                        |
+| `modalProps`      | ModalProps      | `{}`       | Additional props handed to the `Modal`.                                              |
+| `onBackdropPress` | Function        | `Function` | Handler for backdrop press.                                                          |
+| `scrollViewProps` | ScrollViewProps | `{}`       | Used to add props to Scroll view.                                                    |
 
-## Reference
-
-### BottomSheet
-
-#### backdropStyle
-
-Style of the backdrop container.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### containerStyle
-
-Style of the bottom sheet's container. Use this to change the color of the underlay.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### isVisible
-
-Is the modal component shown.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### modalProps
-
-Additional props handed to the `Modal`.
-
-| Type       | Default |
-| ---------- | ------- |
-| ModalProps | {}      |
-
----
-
-#### onBackdropPress
-
-Handler for backdrop press.
-
-| Type     | Default  |
-| -------- | -------- |
-| Function | Function |
-
----
-
-#### scrollViewProps
-
-Used to add props to Scroll view.
-
-| Type            | Default |
-| --------------- | ------- |
-| ScrollViewProps | {}      |
-
----
+</div>
