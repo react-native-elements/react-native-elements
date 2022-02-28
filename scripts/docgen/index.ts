@@ -1,6 +1,7 @@
 import glob from 'fast-glob';
 import path from 'path';
 import { Markdown } from './generateMarkdown';
+import { separateParent } from './parentProps';
 import { docgenParser } from './docgenParser';
 import yargs from 'yargs';
 
@@ -30,6 +31,8 @@ function main(sourcePath: string) {
   console.log('Found', filePaths.length, 'components');
 
   const componentDocs = docgenParser.parse(filePaths);
+
+  Markdown.parents = separateParent(componentDocs);
 
   componentDocs.forEach((componentDoc) => {
     new Markdown(componentDoc).save();

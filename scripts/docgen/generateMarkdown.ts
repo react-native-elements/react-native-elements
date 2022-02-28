@@ -18,21 +18,10 @@ import {
   StringIndexedObject,
 } from 'react-docgen-typescript/lib/parser';
 
-const ALLOWED_INCLUDES = {
-  TextProps: '[TextProps](https://reactnative.dev/docs/text#props)',
-  ViewProps: '[ViewProps](https://reactnative.dev/docs/view#props)',
-  ImageProps:
-    '[React Native ImageProps](https://reactnative.dev/docs/image#props)',
-  TouchableOpacityProps:
-    '[TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props)',
-  TextInputProps:
-    '[React Native TextInputProps](https://reactnative.dev/docs/textinput#props)',
-};
-
 const pkgPath = path.join(__dirname, '../../packages');
 const docsPath = path.join(__dirname, '../../website/docs');
 
-const mustAddProps = ['InlinePressableProps'];
+const mustAddPropType = ['InlinePressableProps'];
 
 export class Markdown implements ComponentDoc {
   description: string;
@@ -42,6 +31,7 @@ export class Markdown implements ComponentDoc {
   tags?: StringIndexedObject<string>;
   methods: Method[];
   static packageName: string;
+  static parents: Record<string, string[]>;
 
   constructor(component: ComponentDoc) {
     this.displayName = component.displayName;
@@ -121,32 +111,18 @@ ${tabify(snippetToCode(usage)).trim()}
       return '';
     }
 
-    const includes = new Set<string>();
     const rows = [];
 
-    for (const {
-      name,
-      type,
-      description,
-      defaultValue,
-      parent,
-    } of orderedProps) {
+    for (const props of orderedProps) {
+      const { name, type, description, defaultValue, parent } = props;
       if (parent) {
         const { name: parentName, fileName: parentFileName } = parent;
-        if (!mustAddProps.includes(parentName)) {
-          if (parentFileName.includes('node_modules')) {
-            if (ALLOWED_INCLUDES[parentName]) {
-              includes.add(ALLOWED_INCLUDES[parentName]);
-            }
-            continue;
-          } else if (
-            parentFileName.includes('base/src') &&
-            !this.filePath.includes(parentFileName)
+        if (!mustAddPropType.includes(parentName)) {
+          if (
+            parentFileName.includes('node_modules') ||
+            (parentFileName.includes('base/src') &&
+              !this.filePath.includes(parentFileName))
           ) {
-            const parentID = parentName.toLowerCase().replace('props', '');
-            includes.add(
-              `[${parentName}](/docs/documentation/${parentID}#props)`
-            );
             continue;
           }
         }
@@ -169,9 +145,11 @@ ${tabify(snippetToCode(usage)).trim()}
       ## Props
   
       ${isTrue(
-        includes.size,
+        Markdown.parents[this.displayName].length,
         `:::note
-        Includes all props from ${[...includes].sort().join(', ')}
+        Includes all ${Markdown.parents[this.displayName]
+          .sort()
+          .join(', ')} props.
         :::`
       )}
 

@@ -89,5 +89,9 @@
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
     }
+  },
+  "dependencies": {
+    "@types/lodash.difference": "^4.5.6",
+    "lodash.difference": "^4.5.0"
   }
 }
