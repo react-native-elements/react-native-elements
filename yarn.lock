@@ -3891,15 +3891,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash.difference@npm:^4.5.6":
-  version: 4.5.6
-  resolution: "@types/lodash.difference@npm:4.5.6"
-  dependencies:
-    "@types/lodash": "*"
-  checksum: 21ac03470b408ee04b97922f475cfbbc30f248c726274494d9484a92d7aa73034752f00daeaeb2651d41feb0e90bc88824d12c5b60f3be9d29fb3d81bf40905c
-  languageName: node
-  linkType: hard
-
 "@types/lodash.orderby@npm:^4.6.6":
   version: 4.6.6
   resolution: "@types/lodash.orderby@npm:4.6.6"
@@ -12162,13 +12153,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.difference@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "lodash.difference@npm:4.5.0"
-  checksum: ecee276aa578f300e79350805a14a51be8d1f12b3c1389a19996d8ab516f814211a5f65c68331571ecdad96522b863ccc484b55504ce8c9947212a29f8857d5a
-  languageName: node
-  linkType: hard
-
 "lodash.frompairs@npm:^4.0.1":
   version: 4.0.1
   resolution: "lodash.frompairs@npm:4.0.1"
@@ -16565,7 +16549,6 @@ __metadata:
     "@testing-library/react-native": ^7.0.2
     "@types/dedent": ^0.7.0
     "@types/jest": ^27.4.0
-    "@types/lodash.difference": ^4.5.6
     "@types/lodash.orderby": ^4.6.6
     "@types/react-native": "*"
     "@types/react-test-renderer": ^17.0.1
@@ -16578,7 +16561,6 @@ __metadata:
     jest-transform-stub: ^2.0.0
     lerna: ^4.0.0
     lint-staged: ^12.1.7
-    lodash.difference: ^4.5.0
     lodash.orderby: ^4.6.0
     prettier: ^2.5.1
     react: ^17.0.2
