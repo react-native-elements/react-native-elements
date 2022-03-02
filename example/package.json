@@ -15,8 +15,7 @@
     "build:web": "expo build:web --config ./app.web-build.json --polyfill",
     "deploy": "gh-pages -d web-build",
     "prettify": "prettier --write .  --config ./.prettierrc",
-    "lint": "eslint --ext js,ts,tsx .",
-    "clean-install": "rm -rf node_modules && npm cache clean --force && watchman watch-del-all && yarn"
+    "lint": "eslint --ext js,ts,tsx ."
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.5",

@@ -5,7 +5,7 @@ import { ListItemContent } from './ListItem.Content';
 import { Icon, IconNode, IconProps } from '../Icon';
 import { RneFunctionComponent } from '../helpers';
 
-export type ListItemAccordionProps = ListItemBaseProps & {
+export interface ListItemAccordionProps extends ListItemBaseProps {
   /** Decide if Accordion is Expanded. */
   isExpanded?: boolean;
 
@@ -33,7 +33,7 @@ export type ListItemAccordionProps = ListItemBaseProps & {
         duration?: number;
       }
     | boolean;
-};
+}
 
 /** This allows making a accordion list which can show/hide content. */
 export const ListItemAccordion: RneFunctionComponent<
@@ -58,7 +58,7 @@ export const ListItemAccordion: RneFunctionComponent<
     if (typeof animation !== 'boolean') {
       Animated[animation.type || 'timing'](transition, {
         toValue: Number(isExpanded),
-        useNativeDriver: false,
+        useNativeDriver: true,
         duration: animation.duration || 350,
       }).start();
     }
@@ -80,45 +80,39 @@ export const ListItemAccordion: RneFunctionComponent<
     <>
       <ListItemBase {...rest}>
         {React.isValidElement(content) ? content : <ListItemContent />}
-        {!noIcon && (
-          <Animated.View
-            testID="RNE__ListItem__Accordion__Icon"
-            style={{
-              transform: [
-                {
-                  rotate,
-                },
-              ],
-            }}
-          >
-            {icon ? (
-              <Icon
-                {...((expandIcon
-                  ? isExpanded
-                    ? expandIcon
-                    : icon
-                  : icon) as IconProps)}
-              />
-            ) : (
+        {!noIcon &&
+          (icon ? (
+            React.createElement(
+              Icon,
+              (isExpanded ? expandIcon : icon) as IconProps
+            )
+          ) : (
+            <Animated.View
+              testID="RNE__ListItem__Accordion__Icon"
+              style={{
+                transform: [
+                  {
+                    rotate,
+                  },
+                ],
+              }}
+            >
               <Icon name={'chevron-down'} type="material-community" />
-            )}
-          </Animated.View>
-        )}
+            </Animated.View>
+          ))}
       </ListItemBase>
-      <Animated.View
-        testID="RNE__ListItem__Accordion__Children"
-        style={[
-          Boolean(animation) && {
-            maxHeight: transition.interpolate({
-              inputRange: [0, 1],
-              outputRange: ['0%', '100%'],
-            }),
-            opacity: transition,
-          },
-        ]}
-      >
-        {children}
-      </Animated.View>
+      {isExpanded && (
+        <Animated.View
+          testID="RNE__ListItem__Accordion__Children"
+          style={[
+            {
+              opacity: transition,
+            },
+          ]}
+        >
+          {children}
+        </Animated.View>
+      )}
     </>
   );
 };

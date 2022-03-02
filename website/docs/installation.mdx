@@ -7,12 +7,11 @@ sidebar_label: Installation
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { SiExpo, SiReact } from 'react-icons/si';
 
 ## Installation
 
 <Tabs
-groupId='component'
-defaultValue="stable"
 values={[
 { label: 'Stable', value: 'stable', },
 { label: 'Bleeding Edge', value: 'edge', },
@@ -36,19 +35,13 @@ yarn add @react-native-elements/themed @react-native-elements/base
 Using npm
 
 ```bash
-# base
-npm install react-native-elements/react-native-elements#base
-# themed
-npm install react-native-elements/react-native-elements#themed
+npm install react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
 ```
 
 Using yarn
 
 ```bash
-# base
-yarn add react-native-elements/react-native-elements#base
-# themed
-yarn add react-native-elements/react-native-elements#themed
+yarn add react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
@@ -248,7 +241,7 @@ module.exports = override(
 Also you should keep in mind that not all of React Native components are implemented for web-platform out-of-box.
 For example, `Modal` component is not yet implemented in `react-native-web`. Therefore, to use some of our components
 you may need to install additional third-party libraries that implement the missing functionality.
-For [`Overlay`](/main/Overlay.mdx) and [`Tooltip`](/main/Tooltip.mdx) components `Modal` implementation is required.
+For [`Overlay`](components/Overlay.mdx) and [`Tooltip`](components/Tooltip.mdx) components `Modal` implementation is required.
 
 Lastly, change your scripts in `package.json` to use react-app-rewired:
 

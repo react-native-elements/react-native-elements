@@ -36,9 +36,9 @@ function generateComponentsDescriptions(input) {
 json2md.converters.components = function (input) {
   if (input.childrens) {
     let markdown = json2md({ h2: 'Components' });
-    markdown += json2md({
+    markdown += json2md([{
       ul: generateComponentsDescriptions(input.childrens),
-    });
+    }]);
     return markdown;
   } else {
     return '';
@@ -49,7 +49,7 @@ json2md.converters.imports = function (input) {
   return input.component
     ? json2md([
         {
-          p: `import Usage from './usage/${input.component}/${input.component}.mdx'`,
+          p: `import Usage from './usage/${input.component}.mdx'`,
         },
         {
           p: `import { ${input.component} } from 'react-native-elements'`,

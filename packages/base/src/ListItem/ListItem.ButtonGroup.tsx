@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { ButtonGroupProps, ButtonGroup } from '../ButtonGroup';
 import { RneFunctionComponent } from '../helpers';
 
-export type ListItemButtonGroupProps = ButtonGroupProps;
+export interface ListItemButtonGroupProps extends ButtonGroupProps {}
 
 /** This allows adding ButtonGroup to the ListItem.
  * This, Receives all [ButtonGroup](buttongroup#props) props. */

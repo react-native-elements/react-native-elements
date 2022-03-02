@@ -1,4 +1,10 @@
-import { Platform, Dimensions, PressableProps, ColorValue } from 'react-native';
+import {
+  Platform,
+  Dimensions,
+  PressableProps,
+  ColorValue,
+  GestureResponderEvent,
+} from 'react-native';
 import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
@@ -45,6 +51,41 @@ export const patchWebProps = <T extends Record<any, any>>({
   return rest;
 };
 
+export interface InlinePressableProps {
+  /**
+   * Called when a single tap gesture is detected.
+   * @type GestureResponderEventHandler
+   */
+  onPress?: (event: GestureResponderEvent) => void;
+
+  /**
+   * Called when a touch is engaged before `onPress`.
+   * @type GestureResponderEventHandler
+   */
+  onPressIn?: (event: GestureResponderEvent) => void;
+
+  /**
+   * Called when a touch is released before `onPress`.
+   * @type GestureResponderEventHandler
+   */
+  onPressOut?: (event: GestureResponderEvent) => void;
+
+  /**
+   * Called when a long-tap gesture is detected.
+   * @type GestureResponderEventHandler
+   */
+  onLongPress?: (event: GestureResponderEvent) => void;
+
+  /**
+   * @default None
+   * @type PressableProps except click handlers
+   */
+  pressableProps?: Omit<
+    PressableProps,
+    'onPress' | 'onLongPress' | 'onPressIn' | 'onPressOut'
+  >;
+}
+
 export {
   renderNode,
   getIconType,
@@ -55,18 +96,3 @@ export {
   colors,
   color,
 };
-
-type Inline<T, K extends keyof T> = Partial<
-  {
-    /**
-     * @default None
-     * @type PressableProps except click handlers
-     */
-    pressableProps: Omit<T, K>;
-  } & Pick<T, K>
->;
-
-export type InlinePressableProps = Inline<
-  PressableProps,
-  'onPress' | 'onLongPress' | 'onPressIn' | 'onPressOut'
->;

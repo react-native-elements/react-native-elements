@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { DividerProps, Divider } from '../Divider';
 import { RneFunctionComponent } from '../helpers';
 
-export type CardDividerProps = DividerProps;
+export interface CardDividerProps extends DividerProps {}
 
 /** Add divider to the card which acts as a separator between elements.
  * This, Receives all [Divider](divider#props) props. */

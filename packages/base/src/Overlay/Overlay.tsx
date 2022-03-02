@@ -12,7 +12,9 @@ import {
 import Color from 'color';
 import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
-export type OverlayProps = Omit<ModalProps, 'visible'> & {
+export interface OverlayProps
+  extends Omit<ModalProps, 'visible'>,
+    Omit<InlinePressableProps, 'onPress'> {
   /** If true, the overlay is visible. */
   isVisible: boolean;
 
@@ -30,7 +32,7 @@ export type OverlayProps = Omit<ModalProps, 'visible'> & {
 
   /** Override React Native `Modal` component (usable for web-platform). */
   ModalComponent?: typeof React.Component;
-} & Omit<InlinePressableProps, 'onPress'>; // used as onBackdropPress
+}
 
 /** The Overlay is a view that floats above an app’s content.
  * Overlays are an easy way to inform or request information from the user. */

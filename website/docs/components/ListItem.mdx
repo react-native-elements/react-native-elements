@@ -4,7 +4,7 @@ id: listitem
 title: ListItem
 ---
 
-import Usage from "./usage/ListItem/ListItem.mdx";
+import Usage from "./usage/ListItem.mdx";
 
 import { ListItem } from "react-native-elements";
 
@@ -74,6 +74,9 @@ They are very customizable and can contain switches, avatars, badges, icons, and
 
 ### ListItem.ButtonGroup
 
+- [onLongPress](#onlongpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 
 ### ListItem.CheckBox
@@ -82,6 +85,10 @@ None
 
 ### ListItem.Chevron
 
+- [onLongPress](#onlongpress)
+- [onPress](#onpress)
+- [onPressIn](#onpressin)
+- [onPressOut](#onpressout)
 - [pressableProps](#pressableprops)
 
 ### ListItem.Content
@@ -101,8 +108,8 @@ None
 - [leftContent](#leftcontent)
 - [leftStyle](#leftstyle)
 - [leftWidth](#leftwidth)
-- [onLeftSwipe](#onleftswipe)
-- [onRightSwipe](#onrightswipe)
+- [onSwipeBegin](#onswipebegin)
+- [onSwipeEnd](#onswipeend)
 - [rightContent](#rightcontent)
 - [rightStyle](#rightstyle)
 - [rightWidth](#rightwidth)
@@ -146,10 +153,6 @@ Add divider at the bottom of the list item.
 ---
 
 #### children
-
-Either children or a render prop that receives a boolean reflecting whether
-
-the component is currently pressed.
 
 Add enclosed children.
 
@@ -283,6 +286,36 @@ Don't rotate when Accordion is expanded.
 
 ### ListItem.ButtonGroup
 
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
 #### pressableProps
 
 | Type                                 | Default |
@@ -296,6 +329,46 @@ Don't rotate when Accordion is expanded.
 None
 
 ### ListItem.Chevron
+
+#### onLongPress
+
+Called when a long-tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPress
+
+Called when a single tap gesture is detected.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressIn
+
+Called when a touch is engaged before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
+
+#### onPressOut
+
+Called when a touch is released before `onPress`.
+
+| Type                         | Default |
+| ---------------------------- | ------- |
+| GestureResponderEventHandler | None    |
+
+---
 
 #### pressableProps
 
@@ -335,9 +408,9 @@ None
 
 Left Content.
 
-| Type            | Default |
-| --------------- | ------- |
-| React.ReactNode | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
@@ -345,9 +418,9 @@ Left Content.
 
 Style of left container.
 
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
@@ -361,19 +434,19 @@ Width to swipe left.
 
 ---
 
-#### onLeftSwipe
+#### onSwipeBegin
 
-Function to call when user swipes left.
+Handler for swipe in either direction
 
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
+| Type                                  | Default |
+| ------------------------------------- | ------- |
+| (direction: "left" or "right") => any | None    |
 
 ---
 
-#### onRightSwipe
+#### onSwipeEnd
 
-Function to call when user swipes right.
+Handler for swipe end.
 
 | Type     | Default |
 | -------- | ------- |
@@ -385,9 +458,9 @@ Function to call when user swipes right.
 
 Right Content.
 
-| Type            | Default |
-| --------------- | ------- |
-| React.ReactNode | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 
@@ -395,9 +468,9 @@ Right Content.
 
 Style of right container.
 
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
+| Type                                    | Default |
+| --------------------------------------- | ------- |
+| ReactNode or resetCallback => ReactNode | None    |
 
 ---
 

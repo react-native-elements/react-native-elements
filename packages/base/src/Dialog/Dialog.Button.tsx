@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { ButtonProps, Button } from '../Button';
 import { RneFunctionComponent } from '../helpers';
 
-export type DialogButtonProps = ButtonProps;
+export interface DialogButtonProps extends ButtonProps {}
 
 /** This is used to add a button to the Dialog.
  * Receives all [Button](button#props) props. */

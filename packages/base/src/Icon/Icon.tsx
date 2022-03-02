@@ -38,7 +38,7 @@ export type IconType =
   | 'font-awesome-5'
   | string;
 
-export type IconObject = {
+export interface IconObject {
   /** Name of icon. */
   name?: string;
 
@@ -53,11 +53,11 @@ export type IconObject = {
 
   /** Apply style to the icon using iconStyle. */
   iconStyle?: StyleProp<TextStyle>;
-};
+}
 
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
-export type IconProps = IconButtonProps & {
+export interface IconProps extends InlinePressableProps, IconButtonProps {
   /** Type of icon set. [Supported sets here](#available-icon-sets). */
   type?: IconType;
 
@@ -92,7 +92,7 @@ export type IconProps = IconButtonProps & {
 
   /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
-} & InlinePressableProps;
+}
 
 /** Icons are visual indicators usually used to describe action or intent.
  * They are also used for displaying information. */
