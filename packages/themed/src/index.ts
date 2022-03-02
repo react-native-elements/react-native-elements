@@ -61,6 +61,8 @@ import {
   FullTheme,
   Theme,
   ThemeProps,
+  ThemeMode,
+  ComponentTheme,
 } from './config';
 import { ThemeOptions, createTheme } from './config/ThemeProvider';
 
@@ -170,4 +172,6 @@ export type {
   ThemeProps,
   UpdateTheme,
   ThemeOptions,
+  ComponentTheme,
+  ThemeMode,
 };

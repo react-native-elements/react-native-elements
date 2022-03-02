@@ -36,7 +36,7 @@ export interface Colors {
   };
 }
 
-export const colors: Colors = {
+export const lightColors: Colors = {
   primary: '#2089dc',
   secondary: '#ca71eb',
   white: '#ffffff',

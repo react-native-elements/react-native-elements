@@ -1,21 +1,21 @@
 import BackgroundImage from './BackgroundImage';
-import { Colors, colors, darkColors as colorsDark } from './colors';
+import { Colors, lightColors, darkColors as colorsDark } from './colors';
 import fonts from './fonts';
 import {
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
-  ThemeProps,
+  ThemeProviderProps,
   UpdateTheme,
   ReplaceTheme,
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles, useTheme } from './makeStyles';
-import { Theme, FullTheme } from './theme';
+import { Theme, ComponentTheme, FullTheme, ThemeMode } from './theme';
 
 export {
   BackgroundImage,
-  colors,
+  lightColors as colors,
   colorsDark,
   fonts,
   ThemeProvider,
@@ -26,4 +26,13 @@ export {
   makeStyles,
 };
 
-export type { Theme, FullTheme, UpdateTheme, ReplaceTheme, ThemeProps, Colors };
+export type {
+  Theme,
+  ComponentTheme,
+  FullTheme,
+  UpdateTheme,
+  ReplaceTheme,
+  ThemeProviderProps as ThemeProps,
+  Colors,
+  ThemeMode,
+};

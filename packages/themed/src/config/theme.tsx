@@ -39,8 +39,24 @@ import { Colors } from './colors';
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
-export interface FullTheme {
-  colors: RecursivePartial<Colors>;
+export interface FullTheme extends ComponentTheme, ThemeColor {}
+
+export interface ThemeColor {
+  colors?: RecursivePartial<Colors>;
+  mode?: ThemeMode;
+}
+
+export interface ThemeModeColor {
+  mode?: ThemeMode;
+  lightColors?: RecursivePartial<Colors>;
+  darkColors?: RecursivePartial<Colors>;
+}
+
+export type Theme<T = {}> = FullTheme & T;
+
+export type ThemeMode = 'light' | 'dark';
+
+export interface ComponentTheme {
   AirbnbRating: Partial<TapRatingProps>;
   Avatar: Partial<AvatarProps>;
   AvatarAccessory: Partial<AccessoryProps>;
@@ -94,9 +110,4 @@ export interface FullTheme {
   Text: Partial<TextProps>;
   Tile: Partial<TileProps>;
   Tooltip: Partial<TooltipProps>;
-  mode?: ThemeMode;
 }
-
-export type ThemeMode = 'light' | 'dark';
-
-export type Theme<T = {}> = Partial<FullTheme> & T;
