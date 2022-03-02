@@ -79,7 +79,7 @@ const separateColors = (
 
 export const ThemeProvider: React.FC<{
   theme?: ThemeOptions;
-}> = ({ theme = {}, children }) => {
+}> = ({ theme = createTheme({}), children }) => {
   const [themeState, setThemeState] = React.useState<ThemeOptions>(theme);
 
   const updateTheme: UpdateTheme = React.useCallback((updatedTheme) => {

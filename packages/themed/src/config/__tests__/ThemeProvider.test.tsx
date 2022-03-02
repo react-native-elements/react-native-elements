@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Button } from '../..';
-import { colors } from '../colors';
+import { lightColors as colors } from '../colors';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent, render } from '@testing-library/react-native';
 import { useTheme } from '../makeStyles';
@@ -22,7 +22,7 @@ describe('ThemeProvider', () => {
             testID="updateTheme"
             onPress={() => {
               updateTheme({
-                colors: {
+                lightColors: {
                   primary: 'red',
                 },
               });
@@ -32,7 +32,7 @@ describe('ThemeProvider', () => {
             testID="replaceThemeButton"
             onPress={() => {
               replaceTheme({
-                colors: {
+                lightColors: {
                   primary: 'purple',
                 },
               });
@@ -44,7 +44,7 @@ describe('ThemeProvider', () => {
     };
 
     const { queryByTestId } = render(
-      <ThemeProvider>
+      <ThemeProvider theme={createTheme({})}>
         <TestComp />
       </ThemeProvider>
     );
@@ -78,7 +78,7 @@ describe('ThemeProvider', () => {
 
   it('should retain custom theme when switching between light / dark mode', () => {
     const customTheme = createTheme({
-      colors: {
+      lightColors: {
         primary: 'white',
       },
       darkColors: {
