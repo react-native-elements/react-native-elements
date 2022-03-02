@@ -5,7 +5,7 @@ import '../../static/css/components.css';
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
-    <section id="start-now" className="container margin-vert--lg">
+    <section id="start-now" className="container margin-vert--lg hide-on-small">
       <div className="row">
         <div className=" col--offset-3 col col--6 text--center">
           <h6 className="hero__title gradient clip-text">Start using now</h6>
@@ -18,7 +18,7 @@ const Home: React.FunctionComponent<{}> = () => {
             }}
           >
             <div style={{ position: 'absolute', top: 40, left: 10 }}>
-              <CodeBlock language="bash">{`expo init my-app --template react-native-elements-template                                    `}</CodeBlock>
+              <CodeBlock language="bash">{`expo init my-app --template react-native-elements-template`}</CodeBlock>
             </div>
             <img src="/img/website/start_now.png" />
           </div>

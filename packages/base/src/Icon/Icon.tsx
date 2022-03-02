@@ -161,6 +161,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
       testID="RNE__ICON__CONTAINER"
     >
       <Component
+        testID="RNE__ICON__CONTAINER_ACTION"
         {...{
           android_ripple: androidRipple(
             Color(reverse ? color : (underlayColor as string))
@@ -177,7 +178,6 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           ...pressableProps,
           ...rest,
         }}
-        testID="RNE__ICON__CONTAINER_ACTION"
       >
         <View
           style={StyleSheet.flatten([

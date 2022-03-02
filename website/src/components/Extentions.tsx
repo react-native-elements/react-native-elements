@@ -44,7 +44,7 @@ export const VScodeExt: React.FunctionComponent<{}> = () => {
             <div>
               <img
                 src="/img/website/vsc_ext.png"
-                width={800}
+                width={700}
                 style={{ borderRadius: 12, pointerEvents: 'none' }}
               />
             </div>

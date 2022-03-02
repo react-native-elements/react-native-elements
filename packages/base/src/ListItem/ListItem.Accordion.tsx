@@ -26,6 +26,7 @@ export interface ListItemAccordionProps extends ListItemBaseProps {
 
   /** Decide whether to show animation.
    * @default Object with duration 350ms and type timing
+   * @type Animated.TimingAnimationConfig
    */
   animation?:
     | {

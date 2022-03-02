@@ -23,7 +23,9 @@ export interface TileProps extends PressableProps {
   /** Text inside the tile. */
   title?: string;
 
-  /** Icon Component Props. */
+  /** Icon Component Props.
+   * @type IconObject
+   */
   icon?: IconObject & IconProps;
 
   /** Text inside the tilt when tile is featured. */
@@ -53,10 +55,14 @@ export interface TileProps extends PressableProps {
   /** Styling for the caption (optional); You only use this if `caption` is a string. */
   captionStyle?: StyleProp<TextStyle>;
 
-  /** Width for the tile. */
+  /** Width for the tile.
+   * @default 'screen width'
+   */
   width?: number;
 
-  /** Height for the tile. */
+  /** Height for the tile.
+   * @default 'width/2'
+   */
   height?: number;
 
   /** Changes the look of the tile. */
@@ -71,7 +77,9 @@ export interface TileProps extends PressableProps {
   /** Optional properties to pass to the image if provided e.g "resizeMode". */
   imageProps?: Partial<ImageProps>;
 
-  /** Custom ImageComponent for Tile. */
+  /** Custom ImageComponent for Tile.
+   * @default RNE Image
+   */
   ImageComponent?: typeof React.Component;
 }
 

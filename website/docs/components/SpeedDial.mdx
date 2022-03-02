@@ -1,30 +1,17 @@
 ---
 id: speeddial
-
 title: SpeedDial
 ---
 
-import Usage from "./usage/SpeedDial.mdx";
-
-import { SpeedDial } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/SpeedDial.mdx";
 
 When pressed, a floating action button can display three to six related actions in the form of a speed dial.
-
 If more than six actions are needed, something other than a FAB should be used to present them.
-
 Upon press, the FAB remains visible and emits a stack of related actions.
-
 If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
-
-## Components
-
-- [SpeedDial.Action](#speeddialaction)
-  Adds Action to the SpeedDial.
-  This, Receive all [Fab](fab#props) props.
 
 ## Usage
 
@@ -32,105 +19,21 @@ If the FAB is tapped in this state, it should either initiate its default action
 
 ## Props
 
-### SpeedDial
+:::note
+Includes all [Button](/docs/documentation/button#props), [FAB](/docs/documentation/fab#props) props.
+:::
 
-- [backdropPressableProps](#backdroppressableprops)
-- [children](#children)
-- [isOpen](#isopen)
-- [onClose](#onclose)
-- [onOpen](#onopen)
-- [openIcon](#openicon)
-- [overlayColor](#overlaycolor)
-- [transitionDuration](#transitionduration)
+<div class='table-responsive'>
 
-### SpeedDial.Action
+| Name                     | Type                           | Default    | Description                                              |
+| ------------------------ | ------------------------------ | ---------- | -------------------------------------------------------- |
+| `backdropPressableProps` | PressableProps                 |            | Props for Backdrop Pressable                             |
+| `children`               | `ReactChild[]` and `ReactNode` |            | SpeedDial Action as children.                            |
+| `isOpen`                 | boolean                        |            | Opens the action stack.                                  |
+| `onClose`                | Function                       | `Function` | Callback fired when the component requests to be closed. |
+| `onOpen`                 | Function                       | `Function` | Callback fired when the component requests to be open.   |
+| `openIcon`               | IconNode                       |            | Icon shown on FAB when action stack is open.             |
+| `overlayColor`           | string                         |            | Add overlay color to the speed dial.                     |
+| `transitionDuration`     | number                         | `150`      | The duration for the transition, in milliseconds.        |
 
-None
-
-## Reference
-
-### SpeedDial
-
-#### backdropPressableProps
-
-Props for Backdrop Pressable
-
-| Type           | Default |
-| -------------- | ------- |
-| PressableProps | None    |
-
----
-
-#### children
-
-SpeedDial Action as children.
-
-| Type                             | Default |
-| -------------------------------- | ------- |
-| React.ReactChild[] and ReactNode | None    |
-
----
-
-#### isOpen
-
-Opens the action stack.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | None    |
-
----
-
-#### onClose
-
-Callback fired when the component requests to be closed.
-
-| Type     | Default  |
-| -------- | -------- |
-| Function | Function |
-
----
-
-#### onOpen
-
-Callback fired when the component requests to be open.
-
-| Type     | Default  |
-| -------- | -------- |
-| Function | Function |
-
----
-
-#### openIcon
-
-Icon shown on FAB when action stack is open.
-
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
-
----
-
-#### overlayColor
-
-Add overlay color to the speed dial.
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### transitionDuration
-
-The duration for the transition, in milliseconds.
-
-| Type   | Default |
-| ------ | ------- |
-| number | 150     |
-
----
-
-### SpeedDial.Action
-
-None
+</div>

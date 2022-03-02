@@ -1,25 +1,15 @@
 ---
 id: tabview
-
 title: TabView
 ---
 
-import Usage from "./usage/TabView.mdx";
-
-import { TabView } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/TabView.mdx";
 
 Tabs organize content across different screens, data sets, and other interactions.
-
 TabView enables swipeable tabs.
-
-## Components
-
-- [TabView.Item](#tabviewitem)
-  They are individual item of the parent Tab.
 
 ## Usage
 
@@ -27,83 +17,19 @@ TabView enables swipeable tabs.
 
 ## Props
 
-### TabView
+:::note
+Includes all [TabViewBase](/docs/documentation/tabviewbase#props) props.
+:::
 
-- [animationConfig](#animationconfig)
-- [animationType](#animationtype)
-- [containerStyle](#containerstyle)
-- [onChange](#onchange)
-- [tabItemContainerStyle](#tabitemcontainerstyle)
-- [value](#value)
+<div class='table-responsive'>
 
-### TabView.Item
+| Name                    | Type                                                               | Default  | Description                                                                                      |
+| ----------------------- | ------------------------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------ |
+| `animationConfig`       | `Omit<SpringAnimationConfig` and `TimingAnimationConfig, toValue>` | `{}`     | Define the animation configurations.                                                             |
+| `animationType`         | `spring` or `timing`                                               | `spring` | Choose the animation type among `spring` and `timing`. This is visible when there is tab change. |
+| `containerStyle`        | View Style                                                         |          | Styling for Component container.                                                                 |
+| `onChange`              | (value: number) => any                                             |          | On Index Change Callback.                                                                        |
+| `tabItemContainerStyle` | View Style                                                         |          | Styling for TabView.Item Component container.                                                    |
+| `value`                 | number                                                             | `0`      | Child position index value.                                                                      |
 
-None
-
-## Reference
-
-### TabView
-
-#### animationConfig
-
-Define the animation configurations.
-
-| Type                                                             | Default |
-| ---------------------------------------------------------------- | ------- |
-| Omit<SpringAnimationConfig and TimingAnimationConfig, "toValue"> | {}      |
-
----
-
-#### animationType
-
-Choose the animation type among `spring` and `timing`. This is visible when there is tab change.
-
-| Type                 | Default |
-| -------------------- | ------- |
-| "timing" or "spring" | spring  |
-
----
-
-#### containerStyle
-
-Styling for Component container.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### onChange
-
-On Index Change Callback.
-
-| Type                   | Default |
-| ---------------------- | ------- |
-| (value: number) => any | None    |
-
----
-
-#### tabItemContainerStyle
-
-Styling for TabView.Item Component container.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### value
-
-Child position index value.
-
-| Type   | Default |
-| ------ | ------- |
-| number | 0       |
-
----
-
-### TabView.Item
-
-None
+</div>
