@@ -2,7 +2,7 @@ name: Bleeding Edge version
 on:
   push:
     branches:
-      - "next"
+      - "*"
     paths-ignore:
       - "website/**"
       - "example/**"
