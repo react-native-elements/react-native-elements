@@ -28,7 +28,7 @@ jobs:
         run: |
           sed -i -e 's/dist/src/g' .gitignore
           git add .
-          git rm -rf packages/*/src
+          #git rm -rf packages/*/src
           git commit -m "Bleeding Edge Version" -a --no-verify
       - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
         run: |
