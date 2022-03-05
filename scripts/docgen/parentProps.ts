@@ -63,7 +63,7 @@ export function separateParent(components: ComponentDoc[]) {
         }
 
         const compName = parent.name.replace(/Props|\./, '');
-        return `[${compName}](/docs/documentation/${compName.toLowerCase()}#props)`;
+        return `[${compName}](${compName.toLowerCase()}#props)`;
       })
       .filter(Boolean);
   }
