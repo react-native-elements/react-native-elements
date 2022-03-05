@@ -111,7 +111,7 @@ import {
 } from '@react-native-elements/themed';
 
 const myTheme = createTheme({
-  colors: {
+  lightColors: {
     primary: '#f2f2f2',
   },
   darkColors: {
