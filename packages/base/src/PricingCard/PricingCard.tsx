@@ -8,7 +8,7 @@ import {
   StyleProp,
 } from 'react-native';
 import { defaultTheme, normalizeText, RneFunctionComponent } from '../helpers';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { Text } from '../Text';
 import { ButtonProps } from '../Button';
 import { PricingButton } from './components/PricingButton';

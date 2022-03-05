@@ -2,7 +2,7 @@ import { DialogLoading, DialogLoadingProps } from './Dialog.Loading';
 import { DialogTitle, DialogTitleProps } from './Dialog.Title';
 import { DialogButton, DialogButtonProps } from './Dialog.Button';
 import { DialogActions, DialogActionsProps } from './Dialog.Actions';
-import { DialogBase, DialogBaseProps } from './Dialog';
+import { DialogBase, DialogProps } from './Dialog';
 
 export const Dialog = Object.assign(DialogBase, {
   Loading: DialogLoading,
@@ -12,7 +12,7 @@ export const Dialog = Object.assign(DialogBase, {
 });
 
 export type {
-  DialogBaseProps as DialogProps,
+  DialogProps,
   DialogLoadingProps,
   DialogButtonProps,
   DialogTitleProps,

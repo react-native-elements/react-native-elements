@@ -7,7 +7,7 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import { BackgroundImage } from '../../helpers/index-config';
+import { BackgroundImage } from '../../helpers';
 import { renderNode, RneFunctionComponent } from '../../helpers';
 import { Text } from '../../Text';
 import { Icon } from '../../Icon';
