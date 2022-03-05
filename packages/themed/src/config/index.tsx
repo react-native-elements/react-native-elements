@@ -1,29 +1,64 @@
-import BackgroundImage from './BackgroundImage';
-import { Colors, colors, darkColors as colorsDark } from './colors';
-import fonts from './fonts';
 import {
-  ThemeProvider,
+  androidRipple,
+  BackgroundImage,
+  color,
+  Colors,
+  darkColors,
+  fonts,
+  getIconType,
+  InlinePressableProps,
+  isIOS,
+  lightColors,
+  normalizeText,
+  patchWebProps,
+  renderNode,
+  ScreenHeight,
+  ScreenWidth,
+} from '@react-native-elements/base/dist/helpers';
+import {
+  ReplaceTheme,
   ThemeConsumer,
   ThemeContext,
   ThemeProps,
+  ThemeProvider,
   UpdateTheme,
-  ReplaceTheme,
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles, useTheme } from './makeStyles';
 import { Theme, FullTheme } from './theme';
 
 export {
+  androidRipple,
   BackgroundImage,
-  colors,
-  colorsDark,
+  color,
+  darkColors,
   fonts,
-  ThemeProvider,
+  getIconType,
+  isIOS,
+  lightColors,
+  makeStyles,
+  normalizeText,
+  patchWebProps,
+  renderNode,
+  ScreenHeight,
+  ScreenWidth,
   ThemeConsumer,
   ThemeContext,
-  withTheme,
+  ThemeProvider,
   useTheme,
-  makeStyles,
+  withTheme,
 };
 
-export type { Theme, FullTheme, UpdateTheme, ReplaceTheme, ThemeProps, Colors };
+export type {
+  Colors,
+  FullTheme,
+  InlinePressableProps,
+  ReplaceTheme,
+  Theme,
+  ThemeProps,
+  UpdateTheme,
+};
+
+export type RneFunctionComponent<T> = React.FunctionComponent<
+  T & Partial<ThemeProps<T>>
+>;
