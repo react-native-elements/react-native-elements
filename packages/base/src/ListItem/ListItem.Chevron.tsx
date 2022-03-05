@@ -3,7 +3,7 @@ import { StyleSheet, Platform } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import { IconProps, Icon } from '../Icon';
 
-export type ListItemChevronProps = Partial<IconProps>;
+export interface ListItemChevronProps extends Partial<IconProps> {}
 
 /** This allows adding a Chevron Icon(arrow) to the ListItem.
  * This, Receives all [Icon](icon#props) props. */

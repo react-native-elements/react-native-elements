@@ -19,7 +19,7 @@ import {
 } from '../helpers';
 import { Text } from '../Text';
 
-export type ButtonGroupProps = InlinePressableProps & {
+export interface ButtonGroupProps extends InlinePressableProps {
   /** Button for the component. */
   button?: object;
 
@@ -97,7 +97,7 @@ export type ButtonGroupProps = InlinePressableProps & {
 
   /** Display the ButtonGroup vertically. */
   vertical?: boolean;
-};
+}
 
 /** ButtonGroup is a linear set of segments, each of which function as a button that can display a different view/or perform a different action.
  * Use a ButtonGroup to offer choices that are closely related but mutually exclusive.

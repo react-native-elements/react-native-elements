@@ -11,7 +11,7 @@ import {
 import { ListItemBase, ListItemBaseProps } from './ListItem';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
-export type ListItemSwipeableProps = ListItemBaseProps & {
+export interface ListItemSwipeableProps extends ListItemBaseProps {
   /**
    * Left Content.
    * @type ReactNode or resetCallback => ReactNode
@@ -45,7 +45,7 @@ export type ListItemSwipeableProps = ListItemBaseProps & {
 
   /** Handler for swipe end. */
   onSwipeEnd?: () => any;
-};
+}
 
 /** We offer a special kind of ListItem which is swipeable from both ends and allows users select an event. */
 export const ListItemSwipeable: RneFunctionComponent<

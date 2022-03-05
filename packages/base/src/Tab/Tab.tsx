@@ -12,7 +12,7 @@ import {
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
 
-export type TabBaseProps = ViewProps & {
+export interface TabBaseProps extends ViewProps {
   /** Child position index value. */
   value?: number;
 
@@ -33,7 +33,7 @@ export type TabBaseProps = ViewProps & {
 
   /** Define the background Variant. */
   variant?: 'primary' | 'default';
-};
+}
 
 /**
  * Tabs organize content across different screens, data sets, and other interactions.

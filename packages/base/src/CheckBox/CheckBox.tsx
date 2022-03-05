@@ -15,41 +15,40 @@ import { CheckBoxIcon, CheckBoxIconProps } from './components/CheckBoxIcon';
 import { fonts } from '../helpers/index-config';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type CheckBoxProps = PressableProps &
-  CheckBoxIconProps & {
-    /** Specify React Native component for main button. */
-    Component?: typeof React.Component;
+export interface CheckBoxProps extends PressableProps, CheckBoxIconProps {
+  /** Specify React Native component for main button. */
+  Component?: typeof React.Component;
 
-    /** Moves icon to right of text. */
-    iconRight?: boolean;
+  /** Moves icon to right of text. */
+  iconRight?: boolean;
 
-    /** Title of checkbox. */
-    title?: string | React.ReactElement<{}>;
+  /** Title of checkbox. */
+  title?: string | React.ReactElement<{}>;
 
-    /** Additional props for the title Text component. */
-    titleProps?: TextProps;
+  /** Additional props for the title Text component. */
+  titleProps?: TextProps;
 
-    /** Aligns checkbox to center. */
-    center?: boolean;
+  /** Aligns checkbox to center. */
+  center?: boolean;
 
-    /** Aligns checkbox to right. */
-    right?: boolean;
+  /** Aligns checkbox to right. */
+  right?: boolean;
 
-    /** Style of main container. */
-    containerStyle?: StyleProp<ViewStyle>;
+  /** Style of main container. */
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /** Style for the wrapper of checkbox. */
-    wrapperStyle?: StyleProp<ViewStyle>;
+  /** Style for the wrapper of checkbox. */
+  wrapperStyle?: StyleProp<ViewStyle>;
 
-    /** Style of text. */
-    textStyle?: StyleProp<TextStyle>;
+  /** Style of text. */
+  textStyle?: StyleProp<TextStyle>;
 
-    /** Specify a custom checked message. */
-    checkedTitle?: string;
+  /** Specify a custom checked message. */
+  checkedTitle?: string;
 
-    /** Specify different font family. */
-    fontFamily?: string;
-  };
+  /** Specify different font family. */
+  fontFamily?: string;
+}
 
 /** CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off.
  * It provides a clear visual of either a true or false choice. */

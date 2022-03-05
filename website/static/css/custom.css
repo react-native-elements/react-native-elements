@@ -1,27 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap');
-* {
-  font-family: 'DM Sans', sans-serif !important;
-  scrollbar-width: 8px;
-  scrollbar-color: var(--ifm-hero-background-color);
-}
-pre {
-  font-family: 'DM Mono', sans-serif !important;
-}
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--ifm-hero-background-color); /* color of the tracking area */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgb(100, 100, 100); /* color of the scroll thumb */
-  border-radius: 1px; /* roundness of the scroll thumb */
-  /* border: 1px solid #000066;  */ /* creates padding around scroll thumb */
-}
 
 :root {
+  --ifm-scrollbar-size: 5px;
+  --ifm-scrollbar-track-background-color: #444444;
+  --ifm-scrollbar-thumb-background-color: #686868;
+  --ifm-scrollbar-thumb-hover-background-color: #7a7a7a;
+  --ifm-font-family-base: 'DM Sans', sans-serif;
+  --ifm-font-family-monospace: 'DM mono';
   --ifm-color-primary: #2089dc;
   --ifm-color-primary-dark: #1d7bc6;
   --ifm-color-primary-darker: #1b74bb;
@@ -43,6 +28,16 @@ pre {
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
   --ifm-hero-background-color: #27292b;
+}
+
+.table-responsive {
+  --ifm-table-border-width: 0px;
+  --ifm-table-cell-padding: 0.5rem;
+  font-size: small;
+}
+
+.table-responsive th {
+  text-align: left;
 }
 
 .label {
@@ -448,7 +443,7 @@ nav.menu {
   }
 }
 .menu > ul.menu__list li {
-  margin-top: 0;
+  /* margin-top: 0rem; */
   margin-bottom: 0;
 }
 .menu > ul.menu__list li > a {
@@ -464,7 +459,7 @@ nav.menu {
 
 /* First sidebar nav section  */
 .menu > .menu__list > .menu__list-item:first-child {
-  margin-top: 16px;
+  /* margin-top: 16px; */
 }
 
 /* First sidebar nav section  */
@@ -495,9 +490,10 @@ a.menu__link.menu__link--sublist.menu__link {
   margin-top: 0;
 }
 .menu > ul.menu__list ul.menu__list {
-  border-left: 1px solid var(--ifm-color-primary);
-  margin-left: 0;
+  /* border-left: 1px solid var(--ifm-color-primary); */
   padding-left: var(--ifm-menu-link-padding-horizontal);
+  /* padding-left: 0.8rem; */
+  margin-left: 0;
 }
 .menu > ul.menu__list ul.menu__list .menu__link {
   border-radius: 0;

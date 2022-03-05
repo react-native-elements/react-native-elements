@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Platform, ScrollView } from 'react-native';
-// import { Rating, AirbnbRating, RatingProps } from 'react-native-ratings';
+import { Rating, AirbnbRating } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
 const WATER_IMAGE = require('../images/water.png');
@@ -16,7 +16,7 @@ const Ratings: React.FunctionComponent<RatingsComponentProps> = () => {
   return (
     <View style={styles.container}>
       <Header title="Ratings" view="rating" />
-      {/* <ScrollView style={styles.viewContainer}>
+      <ScrollView style={styles.viewContainer}>
         <Text
           style={[
             styles.titleText,
@@ -63,7 +63,7 @@ const Ratings: React.FunctionComponent<RatingsComponentProps> = () => {
             showRating
             imageSize={40}
             onFinishRating={ratingCompleted}
-            {...(ratingProps as RatingProps)}
+            {...ratingProps}
             style={{ paddingVertical: 10 }}
           />
           <Rating
@@ -97,7 +97,7 @@ const Ratings: React.FunctionComponent<RatingsComponentProps> = () => {
             style={styles.rating}
           />
         </View>
-      </ScrollView> */}
+      </ScrollView>
     </View>
   );
 };

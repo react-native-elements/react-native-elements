@@ -11,7 +11,7 @@ import {
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import Color from 'color';
 
-export type SkeletonProps = {
+export interface SkeletonProps extends ViewProps {
   /**
    * show circular variant
    */
@@ -38,15 +38,15 @@ export type SkeletonProps = {
    * @type React Component
    */
   LinearGradientComponent?: React.ComponentType<any>;
-} & ViewProps;
+}
 
 /**
  * A placeholder preview for content before the data gets loaded, an alternative for spinners.
  *
  * @installation @react-native-elements/skeleton
  * @usage
- * <Skeleton variant="circular" width={40} height={40} />
- * <Skeleton variant="rectangular" width={210} height={118} />
+ * %jsx <Skeleton variant="circular" width={40} height={40} />
+ * %jsx <Skeleton variant="rectangular" width={210} height={118} />
  */
 export const Skeleton: RneFunctionComponent<SkeletonProps> = ({
   circle,

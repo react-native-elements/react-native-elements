@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { View } from 'react-native';
 
-export type PadViewProps = {
+export interface PadViewProps {
   Component: React.ComponentClass;
   pad: number;
-};
+}
 
 export const PadView: React.FC<PadViewProps> = ({
   children,

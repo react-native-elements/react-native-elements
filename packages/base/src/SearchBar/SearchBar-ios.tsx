@@ -32,9 +32,9 @@ const defaultClearIcon = (theme: Theme) => ({
   color: theme?.colors?.platform?.ios?.grey,
 });
 
-export type SearchBarIosProps = InputProps &
-  SearchBarBaseProps &
-  typeof SearchBarIOS.defaultProps & {
+export type SearchBarIosProps = typeof SearchBarIOS.defaultProps &
+  InputProps &
+  SearchBarBaseProps & {
     cancelButtonProps?: Partial<PressableProps> & {
       buttonStyle?: StyleProp<ViewStyle>;
       buttonTextStyle?: StyleProp<TextStyle>;

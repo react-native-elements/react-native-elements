@@ -38,7 +38,7 @@ import SearchBar, {
   SearchBarIosProps,
 } from './SearchBar';
 import Slider, { SliderProps } from './Slider';
-import SocialIcon, { SocialIconProps } from './SocialIcon';
+import SocialIcon, { SocialIconProps, SocialMediaType } from './SocialIcon';
 import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 import Switch, { SwitchProps } from './Switch';
 import Skeleton, { SkeletonProps } from './Skeleton';
@@ -152,6 +152,7 @@ export type {
   SliderProps,
   SkeletonProps,
   SocialIconProps,
+  SocialMediaType,
   SpeedDialActionProps,
   SpeedDialProps,
   SwipeRatingProps,

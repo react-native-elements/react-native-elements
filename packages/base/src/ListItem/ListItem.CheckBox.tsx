@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { CheckBoxProps, CheckBox } from '../CheckBox';
 import { RneFunctionComponent } from '../helpers';
 
-export type ListItemCheckBoxProps = CheckBoxProps;
+export interface ListItemCheckBoxProps extends CheckBoxProps {}
 
 /** This allows adding CheckBox to the ListItem.
  * This, Receives all [CheckBox](checkbox#props) props. */

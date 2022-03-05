@@ -1,19 +1,14 @@
 ---
 id: checkbox
-
 title: CheckBox
 ---
 
-import Usage from "./usage/CheckBox.mdx";
-
-import { CheckBox } from "react-native-elements";
-
 import Tabs from "@theme/Tabs";
-
 import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/CheckBox.mdx";
 
 CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off.
-
 It provides a clear visual of either a true or false choice.
 
 ## Usage
@@ -22,229 +17,24 @@ It provides a clear visual of either a true or false choice.
 
 ## Props
 
-### CheckBox
-
-- [Component](#component)
-- [center](#center)
-- [checked](#checked)
-- [checkedColor](#checkedcolor)
-- [checkedIcon](#checkedicon)
-- [checkedTitle](#checkedtitle)
-- [containerStyle](#containerstyle)
-- [fontFamily](#fontfamily)
-- [iconRight](#iconright)
-- [iconType](#icontype)
-- [onIconPress](#oniconpress)
-- [onLongIconPress](#onlongiconpress)
-- [right](#right)
-- [size](#size)
-- [textStyle](#textstyle)
-- [title](#title)
-- [titleProps](#titleprops)
-- [uncheckedColor](#uncheckedcolor)
-- [uncheckedIcon](#uncheckedicon)
-- [wrapperStyle](#wrapperstyle)
-
-## Reference
-
-### CheckBox
-
-#### Component
-
-Specify React Native component for main button.
-
-| Type            | Default |
-| --------------- | ------- |
-| React Component | None    |
-
----
-
-#### center
-
-Aligns checkbox to center.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### checked
-
-Flag for checking the icon.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### checkedColor
-
-Default checked color.
-
-| Type   | Default        |
-| ------ | -------------- |
-| string | Color(Primary) |
-
----
-
-#### checkedIcon
-
-Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/)).
-
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
-
----
-
-#### checkedTitle
-
-Specify a custom checked message.
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### containerStyle
-
-Style of main container.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
-
-#### fontFamily
-
-Specify different font family.
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### iconRight
-
-Moves icon to right of text.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### iconType
-
-Type of icon set. [Supported sets here](icon#available-icon-sets).
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### onIconPress
-
-onPress function for checkbox.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
-
----
-
-#### onLongIconPress
-
-onLongPress function for checkbox.
-
-| Type     | Default |
-| -------- | ------- |
-| Function | None    |
-
----
-
-#### right
-
-Aligns checkbox to right.
-
-| Type    | Default |
-| ------- | ------- |
-| boolean | false   |
-
----
-
-#### size
-
-Size of the checkbox.
-
-| Type   | Default |
-| ------ | ------- |
-| number | None    |
-
----
-
-#### textStyle
-
-Style of text.
-
-| Type               | Default |
-| ------------------ | ------- |
-| Text Style(Object) | None    |
-
----
-
-#### title
-
-Title of checkbox.
-
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
-
----
-
-#### titleProps
-
-Additional props for the title Text component.
-
-| Type      | Default |
-| --------- | ------- |
-| TextProps | {}      |
-
----
-
-#### uncheckedColor
-
-Default unchecked color.
-
-| Type   | Default |
-| ------ | ------- |
-| string | None    |
-
----
-
-#### uncheckedIcon
-
-Default checked icon ([Font Awesome Icon](http://fontawesome.io/icons/))
-
-| Type | Default |
-| ---- | ------- |
-| any  | None    |
-
----
-
-#### wrapperStyle
-
-Style for the wrapper of checkbox.
-
-| Type               | Default |
-| ------------------ | ------- |
-| View style(Object) | None    |
-
----
+:::note
+Includes all [CheckBoxIcon](/docs/documentation/checkboxicon#props), [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name             | Type                                                                   | Default | Description                                     |
+| ---------------- | ---------------------------------------------------------------------- | ------- | ----------------------------------------------- |
+| `Component`      | React Component                                                        |         | Specify React Native component for main button. |
+| `center`         | boolean                                                                | `false` | Aligns checkbox to center.                      |
+| `checkedTitle`   | string                                                                 |         | Specify a custom checked message.               |
+| `containerStyle` | View Style                                                             |         | Style of main container.                        |
+| `fontFamily`     | string                                                                 |         | Specify different font family.                  |
+| `iconRight`      | boolean                                                                | `false` | Moves icon to right of text.                    |
+| `right`          | boolean                                                                | `false` | Aligns checkbox to right.                       |
+| `textStyle`      | Text Style                                                             |         | Style of text.                                  |
+| `title`          | `string` or `ReactElement<{}, string` or `JSXElementConstructor<any>>` |         | Title of checkbox.                              |
+| `titleProps`     | TextProps                                                              | `{}`    | Additional props for the title Text component.  |
+| `wrapperStyle`   | View Style                                                             |         | Style for the wrapper of checkbox.              |
+
+</div>

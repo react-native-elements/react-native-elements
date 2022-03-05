@@ -23,10 +23,10 @@ Spelling a component incorrectly though very simple, happens occasionally.
 
 ```jsx
 // Incorrect
-import { Listitem } from 'react-native-elements';
+import { Listitem } from '@react-native-elements/themed';
 
 // Correct
-import { ListItem } from 'react-native-elements';
+import { ListItem } from '@react-native-elements/themed';
 ```
 
 ### Importing a component from the wrong version
@@ -70,11 +70,13 @@ the error comes from React Native Elements looking for
 
 They're a couple ways to solve this depending on your setup.
 
-- [`react-native-init`](#using-react-native-init)
-- [`create-react-native-app or Expo XDE`](#using-an-expo-app-create-react-native-app-or-expo-xde)
-- [`Detached create-react-native-app`](#using-a-detached-create-react-native-app-app)
+- [You incorrectly spelt a component](#you-incorrectly-spelt-a-component)
+- [Importing a component from the wrong version](#importing-a-component-from-the-wrong-version)
+- [Using `react-native-init`](#using-react-native-init)
+- [Using an Expo app (create-react-native-app or Expo XDE)](#using-an-expo-app-create-react-native-app-or-expo-xde)
+- [Using a detached `create-react-native-app` app](#using-a-detached-create-react-native-app-app)
 
-<br/>
+---
 
 ### Using `react-native-init`
 
@@ -101,7 +103,7 @@ They're a couple ways to solve this depending on your setup.
 4. Link react-native-vector-icons. Learn more about
    [linking](https://reactnative.dev/docs/linking.html).
 
-   ```
+   ```bash
    react-native link react-native-vector-icons
    ```
 
@@ -128,23 +130,23 @@ commands:
 
 1. Delete everything to be sure
 
-```bash
-rm -rf node_modules yarn.lock package-lock.json
-```
+   ```bash
+   rm -rf node_modules yarn.lock package-lock.json
+   ```
 
 2. Install React Native Elements
 
-```bash
-# yarn
-yarn && yarn add react-native-elements
-```
+   ```bash
+   # yarn
+   yarn && yarn add react-native-elements
+   ```
 
 3. Install `@expo/vector-icons`
 
-```bash
-# yarn
-yarn add @expo/vector-icons --save
-```
+   ```bash
+   # yarn
+   yarn add @expo/vector-icons --save
+   ```
 
 ### Using a detached `create-react-native-app` app
 

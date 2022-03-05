@@ -5,7 +5,7 @@ import { fonts } from '../helpers/index-config';
 import { Text, TextProps } from '../Text';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type CardTitleProps = TextProps;
+export interface CardTitleProps extends TextProps {}
 
 /** Add a general title to the Card.
  * This, Receives all [Text](text#props) props. */

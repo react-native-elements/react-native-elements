@@ -3,10 +3,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import { FAB, FABProps } from '../FAB/index';
 import { RneFunctionComponent } from '../helpers';
 
-export type SpeedDialActionProps = Omit<FABProps, 'size'>;
+export interface SpeedDialActionProps extends Omit<FABProps, 'size'> {}
 
 /** Adds Action to the SpeedDial.
- * This, Receieve all [Fab](fab#props) props. */
+ * This, Receive all [Fab](fab#props) props. */
 export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
   title,
   titleStyle,
