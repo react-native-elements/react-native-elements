@@ -33,6 +33,12 @@ export interface TabViewBaseProps {
 
   /** Styling for TabView.Item Component container. */
   tabItemContainerStyle?: StyleProp<ViewStyle>;
+
+  /** Swipe disabled or not */
+  disableSwipe?: Boolean;
+
+  /** Disables transition */
+  disableTransition?: Boolean;
 }
 
 /** Tabs organize content across different screens, data sets, and other interactions.
@@ -45,6 +51,8 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
   animationConfig = {},
   containerStyle,
   tabItemContainerStyle,
+  disableSwipe = false,
+  disableTransition = false,
 }) => {
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
@@ -99,16 +107,18 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
           width: window.width * length,
           transform: [
             {
-              translateX: translateX.interpolate({
-                inputRange: [0, 1],
-                outputRange: [0, -window.width],
-              }),
+              translateX: disableTransition
+                ? -value * window.width
+                : translateX.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [0, -window.width],
+                  }),
             },
           ],
         },
         containerStyle,
       ])}
-      {...panResponder.panHandlers}
+      {...(!disableSwipe && panResponder.panHandlers)}
     >
       {React.Children.map(children, (child) => (
         <View
