@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   Animated,
+  Easing,
   PanResponder,
   View,
   StyleSheet,
   PanResponderGestureState,
   GestureResponderEvent,
-  useWindowDimensions,
   StyleProp,
   ViewStyle,
 } from 'react-native';
@@ -22,7 +22,10 @@ export interface TabViewBaseProps {
   /** Choose the animation type among `spring` and `timing`. This is visible when there is tab change. */
   animationType?: 'spring' | 'timing';
 
-  /** Define the animation configurations. */
+  /** Define the animation configurations.
+   *
+   * @type AnimationConfig
+   */
   animationConfig?: Omit<
     Animated.SpringAnimationConfig & Animated.TimingAnimationConfig,
     'toValue'
@@ -39,99 +42,139 @@ export interface TabViewBaseProps {
 
   /** Disables transition */
   disableTransition?: Boolean;
+
+  /**   */
+  onSwipeStart?: (dir: 'left' | 'right') => void;
+
+  minSwipeRatio?: number;
+
+  minSwipeSpeed?: number;
 }
 
 /** Tabs organize content across different screens, data sets, and other interactions.
  * TabView enables swipeable tabs. */
 export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
-  children,
-  onChange,
   value = 0,
+  children,
+  onChange = () => {},
+  onSwipeStart = () => {},
   animationType = 'spring',
   animationConfig = {},
   containerStyle,
   tabItemContainerStyle,
   disableSwipe = false,
   disableTransition = false,
+  minSwipeRatio = 0.4,
+  minSwipeSpeed = 1,
 }) => {
-  const { current: translateX } = React.useRef(new Animated.Value(0));
-  const currentIndex = React.useRef(value);
-  const length = React.Children.count(children);
-  const window = useWindowDimensions();
+  const translateX = React.useRef(new Animated.Value(0));
+  const panX = React.useRef(value);
+  const [containerWidth, setContainerWidth] = React.useState(1);
+  const containerWidthRef = React.useRef(1);
 
-  const onPanResponderRelease = (
-    _: GestureResponderEvent,
-    { dx, dy }: PanResponderGestureState
-  ) => {
-    if (
-      (dx > 0 && currentIndex.current <= 0) ||
-      (dx < 0 && currentIndex.current >= length - 1)
-    ) {
-      return;
-    }
-    if (Math.abs(dy) > Math.abs(dx)) {
-      return;
-    }
-    const position = dx / -window.width;
-    const next = position > value ? Math.ceil(position) : Math.floor(position);
-    onChange?.(currentIndex.current + next);
-  };
+  const childCount = React.useMemo(
+    () => React.Children.count(children),
+    [children]
+  );
+
+  const animate = React.useCallback(
+    (toValue: number) => {
+      Animated[animationType](translateX.current, {
+        toValue,
+        useNativeDriver: true,
+        easing: Easing.ease,
+        ...animationConfig,
+      }).start();
+    },
+    [animationConfig, animationType]
+  );
+
+  const releaseResponder = React.useCallback(
+    (_: GestureResponderEvent, { dx, vx }: PanResponderGestureState) => {
+      const position = dx / -containerWidthRef.current;
+      const shouldSwipe =
+        Math.abs(position) > minSwipeRatio || Math.abs(vx) > minSwipeSpeed;
+      panX.current += shouldSwipe ? Math.sign(position) : 0;
+      animate(panX.current);
+      onChange(panX.current);
+    },
+    [animate, minSwipeRatio, minSwipeSpeed, onChange]
+  );
 
   const { current: panResponder } = React.useRef(
     PanResponder.create({
-      onMoveShouldSetPanResponder: () => true,
-      onPanResponderGrant: () => true,
-      onPanResponderRelease,
+      onPanResponderGrant: (_, { vx }) => {
+        onSwipeStart(vx > 0 ? 'left' : 'right');
+      },
+      onMoveShouldSetPanResponder: (_, { dx, dy, vx, vy }) => {
+        const panXInt = Math.floor(panX.current);
+        return (
+          !(
+            (dx > 0 && panXInt <= 0) ||
+            (dx < 0 && panXInt >= childCount - 1)
+          ) &&
+          Math.abs(dx) > Math.abs(dy) * 2 &&
+          Math.abs(vx) > Math.abs(vy) * 2.5
+        );
+      },
+      onPanResponderMove: (_, { dx }) => {
+        const position = dx / -containerWidthRef.current;
+        translateX.current.setValue(Math.floor(panX.current) + position);
+      },
+      onPanResponderRelease: releaseResponder,
+      onPanResponderTerminate: releaseResponder,
     })
   );
 
-  const animate = React.useCallback(() => {
-    Animated[animationType](translateX, {
-      toValue: value,
-      useNativeDriver: true,
-      ...animationConfig,
-    }).start();
-  }, [translateX, value, animationType, animationConfig]);
-
   React.useEffect(() => {
-    animate();
-    currentIndex.current = value;
+    if (Number.isInteger(value) && value !== panX.current) {
+      animate(value);
+      panX.current = value;
+    }
   }, [animate, value]);
 
   return (
-    <Animated.View
-      testID="tabView-test"
-      style={StyleSheet.flatten([
-        styles.container,
-        {
-          width: window.width * length,
-          transform: [
-            {
-              translateX: disableTransition
-                ? -value * window.width
-                : translateX.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [0, -window.width],
-                  }),
-            },
-          ],
-        },
-        containerStyle,
-      ])}
-      {...(!disableSwipe && panResponder.panHandlers)}
+    <View
+      style={[styles.container, containerStyle]}
+      onLayout={({ nativeEvent: { layout } }) => {
+        setContainerWidth(layout.width);
+        containerWidthRef.current = layout.width;
+      }}
     >
-      {React.Children.map(children, (child) => (
-        <View
-          style={StyleSheet.flatten([
-            styles.container,
-            { width: window.width },
-            tabItemContainerStyle,
-          ])}
-        >
-          {child}
-        </View>
-      ))}
-    </Animated.View>
+      <Animated.View
+        testID="RNE__TabView"
+        style={StyleSheet.flatten([
+          StyleSheet.absoluteFillObject,
+          styles.container,
+          {
+            width: containerWidth * childCount,
+            transform: [
+              {
+                translateX: disableTransition
+                  ? -value * containerWidth
+                  : translateX.current.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0, -containerWidth],
+                    }),
+              },
+            ],
+          },
+        ])}
+        {...(!disableSwipe && panResponder.panHandlers)}
+      >
+        {React.Children.map(children, (child) => (
+          <View
+            style={StyleSheet.flatten([
+              styles.container,
+              tabItemContainerStyle,
+              { width: containerWidth },
+            ])}
+          >
+            {child}
+          </View>
+        ))}
+      </Animated.View>
+    </View>
   );
 };
 
