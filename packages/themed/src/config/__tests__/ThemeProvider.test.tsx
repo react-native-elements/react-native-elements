@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Button } from '../..';
-import { colors } from '../colors';
+import { lightColors } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent, render } from '@testing-library/react-native';
 import { useTheme } from '../makeStyles';
@@ -51,7 +51,7 @@ describe('ThemeProvider', () => {
     const updateButton = queryByTestId('updateTheme');
     const replaceButton = queryByTestId('replaceThemeButton');
     const textTheme = queryByTestId('themeChild');
-    expect(textTheme.props.children).toEqual(colors.primary);
+    expect(textTheme.props.children).toEqual(lightColors.primary);
 
     fireEvent.press(updateButton);
     expect(textTheme.props.children).toEqual('red');
@@ -72,7 +72,7 @@ describe('ThemeProvider', () => {
     );
     const instance = queryByTestId('viewComp');
     expect(JSON.parse(instance.props.children)).toMatchObject({
-      colors,
+      colors: lightColors,
     });
   });
 

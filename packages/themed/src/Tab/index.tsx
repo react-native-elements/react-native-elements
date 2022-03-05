@@ -5,9 +5,7 @@ import {
   TabItemProps,
 } from '@react-native-elements/base/dist/Tab/Tab.Item';
 
-export type TabProps = TabProps;
-
-export type { TabProps as TabBaseProps, TabItemProps };
+export type { TabProps, TabItemProps };
 
 export const ThemedTab = Object.assign(withTheme(TabBase, 'Tab'), {
   Item: withTheme<TabItemProps>(TabItem, 'TabItem'),

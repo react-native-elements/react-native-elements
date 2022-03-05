@@ -14,6 +14,7 @@ import {
   renderNode,
   ScreenHeight,
   ScreenWidth,
+  registerCustomIconType,
 } from '@react-native-elements/base/dist/helpers';
 import {
   ReplaceTheme,
@@ -22,6 +23,7 @@ import {
   ThemeProps,
   ThemeProvider,
   UpdateTheme,
+  createTheme,
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles, useTheme } from './makeStyles';
@@ -47,6 +49,8 @@ export {
   ThemeProvider,
   useTheme,
   withTheme,
+  createTheme,
+  registerCustomIconType,
 };
 
 export type {

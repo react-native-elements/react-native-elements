@@ -1,7 +1,7 @@
 import { Platform, Dimensions, PressableProps, ColorValue } from 'react-native';
 import color from 'color';
 import renderNode from './renderNode';
-import getIconType from './getIconType';
+import getIconType, { registerCustomIconType } from './getIconType';
 import normalizeText from './normalizeText';
 import { Colors, lightColors, darkColors } from './colors';
 import { InlinePressableProps } from './InlinePressableProps';
@@ -58,6 +58,7 @@ export {
   lightColors,
   darkColors,
   color,
+  registerCustomIconType,
 };
 
 export { default as BackgroundImage } from './BackgroundImage';
