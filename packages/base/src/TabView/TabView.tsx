@@ -43,11 +43,20 @@ export interface TabViewBaseProps {
   /** Disables transition */
   disableTransition?: Boolean;
 
-  /**   */
+  /**
+   * Handler when the user swipes the view.
+   * @type (direction) => void
+   */
   onSwipeStart?: (dir: 'left' | 'right') => void;
 
+  /**
+   * Minimum distance to swipe before the view changes.
+   */
   minSwipeRatio?: number;
 
+  /**
+   * Minimum speed to swipe before the view changes.
+   */
   minSwipeSpeed?: number;
 }
 
