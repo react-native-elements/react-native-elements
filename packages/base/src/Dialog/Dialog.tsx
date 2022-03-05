@@ -30,7 +30,7 @@ export const DialogBase: RneFunctionComponent<DialogBaseProps> = ({
       testID="Internal__Overlay"
       {...rest}
     >
-      <View style={styles.childrenContainer}>{children}</View>
+      <View>{children}</View>
     </Overlay>
   );
 };
@@ -39,9 +39,6 @@ const styles = StyleSheet.create({
   dialog: {
     width: '75%',
     padding: 20,
-  },
-  childrenContainer: {
-    marginBottom: 5,
   },
   buttonView: {
     marginTop: 10,
