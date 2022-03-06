@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "module": "CommonJS",
+    "downlevelIteration": true
+  }
+}
