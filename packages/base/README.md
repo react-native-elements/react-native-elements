@@ -56,7 +56,6 @@ import { Button } from 'react-native-elements';
 - [x] [Button](https://reactnativeelements.com/docs/button)
 - [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
 - [x] [Card](https://reactnativeelements.com/docs/card)
-- [x] [Carousel](https://reactnativeelements.com/docs/carousel)
 - [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
 - [x] [Divider](https://reactnativeelements.com/docs/divider)
 - [x] [FAB](https://reactnativeelements.com/docs/fab)
