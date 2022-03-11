@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { View, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+import { StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import { Overlay, OverlayProps } from '../Overlay';
 import { RneFunctionComponent } from '../helpers';
 
@@ -30,7 +30,7 @@ export const DialogBase: RneFunctionComponent<DialogBaseProps> = ({
       testID="Internal__Overlay"
       {...rest}
     >
-      <View>{children}</View>
+      {children}
     </Overlay>
   );
 };
