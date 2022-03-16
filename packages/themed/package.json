@@ -16,6 +16,9 @@
     "reactnative",
     "bootstrap"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc --composite false",
     "test": "jest",

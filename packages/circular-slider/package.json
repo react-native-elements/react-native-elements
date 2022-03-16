@@ -33,6 +33,9 @@
       "url": "https://github.com/arpitBhalla"
     }
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/react-native-elements/react-native-elements/issues"
