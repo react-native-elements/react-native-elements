@@ -1,6 +1,6 @@
 {
   "name": "@react-native-elements/themed",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0-rc.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -41,7 +41,7 @@
     "@react-native-elements/base": "^4.0.0-beta.1"
   },
   "devDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.1"
+    "@react-native-elements/base": "^4.0.0-rc.0"
   },
   "jest": {
     "displayName": "@react-native-elements/themed",
