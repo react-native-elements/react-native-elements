@@ -11,38 +11,56 @@ import { SiExpo, SiReact } from 'react-icons/si';
 
 ## Installation
 
-In the same directory as your package.json file, create or edit an .npmrc file to include a line specifying GitHub Packages URL and the account owner.
+### Stable
 
-    @react-native-elements:registry=https://npm.pkg.github.com
+**Important**: This version is published on GitHub Package registry, before you continue installing, you need to [Authenticate with GitHub using PAT](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token)
 
-<Tabs
-values={[
-{ label: 'Stable', value: 'stable', },
-{ label: 'Bleeding Edge', value: 'edge', },
-]
-}>
-<TabItem value="stable">
+Run the following command to authenticate with GitHub:
 
 ```bash
-# with npm
+npm login --scope=@react-native-elements --registry=https://npm.pkg.github.com
+```
+
+<Tabs
+groupId='pkg'
+values={[
+{ label: 'NPM', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
+]}>
+<TabItem value="npm">
+
+```bash
 npm install @react-native-elements/themed @react-native-elements/base
 ```
 
+</TabItem>
+<TabItem value="yarn">
+
 ```bash
-# with yarn
 yarn add @react-native-elements/themed @react-native-elements/base
 ```
 
 </TabItem>
-<TabItem value="edge">
+</Tabs>
 
-Using npm
+### Bleeding Edge
+
+You can install unreleased version, but things may break.
+
+<Tabs
+groupId='pkg'
+values={[
+{ label: 'NPM', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
+]}>
+<TabItem value="npm">
 
 ```bash
 npm install react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
 ```
 
-Using yarn
+</TabItem>
+<TabItem value="yarn">
 
 ```bash
 yarn add react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed

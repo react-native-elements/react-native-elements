@@ -11,38 +11,46 @@ import { SiExpo, SiReact } from 'react-icons/si';
 
 ## Installation
 
-In the same directory as your package.json file, create or edit an .npmrc file to include a line specifying GitHub Packages URL and the account owner.
-
-    @react-native-elements:registry=https://npm.pkg.github.com
+### Stable
 
 <Tabs
+groupId='pkg'
 values={[
-{ label: 'Stable', value: 'stable', },
-{ label: 'Bleeding Edge', value: 'edge', },
-]
-}>
-<TabItem value="stable">
+{ label: 'NPM', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
+]}>
+<TabItem value="npm">
 
 ```bash
-# with npm
 npm install @react-native-elements/themed @react-native-elements/base
 ```
 
+</TabItem>
+<TabItem value="yarn">
+
 ```bash
-# with yarn
 yarn add @react-native-elements/themed @react-native-elements/base
 ```
 
 </TabItem>
-<TabItem value="edge">
+</Tabs>
 
-Using npm
+### Bleeding Edge
+
+<Tabs
+groupId='pkg'
+values={[
+{ label: 'NPM', value: 'npm', },
+{ label: 'Yarn', value: 'yarn', },
+]}>
+<TabItem value="npm">
 
 ```bash
 npm install react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
 ```
 
-Using yarn
+</TabItem>
+<TabItem value="yarn">
 
 ```bash
 yarn add react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
