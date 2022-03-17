@@ -3431,7 +3431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@^4.0.0-beta.1, @react-native-elements/base@workspace:packages/base":
+"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@^4.0.0-rc.0, @react-native-elements/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@react-native-elements/base@workspace:packages/base"
   dependencies:
@@ -3469,7 +3469,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-elements/themed@workspace:packages/themed"
   dependencies:
-    "@react-native-elements/base": ^4.0.0-beta.1
+    "@react-native-elements/base": ^4.0.0-rc.0
   peerDependencies:
     "@react-native-elements/base": ^4.0.0-beta.1
   languageName: unknown
