@@ -1,54 +1,34 @@
-name: Expo Preview
-on:
-  pull_request:
-    branches:
-      - "next"
-    paths:
-      - "src/**"
-
+name: Expo CLI
+on: [pull_request]
 jobs:
   publish:
-    name: Install and publish Expo preview
+    defaults:
+      run:
+        working-directory: example
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'react-native-elements/react-native-elements'}}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: "14"
-      - name: Setup Expo
-        uses: expo/expo-github-action@v6
+          node-version: 16.x
+          cache: yarn
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
         with:
-          expo-version: 5.x
-          username: ${{ secrets.EXPO_CLI_USERNAME }}
-          password: ${{ secrets.EXPO_CLI_PASSWORD }}
-          expo-cache: true
+          expo-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Install dependencies & build PR
-        run: yarn && tsc
+      - name: Install dependencies
+        uses: ./.github/actions/install
 
-      - name: Clone RNE-app & install dependencies
-        run: |
-          git clone https://github.com/react-native-elements/react-native-elements-app demo-app
-          cd demo-app
-          npm i
-          mv ../dist/ ./node_modules/react-native-elements/dist
+      - name: 🚀 Publish preview
+        run: expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
-      - name: Publish Expo app
-        working-directory: demo-app
-        run: |
-          expo login -u ${{ secrets.EXPO_CLI_USERNAME }} -p ${{ secrets.EXPO_CLI_PASSWORD }}
-          expo publish --release-channel=pr-${{ github.event.number }}
-
-      - name: Get expo link
-        id: expo
-        run: echo "::set-output name=path::@flyingcircle/react-native-elements-app?release-channel=pr-${{ github.event.number }}"
-
-      - name: Comment on PR
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 💬 Comment preview
+        uses: expo/expo-github-action/preview-comment@v7
         with:
-          msg: The mobile version of example app from this branch is ready! You can [see it here](https://expo.dev/${{ steps.expo.outputs.path }})<br><br><a href="https://exp.host/${{ steps.expo.outputs.path }}"><img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=exp://exp.host/${{ steps.expo.outputs.path }}" height="200px" width="200px"></a>.
+          channel: pr-${{ github.event.number }}
