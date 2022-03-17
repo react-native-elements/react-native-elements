@@ -8,40 +8,36 @@ on:
 
 jobs:
   publish:
-    name: Install and publish Expo preview
     runs-on: ubuntu-latest
-    # if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'react-native-elements/react-native-elements'}}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: "14"
-      - name: Setup Expo
-        uses: expo/expo-github-action@v6
+          node-version: 16.x
+          cache: yarn
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-cache: true
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Install dependencies
-        uses: ./.github/actions/install
+      - name: 📦 Install dependencies
+        run: yarn install
 
-      - name: Publish Expo app
-        working-directory: example
-        # env:
-        #   EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: |
-          expo publish --release-channel=pr-${{ github.event.number }}  --non-interactive
+      - name: 🚀 Publish app
+        run: expo publish --release-channel=pr-${{ github.event.number }}  --non-interactive
 
-      - name: Get expo link
-        id: expo
-        run: echo "::set-output name=path::@rne_org/react-native-elements?release-channel=pr-${{ github.event.number }}"
+      # - name: Get expo link
+      #   id: expo
+      #   run: echo "::set-output name=path::@rne_org/react-native-elements?release-channel=pr-${{ github.event.number }}"
 
-      - name: Comment on PR
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          msg: The mobile version of example app from this branch is ready! You can [see it here](https://expo.dev/${{ steps.expo.outputs.path }})<br><br><a href="https://exp.host/${{ steps.expo.outputs.path }}"><img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=exp://exp.host/${{ steps.expo.outputs.path }}" height="200px" width="200px"></a>.
+      # - name: Comment on PR
+      #   uses: unsplash/comment-on-pr@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     msg: The mobile version of example app from this branch is ready! You can [see it here](https://expo.dev/${{ steps.expo.outputs.path }})<br><br><a href="https://exp.host/${{ steps.expo.outputs.path }}"><img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=exp://exp.host/${{ steps.expo.outputs.path }}" height="200px" width="200px"></a>.
