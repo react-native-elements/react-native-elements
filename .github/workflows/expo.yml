@@ -1,11 +1,4 @@
-name: Expo Preview
-on:
-  pull_request:
-    branches:
-      - "next"
-    paths:
-      - "example/**"
-
+on: [pull_request]
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -25,19 +18,13 @@ jobs:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: 📦 Install dependencies
-        run: yarn install
+      - name: Install dependencies
+        uses: ./.github/actions/install
 
-      - name: 🚀 Publish app
-        run: expo publish --release-channel=pr-${{ github.event.number }}  --non-interactive
+      - name: 🚀 Publish preview
+        run: expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
-      # - name: Get expo link
-      #   id: expo
-      #   run: echo "::set-output name=path::@rne_org/react-native-elements?release-channel=pr-${{ github.event.number }}"
-
-      # - name: Comment on PR
-      #   uses: unsplash/comment-on-pr@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     msg: The mobile version of example app from this branch is ready! You can [see it here](https://expo.dev/${{ steps.expo.outputs.path }})<br><br><a href="https://exp.host/${{ steps.expo.outputs.path }}"><img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=exp://exp.host/${{ steps.expo.outputs.path }}" height="200px" width="200px"></a>.
+      - name: 💬 Comment preview
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
