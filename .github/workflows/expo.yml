@@ -1,3 +1,4 @@
+name: Expo CLI
 on: [pull_request]
 jobs:
   publish:
