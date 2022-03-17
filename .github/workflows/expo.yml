@@ -1,6 +1,9 @@
 on: [pull_request]
 jobs:
   publish:
+    defaults:
+      run:
+        working-directory: example
     runs-on: ubuntu-latest
     steps:
       - name: 🏗 Setup repo
