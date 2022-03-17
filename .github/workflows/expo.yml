@@ -21,20 +21,19 @@ jobs:
       - name: Setup Expo
         uses: expo/expo-github-action@v6
         with:
-          expo-version: 5.x
-          username: ${{ secrets.EXPO_CLI_USERNAME }}
-          password: ${{ secrets.EXPO_CLI_PASSWORD }}
+          expo-version: latest
           expo-cache: true
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Install dependencies
         uses: ./.github/actions/install
 
       - name: Publish Expo app
         working-directory: example
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        # env:
+        #   EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: |
-          EXPO_TOKEN=${EXPO_TOKEN} expo publish --release-channel=pr-${{ github.event.number }}
+          expo publish --release-channel=pr-${{ github.event.number }}  --non-interactive
 
       - name: Get expo link
         id: expo
