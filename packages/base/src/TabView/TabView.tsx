@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Animated,
   PanResponder,
@@ -56,33 +56,41 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
 }) => {
   const { current: translateX } = React.useRef(new Animated.Value(0));
   const currentIndex = React.useRef(value);
-  const length = React.Children.count(children);
+  const validChildren = React.Children.toArray(children);
+  const length = validChildren.length;
   const window = useWindowDimensions();
 
-  const onPanResponderRelease = (
-    _: GestureResponderEvent,
-    { dx, dy }: PanResponderGestureState
-  ) => {
-    if (
-      (dx > 0 && currentIndex.current <= 0) ||
-      (dx < 0 && currentIndex.current >= length - 1)
-    ) {
-      return;
+  useEffect(() => {
+    if (currentIndex.current > length - 1) {
+      onChange(length - 1);
     }
-    if (Math.abs(dy) > Math.abs(dx)) {
-      return;
-    }
-    const position = dx / -window.width;
-    const next = position > value ? Math.ceil(position) : Math.floor(position);
-    onChange?.(currentIndex.current + next);
-  };
+  }, [length, onChange]);
 
-  const { current: panResponder } = React.useRef(
-    PanResponder.create({
-      onMoveShouldSetPanResponder: () => true,
-      onPanResponderGrant: () => true,
-      onPanResponderRelease,
-    })
+  const onPanResponderRelease = React.useCallback(
+    (_: GestureResponderEvent, { dx, dy }: PanResponderGestureState) => {
+      if (
+        (dx > 0 && currentIndex.current <= 0) ||
+        (dx < 0 && currentIndex.current >= length - 1)
+      ) {
+        return;
+      }
+      if (Math.abs(dy) > Math.abs(dx)) {
+        return;
+      }
+
+      onChange?.(currentIndex.current + (dx > 0 ? -1 : 1));
+    },
+    [length, onChange]
+  );
+
+  const panResponder = React.useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: () => true,
+        onPanResponderGrant: () => true,
+        onPanResponderRelease,
+      }),
+    [onPanResponderRelease]
   );
 
   const animate = React.useCallback(() => {
@@ -120,8 +128,9 @@ export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
       ])}
       {...(!disableSwipe && panResponder.panHandlers)}
     >
-      {React.Children.map(children, (child) => (
+      {validChildren.map((child, index) => (
         <View
+          key={index}
           style={StyleSheet.flatten([
             styles.container,
             { width: window.width },

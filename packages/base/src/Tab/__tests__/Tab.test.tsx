@@ -95,4 +95,15 @@ describe('Tab Component', () => {
     fireEvent(tabs[1], 'press');
     expect(tabs.length).toBe(2);
   });
+
+  it('should ignore conditionally unrendered children', () => {
+    const { queryAllByRole } = renderWithWrapper(
+      <Tab>
+        <Tab.Item />
+        {false && <Tab.Item />}
+        <Tab.Item />
+      </Tab>
+    );
+    expect(queryAllByRole('tab').length).toBe(2);
+  });
 });
