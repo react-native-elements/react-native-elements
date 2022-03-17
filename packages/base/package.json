@@ -1,6 +1,6 @@
 {
   "name": "@react-native-elements/base",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0-rc.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,6 +21,9 @@
     "android",
     "bootstrap"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc --composite false",
     "test": "jest",
