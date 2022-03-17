@@ -8,6 +8,7 @@ This is the Demo app for [React Native Elements](https://github.com/react-native
 
 This app also works on the `web` platform using [React Native Web](https://github.com/necolas/react-native-web). You can check out the [live website here](https://react-native-elements.github.io/react-native-elements-app). If you are looking to build a React Native mobile app which can reuse the code to deploy it on the web, this is the right place to begin. We decided to use [Expo](https://expo.io/), which reduces the effort required to build an app once and deploy it anywhere.
 
+
 ## Getting Started
 
 ### Run it locally
