@@ -88,7 +88,7 @@ Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) f
 ## Demo App
 
 Checkout the official
-[React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app)
+[React Native Elements App](https://expo.dev/@rne_org/react-native-elements)
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App, click

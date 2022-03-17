@@ -3431,7 +3431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@^4.0.0-beta.1, @react-native-elements/base@workspace:packages/base":
+"@react-native-elements/base@^4.0.0-beta.0, @react-native-elements/base@^4.0.0-rc.0, @react-native-elements/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@react-native-elements/base@workspace:packages/base"
   dependencies:
@@ -3469,7 +3469,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-elements/themed@workspace:packages/themed"
   dependencies:
-    "@react-native-elements/base": ^4.0.0-beta.1
+    "@react-native-elements/base": ^4.0.0-rc.0
   peerDependencies:
     "@react-native-elements/base": ^4.0.0-beta.1
   languageName: unknown
@@ -8423,6 +8423,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-json-utils@npm:~0.2.0":
+  version: 0.2.1
+  resolution: "expo-json-utils@npm:0.2.1"
+  checksum: 40a02f74de5c6bd61eb955ac4c3c80db0293de0b77bef9bfc604775b659495137d26993a824186196ed2c227968a7d8376c1056ee7351a4481b24ee2b2fe1315
+  languageName: node
+  linkType: hard
+
 "expo-keep-awake@npm:~10.0.1":
   version: 10.0.1
   resolution: "expo-keep-awake@npm:10.0.1"
@@ -8438,6 +8445,15 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: b2d125c6d2a493a48f0becb654391bd6ec7e23086000e0d9b29df32065c8b13bf193db750f6f7ba65ffb836837dc4941f65a7e59fca22961e20862345c5ecd49
+  languageName: node
+  linkType: hard
+
+"expo-manifests@npm:~0.2.2":
+  version: 0.2.4
+  resolution: "expo-manifests@npm:0.2.4"
+  dependencies:
+    expo-json-utils: ~0.2.0
+  checksum: 53ac977742d6b96b3b7a051851f73ef12d916038650f3581baba10d721f81310d0d69d8d0afddf5eec3d94076be76a3f57f772a811b8a944f47ac6a921c49987
   languageName: node
   linkType: hard
 
@@ -8490,6 +8506,41 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 199c94aa39c3a0a6bd6748a8001d445cd34008d281850583dfb8fb04d07e65cf8be08ecbed811b142a75b7a56bcb4c04dcefb5dc14dd769b0ed6928750516f0f
+  languageName: node
+  linkType: hard
+
+"expo-structured-headers@npm:~2.1.0":
+  version: 2.1.1
+  resolution: "expo-structured-headers@npm:2.1.1"
+  checksum: f67d06e489b331a8cc4ed92e600c75294ce1d61e21c2b69ca3a7f22190523db0fe787ba69f79d129430c0e209a427949c4b89b15b0aca700cf2609d049a383ce
+  languageName: node
+  linkType: hard
+
+"expo-updates-interface@npm:~0.5.0":
+  version: 0.5.1
+  resolution: "expo-updates-interface@npm:0.5.1"
+  peerDependencies:
+    expo: "*"
+  checksum: 3474251e93a407a4bc5b91ce6bc39eb7a2bd0d3ba3ce52620ed57cfbb1ca8c3e407073e71713d232327b118ab9ac9743a29df91a954701673d56b3526e91fb2e
+  languageName: node
+  linkType: hard
+
+"expo-updates@npm:~0.11.6":
+  version: 0.11.7
+  resolution: "expo-updates@npm:0.11.7"
+  dependencies:
+    "@expo/config": ^6.0.6
+    "@expo/config-plugins": ^4.0.2
+    "@expo/metro-config": ~0.2.6
+    expo-manifests: ~0.2.2
+    expo-structured-headers: ~2.1.0
+    expo-updates-interface: ~0.5.0
+    fbemitter: ^2.1.1
+    resolve-from: ^5.0.0
+    uuid: ^3.4.0
+  peerDependencies:
+    expo: "*"
+  checksum: 6354efd619402a8575dc110bfd41b3596c16033a7ad8663437e4873929a717e66951980d9b477dfb69f6ab0a072102154bde0ad54c812cec3c9d2e3db891e5e8
   languageName: node
   linkType: hard
 
@@ -15620,6 +15671,7 @@ __metadata:
     expo-asset: ~8.4.4
     expo-font: ~10.0.4
     expo-linear-gradient: ~11.0.0
+    expo-updates: ~0.11.6
     gh-pages: ^2.1.1
     jest-expo: ^44.0.0
     lodash: ^4.17.20
