@@ -29,6 +29,7 @@
     "expo-asset": "~8.4.4",
     "expo-font": "~10.0.4",
     "expo-linear-gradient": "~11.0.0",
+    "expo-updates": "~0.11.6",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
     "react": "17.0.1",

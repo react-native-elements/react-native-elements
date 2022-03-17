@@ -1,27 +1,22 @@
 {
   "expo": {
     "name": "React Native Elements",
-    "slug": "react-native-elements-app",
+    "owner": "rne_org",
+    "slug": "react-native-elements",
     "description": "A demo app for React Native Elements UI Library",
     "privacy": "public",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.1.0",
+    "platforms": ["ios", "android", "web"],
+    "version": "4.0.0",
     "orientation": "default",
     "primaryColor": "#cccccc",
     "icon": "./assets/icons/icon.png",
     "splash": {
-      "image": "./assets/icons/loading.png"
+      "image": "./assets/icons/icon.png"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
