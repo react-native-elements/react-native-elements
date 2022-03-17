@@ -1,5 +1,11 @@
-name: Expo CLI
-on: [pull_request]
+name: Expo CI
+
+on:
+  pull_request_target:
+    types: [assigned, opened, synchronize, reopened]
+    paths:
+      - "example/**"
+
 jobs:
   publish:
     defaults:
