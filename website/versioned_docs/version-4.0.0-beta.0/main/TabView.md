@@ -31,6 +31,8 @@ TabView enables swipeable tabs.
 - [animationType](#animationtype)
 - [onChange](#onchange)
 - [value](#value)
+- [containerStyle](#containerstyle)
+- [tabItemContainerStyle](#containerstyle)
 
 ### TabView.Item
 
@@ -77,6 +79,26 @@ Child position index value.
 | Type   | Default |
 | ------ | ------- |
 | number | 0       |
+
+---
+
+#### containerStyle
+
+Styling for Component container.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
+
+---
+
+#### tabItemContainerStyle
+
+Styling for TabView.Item Component container.
+
+| Type               | Default |
+| ------------------ | ------- |
+| View style(Object) | None    |
 
 ---
 

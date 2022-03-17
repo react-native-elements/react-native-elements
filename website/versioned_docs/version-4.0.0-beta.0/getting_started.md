@@ -1,6 +1,7 @@
 ---
 id: getting_started
 title: Getting Started
+slug: /
 ---
 
 import Tabs from '@theme/Tabs';
@@ -161,7 +162,7 @@ Manual linking of react-native-safe-area-context is not necessary if you're usin
 :::
 
 ```bash
-react-native link react-native-safe-area-context
+npx react-native link react-native-safe-area-context
 ```
 
 It is required to add the `SafeAreaProvider` to the outside of the app. The suggested way to do this is

@@ -29,7 +29,7 @@ dialogs.
 ## Props
 
 > This component inherits
-> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput.html),
+> [all native TextInput props that come with a standard React Native TextInput element](https://reactnative.dev/docs/textinput),
 > along with the following:
 
 - [`containerStyle`](#containerstyle)
@@ -165,7 +165,7 @@ label or React Component used instead of simple string in `label` prop
 
 |                                             Type                                              | Default |
 | :-------------------------------------------------------------------------------------------: | :-----: |
-| {[...Text props](https://reactnative.dev/docs/text.html#props)} **OR** passed component props |  none   |
+| {[...Text props](https://reactnative.dev/docs/text#props)} **OR** passed component props |  none   |
 
 ---
 

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 34,
+        "width": 34,
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        source={
+          Object {
+            "uri": "https://i.imgur.com/0y8Ftya.jpg",
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "flex": 1,
+            "height": undefined,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": undefined,
+          }
+        }
+        testID="RNE__Avatar__Image"
+        transitionDuration={360}
+      />
+      <View
+        accessibilityElementsHidden={true}
+        importantForAccessibility="no-hide-descendants"
+        pointerEvents="none"
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#bdbdbd",
+              "flex": 1,
+              "height": undefined,
+              "justifyContent": "center",
+              "width": undefined,
+            }
+          }
+          testID="RNE__Image__placeholder"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+        testID="RNE__Image__children__container"
+      />
+    </View>
+  </View>
+</View>
+`;

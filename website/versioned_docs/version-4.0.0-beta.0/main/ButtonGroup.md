@@ -40,6 +40,7 @@ This component inherits [all native TouchableHighlight and TouchableOpacity prop
 - [onHideUnderlay](#onhideunderlay)
 - [onPress](#onpress)
 - [onShowUnderlay](#onshowunderlay)
+- [pressableProps](#pressableprops)
 - [selectMultiple](#selectmultiple)
 - [selectedButtonStyle](#selectedbuttonstyle)
 - [selectedIndex](#selectedindex)
@@ -213,6 +214,14 @@ Function called on showing underlay.
 | Type     | Default |
 | -------- | ------- |
 | Function | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---
 

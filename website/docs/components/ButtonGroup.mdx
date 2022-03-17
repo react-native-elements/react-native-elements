@@ -1,0 +1,55 @@
+---
+id: buttongroup
+title: ButtonGroup
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/ButtonGroup.mdx";
+
+ButtonGroup is a linear set of segments, each of which function as a button that can display a different view/or perform a different action.
+Use a ButtonGroup to offer choices that are closely related but mutually exclusive.
+This component inherits [all native TouchableHighlight and TouchableOpacity props that come with React Native TouchableHighlight or TouchableOpacity elements](https://reactnative.dev/docs/touchablehighlight.html).
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                        | Type                                                                       | Default           | Description                                                                                                                          |
+| --------------------------- | -------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `Component`                 | React Component                                                            |                   | Choose other button component such as TouchableOpacity.                                                                              |
+| `activeOpacity`             | number                                                                     |                   | Add active opacity to the button in buttonGroup.                                                                                     |
+| `button`                    | object                                                                     |                   | Button for the component.                                                                                                            |
+| `buttonContainerStyle`      | View Style                                                                 |                   | Specify styling for button containers.                                                                                               |
+| `buttonStyle`               | View Style                                                                 |                   | Specify styling for button.                                                                                                          |
+| `buttons`                   | `(string` or `ReactElement<{}, string` or `JSXElementConstructor<any>>)[]` |                   | Array of buttons for component (required), if returning a component, must be an object with { element: componentName }.              |
+| `containerStyle`            | View Style                                                                 |                   | Specify styling for main button container.                                                                                           |
+| `disabled`                  | `boolean` or `number[]`                                                    | `false`           | Controls if buttons are disabled. Setting `true` makes all of them disabled, while using an array only makes those indices disabled. |
+| `disabledSelectedStyle`     | View Style                                                                 |                   | Styling for each selected button when disabled.                                                                                      |
+| `disabledSelectedTextStyle` | Text Style                                                                 |                   | Styling for the text of each selected button when disabled.                                                                          |
+| `disabledStyle`             | View Style                                                                 |                   | Styling for each button when disabled.                                                                                               |
+| `disabledTextStyle`         | Text Style                                                                 |                   | Styling for the text of each button when disabled.                                                                                   |
+| `innerBorderStyle`          | { color?: string; width?: number; }                                        |                   | Update the styling of the interior border of the list of buttons.                                                                    |
+| `onHideUnderlay`            | Function                                                                   |                   | Function called on hiding underlay.                                                                                                  |
+| `onLongPress`               | GestureResponderEventHandler                                               |                   | Called when a long-tap gesture is detected.                                                                                          |
+| `onPress`                   | (...args: any[]) => void                                                   | `Function`        | Method to update Button Group Index.                                                                                                 |
+| `onPressIn`                 | GestureResponderEventHandler                                               |                   | Called when a touch is engaged before `onPress`.                                                                                     |
+| `onPressOut`                | GestureResponderEventHandler                                               |                   | Called when a touch is released before `onPress`.                                                                                    |
+| `onShowUnderlay`            | Function                                                                   |                   | Function called on showing underlay.                                                                                                 |
+| `pressableProps`            | PressableProps except click handlers                                       | `None`            |                                                                                                                                      |
+| `selectMultiple`            | boolean                                                                    | `false`           | Allows the user to select multiple buttons.                                                                                          |
+| `selectedButtonStyle`       | View Style                                                                 |                   | Specify styling for selected button.                                                                                                 |
+| `selectedIndex`             | number                                                                     | `null`            | Current selected index of array of buttons.                                                                                          |
+| `selectedIndexes`           | number[]                                                                   | `[]`              | Current selected indexes from the array of buttons.                                                                                  |
+| `selectedTextStyle`         | Text Style                                                                 |                   | Specify specific styling for text in the selected state.                                                                             |
+| `setOpacityTo`              | (value: number) => void                                                    |                   | Function to set the opacity.                                                                                                         |
+| `textStyle`                 | Text Style                                                                 |                   | Specify specific styling for text.                                                                                                   |
+| `underlayColor`             | string                                                                     | `Color [Primary]` | Specify underlayColor for TouchableHighlight.                                                                                        |
+| `vertical`                  | boolean                                                                    | `false`           | Display the ButtonGroup vertically.                                                                                                  |
+
+</div>

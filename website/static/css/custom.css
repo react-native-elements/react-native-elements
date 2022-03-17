@@ -1,24 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,700&display=swap');
-* {
-  font-family: 'Ubuntu', sans-serif;
-  scrollbar-width: 8px;
-  scrollbar-color: var(--ifm-hero-background-color);
-}
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--ifm-hero-background-color); /* color of the tracking area */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgb(100, 100, 100); /* color of the scroll thumb */
-  border-radius: 1px; /* roundness of the scroll thumb */
-  /* border: 1px solid #000066;  */ /* creates padding around scroll thumb */
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
+  --ifm-scrollbar-size: 5px;
+  --ifm-scrollbar-track-background-color: #444444;
+  --ifm-scrollbar-thumb-background-color: #686868;
+  --ifm-scrollbar-thumb-hover-background-color: #7a7a7a;
+  --ifm-font-family-base: 'DM Sans', sans-serif;
+  --ifm-font-family-monospace: 'DM mono';
   --ifm-color-primary: #2089dc;
   --ifm-color-primary-dark: #1d7bc6;
   --ifm-color-primary-darker: #1b74bb;
@@ -26,21 +14,30 @@
   --ifm-color-primary-light: #3495e1;
   --ifm-color-primary-lighter: #3f9be3;
   --ifm-color-primary-lightest: #60ace8;
-
-  --ifm-hero-background-color: #e9e9e9;
+  /* --ifm-hero-background-color: #dbdddf; */
 
   --ifm-navbar-background-color: var(--ifm-hero-background-color);
 }
 
 :root[data-theme='dark'] {
-  --ifm-color-primary: #60ace8;
+  --ifm-color-primary: #0099ff;
   --ifm-color-primary-dark: #439de4;
   --ifm-color-primary-darker: #3596e2;
   --ifm-color-primary-darkest: #1d7dc9;
   --ifm-color-primary-light: #7dbbec;
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
-  --ifm-hero-background-color: #273036;
+  --ifm-hero-background-color: #27292b;
+}
+
+.table-responsive {
+  --ifm-table-border-width: 0px;
+  --ifm-table-cell-padding: 0.5rem;
+  font-size: small;
+}
+
+.table-responsive th {
+  text-align: left;
 }
 
 .label {
@@ -333,4 +330,340 @@ a code {
 
 .snack-player {
   height: 500px;
+}
+
+.header-github-link:after {
+  transition: opacity 0.2s;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-image: url("data:image/svg+xml,%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGitHub%3C/title%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html[data-theme='dark'] .header-github-link:after {
+  background-image: url("data:image/svg+xml,%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%0A%3E%3Ctitle%3EGitHub%3C/title%3E%3Cpath%0Afill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12' /%3E%3C/svg%3E%0A");
+}
+.header-github-link:hover:after {
+  opacity: 0.8;
+}
+
+.header-github-sponsor-link:after {
+  transition: opacity 0.2s;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23EA4AAA' role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGitHub Sponsors%3C/title%3E%3Cpath d='M17.625 1.499c-2.32 0-4.354 1.203-5.625 3.03-1.271-1.827-3.305-3.03-5.625-3.03C3.129 1.499 0 4.253 0 8.249c0 4.275 3.068 7.847 5.828 10.227a33.14 33.14 0 0 0 5.616 3.876l.028.017.008.003-.001.003c.163.085.342.126.521.125.179.001.358-.041.521-.125l-.001-.003.008-.003.028-.017a33.14 33.14 0 0 0 5.616-3.876C20.932 16.096 24 12.524 24 8.249c0-3.996-3.129-6.75-6.375-6.75zm-.919 15.275a30.766 30.766 0 0 1-4.703 3.316l-.004-.002-.004.002a30.955 30.955 0 0 1-4.703-3.316c-2.677-2.307-5.047-5.298-5.047-8.523 0-2.754 2.121-4.5 4.125-4.5 2.06 0 3.914 1.479 4.544 3.684.143.495.596.797 1.086.796.49.001.943-.302 1.085-.796.63-2.205 2.484-3.684 4.544-3.684 2.004 0 4.125 1.746 4.125 4.5 0 3.225-2.37 6.216-5.048 8.523z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-twitter-link:after {
+  transition: opacity 0.2s;
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-image: url("data:image/svg+xml,%3Csvg role='img' fill='%231DA1F2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ETwitter%3C/title%3E%3Cpath d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.card__icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 40px;
+}
+/**
+sidebar
+*/
+
+.navbar__logo {
+  max-width: 200px;
+}
+
+@media (max-width: 750px) {
+  .navbar__logo {
+    max-width: 150px;
+  }
+}
+
+nav.menu {
+  border-right: 1px solid var(--custom-border-color);
+  padding: 0;
+}
+
+.navbar__toggle svg {
+  width: 21px;
+}
+
+.navbar-sidebar__brand .navbar__brand {
+  flex: 1 0;
+}
+.navbar-sidebar__brand .react-toggle {
+  flex: 0;
+  text-align: right;
+}
+.navbar-sidebar__items .menu .menu__link {
+  color: var(--ifm-color-content);
+  display: block;
+}
+.navbar-sidebar__items .menu .menu__link .badge {
+  border-color: var(--ifm-background-color);
+  border-radius: 1em;
+  font-size: 0.6em;
+  margin-top: -1em;
+  margin-left: 0.25em;
+}
+.navbar-sidebar__items .menu .menu__link.menu__link--sublist::after {
+  display: none;
+}
+.menu__list-item svg,
+.navbar__link svg {
+  display: none;
+}
+
+/*
+ * Docs
+ */
+
+.menu.menu--responsive {
+  padding: 0;
+}
+@media screen and (max-width: 996px) {
+  .menu.menu--responsive {
+    padding-left: 24px;
+  }
+}
+.menu > ul.menu__list li {
+  /* margin-top: 0rem; */
+  margin-bottom: 0;
+}
+.menu > ul.menu__list li > a {
+  padding-left: 0;
+  padding-right: 0;
+  /* color: var(--custom-content-color); */
+}
+.menu .menu__list-item-hidden {
+  display: none;
+}
+
+/* Category headers */
+
+/* First sidebar nav section  */
+.menu > .menu__list > .menu__list-item:first-child {
+  /* margin-top: 16px; */
+}
+
+/* First sidebar nav section  */
+.menu > .menu__list > .menu__list-item > .menu__link::after {
+  display: none;
+}
+
+/* All sidebar nav sections  */
+.menu > .menu__list > .menu__list-item {
+  margin-bottom: 16px;
+}
+
+/* Sidebar nav header  */
+a.menu__link.menu__link--sublist.menu__link {
+  margin-bottom: 2px;
+  color: var(--ifm-color-gray-600) !important;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0%;
+}
+.menu__list-item-collapsible:hover {
+  background: none !important;
+}
+
+.menu > ul.menu__list > li.menu__list-item:first-child div.title {
+  margin-top: 0;
+}
+.menu > ul.menu__list ul.menu__list {
+  /* border-left: 1px solid var(--ifm-color-primary); */
+  padding-left: var(--ifm-menu-link-padding-horizontal);
+  /* padding-left: 0.8rem; */
+  margin-left: 0;
+}
+.menu > ul.menu__list ul.menu__list .menu__link {
+  border-radius: 0;
+  font-size: 0.8rem;
+  padding-left: 0rem;
+  font-weight: 500;
+}
+.menu > ul.menu__list > li > ul.menu__list {
+  border-left: 0px none;
+  padding-left: 0;
+  margin: 4px 0;
+}
+.menu .menu__link,
+.menu .menu__link:hover,
+.menu .menu__link.menu__link--active:not(.menu__link--sublist) {
+  background: none;
+  line-height: calc(var(--ifm-spacing-vertical) * 0.7);
+}
+
+.menu__link--sublist {
+  margin-bottom: 0;
+  /* padding: 0; */
+}
+
+.menu__link {
+  /* padding: 0;
+  margin: 0; */
+  /* font-weight: 700; */
+}
+
+/*
+  Link chevrons
+*/
+.menu .menu__link.menu__link--sublist::after {
+  background-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg"  viewBox="-6 -6 38 38"><path fill="inherit" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg"  viewBox="-6 -6 38 38"><path fill="inherit" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  -webkit-mask-size: cover;
+  width: 16px;
+  height: 16px;
+  mask-size: cover;
+  background: var(--ifm-color-gray-700);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: var(--ifm-transition-fast) ease;
+  transform-origin: center;
+  filter: none;
+}
+.menu .menu__link.menu__link--sublist:hover::after,
+.menu .menu__link.menu__link--sublist.menu__link--active::after {
+  background-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg"  viewBox="-6 -6 38 38"><path fill="inherit" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg"  viewBox="-6 -6 38 38"><path fill="inherit" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  -webkit-mask-size: cover;
+  width: 16px;
+  height: 16px;
+  mask-size: cover;
+  background: var(--ifm-color-gray-700);
+}
+
+.menu .menu__list-item.menu__list-item--collapsed .menu__link--sublist::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.menu .menu__link .badges {
+  vertical-align: top;
+  margin-top: -1px;
+}
+.menu .menu__link .badge {
+  background-clip: padding-box;
+  border: 1px solid var(--custom-content-color-light);
+  border-radius: 0.25em;
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: bold;
+  height: 1rem;
+  line-height: 1rem;
+  margin-right: 2px;
+  padding: 0 0.25rem;
+  vertical-align: middle;
+}
+
+/* Make the Docs page take up full height to fix the left sidebar */
+div.container.padding-vert--lg .row {
+  min-height: 100vh;
+}
+/* Disable full height for child rows */
+div.container.padding-vert--lg .row .row {
+  min-height: auto;
+}
+div[class^='docItemContainer_'] {
+  max-width: none;
+}
+@media (min-width: 997px) {
+  div[class^='docItemContainer_'] {
+    max-width: none;
+    padding: 0 calc(var(--ifm-spacing-horizontal) * 2);
+  }
+}
+
+div[class^='docSidebarContainer_'] {
+  border-right-color: var(--ifm-sidebar-border-color);
+}
+
+div[class^='sidebar_'] .menu {
+  margin-right: calc(var(--ifm-spacing-horizontal) * -1);
+}
+div[class^='sidebar_'] .menu .menu__link {
+  padding-right: var(--ifm-menu-link-padding-horizontal);
+  color: var(--ifm-color-emphasis-800);
+}
+div[class^='sidebar_']
+  .menu__link.menu__link--active:not(.menu__link--sublist) {
+  border-radius: 0;
+  border-right: 2px solid var(--ifm-color-primary);
+  padding-right: calc(var(--ifm-menu-link-padding-horizontal) - 2px);
+  color: var(--ifm-color-primary);
+}
+div[class^='sidebar_']
+  .menu__link.menu__link--active:not(.menu__link--sublist)
+  .badge {
+  background: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  color: white;
+}
+@media (min-width: 997px) {
+  div[class^='sidebar_'] {
+    padding-right: var(--ifm-spacing-horizontal);
+    padding-left: var(--ifm-spacing-horizontal);
+  }
+}
+
+.DocSearch-Button {
+  border-radius: 8px !important;
+}
+.DocSearch-Button > svg {
+  display: none;
+}
+.DocSearch-Button-Placeholder {
+  font-family: var(--ifm-font-family-base);
+  line-height: 10px;
+}
+
+/**
+Card
+*/
+a.card {
+  text-decoration: none !important;
+  color: var(--ifm-color-content);
+  box-shadow: none;
+  border: 1px solid transparent;
+  display: flex;
+  font-size: 0.8rem;
+}
+a.card .card__body {
+  flex: 1;
+  flex-grow: 1;
+}
+a.card:hover {
+  transition: all 0.2s ease;
+  border: 1px solid var(--ifm-color-primary);
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1),
+    0 0 0 1px var(--ifm-color-primary) !important;
+}
+.row.is-multiline .col {
+  margin-top: var(--ifm-spacing-horizontal) !important;
+  margin-bottom: var(--ifm-spacing-horizontal) !important;
+}
+@media screen and (min-width: 996px) {
+}
+
+.inline-flex-center {
+  display: inline-flex;
+  align-items: center;
 }

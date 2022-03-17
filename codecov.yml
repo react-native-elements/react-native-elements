@@ -1,0 +1,31 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 78% #overall project/ repo coverage
+      base:
+        target: 75%
+        flags:
+          - base
+      themed:
+        target: 75%
+        flags:
+          - themed
+
+# adding Flags to your `layout` configuration to show up in the PR comment
+comment:
+  require_changes: false
+
+# New root YAML section = `flags:`
+# This is where you would define every flag from your
+# uploader, and update when new Flags added
+
+flags:
+  base:
+    paths: #note, accepts globs, not regexes
+      - packages/base/
+    carryforward: false
+  themed:
+    paths: #note, accepts globs, not regexes
+      - packages/themed/
+    carryforward: true

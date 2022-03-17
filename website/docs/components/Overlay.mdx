@@ -1,0 +1,39 @@
+---
+id: overlay
+title: Overlay
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/Overlay.mdx";
+
+The Overlay is a view that floats above an app’s content.
+Overlays are an easy way to inform or request information from the user.
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name              | Type                                 | Default    | Description                                                                |
+| ----------------- | ------------------------------------ | ---------- | -------------------------------------------------------------------------- |
+| `ModalComponent`  | typeof Component                     |            | Override React Native `Modal` component (usable for web-platform).         |
+| `backdropStyle`   | View Style                           |            | Style of the backdrop container.                                           |
+| `fullScreen`      | boolean                              | `false`    | If set to true, the modal will take up the entire screen width and height. |
+| `isVisible`       | boolean                              |            | If true, the overlay is visible.                                           |
+| `onBackdropPress` | Function                             | `Function` | Handler for backdrop press (only works when `fullscreen` is false).        |
+| `onLongPress`     | GestureResponderEventHandler         |            | Called when a long-tap gesture is detected.                                |
+| `onPressIn`       | GestureResponderEventHandler         |            | Called when a touch is engaged before `onPress`.                           |
+| `onPressOut`      | GestureResponderEventHandler         |            | Called when a touch is released before `onPress`.                          |
+| `overlayStyle`    | View Style                           |            | Style of the actual overlay.                                               |
+| `pressableProps`  | PressableProps except click handlers | `None`     |                                                                            |
+
+</div>

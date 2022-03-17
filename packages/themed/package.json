@@ -1,0 +1,84 @@
+{
+  "name": "@react-native-elements/themed",
+  "version": "4.0.0-rc.0",
+  "description": "React Native Elements & UI Toolkit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "prepublish": "tsc --composite false",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react-native",
+    "reactjs",
+    "reactnative",
+    "bootstrap"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "tsc --composite false",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "postinstall": "opencollective-postinstall || exit 0",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "rimraf node_modules && yarn"
+  },
+  "author": "Nader Dabit & Monte Thakkar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-elements/react-native-elements/issues"
+  },
+  "homepage": "https://reactnativeelements.com/",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
+  "peerDependencies": {
+    "@react-native-elements/base": "^4.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@react-native-elements/base": "^4.0.0-rc.0"
+  },
+  "jest": {
+    "displayName": "@react-native-elements/themed",
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ],
+    "moduleNameMapper": {
+      "@react-native-elements/base/dist/([^/]+)": "<rootDir>/../base/src/$1",
+      "@react-native-elements/([^/]+)": "<rootDir>/../$1/src"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/../../node_modules/(?!(@react-native|react-native|@react-native-elements/base)/)"
+    ],
+    "coveragePathIgnorePatterns": [],
+    "setupFilesAfterEnv": [
+      "<rootDir>/.ci/setupTests.ts"
+    ],
+    "collectCoverage": true,
+    "globals": {
+      "__DEV__": true
+    },
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.tsx",
+      "!src/helpers/*.tsx"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+  }
+}
