@@ -4,8 +4,6 @@
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "react-native": "src/index.ts",
-  "source": "src/index.ts",
   "prepublish": "tsc --composite false",
   "files": [
     "dist"
@@ -41,7 +39,7 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "peerDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.1"
+    "@react-native-elements/base": "^4.0.0-rc.0"
   },
   "devDependencies": {
     "@react-native-elements/base": "^4.0.0-rc.0"
