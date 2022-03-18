@@ -1,10 +1,12 @@
-name: Expo CI
+name: Expo Default Channel Preview CI
 
 on:
-  pull_request_target:
-    types: [assigned, opened, synchronize, reopened]
-    paths:
-      - "example/**"
+  push:
+    branches:
+      - "next"
+    paths-ignore:
+      - "website/**"
+      - "scripts/**"
 
 jobs:
   publish:
@@ -32,9 +34,4 @@ jobs:
         uses: ./.github/actions/install
 
       - name: 🚀 Publish preview
-        run: expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
-
-      - name: 💬 Comment preview
-        uses: expo/expo-github-action/preview-comment@v7
-        with:
-          channel: pr-${{ github.event.number }}
+        run: expo publish --non-interactive
