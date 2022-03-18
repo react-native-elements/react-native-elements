@@ -12,7 +12,7 @@ import {
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
 
-export interface TabBaseProps extends ViewProps {
+export interface TabProps extends ViewProps {
   /** Child position index value. */
   value?: number;
 
@@ -44,7 +44,7 @@ export interface TabBaseProps extends ViewProps {
  * %jsx <Tab.Item title="Tab 1" buttonStyle={(active)=>{backgroundColor: active ? 'red' : 'blue'}} />
  *
  *  */
-export const TabBase: RneFunctionComponent<TabBaseProps> = ({
+export const TabBase: RneFunctionComponent<TabProps> = ({
   theme = defaultTheme,
   children,
   value,

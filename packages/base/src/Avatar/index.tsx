@@ -1,8 +1,9 @@
-import { Avatar, AvatarProps } from './Avatar';
+import { Avatar as AvatarBase, AvatarProps } from './Avatar';
 import { Accessory, AccessoryProps } from './Avatar.Accessory';
 
-const DefaultAvatar = Object.assign(Avatar, {
+const Avatar = Object.assign(AvatarBase, {
   Accessory,
 });
-export { DefaultAvatar as Avatar, Accessory };
+export { Avatar, Accessory };
+
 export type { AccessoryProps, AvatarProps };

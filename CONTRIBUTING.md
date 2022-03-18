@@ -180,14 +180,15 @@ setup on your local machine:
 
    ```text
    .
-      example # demo expo app
-      packages
-           base     # component without theme
-           themed   # component using withTheme HOC
-           ....     # rest components having universal device support
-      website
-           docs     # prop API docs
-           scripts  # scripts for autoDocGen
+   ├── example # demo expo app
+   ├── scripts
+   ├── packages
+   │   ├── base     # component without theme
+   │   ├── themed   # component using withTheme HOC
+   │   └── ....     # rest components having universal device support
+   └── website
+       ├── docs     # prop API docs
+       └── scripts  # scripts for autoDocGen
    ```
 
 4. Install dependencies
@@ -199,7 +200,8 @@ setup on your local machine:
 5. While developing, you can run the example app with Expo to test your changes:
 
    ```bash
-   yarn example start
+   cd example
+   yarn start
    ```
 
    Make sure your code passes TypeScript and ESLint. Run the following to verify:
@@ -235,8 +237,6 @@ Scripts can be executed via `npm run [script]` or `yarn [script]`.
 - `lint`- check for lint issues
 - `format`- check for formatting issues
 - `typescript`- check for type build issue
-- `docs:serve`- start website
-- `docs:format`- format website docs
 - `docs-build`- build website
 - `docs-build-api`- build component prop APIs
 
@@ -250,8 +250,13 @@ yarn docs-build-api
 
 ### Checks and how to fix them
 
+When you push some changes few CI checks will run, if your PR fails one of them, you can fix it by running the following:
+
+![CI Checks](website/static/img/website/ci-checks.png)
+
 | **Check Name**     | **Description**              | **Fix/verify using**  |
 | ------------------ | ---------------------------- | --------------------- |
+| `yarn_install`     | Checks change in lock file   | `yarn install`        |
 | `check_unit_tests` | Jest unit tests for packages | `yarn run test`       |
 | `check_types`      | Typescript type checks       | `yarn typescript`     |
 | `check_lint`       | Linting/formatting related   | `yarn lint`           |

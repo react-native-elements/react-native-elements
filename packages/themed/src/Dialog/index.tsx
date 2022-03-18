@@ -17,7 +17,7 @@ import {
 } from '@react-native-elements/base/dist/Dialog/Dialog.Actions';
 import {
   DialogBase,
-  DialogBaseProps,
+  DialogProps,
 } from '@react-native-elements/base/dist/Dialog/Dialog';
 
 const ThemedDialogLoading = withTheme<DialogLoadingProps>(
@@ -38,13 +38,13 @@ const ThemedDialogActions = withTheme<DialogActionsProps>(
 );
 
 export type {
-  DialogBaseProps as DialogProps,
+  DialogProps,
   DialogLoadingProps,
   DialogTitleProps,
   DialogActionsProps,
 };
 
-export default Object.assign(withTheme<DialogBaseProps>(DialogBase, 'Dialog'), {
+export default Object.assign(withTheme<DialogProps>(DialogBase, 'Dialog'), {
   Loading: ThemedDialogLoading,
   Title: ThemedDialogTitle,
   Actions: ThemedDialogActions,

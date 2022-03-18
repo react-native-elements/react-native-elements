@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Platform, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export interface CardBaseProps {
+export interface CardProps {
   /** Outer container style. */
   containerStyle?: StyleProp<ViewStyle>;
 
@@ -13,7 +13,7 @@ export interface CardBaseProps {
 /** Cards are a great way to display information, usually containing content and actions about a single subject.
  * Cards can contain images, buttons, text and more.
  * Cards are mainly used for informative purpose.*/
-export const CardBase: RneFunctionComponent<CardBaseProps> = ({
+export const CardBase: RneFunctionComponent<CardProps> = ({
   children,
   containerStyle,
   wrapperStyle,
