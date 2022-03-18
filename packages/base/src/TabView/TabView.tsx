@@ -77,7 +77,7 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
   minSwipeSpeed = 1,
 }) => {
   const translateX = React.useRef(new Animated.Value(0));
-  const panX = React.useRef(0);
+  const currentIndex = React.useRef(0);
   const [containerWidth, setContainerWidth] = React.useState(1);
 
   const childCount = React.useMemo(
@@ -102,9 +102,9 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
       const position = dx / -containerWidth;
       const shouldSwipe =
         Math.abs(position) > minSwipeRatio || Math.abs(vx) > minSwipeSpeed;
-      panX.current += shouldSwipe ? Math.sign(position) : 0;
-      animate(panX.current);
-      onChange(panX.current);
+      currentIndex.current += shouldSwipe ? Math.sign(position) : 0;
+      animate(currentIndex.current);
+      onChange(currentIndex.current);
     },
     [animate, containerWidth, minSwipeRatio, minSwipeSpeed, onChange]
   );
@@ -116,7 +116,7 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
           onSwipeStart(vx > 0 ? 'left' : 'right');
         },
         onMoveShouldSetPanResponder: (_, { dx, dy, vx, vy }) => {
-          const panXInt = Math.floor(panX.current);
+          const panXInt = Math.floor(currentIndex.current);
           return (
             !(
               (dx > 0 && panXInt <= 0) ||
@@ -128,7 +128,9 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
         },
         onPanResponderMove: (_, { dx }) => {
           const position = dx / -containerWidth;
-          translateX.current.setValue(Math.floor(panX.current) + position);
+          translateX.current.setValue(
+            Math.floor(currentIndex.current) + position
+          );
         },
         onPanResponderRelease: releaseResponder,
         onPanResponderTerminate: releaseResponder,
@@ -137,9 +139,9 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
   );
 
   React.useEffect(() => {
-    if (Number.isInteger(value) && value !== panX.current) {
+    if (Number.isInteger(value) && value !== currentIndex.current) {
       animate(value);
-      panX.current = value;
+      currentIndex.current = value;
     }
   }, [animate, value]);
 
