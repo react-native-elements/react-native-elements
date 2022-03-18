@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - next
+    paths:
+      - "packages/**"
 jobs:
   test:
     name: "check_unit_tests"

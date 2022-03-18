@@ -1,11 +1,9 @@
 {
   "name": "@react-native-elements/themed",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0-rc.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "react-native": "src/index.ts",
-  "source": "src/index.ts",
   "prepublish": "tsc --composite false",
   "files": [
     "dist"
@@ -16,6 +14,9 @@
     "reactnative",
     "bootstrap"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc --composite false",
     "test": "jest",
@@ -38,10 +39,10 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "peerDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.1"
+    "@react-native-elements/base": "^4.0.0-rc.0"
   },
   "devDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.1"
+    "@react-native-elements/base": "^4.0.0-rc.0"
   },
   "jest": {
     "displayName": "@react-native-elements/themed",

@@ -1,12 +1,11 @@
 import {
-  isTrue,
   tabify,
   codify,
   snippetToCode,
   removeNewline,
   filterPropType,
-  installationTab,
 } from './utils';
+import { MUST_INCLUDE_PROP_TYPES } from './parentProps';
 import { ComponentDoc, Props } from 'react-docgen-typescript';
 import orderBy from 'lodash/orderBy';
 import prettier from 'prettier';
@@ -17,11 +16,35 @@ import {
   Method,
   StringIndexedObject,
 } from 'react-docgen-typescript/lib/parser';
+import Handlebars from 'handlebars';
+
+type PropRowT = {
+  name?: string;
+  description?: string;
+  default?: string;
+  type?: string;
+};
+
+type TemplateOptionsT = {
+  id: string;
+  title: string;
+  description: string;
+  imports: string;
+  installation: string;
+  showUsage: string | true;
+  usageFileExists: boolean;
+  usage: string;
+  showProps: boolean;
+  props?: PropRowT[];
+  includeProps?: string;
+};
 
 const pkgPath = path.join(__dirname, '../../packages');
 const docsPath = path.join(__dirname, '../../website/docs');
 
-const mustAddPropType = ['InlinePressableProps'];
+const template = Handlebars.compile(
+  String(fs.readFileSync(path.join(__dirname, 'mdx-template.hbs')))
+);
 
 export class Markdown implements ComponentDoc {
   description: string;
@@ -46,7 +69,7 @@ export class Markdown implements ComponentDoc {
     this.print(this.generate());
   }
 
-  private print(mdContent: string) {
+  private print(mdContent: TemplateOptionsT) {
     const pkgRegExp = new RegExp('packages/(.*)/src');
     const [, pkg] = this.filePath.match(pkgRegExp);
     const [parentComp = '', childComp = ''] = this.displayName.split('.');
@@ -63,61 +86,46 @@ export class Markdown implements ComponentDoc {
     );
     console.log('', childComp ? '  ' + childComp : parentComp);
 
-    fs.writeFileSync(mdFilePath, prettier.format(mdContent, { parser: 'mdx' }));
+    fs.writeFileSync(
+      mdFilePath,
+      // './test.mdx',
+      prettier.format(template(mdContent), { parser: 'mdx' })
+    );
   }
 
-  private generate() {
+  private generate(): TemplateOptionsT {
     const id = this.displayName.toLowerCase().replace('.', '_');
-    const { imports = '', installation = '' } = this.tags || {};
+    const { imports = '', installation = '', usage = '' } = this.tags || {};
 
     const usagePath = `component_usage/${this.displayName}.mdx`;
     const usageFileExists = fs.existsSync(path.join(docsPath, usagePath));
-
-    return dedent`
-  ---
-  id: ${id}
-  title: ${this.displayName}
-  ---
-  
-  import Tabs from "@theme/Tabs";
-  import TabItem from "@theme/TabItem";
-  import { ${imports} } from 'react-native-elements';
-  ${isTrue(usageFileExists, `import Usage from '../${usagePath}';`)}
-  
-  ${snippetToCode(this.description)}
-  
-  ${installationTab(installation)}
-
-  ${this.usage(usageFileExists)}
-  
-  ${this.propTable}`;
+    return {
+      id,
+      title: this.displayName,
+      description: dedent(snippetToCode(this.description)),
+      imports,
+      installation: installation,
+      showUsage: usageFileExists || usage,
+      usageFileExists,
+      usage: dedent(tabify(snippetToCode(usage)).trim()),
+      showProps: true,
+      ...this.propTable(),
+    };
   }
 
-  private usage(usageFileExists: boolean) {
-    const { usage = '' } = this.tags || {};
-
-    return dedent`
-${isTrue(usageFileExists || !!usage, '## Usage')}
-
-${isTrue(usageFileExists, '<Usage/>')}
-
-${tabify(snippetToCode(usage)).trim()}
-    `;
-  }
-
-  private get propTable() {
+  private propTable() {
     const orderedProps = orderBy(Object.values(this.props), ['name'], ['asc']);
     if (!orderedProps.length) {
       return '';
     }
 
-    const rows = [];
+    const rows: PropRowT[] = [];
 
     for (const props of orderedProps) {
       const { name, type, description, defaultValue, parent } = props;
       if (parent) {
         const { name: parentName, fileName: parentFileName } = parent;
-        if (!mustAddPropType.includes(parentName)) {
+        if (!MUST_INCLUDE_PROP_TYPES.includes(parentName)) {
           if (
             parentFileName.includes('node_modules') ||
             (parentFileName.includes('base/src') &&
@@ -128,42 +136,16 @@ ${tabify(snippetToCode(usage)).trim()}
         }
       }
 
-      rows.push(
-        [
-          '',
-          codify(name),
-          filterPropType(type.name),
-          codify(defaultValue?.value),
-          removeNewline(description),
-          '',
-        ].join('|')
-      );
+      rows.push({
+        name: codify(name),
+        type: filterPropType(type.name),
+        default: codify(defaultValue?.value),
+        description: removeNewline(description),
+      });
     }
-
-    return dedent`
-  
-      ## Props
-  
-      ${isTrue(
-        Markdown.parents[this.displayName].length,
-        `:::note
-        Includes all ${Markdown.parents[this.displayName]
-          .sort()
-          .join(', ')} props.
-        :::`
-      )}
-
-      ${isTrue(
-        rows.length,
-        `<div class='table-responsive'>
-      
-         | Name | Type | Default | Description |
-         | ---- | ---- | ------- | ----------- |
-         ${rows.join('\n')}
-      
-         </div>`
-      )}
-
-      `;
+    return {
+      props: rows,
+      includeProps: Markdown.parents[this.displayName].sort().join(', '),
+    };
   }
 }

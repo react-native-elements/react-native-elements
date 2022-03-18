@@ -65,15 +65,7 @@ exports[`Dialog Component should render without any children 1`] = `
           }
         }
         testID="RNE__Overlay"
-      >
-        <View
-          style={
-            Object {
-              "marginBottom": 5,
-            }
-          }
-        />
-      </View>
+      />
     </View>
   </Modal>
 </View>
