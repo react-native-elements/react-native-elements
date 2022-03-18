@@ -45,10 +45,10 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "devDependencies": {
-    "react-native-svg": "^12.1.1"
+    "react-native-svg": "^12.3.0"
   },
   "peerDependencies": {
-    "react-native-svg": "^12.1.1"
+    "react-native-svg": "^12.3.0"
   },
   "jest": {
     "displayName": "@react-native-elements/circular-slider",

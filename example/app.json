@@ -11,7 +11,7 @@
     "primaryColor": "#cccccc",
     "icon": "./assets/icons/icon.png",
     "splash": {
-      "image": "./assets/icons/icon.png"
+      "image": "./assets/icons/loading.png"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
