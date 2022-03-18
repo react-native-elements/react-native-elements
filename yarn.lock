@@ -8211,6 +8211,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-prettier@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "eslint-plugin-prettier@npm:4.0.0"
+  dependencies:
+    prettier-linter-helpers: ^1.0.0
+  peerDependencies:
+    eslint: ">=7.28.0"
+    prettier: ">=2.0.0"
+  peerDependenciesMeta:
+    eslint-config-prettier:
+      optional: true
+  checksum: 03d69177a3c21fa2229c7e427ce604429f0b20ab7f411e2e824912f572a207c7f5a41fd1f0a95b9b8afe121e291c1b1f1dc1d44c7aad4b0837487f9c19f5210d
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-react-hooks@npm:^4.0.7":
   version: 4.3.0
   resolution: "eslint-plugin-react-hooks@npm:4.3.0"
@@ -15847,7 +15862,6 @@ __metadata:
   dependencies:
     "@expo/vector-icons": ^12.0.0
     "@expo/webpack-config": ~0.16.2
-    "@react-native-community/eslint-config": ^3.0.1
     "@react-native-community/masked-view": 0.1.11
     "@react-native-elements/base": ^4.0.0-beta.0
     "@react-navigation/drawer": ^5.12.9
@@ -16788,6 +16802,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@react-native-community/eslint-config": ^3.0.1
     "@testing-library/jest-dom": ^5.11.10
     "@testing-library/react": ^11.2.6
     "@testing-library/react-native": ^7.0.2
@@ -16800,6 +16815,7 @@ __metadata:
     codecov: ^3.8.3
     dedent: ^0.7.0
     eslint: ^7.9.0
+    eslint-plugin-prettier: ^4.0.0
     handlebars: ^4.7.7
     husky: ^7.0.4
     jest: ^27.4.7

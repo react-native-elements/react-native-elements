@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@expo/webpack-config": "~0.16.2",
-    "@react-native-community/eslint-config": "^3.0.1",
     "@types/lodash": "^4.14.168",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
