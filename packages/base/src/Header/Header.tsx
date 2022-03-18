@@ -106,7 +106,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
 }) => {
   React.useEffect(() => {
     if (linearGradientProps && !ViewComponent) {
-      console.error(
+      console.warn(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
     }

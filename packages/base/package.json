@@ -38,26 +38,20 @@
     "url": "https://github.com/react-native-elements/react-native-elements/issues"
   },
   "homepage": "https://reactnativeelements.com/",
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/react-native-elements",
-    "logo": "https://opencollective.com/react-native-elements/logo.txt"
-  },
   "dependencies": {
     "@types/react-native-vector-icons": "^6.4.6",
-    "color": "^3.1.2",
+    "color": "^4.2.1",
     "deepmerge": "^4.2.2",
     "hoist-non-react-statics": "^3.3.2",
-    "opencollective-postinstall": "^2.0.3",
     "react-native-ratings": "^8.1.0",
-    "react-native-size-matters": "^0.3.1"
+    "react-native-size-matters": "^0.4.0"
   },
   "devDependencies": {
     "@types/color": "^3.0.1",
     "@types/hoist-non-react-statics": "^3.3.1",
-    "metro-react-native-babel-preset": "^0.63.0",
+    "metro-react-native-babel-preset": "^0.69.1",
     "react-native-safe-area-context": "^3.1.9",
-    "react-native-vector-icons": "^7.0.0",
+    "react-native-vector-icons": "^7.1.0",
     "react-test-renderer": "^16.13.1",
     "utility-types": "^3.10.0"
   },

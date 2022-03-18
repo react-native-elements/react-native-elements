@@ -61,7 +61,7 @@ export const ListItemBase: RneFunctionComponent<ListItemProps> = (props) => {
   } = props;
 
   if (props.linearGradientProps && !props.ViewComponent) {
-    console.error(
+    console.warn(
       "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
   }

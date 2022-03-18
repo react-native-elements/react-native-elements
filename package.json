@@ -22,6 +22,7 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-native": "^7.0.2",
@@ -90,5 +91,8 @@
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
     }
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }

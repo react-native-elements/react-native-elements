@@ -10,10 +10,9 @@ on:
 
 jobs:
   publish:
-    defaults:
-      run:
-        working-directory: example
+    continue-on-error: true
     runs-on: ubuntu-latest
+
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
@@ -34,4 +33,6 @@ jobs:
         uses: ./.github/actions/install
 
       - name: 🚀 Publish preview
-        run: expo publish --non-interactive
+        run: |
+          cd example
+          expo publish --non-interactive
