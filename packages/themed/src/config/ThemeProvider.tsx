@@ -1,6 +1,10 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
-import { darkColors, Colors, lightColors } from '.';
+import {
+  Colors,
+  darkColors,
+  lightColors,
+} from '@react-native-elements/base/dist/helpers';
 import { Theme, ThemeMode, RecursivePartial } from './theme';
 
 export type { RecursivePartial };

@@ -27,6 +27,9 @@ jobs:
       - name: Create local changes
         run: |
           sed -i -e 's/dist/src/g' .gitignore
+          git rm -rf packages/*/src    
+          jq 'del(.devDependencies."@react-native-elements/base",.peerDependencies."@react-native-elements/base")'  packages/themed/package.json >  packages/themed/package.json.temp
+          mv packages/themed/package.json.temp packages/themed/package.json
           git add .
           git commit -m "Bleeding Edge Version" -a --no-verify
       - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
