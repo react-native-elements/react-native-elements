@@ -1,11 +1,14 @@
-import { ListItemBase } from './ListItem';
-import { ListItemContent } from './ListItem.Content';
-import { ListItemChevron } from './ListItem.Chevron';
-import { ListItemInput } from './ListItem.Input';
-import { ListItemCheckBox } from './ListItem.CheckBox';
-import { ListItemButtonGroup } from './ListItem.ButtonGroup';
-import { ListItemTitle } from './ListItem.Title';
-import { ListItemSubtitle } from './ListItem.Subtitle';
+import { ListItemBase, ListItemProps } from './ListItem';
+import { ListItemContent, ListItemContentProps } from './ListItem.Content';
+import { ListItemChevron, ListItemChevronProps } from './ListItem.Chevron';
+import { ListItemInput, ListItemInputProps } from './ListItem.Input';
+import { ListItemCheckBox, ListItemCheckBoxProps } from './ListItem.CheckBox';
+import {
+  ListItemButtonGroup,
+  ListItemButtonGroupProps,
+} from './ListItem.ButtonGroup';
+import { ListItemTitle, ListItemTitleProps } from './ListItem.Title';
+import { ListItemSubtitle, ListItemSubtitleProps } from './ListItem.Subtitle';
 import {
   ListItemSwipeable,
   ListItemSwipeableProps,
@@ -15,18 +18,27 @@ import {
   ListItemAccordionProps,
 } from './ListItem.Accordion';
 
-export type ListItemProps = typeof ListItem;
-
 export const ListItem = Object.assign(ListItemBase, {
   Accordion: ListItemAccordion,
+  ButtonGroup: ListItemButtonGroup,
+  CheckBox: ListItemCheckBox,
   Chevron: ListItemChevron,
   Content: ListItemContent,
   Input: ListItemInput,
-  Title: ListItemTitle,
   Subtitle: ListItemSubtitle,
   Swipeable: ListItemSwipeable,
-  CheckBox: ListItemCheckBox,
-  ButtonGroup: ListItemButtonGroup,
+  Title: ListItemTitle,
 });
 
-export type { ListItemAccordionProps, ListItemSwipeableProps };
+export type {
+  ListItemAccordionProps,
+  ListItemButtonGroupProps,
+  ListItemCheckBoxProps,
+  ListItemChevronProps,
+  ListItemContentProps,
+  ListItemInputProps,
+  ListItemProps,
+  ListItemSubtitleProps,
+  ListItemSwipeableProps,
+  ListItemTitleProps,
+};

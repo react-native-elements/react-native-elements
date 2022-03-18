@@ -1,0 +1,75 @@
+---
+id: {{id}}
+title: {{title}}
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { {{imports}} } from "react-native-elements";
+{{#if usageFileExists}}
+import Usage from "../component_usage/{{title}}.mdx";
+{{/if}}
+
+
+{{{description}}}
+
+{{#if installation}}
+## Installation
+
+<Tabs
+  groupId="component"
+  defaultValue="npm"
+  values={[
+    { label: "NPM", value: "npm" },
+    { label: "Yarn", value: "yarn" },
+  ]}
+>
+<TabItem value="npm">
+  
+```bash
+npm install @react-native-elements/{{installation}}
+```
+
+</TabItem>
+<TabItem value="yarn">
+
+```bash
+yarn add @react-native-elements/{{installation}}
+```
+
+</TabItem>
+</Tabs>
+{{/if}}
+
+{{#if showUsage}}
+## Usage
+
+{{#if usageFileExists}}
+<Usage/>
+{{/if}}
+
+{{{usage}}}
+
+{{/if}}
+
+{{#if showProps}}
+## Props
+{{#if includeProps}}
+:::note
+Includes all {{includeProps}} props.
+:::
+{{/if}}
+{{#if props}}
+<div class='table-responsive'>
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+{{#each props}}
+{{#with this}}
+|{{{name}}}|{{{type}}}|{{{default}}}|{{{description}}}|
+{{/with}}
+{{/each}}
+
+</div>
+{{/if}}
+{{/if}}

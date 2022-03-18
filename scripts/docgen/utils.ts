@@ -77,39 +77,6 @@ export const tabify = (str: string) => {
   }).code.replace(/<>|<\/>;|{" "}/g, '');
 };
 
-export const installationTab = (str: string) => {
-  if (!str) {
-    return '';
-  }
-  return dedent`
-    ## Installation
-    
-    <Tabs
-    groupId='component'
-    defaultValue="npm"
-    values={[
-    { label: 'NPM', value: 'npm', },
-    { label: 'Yarn', value: 'yarn', },
-    ]
-    }>
-    <TabItem value="npm">
-
-    \`\`\`bash
-    npm install @react-native-elements/${str}
-    \`\`\`
-
-    </TabItem>
-    <TabItem value="yarn">
-
-    \`\`\`bash
-    yarn add @react-native-elements/${str}
-    \`\`\`
-
-    </TabItem>
-    </Tabs>
-  `;
-};
-
 export const codify = (str: string) => (str ? `\`${str?.trim()}\`` : '');
 export const isTrue = (cond: number | boolean, value: string) =>
   cond ? dedent(value) : '';

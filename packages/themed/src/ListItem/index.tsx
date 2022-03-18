@@ -1,6 +1,6 @@
 import { withTheme } from '../config';
 import {
-  ListItemBaseProps,
+  ListItemProps,
   ListItemBase,
 } from '@react-native-elements/base/dist/ListItem/ListItem';
 import {
@@ -43,11 +43,11 @@ import {
 export type {
   ListItemAccordionProps,
   ListItemSwipeableProps,
-  ListItemBaseProps as ListItemProps,
+  ListItemProps as ListItemProps,
 };
 
 export default Object.assign(
-  withTheme<ListItemBaseProps>(ListItemBase, 'ListItem'),
+  withTheme<ListItemProps>(ListItemBase, 'ListItem'),
   {
     Accordion: withTheme<ListItemAccordionProps>(
       ListItemAccordion,

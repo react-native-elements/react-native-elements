@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 
-export interface TabViewBaseProps {
+export interface TabViewProps {
   /** Child position index value. */
   value?: number;
 
@@ -62,7 +62,7 @@ export interface TabViewBaseProps {
 
 /** Tabs organize content across different screens, data sets, and other interactions.
  * TabView enables swipeable tabs. */
-export const TabViewBase: RneFunctionComponent<TabViewBaseProps> = ({
+export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
   value = 0,
   children,
   onChange = () => {},

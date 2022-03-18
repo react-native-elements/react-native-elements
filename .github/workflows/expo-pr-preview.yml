@@ -1,0 +1,52 @@
+name: Expo Preview PR CI
+
+on:
+  pull_request_target:
+    types: [review_requested]
+    paths:
+      - "example/**"
+
+jobs:
+  publish:
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: example
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Install dependencies
+        uses: ./.github/actions/install
+      - name: 🚀 Publish preview
+        run: expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
+      - name: Find Comment
+        uses: peter-evans/find-comment@v1
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: "react-native-elements[bot]"
+          body-includes: Preview published
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v1
+        env:
+          QR_PATH: https://qr.expo.dev/expo-go?owner=rne_org&slug=react-native-elements&releaseChannel=pr-${{ github.event.number }}&host=exp.host
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Preview published
+            The mobile version of example app from this branch is ready! You can [see it here](${{ env.QR_PATH }})<br><br><a href="${{ env.QR_PATH }}"><img src="${{env.QR_PATH}}" height="200px" width="200px"></a>.
+
+          edit-mode: replace

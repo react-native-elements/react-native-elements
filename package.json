@@ -22,6 +22,7 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-native": "^7.0.2",
@@ -34,6 +35,7 @@
     "codecov": "^3.8.3",
     "dedent": "^0.7.0",
     "eslint": "^7.9.0",
+    "handlebars": "^4.7.7",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "jest-transform-stub": "^2.0.0",
@@ -89,5 +91,8 @@
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
     }
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }

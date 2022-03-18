@@ -7,7 +7,7 @@ import {
   TextStyle,
   StyleProp,
 } from 'react-native';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { defaultTheme, patchWebProps, RneFunctionComponent } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
