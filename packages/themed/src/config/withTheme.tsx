@@ -3,7 +3,7 @@ import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 import { FullTheme } from './theme';
-import { lightColors } from '.';
+import { lightColors } from '@react-native-elements/base/dist/helpers';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component?.prototype?.isReactComponent);
