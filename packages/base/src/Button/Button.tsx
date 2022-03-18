@@ -133,7 +133,7 @@ export interface ButtonProps
 export const Button: RneFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
-  onPress = () => console.error('Please attach a method to this component'),
+  onPress = () => console.warn('Please attach a method to this component'),
   buttonStyle,
   type = 'solid',
   loading = false,
@@ -157,7 +157,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
 }) => {
   useEffect(() => {
     if (linearGradientProps && !ViewComponent) {
-      console.error(
+      console.warn(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
     }
