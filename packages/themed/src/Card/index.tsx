@@ -1,7 +1,7 @@
 import { withTheme } from '../config';
 import {
   CardBase,
-  CardBaseProps,
+  CardProps,
 } from '@react-native-elements/base/dist/Card/Card';
 import {
   CardDivider,
@@ -17,6 +17,8 @@ import {
   CardTitle,
   CardTitleProps,
 } from '@react-native-elements/base/dist/Card/Card.Title';
+import { CardFeaturedSubtitleProps } from '@react-native-elements/base/dist/Card';
+import { CardFeaturedTitleProps } from '@react-native-elements/base/dist/Card';
 
 const ThemedCardDivider = withTheme<CardDividerProps>(
   CardDivider,
@@ -33,8 +35,6 @@ const ThemedCardFeaturedTitle = withTheme(
 const ThemedCardTitle = withTheme<CardTitleProps>(CardTitle, 'CardTitle');
 const ThemedCardImage = withTheme<CardImageProps>(CardImage, 'CardImage');
 
-export type CardProps = CardBaseProps;
-
 const ThemedCard = Object.assign(withTheme(CardBase, 'Card'), {
   Divider: ThemedCardDivider,
   Image: ThemedCardImage,
@@ -44,3 +44,11 @@ const ThemedCard = Object.assign(withTheme(CardBase, 'Card'), {
 });
 
 export default ThemedCard;
+
+export type {
+  CardProps,
+  CardDividerProps,
+  CardFeaturedSubtitleProps,
+  CardFeaturedTitleProps,
+  CardImageProps,
+};

@@ -1,6 +1,10 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
-import { colors, darkColors, Colors } from './colors';
+import {
+  Colors,
+  darkColors,
+  lightColors,
+} from '@react-native-elements/base/dist/helpers';
 import { Theme, ThemeMode, RecursivePartial } from './theme';
 
 export type { RecursivePartial };
@@ -25,13 +29,13 @@ export type ThemeProps<T = {}> = {
 
 export const ThemeContext: React.Context<ThemeProps> = React.createContext({
   theme: {
-    colors,
+    colors: lightColors,
   },
 } as ThemeProps);
 
 export const createTheme = (theme: ThemeOptions): ThemeOptions => {
   return deepmerge(
-    { colors, darkColors, mode: 'light' } as ThemeOptions,
+    { colors: lightColors, darkColors, mode: 'light' } as ThemeOptions,
     theme
   );
 };

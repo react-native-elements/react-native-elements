@@ -9,6 +9,8 @@ React Native Elements v4 introduces many features including few new components, 
 
 ## Core changes
 
+**Important**: This version is published on GitHub Package registry, Please refer [Installation Guide](installation)
+
 To use the v4 version, you first need to update the package names:
 
 ```diff

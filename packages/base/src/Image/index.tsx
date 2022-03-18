@@ -1,7 +1,7 @@
 import { Image as ImageNative } from 'react-native';
-import { Image, ImageProps } from './Image';
+import { Image as RNEImage, ImageProps } from './Image';
 
-const DefaultImage = Object.assign(Image, {
+const Image = Object.assign(RNEImage, {
   getSize: ImageNative.getSize,
   getSizeWithHeaders: ImageNative.getSizeWithHeaders,
   prefetch: ImageNative.prefetch,
@@ -10,5 +10,5 @@ const DefaultImage = Object.assign(Image, {
   resolveAssetSource: ImageNative.resolveAssetSource,
 });
 
-export { DefaultImage as Image };
+export { Image };
 export type { ImageProps };

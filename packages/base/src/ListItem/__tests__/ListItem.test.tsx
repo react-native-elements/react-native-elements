@@ -78,13 +78,13 @@ describe('ListItem component', () => {
   });
 
   it('should warn the user when using linearGradient without it installed', () => {
-    console.error = jest.fn();
+    console.warn = jest.fn();
     renderWithWrapper(
       <ListItem
         linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
       />
     );
-    expect((console.error as jest.Mock).mock.calls[0][0]).toBe(
+    expect((console.warn as jest.Mock).mock.calls[0][0]).toBe(
       "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
   });

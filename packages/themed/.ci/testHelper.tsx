@@ -6,8 +6,7 @@ import {
   fireEvent,
   act,
 } from '@testing-library/react-native';
-import { ThemeProvider, FullTheme, colors } from '../src/config';
-import deepmerge from 'deepmerge';
+import { ThemeProvider, FullTheme, createTheme } from '../src/config';
 
 export { fireEvent, act };
 
@@ -25,13 +24,7 @@ export const renderWithWrapper = (
     ...renderOptions,
   };
   const renderApi = render(
-    themeProp ? (
-      <ThemeProvider theme={deepmerge({ colors }, themeProp)}>
-        {children}
-      </ThemeProvider>
-    ) : (
-      children
-    ),
+    <ThemeProvider theme={createTheme(themeProp)}>{children}</ThemeProvider>,
     options
   );
   const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');

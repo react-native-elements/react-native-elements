@@ -1,7 +1,7 @@
 import { withTheme } from '../config';
 import {
   SearchBar,
-  SearchBarProps,
+  SearchBarBaseProps,
 } from '@react-native-elements/base/dist/SearchBar/SearchBar';
 import { SearchBarAndroidProps } from '@react-native-elements/base/dist/SearchBar/SearchBar-android';
 import { SearchBarIosProps } from '@react-native-elements/base/dist/SearchBar/SearchBar-ios';
@@ -9,9 +9,9 @@ import { SearchBarDefaultProps } from '@react-native-elements/base/dist/SearchBa
 
 export { SearchBar };
 export type {
-  SearchBarProps,
+  SearchBarBaseProps as SearchBarProps,
   SearchBarAndroidProps,
   SearchBarDefaultProps,
   SearchBarIosProps,
 };
-export default withTheme<SearchBarProps>(SearchBar, 'SearchBar');
+export default withTheme<SearchBarBaseProps>(SearchBar, 'SearchBar');

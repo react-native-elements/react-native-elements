@@ -1,4 +1,7 @@
-import { LinearProgress, LinearProgressProps } from './LinearProgress';
+import {
+  LinearProgress as LinearProgressBase,
+  LinearProgressProps,
+} from './LinearProgress';
 
 /**
  * ### Linear Progress
@@ -9,10 +12,10 @@ import { LinearProgress, LinearProgressProps } from './LinearProgress';
  *
  * [API Documentation](https://reactnativeelements.com/docs/linearProgress)
  */
-const Default = Object.assign(LinearProgress, {
+const LinearProgress = Object.assign(LinearProgressBase, {
   INDETERMINATE: 'indeterminate' as LinearProgressProps['variant'],
   DETERMINATE: 'determinate' as LinearProgressProps['variant'],
 });
 
-export { Default as LinearProgress };
+export { LinearProgress };
 export type { LinearProgressProps };
