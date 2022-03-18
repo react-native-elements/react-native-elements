@@ -5,6 +5,12 @@ on:
     types: [review_requested]
     paths:
       - "example/**"
+  pull_request:
+    branches:
+      - "next"
+    paths-ignore:
+      - "website/**"
+      - "scripts/**"
 
 jobs:
   publish:

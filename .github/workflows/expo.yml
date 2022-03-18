@@ -10,9 +10,6 @@ on:
 
 jobs:
   publish:
-    defaults:
-      run:
-        working-directory: example
     runs-on: ubuntu-latest
     steps:
       - name: 🏗 Setup repo
@@ -34,4 +31,6 @@ jobs:
         uses: ./.github/actions/install
 
       - name: 🚀 Publish preview
-        run: expo publish --non-interactive
+        run: |
+          cd example
+          expo publish --non-interactive
