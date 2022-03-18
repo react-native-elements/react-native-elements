@@ -1,4 +1,4 @@
-name: Expo CI
+name: Expo Default Channel Preview CI
 
 on:
   push:
