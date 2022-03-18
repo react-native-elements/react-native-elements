@@ -22,7 +22,7 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
-    "@react-native-community/eslint-config": "^3.0.1",
+    "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-native": "^7.0.2",
