@@ -52,8 +52,10 @@
       "<rootDir>/dist"
     ],
     "moduleNameMapper": {
-      "@react-native-elements/base/dist/([^/]+)": "<rootDir>/../base/src/$1",
-      "@react-native-elements/([^/]+)": "<rootDir>/../$1/src"
+      "^@react-native-elements/base/dist/(.*)": [
+        "<rootDir>/../base/src/$1",
+        "<rootDir>/../../node_modules/@react-native-elements/base/src/$1"
+      ]
     },
     "transformIgnorePatterns": [
       "<rootDir>/../../node_modules/(?!(@react-native|react-native|@react-native-elements/base)/)"

@@ -1,15 +1,10 @@
-import {
-  Platform,
-  Dimensions,
-  PressableProps,
-  ColorValue,
-  GestureResponderEvent,
-} from 'react-native';
+import { Platform, Dimensions, PressableProps, ColorValue } from 'react-native';
 import color from 'color';
 import renderNode from './renderNode';
-import getIconType from './getIconType';
+import getIconType, { registerCustomIconType } from './getIconType';
 import normalizeText from './normalizeText';
-import { colors, Colors } from './index-config';
+import { Colors, lightColors, darkColors } from './colors';
+import { InlinePressableProps } from './InlinePressableProps';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
@@ -25,7 +20,7 @@ export type RneFunctionComponent<T> = React.FunctionComponent<
 >;
 
 export const defaultTheme = {
-  colors,
+  colors: lightColors,
 };
 
 export type Theme = {
@@ -51,40 +46,7 @@ export const patchWebProps = <T extends Record<any, any>>({
   return rest;
 };
 
-export interface InlinePressableProps {
-  /**
-   * Called when a single tap gesture is detected.
-   * @type GestureResponderEventHandler
-   */
-  onPress?: (event: GestureResponderEvent) => void;
-
-  /**
-   * Called when a touch is engaged before `onPress`.
-   * @type GestureResponderEventHandler
-   */
-  onPressIn?: (event: GestureResponderEvent) => void;
-
-  /**
-   * Called when a touch is released before `onPress`.
-   * @type GestureResponderEventHandler
-   */
-  onPressOut?: (event: GestureResponderEvent) => void;
-
-  /**
-   * Called when a long-tap gesture is detected.
-   * @type GestureResponderEventHandler
-   */
-  onLongPress?: (event: GestureResponderEvent) => void;
-
-  /**
-   * @default None
-   * @type PressableProps except click handlers
-   */
-  pressableProps?: Omit<
-    PressableProps,
-    'onPress' | 'onLongPress' | 'onPressIn' | 'onPressOut'
-  >;
-}
+export type { Colors, InlinePressableProps };
 
 export {
   renderNode,
@@ -93,6 +55,11 @@ export {
   ScreenWidth,
   ScreenHeight,
   isIOS,
-  colors,
+  lightColors,
+  darkColors,
   color,
+  registerCustomIconType,
 };
+
+export { default as BackgroundImage } from './BackgroundImage';
+export { default as fonts } from './fonts';

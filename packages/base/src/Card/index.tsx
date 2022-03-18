@@ -1,4 +1,4 @@
-import { CardBase, CardBaseProps } from './Card';
+import { CardBase, CardProps } from './Card';
 import { CardDivider, CardDividerProps } from './Card.Divider';
 import {
   CardFeaturedSubtitle,
@@ -20,9 +20,8 @@ const Card = Object.assign(CardBase, {
 });
 
 export { Card };
-export type CardProps = typeof Card;
 export type {
-  CardBaseProps,
+  CardProps,
   CardDividerProps,
   CardFeaturedSubtitleProps,
   CardFeaturedTitleProps,

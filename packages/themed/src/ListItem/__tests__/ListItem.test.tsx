@@ -4,7 +4,7 @@ import { renderWithWrapper } from '../../../.ci/testHelper';
 import { FullTheme } from '../../config';
 
 describe('ListItem component', () => {
-  it.skip('should apply values from theme', () => {
+  it('should apply values from theme', () => {
     const theme: Partial<FullTheme> = {
       ListItemTitle: {
         style: {

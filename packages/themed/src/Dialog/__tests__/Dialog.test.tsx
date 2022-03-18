@@ -4,7 +4,7 @@ import { FullTheme } from '../..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Dialog Component', () => {
-  it.skip('should apply props from theme', () => {
+  it('should apply props from theme', () => {
     const theme: Partial<FullTheme> = {
       Dialog: {
         transparent: false,

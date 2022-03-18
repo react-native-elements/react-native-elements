@@ -3,7 +3,7 @@ import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 import { FullTheme } from './theme';
-import { colors } from './colors';
+import { lightColors } from '.';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component?.prototype?.isReactComponent);
@@ -26,7 +26,11 @@ const ThemedComponent = (
           {(context) => {
             // If user isn't using ThemeProvider
             if (!context) {
-              const newProps = { ...rest, theme: { colors }, children };
+              const newProps = {
+                ...rest,
+                theme: { colors: lightColors },
+                children,
+              };
               return isClassComponent(WrappedComponent) ? (
                 <WrappedComponent ref={forwardedRef} {...newProps} />
               ) : (
