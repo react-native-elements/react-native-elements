@@ -6,7 +6,7 @@ on:
       - next
     paths-ignore:
       - ".github/**"
-      # - ".website/**"
+      - ".website/**"
       - ".example/**"
 jobs:
   test:
@@ -28,7 +28,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         uses: ./.github/actions/install
-      - run: jq -h
       - run: yarn typescript
   lint:
     name: "check_lint"
