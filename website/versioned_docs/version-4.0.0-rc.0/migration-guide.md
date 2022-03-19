@@ -11,6 +11,14 @@ React Native Elements v4 introduces many features including few new components, 
 
 **Important**: This version is published on GitHub Package registry, Please refer [Installation Guide](installation)
 
+Alternatively you can install from GitHub repo
+
+```bash
+yarn add react-native-elements/react-native-elements#4.0.0-rc.0-base
+yarn add react-native-elements/react-native-elements#4.0.0-rc.0-themed
+```
+
+
 To use the v4 version, you first need to update the package names:
 
 ```diff
