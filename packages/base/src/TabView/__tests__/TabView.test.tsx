@@ -36,4 +36,14 @@ describe('Tab Component', () => {
     );
     expect(queryByTestId('tabView-test')).toBeDefined();
   });
+  it('should ignore conditionally unrendered children', () => {
+    const { queryAllByTestId } = renderWithWrapper(
+      <TabView>
+        <TabView.Item testID="TabView.Item" />
+        {false && <TabView.Item testID="TabView.Item" />}
+        <TabView.Item testID="TabView.Item" />
+      </TabView>
+    );
+    expect(queryAllByTestId('TabView.Item').length).toBe(2);
+  });
 });

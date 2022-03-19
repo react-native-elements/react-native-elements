@@ -81,7 +81,7 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
   const [containerWidth, setContainerWidth] = React.useState(1);
 
   const childCount = React.useMemo(
-    () => React.Children.count(children),
+    () => React.Children.toArray(children).length,
     [children]
   );
 
@@ -173,8 +173,9 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
         ])}
         {...(!disableSwipe && panResponder.panHandlers)}
       >
-        {React.Children.map(children, (child) => (
+        {React.Children.toArray(children).map((child, index) => (
           <View
+            key={index}
             style={StyleSheet.flatten([
               styles.container,
               tabItemContainerStyle,
