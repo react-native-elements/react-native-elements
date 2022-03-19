@@ -113,7 +113,7 @@ yarn example start
 
 ## Documentation
 
-[View the full docs here](https://reactnativeelements.com/docs/overview)
+[View the full docs here](https://reactnativeelements.com/docs)
 
 ## Contributing
 
