@@ -176,7 +176,7 @@ const StyledText = styled(Text)`
 <StyledText style={[{ color: 'red' }]}/>
 ```
 
-> 🚫 It will not work.
+> 🚫 Not work
 
 ### Solution
 
