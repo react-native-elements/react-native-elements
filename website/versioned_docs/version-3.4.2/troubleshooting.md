@@ -144,3 +144,62 @@ yarn add @expo/vector-icons --save
   [Solution 1](#using-react-native-init)
 - If you choose to use Expo SDK (ExpoKit), use
   [Solution 2](#using-an-expo-app-create-react-native-app-or-expo-xde)
+
+---
+
+## |> [**styled-components**](https://styled-components.com/)'s styles won't merge with theme's styles
+
+**styled-components** is passing converted styles as array to `style` prop.  
+So if your theme's style is `object` type, it will not be merged because type of styles are not the same. (See [Common Pitfalls](customization.md#common-pitfalls))
+
+**Example:**
+
+```js
+const theme = {
+  Text: {
+    style: {
+      fontSize: 16
+    }
+  }
+};
+```
+
+```js
+const StyledText = styled(Text)`
+  color: red;
+`;
+```
+
+**styled-components** will pass styles as array to `style`.
+
+```jsx
+<StyledText style={[{ color: 'red' }]}/>
+```
+
+> 🚫 Not work
+
+### Solution
+
+You need to set theme's style as array to make it work with **styled-components**.
+
+**Example:**
+
+```js
+const theme = {
+  Text: {
+    style: [
+      {
+        fontSize: 16
+      }
+    ]
+  }
+};
+```
+
+```js
+const StyledText = styled(Text)`
+  color: red;
+`;
+```
+
+| ✅ Works
