@@ -7,17 +7,11 @@ title: Migration Guide
 
 React Native Elements v4 introduces many features including few new components, fully typescript support and some breaking changes whose migration is being given below.
 
+:::caution Installation Guide
+This version is published on GitHub Package registry, Please refer [Installation Guide](installation) first
+:::
+
 ## Core changes
-
-**Important**: This version is published on GitHub Package registry, Please refer [Installation Guide](installation)
-
-Alternatively you can install from GitHub repo
-
-```bash
-yarn add react-native-elements/react-native-elements#4.0.0-rc.0-base
-yarn add react-native-elements/react-native-elements#4.0.0-rc.0-themed
-```
-
 
 To use the v4 version, you first need to update the package names:
 

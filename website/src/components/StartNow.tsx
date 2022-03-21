@@ -25,7 +25,7 @@ const Home: React.FunctionComponent<{}> = () => {
           <Link
             className="button button--primary"
             style={{ color: 'white' }}
-            to="/docs/getting-started/installation"
+            to="/docs"
           >
             Documentation
           </Link>

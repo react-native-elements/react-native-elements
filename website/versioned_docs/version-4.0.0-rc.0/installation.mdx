@@ -13,13 +13,21 @@ import { SiExpo, SiReact } from 'react-icons/si';
 
 ### Stable
 
-**Important**: This version is published on GitHub Package registry, before you continue installing, you need to [Authenticate with GitHub using PAT](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token)
+Important: This version is published on **GitHub Package registry**, before you continue installing, you need to [Authenticate with GitHub using PAT](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token)
 
 Run the following command to authenticate with GitHub:
 
 ```bash
 npm login --scope=@react-native-elements --registry=https://npm.pkg.github.com
 ```
+
+Then create or modify `.npmrc` in root of your project and add the following line
+
+```bash
+@react-native-elements:registry=https://npm.pkg.github.com
+```
+
+And install pkgs using yarn or npm
 
 <Tabs
 groupId='pkg'
@@ -43,12 +51,19 @@ yarn add @react-native-elements/themed @react-native-elements/base
 </TabItem>
 </Tabs>
 
-#### Alternatively you can install from GitHub repo
+:::note Alternatively, you can install from GitHub repo
+
+You don't need PAT for installing via this method
 
 ```bash
-yarn add react-native-elements/react-native-elements#4.0.0-rc.0-base
-yarn add react-native-elements/react-native-elements#4.0.0-rc.0-themed
+# @react-native-elements/base
+yarn add @react-native-elements/base@react-native-elements/react-native-elements#base
+
+# @react-native-elements/themed
+yarn add @react-native-elements/themed@react-native-elements/react-native-elements#themed
 ```
+
+:::
 
 ### Bleeding Edge
 
@@ -63,14 +78,22 @@ values={[
 <TabItem value="npm">
 
 ```bash
-npm install react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
+# @react-native-elements/base
+npm install react-native-elements/react-native-elements#base
+
+# @react-native-elements/themed
+npm install react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-yarn add react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
+# @react-native-elements/base
+yarn add @react-native-elements/base@react-native-elements/react-native-elements#base
+
+# @react-native-elements/themed
+yarn add @react-native-elements/themed@react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
