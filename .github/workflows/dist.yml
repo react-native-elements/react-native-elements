@@ -2,7 +2,7 @@ name: Bleeding Edge version
 on:
   push:
     branches:
-      - "*"
+      - "next"
     paths-ignore:
       - "website/**"
       - "example/**"
@@ -31,7 +31,6 @@ jobs:
           jq 'del(.devDependencies."@react-native-elements/base",.peerDependencies."@react-native-elements/base")'  packages/themed/package.json >  packages/themed/package.json.temp
           mv packages/themed/package.json.temp packages/themed/package.json
           git add .
-          #git rm -rf packages/*/src
           git commit -m "Bleeding Edge Version" -a --no-verify
       - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
         run: |
