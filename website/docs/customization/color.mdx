@@ -3,6 +3,8 @@ title: Color
 sidebar_position: 1
 ---
 
+import { Palette } from './Color';
+
 ### The Theme Object
 
 By default, the theme object looks like this. You can add whatever values you
@@ -10,11 +12,14 @@ want to the theme, and they will be merged with the default. By default the
 platform colors aren't used anywhere. These native colors are added for
 your convenience.
 
+<Palette />
+
 ```tsx
 interface theme {
   colors: {
     primary;
     secondary;
+    background;
     white;
     black;
     grey0;

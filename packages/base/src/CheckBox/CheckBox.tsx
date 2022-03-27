@@ -92,7 +92,7 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
       onPress={onPress}
       style={StyleSheet.flatten([
         {
-          backgroundColor: theme.colors.white,
+          backgroundColor: theme.colors.background,
           borderColor: theme.colors.white,
         },
         styles.container,

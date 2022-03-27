@@ -1,9 +1,9 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, ThemeProps } from './ThemeProvider';
-import { FullTheme } from './theme';
-import { lightColors } from './colors';
+import { ThemeConsumer, UpdateTheme, ReplaceTheme } from './ThemeProvider';
+import { FullTheme, ThemeMode } from './theme';
+import { Colors, lightColors } from './colors';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component?.prototype?.isReactComponent);
@@ -76,8 +76,14 @@ const ThemedComponent = (
   );
 };
 
+interface ThemeProps<T = {}> {
+  theme?: { colors: Colors; mode?: ThemeMode } & T;
+  updateTheme?: UpdateTheme;
+  replaceTheme?: ReplaceTheme;
+}
+
 function withTheme<P = {}, T = {}>(
-  WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
+  WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
   themeKey?: string
 ): React.FunctionComponent<P> | React.ForwardRefExoticComponent<P> {
   const name = themeKey
