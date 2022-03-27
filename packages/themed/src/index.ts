@@ -61,14 +61,13 @@ import {
   ReplaceTheme,
   FullTheme,
   Theme,
-  ThemeProps,
   ThemeMode,
   ComponentTheme,
   normalizeText,
   getIconType,
   registerCustomIconType,
 } from './config';
-import { ThemeOptions, createTheme } from './config/ThemeProvider';
+import { CreateThemeOptions, createTheme } from './config/ThemeProvider';
 
 // Components exports
 export {
@@ -173,9 +172,8 @@ export type {
   FullTheme,
   ReplaceTheme,
   Theme,
-  ThemeProps,
   UpdateTheme,
-  ThemeOptions,
+  CreateThemeOptions,
   ComponentTheme,
   ThemeMode,
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer, ThemeProviderProps } from './ThemeProvider';
-import { ComponentTheme } from './theme';
+import { FullTheme } from './theme';
 import { lightColors } from './colors';
 
 const isClassComponent = (Component: any) =>
@@ -57,7 +57,7 @@ const ThemedComponent = (
               theme: { colors: theme.colors, mode: theme.mode },
               updateTheme,
               replaceTheme,
-              ...deepmerge<ComponentTheme>(themedProps || {}, rest, {
+              ...deepmerge<FullTheme>(themedProps || {}, rest, {
                 customMerge: combineByStyles,
                 clone: false,
               }),

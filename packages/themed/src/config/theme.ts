@@ -40,24 +40,23 @@ import { Colors } from '.';
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
-export interface FullTheme extends ComponentTheme, ThemeColor {}
-
-export interface ThemeColor {
-  colors?: RecursivePartial<Colors>;
-  mode?: ThemeMode;
-}
-
-export interface ThemeModeColor {
-  mode?: ThemeMode;
-  lightColors?: RecursivePartial<Colors>;
-  darkColors?: RecursivePartial<Colors>;
-}
-
 export type Theme<T = {}> = FullTheme & T;
 
 export type ThemeMode = 'light' | 'dark';
 
-export interface ComponentTheme {
+export interface FullTheme {
+  /**
+   * Color Theme Mode
+   */
+  mode?: ThemeMode;
+  /**
+   * Color Theme
+   */
+  colors?: RecursivePartial<Colors>;
+
+  /**
+   * Component Theme
+   */
   AirbnbRating: Partial<TapRatingProps>;
   Avatar: Partial<AvatarProps>;
   AvatarAccessory: Partial<AccessoryProps>;

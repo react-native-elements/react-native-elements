@@ -13,6 +13,7 @@ interface PlatformColors {
 export interface Colors {
   readonly primary: string;
   readonly secondary: string;
+  readonly background: string;
   readonly white: string;
   readonly black: string;
   readonly grey0: string;
@@ -41,6 +42,7 @@ export const lightColors: Colors = {
   secondary: '#ca71eb',
   white: '#ffffff',
   black: '#242424',
+  background: '#ffffff',
   grey0: '#393e42',
   grey1: '#43484d',
   grey2: '#5e6977',
@@ -100,6 +102,7 @@ export const darkColors: Colors = {
   secondary: '#aa49eb',
   white: '#080808',
   black: '#f2f2f2',
+  background: '#080808',
   grey5: '#393e42',
   grey4: '#43484d',
   grey3: '#5e6977',

@@ -1,15 +1,7 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
-import { lightColors, darkColors } from './colors';
-import {
-  // FullTheme,
-  // Theme,
-  ThemeColor,
-  ThemeModeColor,
-  ComponentTheme,
-  ThemeMode,
-  RecursivePartial,
-} from './theme';
+import { Colors, lightColors, darkColors } from './colors';
+import { ThemeMode, RecursivePartial, FullTheme } from './theme';
 
 export type { RecursivePartial };
 
@@ -18,49 +10,66 @@ export type { RecursivePartial };
  * to
  * Text: TextProps | (props: TextProps) => TextProps
  */
-type FunctionProps<Components> = {
+type FunctionProps<Components = Omit<FullTheme, 'colors' | 'mode'>> = {
   [Key in keyof Components]?:
     | Components[Key]
     | ((props: Components[Key]) => Components[Key]);
 };
-export interface ThemeOptions
-  extends FunctionProps<ComponentTheme>,
-    ThemeModeColor {}
-export interface ThemeProviderThemeOptions
-  extends FunctionProps<ComponentTheme>,
-    ThemeColor {}
+
+/**
+ * Input type for createTheme function
+ */
+export interface CreateThemeOptions extends FunctionProps {
+  mode?: ThemeMode;
+  lightColors?: RecursivePartial<Colors>;
+  darkColors?: RecursivePartial<Colors>;
+}
+
+export interface ThemeOptions extends FunctionProps {
+  colors?: RecursivePartial<Colors>;
+  mode?: ThemeMode;
+}
+
 export type UpdateTheme = (
-  myNewTheme: ThemeOptions | ((myTheme: ThemeOptions) => ThemeOptions)
+  myNewTheme:
+    | CreateThemeOptions
+    | ((myTheme: CreateThemeOptions) => CreateThemeOptions)
 ) => void;
+
 export type ReplaceTheme = (
-  updates: ThemeOptions | ((myTheme: ThemeOptions) => ThemeOptions)
+  updates:
+    | CreateThemeOptions
+    | ((myTheme: CreateThemeOptions) => CreateThemeOptions)
 ) => void;
+
 export type ThemeProviderProps<T = {}> = {
-  theme: ThemeProviderThemeOptions & T;
+  theme: ThemeOptions & T;
   updateTheme: UpdateTheme;
   replaceTheme: ReplaceTheme;
 };
 
-export const ThemeContext: React.Context<ThemeProviderProps> =
-  React.createContext({
-    theme: {},
-  } as ThemeProviderProps);
+export const ThemeContext = React.createContext<ThemeProviderProps>({
+  theme: { colors: lightColors, mode: 'light' },
+} as ThemeProviderProps);
 
-export const createTheme = (theme: ThemeOptions): ThemeOptions => {
+export const createTheme = (theme: CreateThemeOptions): CreateThemeOptions => {
   return {
     ...theme,
-    ...deepmerge({ lightColors, darkColors } as ThemeOptions, {
-      lightColors: theme.lightColors || {},
-      darkColors: theme.darkColors || {},
-      mode: theme.mode || 'light',
-    }),
+    ...deepmerge<CreateThemeOptions>(
+      { lightColors, darkColors },
+      {
+        lightColors: theme.lightColors || {},
+        darkColors: theme.darkColors || {},
+        mode: theme.mode || 'light',
+      }
+    ),
   };
 };
 
 const separateColors = (
-  theme: ThemeOptions,
+  theme: CreateThemeOptions,
   themeMode?: ThemeMode
-): ThemeProviderThemeOptions => {
+): ThemeOptions => {
   const {
     darkColors: themeDarkColors = {},
     lightColors: themeLightColors = {},
@@ -73,9 +82,9 @@ const separateColors = (
 };
 
 export const ThemeProvider: React.FC<{
-  theme?: ThemeOptions;
+  theme?: CreateThemeOptions;
 }> = ({ theme = createTheme({}), children }) => {
-  const [themeState, setThemeState] = React.useState<ThemeOptions>(theme);
+  const [themeState, setThemeState] = React.useState<CreateThemeOptions>(theme);
 
   const updateTheme: UpdateTheme = React.useCallback((updatedTheme) => {
     setThemeState((oldTheme) => {
