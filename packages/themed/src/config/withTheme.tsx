@@ -12,10 +12,10 @@ export interface ThemedComponent {
   displayName: string;
 }
 
-const combineByStyles = (key = '') => {
-  if (key.endsWith('style') || key.endsWith('Style')) {
-    return (a, b) => {
-      return [a, b].flat();
+const combineByStyles = (propName = '') => {
+  if (propName.endsWith('style') || propName.endsWith('Style')) {
+    return (prop1: any, prop2: any) => {
+      return [prop1, prop2].flat();
     };
   }
   return undefined;
