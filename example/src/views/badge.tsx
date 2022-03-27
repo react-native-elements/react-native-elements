@@ -71,6 +71,7 @@ const badgeComponent = () => {
               containerStyle={{ position: 'absolute', top: 5, left: 40 }}
             />
           </View>
+          {/* @ts-ignore */}
           <BadgedIcon type="ionicon" name="ios-chatbubbles" />
           <View>
             <Avatar

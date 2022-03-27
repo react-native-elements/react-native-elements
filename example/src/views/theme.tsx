@@ -36,7 +36,7 @@ const TextComponent: React.FunctionComponent<TextComponentProps> = () => {
               }}
               onPress={() => {
                 updateTheme({
-                  colors: {
+                  lightColors: {
                     primary: '#' + color,
                   },
                   darkColors: {
