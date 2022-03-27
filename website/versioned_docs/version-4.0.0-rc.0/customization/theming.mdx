@@ -11,11 +11,7 @@ Elements ships with a 3 utilities for large-scale theming.
 Firstly you'll want to set up your `ThemeProvider`.
 
 ```jsx
-import {
-  ThemeProvider,
-  Button,
-  createTheme,
-} from '@react-native-elements/themed';
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
   Button: {
@@ -52,11 +48,7 @@ Use the prop `mode` in `createTheme` to set the default dark theme. You may want
 or by using the user's configured settings
 
 ```jsx
-import {
-  ThemeProvider,
-  Button,
-  createTheme,
-} from '@react-native-elements/themed';
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   colors: {
@@ -81,7 +73,7 @@ const App = () => {
 But how to switch modes?
 
 ```jsx
-import { useTheme } from '@react-native-elements/themed';
+import { useTheme } from '@rneui/themed';
 
 const App = () => {
   const { updateTheme } = useTheme();

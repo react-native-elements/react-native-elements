@@ -1,13 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import {
-  Avatar,
-  Button,
-  Icon,
-  Theme,
-  withTheme,
-} from '@react-native-elements/themed';
+import { Avatar, Button, Icon, Theme, withTheme } from '@rneui/themed';
 
 type UserData = {
   name: string;

@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import {
-  Button,
-  ButtonGroup,
-  withTheme,
-  Text,
-} from '@react-native-elements/themed';
+import { Button, ButtonGroup, withTheme, Text } from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 import { LinearGradient } from '../components/LinearGradient';
 

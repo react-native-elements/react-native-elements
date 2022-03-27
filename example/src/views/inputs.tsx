@@ -17,7 +17,7 @@ import {
   Button,
   ThemeProvider,
   InputProps,
-} from '@react-native-elements/themed';
+} from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;

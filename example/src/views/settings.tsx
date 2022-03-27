@@ -7,7 +7,7 @@ import {
   Icon,
   SearchBarProps,
   Switch,
-} from '@react-native-elements/themed';
+} from '@rneui/themed';
 import { Header } from '../components/header';
 import { ThemeReducerContext } from '../helpers/ThemeReducer';
 

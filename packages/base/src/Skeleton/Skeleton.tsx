@@ -43,7 +43,6 @@ export interface SkeletonProps extends ViewProps {
 /**
  * A placeholder preview for content before the data gets loaded, an alternative for spinners.
  *
- * @installation @react-native-elements/skeleton
  * @usage
  * %jsx <Skeleton variant="circular" width={40} height={40} />
  * %jsx <Skeleton variant="rectangular" width={210} height={118} />

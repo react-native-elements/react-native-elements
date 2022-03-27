@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckBox, Icon } from '@react-native-elements/themed';
+import { CheckBox, Icon } from '@rneui/themed';
 import { Header } from '../components/header';
 
 type CheckboxComponentProps = {};

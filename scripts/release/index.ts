@@ -14,7 +14,7 @@ type TPkg = {
   manifestLocation: string;
 };
 
-const pkgScope = '@react-native-elements';
+const pkgScope = '@rneui';
 
 class Release {
   static async bump(pkg: TPkg) {

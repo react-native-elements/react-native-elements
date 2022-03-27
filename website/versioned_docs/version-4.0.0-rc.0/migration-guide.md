@@ -17,22 +17,22 @@ To use the v4 version, you first need to update the package names:
 
 ```diff
 - import {} from 'react-native-elements'
-+ import {} from '@react-native-elements/themed'
++ import {} from '@rneui/themed'
 ```
 
 You can install the packages from npm or yarn
 
 ```bash
-npm install @react-native-elements/base @react-native-elements/themed
+npm install @rneui/base @rneui/themed
 
 # or with yarn
-yarn add @react-native-elements/base @react-native-elements/themed
+yarn add @rneui/base @rneui/themed
 ```
 
 You can also make `alias` for package to help you with migration.
 
 ```bash
-yarn add react-native-elements@npm:@react-native-elements/themed
+yarn add react-native-elements@npm:@rneui/themed
 ```
 
 ### Pressable
@@ -108,11 +108,7 @@ Since `useDark` is deprecated, you can switch `dark` and `light` themeColors usi
 Complete example of root of our application
 
 ```jsx title='App.tsx'
-import {
-  ThemeProvider,
-  Button,
-  createTheme,
-} from '@react-native-elements/themed';
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   colors: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../components/header';
-import { Tab, Text, TabView } from '@react-native-elements/themed';
+import { Tab, Text, TabView } from '@rneui/themed';
 import { ScrollView } from 'react-native';
 
 export default () => {

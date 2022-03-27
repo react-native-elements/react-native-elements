@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { useTheme } from '@react-native-elements/themed';
+import { useTheme } from '@rneui/themed';
 import DrawerNavigator from './DrawerNavigator';
 import Avatars from '../views/avatars';
 import Cards from '../views/cards';

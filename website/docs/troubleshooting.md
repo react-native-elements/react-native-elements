@@ -23,10 +23,10 @@ Spelling a component incorrectly though very simple, happens occasionally.
 
 ```jsx
 // Incorrect
-import { Listitem } from '@react-native-elements/themed';
+import { Listitem } from '@rneui/themed';
 
 // Correct
-import { ListItem } from '@react-native-elements/themed';
+import { ListItem } from '@rneui/themed';
 ```
 
 ### Importing a component from the wrong version
@@ -90,7 +90,7 @@ They're a couple ways to solve this depending on your setup.
 
    ```bash
    # yarn
-   yarn && yarn add @react-native-elements/base @react-native-elements/themed
+   yarn && yarn add @rneui/base @rneui/themed
    ```
 
 3. Install react-native-vector-icons

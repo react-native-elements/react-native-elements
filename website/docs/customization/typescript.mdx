@@ -13,11 +13,11 @@ i.e. below we add a custom `p1Style` to the `Text` theme object and we add a bun
 ```tsx
 // react-native-elements.d.ts
 
-export * from '@react-native-elements/themed';
+export * from '@rneui/themed';
 
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
-declare module '@react-native-elements/themed' {
+declare module '@rneui/themed' {
   export interface TextProps {
     bold: boolean;
   }

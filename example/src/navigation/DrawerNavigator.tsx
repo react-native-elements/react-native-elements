@@ -6,7 +6,7 @@ import {
   DrawerContentComponentProps,
   DrawerContentOptions,
 } from '@react-navigation/drawer';
-import { Text, Divider, Switch, useTheme } from '@react-native-elements/themed';
+import { Text, Divider, Switch, useTheme } from '@rneui/themed';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useColorScheme } from 'react-native-appearance';
 

@@ -2,43 +2,43 @@ import { withTheme } from '../config';
 import {
   ListItemProps,
   ListItemBase,
-} from '@react-native-elements/base/dist/ListItem/ListItem';
+} from '@rneui/base/dist/ListItem/ListItem';
 import {
   ListItemContent,
   ListItemContentProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Content';
+} from '@rneui/base/dist/ListItem/ListItem.Content';
 import {
   ListItemChevron,
   ListItemChevronProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Chevron';
+} from '@rneui/base/dist/ListItem/ListItem.Chevron';
 import {
   ListItemInput,
   ListItemInputProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Input';
+} from '@rneui/base/dist/ListItem/ListItem.Input';
 import {
   ListItemCheckBox,
   ListItemCheckBoxProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.CheckBox';
+} from '@rneui/base/dist/ListItem/ListItem.CheckBox';
 import {
   ListItemButtonGroup,
   ListItemButtonGroupProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.ButtonGroup';
+} from '@rneui/base/dist/ListItem/ListItem.ButtonGroup';
 import {
   ListItemTitle,
   ListItemTitleProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Title';
+} from '@rneui/base/dist/ListItem/ListItem.Title';
 import {
   ListItemSubtitle,
   ListItemSubtitleProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Subtitle';
+} from '@rneui/base/dist/ListItem/ListItem.Subtitle';
 import {
   ListItemSwipeable,
   ListItemSwipeableProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Swipeable';
+} from '@rneui/base/dist/ListItem/ListItem.Swipeable';
 import {
   ListItemAccordion,
   ListItemAccordionProps,
-} from '@react-native-elements/base/dist/ListItem/ListItem.Accordion';
+} from '@rneui/base/dist/ListItem/ListItem.Accordion';
 
 export type {
   ListItemAccordionProps,

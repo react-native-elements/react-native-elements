@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { Header } from '../components/header';
-import { Button, LinearProgress } from '@react-native-elements/themed';
+import { Button, LinearProgress } from '@rneui/themed';
 
 const LinearProgressAPI: React.FunctionComponent = () => {
   const [progress, setProgress] = React.useState<number>(0);

@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Dialog,
-  CheckBox,
-  ListItem,
-  Avatar,
-} from '@react-native-elements/themed';
+import { Button, Dialog, CheckBox, ListItem, Avatar } from '@rneui/themed';
 import { View, Text, StyleSheet } from 'react-native';
 import { Header } from '../components/header';
 

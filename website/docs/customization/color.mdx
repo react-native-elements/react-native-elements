@@ -59,7 +59,7 @@ Setting styles in the theme is as simple as using the name of the component, as
 a key and the props you want to change as the value.
 
 ```jsx
-import { ThemeProvider, createTheme } from '@react-native-elements/themed';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
   lightColors: {
@@ -87,12 +87,7 @@ using the `colors` object and the `Platform` API.
 
 ```jsx
 import { Platform } from 'react-native';
-import {
-  Button,
-  lightColors,
-  createTheme,
-  ThemeProvider,
-} from '@react-native-elements/themed';
+import { Button, lightColors, createTheme, ThemeProvider } from '@rneui/themed';
 
 const theme = createTheme({
   lightColors: {

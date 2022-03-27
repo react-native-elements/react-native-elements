@@ -4,7 +4,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import CodeBlock from '@theme/CodeBlock';
 
 const exampleCode = `import React from 'react';
-import { Button } from '@react-native-elements/base';
+import { Button } from '@rneui/base';
 
 const AwesomeButton = () => (<Button title='Welcome'/>)`;
 
@@ -24,8 +24,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 <b>1. Install the React Native Elements package from the NPM</b>
                 <p className="margin-vert--md margin-horiz--md">
                   <CodeBlock language="bash">
-                    npm install @react-native-elements/base
-                    @react-native-elements/themed
+                    npm install @rneui/base @rneui/themed
                   </CodeBlock>
                 </p>
 

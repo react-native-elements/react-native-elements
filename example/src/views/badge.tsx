@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Avatar, Badge, Icon, withBadge } from '@react-native-elements/themed';
+import { Avatar, Badge, Icon, withBadge } from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 
 const BadgedIcon = withBadge(15)(Icon);

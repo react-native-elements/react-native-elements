@@ -2,7 +2,7 @@ import { withTheme } from '../config';
 import {
   AirbnbRating,
   TapRatingProps,
-} from '@react-native-elements/base/dist/AirbnbRating/index';
+} from '@rneui/base/dist/AirbnbRating/index';
 
 export { AirbnbRating };
 export type { TapRatingProps };

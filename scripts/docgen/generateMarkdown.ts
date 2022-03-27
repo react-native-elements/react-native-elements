@@ -76,7 +76,7 @@ export class Markdown implements ComponentDoc {
     if (pkg !== Markdown.packageName) {
       Markdown.packageName = pkg;
       console.log();
-      console.log(`@react-native-elements/${pkg}`);
+      console.log(`@rneui/${pkg}`);
     }
     const isUniverse = !this.filePath.startsWith(pkgPath + '/base');
     const mdFilePath = path.join(

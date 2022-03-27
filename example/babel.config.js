@@ -10,26 +10,22 @@ module.exports = function (api) {
         'module-resolver',
         {
           alias: {
-            '@react-native-elements/base/dist': path.resolve(
+            '@rneui/base/dist': path.resolve(
               __dirname,
               '..',
               'packages/base/src'
             ),
-            '@react-native-elements/themed': path.resolve(
+            '@rneui/themed': path.resolve(
               __dirname,
               '..',
               'packages/themed/src'
             ),
-            '@react-native-elements/circular-slider': path.resolve(
+            '@rneui/circular-slider': path.resolve(
               __dirname,
               '..',
               'packages/circular-slider/src'
             ),
-            '@react-native-elements/base': path.resolve(
-              __dirname,
-              '..',
-              'packages/base/src'
-            ),
+            '@rneui/base': path.resolve(__dirname, '..', 'packages/base/src'),
           },
         },
       ],

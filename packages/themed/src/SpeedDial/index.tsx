@@ -2,11 +2,11 @@ import { withTheme } from '../config';
 import {
   SpeedDial,
   SpeedDialProps,
-} from '@react-native-elements/base/dist/SpeedDial/SpeedDial';
+} from '@rneui/base/dist/SpeedDial/SpeedDial';
 import {
   SpeedDialAction,
   SpeedDialActionProps,
-} from '@react-native-elements/base/dist/SpeedDial/SpeedDial.Action';
+} from '@rneui/base/dist/SpeedDial/SpeedDial.Action';
 
 export type { SpeedDialProps, SpeedDialActionProps };
 export default Object.assign(

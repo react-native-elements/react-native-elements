@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-elements/circular-slider",
+  "name": "@rneui/circular-slider",
   "version": "0.1.0",
   "description": "React Native Elements Next Gen Components",
   "main": "dist/index.js",
@@ -51,7 +51,7 @@
     "react-native-svg": "^12.3.0"
   },
   "jest": {
-    "displayName": "@react-native-elements/circular-slider",
+    "displayName": "@rneui/circular-slider",
     "preset": "react-native",
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules",
