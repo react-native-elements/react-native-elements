@@ -48,12 +48,11 @@ export interface FullTheme {
   /**
    * Color Theme Mode
    */
-  mode?: ThemeMode;
+  mode: ThemeMode;
   /**
    * Color Theme
    */
-  colors?: RecursivePartial<Colors>;
-
+  colors: Colors;
   /**
    * Component Theme
    */
