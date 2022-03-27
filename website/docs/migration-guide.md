@@ -95,13 +95,14 @@ Create custom theme using `createTheme` helper
 ```diff
 - const myTheme: FullTheme = {
 + const myTheme = createTheme({
-   colors: {
+-  colors: {
++  lightColors:{
      primary: '#f2f2f2',
    },
-+ darkColors: {
++  darkColors: {
 +   primary: '#121212',
-+ },
-+ mode: 'dark',
++  },
++  mode: 'dark',
 };
 ```
 

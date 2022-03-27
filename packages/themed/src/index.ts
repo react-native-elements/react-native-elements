@@ -51,6 +51,7 @@ import Tooltip, { TooltipProps } from './Tooltip';
 import {
   Colors,
   lightColors,
+  darkColors,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
@@ -107,7 +108,8 @@ export {
 
 // Theme utils exports
 export {
-  lightColors as colors,
+  lightColors,
+  darkColors,
   getIconType,
   registerCustomIconType,
   normalizeText as normalize,

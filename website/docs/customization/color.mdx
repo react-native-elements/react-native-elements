@@ -84,7 +84,7 @@ using the `colors` object and the `Platform` API.
 import { Platform } from 'react-native';
 import {
   Button,
-  colors,
+  lightColors,
   createTheme,
   ThemeProvider,
 } from '@react-native-elements/themed';
@@ -92,8 +92,8 @@ import {
 const theme = createTheme({
   lightColors: {
     ...Platform.select({
-      default: colors.platform.android,
-      ios: colors.platform.ios,
+      default: lightColors.platform.android,
+      ios: lightColors.platform.ios,
     }),
   },
 });
