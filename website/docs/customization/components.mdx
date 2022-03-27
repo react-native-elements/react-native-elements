@@ -21,7 +21,7 @@ export const MyCustomComponent = withTheme<MyCustomComponentProps>((props) => {
   // ...
 });
 
-declare module 'react-native-elements' {
+declare module '@react-native-elements/themed' {
   export interface FullTheme {
     MyCustomComponent: Partial<MyCustomComponentProps>;
   }

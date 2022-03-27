@@ -57,8 +57,11 @@ a key and the props you want to change as the value.
 import { ThemeProvider, createTheme } from '@react-native-elements/themed';
 
 const theme = createTheme({
-  color: {
+  lightColors: {
     primary: '#e7e7e8',
+  },
+  darkColors: {
+    primary: '#000',
   },
 });
 
@@ -81,16 +84,16 @@ using the `colors` object and the `Platform` API.
 import { Platform } from 'react-native';
 import {
   Button,
-  colors,
+  lightColors,
   createTheme,
   ThemeProvider,
 } from '@react-native-elements/themed';
 
 const theme = createTheme({
-  colors: {
+  lightColors: {
     ...Platform.select({
-      default: colors.platform.android,
-      ios: colors.platform.ios,
+      default: lightColors.platform.android,
+      ios: lightColors.platform.ios,
     }),
   },
 });

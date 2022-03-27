@@ -3,7 +3,7 @@ import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 import { FullTheme } from './theme';
-import { lightColors } from '@react-native-elements/base/dist/helpers';
+import { lightColors } from './colors';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component?.prototype?.isReactComponent);
@@ -11,6 +11,15 @@ const isClassComponent = (Component: any) =>
 export interface ThemedComponent {
   displayName: string;
 }
+
+const combineByStyles = (propName = '') => {
+  if (propName.endsWith('style') || propName.endsWith('Style')) {
+    return (prop1: any, prop2: any) => {
+      return [prop1, prop2].flat();
+    };
+  }
+  return undefined;
+};
 
 const ThemedComponent = (
   WrappedComponent: any,
@@ -38,21 +47,20 @@ const ThemedComponent = (
               );
             }
             const { theme, updateTheme, replaceTheme } = context;
+
+            const themedProps =
+              typeof theme[themeKey] === 'function'
+                ? theme[themeKey]?.(rest)
+                : theme[themeKey];
+
             const newProps = {
-              theme,
+              theme: { colors: theme.colors, mode: theme.mode },
               updateTheme,
               replaceTheme,
-              ...deepmerge<FullTheme>(
-                (themeKey &&
-                  (theme[
-                    themeKey as keyof Partial<FullTheme>
-                  ] as Partial<FullTheme>)) ||
-                  {},
-                rest,
-                {
-                  clone: false,
-                }
-              ),
+              ...deepmerge<FullTheme>(themedProps || {}, rest, {
+                customMerge: combineByStyles,
+                clone: false,
+              }),
               children,
             };
 
@@ -83,6 +91,7 @@ function withTheme<P = {}, T = {}>(
   if (isClassComponent(WrappedComponent)) {
     return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
+
   return Component;
 }
 

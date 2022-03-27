@@ -59,7 +59,7 @@ import {
 } from '@react-native-elements/themed';
 
 const myTheme = createTheme({
-  colors: {
+  lightColors: {
     primary: '#f2f2f2',
   },
   darkColors: {
@@ -105,4 +105,15 @@ const App = () => {
     </>
   );
 };
+
+const theme = createTheme({
+  Text: (prop) => ({
+    style: prop.h5 && { fontSize: 8 },
+  }),
+});
+const theme = createTheme({
+  Text: {
+    h5Style: { fontSize: 8 },
+  },
+});
 ```

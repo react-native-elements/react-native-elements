@@ -2,13 +2,10 @@ import {
   androidRipple,
   BackgroundImage,
   color,
-  Colors,
-  darkColors,
   fonts,
   getIconType,
   InlinePressableProps,
   isIOS,
-  lightColors,
   normalizeText,
   patchWebProps,
   renderNode,
@@ -16,18 +13,19 @@ import {
   ScreenWidth,
   registerCustomIconType,
 } from '@react-native-elements/base/dist/helpers';
+import { type Colors, darkColors, lightColors } from './colors';
 import {
-  ReplaceTheme,
+  type ReplaceTheme,
+  type UpdateTheme,
+  createTheme,
   ThemeConsumer,
   ThemeContext,
-  ThemeProps,
   ThemeProvider,
-  UpdateTheme,
-  createTheme,
+  ThemeProps,
 } from './ThemeProvider';
 import withTheme from './withTheme';
-import { makeStyles, useTheme } from './makeStyles';
-import { Theme, FullTheme } from './theme';
+import { makeStyles, useTheme, useThemeMode } from './makeStyles';
+import type { Theme, FullTheme, ThemeMode } from './theme';
 
 export {
   androidRipple,
@@ -48,6 +46,7 @@ export {
   ThemeContext,
   ThemeProvider,
   useTheme,
+  useThemeMode,
   withTheme,
   createTheme,
   registerCustomIconType,
@@ -59,8 +58,8 @@ export type {
   InlinePressableProps,
   ReplaceTheme,
   Theme,
-  ThemeProps,
   UpdateTheme,
+  ThemeMode,
 };
 
 export type RneFunctionComponent<T> = React.FunctionComponent<

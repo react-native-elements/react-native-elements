@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<p align="center">
+<p align="center"> 
  Universal Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 </p>
 
