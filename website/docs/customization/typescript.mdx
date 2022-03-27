@@ -10,16 +10,16 @@ TypeScript definitions for your theme can be extended by using TypeScript's [dec
 
 i.e. below we add a custom `p1Style` to the `Text` theme object and we add a bunch of colors to the `colors` object.
 
-```typescript
+```tsx
 // react-native-elements.d.ts
 
-export * from 'patch/to/node_modules/react-native-elements';
+export * from '@react-native-elements/themed';
 
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
-declare module 'react-native-elements' {
+declare module '@react-native-elements/themed' {
   export interface TextProps {
-    p1Style: StyleProp<TextStyle>;
+    bold: boolean;
   }
 
   export interface Colors {
@@ -35,4 +35,14 @@ declare module 'react-native-elements' {
     Text: Partial<TextProps>;
   }
 }
+```
+
+```tsx
+const myTheme = createTheme({
+  Text: (props) => ({
+    style: {
+      fontWeight: props.bold ? 'bold' : 'normal',
+    },
+  }),
+});
 ```

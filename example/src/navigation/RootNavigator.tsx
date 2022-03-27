@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { ThemeContext } from '@react-native-elements/themed';
-import { ThemeReducerContext } from '../helpers/ThemeReducer';
+import { useTheme } from '@react-native-elements/themed';
 import DrawerNavigator from './DrawerNavigator';
 import Avatars from '../views/avatars';
 import Cards from '../views/cards';
@@ -40,22 +39,20 @@ import Divider from '../views/Divider';
 const Drawer = createDrawerNavigator();
 
 function RootNavigator() {
-  const { ThemeState } = useContext(ThemeReducerContext);
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   return (
     <NavigationContainer
       theme={{
         colors: {
-          background:
-            theme?.colors?.white !== undefined ? theme.colors.white : '',
+          background: theme?.colors.background,
           primary: '',
           card: '',
           text: '',
           border: '',
           notification: '',
         },
-        dark: ThemeState.themeMode === 'dark',
+        dark: theme.mode === 'dark',
       }}
     >
       <Drawer.Navigator

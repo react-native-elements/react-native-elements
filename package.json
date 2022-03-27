@@ -19,7 +19,8 @@
     "docs-build": "yarn docs-build-api && cd website && yarn run build",
     "docs-build-api": "TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true ts-node scripts/docgen/index.ts",
     "postinstall": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "release": "lerna version --no-push --no-git-tag-version  --conventional-commits --allow-branch=\"*\" --no-private"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
