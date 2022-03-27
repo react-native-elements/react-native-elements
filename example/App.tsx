@@ -46,14 +46,15 @@ export default () => {
   }
 
   return (
-    <ThemeProvider theme={myTheme}>
+    <ThemeProvider theme={theme}>
       <RootNavigator />
     </ThemeProvider>
   );
 };
-const myTheme = createTheme({
-  colors: {
-    primary: '#00a680',
+
+const theme = createTheme({
+  lightColors: {
+    primary: 'blue',
   },
   mode: 'dark',
 });

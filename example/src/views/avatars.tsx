@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, ScrollView } from 'react-native';
 import _ from 'lodash';
 import { Avatar } from '@react-native-elements/themed';
