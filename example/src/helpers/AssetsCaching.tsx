@@ -1,8 +1,8 @@
 import { Image } from 'react-native';
-import { loadAsync } from 'expo-font';
+import { FontSource, loadAsync } from 'expo-font';
 import { Asset } from 'expo-asset';
 
-export const cacheFonts = (fonts: string[]) => {
+export const cacheFonts = (fonts: (string | Record<string, FontSource>)[]) => {
   return fonts.map((font) => loadAsync(font));
 };
 
