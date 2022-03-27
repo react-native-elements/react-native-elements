@@ -110,7 +110,7 @@ Since `useDark` is deprecated, you can switch `dark` and `light` themeColors usi
 
 Complete example of root of our application
 
-```jsx title='App.tsx'
+```jsx
 import {
   ThemeProvider,
   Button,
@@ -136,9 +136,31 @@ const App = () => {
 };
 ```
 
+You can use props for components while defining themes
+
+```jsx
+import { createTheme } from '@react-native-elements/themed';
+
+const myTheme = createTheme({
+  Button: (buttonProps) => ({
+    titleStyle: {
+      color: buttonProps.type === 'solid' ? 'blue' : 'red',
+    },
+  }),
+});
+```
+
+Thus when we use `type='solid'` in `Button` component, it will use `titleStyle` will have "blue" color.
+
+```tsx
+<Button type='solid'>
+```
+
+Refer to [Customization](https://reactnative.dev/docs/customization) for more details.
+
 ### `Tooltip`
 
-`Tooltip` is one of core component of RNE, Since v4 this component would be stateless and would use `visible`, `onOpen` & `onClose` Props for its working
+`Tooltip` is one of core component of RNE, Since v4 this component would be stateless and would use `visible`, `onOpen` & `onClose` Props for its working.
 
 ```diff
   <Tooltip
