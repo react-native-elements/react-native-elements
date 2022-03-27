@@ -1,7 +1,7 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, ThemeProviderProps } from './ThemeProvider';
+import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 import { FullTheme } from './theme';
 import { lightColors } from './colors';
 
@@ -77,7 +77,7 @@ const ThemedComponent = (
 };
 
 function withTheme<P = {}, T = {}>(
-  WrappedComponent: React.ComponentType<P & Partial<ThemeProviderProps<T>>>,
+  WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
   themeKey?: string
 ): React.FunctionComponent<P> | React.ForwardRefExoticComponent<P> {
   const name = themeKey

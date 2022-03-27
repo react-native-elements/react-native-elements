@@ -42,15 +42,15 @@ export type ReplaceTheme = (
     | ((myTheme: CreateThemeOptions) => CreateThemeOptions)
 ) => void;
 
-export type ThemeProviderProps<T = {}> = {
+export type ThemeProps<T = {}> = {
   theme: ThemeOptions & T;
   updateTheme: UpdateTheme;
   replaceTheme: ReplaceTheme;
 };
 
-export const ThemeContext = React.createContext<ThemeProviderProps>({
+export const ThemeContext = React.createContext<ThemeProps>({
   theme: { colors: lightColors, mode: 'light' },
-} as ThemeProviderProps);
+} as ThemeProps);
 
 export const createTheme = (theme: CreateThemeOptions): CreateThemeOptions => {
   return {

@@ -21,6 +21,7 @@ import {
   ThemeConsumer,
   ThemeContext,
   ThemeProvider,
+  ThemeProps,
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles, useTheme, useThemeMode } from './makeStyles';
@@ -62,5 +63,5 @@ export type {
 };
 
 export type RneFunctionComponent<T> = React.FunctionComponent<
-  T & Partial<Theme<T>>
+  T & Partial<ThemeProps<T>>
 >;
