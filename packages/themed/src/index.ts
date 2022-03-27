@@ -57,12 +57,12 @@ import {
   withTheme,
   makeStyles,
   useTheme,
+  useThemeMode,
   UpdateTheme,
   ReplaceTheme,
   FullTheme,
   Theme,
   ThemeMode,
-  ComponentTheme,
   normalizeText,
   getIconType,
   registerCustomIconType,
@@ -117,6 +117,7 @@ export {
   withBadge,
   withTheme,
   useTheme,
+  useThemeMode,
   makeStyles,
   createTheme,
 };
@@ -174,6 +175,5 @@ export type {
   Theme,
   UpdateTheme,
   CreateThemeOptions,
-  ComponentTheme,
   ThemeMode,
 };

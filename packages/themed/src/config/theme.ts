@@ -36,7 +36,7 @@ import { TextProps } from '../Text';
 import { TileProps } from '../Tile';
 import { TooltipProps } from '../Tooltip';
 import { ViewProps } from 'react-native';
-import { Colors } from '.';
+import { Colors } from './colors';
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 

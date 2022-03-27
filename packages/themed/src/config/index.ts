@@ -23,8 +23,8 @@ import {
   ThemeProvider,
 } from './ThemeProvider';
 import withTheme from './withTheme';
-import { makeStyles, useTheme } from './makeStyles';
-import type { Theme, ComponentPropsTheme, FullTheme, ThemeMode } from './theme';
+import { makeStyles, useTheme, useThemeMode } from './makeStyles';
+import type { Theme, FullTheme, ThemeMode } from './theme';
 
 export {
   androidRipple,
@@ -45,6 +45,7 @@ export {
   ThemeContext,
   ThemeProvider,
   useTheme,
+  useThemeMode,
   withTheme,
   createTheme,
   registerCustomIconType,
@@ -57,7 +58,6 @@ export type {
   ReplaceTheme,
   Theme,
   UpdateTheme,
-  ComponentPropsTheme as ComponentTheme,
   ThemeMode,
 };
 
