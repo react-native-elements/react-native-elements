@@ -1,3 +1,4 @@
-website
-coverage
-dist
+website/**
+**/coverage/**
+**/dist/**
+**/__tests__/**

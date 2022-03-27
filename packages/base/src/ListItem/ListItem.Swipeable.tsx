@@ -8,10 +8,10 @@ import {
   ViewStyle,
   PanResponderGestureState,
 } from 'react-native';
-import { ListItemBase, ListItemBaseProps } from './ListItem';
+import { ListItemBase, ListItemProps } from './ListItem';
 import { RneFunctionComponent, ScreenWidth } from '../helpers';
 
-export interface ListItemSwipeableProps extends ListItemBaseProps {
+export interface ListItemSwipeableProps extends ListItemProps {
   /**
    * Left Content.
    * @type ReactNode or resetCallback => ReactNode

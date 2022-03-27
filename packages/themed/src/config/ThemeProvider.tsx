@@ -1,15 +1,11 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
-import { lightColors, darkColors } from './colors';
 import {
-  // FullTheme,
-  // Theme,
-  ThemeColor,
-  ThemeModeColor,
-  ComponentTheme,
-  ThemeMode,
-  RecursivePartial,
-} from './theme';
+  Colors,
+  darkColors,
+  lightColors,
+} from '@react-native-elements/base/dist/helpers';
+import { Theme, ThemeMode, RecursivePartial } from './theme';
 
 export type { RecursivePartial };
 
@@ -46,20 +42,17 @@ export type ThemeProviderProps<T = {}> = {
   replaceTheme: ReplaceTheme;
 };
 
-export const ThemeContext: React.Context<ThemeProviderProps> =
-  React.createContext({
-    theme: {},
-  } as ThemeProviderProps);
+export const ThemeContext: React.Context<ThemeProps> = React.createContext({
+  theme: {
+    colors: lightColors,
+  },
+} as ThemeProps);
 
 export const createTheme = (theme: ThemeOptions): ThemeOptions => {
-  return {
-    ...theme,
-    ...deepmerge({ lightColors, darkColors } as ThemeOptions, {
-      lightColors: theme.lightColors || {},
-      darkColors: theme.darkColors || {},
-      mode: theme.mode || 'light',
-    }),
-  };
+  return deepmerge(
+    { colors: lightColors, darkColors, mode: 'light' } as ThemeOptions,
+    theme
+  );
 };
 
 const separateColors = (

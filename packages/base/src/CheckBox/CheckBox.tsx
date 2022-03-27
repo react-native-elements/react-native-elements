@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { Text as TextElement } from '../Text';
 import { CheckBoxIcon, CheckBoxIconProps } from './components/CheckBoxIcon';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
 export interface CheckBoxProps extends PressableProps, CheckBoxIconProps {

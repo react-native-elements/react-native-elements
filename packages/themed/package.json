@@ -1,11 +1,9 @@
 {
   "name": "@react-native-elements/themed",
-  "version": "4.0.0-beta.0",
+  "version": "4.0.0-rc.0",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "react-native": "src/index.ts",
-  "source": "src/index.ts",
   "prepublish": "tsc --composite false",
   "files": [
     "dist"
@@ -16,6 +14,9 @@
     "reactnative",
     "bootstrap"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc --composite false",
     "test": "jest",
@@ -38,10 +39,10 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "peerDependencies": {
-    "@react-native-elements/base": "*"
+    "@react-native-elements/base": "^4.0.0-rc.0"
   },
   "devDependencies": {
-    "@react-native-elements/base": "^4.0.0-beta.0"
+    "@react-native-elements/base": "^4.0.0-rc.0"
   },
   "jest": {
     "displayName": "@react-native-elements/themed",
@@ -51,8 +52,10 @@
       "<rootDir>/dist"
     ],
     "moduleNameMapper": {
-      "@react-native-elements/base/dist/([^/]+)": "<rootDir>/../base/src/$1",
-      "@react-native-elements/([^/]+)": "<rootDir>/../$1/src"
+      "^@react-native-elements/base/dist/(.*)": [
+        "<rootDir>/../base/src/$1",
+        "<rootDir>/../../node_modules/@react-native-elements/base/src/$1"
+      ]
     },
     "transformIgnorePatterns": [
       "<rootDir>/../../node_modules/(?!(@react-native|react-native|@react-native-elements/base)/)"

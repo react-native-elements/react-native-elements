@@ -13,6 +13,8 @@ const ALLOWED_INCLUDES = {
     '[React Native TextInput](https://reactnative.dev/docs/textinput#props)',
 };
 
+export const MUST_INCLUDE_PROP_TYPES = ['InlinePressableProps'];
+
 export function separateParent(components: ComponentDoc[]) {
   const parentComp: Record<string, ParentType[]> = {};
   components.forEach(({ displayName, props }) => {
@@ -57,13 +59,13 @@ export function separateParent(components: ComponentDoc[]) {
         }
         if (
           componentName.replace('.', '') + 'Props' === parent.name ||
-          parent.name === 'InlinePressableProps'
+          MUST_INCLUDE_PROP_TYPES.includes(parent.name)
         ) {
           return undefined;
         }
 
         const compName = parent.name.replace(/Props|\./, '');
-        return `[${compName}](/docs/documentation/${compName.toLowerCase()}#props)`;
+        return `[${compName}](${compName.toLowerCase()}#props)`;
       })
       .filter(Boolean);
   }

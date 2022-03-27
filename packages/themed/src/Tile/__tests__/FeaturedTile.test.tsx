@@ -3,7 +3,7 @@ import { FeaturedTile } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('FeaturedTitle component', () => {
-  it.skip('should apply values from theme', () => {
+  it('should apply values from theme', () => {
     const theme = {
       FeaturedTile: {
         title: 'I am featured',

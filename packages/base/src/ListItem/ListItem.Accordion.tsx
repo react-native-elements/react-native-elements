@@ -1,11 +1,11 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import { ListItemBase, ListItemBaseProps } from './ListItem';
+import { ListItemBase, ListItemProps } from './ListItem';
 import { ListItemContent } from './ListItem.Content';
 import { Icon, IconNode, IconProps } from '../Icon';
 import { RneFunctionComponent } from '../helpers';
 
-export interface ListItemAccordionProps extends ListItemBaseProps {
+export interface ListItemAccordionProps extends ListItemProps {
   /** Decide if Accordion is Expanded. */
   isExpanded?: boolean;
 

@@ -13,7 +13,7 @@ import {
   TextInputProps,
 } from 'react-native';
 import { renderNode, patchWebProps, defaultTheme, Theme } from '../helpers';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { Icon, IconNode } from '../Icon';
 
 const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>

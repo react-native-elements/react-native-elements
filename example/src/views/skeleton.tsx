@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 const Avatars = () => {
   return (
     <>
-      <Header title="Avatars" view="avatar" />
+      <Header title="Skeleton" view="skeleton" />
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.rowCenter}>

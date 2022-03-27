@@ -14,6 +14,7 @@ import {
   Text,
   Badge,
   Tab,
+  TabView,
 } from '@react-native-elements/themed';
 import { Header } from '../components/header';
 
@@ -85,20 +86,10 @@ const WhatsappClone: React.FunctionComponent = () => {
           </Tab>
         </View>
       </SafeAreaView>
-      <ScrollView
-        nestedScrollEnabled
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        pagingEnabled
-        scrollEventThrottle={30}
-        onMomentumScrollEnd={(e) => {
-          setIndex(e.nativeEvent.contentOffset.x / ScreenWidth);
-        }}
-        ref={scrollRef}
-      >
+      <TabView value={index} onChange={setIndex}>
         <View style={styles.view}>
           <ScrollView nestedScrollEnabled scrollEventThrottle={16}>
-            {[...new Array(5)].map((v, i) => (
+            {[...new Array(15)].map((v, i) => (
               <ListItem key={i} bottomDivider onPress={() => {}}>
                 <Avatar
                   rounded
@@ -171,7 +162,7 @@ const WhatsappClone: React.FunctionComponent = () => {
             </ListItem>
           ))}
         </View>
-      </ScrollView>
+      </TabView>
 
       <FAB
         icon={{

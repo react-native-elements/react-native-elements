@@ -12,7 +12,7 @@ import {
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
 
-export interface TabBaseProps extends ViewProps {
+export interface TabProps extends ViewProps {
   /** Child position index value. */
   value?: number;
 
@@ -44,7 +44,7 @@ export interface TabBaseProps extends ViewProps {
  * %jsx <Tab.Item title="Tab 1" buttonStyle={(active)=>{backgroundColor: active ? 'red' : 'blue'}} />
  *
  *  */
-export const TabBase: RneFunctionComponent<TabBaseProps> = ({
+export const TabBase: RneFunctionComponent<TabProps> = ({
   theme = defaultTheme,
   children,
   value,
@@ -59,6 +59,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   const animationRef = React.useRef(new Animated.Value(0));
   const scrollViewRef = React.useRef<ScrollView>(null);
   const scrollViewPosition = React.useRef(0);
+  const validChildren = React.Children.toArray(children);
 
   const tabItemsPosition = React.useRef<
     Array<{ position: number; width: number }>
@@ -108,7 +109,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
   }, []);
 
   const indicatorTransitionInterpolate = React.useMemo(() => {
-    const countItems = React.Children.count(children);
+    const countItems = validChildren.length;
     if (countItems < 2 || !tabItemsPosition.current.length) {
       return 0;
     }
@@ -123,7 +124,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
       inputRange,
       outputRange: [0, ...outputRange].slice(0, -1),
     });
-  }, [animationRef, children]);
+  }, [animationRef, validChildren]);
 
   const WIDTH = tabItemsPosition.current[value]?.width;
 
@@ -151,7 +152,7 @@ export const TabBase: RneFunctionComponent<TabBaseProps> = ({
         }),
         children: (
           <>
-            {React.Children.map(children, (child, index) => {
+            {validChildren.map((child, index) => {
               return React.cloneElement(
                 child as React.ReactElement<TabItemProps>,
                 {
