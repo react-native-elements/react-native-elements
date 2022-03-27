@@ -37,6 +37,18 @@ You can also make `alias` for package to help you with migration.
 yarn add react-native-elements@npm:@react-native-elements/themed
 ```
 
+### Colors
+
+Added a new `background` color to the `colors` object.
+
+```diff
+const colors={
+  primary: '#2e7d32',
+  secondary: '#757575',
++ background: '#ffffff',
+}
+```
+
 ### Pressable
 
 These components are now using `Pressable` instead of `Touchable`
