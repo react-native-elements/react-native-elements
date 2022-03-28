@@ -1,7 +1,7 @@
 {
   "name": "@rneui/base",
   "version": "4.0.0-alpha.0",
-  "description": "React Native Elements & UI Toolkit",
+  "description": "Cross Platform React Native UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "prepublish": "tsc --composite false",
@@ -12,6 +12,8 @@
     "react",
     "native",
     "react native",
+    "react native elements",
+    "rneui",
     "react native ui",
     "react native components",
     "ui library",
@@ -29,7 +31,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean-install": "rimraf node_modules && yarn"
   },
-  "author": "Nader Dabit & Monte Thakkar",
+  "author": "RNE Core Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/react-native-elements/react-native-elements/issues"
