@@ -32,7 +32,7 @@ const Header: React.FunctionComponent<HeaderComponentProps> = (props) => {
   };
 
   const playgroundNavigate = () => {
-    Linking.openURL(`https://@rneui/themed.js.org/#/${props.view}`);
+    Linking.openURL(`https://react-native-elements.js.org/#/${props.view}`);
   };
 
   return (
