@@ -60,18 +60,18 @@ const config = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
-      switchConfig: {
-        darkIcon: '🌙',
-        darkIconStyle: {
-          marginLeft: '2px',
-        },
-        // Unicode icons such as '\u2600' will work
-        // Unicode with 5 chars require brackets: '\u{1F602}'
-        lightIcon: '🌞',
-        lightIconStyle: {
-          marginLeft: '1px',
-        },
-      },
+      // switchConfig: {
+      //   darkIcon: '🌙',
+      //   darkIconStyle: {
+      //     marginLeft: '2px',
+      //   },
+      //   // Unicode icons such as '\u2600' will work
+      //   // Unicode with 5 chars require brackets: '\u{1F602}'
+      //   lightIcon: '🌞',
+      //   lightIconStyle: {
+      //     marginLeft: '1px',
+      //   },
+      // },
     },
     navbar: {
       title: 'React Native Elements',
@@ -120,6 +120,7 @@ const config = {
       theme: require('prism-react-renderer/themes/dracula'),
     },
     algolia: {
+      appId: 'react_native_elements',
       apiKey: '89e04a9445d16350e100c2d2421f2d39',
       indexName: 'react_native_elements',
     },
