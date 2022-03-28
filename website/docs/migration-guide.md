@@ -9,12 +9,6 @@ React Native Elements v4 introduces many features including few new components, 
 
 ## Core changes
 
-In the same directory as your package.json file, create or edit an .npmrc file to include a line specifying GitHub Packages URL.
-
-```text
-@rneui:registry=https://npm.pkg.github.com
-```
-
 To use the v4 version, you first need to update the package names:
 
 ```diff

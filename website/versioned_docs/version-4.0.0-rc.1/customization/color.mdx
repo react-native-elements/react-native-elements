@@ -3,6 +3,8 @@ title: Color
 sidebar_position: 1
 ---
 
+import { Palette } from './Color';
+
 ### The Theme Object
 
 By default, the theme object looks like this. You can add whatever values you
@@ -10,11 +12,14 @@ want to the theme, and they will be merged with the default. By default the
 platform colors aren't used anywhere. These native colors are added for
 your convenience.
 
+<Palette />
+
 ```tsx
 interface theme {
   colors: {
     primary;
     secondary;
+    background;
     white;
     black;
     grey0;
@@ -57,8 +62,11 @@ a key and the props you want to change as the value.
 import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
-  colors: {
+  lightColors: {
     primary: '#e7e7e8',
+  },
+  darkColors: {
+    primary: '#000',
   },
 });
 
@@ -79,13 +87,13 @@ using the `colors` object and the `Platform` API.
 
 ```jsx
 import { Platform } from 'react-native';
-import { Button, colors, createTheme, ThemeProvider } from '@rneui/themed';
+import { Button, lightColors, createTheme, ThemeProvider } from '@rneui/themed';
 
 const theme = createTheme({
-  colors: {
+  lightColors: {
     ...Platform.select({
-      default: colors.platform.android,
-      ios: colors.platform.ios,
+      default: lightColors.platform.android,
+      ios: lightColors.platform.ios,
     }),
   },
 });

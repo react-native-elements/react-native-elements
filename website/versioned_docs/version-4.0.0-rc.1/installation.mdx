@@ -13,22 +13,6 @@ import { SiExpo, SiReact } from 'react-icons/si';
 
 ### Stable
 
-Important: This version is published on **GitHub Package registry**, before you continue installing, you need to [Authenticate with GitHub using PAT](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token)
-
-Run the following command to authenticate with GitHub:
-
-```bash
-npm login --scope=@rneui --registry=https://npm.pkg.github.com
-```
-
-Then create or modify `.npmrc` in root of your project and add the following line
-
-```bash
-@rneui:registry=https://npm.pkg.github.com
-```
-
-And install pkgs using yarn or npm
-
 <Tabs
 groupId='pkg'
 values={[
@@ -51,23 +35,7 @@ yarn add @rneui/themed @rneui/base
 </TabItem>
 </Tabs>
 
-:::note Alternatively, you can install from GitHub repo
-
-You don't need PAT for installing via this method
-
-```bash
-# @rneui/base
-yarn add @rneui/base@rneui/react-native-elements#base
-
-# @rneui/themed
-yarn add @rneui/themed@rneui/react-native-elements#themed
-```
-
-:::
-
 ### Bleeding Edge
-
-You can install unreleased version, but things may break.
 
 <Tabs
 groupId='pkg'
@@ -78,22 +46,14 @@ values={[
 <TabItem value="npm">
 
 ```bash
-# @rneui/base
-npm install react-native-elements/react-native-elements#base
-
-# @rneui/themed
-npm install react-native-elements/react-native-elements#themed
+npm install react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-# @rneui/base
-yarn add @rneui/base@rneui/react-native-elements#base
-
-# @rneui/themed
-yarn add @rneui/themed@rneui/react-native-elements#themed
+yarn add react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>

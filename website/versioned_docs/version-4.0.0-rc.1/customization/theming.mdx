@@ -1,5 +1,5 @@
 ---
-title: Theming
+title: ThemeProvider
 sidebar_position: 2
 ---
 
@@ -51,7 +51,7 @@ or by using the user's configured settings
 import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
-  colors: {
+  lightColors: {
     primary: '#f2f2f2',
   },
   darkColors: {
@@ -97,4 +97,15 @@ const App = () => {
     </>
   );
 };
+
+const theme = createTheme({
+  Text: (prop) => ({
+    style: prop.h5 && { fontSize: 8 },
+  }),
+});
+const theme = createTheme({
+  Text: {
+    h5Style: { fontSize: 8 },
+  },
+});
 ```
