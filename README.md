@@ -38,10 +38,10 @@ to install React Native Elements!
 
 ### Versions
 
-| Package                           | Version                                                                                                                                                   |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **@react-native-elements/base**   | [![badge](https://img.shields.io/npm/v/@react-native-elements/base.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/base)     |
-| **@react-native-elements/themed** | [![badge](https://img.shields.io/npm/v/@react-native-elements/themed.svg?style=flat-square)](https://www.npmjs.com/package/@react-native-elements/themed) |
+| Package           | Version                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **@rneui/base**   | [![badge](https://img.shields.io/npm/v/@rneui/base.svg?style=flat-square)](https://www.npmjs.com/package/@rneui/base)     |
+| **@rneui/themed** | [![badge](https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square)](https://www.npmjs.com/package/@rneui/themed) |
 
 ### Usage
 
@@ -49,7 +49,7 @@ Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from '@react-native-elements/base';
+import { Button } from '@rneui/base';
 
 const App = () => <Button title="Hello World!" />;
 ```

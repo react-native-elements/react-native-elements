@@ -2,23 +2,20 @@ import { withTheme } from '../config';
 import {
   DialogLoading,
   DialogLoadingProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Loading';
+} from '@rneui/base/dist/Dialog/Dialog.Loading';
 import {
   DialogTitle,
   DialogTitleProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Title';
+} from '@rneui/base/dist/Dialog/Dialog.Title';
 import {
   DialogButton,
   DialogButtonProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Button';
+} from '@rneui/base/dist/Dialog/Dialog.Button';
 import {
   DialogActions,
   DialogActionsProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Actions';
-import {
-  DialogBase,
-  DialogProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog';
+} from '@rneui/base/dist/Dialog/Dialog.Actions';
+import { DialogBase, DialogProps } from '@rneui/base/dist/Dialog/Dialog';
 
 const ThemedDialogLoading = withTheme<DialogLoadingProps>(
   DialogLoading,

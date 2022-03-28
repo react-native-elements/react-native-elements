@@ -1,7 +1,7 @@
 import {
   BottomSheet,
   BottomSheetProps,
-} from '@react-native-elements/base/dist/BottomSheet/BottomSheet';
+} from '@rneui/base/dist/BottomSheet/BottomSheet';
 import { withTheme } from '../config';
 
 export { BottomSheet };

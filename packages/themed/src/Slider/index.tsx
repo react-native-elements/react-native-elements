@@ -1,8 +1,5 @@
 import { withTheme } from '../config';
-import {
-  Slider,
-  SliderProps,
-} from '@react-native-elements/base/dist/Slider/Slider';
+import { Slider, SliderProps } from '@rneui/base/dist/Slider/Slider';
 
 export { Slider };
 export type { SliderProps };

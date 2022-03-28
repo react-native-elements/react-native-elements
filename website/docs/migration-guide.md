@@ -12,29 +12,29 @@ React Native Elements v4 introduces many features including few new components, 
 In the same directory as your package.json file, create or edit an .npmrc file to include a line specifying GitHub Packages URL.
 
 ```text
-@react-native-elements:registry=https://npm.pkg.github.com
+@rneui:registry=https://npm.pkg.github.com
 ```
 
 To use the v4 version, you first need to update the package names:
 
 ```diff
 - import {} from 'react-native-elements'
-+ import {} from '@react-native-elements/themed'
++ import {} from '@rneui/themed'
 ```
 
 You can install the packages from npm or yarn
 
 ```bash
-npm install @react-native-elements/base @react-native-elements/themed
+npm install @rneui/base @rneui/themed
 
 # or with yarn
-yarn add @react-native-elements/base @react-native-elements/themed
+yarn add @rneui/base @rneui/themed
 ```
 
 You can also make `alias` for package to help you with migration.
 
 ```bash
-yarn add react-native-elements@npm:@react-native-elements/themed
+yarn add react-native-elements@npm:@rneui/themed
 ```
 
 ### Colors
@@ -123,11 +123,7 @@ Since `useDark` is deprecated, you can switch `dark` and `light` themeColors usi
 Complete example of root of our application
 
 ```jsx
-import {
-  ThemeProvider,
-  Button,
-  createTheme,
-} from '@react-native-elements/themed';
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   lightColors: {
@@ -151,7 +147,7 @@ const App = () => {
 You can use props for components while defining themes
 
 ```jsx
-import { createTheme } from '@react-native-elements/themed';
+import { createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   Button: (buttonProps) => ({

@@ -28,13 +28,13 @@ jobs:
         run: |
           sed -i -e 's/dist/src/g' .gitignore
           git rm -rf packages/*/src    
-          jq 'del(.devDependencies."@react-native-elements/base",.peerDependencies."@react-native-elements/base")'  packages/themed/package.json >  packages/themed/package.json.temp
+          jq 'del(.devDependencies."@rneui/base",.peerDependencies."@rneui/base")'  packages/themed/package.json >  packages/themed/package.json.temp
           mv packages/themed/package.json.temp packages/themed/package.json
           git add .
           git commit -m "Bleeding Edge Version" -a --no-verify
-      - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
+      - name: Deploy Bleeding Edge version'@rneui/*' packages
         run: |
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
-               echo "Deploying @react-native-elements/$pkg"
+               echo "Deploying @rneui/$pkg"
                git push origin `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
           done

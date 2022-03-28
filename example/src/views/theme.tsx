@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Pressable } from 'react-native';
-import { useTheme, Text, makeStyles } from '@react-native-elements/themed';
+import { useTheme, Text, makeStyles } from '@rneui/themed';
 import { Header } from '../components/header';
 
 type TextComponentProps = {};

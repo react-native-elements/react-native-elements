@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import path from 'path';
 import fs from 'fs';
 import semver from 'semver';
@@ -14,12 +15,16 @@ type TPkg = {
   manifestLocation: string;
 };
 
-const pkgScope = '@react-native-elements';
+const pkgScope = '@rneui';
 
 class Release {
   static async bump(pkg: TPkg) {
     const manifest = JSON.parse(fs.readFileSync(pkg.manifestLocation, 'utf8'));
     manifest.version = pkg.version;
+    if (pkg.name === 'themed') {
+      manifest.devDependencies['@rneui/base'] = pkg.version;
+      manifest.peerDependencies['@rneui/base'] = pkg.version;
+    }
     fs.writeFileSync(pkg.manifestLocation, JSON.stringify(manifest, null, 2));
     await updateChangelog(pkg, 'independent', {
       changelogPreset: 'conventional-changelog-angular',
@@ -28,6 +33,7 @@ class Release {
       version: pkg.version,
     });
   }
+
   static async recommendVersion(pkg: TPkg): Promise<string> {
     return recommendVersion(pkg, 'independent', {
       changelogPreset: 'conventional-changelog-angular',
@@ -41,17 +47,18 @@ class Release {
     const pkgs: TPkg[] = [];
     const pkgPath = fs.readdirSync(pkgRootPath);
     for (const pkg of pkgPath) {
-      // if (pkg === 'themed') continue;
       const location = path.resolve(pkgRootPath, pkg);
       const manifestLocation = path.resolve(location, 'package.json');
       const { version } = JSON.parse(fs.readFileSync(manifestLocation, 'utf8'));
-      const recommendVersion = await this.recommendVersion({
+      const recommendedVersion = await this.recommendVersion({
         name: pkg,
         version,
         location,
         manifestLocation,
       });
-      console.log(` - ${pkgScope}/${pkg}:  ${version} => ${recommendVersion}`);
+      console.log(
+        ` - ${pkgScope}/${pkg}:  ${version} => ${recommendedVersion}`
+      );
       pkgs.push({
         name: pkg,
         version,
@@ -64,7 +71,6 @@ class Release {
   }
 
   static questions({ name, version }: TPkg): inquirer.QuestionCollection {
-    if (name === 'themed') return [];
     return [
       {
         type: 'list',
@@ -96,7 +102,7 @@ class Release {
           return answers[name].startsWith('pre');
         },
         name: name,
-        message: ` `,
+        message: ' ',
         suffix: 'prerelease',
         type: 'list',
         choices: (ans) => [
@@ -116,7 +122,7 @@ class Release {
         validate: (input) => {
           return Boolean(semver.valid(input)) || 'Invalid version';
         },
-        message: ` `,
+        message: ' ',
         suffix: 'manual',
         type: 'input',
       },
@@ -135,12 +141,12 @@ async function main() {
     ])
     .then((versions) => {
       pkgs.forEach((pkg) => {
-        if (!semver.gt(pkg.version, versions[pkg.name])) {
+        if (!semver.gt(versions[pkg.name], pkg.version)) {
           throw Error(
             pkg.name + ' version is not greater than current version'
           );
         }
-        pkg.version = versions[pkg.name === 'themed' ? 'base' : pkg.name];
+        pkg.version = versions[pkg.name];
         Release.bump(pkg);
       });
     })
@@ -149,3 +155,5 @@ async function main() {
     });
 }
 main();
+
+console.log('Remember to exec `yarn` to update yarn.lock ');

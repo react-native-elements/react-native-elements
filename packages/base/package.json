@@ -1,7 +1,7 @@
 {
-  "name": "@react-native-elements/base",
-  "version": "4.0.0-rc.0",
-  "description": "React Native Elements & UI Toolkit",
+  "name": "@rneui/base",
+  "version": "4.0.0-alpha.0",
+  "description": "Cross Platform React Native UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "prepublish": "tsc --composite false",
@@ -12,6 +12,8 @@
     "react",
     "native",
     "react native",
+    "react native elements",
+    "rneui",
     "react native ui",
     "react native components",
     "ui library",
@@ -19,9 +21,6 @@
     "android",
     "bootstrap"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "build": "tsc --composite false",
     "test": "jest",
@@ -32,7 +31,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean-install": "rimraf node_modules && yarn"
   },
-  "author": "Nader Dabit & Monte Thakkar",
+  "author": "RNE Core Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/react-native-elements/react-native-elements/issues"
@@ -60,7 +59,7 @@
     "react-native-vector-icons": ">7.0.0"
   },
   "jest": {
-    "displayName": "@react-native-elements/base",
+    "displayName": "@rneui/base",
     "preset": "react-native",
     "timers": "fake",
     "testPathIgnorePatterns": [

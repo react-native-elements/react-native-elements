@@ -97,7 +97,7 @@ export type CircularSliderProps = {
  * @installation circular-slider
  * @usage
  * ```jsx
- * import { CircularSlider } from '@react-native-elements/circular-slider';
+ * import { CircularSlider } from '@rneui/circular-slider';
  * ```
  * ```jsx
  * <CircularSlider value={value} onChange={setValue} />

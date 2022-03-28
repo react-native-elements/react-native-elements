@@ -8,7 +8,7 @@ sidebar_position: 3
 You may want to make use of the theming utilities in your own components. For this you can use the `withTheme` HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
 
 ```tsx title='MyComponent.tsx'
-import { Button, createTheme, withTheme } from '@react-native-elements/themed';
+import { Button, createTheme, withTheme } from '@rneui/themed';
 
 type MyCustomComponentProps = {
   title: string;
@@ -29,7 +29,7 @@ declare module 'react-native-elements' {
 ```
 
 ```tsx title='App.tsx'
-import { ThemeProvider, createTheme } from '@react-native-elements/themed';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   MyCustomComponent: {

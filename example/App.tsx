@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ThemeProvider, createTheme } from '@react-native-elements/themed';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';

@@ -1,8 +1,4 @@
-import {
-  Colors,
-  darkColors,
-  lightColors,
-} from '@react-native-elements/base/dist/helpers';
+import { Colors, darkColors, lightColors } from '@rneui/base/dist/helpers';
 
 export { lightColors, darkColors };
 export type { Colors };

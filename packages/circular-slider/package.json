@@ -1,6 +1,6 @@
 {
-  "name": "@react-native-elements/circular-slider",
-  "version": "0.1.0",
+  "name": "@rneui/circular-slider",
+  "version": "0.0.0-alpha.0",
   "description": "React Native Elements Next Gen Components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,9 +31,6 @@
       "url": "https://github.com/arpitBhalla"
     }
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/react-native-elements/react-native-elements/issues"
@@ -51,7 +48,7 @@
     "react-native-svg": "^12.3.0"
   },
   "jest": {
-    "displayName": "@react-native-elements/circular-slider",
+    "displayName": "@rneui/circular-slider",
     "preset": "react-native",
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules",

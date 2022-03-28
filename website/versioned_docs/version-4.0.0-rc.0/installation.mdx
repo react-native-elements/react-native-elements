@@ -18,13 +18,13 @@ Important: This version is published on **GitHub Package registry**, before you 
 Run the following command to authenticate with GitHub:
 
 ```bash
-npm login --scope=@react-native-elements --registry=https://npm.pkg.github.com
+npm login --scope=@rneui --registry=https://npm.pkg.github.com
 ```
 
 Then create or modify `.npmrc` in root of your project and add the following line
 
 ```bash
-@react-native-elements:registry=https://npm.pkg.github.com
+@rneui:registry=https://npm.pkg.github.com
 ```
 
 And install pkgs using yarn or npm
@@ -38,14 +38,14 @@ values={[
 <TabItem value="npm">
 
 ```bash
-npm install @react-native-elements/themed @react-native-elements/base
+npm install @rneui/themed @rneui/base
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-yarn add @react-native-elements/themed @react-native-elements/base
+yarn add @rneui/themed @rneui/base
 ```
 
 </TabItem>
@@ -56,11 +56,11 @@ yarn add @react-native-elements/themed @react-native-elements/base
 You don't need PAT for installing via this method
 
 ```bash
-# @react-native-elements/base
-yarn add @react-native-elements/base@react-native-elements/react-native-elements#base
+# @rneui/base
+yarn add @rneui/base@rneui/react-native-elements#base
 
-# @react-native-elements/themed
-yarn add @react-native-elements/themed@react-native-elements/react-native-elements#themed
+# @rneui/themed
+yarn add @rneui/themed@rneui/react-native-elements#themed
 ```
 
 :::
@@ -78,10 +78,10 @@ values={[
 <TabItem value="npm">
 
 ```bash
-# @react-native-elements/base
+# @rneui/base
 npm install react-native-elements/react-native-elements#base
 
-# @react-native-elements/themed
+# @rneui/themed
 npm install react-native-elements/react-native-elements#themed
 ```
 
@@ -89,11 +89,11 @@ npm install react-native-elements/react-native-elements#themed
 <TabItem value="yarn">
 
 ```bash
-# @react-native-elements/base
-yarn add @react-native-elements/base@react-native-elements/react-native-elements#base
+# @rneui/base
+yarn add @rneui/base@rneui/react-native-elements#base
 
-# @react-native-elements/themed
-yarn add @react-native-elements/themed@react-native-elements/react-native-elements#themed
+# @rneui/themed
+yarn add @rneui/themed@rneui/react-native-elements#themed
 ```
 
 </TabItem>
@@ -265,7 +265,7 @@ The major difference is that React Native can support JSX and advanced javascrip
 After creating a new create-react-app project, run the following commands.
 
 ```bash
-yarn add  @react-native-elements/base @react-native-elements/themed react-native-web react-native-vector-icons
+yarn add  @rneui/base @rneui/themed react-native-web react-native-vector-icons
 ```
 
 ```bash
@@ -281,8 +281,8 @@ const { override, addBabelPlugins, babelInclude } = require('customize-cra');
 module.exports = override(
   ...addBabelPlugins('@babel/plugin-proposal-class-properties'),
   babelInclude([
-    path.resolve(__dirname, 'node_modules/@react-native-elements/base'),
-    path.resolve(__dirname, 'node_modules/@react-native-elements/themed'),
+    path.resolve(__dirname, 'node_modules/@rneui/base'),
+    path.resolve(__dirname, 'node_modules/@rneui/themed'),
     path.resolve(__dirname, 'node_modules/react-native-vector-icons'),
     path.resolve(__dirname, 'node_modules/react-native-ratings'),
     path.resolve(__dirname, 'src'),

@@ -1,24 +1,15 @@
 import { withTheme } from '../config';
-import {
-  CardBase,
-  CardProps,
-} from '@react-native-elements/base/dist/Card/Card';
+import { CardBase, CardProps } from '@rneui/base/dist/Card/Card';
 import {
   CardDivider,
   CardDividerProps,
-} from '@react-native-elements/base/dist/Card/Card.Divider';
-import { CardFeaturedSubtitle } from '@react-native-elements/base/dist/Card/Card.FeaturedSubtitle';
-import { CardFeaturedTitle } from '@react-native-elements/base/dist/Card/Card.FeaturedTitle';
-import {
-  CardImage,
-  CardImageProps,
-} from '@react-native-elements/base/dist/Card/Card.Image';
-import {
-  CardTitle,
-  CardTitleProps,
-} from '@react-native-elements/base/dist/Card/Card.Title';
-import { CardFeaturedSubtitleProps } from '@react-native-elements/base/dist/Card';
-import { CardFeaturedTitleProps } from '@react-native-elements/base/dist/Card';
+} from '@rneui/base/dist/Card/Card.Divider';
+import { CardFeaturedSubtitle } from '@rneui/base/dist/Card/Card.FeaturedSubtitle';
+import { CardFeaturedTitle } from '@rneui/base/dist/Card/Card.FeaturedTitle';
+import { CardImage, CardImageProps } from '@rneui/base/dist/Card/Card.Image';
+import { CardTitle, CardTitleProps } from '@rneui/base/dist/Card/Card.Title';
+import { CardFeaturedSubtitleProps } from '@rneui/base/dist/Card';
+import { CardFeaturedTitleProps } from '@rneui/base/dist/Card';
 
 const ThemedCardDivider = withTheme<CardDividerProps>(
   CardDivider,

@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@react-native-elements/*": ["./packages/*/src"],
-      "@react-native-elements/base/dist/*": ["./packages/base/src/*"]
+      "@rneui/*": ["./packages/*/src"],
+      "@rneui/base/dist/*": ["./packages/base/src/*"]
     },
     "removeComments": true,
     "composite": true,

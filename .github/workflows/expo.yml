@@ -1,12 +1,6 @@
 name: Expo Default Channel Preview CI
 
-on:
-  push:
-    branches:
-      - "next"
-    paths-ignore:
-      - "website/**"
-      - "scripts/**"
+on: workflow_dispatch
 
 jobs:
   publish:

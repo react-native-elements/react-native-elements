@@ -39,7 +39,7 @@ instead of the built-in component.
 
 ```tsx
 import React from 'react';
-import { Button } from '@react-native-elements/themed';
+import { Button } from '@rneui/themed';
 
 const RaisedButton = (props) => <Button raised {...props} />;
 
@@ -72,11 +72,7 @@ Theme styles are the values that are set by the ThemeProvider If present, these
 are applied second.
 
 ```tsx
-import {
-  ThemeProvider,
-  Button,
-  createTheme,
-} from '@react-native-elements/themed';
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
   Button: {
@@ -103,11 +99,7 @@ External styles are the styles which are set through the component props. These
 are applied last and have the highest precedence.
 
 ```tsx
-import {
-  ThemeProvider,
-  Button,
-  createTheme,
-} from '@react-native-elements/themed';
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
   Button: {
@@ -137,7 +129,7 @@ Note: To theme subcomponents such as `ListItem.Title`, in your theme remove the 
 ### Using the theme in your own components
 
 ```tsx title='App.tsx'
-import { ThemeProvider, createTheme } from '@react-native-elements/themed';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   colors: {
@@ -173,7 +165,7 @@ which uses render props!
 ```tsx
 import React from 'react';
 import { Text } from 'react-native';
-import { ThemeConsumer } from '@react-native-elements/themed';
+import { ThemeConsumer } from '@rneui/themed';
 
 const MyComponent = () => (
   <ThemeConsumer>
@@ -189,7 +181,7 @@ You can also use `useTheme()` if you use hooks.
 ```tsx
 import React from 'react';
 import { Text } from 'react-native';
-import { useTheme } from '@react-native-elements/themed';
+import { useTheme } from '@rneui/themed';
 
 const MyComponent = () => {
   const { theme } = useTheme();
@@ -207,7 +199,7 @@ If you want to keep your styles outside the component use `makeStyles()` (hook g
 ```tsx
 import React from 'react';
 import { Text } from 'react-native';
-import { makeStyles } from '@react-native-elements/themed';
+import { makeStyles } from '@rneui/themed';
 
 type Params = {
   fullWidth?: boolean;

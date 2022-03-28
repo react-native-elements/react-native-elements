@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/@react-native-elements/base.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/@rneui/base.svg"></a>
   <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
@@ -43,41 +43,10 @@ Start using the components or try it on Snack
 [here](https://snack.expo.io/rJu6gJfBZ).
 
 ```js
-import { Button } from 'react-native-elements';
+import { Button } from '@rneui/base';
 
 <Button />;
 ```
-
-## Components included:
-
-- [x] [Avatar](https://reactnativeelements.com/docs/avatar)
-- [x] [Badge](https://reactnativeelements.com/docs/badge)
-- [x] [BottomSheet](https://reactnativeelements.com/docs/bottomsheet)
-- [x] [Button](https://reactnativeelements.com/docs/button)
-- [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
-- [x] [Card](https://reactnativeelements.com/docs/card)
-- [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
-- [x] [Divider](https://reactnativeelements.com/docs/divider)
-- [x] [FAB](https://reactnativeelements.com/docs/fab)
-- [x] [Header](https://reactnativeelements.com/docs/header)
-- [x] [HTML style headings](https://reactnativeelements.com/docs/text)
-- [x] [Icon](https://reactnativeelements.com/docs/icon)
-- [x] [Image](https://reactnativeelements.com/docs/image)
-- [x] [Input](https://reactnativeelements.com/docs/input)
-- [x] [ListItem](https://reactnativeelements.com/docs/listitem)
-- [x] [Linear Progress](https://reactnativeelements.com/docs/linearProgress)
-- [x] [Overlay](https://reactnativeelements.com/docs/overlay)
-- [x] [Pricing](https://reactnativeelements.com/docs/pricing)
-- [x] [Rating](https://reactnativeelements.com/docs/rating)
-- [x] [SearchBar](https://reactnativeelements.com/docs/searchbar)
-- [x] [Slider](https://reactnativeelements.com/docs/slider)
-- [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
-- [x] [Speed Dial](https://reactnativeelements.com/docs/speeddial)
-- [x] [Switch](https://reactnativeelements.com/docs/switch)
-- [x] [Tile](https://reactnativeelements.com/docs/tile)
-- [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
-- [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
 
 ## React Native Web support
 

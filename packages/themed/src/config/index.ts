@@ -12,7 +12,7 @@ import {
   ScreenHeight,
   ScreenWidth,
   registerCustomIconType,
-} from '@react-native-elements/base/dist/helpers';
+} from '@rneui/base/dist/helpers';
 import { type Colors, darkColors, lightColors } from './colors';
 import {
   type ReplaceTheme,

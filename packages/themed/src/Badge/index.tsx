@@ -1,9 +1,6 @@
 import { withTheme } from '../config';
-import {
-  Badge,
-  BadgeProps,
-} from '@react-native-elements/base/dist/Badge/Badge';
-import { withBadge } from '@react-native-elements/base/dist/Badge/withBadge';
+import { Badge, BadgeProps } from '@rneui/base/dist/Badge/Badge';
+import { withBadge } from '@rneui/base/dist/Badge/withBadge';
 
 export { Badge, withBadge };
 export type { BadgeProps };

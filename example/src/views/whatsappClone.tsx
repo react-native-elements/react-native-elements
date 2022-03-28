@@ -15,7 +15,7 @@ import {
   Badge,
   Tab,
   TabView,
-} from '@react-native-elements/themed';
+} from '@rneui/themed';
 import { Header } from '../components/header';
 
 const ScreenWidth = Dimensions.get('window').width;

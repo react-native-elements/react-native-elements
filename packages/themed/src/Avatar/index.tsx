@@ -1,11 +1,8 @@
-import {
-  Avatar,
-  AvatarProps,
-} from '@react-native-elements/base/dist/Avatar/Avatar';
+import { Avatar, AvatarProps } from '@rneui/base/dist/Avatar/Avatar';
 import {
   Accessory,
   AccessoryProps,
-} from '@react-native-elements/base/dist/Avatar/Avatar.Accessory';
+} from '@rneui/base/dist/Avatar/Avatar.Accessory';
 import { withTheme } from '../config';
 
 export default Object.assign(withTheme<AvatarProps>(Avatar, 'Avatar'), {
