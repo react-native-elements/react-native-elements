@@ -6,7 +6,10 @@ export default function () {
   const { isDarkTheme } = useColorMode();
   const darkFooter = isDarkTheme ? 'footer-dark' : '';
   return (
-    <footer className={'footer ' + darkFooter}>
+    <footer
+      style={{ fontSize: 'small' }}
+      className={'footer text--sm ' + darkFooter}
+    >
       <div className="container container-fluid">
         <div className="row footer__links">
           <div className="col footer__col">
