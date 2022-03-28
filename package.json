@@ -90,6 +90,11 @@
       "PR: Docs :memo:": ":memo: Documentation",
       "PR: Bug Fix :bug:": ":bug: Bug Fix",
       "PR: Deprecation: :loudspeaker:": ":loudspeaker: Deprecation"
+    },
+    "scopes": {
+      "base": "@rneui/base",
+      "themed": "@rneui/themed",
+      "website/docs": "Docs"
     }
   },
   "dependencies": {

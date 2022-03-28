@@ -156,4 +156,4 @@ async function main() {
 }
 main();
 
-console.log(semver.gt('4.0.0-alpha.1', '4.0.0-alpha.0'));
+console.log('Remember to exec `yarn` to update yarn.lock ');
