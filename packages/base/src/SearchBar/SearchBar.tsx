@@ -35,7 +35,7 @@ export interface SearchBarBaseProps
   onBlur?(): void;
   onChangeText?(text: string): void;
   onCancel?(): void;
-  theme: Theme;
+  theme?: Theme;
 }
 
 export type SearchBarProps =
