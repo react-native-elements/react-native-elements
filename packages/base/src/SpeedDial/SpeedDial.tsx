@@ -116,6 +116,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         <FAB
           style={[styles.fab]}
           icon={isOpen ? openIcon : icon}
+          theme={theme}
           {...rest}
           onPress={isOpen ? onClose : onOpen}
         />
