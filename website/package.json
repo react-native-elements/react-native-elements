@@ -23,6 +23,8 @@
     "@docusaurus/preset-classic": "^2.0.0-beta.18",
     "@docusaurus/theme-live-codeblock": "^2.0.0-beta.18",
     "@docusaurus/types": "^2.0.0-beta.18",
+    "@rneui/base": "^4.0.0-rc.1",
+    "@rneui/themed": "^4.0.0-rc.1",
     "css-loader": "^6.5.1",
     "dedent": "^0.7.0",
     "object.fromentries": "^2.0.5",

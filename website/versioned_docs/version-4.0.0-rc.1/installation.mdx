@@ -46,14 +46,22 @@ values={[
 <TabItem value="npm">
 
 ```bash
-npm install react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
+# @rneui/base
+npm install react-native-elements/react-native-elements#base
+
+# @rneui/themed
+npm install react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-yarn add react-native-elements/react-native-elements#base react-native-elements/react-native-elements#themed
+# @rneui/base
+yarn add @rneui/themed@github:react-native-elements/react-native-elements#base
+
+# @rneui/themed
+yarn add @rneui/themed@github:react-native-elements/react-native-elements#themed
 ```
 
 </TabItem>
@@ -191,14 +199,14 @@ values={[
 <TabItem value="stable">
 
 ```bash
-expo init app --template react-native-elements-template
+expo init app --template @rneui/template
 ```
 
 </TabItem>
 <TabItem value="edge">
 
 ```bash
-expo init app --template react-native-elements-template@bleeding-edge
+expo init app --template @rneui/template@bleeding-edge
 ```
 
 </TabItem>
