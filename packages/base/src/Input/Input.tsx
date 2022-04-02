@@ -24,7 +24,7 @@ const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
 
 export interface InputProps
   extends React.ComponentPropsWithRef<typeof TextInput> {
-  shake: () => void;
+  shake?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
   disabled?: boolean;
   disabledInputStyle?: StyleProp<TextStyle>;
