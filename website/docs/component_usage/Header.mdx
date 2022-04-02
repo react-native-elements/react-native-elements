@@ -21,7 +21,7 @@ For react-native-cli users, make sure to follow the
 and use it like this:
 
 ```jsx
-import { Header } from 'react-native-elements';
+import { Header } from '@rneui/themed';
 import LinearGradient from 'react-native-linear-gradient';
 
 ...
@@ -47,7 +47,7 @@ StyleProp,
 TextStyle,
 ViewStyle,
 } from 'react-native';
-import { Header as HeaderRNE, HeaderProps, Icon } from 'react-native-elements';
+import { Header as HeaderRNE, HeaderProps, Icon } from '@rneui/themed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -69,7 +69,7 @@ const docsNavigate = () => {
 };
 
 const playgroundNavigate = () => {
-  Linking.openURL(`https://react-native-elements.js.org/#/${props.view}`);
+  Linking.openURL(`https://@rneui/themed.js.org/#/${props.view}`);
 };
 
 return (

@@ -43,7 +43,7 @@ available in `v1.0.0-beta1` and higher.
 
 To fix this, follow these steps:
 
-1. Check your `package.json` for the version of `react-native-elements` you are
+1. Check your `package.json` for the version of `@rneui/themed` you are
    using.
 2. View the documentation for your particular version on the website. See
    available versions
@@ -138,7 +138,7 @@ commands:
 
    ```bash
    # yarn
-   yarn && yarn add react-native-elements
+   yarn && yarn add @rneui/base @rneui/themed
    ```
 
 3. Install `@expo/vector-icons`

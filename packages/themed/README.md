@@ -9,20 +9,22 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/@rneui/themed.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
-  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/@rneui/themed.svg?style=flat-square&logo=npm"></a>
+  <a href="https://twitter.com/rne_org"><img src="https://img.shields.io/twitter/follow/rne_org?label=Twitter&logo=twitter&logoColor=white&style=flat-square"></a>
+  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?label=Github%20Stars&logo=github&style=flat-square"></a>
+  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://img.shields.io/badge/Join-Slack-4A154B?style=flat-square&logo=slack"></a> 
+  <a href="https://github.com/react-native-elements/react-native-elements/discussions"><img src="https://img.shields.io/github/discussions/react-native-elements/react-native-elements?label=GitHub%20Discussions&style=flat-square"></a> 
+  <a href="https://github.com/react-native-elements/react-native-elements/actions/workflows/dist.yml"><img src="https://img.shields.io/github/workflow/status/react-native-elements/react-native-elements/Bleeding%20Edge%20version?style=flat-square"></a>
 </p>
 
 <p align="center">
-  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
-  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
-  <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
-  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-  
+  <a href="https://github.com/sponsors/react-native-elements"><img src="https://img.shields.io/github/sponsors/react-native-elements?label=GitHub%20Sponsors&logo=githubsponsors&style=flat-square"></a>
+  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg?style=flat-square"></a>
+  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg?style=flat-square"></a>
+  <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg?style=flat-square"></a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square"></a>
+
 </p>
 
 <br />
