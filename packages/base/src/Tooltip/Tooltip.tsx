@@ -223,7 +223,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
       isMounted.current = false;
       if (dimensionsListener?.remove) {
         // react-native >= 0.65.*
-        dimensionsListener.remove;
+        dimensionsListener.remove();
       } else {
         // react-native < 0.65.*
         Dimensions.removeEventListener('change', getElementPosition);
