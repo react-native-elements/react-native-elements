@@ -23,6 +23,7 @@ export const Chip: RneFunctionComponent<ChipProps> = ({
         { fontSize: 14, paddingHorizontal: 2 },
         titleStyle,
       ])}
+      containerStyle={{ borderRadius: 30 }}
       buttonStyle={StyleSheet.flatten([{ borderRadius: 30 }, buttonStyle])}
       {...(onPress === undefined
         ? {
