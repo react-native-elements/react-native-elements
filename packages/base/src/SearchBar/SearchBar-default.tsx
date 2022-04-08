@@ -30,7 +30,9 @@ export type SearchBarDefaultProps = Partial<
   typeof SearchBarDefault.defaultProps
 > &
   SearchBarBaseProps &
-  TextInputProps;
+  TextInputProps & {
+    platform?: 'default';
+  };
 
 type SearchBarState = {
   isEmpty: boolean;

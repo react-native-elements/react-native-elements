@@ -36,6 +36,7 @@ const defaultClearIcon = (theme: Theme) => ({
 
 export type SearchBarAndroidProps = InputProps &
   SearchBarBaseProps & {
+    platform?: 'android';
     cancelIcon?: IconNode;
   };
 

@@ -12,7 +12,7 @@ import {
 import { IconNode } from '../Icon';
 import { Theme } from '../helpers';
 
-const SEARCHBAR_COMPONENTS = {
+const SEARCH_BAR_COMPONENTS = {
   ios: SearchBarIOS,
   android: SearchBarAndroid,
   default: SearchBarDefault,
@@ -20,7 +20,6 @@ const SEARCHBAR_COMPONENTS = {
 
 export interface SearchBarBaseProps
   extends React.ComponentPropsWithRef<typeof TextInput> {
-  platform?: 'default' | 'ios' | 'android';
   containerStyle?: StyleProp<ViewStyle>;
   inputContainerStyle?: StyleProp<ViewStyle>;
   clearIcon?: IconNode;
@@ -39,43 +38,45 @@ export interface SearchBarBaseProps
 }
 
 export type SearchBarProps =
-  | SearchBarBaseProps
   | SearchBarDefaultProps
   | SearchBarAndroidProps
   | SearchBarIosProps;
 
 export class SearchBar extends React.Component<
-  SearchBarProps & { theme?: Theme }
+  SearchBarProps & {
+    theme?: Theme;
+    platform?: 'default' | 'ios' | 'android';
+  }
 > {
-  searchbar!: SearchBarIOS;
+  searchBar!: SearchBarIOS;
   static defaultProps = {
     platform: 'default' as const,
   };
 
   focus = () => {
-    this.searchbar.focus();
+    this.searchBar.focus();
   };
 
   blur = () => {
-    this.searchbar.blur();
+    this.searchBar.blur();
   };
 
   clear = () => {
-    this.searchbar.clear();
+    this.searchBar.clear();
   };
 
   cancel = () => {
-    this.searchbar.cancel && this.searchbar.cancel();
+    this.searchBar?.cancel();
   };
 
   render() {
     const Component: typeof React.Component =
-      SEARCHBAR_COMPONENTS[this.props.platform] || SearchBarDefault;
+      SEARCH_BAR_COMPONENTS[this.props.platform] || SearchBarDefault;
 
     return (
       <Component
         ref={(ref: SearchBarIOS) => {
-          this.searchbar = ref;
+          this.searchBar = ref;
         }}
         {...this.props}
       />
