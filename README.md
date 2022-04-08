@@ -1,97 +1,75 @@
 <p align="center">
   <a href="https://reactnativeelements.com/">
-    <img alt="react-native-elements" src="https://user-images.githubusercontent.com/5962998/65694309-a825f000-e043-11e9-8382-db0dba0851e3.png" width="300">
+    <img alt="react-native-elements" src="https://user-images.githubusercontent.com/5962998/65694309-a825f000-e043-11e9-8382-db0dba0851e3.png" width="200">
   </a>
 </p>
 
-<p align="center">
-  Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
-</p>
+<div align="center">
+
+Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
+
+</div>
+
+<br/>
 
 <p align="center">
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"></a>
-  <a href="https://twitter.com/rne_org"><img src="https://img.shields.io/twitter/follow/rne_org?label=Twitter&logo=twitter&logoColor=white&style=flat-square"></a>
-  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?label=Github%20Stars&logo=github&style=flat-square"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://img.shields.io/badge/Join-Slack-4A154B?style=flat-square&logo=slack"></a> 
-  <a href="https://github.com/react-native-elements/react-native-elements/discussions"><img src="https://img.shields.io/github/discussions/react-native-elements/react-native-elements?label=GitHub%20Discussions&style=flat-square"></a> 
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=0089E3"></a>
+  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?label=stars&logo&style=flat-square&color=0089E3"></a>
   <a href="https://github.com/react-native-elements/react-native-elements/actions/workflows/dist.yml"><img src="https://img.shields.io/github/workflow/status/react-native-elements/react-native-elements/Bleeding%20Edge%20version?style=flat-square"></a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-F7B93E.svg?style=flat-square"></a>
+  <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://img.shields.io/codecov/c/gh/react-native-elements/react-native-elements?color=F01F7A&style=flat-square"></a>
 </p>
+
+<div align="center">
+  <a href="https://twitter.com/rne_org"><img src="https://img.shields.io/twitter/follow/rne_org?style=flat-square&label=Follow%20%40rne_org&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=15&color=lightgray"></a>
+  <a href="https://github.com/react-native-elements/react-native-elements/discussions"><img src="https://img.shields.io/github/discussions/react-native-elements/react-native-elements?label=Discussions&logo=github&style=flat-square"></a>
+  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://img.shields.io/badge/Join-Slack-4A154B?style=flat-square&logo=slack&color=0089E3&"></a>
+
+</div>
 
 <p align="center">
-  <a href="https://github.com/sponsors/react-native-elements"><img src="https://img.shields.io/github/sponsors/react-native-elements?label=GitHub%20Sponsors&logo=githubsponsors&style=flat-square"></a>
-  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg?style=flat-square"></a>
-  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg?style=flat-square"></a>
-  <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg?style=flat-square"></a>
-  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square"></a>
-
+  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg?style=flat-square&color=0089E3"></a>
+  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg?style=flat-square&color=0089E3&logo=opencollective"></a>
+  <a href="https://github.com/sponsors/react-native-elements"><img src="https://img.shields.io/github/sponsors/react-native-elements?label=Sponsor&logo=githubsponsors&style=flat-square"></a>
 </p>
+
+<div align="center">
+
+<a href="https://reactnativeelements.com">Getting Started 🚀</a> - <a href="https://reactnativeelements.com/docs">Documentation 📚</a> - <a href="https://expo.dev/@rne_org/react-native-elements">Expo demo </a> - <a href="https://reactnativeelements.com/blog">Blog</a> - <a href="https://github.com/react-native-elements/react-native-elements/releases">Releases</a>
+
+</div>
 
 <br />
 
-![React Native Elements UI Toolkit](https://user-images.githubusercontent.com/5962998/37248832-a7060286-24b1-11e8-94a8-847ab6ded4ec.png)
+![React Native Elements UI Toolkit](https://user-images.githubusercontent.com/55053424/161605524-61a88c0f-0eb6-4016-a124-aeac8c81df53.png)
 
-## Get Started
+## Installation
 
-### Installation
+```bash
+npm install @rneui/themed @rneui/base
+```
 
 Follow
-[these instructions](https://reactnativeelements.com/docs/)
+[these instructions](https://reactnativeelements.com/docs/installation)
 to install React Native Elements!
 
-### Versions
+### Packages
 
-| Package           | Version                                                                                                                   | Downloads                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **@rneui/base**   | [![badge](https://img.shields.io/npm/v/@rneui/base.svg?style=flat-square)](https://www.npmjs.com/package/@rneui/base)     | ![npm](https://img.shields.io/npm/dm/@rneui/base?style=flat-square)   |
-| **@rneui/themed** | [![badge](https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square)](https://www.npmjs.com/package/@rneui/themed) | ![npm](https://img.shields.io/npm/dm/@rneui/themed?style=flat-square) |
+| Package           | Version                                                                                                                          | Downloads                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **@rneui/base**   | [![badge](https://img.shields.io/npm/v/@rneui/base.svg?style=flat-square-square)](https://www.npmjs.com/package/@rneui/base)     | ![npm](https://img.shields.io/npm/dm/@rneui/base?style=flat-square-square)   |
+| **@rneui/themed** | [![badge](https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square-square)](https://www.npmjs.com/package/@rneui/themed) | ![npm](https://img.shields.io/npm/dm/@rneui/themed?style=flat-square-square) |
 
-### Usage
+## Quick Start
 
-Start using the components or try it on Snack
-[here](https://snack.expo.io/rJu6gJfBZ).
+Start using the components or try it on
+[Snack](https://snack.expo.dev/@arpitbhalla/react-native-elements).
 
-```js
+```tsx
 import { Button } from '@rneui/base';
 
 const App = () => <Button title="Hello World!" />;
 ```
-
-## Components included:
-
-### Base
-
-- [x] [Avatar](https://reactnativeelements.com/docs/avatar)
-- [x] [Badge](https://reactnativeelements.com/docs/badge)
-- [x] [BottomSheet](https://reactnativeelements.com/docs/bottomsheet)
-- [x] [Button](https://reactnativeelements.com/docs/button)
-- [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
-- [x] [Card](https://reactnativeelements.com/docs/card)
-- [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
-- [x] [Divider](https://reactnativeelements.com/docs/divider)
-- [x] [FAB](https://reactnativeelements.com/docs/fab)
-- [x] [Header](https://reactnativeelements.com/docs/header)
-- [x] [HTML style headings](https://reactnativeelements.com/docs/text)
-- [x] [Icon](https://reactnativeelements.com/docs/icon)
-- [x] [Image](https://reactnativeelements.com/docs/image)
-- [x] [Input](https://reactnativeelements.com/docs/input)
-- [x] [ListItem](https://reactnativeelements.com/docs/listitem)
-- [x] [Linear Progress](https://reactnativeelements.com/docs/linearProgress)
-- [x] [Overlay](https://reactnativeelements.com/docs/overlay)
-- [x] [Pricing](https://reactnativeelements.com/docs/pricing)
-- [x] [Rating](https://reactnativeelements.com/docs/rating)
-- [x] [SearchBar](https://reactnativeelements.com/docs/searchbar)
-- [x] [Slider](https://reactnativeelements.com/docs/slider)
-- [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
-- [x] [Speed Dial](https://reactnativeelements.com/docs/speeddial)
-- [x] [Switch](https://reactnativeelements.com/docs/switch)
-- [x] [Tile](https://reactnativeelements.com/docs/tile)
-- [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tabview)
-- [x] [Tooltip](https://reactnativeelements.com/docs/tooltip)
-
-### Other Components
-
-- [x] [Circular Slider](https://reactnativeelements.com/docs/circularslider)
 
 ## React Native Web support
 
@@ -99,7 +77,7 @@ As a cross platform UI Toolkit, you can now use RNE on the web & share your code
 
 Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) for a full walkthrough using React Native Elements + React Native Web.
 
-## Demo App
+## Expo demo app
 
 Checkout the official
 [React Native Elements App](https://expo.dev/@rne_org/react-native-elements)
@@ -110,8 +88,13 @@ If you are looking to contribute to the React Native Elements App,
 view the implementation & Use this command to start example app locally
 
 ```bash
-yarn example start
+cd example
+yarn start
 ```
+
+## VS Code Extension
+
+Install the [React Native Elements VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rne.snippets) to speed up development.
 
 ## Documentation
 
@@ -139,12 +122,6 @@ an
 [issue](https://github.com/react-native-elements/react-native-elements/issues/new)
 or a
 [pull request](https://github.com/react-native-elements/react-native-elements/pulls).
-
-### Core Contributors
-
-We are currently looking for new core contributors that can help lead this project.
-
-[Learn more here](https://github.com/react-native-elements/react-native-elements/issues/2222)
 
 ### Slack Community
 
