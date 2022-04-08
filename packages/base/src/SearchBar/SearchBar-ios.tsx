@@ -6,17 +6,15 @@ import {
   View,
   ActivityIndicator,
   Text,
-  PressableProps,
-  ViewStyle,
-  StyleProp,
-  TextStyle,
   TextInput,
 } from 'react-native';
 import { InputProps, Input } from '../Input';
 import { Icon } from '../Icon';
 import { defaultTheme, renderNode } from '../helpers';
-import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../helpers';
+import { SearchBarIosProps } from './types';
+
+export type { SearchBarIosProps };
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
@@ -31,20 +29,6 @@ const defaultClearIcon = (theme: Theme) => ({
   size: 20,
   color: theme?.colors?.platform?.ios?.grey,
 });
-
-export type SearchBarIosProps = typeof SearchBarIOS.defaultProps &
-  InputProps &
-  SearchBarBaseProps & {
-    cancelButtonProps?: Partial<PressableProps> & {
-      buttonStyle?: StyleProp<ViewStyle>;
-      buttonTextStyle?: StyleProp<TextStyle>;
-      color?: string;
-      buttonDisabledStyle?: StyleProp<ViewStyle>;
-      buttonDisabledTextStyle?: StyleProp<ViewStyle>;
-    };
-    cancelButtonTitle?: string;
-    showCancel?: boolean;
-  };
 
 type SearchBarState = {
   hasFocus: boolean;

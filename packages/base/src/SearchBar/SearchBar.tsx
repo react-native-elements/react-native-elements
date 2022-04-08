@@ -1,81 +1,52 @@
 import React from 'react';
-import { SearchBarIOS, SearchBarIosProps } from './SearchBar-ios';
-import { SearchBarAndroid, SearchBarAndroidProps } from './SearchBar-android';
-import { SearchBarDefault, SearchBarDefaultProps } from './SearchBar-default';
-import {
-  ActivityIndicatorProps,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-  TextInput,
-} from 'react-native';
-import { IconNode } from '../Icon';
+import { SearchBarIOS } from './SearchBar-ios';
+import { SearchBarAndroid } from './SearchBar-android';
+import { SearchBarDefault } from './SearchBar-default';
 import { Theme } from '../helpers';
+import { SearchBarProps } from './types';
 
-const SEARCHBAR_COMPONENTS = {
+const SEARCH_BAR_COMPONENTS = {
   ios: SearchBarIOS,
   android: SearchBarAndroid,
   default: SearchBarDefault,
 };
 
-export interface SearchBarBaseProps
-  extends React.ComponentPropsWithRef<typeof TextInput> {
-  platform?: 'default' | 'ios' | 'android';
-  containerStyle?: StyleProp<ViewStyle>;
-  inputContainerStyle?: StyleProp<ViewStyle>;
-  clearIcon?: IconNode;
-  searchIcon?: IconNode;
-  inputStyle?: StyleProp<TextStyle>;
-  loadingProps?: ActivityIndicatorProps;
-  showLoading?: boolean;
-  leftIconContainerStyle?: StyleProp<ViewStyle>;
-  rightIconContainerStyle?: StyleProp<ViewStyle>;
-  onClear?(): void;
-  onFocus?(): void;
-  onBlur?(): void;
-  onChangeText?(text: string): void;
-  onCancel?(): void;
-  theme: Theme;
-}
-
-export type SearchBarProps =
-  | SearchBarBaseProps
-  | SearchBarDefaultProps
-  | SearchBarAndroidProps
-  | SearchBarIosProps;
+export type { SearchBarProps };
 
 export class SearchBar extends React.Component<
-  SearchBarProps & { theme?: Theme }
+  SearchBarProps & {
+    theme?: Theme;
+  }
 > {
-  searchbar!: SearchBarIOS;
+  searchBar!: SearchBarIOS;
   static defaultProps = {
     platform: 'default' as const,
   };
 
   focus = () => {
-    this.searchbar.focus();
+    this.searchBar.focus();
   };
 
   blur = () => {
-    this.searchbar.blur();
+    this.searchBar.blur();
   };
 
   clear = () => {
-    this.searchbar.clear();
+    this.searchBar.clear();
   };
 
   cancel = () => {
-    this.searchbar.cancel && this.searchbar.cancel();
+    this.searchBar?.cancel();
   };
 
   render() {
     const Component: typeof React.Component =
-      SEARCHBAR_COMPONENTS[this.props.platform] || SearchBarDefault;
+      SEARCH_BAR_COMPONENTS[this.props.platform] || SearchBarDefault;
 
     return (
       <Component
         ref={(ref: SearchBarIOS) => {
-          this.searchbar = ref;
+          this.searchBar = ref;
         }}
         {...this.props}
       />
