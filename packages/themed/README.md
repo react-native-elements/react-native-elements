@@ -9,9 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/@rneui/themed.svg?style=flat-square&logo=npm"></a>
-   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/@rneui/base.svg?style=flat-square"></a>
+  <a href="https://www.npmjs.com/package/@rneui/themed"><img src="https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square"></a>
+   <a href="https://www.npmjs.com/package/@rneui/themed"><img src="https://img.shields.io/npm/dm/@rneui/base.svg?style=flat-square"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=0089E3"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?label=stars&logo&style=flat-square&color=0089E3"></a>
 </p>
