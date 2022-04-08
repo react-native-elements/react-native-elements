@@ -41,7 +41,7 @@ Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 
 <br />
 
-![React Native Elements UI Toolkit](https://user-images.githubusercontent.com/55053424/161605524-61a88c0f-0eb6-4016-a124-aeac8c81df53.png)
+<!-- ![React Native Elements UI Toolkit](https://user-images.githubusercontent.com/55053424/161605524-61a88c0f-0eb6-4016-a124-aeac8c81df53.png) -->
 
 ## Installation
 
