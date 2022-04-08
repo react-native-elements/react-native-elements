@@ -1,16 +1,9 @@
 import React from 'react';
-import { SearchBarIOS, SearchBarIosProps } from './SearchBar-ios';
-import { SearchBarAndroid, SearchBarAndroidProps } from './SearchBar-android';
-import { SearchBarDefault, SearchBarDefaultProps } from './SearchBar-default';
-import {
-  ActivityIndicatorProps,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-  TextInput,
-} from 'react-native';
-import { IconNode } from '../Icon';
+import { SearchBarIOS } from './SearchBar-ios';
+import { SearchBarAndroid } from './SearchBar-android';
+import { SearchBarDefault } from './SearchBar-default';
 import { Theme } from '../helpers';
+import { SearchBarProps } from './types';
 
 const SEARCH_BAR_COMPONENTS = {
   ios: SearchBarIOS,
@@ -18,34 +11,11 @@ const SEARCH_BAR_COMPONENTS = {
   default: SearchBarDefault,
 };
 
-export interface SearchBarBaseProps
-  extends React.ComponentPropsWithRef<typeof TextInput> {
-  containerStyle?: StyleProp<ViewStyle>;
-  inputContainerStyle?: StyleProp<ViewStyle>;
-  clearIcon?: IconNode;
-  searchIcon?: IconNode;
-  inputStyle?: StyleProp<TextStyle>;
-  loadingProps?: ActivityIndicatorProps;
-  showLoading?: boolean;
-  leftIconContainerStyle?: StyleProp<ViewStyle>;
-  rightIconContainerStyle?: StyleProp<ViewStyle>;
-  onClear?(): void;
-  onFocus?(): void;
-  onBlur?(): void;
-  onChangeText?(text: string): void;
-  onCancel?(): void;
-  theme?: Theme;
-}
-
-export type SearchBarProps =
-  | SearchBarDefaultProps
-  | SearchBarAndroidProps
-  | SearchBarIosProps;
+export type { SearchBarProps };
 
 export class SearchBar extends React.Component<
   SearchBarProps & {
     theme?: Theme;
-    platform?: 'default' | 'ios' | 'android';
   }
 > {
   searchBar!: SearchBarIOS;
