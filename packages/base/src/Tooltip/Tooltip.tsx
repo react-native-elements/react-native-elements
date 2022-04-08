@@ -214,10 +214,20 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     isMounted.current = true;
     // Wait till element's position is calculated
     requestAnimationFrame(getElementPosition);
-    Dimensions.addEventListener('change', getElementPosition);
+    const dimensionsListener = Dimensions.addEventListener(
+      'change',
+      getElementPosition
+    );
+
     return () => {
       isMounted.current = false;
-      Dimensions.removeEventListener('change', getElementPosition);
+      if (dimensionsListener?.remove) {
+        // react-native >= 0.65.*
+        dimensionsListener.remove();
+      } else {
+        // react-native < 0.65.*
+        Dimensions.removeEventListener('change', getElementPosition);
+      }
     };
   }, [getElementPosition]);
 
