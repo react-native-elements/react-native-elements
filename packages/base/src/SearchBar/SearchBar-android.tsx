@@ -9,9 +9,11 @@ import {
 } from 'react-native';
 import { defaultTheme, renderNode } from '../helpers';
 import { Input, InputProps } from '../Input';
-import { IconNode, Icon } from '../Icon';
-import { SearchBarBaseProps } from './SearchBar';
+import { Icon } from '../Icon';
+import { SearchBarAndroidProps } from './types';
 import { Theme } from '../helpers';
+
+export type { SearchBarAndroidProps };
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
@@ -34,10 +36,7 @@ const defaultClearIcon = (theme: Theme) => ({
   name: 'clear',
 });
 
-export type SearchBarAndroidProps = InputProps &
-  SearchBarBaseProps & {
-    cancelIcon?: IconNode;
-  };
+type NewType = 'android';
 
 type SearchBarState = {
   hasFocus: boolean;

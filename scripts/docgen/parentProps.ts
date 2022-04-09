@@ -13,7 +13,10 @@ const ALLOWED_INCLUDES = {
     '[React Native TextInput](https://reactnative.dev/docs/textinput#props)',
 };
 
-export const MUST_INCLUDE_PROP_TYPES = ['InlinePressableProps'];
+export const MUST_INCLUDE_PROP_TYPES = [
+  'InlinePressableProps',
+  'SearchBarBaseProps',
+];
 
 export function separateParent(components: ComponentDoc[]) {
   const parentComp: Record<string, ParentType[]> = {};

@@ -8,6 +8,13 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/react-native-elements"
+  },
   "keywords": [
     "react",
     "native",
@@ -27,14 +34,13 @@
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
-    "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean-install": "rimraf node_modules && yarn"
   },
   "author": "RNE Core Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-elements/react-native-elements/issues"
+    "url": "https://github.com/react-native-elements/react-native-elements/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+-label%3A%22pkg%3A+circular-slider%22+-label%3A%22pkg%3A+themed%22+"
   },
   "homepage": "https://reactnativeelements.com/",
   "dependencies": {
@@ -100,6 +106,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git",
+    "directory": "packages/base"
   }
 }
