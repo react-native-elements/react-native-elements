@@ -1,9 +1,19 @@
 import { useContext, useMemo } from 'react';
 import { StyleSheet } from 'react-native';
-import { FullTheme } from './theme';
-import { ThemeContext } from './ThemeProvider';
+import { Colors } from './colors';
+import { FullTheme, Theme, ThemeMode } from './theme';
+import { ReplaceTheme, ThemeContext, UpdateTheme } from './ThemeProvider';
 
-export const useTheme = () => {
+interface useThemeI {
+  replaceTheme: ReplaceTheme;
+  updateTheme: UpdateTheme;
+  theme: {
+    colors: Colors;
+    mode: ThemeMode;
+  } & Theme;
+}
+
+export const useTheme = (): useThemeI => {
   return useContext(ThemeContext);
 };
 
