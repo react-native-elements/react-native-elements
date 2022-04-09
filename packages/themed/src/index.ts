@@ -68,8 +68,10 @@ import {
   getIconType,
   registerCustomIconType,
   ComponentTheme,
+  createTheme,
+  CreateThemeOptions,
+  ThemeOptions,
 } from './config';
-import { CreateThemeOptions, createTheme } from './config/ThemeProvider';
 
 // Components exports
 export {
@@ -178,6 +180,7 @@ export type {
   Theme,
   UpdateTheme,
   CreateThemeOptions,
+  ThemeOptions,
   ThemeMode,
   ComponentTheme,
 };

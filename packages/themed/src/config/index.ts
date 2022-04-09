@@ -17,6 +17,8 @@ import { type Colors, darkColors, lightColors } from './colors';
 import {
   type ReplaceTheme,
   type UpdateTheme,
+  type ThemeOptions,
+  type CreateThemeOptions,
   createTheme,
   ThemeConsumer,
   ThemeContext,
@@ -61,4 +63,6 @@ export type {
   UpdateTheme,
   ComponentTheme,
   ThemeMode,
+  ThemeOptions,
+  CreateThemeOptions,
 };
