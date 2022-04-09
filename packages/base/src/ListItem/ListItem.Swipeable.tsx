@@ -41,10 +41,10 @@ export interface ListItemSwipeableProps extends ListItemProps {
   rightWidth?: number;
 
   /** Handler for swipe in either direction */
-  onSwipeBegin?: (direction: 'left' | 'right') => any;
+  onSwipeBegin?: (direction: 'left' | 'right') => unknown;
 
   /** Handler for swipe end. */
-  onSwipeEnd?: () => any;
+  onSwipeEnd?: () => unknown;
 
   /** Decide whether to show animation.
    * @default Object with duration 350ms and type timing
@@ -91,11 +91,11 @@ export const ListItemSwipeable: RneFunctionComponent<
     slideAnimation(0);
   }, [slideAnimation]);
 
-  const onMove = (_: any, { dx }: PanResponderGestureState) => {
+  const onMove = (_: unknown, { dx }: PanResponderGestureState) => {
     translateX.current.setValue(panX.current + dx);
   };
 
-  const onRelease = (_: any, { dx }: PanResponderGestureState) => {
+  const onRelease = (_: unknown, { dx }: PanResponderGestureState) => {
     if (Math.abs(panX.current + dx) >= ScreenWidth / 3) {
       slideAnimation(panX.current + dx > 0 ? rightWidth : -leftWidth);
     } else {
@@ -103,18 +103,21 @@ export const ListItemSwipeable: RneFunctionComponent<
     }
   };
 
+  const shouldSlide = (
+    _: unknown,
+    { dx, dy, vx, vy }: PanResponderGestureState
+  ): boolean => {
+    if (dx > 0 && !leftContent) {
+      return false;
+    }
+    if (dx < 0 && !rightContent) {
+      return false;
+    }
+    return Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5;
+  };
+
   const _panResponder = PanResponder.create({
-    onMoveShouldSetPanResponder: (_, { dx, dy, vx, vy }) => {
-      if (dx > 0 && !leftContent) {
-        return false;
-      }
-      if (dx < 0 && !rightContent) {
-        return false;
-      }
-      return (
-        Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5
-      );
-    },
+    onMoveShouldSetPanResponder: shouldSlide,
     onPanResponderGrant: (_event, { vx }) => {
       onSwipeBegin?.(vx > 0 ? 'left' : 'right');
     },
