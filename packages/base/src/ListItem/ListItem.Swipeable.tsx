@@ -24,14 +24,10 @@ export interface ListItemSwipeableProps extends ListItemProps {
    */
   rightContent?: React.ReactNode | ((reset: () => void) => React.ReactNode);
 
-  /** Style of left container.
-   * @type ReactNode or resetCallback => ReactNode
-   */
+  /** Style of left container.*/
   leftStyle?: StyleProp<ViewStyle>;
 
-  /** Style of right container.
-   * @type ReactNode or resetCallback => ReactNode
-   */
+  /** Style of right container.*/
   rightStyle?: StyleProp<ViewStyle>;
 
   /** Width to swipe left. */
@@ -107,10 +103,10 @@ export const ListItemSwipeable: RneFunctionComponent<
     _: unknown,
     { dx, dy, vx, vy }: PanResponderGestureState
   ): boolean => {
-    if (dx > 0 && !leftContent) {
+    if (dx > 0 && !leftContent && !panX.current) {
       return false;
     }
-    if (dx < 0 && !rightContent) {
+    if (dx < 0 && !rightContent && !panX.current) {
       return false;
     }
     return Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5;
@@ -124,7 +120,10 @@ export const ListItemSwipeable: RneFunctionComponent<
     onPanResponderMove: onMove,
     onPanResponderRelease: onRelease,
     onPanResponderReject: onRelease,
-    onPanResponderEnd: onSwipeEnd,
+    onPanResponderTerminate: onRelease,
+    onPanResponderEnd: () => {
+      onSwipeEnd?.();
+    },
   });
 
   return (
