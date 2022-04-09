@@ -1,31 +1,24 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import { Colors, lightColors, darkColors } from './colors';
-import { ThemeMode, RecursivePartial, FullTheme } from './theme';
+import { ThemeMode, RecursivePartial, Theme } from './theme';
+import { ComponentTheme } from './theme.component';
 
 export type { RecursivePartial };
 
-/**
- * Text: TextProps
- * to
- * Text: TextProps | (props: TextProps) => TextProps
- */
-type FunctionProps<Components = Omit<FullTheme, 'colors' | 'mode'>> = {
+type ComponentFunctionProps<Components = ComponentTheme> = {
   [Key in keyof Components]?:
     | Components[Key]
     | ((props: Components[Key]) => Components[Key]);
 };
 
-/**
- * Input type for createTheme function
- */
-export interface CreateThemeOptions extends FunctionProps {
+export interface CreateThemeOptions extends ComponentFunctionProps, Theme {
   mode?: ThemeMode;
   lightColors?: RecursivePartial<Colors>;
   darkColors?: RecursivePartial<Colors>;
 }
 
-export interface ThemeOptions extends FunctionProps {
+export interface ThemeOptions extends ComponentFunctionProps, Theme {
   colors: Colors;
   mode: ThemeMode;
 }

@@ -17,6 +17,8 @@ import { type Colors, darkColors, lightColors } from './colors';
 import {
   type ReplaceTheme,
   type UpdateTheme,
+  type ThemeOptions,
+  type CreateThemeOptions,
   createTheme,
   ThemeConsumer,
   ThemeContext,
@@ -25,6 +27,7 @@ import {
 import withTheme from './withTheme';
 import { makeStyles, useTheme, useThemeMode } from './makeStyles';
 import type { Theme, FullTheme, ThemeMode } from './theme';
+import type { ComponentTheme } from './theme.component';
 
 export {
   androidRipple,
@@ -58,5 +61,8 @@ export type {
   ReplaceTheme,
   Theme,
   UpdateTheme,
+  ComponentTheme,
   ThemeMode,
+  ThemeOptions,
+  CreateThemeOptions,
 };
