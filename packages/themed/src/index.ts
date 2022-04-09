@@ -67,6 +67,7 @@ import {
   normalizeText,
   getIconType,
   registerCustomIconType,
+  ComponentTheme,
 } from './config';
 import { CreateThemeOptions, createTheme } from './config/ThemeProvider';
 
@@ -178,4 +179,5 @@ export type {
   UpdateTheme,
   CreateThemeOptions,
   ThemeMode,
+  ComponentTheme,
 };

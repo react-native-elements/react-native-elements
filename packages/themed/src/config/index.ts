@@ -25,6 +25,7 @@ import {
 import withTheme from './withTheme';
 import { makeStyles, useTheme, useThemeMode } from './makeStyles';
 import type { Theme, FullTheme, ThemeMode } from './theme';
+import type { ComponentTheme } from './theme.component';
 
 export {
   androidRipple,
@@ -58,5 +59,6 @@ export type {
   ReplaceTheme,
   Theme,
   UpdateTheme,
+  ComponentTheme,
   ThemeMode,
 };
