@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ThemeProvider, createTheme } from '@rneui/themed';
+import { ThemeProvider, createTheme, useTheme } from '@rneui/themed';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
@@ -57,4 +57,36 @@ const theme = createTheme({
     primary: 'blue',
   },
   mode: 'dark',
+  myColors: { red: 'red' },
+  Avatar: (p) => ({ containerStyle: { backgroundColor: p.color } }),
+  MyComponent: { width: 100 },
 });
+
+import '@rneui/themed';
+
+declare module '@rneui/themed' {
+  export interface Colors {
+    red: string;
+  }
+  export interface AvatarProps {
+    color: string;
+  }
+  export interface MyComponentProps {
+    width: number;
+  }
+  export interface ComponentTheme {
+    Avatar: Partial<AvatarProps>;
+    MyComponent: Partial<MyComponentProps>;
+  }
+  export interface Theme {
+    myColors?: {
+      red: string;
+    };
+  }
+}
+
+() => {
+  const { theme: o } = useTheme();
+  o.colors.red;
+  o.myColors.red;
+};
