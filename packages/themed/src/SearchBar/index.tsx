@@ -1,7 +1,7 @@
 import { withTheme } from '../config';
 import {
   SearchBar,
-  SearchBarBaseProps,
+  SearchBarProps,
 } from '@rneui/base/dist/SearchBar/SearchBar';
 import { SearchBarAndroidProps } from '@rneui/base/dist/SearchBar/SearchBar-android';
 import { SearchBarIosProps } from '@rneui/base/dist/SearchBar/SearchBar-ios';
@@ -9,9 +9,10 @@ import { SearchBarDefaultProps } from '@rneui/base/dist/SearchBar/SearchBar-defa
 
 export { SearchBar };
 export type {
-  SearchBarBaseProps as SearchBarProps,
+  SearchBarProps,
   SearchBarAndroidProps,
   SearchBarDefaultProps,
   SearchBarIosProps,
 };
-export default withTheme<SearchBarBaseProps>(SearchBar, 'SearchBar');
+
+export default withTheme<SearchBarProps>(SearchBar, 'SearchBar');

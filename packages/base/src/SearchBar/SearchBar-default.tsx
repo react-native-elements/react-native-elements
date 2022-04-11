@@ -9,8 +9,10 @@ import {
 import { defaultTheme, renderNode } from '../helpers';
 import { Input } from '../Input';
 import { Icon } from '../Icon';
-import { SearchBarBaseProps } from './SearchBar';
 import { Theme } from '../helpers';
+import { SearchBarDefaultProps } from './types';
+
+export type { SearchBarDefaultProps };
 
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
@@ -25,10 +27,6 @@ const defaultClearIcon = (theme: Theme) => ({
   name: 'clear',
   color: theme?.colors?.grey3,
 });
-
-export type SearchBarDefaultProps = typeof SearchBarDefault.defaultProps &
-  SearchBarBaseProps &
-  TextInputProps;
 
 type SearchBarState = {
   isEmpty: boolean;
