@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Pressable, Text, StyleSheet } from 'react-native';
 import { FAB, FABProps } from '../FAB/index';
 import { RneFunctionComponent } from '../helpers';
 
@@ -10,13 +10,19 @@ export interface SpeedDialActionProps extends Omit<FABProps, 'size'> {}
 export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
   title,
   titleStyle,
+  onPress,
   ...actionProps
 }) => {
   return (
-    <View style={styles.action}>
+    <Pressable onPress={onPress} style={styles.action}>
       {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
-      <FAB {...actionProps} size="small" style={[actionProps.style]} />
-    </View>
+      <FAB
+        {...actionProps}
+        onPress={onPress}
+        size="small"
+        style={[actionProps.style]}
+      />
+    </Pressable>
   );
 };
 
