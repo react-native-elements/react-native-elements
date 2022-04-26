@@ -18,21 +18,21 @@ export type { SearchBarAndroidProps };
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme?.colors?.platform?.android?.grey,
+  color: theme?.colors?.grey3,
   name: 'search',
 });
 
 const defaultCancelIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme?.colors?.platform?.android?.grey,
+  color: theme?.colors?.grey3,
   name: 'arrow-back',
 });
 
 const defaultClearIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme?.colors?.platform?.android?.grey,
+  color: theme?.colors?.grey3,
   name: 'clear',
 });
 
@@ -50,6 +50,7 @@ export class SearchBarAndroid extends Component<
   input!: TextInput;
 
   static defaultProps = {
+    lightTheme: false,
     onClear: () => null,
     onCancel: () => null,
     onFocus: () => null,
@@ -121,6 +122,7 @@ export class SearchBarAndroid extends Component<
   render() {
     const {
       theme = defaultTheme,
+      lightTheme,
       clearIcon = { name: 'clear' },
       containerStyle,
       leftIconContainerStyle,
@@ -141,9 +143,20 @@ export class SearchBarAndroid extends Component<
         testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
-            backgroundColor: theme?.colors?.white,
+            backgroundColor: theme?.colors?.searchBg,
             paddingTop: 8,
             paddingBottom: 8,
+            shadowColor: '#000',
+            shadowOffset: {
+              width: 0,
+              height: 1,
+            },
+            shadowOpacity: 0.2,
+            shadowRadius: 1.41,
+            elevation: 2,
+          },
+          lightTheme && {
+            backgroundColor: theme?.colors?.white,
           },
           containerStyle,
         ])}
@@ -160,7 +173,11 @@ export class SearchBarAndroid extends Component<
             this.input = input;
           }}
           containerStyle={{ paddingHorizontal: 0 }}
-          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
+          inputStyle={StyleSheet.flatten([
+            styles.input,
+            { color: theme?.colors?.grey3 },
+            inputStyle,
+          ])}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
             inputContainerStyle,

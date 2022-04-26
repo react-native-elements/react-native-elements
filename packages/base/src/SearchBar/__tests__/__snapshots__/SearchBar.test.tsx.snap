@@ -180,9 +180,17 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#303337",
+        "elevation": 2,
         "paddingBottom": 8,
         "paddingTop": 8,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 1.41,
       }
     }
     testID="RNE__SearchBar-wrapper"
@@ -259,7 +267,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
                   style={
                     Array [
                       Object {
-                        "color": "rgba(0, 0, 0, 0.54)",
+                        "color": "#86939e",
                         "fontSize": 25,
                       },
                       Object {
@@ -293,7 +301,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
           rejectResponderTermination={true}
           style={
             Object {
-              "color": "#242424",
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 24,
@@ -349,7 +357,6 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "flexDirection": "row",
         "overflow": "hidden",
         "paddingBottom": 13,
@@ -371,7 +378,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#dcdce1",
+            "backgroundColor": "#303337",
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
             "borderRadius": 9,
@@ -468,7 +475,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
           rejectResponderTermination={true}
           style={
             Object {
-              "color": "#242424",
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 6,

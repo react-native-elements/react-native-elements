@@ -7,9 +7,17 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#303337",
+        "elevation": 2,
         "paddingBottom": 8,
         "paddingTop": 8,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 1.41,
       }
     }
     testID="RNE__SearchBar-wrapper"
@@ -86,7 +94,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   style={
                     Array [
                       Object {
-                        "color": "rgba(0, 0, 0, 0.54)",
+                        "color": "#86939e",
                         "fontSize": 25,
                       },
                       Object {
@@ -121,7 +129,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           rejectResponderTermination={true}
           style={
             Object {
-              "color": "#242424",
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 24,

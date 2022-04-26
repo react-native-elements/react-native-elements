@@ -43,6 +43,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
     cancelButtonTitle: 'Cancel',
     loadingProps: {},
     cancelButtonProps: {},
+    lightTheme: false,
     showLoading: false,
     onClear: () => null,
     onCancel: () => null,
@@ -117,6 +118,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
   render() {
     const {
       theme = defaultTheme,
+      lightTheme,
       cancelButtonProps,
       cancelButtonTitle,
       clearIcon,
@@ -147,11 +149,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
     return (
       <View
         testID="RNE__SearchBar-wrapper"
-        style={StyleSheet.flatten([
-          styles.container,
-          { backgroundColor: theme?.colors?.white },
-          containerStyle,
-        ])}
+        style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <Input
           testID="RNE__SearchBar"
@@ -164,13 +162,20 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
           ref={(input: TextInput) => {
             this.input = input;
           }}
-          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
+          inputStyle={StyleSheet.flatten([
+            styles.input,
+            { color: theme?.colors?.grey3 },
+            inputStyle,
+          ])}
           containerStyle={{
             paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
-            { backgroundColor: theme?.colors?.platform?.ios?.searchBg },
+            { backgroundColor: theme?.colors?.searchBg },
+            lightTheme && {
+              backgroundColor: theme?.colors?.grey5,
+            },
             hasFocus && {
               marginRight: this.state.cancelButtonWidth
                 ? this.state.cancelButtonWidth
