@@ -75,13 +75,13 @@ export const Overlay: RneFunctionComponent<OverlayProps> = ({
         style={StyleSheet.flatten([
           styles.overlay,
           fullScreen && styles.fullscreen,
-          overlayStyle,
           {
             backgroundColor: Color(theme?.colors?.white)
               .lighten(10)
               .rgb()
               .toString(),
           },
+          overlayStyle,
         ])}
       >
         {children}
