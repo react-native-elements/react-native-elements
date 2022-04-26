@@ -30,9 +30,7 @@ export const makeStyles =
 
     return useMemo(() => {
       const css =
-        typeof styles === 'function'
-          ? styles({ colors: theme.colors, mode: theme.mode }, props)
-          : styles;
+        typeof styles === 'function' ? styles({ ...theme }, props) : styles;
       return StyleSheet.create(css);
-    }, [props, theme.colors, theme.mode]);
+    }, [props, theme]);
   };
