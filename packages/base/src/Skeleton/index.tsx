@@ -1,4 +1,4 @@
-import { Skeleton, type SkeletonProps } from './Skeleton';
+import { Skeleton, SkeletonProps } from './Skeleton';
 
 export { Skeleton };
 export type { SkeletonProps };
