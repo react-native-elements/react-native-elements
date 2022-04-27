@@ -3549,7 +3549,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@4.0.0-rc.1, @rneui/base@^4.0.0-alpha.0, @rneui/base@workspace:packages/base":
+"@rneui/base@4.0.0-rc.1, @rneui/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@rneui/base@workspace:packages/base"
   dependencies:
@@ -15682,7 +15682,6 @@ __metadata:
     "@react-navigation/drawer": ^5.12.9
     "@react-navigation/native": ^5.9.8
     "@react-navigation/stack": ^5.14.9
-    "@rneui/base": ^4.0.0-alpha.0
     "@types/lodash": ^4.14.168
     "@types/react": ~17.0.21
     "@types/react-native": ~0.64.12
