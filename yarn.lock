@@ -15682,10 +15682,6 @@ __metadata:
     "@react-navigation/drawer": ^5.12.9
     "@react-navigation/native": ^5.9.8
     "@react-navigation/stack": ^5.14.9
-<<<<<<< HEAD
-    "@rneui/base": 4.0.0-rc.1
-=======
->>>>>>> o/next
     "@types/lodash": ^4.14.168
     "@types/react": ~17.0.21
     "@types/react-native": ~0.64.12
