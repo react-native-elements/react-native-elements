@@ -618,7 +618,7 @@ Here is how to fix #2:
 
 Inside the project, run script below from your favourite terminal
 
-    $ curl -L https://git.io/fix-rn-xcode10 | bash
+    $ curl -L https://gist.githubusercontent.com/fiznool/739b8e592596b5731512edfd77a1a2e9/raw/e0123e0b2382e127f1cfd6e28228315f1299738f/fix-rn-xcode10.sh | bash
 
 If you run `yarn ios` again, and you got this error
 
