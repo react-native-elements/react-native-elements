@@ -41,7 +41,7 @@ export const ListItemAccordion: RneFunctionComponent<
   ListItemAccordionProps
 > = ({
   children,
-  isExpanded,
+  isExpanded = false,
   icon,
   expandIcon,
   content,
