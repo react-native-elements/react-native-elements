@@ -5,6 +5,7 @@ import getIconType, { registerCustomIconType } from './getIconType';
 import normalizeText from './normalizeText';
 import { Colors, lightColors, darkColors } from './colors';
 import { InlinePressableProps } from './InlinePressableProps';
+import React from 'react';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
@@ -16,6 +17,7 @@ export type RneFunctionComponent<T> = React.FunctionComponent<
     theme?: {
       colors: Colors;
     };
+    children?: React.ReactNode | undefined;
   }
 >;
 
