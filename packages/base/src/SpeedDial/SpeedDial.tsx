@@ -11,6 +11,7 @@ import { FAB, FABProps } from '../FAB';
 import { IconNode } from '../Icon';
 import Color from 'color';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
+import { SpeedDialActionProps } from './SpeedDial.Action';
 
 export interface SpeedDialProps extends FABProps {
   /** Opens the action stack. */
@@ -39,6 +40,9 @@ export interface SpeedDialProps extends FABProps {
 
   /** Props for Backdrop Pressable */
   backdropPressableProps?: PressableProps;
+
+  /** onPress on Label Press for all Actions*/
+  labelPressable?: boolean;
 }
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
@@ -58,6 +62,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   overlayColor,
   theme = defaultTheme,
   placement,
+  labelPressable,
   backdropPressableProps: pressableProps,
   ...rest
 }) => {
@@ -118,7 +123,10 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         ]}
       >
         {React.Children.toArray(children).map(
-          (ChildAction: React.ReactElement, i: number) => (
+          (
+            ChildAction: React.ReactElement<SpeedDialActionProps>,
+            i: number
+          ) => (
             <Animated.View
               pointerEvents={isOpen ? 'auto' : 'none'}
               key={i}
@@ -129,6 +137,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
             >
               {React.cloneElement(ChildAction, {
                 placement,
+                labelPressable,
               })}
             </Animated.View>
           )

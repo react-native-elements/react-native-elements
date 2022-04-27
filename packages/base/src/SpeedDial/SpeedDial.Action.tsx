@@ -1,9 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Pressable, Text, StyleSheet } from 'react-native';
 import { FAB, FABProps } from '../FAB/index';
 import { RneFunctionComponent } from '../helpers';
 
-export interface SpeedDialActionProps extends Omit<FABProps, 'size'> {}
+export interface SpeedDialActionProps extends Omit<FABProps, 'size'> {
+  /** onPress on Label Press */
+  labelPressable?: boolean;
+}
 
 /** Adds Action to the SpeedDial.
  * This, Receive all [Fab](fab#props) props. */
@@ -11,10 +14,13 @@ export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
   title,
   titleStyle,
   placement,
+  labelPressable,
+  onPress,
   ...actionProps
 }) => {
   return (
-    <View
+    <Pressable
+      onPress={labelPressable ? onPress : undefined}
       style={[
         styles.action,
         placement === 'left' && {
@@ -23,8 +29,13 @@ export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
       ]}
     >
       {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
-      <FAB {...actionProps} size="small" style={[actionProps.style]} />
-    </View>
+      <FAB
+        {...actionProps}
+        onPress={onPress}
+        size="small"
+        style={[actionProps.style]}
+      />
+    </Pressable>
   );
 };
 
