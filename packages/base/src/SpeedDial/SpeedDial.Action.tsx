@@ -10,10 +10,18 @@ export interface SpeedDialActionProps extends Omit<FABProps, 'size'> {}
 export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
   title,
   titleStyle,
+  placement,
   ...actionProps
 }) => {
   return (
-    <View style={styles.action}>
+    <View
+      style={[
+        styles.action,
+        placement === 'left' && {
+          flexDirection: 'row-reverse',
+        },
+      ]}
+    >
       {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
       <FAB {...actionProps} size="small" style={[actionProps.style]} />
     </View>
