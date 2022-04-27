@@ -10,8 +10,8 @@ export default () => {
       <Header title="Speed Dial" view="speeddial" />
       <SpeedDial
         isOpen={open}
-        // placement="right"
-        // isOpen={false}
+        labelPressable
+        placement="right"
         overlayColor="transparent"
         icon={{ name: 'edit', color: '#fff' }}
         openIcon={{ name: 'close', color: '#fff' }}
@@ -37,6 +37,7 @@ export default () => {
         openIcon={{ name: 'close', color: '#fff' }}
         onOpen={() => setOpen(!open)}
         onClose={() => setOpen(!open)}
+        labelPressable
       >
         <SpeedDial.Action
           icon={{ name: 'add', color: '#fff' }}
