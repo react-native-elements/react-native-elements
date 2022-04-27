@@ -1,0 +1,81 @@
+{
+  "name": "@rneui/circular-slider",
+  "version": "1.0.0",
+  "description": "React Native Elements Next Gen Components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/react-native-elements"
+  },
+  "keywords": [
+    "react-native",
+    "reactjs",
+    "reactnative",
+    "bootstrap"
+  ],
+  "scripts": {
+    "build": "tsc --composite false",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "rimraf node_modules && yarn"
+  },
+  "author": "RNE Core team",
+  "contributors": [
+    {
+      "name": "Arpit Bhalla",
+      "url": "https://github.com/arpitBhalla"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-elements/react-native-elements/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22pkg%3A+circular-slider%22"
+  },
+  "homepage": "https://reactnativeelements.com/",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
+  "devDependencies": {
+    "react-native-svg": "^12.3.0"
+  },
+  "peerDependencies": {
+    "react-native-svg": "^12.3.0"
+  },
+  "jest": {
+    "displayName": "@rneui/circular-slider",
+    "preset": "react-native",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ],
+    "collectCoverage": true,
+    "transformIgnorePatterns": [
+      "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
+    ],
+    "coveragePathIgnorePatterns": [
+      ""
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "!src/index.tsx",
+      "!src/helpers/*.tsx"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git",
+    "directory": "packages/circular-slider"
+  }
+}
