@@ -64,9 +64,12 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       emulateUnlessSupported={true}
       pointerEvents="box-none"
       style={
-        Object {
-          "alignItems": "flex-end",
-        }
+        Array [
+          Object {
+            "alignItems": "flex-end",
+          },
+          undefined,
+        ]
       }
     >
       <View
@@ -84,13 +87,16 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-              "marginBottom": 16,
-              "marginRight": 24,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "marginBottom": 16,
+                "marginRight": 24,
+              },
+              false,
+            ]
           }
         >
           <Text
@@ -264,13 +270,16 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-              "marginBottom": 16,
-              "marginRight": 24,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "marginBottom": 16,
+                "marginRight": 24,
+              },
+              false,
+            ]
           }
         >
           <Text

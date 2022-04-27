@@ -28,8 +28,11 @@ export interface SpeedDialProps extends FABProps {
   /** Add overlay color to the speed dial. */
   overlayColor?: string;
 
-  /** SpeedDial Action as children. */
-  children?: React.ReactChild[];
+  /** SpeedDial Action as children.
+   * @type SpeedDial.Action
+   *
+   */
+  children?: React.ReactElement[];
 
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
@@ -44,7 +47,7 @@ export interface SpeedDialProps extends FABProps {
  * If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
  */
 export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
-  isOpen,
+  isOpen = false,
   onOpen = () => {},
   onClose = () => {},
   icon,
@@ -54,6 +57,7 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme = defaultTheme,
+  placement,
   backdropPressableProps: pressableProps,
   ...rest
 }) => {
@@ -100,19 +104,35 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         />
       </Pressable>
 
-      <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
-        {React.Children.toArray(children).map((ChildAction, i: number) => (
-          <Animated.View
-            pointerEvents={isOpen ? 'auto' : 'none'}
-            key={i}
-            style={{
-              transform: [{ scale: animations.current[i] }],
-              opacity: animations.current[i],
-            }}
-          >
-            {ChildAction}
-          </Animated.View>
-        ))}
+      <SafeAreaView
+        pointerEvents="box-none"
+        style={[
+          {
+            alignItems: placement === 'left' ? 'flex-start' : 'flex-end',
+          },
+          placement && {
+            [placement]: 0,
+            bottom: 0,
+            position: 'absolute',
+          },
+        ]}
+      >
+        {React.Children.toArray(children).map(
+          (ChildAction: React.ReactElement, i: number) => (
+            <Animated.View
+              pointerEvents={isOpen ? 'auto' : 'none'}
+              key={i}
+              style={{
+                transform: [{ scale: animations.current[i] }],
+                opacity: animations.current[i],
+              }}
+            >
+              {React.cloneElement(ChildAction, {
+                placement,
+              })}
+            </Animated.View>
+          )
+        )}
         <FAB
           style={[styles.fab]}
           icon={isOpen ? openIcon : icon}
