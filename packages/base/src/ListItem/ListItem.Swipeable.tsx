@@ -87,44 +87,56 @@ export const ListItemSwipeable: RneFunctionComponent<
     slideAnimation(0);
   }, [slideAnimation]);
 
-  const onMove = (_: unknown, { dx }: PanResponderGestureState) => {
-    translateX.current.setValue(panX.current + dx);
-  };
-
-  const onRelease = (_: unknown, { dx }: PanResponderGestureState) => {
-    if (Math.abs(panX.current + dx) >= ScreenWidth / 3) {
-      slideAnimation(panX.current + dx > 0 ? rightWidth : -leftWidth);
-    } else {
-      slideAnimation(0);
-    }
-  };
-
-  const shouldSlide = (
-    _: unknown,
-    { dx, dy, vx, vy }: PanResponderGestureState
-  ): boolean => {
-    if (dx > 0 && !leftContent && !panX.current) {
-      return false;
-    }
-    if (dx < 0 && !rightContent && !panX.current) {
-      return false;
-    }
-    return Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5;
-  };
-
-  const _panResponder = PanResponder.create({
-    onMoveShouldSetPanResponder: shouldSlide,
-    onPanResponderGrant: (_event, { vx }) => {
-      onSwipeBegin?.(vx > 0 ? 'left' : 'right');
+  const onMove = React.useCallback(
+    (_: unknown, { dx }: PanResponderGestureState) => {
+      translateX.current.setValue(panX.current + dx);
     },
-    onPanResponderMove: onMove,
-    onPanResponderRelease: onRelease,
-    onPanResponderReject: onRelease,
-    onPanResponderTerminate: onRelease,
-    onPanResponderEnd: () => {
-      onSwipeEnd?.();
+    []
+  );
+
+  const onRelease = React.useCallback(
+    (_: unknown, { dx }: PanResponderGestureState) => {
+      if (Math.abs(panX.current + dx) >= ScreenWidth / 3) {
+        slideAnimation(panX.current + dx > 0 ? rightWidth : -leftWidth);
+      } else {
+        slideAnimation(0);
+      }
     },
-  });
+    [leftWidth, rightWidth, slideAnimation]
+  );
+
+  const shouldSlide = React.useCallback(
+    (_: unknown, { dx, dy, vx, vy }: PanResponderGestureState): boolean => {
+      if (dx > 0 && !leftContent && !panX.current) {
+        return false;
+      }
+      if (dx < 0 && !rightContent && !panX.current) {
+        return false;
+      }
+      return (
+        Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5
+      );
+    },
+    [leftContent, rightContent]
+  );
+
+  const _panResponder = React.useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: shouldSlide,
+        onPanResponderGrant: (_event, { vx }) => {
+          onSwipeBegin?.(vx > 0 ? 'left' : 'right');
+        },
+        onPanResponderMove: onMove,
+        onPanResponderRelease: onRelease,
+        onPanResponderReject: onRelease,
+        onPanResponderTerminate: onRelease,
+        onPanResponderEnd: () => {
+          onSwipeEnd?.();
+        },
+      }),
+    [onMove, onRelease, onSwipeBegin, onSwipeEnd, shouldSlide]
+  );
 
   return (
     <View
