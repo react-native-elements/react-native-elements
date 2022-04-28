@@ -1,0 +1,59 @@
+{
+  "name": "react-native-elements",
+  "version": "4.0.0-rc.2",
+  "description": "Cross Platform React Native UI Toolkit",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "prepublish": "tsc --composite false",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/react-native-elements"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react native",
+    "react native elements",
+    "rneui",
+    "themed",
+    "react native ui",
+    "react native components",
+    "ui library",
+    "ios",
+    "android",
+    "bootstrap"
+  ],
+  "scripts": {
+    "build": "tsc --composite false",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "rimraf node_modules && yarn",
+    "clean-build": "rm -rf *.d.ts *.js"
+  },
+  "author": "RNE Core Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-elements/react-native-elements/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22pkg%3A+themed%22+"
+  },
+  "homepage": "https://reactnativeelements.com/",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
+  "dependencies": {
+    "@rneui/base": "4.0.0-rc.2",
+    "@rneui/themed": "4.0.0-rc.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git",
+    "directory": "packages/themed"
+  }
+}

@@ -3549,7 +3549,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@4.0.0-rc.1, @rneui/base@workspace:packages/base":
+"@rneui/base@4.0.0-rc.2, @rneui/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@rneui/base@workspace:packages/base"
   dependencies:
@@ -3582,13 +3582,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rneui/themed@workspace:packages/themed":
+"@rneui/themed@4.0.0-rc.2, @rneui/themed@workspace:packages/themed":
   version: 0.0.0-use.local
   resolution: "@rneui/themed@workspace:packages/themed"
   dependencies:
-    "@rneui/base": 4.0.0-rc.1
+    "@rneui/base": 4.0.0-rc.2
   peerDependencies:
-    "@rneui/base": 4.0.0-rc.1
+    "@rneui/base": 4.0.0-rc.2
   languageName: unknown
   linkType: soft
 
@@ -15708,6 +15708,15 @@ __metadata:
     react-native-svg: 12.1.1
     react-native-web: 0.17.1
     typescript: ~4.3.5
+  languageName: unknown
+  linkType: soft
+
+"react-native-elements@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "react-native-elements@workspace:packages/core"
+  dependencies:
+    "@rneui/base": 4.0.0-rc.2
+    "@rneui/themed": 4.0.0-rc.2
   languageName: unknown
   linkType: soft
 
