@@ -1,0 +1,36 @@
+---
+id: fab
+title: FAB
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/FAB.mdx";
+
+A floating action button (FAB) performs the primary, or most common, action on a screen.
+It appears in front of all screen content, typically as a circular shape with an icon in its center.
+Also receives all [Button](https://reactnativeelements.com/docs/button#props) props.
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [Button](button#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name        | Type               | Default | Description                                                                            |
+| ----------- | ------------------ | ------- | -------------------------------------------------------------------------------------- |
+| `color`     | string             |         | Change the color of the FAB.                                                           |
+| `placement` | `left` or `right`  |         | FAB placement at bottom, (optional) use [`style`](#style) in case of custom placement. |
+| `size`      | `small` or `large` | `large` | Change Size of FAB.                                                                    |
+| `style`     | View Style         |         | Style for FAB                                                                          |
+| `upperCase` | boolean            |         | Transform Extended Label text to uppercase.                                            |
+| `visible`   | boolean            | `true`  | Decide the visibility of the FAB.                                                      |
+
+</div>
