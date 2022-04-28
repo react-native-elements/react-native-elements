@@ -1,0 +1,36 @@
+---
+id: tabview
+title: TabView
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/TabView.mdx";
+
+Tabs organize content across different screens, data sets, and other interactions.
+TabView enables swipeable tabs.
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                    | Type                   | Default    | Description                                                                                      |
+| ----------------------- | ---------------------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| `animationConfig`       | AnimationConfig        | `{}`       | Define the animation configurations.                                                             |
+| `animationType`         | `spring` or `timing`   | `spring`   | Choose the animation type among `spring` and `timing`. This is visible when there is tab change. |
+| `containerStyle`        | View Style             |            | Styling for Component container.                                                                 |
+| `disableSwipe`          | Boolean                | `false`    | Swipe disabled or not                                                                            |
+| `disableTransition`     | Boolean                | `false`    | Disables transition                                                                              |
+| `minSwipeRatio`         | number                 | `0.4`      | Minimum distance to swipe before the view changes.                                               |
+| `minSwipeSpeed`         | number                 | `1`        | Minimum speed to swipe before the view changes.                                                  |
+| `onChange`              | (value: number) => any | `Function` | On Index Change Callback.                                                                        |
+| `onSwipeStart`          | (direction) => void    | `Function` | Handler when the user swipes the view.                                                           |
+| `tabItemContainerStyle` | View Style             |            | Styling for TabView.Item Component container.                                                    |
+| `value`                 | number                 | `0`        | Child position index value.                                                                      |
+
+</div>
