@@ -23,10 +23,6 @@
   ],
   "scripts": {
     "build": "tsc --composite false",
-    "test": "jest",
-    "test:update": "jest -u",
-    "test:ci": "jest --runInBand",
-    "test:watch": "jest --watch",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean-install": "rimraf node_modules && yarn"
   },
@@ -46,25 +42,6 @@
     "type": "opencollective",
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
-  },
-  "jest": {
-    "preset": "react-native",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules",
-      "<rootDir>/dist"
-    ],
-    "collectCoverage": true,
-    "transformIgnorePatterns": [
-      "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
-    ],
-    "coveragePathIgnorePatterns": [
-      ""
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.tsx",
-      "!src/index.tsx",
-      "!src/helpers/*.tsx"
-    ]
   },
   "repository": {
     "type": "git",
