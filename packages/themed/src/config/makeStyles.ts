@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { Colors } from './colors';
-import { FullTheme, Theme, ThemeMode } from './theme';
+import { Theme, ThemeMode } from './theme';
 import { ReplaceTheme, ThemeContext, UpdateTheme } from './ThemeProvider';
 
 interface useThemeI {
