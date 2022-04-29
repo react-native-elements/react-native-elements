@@ -3549,7 +3549,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@4.0.0-rc.1, @rneui/base@workspace:packages/base":
+"@rneui/base@4.0.0-rc.2, @rneui/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@rneui/base@workspace:packages/base"
   dependencies:
@@ -3572,23 +3572,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rneui/circular-slider@workspace:packages/circular-slider":
-  version: 0.0.0-use.local
-  resolution: "@rneui/circular-slider@workspace:packages/circular-slider"
-  dependencies:
-    react-native-svg: ^12.3.0
-  peerDependencies:
-    react-native-svg: ^12.3.0
-  languageName: unknown
-  linkType: soft
-
 "@rneui/themed@workspace:packages/themed":
   version: 0.0.0-use.local
   resolution: "@rneui/themed@workspace:packages/themed"
   dependencies:
-    "@rneui/base": 4.0.0-rc.1
+    "@rneui/base": 4.0.0-rc.2
   peerDependencies:
-    "@rneui/base": 4.0.0-rc.1
+    "@rneui/base": 4.0.0-rc.2
   languageName: unknown
   linkType: soft
 
@@ -6988,7 +6978,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-select@npm:^4.1.3, css-select@npm:^4.2.1":
+"css-select@npm:^4.1.3":
   version: 4.2.1
   resolution: "css-select@npm:4.2.1"
   dependencies:
@@ -15829,19 +15819,6 @@ __metadata:
     react: "*"
     react-native: ">=0.50.0"
   checksum: 20a9b2987bf5836821e51a0497fc2b598a859032fe168f80c6dcab3727bf26dc34bcb3197059e1e5775dfc91b6b20633502292d8c82e9aeb3e76807d03e0189d
-  languageName: node
-  linkType: hard
-
-"react-native-svg@npm:^12.3.0":
-  version: 12.3.0
-  resolution: "react-native-svg@npm:12.3.0"
-  dependencies:
-    css-select: ^4.2.1
-    css-tree: ^1.0.0-alpha.39
-  peerDependencies:
-    react: "*"
-    react-native: ">=0.50.0"
-  checksum: 9bed890d030819ed650fdc84ae8127f78f72a28d81a160dd574729b81f237c85be6a5ff4a0951b4dd28bd2836189f18afffef1fd6447fb3b6537c7ecd23f08c2
   languageName: node
   linkType: hard
 
