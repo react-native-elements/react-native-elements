@@ -23,7 +23,15 @@ export const useThemeMode = () => {
 
 export const makeStyles =
   <T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>, V>(
-    styles: T | ((theme: Partial<FullTheme>, props: V) => T)
+    styles:
+      | T
+      | ((
+          theme: {
+            colors: Colors;
+            mode: ThemeMode;
+          },
+          props: V
+        ) => T)
   ) =>
   (props: V = {} as any): T => {
     const { theme } = useTheme();
