@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { Colors } from './colors';
-import { FullTheme, Theme, ThemeMode } from './theme';
+import { Theme, ThemeMode } from './theme';
 import { ReplaceTheme, ThemeContext, UpdateTheme } from './ThemeProvider';
 
 interface useThemeI {
@@ -23,7 +23,15 @@ export const useThemeMode = () => {
 
 export const makeStyles =
   <T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>, V>(
-    styles: T | ((theme: Partial<FullTheme>, props: V) => T)
+    styles:
+      | T
+      | ((
+          theme: {
+            colors: Colors;
+            mode: ThemeMode;
+          },
+          props: V
+        ) => T)
   ) =>
   (props: V = {} as any): T => {
     const { theme } = useTheme();
