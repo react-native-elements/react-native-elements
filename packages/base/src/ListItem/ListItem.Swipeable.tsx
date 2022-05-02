@@ -24,14 +24,10 @@ export interface ListItemSwipeableProps extends ListItemProps {
    */
   rightContent?: React.ReactNode | ((reset: () => void) => React.ReactNode);
 
-  /** Style of left container.
-   * @type ReactNode or resetCallback => ReactNode
-   */
+  /** Style of left container.*/
   leftStyle?: StyleProp<ViewStyle>;
 
-  /** Style of right container.
-   * @type ReactNode or resetCallback => ReactNode
-   */
+  /** Style of right container.*/
   rightStyle?: StyleProp<ViewStyle>;
 
   /** Width to swipe left. */
@@ -41,10 +37,19 @@ export interface ListItemSwipeableProps extends ListItemProps {
   rightWidth?: number;
 
   /** Handler for swipe in either direction */
-  onSwipeBegin?: (direction: 'left' | 'right') => any;
+  onSwipeBegin?: (direction: 'left' | 'right') => unknown;
 
   /** Handler for swipe end. */
-  onSwipeEnd?: () => any;
+  onSwipeEnd?: () => unknown;
+
+  /** Decide whether to show animation.
+   * @default Object with duration 350ms and type timing
+   * @type Animated.TimingAnimationConfig
+   */
+  animation?: {
+    type?: 'timing' | 'spring';
+    duration?: number;
+  };
 }
 
 /** We offer a special kind of ListItem which is swipeable from both ends and allows users select an event. */
@@ -60,82 +65,77 @@ export const ListItemSwipeable: RneFunctionComponent<
   rightWidth = ScreenWidth / 3,
   onSwipeBegin,
   onSwipeEnd,
+  animation = { type: 'spring', duration: 200 },
   ...rest
 }) => {
-  const { current: panX } = React.useRef(new Animated.Value(0));
-  const currValue = React.useRef(0);
-  const prevValue = React.useRef(0);
+  const translateX = React.useRef(new Animated.Value(0));
+  const panX = React.useRef(0);
 
   const slideAnimation = React.useCallback(
     (toValue: number) => {
-      Animated.spring(panX, {
+      panX.current = toValue;
+      Animated[animation.type || 'spring'](translateX.current, {
         toValue,
         useNativeDriver: true,
+        duration: animation.duration || 200,
       }).start();
-      prevValue.current = toValue;
     },
-    [panX]
+    [animation.duration, animation.type]
   );
 
-  const resetCallBack = () => {
+  const resetCallBack = React.useCallback(() => {
     slideAnimation(0);
-  };
+  }, [slideAnimation]);
 
-  React.useEffect(() => {
-    let subs = panX.addListener(({ value }) => {
-      currValue.current = value;
-    });
-    return () => {
-      panX.removeListener(subs);
-    };
-  }, [panX]);
+  const onMove = React.useCallback(
+    (_: unknown, { dx }: PanResponderGestureState) => {
+      translateX.current.setValue(panX.current + dx);
+    },
+    []
+  );
 
-  const onPanResponderMove = (_: any, { dx }: PanResponderGestureState) => {
-    if (dx > 0 && !leftContent) {
-      return;
-    }
-    if (dx < 0 && !rightContent) {
-      return;
-    }
+  const onRelease = React.useCallback(
+    (_: unknown, { dx }: PanResponderGestureState) => {
+      if (Math.abs(panX.current + dx) >= ScreenWidth / 3) {
+        slideAnimation(panX.current + dx > 0 ? rightWidth : -leftWidth);
+      } else {
+        slideAnimation(0);
+      }
+    },
+    [leftWidth, rightWidth, slideAnimation]
+  );
 
-    if (!prevValue.current) {
-      prevValue.current = currValue.current;
-    }
-    let newDX = prevValue.current + dx;
-    if (Math.abs(newDX) > ScreenWidth / 2) {
-      return;
-    }
-    panX.setValue(newDX);
-  };
+  const shouldSlide = React.useCallback(
+    (_: unknown, { dx, dy, vx, vy }: PanResponderGestureState): boolean => {
+      if (dx > 0 && !leftContent && !panX.current) {
+        return false;
+      }
+      if (dx < 0 && !rightContent && !panX.current) {
+        return false;
+      }
+      return (
+        Math.abs(dx) > Math.abs(dy) * 2 && Math.abs(vx) > Math.abs(vy) * 2.5
+      );
+    },
+    [leftContent, rightContent]
+  );
 
-  const onPanResponderRelease = (_: any, { dx }: PanResponderGestureState) => {
-    prevValue.current = currValue.current;
-    if (
-      (Math.sign(dx) > 0 && !leftContent) ||
-      (Math.sign(dx) < 0 && !rightContent)
-    ) {
-      return slideAnimation(0);
-    }
-
-    if (Math.abs(currValue.current) >= ScreenWidth / 3) {
-      slideAnimation(currValue.current > 0 ? rightWidth : -leftWidth);
-    } else {
-      slideAnimation(0);
-    }
-  };
-
-  const { current: _panResponder } = React.useRef(
-    PanResponder.create({
-      onMoveShouldSetPanResponderCapture: () => true,
-      onPanResponderGrant: (_event, { vx }) => {
-        if (vx !== 0) {
+  const _panResponder = React.useMemo(
+    () =>
+      PanResponder.create({
+        onMoveShouldSetPanResponder: shouldSlide,
+        onPanResponderGrant: (_event, { vx }) => {
           onSwipeBegin?.(vx > 0 ? 'left' : 'right');
-        }
-      },
-      onPanResponderEnd: onSwipeEnd,
-      onPanResponderMove,
-      onPanResponderRelease,
-    })
+        },
+        onPanResponderMove: onMove,
+        onPanResponderRelease: onRelease,
+        onPanResponderReject: onRelease,
+        onPanResponderTerminate: onRelease,
+        onPanResponderEnd: () => {
+          onSwipeEnd?.();
+        },
+      }),
+    [onMove, onRelease, onSwipeBegin, onSwipeEnd, shouldSlide]
   );
 
   return (
@@ -144,16 +144,7 @@ export const ListItemSwipeable: RneFunctionComponent<
         justifyContent: 'center',
       }}
     >
-      <View
-        style={[
-          styles.hidden,
-          {
-            flex: 1,
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          },
-        ]}
-      >
+      <View style={styles.actions}>
         <View
           style={[
             {
@@ -186,10 +177,9 @@ export const ListItemSwipeable: RneFunctionComponent<
         style={{
           transform: [
             {
-              translateX: panX,
+              translateX: translateX.current,
             },
           ],
-          zIndex: 2,
         }}
         {..._panResponder.panHandlers}
       >
@@ -200,13 +190,17 @@ export const ListItemSwipeable: RneFunctionComponent<
 };
 
 const styles = StyleSheet.create({
-  hidden: {
+  actions: {
     bottom: 0,
     left: 0,
     overflow: 'hidden',
     position: 'absolute',
     right: 0,
     top: 0,
+
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 
