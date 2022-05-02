@@ -5,6 +5,7 @@ import getIconType, { registerCustomIconType } from './getIconType';
 import normalizeText from './normalizeText';
 import { Colors, lightColors, darkColors } from './colors';
 import { InlinePressableProps } from './InlinePressableProps';
+import { inlineAccessibilityProps } from './inlineAccessibilityProps';
 import React from 'react';
 
 const Screen = Dimensions.get('window');
@@ -53,6 +54,7 @@ export type { Colors, InlinePressableProps };
 export {
   renderNode,
   getIconType,
+  inlineAccessibilityProps,
   normalizeText,
   ScreenWidth,
   ScreenHeight,

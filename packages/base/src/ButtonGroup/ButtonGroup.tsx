@@ -16,6 +16,7 @@ import {
   androidRipple,
   InlinePressableProps,
   defaultTheme,
+  inlineAccessibilityProps,
 } from '../helpers';
 import { Text } from '../Text';
 
@@ -210,6 +211,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                 onLongPress,
                 ...pressableProps,
               }}
+              {...inlineAccessibilityProps(button.props)}
             >
               <View
                 style={StyleSheet.flatten([
