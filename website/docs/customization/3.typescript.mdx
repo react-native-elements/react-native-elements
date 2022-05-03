@@ -1,0 +1,160 @@
+---
+sidebar_label: With Typescript
+title: Typescript
+sidebar_position: 3
+---
+
+TypeScript definitions for your theme can be extended by using TypeScript's [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) feature. First you need to create a declaration file called `themed.d.ts` and then declare the module `@rneui/themed` and 're-export' the types that you want to extend. i.e. below we add a custom `p1Style` to the `Text` theme object and we add a bunch of colors to the `colors` object.
+
+### Adding custom colors
+
+TypeScript will only autocomplete RNE's default colors when accessing the theme. To add your custom colors to the `Colors` type, you can use TypeScript module declaration:
+
+```tsx
+import '@rneui/themed';
+
+declare module '@rneui/themed' {
+  export interface Colors {
+    primaryLight: string;
+    primaryDark: string;
+    secondaryLight: string;
+    secondaryDark: string;
+  }
+}
+```
+
+Then when you create your `ThemeProvider` instance,
+
+```tsx
+const theme = createTheme({
+  lightColors: {
+    ...yourCustomColorShape
+  },
+  darkColors: {
+    ...yourCustomColorShape
+  },
+  mode: // your light or dark mode value
+})
+```
+
+```tsx
+const App = () => {
+  const { theme } = useTheme();
+  return <Text style={{ color: theme.colors.primaryLight }} />;
+};
+```
+
+### Adding custom 'other' properties
+
+Similar to how you can extend/set custom colors, you can add your own properties to the `theme` type using TypeScript module declaration:
+
+```tsx
+import '@rneui/themed';
+
+declare module '@rneui/themed' {
+  export interface Theme {
+    myCustomProperty: string;
+    myCustomFunction: () => void;
+  }
+}
+```
+
+```tsx
+const App = () => {
+  const { theme } = useTheme();
+  return <Text>{theme.myCustomProperty}</Text>;
+};
+```
+
+### Extending RNE default components
+
+If you need to extend some props of RNE's default components, you can use TypeScript module declaration, Also remember to extend `ComponentTheme` too.
+
+```tsx
+import '@rneui/themed';
+
+declare module '@rneui/themed' {
+  export interface TextProps {
+    bold: boolean;
+  }
+
+  export interface ComponentTheme {
+    Text: Partial<TextProps>;
+  }
+}
+```
+
+For eg. You can use the following code to extend the `Text` component:
+
+```tsx
+const myTheme = createTheme({
+  Text: (props) => ({
+    style: {
+      fontWeight: props.bold ? 'bold' : 'normal',
+    },
+  }),
+});
+```
+
+and use it like this
+
+```tsx
+const App = () => {
+  const { theme } = useTheme();
+  return (
+    <View>
+      <Text>Normal Text</Text>
+      <Text bold>Bold Text</Text>
+    </View>
+  );
+};
+```
+
+### Using the theme in your own components
+
+You may want to make use of the theming utilities in your own components. For this you can use the `withTheme` HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
+
+```tsx
+import { withTheme } from '@rneui/themed';
+
+type MyCustomComponentProps = {
+  title: string;
+  titleStyle: StyleProps<TextStyle>;
+};
+
+export const MyCustomComponent = withTheme<MyCustomComponentProps>((props) => {
+  // Access theme from props
+  const { theme, updateTheme, replaceTheme } = props;
+  // ...
+});
+
+declare module '@rneui/themed' {
+  export interface ComponentTheme {
+    MyCustomComponent: Partial<MyCustomComponentProps>;
+  }
+}
+```
+
+```tsx
+import { ThemeProvider, createTheme } from '@rneui/themed';
+
+const myTheme = createTheme({
+  MyCustomComponent: {
+    titleStyle: {
+      color: 'red',
+    },
+  },
+});
+
+const App = () => {
+  return (
+    <ThemeProvider theme={myTheme}>
+      <MyCustomComponent title="My Component" />
+    </ThemeProvider>
+  );
+};
+```
+
+### Theming with no RNE components
+
+You can install `@rneui/theming`, refer it's [documentation](https://www.npmjs.com/package/@rneui/theming)
