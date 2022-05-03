@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ThemeProvider, createTheme, useTheme } from '@rneui/themed';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
@@ -54,39 +54,29 @@ export default () => {
 
 const theme = createTheme({
   lightColors: {
-    primary: 'blue',
+    primary: '#00aaff',
+    primaryLight: '#00bcd4',
+    primaryDark: '#0097a7',
+    secondary: '#ff5722',
+    secondaryLight: '#ff9800',
+    secondaryDark: '#f44336',
   },
   mode: 'dark',
-  myColors: { red: 'red' },
-  Avatar: (p) => ({ containerStyle: { backgroundColor: p.color } }),
-  MyComponent: { width: 100 },
 });
 
 import '@rneui/themed';
 
 declare module '@rneui/themed' {
   export interface Colors {
-    red: string;
-  }
-  export interface AvatarProps {
-    color: string;
-  }
-  export interface MyComponentProps {
-    width: number;
-  }
-  export interface ComponentTheme {
-    Avatar: Partial<AvatarProps>;
-    MyComponent: Partial<MyComponentProps>;
+    primaryLight: string;
+    primaryDark: string;
+    secondaryLight: string;
+    secondaryDark: string;
   }
   export interface Theme {
-    myColors?: {
-      red: string;
+    breakpoints: {
+      phone: number;
+      tablet: number;
     };
   }
 }
-
-() => {
-  const { theme: o } = useTheme();
-  o.colors.red;
-  o.myColors.red;
-};

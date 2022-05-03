@@ -117,7 +117,9 @@ const config = {
       ],
     },
     prism: {
-      theme: require('prism-react-renderer/themes/dracula'),
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/shadesOfPurple'),
+      defaultLanguage: 'typescript',
     },
     algolia: {
       appId: 'react_native_elements',
