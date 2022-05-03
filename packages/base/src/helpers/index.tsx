@@ -17,7 +17,6 @@ export type RneFunctionComponent<T> = React.FunctionComponent<
     theme?: {
       colors: Colors;
     };
-    children?: React.ReactNode | undefined;
   }
 >;
 

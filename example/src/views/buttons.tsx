@@ -38,6 +38,7 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                   marginVertical: 10,
                 }}
               />
+              <Button>Hey</Button>
               <Button
                 title="Dark"
                 buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}

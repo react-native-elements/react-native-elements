@@ -153,6 +153,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   ViewComponent = View,
   theme = defaultTheme,
   iconPosition = 'left',
+  children = title,
   ...rest
 }) => {
   useEffect(() => {
@@ -285,6 +286,12 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
               style: titleStyle,
               ...titleProps,
             })}
+          {!loading && typeof children === 'string'
+            ? renderNode(Text, children, {
+                style: titleStyle,
+                ...titleProps,
+              })
+            : children}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>
