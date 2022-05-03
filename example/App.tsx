@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { ThemeProvider, createTheme, useTheme } from '@rneui/themed';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
 import vectorFonts from './src/helpers/vector-fonts';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default () => {
   const [isReady, setIsReady] = useState(false);
@@ -35,58 +36,27 @@ export default () => {
 
   if (!isReady) {
     return (
-      <AppLoading
-        startAsync={loadAssetsAsync}
-        onFinish={() => {
-          setIsReady(true);
-        }}
-        onError={console.warn}
-      />
+      <SafeAreaProvider>
+        <AppLoading
+          startAsync={loadAssetsAsync}
+          onFinish={() => {
+            setIsReady(true);
+          }}
+          onError={console.warn}
+        />
+      </SafeAreaProvider>
     );
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <RootNavigator />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
+        <RootNavigator />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 };
 
 const theme = createTheme({
-  lightColors: {
-    primary: 'blue',
-  },
   mode: 'dark',
-  myColors: { red: 'red' },
-  Avatar: (p) => ({ containerStyle: { backgroundColor: p.color } }),
-  MyComponent: { width: 100 },
 });
-
-import '@rneui/themed';
-
-declare module '@rneui/themed' {
-  export interface Colors {
-    red: string;
-  }
-  export interface AvatarProps {
-    color: string;
-  }
-  export interface MyComponentProps {
-    width: number;
-  }
-  export interface ComponentTheme {
-    Avatar: Partial<AvatarProps>;
-    MyComponent: Partial<MyComponentProps>;
-  }
-  export interface Theme {
-    myColors?: {
-      red: string;
-    };
-  }
-}
-
-() => {
-  const { theme: o } = useTheme();
-  o.colors.red;
-  o.myColors.red;
-};

@@ -28,7 +28,9 @@ const Header: React.FunctionComponent<HeaderComponentProps> = (props) => {
   const navigation = useNavigation<DrawerNavigationProp<ParamList, 'Detail'>>();
 
   const docsNavigate = () => {
-    Linking.openURL(`https://reactnativeelements.com/docs/${props.view}`);
+    Linking.openURL(
+      `https://reactnativeelements.com/docs/components/${props.view}`
+    );
   };
 
   const playgroundNavigate = () => {
