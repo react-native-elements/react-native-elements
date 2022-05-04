@@ -20,33 +20,13 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 <Usage />
 
-<Tabs
-  defaultValue="Solid"
-  values={[
-    {
-      label: "Solid",
-      value: "Solid",
-    },
-    {
-      label: "Clear",
-      value: "Clear",
-    },
-    {
-      label: "Outline",
-      value: "Outline",
-    },
-  ]}
->
-  <TabItem value="Solid">
-    <Button title="Solid Button" />
-  </TabItem>
-  <TabItem value="Clear">
-    <Button title="Clear Button" type="clear" />
-  </TabItem>
-  <TabItem value="Outline">
-    <Button title="Outline Button" type="outline" />
-  </TabItem>
-</Tabs>
+### Solid Button
+
+```tsx live
+<Button title="Solid" />
+<Button title="Outline" type="outline" />
+<Button title="Clear" type="clear" />
+```
 
 ### Button with icon
 

@@ -24,11 +24,13 @@ const a = function () {
               use: [
                 getJSLoader(isServer, {
                   plugins: ['@babel/plugin-proposal-class-properties'],
-                  presets: ['@babel/preset-react'],
+                  presets: ['@babel/preset-react', '@babel/preset-env'],
                 }),
               ],
               include: [
                 path.resolve(nodeModules, 'react-native-elements'),
+                path.resolve(nodeModules, '@rneui/themed'),
+                path.resolve(nodeModules, '@rneui/base'),
                 path.resolve(nodeModules, 'react-native-vector-icons'),
                 path.resolve(nodeModules, 'react-native-ratings'),
               ],
