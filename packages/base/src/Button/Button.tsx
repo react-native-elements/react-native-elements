@@ -116,13 +116,13 @@ export interface ButtonProps
  * @include TouchableOpacityProps, TouchableNativeFeedbackProps
  * @imports Button
  * @usage
- * {$+{
- *  'Solid': <Button title="Solid Button" />,
- *  'Clear': <Button title="Clear Button" type="clear" />,
- *  'Outline': <Button title="Outline Button" type="outline" />,
- * }}
  *
- *
+ * ### Solid Button
+ * ```tsx live
+ * <Button title="Solid" />
+ * <Button title="Outline" type="outline" />
+ * <Button title="Clear" type="clear" />
+ * ```
  * ### Button with icon
  * %live <Button title="Solid" type="solid" icon="home" />
  * ### Button with right icon

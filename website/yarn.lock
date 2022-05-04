@@ -2931,12 +2931,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@npm:^4.0.0-rc.1":
-  version: 4.0.0-rc.1
-  resolution: "@rneui/base@npm:4.0.0-rc.1"
+"@rneui/base@file:../packages/base::locator=root-workspace-0b6124%40workspace%3A.":
+  version: 4.0.0-rc.2
+  resolution: "@rneui/base@file:../packages/base#../packages/base::hash=6e8334&locator=root-workspace-0b6124%40workspace%3A."
   dependencies:
-    "@types/react-native-vector-icons": ^6.4.6
-    color: ^3.1.2
+    "@types/react-native-vector-icons": ^6.4.10
+    color: ^3.2.1
     deepmerge: ^4.2.2
     hoist-non-react-statics: ^3.3.2
     react-native-ratings: ^8.1.0
@@ -2944,16 +2944,16 @@ __metadata:
   peerDependencies:
     react-native-safe-area-context: ^3.1.9
     react-native-vector-icons: ">7.0.0"
-  checksum: 13031b8a5102cbb1d6f57fe490f34bb6797fd2525bdeb05f0c18f584e7ed2ee97f8bc53221610de2961f59460afc6d571a343841ffa07e8998e24b38b86041ca
+  checksum: 959a350d1ab8cf60d5b168d354937cb45038a198927118500791338056394d766173dd808164339a643e4e7bc08fb536d903c45b425bea5e60b2eb1086cd1d25
   languageName: node
   linkType: hard
 
-"@rneui/themed@npm:^4.0.0-rc.1":
-  version: 4.0.0-rc.1
-  resolution: "@rneui/themed@npm:4.0.0-rc.1"
+"@rneui/themed@file:../packages/themed::locator=root-workspace-0b6124%40workspace%3A.":
+  version: 4.0.0-rc.2
+  resolution: "@rneui/themed@file:../packages/themed#../packages/themed::hash=dea053&locator=root-workspace-0b6124%40workspace%3A."
   peerDependencies:
-    "@rneui/base": 4.0.0-rc.1
-  checksum: e4383f6e40d61c64d4dd6c659abbcc87474c7f1c8f04b0a14786b4c30c16b92f51e60e363b4c948743a15674447c5c2fc4c4bf52c83c1aef114cc12f70a15d57
+    "@rneui/base": 4.0.0-rc.2
+  checksum: 6f3213c25519fdb2719e8d5c66c0d417d6bea2c1f5598cc51059d513e6bb7cf23ed18c449a8f5013712f1bdb4ff43a7f1f03b222ce1bbcfee7ceb9b5cdc12523
   languageName: node
   linkType: hard
 
@@ -3510,7 +3510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native-vector-icons@npm:^6.4.6":
+"@types/react-native-vector-icons@npm:^6.4.10, @types/react-native-vector-icons@npm:^6.4.6":
   version: 6.4.10
   resolution: "@types/react-native-vector-icons@npm:6.4.10"
   dependencies:
@@ -5183,7 +5183,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color@npm:^3.1.2":
+"color@npm:^3.1.2, color@npm:^3.2.1":
   version: 3.2.1
   resolution: "color@npm:3.2.1"
   dependencies:
@@ -12262,8 +12262,8 @@ __metadata:
     "@docusaurus/preset-classic": ^2.0.0-beta.18
     "@docusaurus/theme-live-codeblock": ^2.0.0-beta.18
     "@docusaurus/types": ^2.0.0-beta.18
-    "@rneui/base": ^4.0.0-rc.1
-    "@rneui/themed": ^4.0.0-rc.1
+    "@rneui/base": ../packages/base
+    "@rneui/themed": ../packages/themed
     "@tsconfig/docusaurus": ^1.0.4
     "@types/jest": ^27.0.3
     "@types/node": ^17.0.23

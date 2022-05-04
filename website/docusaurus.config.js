@@ -48,6 +48,9 @@ const config = {
     ],
   ],
   themeConfig: {
+    liveCodeBlock: {
+      playgroundPosition: 'top',
+    },
     announcementBar: {
       id: 'support_us',
       content:
