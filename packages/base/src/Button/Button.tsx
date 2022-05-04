@@ -39,9 +39,7 @@ const positionStyle = {
   left: 'row',
   right: 'row-reverse',
 };
-/**
- * @name BUtton
- */
+
 export interface ButtonProps
   extends TouchableOpacityProps,
     TouchableNativeFeedbackProps {
@@ -234,7 +232,6 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
           {...linearGradientProps}
           style={StyleSheet.flatten([
             styles.button,
-            styles.buttonOrientation,
             {
               // flex direction based on iconPosition
               // if iconRight is true, default to right
@@ -281,17 +278,22 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
             })}
           {/* Title for Button, hide while loading */}
           {!loading &&
-            !!title &&
-            renderNode(Text, title, {
-              style: titleStyle,
-              ...titleProps,
-            })}
-          {!loading && typeof children === 'string'
+            React.Children.toArray(children).map((Child, index) => (
+              <React.Fragment key={index}>
+                {typeof Child === 'string'
+                  ? renderNode(Text, Child, {
+                      style: titleStyle,
+                      ...titleProps,
+                    })
+                  : Child}
+              </React.Fragment>
+            ))}
+          {/* {!loading && typeof children === 'string'
             ? renderNode(Text, children, {
                 style: titleStyle,
                 ...titleProps,
               })
-            : children}
+            : children} */}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>
@@ -301,12 +303,6 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
 const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
-    padding: 8,
-  },
-  buttonOrientation: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 3,

@@ -70,7 +70,7 @@ function RootNavigator() {
           backgroundColor: theme?.colors?.grey4,
         }}
       >
-        <Drawer.Screen name="Avatars" component={Avatars} />
+        <Drawer.Screen name="Avatars" component={Buttons} />
         <Drawer.Screen name="Badge" component={Badge} />
         <Drawer.Screen name="BottomSheet" component={BottomSheet} />
         <Drawer.Screen name="Buttons" component={Buttons} />

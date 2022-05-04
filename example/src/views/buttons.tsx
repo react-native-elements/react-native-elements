@@ -19,13 +19,14 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
           <View style={{ alignItems: 'center' }}>
             <View style={styles.buttonsContainer}>
               <Button
-                title={'React Native Elements'}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,
                   marginVertical: 10,
                 }}
-              />
+              >
+                React Native Elements
+              </Button>
               <Button
                 title="Basic Button"
                 buttonStyle={{
@@ -38,7 +39,6 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                   marginVertical: 10,
                 }}
               />
-              <Button>Hey</Button>
               <Button
                 title="Dark"
                 buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
