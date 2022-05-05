@@ -82,7 +82,7 @@ const TilePlayground = () => {
     },
     scope: {
       Tile,
-      SampleImage,
+      // SampleImage,
     },
     imports: {
       '@rneui/base': {
