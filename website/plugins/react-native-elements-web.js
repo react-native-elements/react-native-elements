@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const nodeModules = path.join(__dirname, '..', 'node_modules');
 
@@ -9,6 +10,16 @@ const a = function () {
     configureWebpack(config, isServer, utils) {
       const { getJSLoader } = utils;
       return {
+        plugins: isServer
+          ? []
+          : [
+              new webpack.ProvidePlugin({
+                Buffer: ['buffer', 'Buffer'],
+              }),
+              new webpack.ProvidePlugin({
+                process: 'process/browser',
+              }),
+            ],
         module: {
           rules: [
             {
@@ -42,6 +53,14 @@ const a = function () {
             'react-native$': 'react-native-web',
             'react-native-linear-gradient': 'react-native-web-linear-gradient',
           },
+          fallback: isServer
+            ? {}
+            : {
+                path: require.resolve('path-browserify'),
+                os: require.resolve('os-browserify/browser'),
+                fs: false,
+                process: 'process/browser',
+              },
         },
       };
     },

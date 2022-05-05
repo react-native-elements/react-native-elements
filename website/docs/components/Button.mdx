@@ -5,8 +5,7 @@ title: Button
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import { Button } from "react-native-elements";
-import Usage from "../component_usage/Button.mdx";
+import Play from "../playground/Button/button.playground";
 
 Buttons are touchable elements used to interact with the screen and to perform and operation.
 They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
@@ -16,11 +15,15 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 <Button title="Solid Button" />
 ```
 
+## Import
+
+```tsx
+import { Button } from "@rneui/themed";
+```
+
 ## Usage
 
-<Usage />
-
-### Solid Button
+### Variants
 
 ```tsx live
 <Button title="Solid" />
@@ -78,3 +81,7 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 | `type`                | `solid` or `clear` or `outline`                                        | `solid` | Type of button.                                                                                                                                          |
 
 </div>
+
+## Playground
+
+<Play />

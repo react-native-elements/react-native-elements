@@ -5,17 +5,18 @@ title: SpeedDial
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
-import Usage from "../component_usage/SpeedDial.mdx";
+import Play from "../playground/SpeedDial/speeddial.playground";
 
 When pressed, a floating action button can display three to six related actions in the form of a speed dial.
 If more than six actions are needed, something other than a FAB should be used to present them.
 Upon press, the FAB remains visible and emits a stack of related actions.
 If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
 
-## Usage
+## Import
 
-<Usage />
+```tsx
+import { SpeedDial } from "@rneui/themed";
+```
 
 ## Props
 
@@ -38,3 +39,7 @@ Includes all [Button](button#props), [FAB](fab#props) props.
 | `transitionDuration`     | number           | `150`      | The duration for the transition, in milliseconds.        |
 
 </div>
+
+## Playground
+
+<Play />

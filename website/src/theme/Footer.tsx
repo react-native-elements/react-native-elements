@@ -15,7 +15,7 @@ export default function () {
         <div className="row footer__links">
           <div className="col footer__col">
             <div className="footer__title">Docs</div>
-            <ul className="footer__items">
+            <ul className="footer__items clean-list">
               <li className="footer__item">
                 <a className="footer__link-item" href="/docs">
                   Getting Started
@@ -35,7 +35,7 @@ export default function () {
           </div>
           <div className="col footer__col">
             <div className="footer__title">Contribution</div>
-            <ul className="footer__items">
+            <ul className="footer__items clean-list">
               <li className="footer__item">
                 <a
                   className="footer__link-item"
@@ -61,7 +61,7 @@ export default function () {
           </div>
           <div className="col footer__col">
             <div className="footer__title">Community</div>
-            <ul className="footer__items">
+            <ul className="footer__items clean-list">
               <li className="footer__item">
                 <a
                   href="https://react-native-elements-slack.herokuapp.com/"
@@ -96,7 +96,7 @@ export default function () {
           </div>
           <div className="col footer__col">
             <div className="footer__title">More</div>
-            <ul className="footer__items">
+            <ul className="footer__items clean-list">
               <li className="footer__item">
                 <a
                   href="https://stackoverflow.com/questions/tagged/react-native-elements"

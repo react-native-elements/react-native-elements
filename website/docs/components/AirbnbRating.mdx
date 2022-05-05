@@ -5,8 +5,7 @@ title: AirbnbRating
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
-import Usage from "../component_usage/AirbnbRating.mdx";
+import Play from "../playground/AirbnbRating/airbnbrating.playground";
 
 Ratings are used to collect measurable feedback from users.
 Use Rating over an Input where imagery can increase user interaction.
@@ -14,9 +13,11 @@ This component is imported from [react-native-ratings](https://github.com/Monte9
 There are two types of rating - TapRating and SwipeRating.
 This documentation is for Tap Rating version.
 
-## Usage
+## Import
 
-<Usage />
+```tsx
+import { AirbnbRating } from "@rneui/themed";
+```
 
 ## Props
 
@@ -39,3 +40,7 @@ This documentation is for Tap Rating version.
 | `starImage`            | string                |         | Pass in a custom base image source                                                                                                                                               |
 
 </div>
+
+## Playground
+
+<Play />
