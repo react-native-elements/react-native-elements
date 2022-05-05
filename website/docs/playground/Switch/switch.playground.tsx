@@ -4,7 +4,6 @@ import Playground from '../../../src/components/Playground';
 import { useView, PropTypes } from 'react-view';
 
 const SwitchPlayground = () => {
-  const { theme } = useTheme();
   const params = useView({
     componentName: 'Switch',
     props: {
