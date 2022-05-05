@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {
   tabify,
   codify,
@@ -31,8 +32,10 @@ type TemplateOptionsT = {
   description: string;
   imports: string;
   installation: string;
-  showUsage: string | true;
+  showUsage: boolean;
+  parentComponent: string;
   usageFileExists: boolean;
+  playgroundExists: boolean;
   usage: string;
   showProps: boolean;
   props?: PropRowT[];
@@ -95,18 +98,23 @@ export class Markdown implements ComponentDoc {
 
   private generate(): TemplateOptionsT {
     const id = this.displayName.toLowerCase().replace('.', '_');
+    const parentComponent = this.displayName.split('.')[0];
     const { imports = '', installation = '', usage = '' } = this.tags || {};
 
     const usagePath = `component_usage/${this.displayName}.mdx`;
     const usageFileExists = fs.existsSync(path.join(docsPath, usagePath));
+    const playgroundPath = `playground/${this.displayName}/${id}.playground.tsx`;
+    const playgroundExists = fs.existsSync(path.join(docsPath, playgroundPath));
     return {
       id,
       title: this.displayName,
       description: dedent(snippetToCode(this.description)),
       imports,
+      parentComponent,
       installation: installation,
-      showUsage: usageFileExists || usage,
+      showUsage: Boolean(usage), // || useageFileExists,
       usageFileExists,
+      playgroundExists,
       usage: dedent(tabify(snippetToCode(usage)).trim()),
       showProps: true,
       ...this.propTable(),

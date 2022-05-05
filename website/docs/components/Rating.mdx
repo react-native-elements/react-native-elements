@@ -5,8 +5,7 @@ title: Rating
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
-import Usage from "../component_usage/Rating.mdx";
+import Play from "../playground/Rating/rating.playground";
 
 Ratings are used to collect measurable feedback from users.
 Use Rating over an Input where imagery can increase user interaction.
@@ -14,9 +13,11 @@ This component is imported from [react-native-ratings](https://github.com/Monte9
 There are two tyoes of rating - TapRating and SwipeRating.
 This documentation is for Swipe Rating version.
 
-## Usage
+## Import
 
-<Usage />
+```tsx
+import { Rating } from "@rneui/themed";
+```
 
 ## Props
 
@@ -45,3 +46,7 @@ This documentation is for Swipe Rating version.
 | `type`                  | string                |         | Graphic used for represent a ratingDefault is 'star'                                                                       |
 
 </div>
+
+## Playground
+
+<Play />

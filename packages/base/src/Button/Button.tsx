@@ -117,7 +117,7 @@ export interface ButtonProps
  * @imports Button
  * @usage
  *
- * ### Solid Button
+ * ### Variants
  * ```tsx live
  * <Button title="Solid" />
  * <Button title="Outline" type="outline" />

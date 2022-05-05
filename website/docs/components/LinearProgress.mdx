@@ -5,16 +5,17 @@ title: LinearProgress
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
-import Usage from "../component_usage/LinearProgress.mdx";
+import Play from "../playground/LinearProgress/linearprogress.playground";
 
 Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates.
 They communicate an app’s state and indicate available actions, such as whether users can navigate away from the current screen.
 Also receives all [View](https://reactnative.dev/docs/view#props) props
 
-## Usage
+## Import
 
-<Usage />
+```tsx
+import { LinearProgress } from "@rneui/themed";
+```
 
 ## Props
 
@@ -34,3 +35,7 @@ Includes all [View](https://reactnative.dev/docs/view#props) props.
 | `variant`    | `determinate` or `indeterminate`      | `value === undefined ? 'indeterminate' : 'determinate'` | Type of button.                                                                         |
 
 </div>
+
+## Playground
+
+<Play />
