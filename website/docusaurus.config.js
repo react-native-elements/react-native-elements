@@ -92,9 +92,10 @@ const config = {
           dropdownActiveClassDisabled: true,
           docsPluginId: 'default',
         },
-        { to: 'docs/', label: 'Docs', position: 'right' },
-        { to: 'help', label: 'Help', position: 'right' },
-        { to: 'blog', label: 'Blog', position: 'right' },
+        // { to: 'docs/', label: 'Docs', position: 'right' },
+        // { to: 'help', label: 'Help', position: 'right' },
+        // { to: 'blog', label: 'Blog', position: 'right' },
+        { type: 'search', position: 'right' },
         {
           href: 'https://github.com/sponsors/react-native-elements',
           // label: 'Sponsor',
@@ -116,7 +117,6 @@ const config = {
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
-        { type: 'search', position: 'right' },
       ],
     },
     prism: {

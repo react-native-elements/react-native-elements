@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Divider, useTheme } from '@rneui/base';
+import { Divider, defaultTheme as theme } from '@rneui/base';
 
 import Playground from '../../../src/components/Playground';
 import { useView, PropTypes } from 'react-view';
 
 const DividerPlayground = () => {
-  const { theme } = useTheme();
   const params = useView({
     componentName: 'Divider',
     props: {
