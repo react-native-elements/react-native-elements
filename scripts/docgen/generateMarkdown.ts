@@ -112,7 +112,7 @@ export class Markdown implements ComponentDoc {
       imports,
       parentComponent,
       installation: installation,
-      showUsage: Boolean(usage), // || useageFileExists,
+      showUsage: Boolean(usage) || usageFileExists,
       usageFileExists,
       playgroundExists,
       usage: dedent(tabify(snippetToCode(usage)).trim()),
