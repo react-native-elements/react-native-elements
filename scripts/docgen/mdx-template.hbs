@@ -5,9 +5,9 @@ title: {{title}}
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-{{!-- {{#if usageFileExists}}
+{{#if usageFileExists}}
 import Usage from "../component_usage/{{title}}.mdx";
-{{/if}} --}}
+{{/if}}
 {{#if playgroundExists}}
 import Play from '../playground/{{title}}/{{id}}.playground';
 {{/if}}
@@ -53,11 +53,12 @@ yarn add @rneui/{{installation}}
 {{#if showUsage}}
 ## Usage
 
-{{!-- {{#if usageFileExists}}
-<Usage/>
-{{/if}} --}}
-
 {{{usage}}}
+
+{{#if usageFileExists}}
+<Usage/>
+{{/if}}
+
 
 {{/if}}
 
