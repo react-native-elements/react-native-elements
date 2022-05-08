@@ -132,7 +132,7 @@ const SIZE = {
  *
  * @usage
  *
- * ### Solid Button
+ * ### Variants
  * ```tsx live
  * <Button title="Solid" />
  * <Button title="Outline" type="outline" />
