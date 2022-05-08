@@ -19,6 +19,8 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
           <View style={{ alignItems: 'center' }}>
             <View style={styles.buttonsContainer}>
               <Button
+                radius={'lg'}
+                size="lg"
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,

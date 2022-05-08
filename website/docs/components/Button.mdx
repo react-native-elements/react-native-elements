@@ -5,7 +5,7 @@ title: Button
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import { Button } from "react-native-elements";
+import {} from "react-native-elements";
 import Usage from "../component_usage/Button.mdx";
 
 Buttons are touchable elements used to interact with the screen and to perform and operation.
@@ -23,20 +23,20 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 ### Solid Button
 
 ```tsx live
-<Button title="Solid" />
-<Button title="Outline" type="outline" />
-<Button title="Clear" type="clear" />
+ <Button title="Solid" />
+ <Button title="Outline" type="outline" />
+ <Button title="Clear" type="clear" />
 ```
 
 ### Button with icon
 
-```jsx live
+```tsx live
 <Button title="Solid" type="solid" icon="home" />
 ```
 
 ### Button with right icon
 
-```jsx live
+```tsx live
 <Button title="Solid" type="solid" icon="home" iconRight />
 ```
 
@@ -71,10 +71,13 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 | `loading`             | boolean                                                                | `false` | Prop to display a loading spinner.                                                                                                                       |
 | `loadingProps`        | ActivityIndicatorProps                                                 |         | Add additional props for ActivityIndicator component.                                                                                                    |
 | `loadingStyle`        | View Style                                                             |         | Add additional styling for loading component.                                                                                                            |
+| `radius`              | `string` or `number` or `sm` or `md` or `lg` or `none`                 | `sm`    | Radius of button                                                                                                                                         |
 | `raised`              | boolean                                                                | `false` | Add raised button styling (optional). Has no effect if `type="clear"`.                                                                                   |
+| `size`                | `sm` or `md` or `lg`                                                   |         | Button size                                                                                                                                              |
 | `title`               | `string` or `ReactElement<{}, string` or `JSXElementConstructor<any>>` |         | Add button title.                                                                                                                                        |
 | `titleProps`          | TextProps                                                              |         | Add additional props for Text component.                                                                                                                 |
 | `titleStyle`          | Text Style                                                             |         | Add additional styling for title component.                                                                                                              |
 | `type`                | `solid` or `clear` or `outline`                                        | `solid` | Type of button.                                                                                                                                          |
+| `uppercase`           | boolean                                                                | `false` | Uppercase button title                                                                                                                                   |
 
 </div>

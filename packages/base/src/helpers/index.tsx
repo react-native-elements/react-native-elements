@@ -12,6 +12,8 @@ const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
 
+export type StringOmit<K extends string> = K | Omit<string, K>;
+
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
     theme?: {

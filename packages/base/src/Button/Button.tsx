@@ -20,6 +20,7 @@ import {
   defaultTheme,
   renderNode,
   Theme,
+  StringOmit,
   RneFunctionComponent,
 } from '../helpers';
 import { IconNode, Icon } from '../Icon';
@@ -102,7 +103,25 @@ export interface ButtonProps
 
   /** Displays Icon to the position mentioned. Needs to be used along with `icon` prop. */
   iconPosition?: 'left' | 'right' | 'top' | 'bottom';
+
+  /** Uppercase button title*/
+  uppercase?: boolean;
+
+  /** Radius of button
+   * @type string | number | sm | md | lg | none
+   */
+  radius?: StringOmit<'sm' | 'md' | 'lg' | 'none'> | number;
+
+  /** Button size */
+  size?: 'sm' | 'md' | 'lg';
 }
+
+const SIZE = {
+  sm: 4,
+  md: 8,
+  lg: 12,
+  none: 0,
+};
 
 /**
  * Buttons are touchable elements used to interact with the screen and to perform and operation.
@@ -111,8 +130,6 @@ export interface ButtonProps
  *
  * %jsx <Button title="Solid Button" />
  *
- * @include TouchableOpacityProps, TouchableNativeFeedbackProps
- * @imports Button
  * @usage
  *
  * ### Solid Button
@@ -122,9 +139,13 @@ export interface ButtonProps
  * <Button title="Clear" type="clear" />
  * ```
  * ### Button with icon
- * %live <Button title="Solid" type="solid" icon="home" />
+ * ```tsx live
+ *  <Button title="Solid" type="solid" icon="home" />
+ * ```
  * ### Button with right icon
- * %live <Button title="Solid" type="solid" icon="home" iconRight />
+ * ```tsx live
+ * <Button title="Solid" type="solid" icon="home" iconRight />
+ * ```
  * ### Button with loading spinner
  * %live <Button title="Solid" type="solid" loading />
  */
@@ -137,6 +158,9 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   loading = false,
   loadingStyle,
   loadingProps: passedLoadingProps,
+  // size = 'md',
+  radius = 'sm',
+  uppercase = 'false',
   title = '',
   titleProps,
   titleStyle: passedTitleStyle,
@@ -183,6 +207,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
     {
       color: type === 'solid' ? 'white' : theme?.colors?.primary,
     },
+    uppercase && { textTransform: 'uppercase' },
     styles.title,
     passedTitleStyle,
     disabled && {
@@ -233,12 +258,11 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
           style={StyleSheet.flatten([
             styles.button,
             {
+              borderRadius: SIZE[radius as keyof typeof SIZE] ?? (radius || 0),
               // flex direction based on iconPosition
               // if iconRight is true, default to right
               flexDirection:
                 positionStyle[iconRight ? 'right' : iconPosition] || 'row',
-            },
-            {
               backgroundColor:
                 type === 'solid' ? theme?.colors?.primary : 'transparent',
               borderColor: theme?.colors?.primary,
@@ -282,18 +306,14 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
               <React.Fragment key={index}>
                 {typeof Child === 'string'
                   ? renderNode(Text, Child, {
-                      style: titleStyle,
+                      style: {
+                        ...titleStyle,
+                      },
                       ...titleProps,
                     })
                   : Child}
               </React.Fragment>
             ))}
-          {/* {!loading && typeof children === 'string'
-            ? renderNode(Text, children, {
-                style: titleStyle,
-                ...titleProps,
-              })
-            : children} */}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>
@@ -305,7 +325,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 3,
     padding: 8,
   },
   container: {
