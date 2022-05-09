@@ -17,6 +17,9 @@
   /* --ifm-hero-background-color: #dbdddf; */
 
   --ifm-navbar-background-color: var(--ifm-hero-background-color);
+
+  --ifm-tabs-padding-vertical: 0.2rem;
+  --ifm-tabs-padding-horizontal: 0.8rem;
 }
 
 :root[data-theme='dark'] {
