@@ -123,11 +123,7 @@ export default function Playground({ children, transformCode, ...props }) {
       {/* @ts-expect-error: type incompatibility with refs */}
       <LiveProvider
         code={children.replace(/\n$/, '')}
-        transformCode={
-          transformCode ||
-          ((code) =>
-            `<div style={{display:'flex',flexDirection:'row',gap:'20px'}}>${code}</div>`)
-        }
+        transformCode={transformCode || ((code) => code)}
         theme={prismTheme}
         {...props}
       >

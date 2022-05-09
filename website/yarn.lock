@@ -2675,12 +2675,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@npm:latest":
+"@rneui/base-edge@github:react-native-elements/react-native-elements#base":
   version: 4.0.0-rc.2
-  resolution: "@rneui/base@npm:4.0.0-rc.2"
+  resolution: "@rneui/base-edge@https://github.com/react-native-elements/react-native-elements.git#commit=c3deae9eea25077b3f6b73eda9b4a188114ffe42"
   dependencies:
-    "@types/react-native-vector-icons": ^6.4.6
-    color: ^3.1.2
+    "@types/react-native-vector-icons": ^6.4.10
+    color: ^3.2.1
     deepmerge: ^4.2.2
     hoist-non-react-statics: ^3.3.2
     react-native-ratings: ^8.1.0
@@ -2688,7 +2688,23 @@ __metadata:
   peerDependencies:
     react-native-safe-area-context: ^3.1.9
     react-native-vector-icons: ">7.0.0"
-  checksum: 3fb165e378076c3ae81d7da1c83c717e216ae6b575ef974df49bf027cd3d6b586b095dcb0322bb72fc6ad969ba929342534fd492b07b71f4752b8c69cc14ef20
+  checksum: d9ba9ac3420d6e396f1287b1b997dc420e9a8c4e119f1806ad32d0771241f1bfe33484747610783bc05c26337014a9704f6d1e7858a0cff85dee2b47a9f067de
+  languageName: node
+  linkType: hard
+
+"@rneui/base@npm:edge":
+  version: 0.0.0-edge.2
+  resolution: "@rneui/base@npm:0.0.0-edge.2"
+  dependencies:
+    "@rneui/base-edge": "github:react-native-elements/react-native-elements#base"
+  checksum: 2877d2f279078bfb41c6c5c55c92d7ae85e9b0b581fb66c2f7b591b025b0ce66951f60a1e7e2ec15b7f5bbad3479ebad6b2137367a3c6bf7f2f01ce83426f5c5
+  languageName: node
+  linkType: hard
+
+"@rneui/layout@npm:^0.0.0-alpha.3":
+  version: 0.0.0-alpha.3
+  resolution: "@rneui/layout@npm:0.0.0-alpha.3"
+  checksum: 3c3efcd5638963590b677d332d9f2eb84928e11c75f006ce5ae2d0e761f0700102e105e4810cb18efd991ac9bb6aabaaebbd2a911cbdf95b0944ec315f034bbc
   languageName: node
   linkType: hard
 
@@ -3247,7 +3263,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native-vector-icons@npm:^6.4.6":
+"@types/react-native-vector-icons@npm:^6.4.10, @types/react-native-vector-icons@npm:^6.4.6":
   version: 6.4.10
   resolution: "@types/react-native-vector-icons@npm:6.4.10"
   dependencies:
@@ -4905,7 +4921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color@npm:^3.1.2":
+"color@npm:^3.1.2, color@npm:^3.2.1":
   version: 3.2.1
   resolution: "color@npm:3.2.1"
   dependencies:
@@ -11997,7 +12013,8 @@ __metadata:
     "@docusaurus/preset-classic": ^2.0.0-beta.18
     "@docusaurus/theme-live-codeblock": ^2.0.0-beta.18
     "@docusaurus/types": ^2.0.0-beta.18
-    "@rneui/base": latest
+    "@rneui/base": edge
+    "@rneui/layout": ^0.0.0-alpha.3
     "@rneui/themed": latest
     "@tsconfig/docusaurus": ^1.0.4
     "@types/jest": ^27.0.3

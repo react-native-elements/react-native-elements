@@ -3583,6 +3583,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rneui/layout@npm:^0.0.0-alpha.3":
+  version: 0.0.0-alpha.3
+  resolution: "@rneui/layout@npm:0.0.0-alpha.3"
+  checksum: 3c3efcd5638963590b677d332d9f2eb84928e11c75f006ce5ae2d0e761f0700102e105e4810cb18efd991ac9bb6aabaaebbd2a911cbdf95b0944ec315f034bbc
+  languageName: node
+  linkType: hard
+
 "@rneui/themed@workspace:packages/themed":
   version: 0.0.0-use.local
   resolution: "@rneui/themed@workspace:packages/themed"
@@ -15734,6 +15741,7 @@ __metadata:
     "@react-navigation/drawer": ^5.12.9
     "@react-navigation/native": ^5.9.8
     "@react-navigation/stack": ^5.14.9
+    "@rneui/layout": ^0.0.0-alpha.3
     "@types/lodash": ^4.14.182
     "@types/react": ~17.0.21
     "@types/react-native": ~0.67.6
