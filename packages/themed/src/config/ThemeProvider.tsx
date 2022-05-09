@@ -55,7 +55,9 @@ export const ThemeContext = React.createContext<ThemeProviderContext>({
   theme: { colors: lightColors, mode: 'light' },
 } as ThemeProviderContext);
 
-export const createTheme = (theme: CreateThemeOptions): CreateThemeOptions => {
+export const createTheme = (
+  theme: CreateThemeOptions = {}
+): CreateThemeOptions => {
   return {
     ...theme,
     ...deepmerge<CreateThemeOptions>(
@@ -64,7 +66,7 @@ export const createTheme = (theme: CreateThemeOptions): CreateThemeOptions => {
         lightColors: theme.lightColors || ({} as Colors),
         darkColors: theme.darkColors || ({} as Colors),
         mode: theme.mode || 'light',
-        spacing: theme.spacing,
+        spacing: theme.spacing || {},
       }
     ),
   };
