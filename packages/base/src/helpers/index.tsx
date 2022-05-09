@@ -12,10 +12,11 @@ const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
 
+export type StringOmit<K extends string> = K | Omit<string, K>;
+
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
     theme?: Theme;
-    children?: React.ReactNode | undefined;
   }
 >;
 
@@ -29,7 +30,7 @@ export interface ThemeSpacing {
 
 export const defaultTheme: Theme = {
   colors: lightColors,
-  spacing: { xl: 16, lg: 12, md: 8, sm: 4, xs: 2 },
+  spacing: { xs: 2, sm: 4, md: 8, lg: 12, xl: 24 },
 };
 
 export type Theme = {
