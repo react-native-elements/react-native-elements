@@ -67,17 +67,46 @@ describe('Button Component', () => {
     ${'clear'}
   `('$type', ({ type }) => {
     it(`should display ${type} button`, () => {
-      const { toJSON } = renderWithWrapper(<Button title={type} />);
+      const { toJSON } = renderWithWrapper(<Button title={type} type={type} />);
       expect(toJSON()).toMatchSnapshot();
     });
 
     it(`should display raised ${type} button`, () => {
-      const { toJSON } = renderWithWrapper(<Button title={type} raised />);
+      const { toJSON } = renderWithWrapper(
+        <Button title={type} type={type} raised />
+      );
       expect(toJSON()).toMatchSnapshot();
     });
 
     it(`should display disabled ${type} button`, () => {
-      const { toJSON } = renderWithWrapper(<Button title={type} disabled />);
+      const { toJSON } = renderWithWrapper(
+        <Button title={type} type={type} disabled />
+      );
+      expect(toJSON()).toMatchSnapshot();
+    });
+  });
+  describe.each`
+    size
+    ${'sm'}
+    ${'md'}
+    ${'lg'}
+  `('$size', ({ size }) => {
+    it(`should display ${size} button`, () => {
+      const { toJSON } = renderWithWrapper(<Button title={size} size={size} />);
+      expect(toJSON()).toMatchSnapshot();
+    });
+
+    it(`should display raised ${size} button`, () => {
+      const { toJSON } = renderWithWrapper(
+        <Button title={size} size={size} raised />
+      );
+      expect(toJSON()).toMatchSnapshot();
+    });
+
+    it(`should display disabled ${size} button`, () => {
+      const { toJSON } = renderWithWrapper(
+        <Button title={size} size={size} disabled />
+      );
       expect(toJSON()).toMatchSnapshot();
     });
   });

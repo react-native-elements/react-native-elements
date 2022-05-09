@@ -24,8 +24,10 @@ exports[`FAB Component should match snapshot 1`] = `
       style={
         Array [
           Object {
-            "borderRadius": 3,
             "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 2,
           },
           Object {
             "borderRadius": 28,
@@ -63,9 +65,9 @@ exports[`FAB Component should match snapshot 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#ca71eb",
+              "backgroundColor": "#03dac4",
               "borderColor": "#2089dc",
-              "borderRadius": 3,
+              "borderRadius": 2,
               "borderWidth": 0,
               "flexDirection": "row",
               "height": 40,

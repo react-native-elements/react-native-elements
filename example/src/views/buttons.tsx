@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import { Button, ButtonGroup, withTheme, Text } from '@rneui/themed';
+import { Button } from '@rneui/base';
+import { ButtonGroup, withTheme, Text } from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 import { LinearGradient } from '../components/LinearGradient';
+import { Stack } from '@rneui/layout';
 
 type ButtonsComponentProps = {};
 
@@ -17,120 +19,35 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
         <View style={styles.contentView}>
           <SubHeader title="Basic Buttons" />
           <View style={{ alignItems: 'center' }}>
-            <View style={styles.buttonsContainer}>
-              <Button
-                title={'React Native Elements'}
-                containerStyle={{
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-              />
-              <Button
-                title="Basic Button"
-                buttonStyle={{
-                  backgroundColor: 'rgba(78, 116, 289, 1)',
-                  borderRadius: 3,
-                }}
-                containerStyle={{
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-              />
-              <Button
-                title="Dark"
-                buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
-                containerStyle={{
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-                titleStyle={{ color: 'white', marginHorizontal: 20 }}
-              />
-
-              <Button
-                title="Log in"
-                loading={false}
-                loadingProps={{ size: 'small', color: 'white' }}
-                buttonStyle={{
-                  backgroundColor: 'rgba(111, 202, 186, 1)',
-                  borderRadius: 5,
-                }}
-                titleStyle={{ fontWeight: 'bold', fontSize: 23 }}
-                containerStyle={{
-                  marginHorizontal: 50,
-                  height: 50,
-                  width: 200,
-                  marginVertical: 10,
-                }}
-                onPress={() => console.log('aye')}
-              />
-              <Button
-                title="Secondary"
-                buttonStyle={{ backgroundColor: 'rgba(127, 220, 103, 1)' }}
-                containerStyle={{
-                  height: 40,
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-                titleStyle={{
-                  color: 'white',
-                  marginHorizontal: 20,
-                }}
-              />
-              <Button
-                title="Warning"
-                containerStyle={{
-                  height: 40,
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-                buttonStyle={{ backgroundColor: 'rgba(255, 193, 7, 1)' }}
-                titleStyle={{
-                  color: 'white',
-                  marginHorizontal: 20,
-                }}
-              />
-              <Button
-                title="Danger"
-                buttonStyle={{ backgroundColor: 'rgba(214, 61, 57, 1)' }}
-                containerStyle={{
-                  height: 40,
-                  width: 200,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-                titleStyle={{ color: 'white', marginHorizontal: 20 }}
-              />
-              <Button
-                title="Request an agent"
-                titleStyle={{ fontWeight: '500' }}
-                buttonStyle={{
-                  backgroundColor: 'rgba(199, 43, 98, 1)',
-                  borderColor: 'transparent',
-                  borderWidth: 0,
-                }}
-                containerStyle={{
-                  width: 200,
-                  height: 45,
-                  marginHorizontal: 50,
-                  marginVertical: 10,
-                }}
-              />
+            <Stack dir="row" align="center" spacing={4}>
+              <Button size="sm">Small</Button>
+              <Button size="md">Medium</Button>
+              <Button size="lg">Large</Button>
+            </Stack>
+            <View>
+              <Stack spacing={8}>
+                <Button>Primary</Button>
+                <Button color="secondary">Secondary</Button>
+                <Button color="warning">Warning</Button>
+                <Button color="error">Error</Button>
+                <Button type="outline">Outline</Button>
+                <Button type="clear">Clear</Button>
+                <Button uppercase>Uppercase</Button>
+                <Button radius="xl">Rounded</Button>
+                <Button loading>Loading</Button>
+                <Button disabled>Disabled</Button>
+              </Stack>
             </View>
 
             <SubHeader title="Rounded Buttons" />
             <View style={styles.buttonsContainer}>
               <Button
                 title="LOG IN"
+                radius={30}
                 buttonStyle={{
                   backgroundColor: 'black',
                   borderWidth: 2,
                   borderColor: 'white',
-                  borderRadius: 30,
                 }}
                 containerStyle={{
                   width: 200,
@@ -153,8 +70,8 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                   backgroundColor: 'rgba(90, 154, 230, 1)',
                   borderColor: 'transparent',
                   borderWidth: 0,
-                  borderRadius: 30,
                 }}
+                radius={30}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,
@@ -176,8 +93,8 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                   backgroundColor: 'rgba(199, 43, 98, 1)',
                   borderColor: 'transparent',
                   borderWidth: 0,
-                  borderRadius: 30,
                 }}
+                radius={30}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,
