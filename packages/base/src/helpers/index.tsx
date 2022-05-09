@@ -20,14 +20,22 @@ export type RneFunctionComponent<T> = React.FunctionComponent<
   }
 >;
 
-export const defaultTheme = {
+export interface ThemeSpacing {
+  xs: number;
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
+}
+
+export const defaultTheme: Theme = {
   colors: lightColors,
-  spacing: { xs: 2, sm: 4, md: 8, lg: 12, xl: 24, xxl: 36, none: 0 },
+  spacing: { xs: 2, sm: 4, md: 8, lg: 12, xl: 24 },
 };
 
 export type Theme = {
   colors: Colors;
-  spacing: Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'none', number>;
+  spacing: ThemeSpacing;
 };
 
 export const androidRipple = (
@@ -66,3 +74,5 @@ export {
 
 export { default as BackgroundImage } from './BackgroundImage';
 export { default as fonts } from './fonts';
+
+export { makeStyles } from './makeStyles';

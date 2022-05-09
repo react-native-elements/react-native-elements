@@ -23,9 +23,11 @@ import {
   ThemeConsumer,
   ThemeContext,
   ThemeProvider,
+  useTheme,
+  useThemeMode,
 } from './ThemeProvider';
 import withTheme from './withTheme';
-import { makeStyles, useTheme, useThemeMode } from './makeStyles';
+import { makeStyles } from './makeStyles';
 import type { Theme, FullTheme, ThemeMode } from './theme';
 import type { ComponentTheme } from './theme.component';
 
