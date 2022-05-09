@@ -5,8 +5,8 @@ title: Button
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import { Button } from "react-native-elements";
 import Usage from "../component_usage/Button.mdx";
+import Play from "../playground/Button/button.playground";
 
 Buttons are touchable elements used to interact with the screen and to perform and operation.
 They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
@@ -16,37 +16,21 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 <Button title="Solid Button" />
 ```
 
+## Import
+
+```tsx
+import { Button } from "@rneui/themed";
+```
+
 ## Usage
 
-<Usage />
+### Variants
 
-<Tabs
-  defaultValue="Solid"
-  values={[
-    {
-      label: "Solid",
-      value: "Solid",
-    },
-    {
-      label: "Clear",
-      value: "Clear",
-    },
-    {
-      label: "Outline",
-      value: "Outline",
-    },
-  ]}
->
-  <TabItem value="Solid">
-    <Button title="Solid Button" />
-  </TabItem>
-  <TabItem value="Clear">
-    <Button title="Clear Button" type="clear" />
-  </TabItem>
-  <TabItem value="Outline">
-    <Button title="Outline Button" type="outline" />
-  </TabItem>
-</Tabs>
+```tsx live
+<Button title="Solid" />
+<Button title="Outline" type="outline" />
+<Button title="Clear" type="clear" />
+```
 
 ### Button with icon
 
@@ -65,6 +49,8 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 ```jsx live
 <Button title="Solid" type="solid" loading />
 ```
+
+<Usage />
 
 ## Props
 
@@ -98,3 +84,7 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 | `type`                | `solid` or `clear` or `outline`                                        | `solid` | Type of button.                                                                                                                                          |
 
 </div>
+
+## Playground
+
+<Play />

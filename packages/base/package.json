@@ -44,18 +44,18 @@
   },
   "homepage": "https://reactnativeelements.com/",
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.6",
-    "color": "^3.1.2",
+    "@types/react-native-vector-icons": "^6.4.10",
+    "color": "^3.2.1",
     "deepmerge": "^4.2.2",
     "hoist-non-react-statics": "^3.3.2",
     "react-native-ratings": "^8.1.0",
     "react-native-size-matters": "^0.4.0"
   },
   "devDependencies": {
-    "@types/color": "^3.0.1",
+    "@types/color": "^3.0.3",
     "@types/hoist-non-react-statics": "^3.3.1",
-    "metro-react-native-babel-preset": "^0.69.1",
-    "react-native-safe-area-context": "^3.1.9",
+    "metro-react-native-babel-preset": "^0.70.2",
+    "react-native-safe-area-context": "^3.4.1",
     "react-native-vector-icons": "^7.1.0",
     "react-test-renderer": "^16.13.1",
     "utility-types": "^3.10.0"
