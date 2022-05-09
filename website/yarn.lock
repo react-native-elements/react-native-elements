@@ -2675,9 +2675,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base-edge@github:react-native-elements/react-native-elements#base":
-  version: 4.0.0-rc.2
-  resolution: "@rneui/base-edge@https://github.com/react-native-elements/react-native-elements.git#commit=c3deae9eea25077b3f6b73eda9b4a188114ffe42"
+"@rneui/base@npm:^4.0.0-rc.3":
+  version: 4.0.0-rc.3
+  resolution: "@rneui/base@npm:4.0.0-rc.3"
   dependencies:
     "@types/react-native-vector-icons": ^6.4.10
     color: ^3.2.1
@@ -2688,16 +2688,7 @@ __metadata:
   peerDependencies:
     react-native-safe-area-context: ^3.1.9
     react-native-vector-icons: ">7.0.0"
-  checksum: d9ba9ac3420d6e396f1287b1b997dc420e9a8c4e119f1806ad32d0771241f1bfe33484747610783bc05c26337014a9704f6d1e7858a0cff85dee2b47a9f067de
-  languageName: node
-  linkType: hard
-
-"@rneui/base@npm:edge":
-  version: 0.0.0-edge.2
-  resolution: "@rneui/base@npm:0.0.0-edge.2"
-  dependencies:
-    "@rneui/base-edge": "github:react-native-elements/react-native-elements#base"
-  checksum: 2877d2f279078bfb41c6c5c55c92d7ae85e9b0b581fb66c2f7b591b025b0ce66951f60a1e7e2ec15b7f5bbad3479ebad6b2137367a3c6bf7f2f01ce83426f5c5
+  checksum: 988f554c40689946d721ad3fe8145ab66e406c893dca1df6561358c79020a1fc02a43373828de745ed4cfca4713c4a2f908fa92833f45195f89976f9fd11fd90
   languageName: node
   linkType: hard
 
@@ -12013,7 +12004,7 @@ __metadata:
     "@docusaurus/preset-classic": ^2.0.0-beta.18
     "@docusaurus/theme-live-codeblock": ^2.0.0-beta.18
     "@docusaurus/types": ^2.0.0-beta.18
-    "@rneui/base": edge
+    "@rneui/base": ^4.0.0-rc.3
     "@rneui/layout": ^0.0.0-alpha.3
     "@rneui/themed": latest
     "@tsconfig/docusaurus": ^1.0.4

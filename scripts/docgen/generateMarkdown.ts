@@ -103,7 +103,7 @@ export class Markdown implements ComponentDoc {
 
     const usagePath = `component_usage/${this.displayName}.mdx`;
     const usageFileExists = fs.existsSync(path.join(docsPath, usagePath));
-    const playgroundPath = `playground/${this.displayName}/${id}.playground.tsx`;
+    const playgroundPath = `../playground/${this.displayName}/${id}.playground.tsx`;
     const playgroundExists = fs.existsSync(path.join(docsPath, playgroundPath));
     return {
       id,
