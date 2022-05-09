@@ -175,7 +175,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   loadingStyle,
   loadingProps: passedLoadingProps,
   size = 'md',
-  radius = 'sm',
+  radius = 'xs',
   uppercase = false,
   color: buttonColor = 'primary',
   title = '',
@@ -224,12 +224,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
     () =>
       StyleSheet.flatten([
         {
-          color:
-            type === 'solid'
-              ? color((buttonStyle as ViewStyle)?.backgroundColor).isDark()
-                ? 'white'
-                : 'black'
-              : theme?.colors?.primary,
+          color: type === 'solid' ? 'white' : theme?.colors?.primary,
         },
         uppercase && { textTransform: 'uppercase' },
         styles.title,
@@ -240,7 +235,6 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
         disabled && disabledTitleStyle,
       ]),
     [
-      buttonStyle,
       disabled,
       disabledTitleStyle,
       passedTitleStyle,

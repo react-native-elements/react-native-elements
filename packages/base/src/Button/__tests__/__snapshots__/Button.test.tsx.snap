@@ -8,8 +8,10 @@ exports[`Button Component clear should display clear button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -46,11 +48,12 @@ exports[`Button Component clear should display clear button 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -80,8 +83,10 @@ exports[`Button Component clear should display disabled clear button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -118,11 +123,12 @@ exports[`Button Component clear should display disabled clear button 1`] = `
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -152,8 +158,10 @@ exports[`Button Component clear should display raised clear button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         Object {
@@ -200,11 +208,12 @@ exports[`Button Component clear should display raised clear button 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -234,8 +243,10 @@ exports[`Button Component outline should display disabled outline button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -272,11 +283,12 @@ exports[`Button Component outline should display disabled outline button 1`] = `
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -306,8 +318,10 @@ exports[`Button Component outline should display outline button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -344,11 +358,12 @@ exports[`Button Component outline should display outline button 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -378,8 +393,10 @@ exports[`Button Component outline should display raised outline button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         Object {
@@ -426,11 +443,12 @@ exports[`Button Component outline should display raised outline button 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -460,8 +478,10 @@ exports[`Button Component solid should display disabled solid button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -498,11 +518,12 @@ exports[`Button Component solid should display disabled solid button 1`] = `
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -532,8 +553,10 @@ exports[`Button Component solid should display raised solid button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         Object {
@@ -580,11 +603,12 @@ exports[`Button Component solid should display raised solid button 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
@@ -614,8 +638,10 @@ exports[`Button Component solid should display solid button 1`] = `
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -652,11 +678,12 @@ exports[`Button Component solid should display solid button 1`] = `
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 12,
           }
         }
       >
