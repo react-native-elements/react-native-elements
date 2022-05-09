@@ -160,7 +160,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
           <View
             key={i}
             style={StyleSheet.flatten([
-              styles.button,
+              !vertical && styles.button,
               vertical && styles.verticalComponent,
               i !== buttons.length - 1 &&
                 (vertical
