@@ -17,6 +17,9 @@
   /* --ifm-hero-background-color: #dbdddf; */
 
   --ifm-navbar-background-color: var(--ifm-hero-background-color);
+
+  --ifm-tabs-padding-vertical: 0.2rem;
+  --ifm-tabs-padding-horizontal: 0.8rem;
 }
 
 :root[data-theme='dark'] {
@@ -469,14 +472,15 @@ nav.menu {
 
 /* All sidebar nav sections  */
 .menu > .menu__list > .menu__list-item {
-  margin-bottom: 16px;
+  margin-top: 16px;
+  /* margin-bottom: 8px; */
 }
 
 /* Sidebar nav header  */
 a.menu__link.menu__link--sublist.menu__link {
   margin-bottom: 2px;
   color: var(--ifm-color-gray-600) !important;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -490,16 +494,15 @@ a.menu__link.menu__link--sublist.menu__link {
   margin-top: 0;
 }
 .menu > ul.menu__list ul.menu__list {
-  /* border-left: 1px solid var(--ifm-color-primary); */
   padding-left: var(--ifm-menu-link-padding-horizontal);
-  /* padding-left: 0.8rem; */
   margin-left: 0;
 }
 .menu > ul.menu__list ul.menu__list .menu__link {
   border-radius: 0;
   font-size: 0.8rem;
-  padding-left: 0rem;
+  padding-left: 0.4rem;
   font-weight: 500;
+  margin-left: 0.4rem;
 }
 .menu > ul.menu__list > li > ul.menu__list {
   border-left: 0px none;
@@ -609,6 +612,7 @@ div[class^='sidebar_']
   border-right: 2px solid var(--ifm-color-primary);
   padding-right: calc(var(--ifm-menu-link-padding-horizontal) - 2px);
   color: var(--ifm-color-primary);
+  background-color: #60ade831;
 }
 div[class^='sidebar_']
   .menu__link.menu__link--active:not(.menu__link--sublist)

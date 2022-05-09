@@ -3,16 +3,18 @@ id: troubleshooting
 title: Troubleshooting
 ---
 
+import Admonition from '@theme/Admonition';
+
 Although we try to make the experience of using React Native Elements
 hassle-free, time to time you may encounter some problems along the way.
 
 On this page you can find solutions to commonly encountered issues.
 
-:::note
-
-Invariant Violation: Element type is invalid
-
-:::
+<div className="admonition admonition-danger alert alert--danger">
+  <div className="admonition-content">
+    Invariant Violation: Element type is invalid
+  </div>
+</div>
 
 This error occurs when trying to import a component that doesn't exist. This
 usually happens for a few reasons:
@@ -54,11 +56,11 @@ To fix this, follow these steps:
 
 ---
 
-:::note
-
-fontFamily (font-name) is not a system font
-
-:::
+<div className="admonition admonition-danger alert alert--danger">
+  <div className="admonition-content">
+    fontFamily (font-name) is not a system font
+  </div>
+</div>
 
 This is a general error in react native, where you in your code, or a package
 you are using, is trying to use a font that is not bundled with the platform or
@@ -70,8 +72,6 @@ the error comes from React Native Elements looking for
 
 They're a couple ways to solve this depending on your setup.
 
-- [You incorrectly spelt a component](#you-incorrectly-spelt-a-component)
-- [Importing a component from the wrong version](#importing-a-component-from-the-wrong-version)
 - [Using `react-native-init`](#using-react-native-init)
 - [Using an Expo app (create-react-native-app or Expo XDE)](#using-an-expo-app-create-react-native-app-or-expo-xde)
 - [Using a detached `create-react-native-app` app](#using-a-detached-create-react-native-app-app)
