@@ -16,18 +16,18 @@ export type StringOmit<K extends string> = K | Omit<string, K>;
 
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
-    theme?: {
-      colors: Colors;
-    };
+    theme?: Theme;
   }
 >;
 
 export const defaultTheme = {
   colors: lightColors,
+  spacing: { xs: 2, sm: 4, md: 8, lg: 12, xl: 24, xxl: 36, none: 0 },
 };
 
 export type Theme = {
   colors: Colors;
+  spacing: Record<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'none', number>;
 };
 
 export const androidRipple = (

@@ -1,5 +1,5 @@
 import Color from 'color';
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import {
   ActivityIndicator,
   ActivityIndicatorProps,
@@ -110,18 +110,13 @@ export interface ButtonProps
   /** Radius of button
    * @type string | number | sm | md | lg | none
    */
-  radius?: StringOmit<'sm' | 'md' | 'lg' | 'none'> | number;
+  radius?: StringOmit<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'none'>;
 
   /** Button size */
   size?: 'sm' | 'md' | 'lg';
-}
 
-const SIZE = {
-  sm: 4,
-  md: 8,
-  lg: 12,
-  none: 0,
-};
+  color?: 'primary' | 'secondary' | 'success' | 'error' | 'warning';
+}
 
 /**
  * Buttons are touchable elements used to interact with the screen and to perform and operation.
@@ -134,9 +129,30 @@ const SIZE = {
  *
  * ### Variants
  * ```tsx live
+ *  <Stack dir="row" align="center" spacing={4}>
  * <Button title="Solid" />
  * <Button title="Outline" type="outline" />
  * <Button title="Clear" type="clear" />
+ * </Stack>
+ * ```
+ * ### Size
+ *
+ * ```tsx live
+ *  <Stack dir="row" align="center" spacing={4}>
+ *            <Button size="sm">Small</Button>
+ *            <Button size="md">Medium</Button>
+ *             <Button size="lg">Large</Button>
+ *  </Stack>
+ * ```
+ * ### Colors
+ *
+ * ```tsx live
+ *  <Stack dir="row" align="center" spacing={4}>
+ *        <Button>Primary</Button>
+ *        <Button color="secondary">Secondary</Button>
+ *        <Button color="warning">Warning</Button>
+          <Button color="error">Error</Button>
+ *  </Stack>
  * ```
  * ### Button with icon
  * ```tsx live
@@ -158,9 +174,10 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   loading = false,
   loadingStyle,
   loadingProps: passedLoadingProps,
-  // size = 'md',
+  size = 'md',
   radius = 'sm',
-  uppercase = 'false',
+  uppercase = false,
+  color: buttonColor = 'primary',
   title = '',
   titleProps,
   titleStyle: passedTitleStyle,
@@ -203,24 +220,42 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
       default: TouchableOpacity,
     });
 
-  const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
-    {
-      color: type === 'solid' ? 'white' : theme?.colors?.primary,
-    },
-    uppercase && { textTransform: 'uppercase' },
-    styles.title,
-    passedTitleStyle,
-    disabled && {
-      color: color(theme?.colors?.disabled).darken(0.3).string(),
-    },
-    disabled && disabledTitleStyle,
-  ]);
+  const titleStyle: StyleProp<TextStyle> = useMemo(
+    () =>
+      StyleSheet.flatten([
+        {
+          color:
+            type === 'solid'
+              ? color((buttonStyle as ViewStyle)?.backgroundColor).isDark()
+                ? 'white'
+                : 'black'
+              : theme?.colors?.primary,
+        },
+        uppercase && { textTransform: 'uppercase' },
+        styles.title,
+        passedTitleStyle,
+        disabled && {
+          color: color(theme?.colors?.disabled).darken(0.3).string(),
+        },
+        disabled && disabledTitleStyle,
+      ]),
+    [
+      buttonStyle,
+      disabled,
+      disabledTitleStyle,
+      passedTitleStyle,
+      theme?.colors?.disabled,
+      theme?.colors?.primary,
+      type,
+      uppercase,
+    ]
+  );
 
   const background =
     Platform.OS === 'android' && Platform.Version >= 21
       ? TouchableNativeFeedback.Ripple(
           Color(titleStyle?.color?.toString()).alpha(0.32).rgb().string(),
-          true
+          false
         )
       : undefined;
 
@@ -234,10 +269,16 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
     busy: !!loading,
   };
 
+  const borderRadius =
+    Number(
+      theme.spacing[radius as keyof typeof theme.spacing] ?? (radius || '0')
+    ) || 0;
+
   return (
     <View
       style={[
         styles.container,
+        { borderRadius },
         containerStyle,
         raised && !disabled && type !== 'clear' && styles.raised,
       ]}
@@ -258,13 +299,17 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
           style={StyleSheet.flatten([
             styles.button,
             {
-              borderRadius: SIZE[radius as keyof typeof SIZE] ?? (radius || 0),
+              padding: theme.spacing[size],
+              borderRadius,
               // flex direction based on iconPosition
               // if iconRight is true, default to right
               flexDirection:
                 positionStyle[iconRight ? 'right' : iconPosition] || 'row',
               backgroundColor:
-                type === 'solid' ? theme?.colors?.primary : 'transparent',
+                type === 'solid'
+                  ? theme.colors[buttonColor as PropertyKey] ||
+                    theme?.colors?.primary
+                  : 'transparent',
               borderColor: theme?.colors?.primary,
               borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
             },
@@ -302,16 +347,16 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
             })}
           {/* Title for Button, hide while loading */}
           {!loading &&
-            React.Children.toArray(children).map((Child, index) => (
+            React.Children.toArray(children).map((child, index) => (
               <React.Fragment key={index}>
-                {typeof Child === 'string'
-                  ? renderNode(Text, Child, {
+                {typeof child === 'string'
+                  ? renderNode(Text, child, {
                       style: {
                         ...titleStyle,
                       },
                       ...titleProps,
                     })
-                  : Child}
+                  : child}
               </React.Fragment>
             ))}
         </ViewComponent>
@@ -325,11 +370,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 8,
+    padding: defaultTheme.spacing.md,
+    paddingHorizontal: defaultTheme.spacing.lg,
   },
   container: {
     overflow: 'hidden',
-    borderRadius: 3,
   },
   title: {
     fontSize: 16,

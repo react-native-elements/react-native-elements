@@ -3,10 +3,25 @@ id: button
 title: Button
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import Usage from "../component_usage/Button.mdx";
-import Play from "../playground/Button/button.playground";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Usage from '../component_usage/Button.mdx';
+import Play from '../playground/Button/button.playground';
+
+<style type="text/css">{`
+          @font-face {
+            font-family: 'MaterialIcons';
+            src: url(${require('react-native-vector-icons/Fonts/MaterialIcons.ttf')}) format('truetype');
+          }
+          @font-face {
+            font-family: 'FontAwesome';
+            src: url(${require('react-native-vector-icons/Fonts/FontAwesome.ttf')}) format('truetype');
+          }
+          @font-face {
+            font-family: 'MaterialCommunityIcons';
+            src: url(${require('react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf')}) format('truetype');
+          }
+`}</style>
 
 Buttons are touchable elements used to interact with the screen and to perform and operation.
 They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
@@ -19,7 +34,7 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 ## Import
 
 ```tsx
-import { Button } from "@rneui/themed";
+import { Button } from '@rneui/themed';
 ```
 
 ## Usage
@@ -27,9 +42,32 @@ import { Button } from "@rneui/themed";
 ### Variants
 
 ```tsx live
- <Button title="Solid" />
- <Button title="Outline" type="outline" />
- <Button title="Clear" type="clear" />
+<Stack dir="row" align="center" spacing={4}>
+  <Button title="Solid" />
+  <Button title="Outline" type="outline" />
+  <Button title="Clear" type="clear" />
+</Stack>
+```
+
+### Size
+
+```tsx live
+<Stack dir="row" align="center" spacing={4}>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</Stack>
+```
+
+### Colors
+
+```tsx live
+<Stack dir="row" align="center" spacing={4}>
+  <Button>Primary</Button>
+  <Button color="secondary">Secondary</Button>
+  <Button color="warning">Warning</Button>
+  <Button color="error">Error</Button>
+</Stack>
 ```
 
 ### Button with icon
@@ -65,6 +103,7 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 | `TouchableComponent`  | typeof Component                                                       |         | Component for user interaction.                                                                                                                          |
 | `ViewComponent`       | React Component                                                        |         | Component for container.                                                                                                                                 |
 | `buttonStyle`         | View Style                                                             |         | Add additional styling for button component.                                                                                                             |
+| `color`               | `primary` or `success` or `warning` or `error` or `secondary`          |         |                                                                                                                                                          |
 | `containerStyle`      | View Style                                                             |         | Styling for Component container.                                                                                                                         |
 | `disabled`            | boolean                                                                | `false` | Disables user interaction.                                                                                                                               |
 | `disabledStyle`       | View Style                                                             |         | Style of the button when disabled.                                                                                                                       |
@@ -79,7 +118,7 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 | `loadingStyle`        | View Style                                                             |         | Add additional styling for loading component.                                                                                                            |
 | `radius`              | `string` or `number` or `sm` or `md` or `lg` or `none`                 | `sm`    | Radius of button                                                                                                                                         |
 | `raised`              | boolean                                                                | `false` | Add raised button styling (optional). Has no effect if `type="clear"`.                                                                                   |
-| `size`                | `sm` or `md` or `lg`                                                   |         | Button size                                                                                                                                              |
+| `size`                | `sm` or `md` or `lg`                                                   | `md`    | Button size                                                                                                                                              |
 | `title`               | `string` or `ReactElement<{}, string` or `JSXElementConstructor<any>>` |         | Add button title.                                                                                                                                        |
 | `titleProps`          | TextProps                                                              |         | Add additional props for Text component.                                                                                                                 |
 | `titleStyle`          | Text Style                                                             |         | Add additional styling for title component.                                                                                                              |
