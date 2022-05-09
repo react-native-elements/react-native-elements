@@ -13,6 +13,8 @@ import { SiExpo, SiReact } from 'react-icons/si';
 
 ### Stable
 
+Stable version of React Native Elements available on npm
+
 <Tabs
 groupId='pkg'
 values={[
@@ -46,6 +48,12 @@ values={[
 <TabItem value="npm">
 
 ```bash
+npm install @rneui/base@edge @rneui/themed@edge
+```
+
+If you are facing issue while installing from `edge` dist-tag, you can install directly from Github
+
+```bash
 # @rneui/base
 npm install react-native-elements/react-native-elements#base
 
@@ -55,6 +63,12 @@ npm install react-native-elements/react-native-elements#themed
 
 </TabItem>
 <TabItem value="yarn">
+
+```bash
+yarn add @rneui/base@edge @rneui/themed@edge
+```
+
+If you are facing issue while installing from `edge` dist-tag, you can install directly from Github
 
 ```bash
 # @rneui/base
@@ -141,6 +155,7 @@ your project you can skip this step. Otherwise run the following command:
 
 <Tabs
 defaultValue="npm"
+groupId='pkg'
 values={[
 { label: 'NPM', value: 'npm', },
 { label: 'Yarn', value: 'yarn', },
