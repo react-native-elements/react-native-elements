@@ -53,6 +53,40 @@ const config = {
     ],
   ],
   themeConfig: {
+    image: '/img/website/seo.png',
+    metadata: [
+      { name: 'title', content: 'React Native Elements' },
+      {
+        name: 'description',
+        content:
+          'React Native Elements | Cross-Platform React Native UI Toolkit | backed by community',
+      },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://reactnativeelements.com/' },
+      { name: 'og:title', content: 'React Native Elements' },
+      {
+        name: 'og:description',
+        content:
+          'React Native Elements | Cross-Platform React Native UI Toolkit | backed by community',
+      },
+      {
+        name: 'og:image',
+        content: 'https://reactnativeelements.com/img/website/seo.png',
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:url', content: 'https://reactnativeelements.com/' },
+      { name: 'twitter:title', content: 'React Native Elements' },
+      {
+        name: 'twitter:description',
+        content:
+          'React Native Elements | Cross-Platform React Native UI Toolkit | backed by community',
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://reactnativeelements.com/img/website/seo.png',
+      },
+    ],
+
     liveCodeBlock: {
       playgroundPosition: 'top',
     },
@@ -68,18 +102,6 @@ const config = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
-      // switchConfig: {
-      //   darkIcon: '🌙',
-      //   darkIconStyle: {
-      //     marginLeft: '2px',
-      //   },
-      //   // Unicode icons such as '\u2600' will work
-      //   // Unicode with 5 chars require brackets: '\u{1F602}'
-      //   lightIcon: '🌞',
-      //   lightIconStyle: {
-      //     marginLeft: '1px',
-      //   },
-      // },
     },
     navbar: {
       title: 'React Native Elements',
