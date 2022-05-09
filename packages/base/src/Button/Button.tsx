@@ -115,7 +115,7 @@ export interface ButtonProps
   /** Button size */
   size?: 'sm' | 'md' | 'lg';
 
-  color?: 'primary' | 'secondary' | 'success' | 'error' | 'warning';
+  color?: StringOmit<'primary' | 'secondary' | 'success' | 'error' | 'warning'>;
 }
 
 /**
@@ -302,6 +302,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
               backgroundColor:
                 type === 'solid'
                   ? theme.colors[buttonColor as PropertyKey] ||
+                    buttonColor ||
                     theme?.colors?.primary
                   : 'transparent',
               borderColor: theme?.colors?.primary,

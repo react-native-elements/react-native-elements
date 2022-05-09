@@ -1,23 +1,23 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { ButtonProps, Button } from '../../Button';
+import { defaultTheme, RneFunctionComponent } from '../../helpers';
 import { IconProps, Icon } from '../../Icon';
 
-export const PricingButton = (
-  props: ButtonProps & {
-    color?: string;
+export const PricingButton: RneFunctionComponent<
+  ButtonProps & {
     onButtonPress?: () => void;
   }
-) => {
-  const {
-    title,
-    buttonStyle,
-    color,
-    titleStyle,
-    onButtonPress,
-    icon,
-    ...buttonProps
-  } = props;
+> = ({
+  title,
+  buttonStyle,
+  color,
+  titleStyle,
+  onButtonPress,
+  icon,
+  theme = defaultTheme,
+  ...buttonProps
+}) => {
   return (
     <Button
       testID="RNE__PricingButton"
@@ -25,7 +25,7 @@ export const PricingButton = (
       buttonStyle={StyleSheet.flatten([
         styles.button,
         buttonStyle,
-        { backgroundColor: color },
+        { backgroundColor: theme.colors[color as PropertyKey] || color },
       ])}
       titleStyle={titleStyle}
       onPress={onButtonPress}
