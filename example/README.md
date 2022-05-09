@@ -2,11 +2,11 @@
 
 # React Native Elements App
 
-**[Mobile App](https://expo.io/@monte9/react-native-elements-app)**
+**[Mobile App](https://expo.dev/@rne_org/react-native-elements)**
 
-This is the Demo app for [React Native Elements](https://github.com/react-native-elements/react-native-elements) built with [Expo](https://expo.io/). The purpose of this app is to demonstrate the usage of the various UI components that React Native Elements provides out of the box.
+This is the Demo app for [React Native Elements](https://expo.dev/@rne_org/react-native-elements) built with [Expo](https://expo.io/). The purpose of this app is to demonstrate the usage of the various UI components that React Native Elements provides out of the box.
 
-This app also works on the `web` platform using [React Native Web](https://github.com/necolas/react-native-web). You can check out the [live website here](https://react-native-elements.github.io/react-native-elements-app). If you are looking to build a React Native mobile app which can reuse the code to deploy it on the web, this is the right place to begin. We decided to use [Expo](https://expo.io/), which reduces the effort required to build an app once and deploy it anywhere.
+This app also works on the `web` platform using [React Native Web](https://github.com/necolas/react-native-web). If you are looking to build a React Native mobile app which can reuse the code to deploy it on the web, this is the right place to begin. We decided to use [Expo](https://expo.io/), which reduces the effort required to build an app once and deploy it anywhere.
 
 ## Getting Started
 
@@ -14,53 +14,55 @@ This app also works on the `web` platform using [React Native Web](https://githu
 
 1. Install [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/)
 
-```
-[sudo] npm install -g expo-cli
-```
+   ```bash
+   [sudo] npm install -g expo-cli
+   ```
 
-_If permissions errors then please use `--unsafe-perm=true` flag too [npm/npm#16766](https://github.com/npm/npm/issues/16766)_
+   _If permissions errors then please use `--unsafe-perm=true` flag too [npm/npm#16766](https://github.com/npm/npm/issues/16766)_
 
 2. Clone the project
 
-```
-git clone https://github.com/react-native-elements/react-native-elements-app.git
-```
+   ```bash
+   git clone https://github.com/react-native-elements/react-native-elements.git
+   ```
 
 3. Install dependencies
 
-```
-cd react-native-elements-app
+   ```bash
+   cd react-native-elements
 
-# Using yarn
-yarn install
+   # Using yarn
+   yarn install
 
-# Using npm
-npm install
-```
+   # Using npm
+   npm install
+
+   cd example
+   ```
 
 4. Run the cross-platform app (uses [Expo](https://expo.io/learn))
 
-```
-# Using yarn
-yarn start
+   ```bash
+   # Using yarn
+   yarn start
 
-# Using npm
-npm start
-```
+   # Using npm
+   npm start
+   ```
 
 ### Deploy Web App
 
 First you must set correct `publicPath` in `app.web-build.json`. Next you must build the web app using:
 
-```
-yarn build:web
+```bash
+yarn web
 ```
 
 Once you have built it, you can see generated `web-build` folder.
 
 This folder can be hosted as static website. For example, you can publish on [Github Pages](https://pages.github.com/) via [gh-pages](https://github.com/tschaub/gh-pages) cli.
 
-```
+```bash
 yarn deploy
 ```
 
@@ -70,7 +72,7 @@ yarn deploy
 
 The mobile app is built using Expo. If you would like to eject, you can run the following command:
 
-```
+```bash
 # Using Yarn
 yarn eject
 
@@ -94,7 +96,7 @@ This app is built using [React Native Elements](https://github.com/react-native-
 
 You can install `react-native-elements` in your app using:
 
-```
+```bash
 # Using yarn
 yarn add react-native-elements
 

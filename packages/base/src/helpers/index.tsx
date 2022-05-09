@@ -14,9 +14,7 @@ const isIOS = Platform.OS === 'ios';
 
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
-    theme?: {
-      colors: Colors;
-    };
+    theme?: Theme;
     children?: React.ReactNode | undefined;
   }
 >;
@@ -65,3 +63,5 @@ export {
 
 export { default as BackgroundImage } from './BackgroundImage';
 export { default as fonts } from './fonts';
+
+export { makeStyles } from './makeStyles';

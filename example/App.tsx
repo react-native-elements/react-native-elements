@@ -4,6 +4,7 @@ import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
 import vectorFonts from './src/helpers/vector-fonts';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default () => {
   const [isReady, setIsReady] = useState(false);
@@ -35,48 +36,27 @@ export default () => {
 
   if (!isReady) {
     return (
-      <AppLoading
-        startAsync={loadAssetsAsync}
-        onFinish={() => {
-          setIsReady(true);
-        }}
-        onError={console.warn}
-      />
+      <SafeAreaProvider>
+        <AppLoading
+          startAsync={loadAssetsAsync}
+          onFinish={() => {
+            setIsReady(true);
+          }}
+          onError={console.warn}
+        />
+      </SafeAreaProvider>
     );
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <RootNavigator />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
+        <RootNavigator />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 };
 
 const theme = createTheme({
-  lightColors: {
-    primary: '#00aaff',
-    primaryLight: '#00bcd4',
-    primaryDark: '#0097a7',
-    secondary: '#ff5722',
-    secondaryLight: '#ff9800',
-    secondaryDark: '#f44336',
-  },
   mode: 'dark',
 });
-
-import '@rneui/themed';
-
-declare module '@rneui/themed' {
-  export interface Colors {
-    primaryLight: string;
-    primaryDark: string;
-    secondaryLight: string;
-    secondaryDark: string;
-  }
-  export interface Theme {
-    breakpoints: {
-      phone: number;
-      tablet: number;
-    };
-  }
-}

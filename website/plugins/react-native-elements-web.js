@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const nodeModules = path.join(__dirname, '..', 'node_modules');
 
@@ -9,6 +10,16 @@ const a = function () {
     configureWebpack(config, isServer, utils) {
       const { getJSLoader } = utils;
       return {
+        plugins: isServer
+          ? []
+          : [
+              new webpack.ProvidePlugin({
+                Buffer: ['buffer', 'Buffer'],
+              }),
+              new webpack.ProvidePlugin({
+                process: 'process/browser',
+              }),
+            ],
         module: {
           rules: [
             {
@@ -24,11 +35,13 @@ const a = function () {
               use: [
                 getJSLoader(isServer, {
                   plugins: ['@babel/plugin-proposal-class-properties'],
-                  presets: ['@babel/preset-react'],
+                  presets: ['@babel/preset-react', '@babel/preset-env'],
                 }),
               ],
               include: [
                 path.resolve(nodeModules, 'react-native-elements'),
+                path.resolve(nodeModules, '@rneui/themed'),
+                path.resolve(nodeModules, '@rneui/base'),
                 path.resolve(nodeModules, 'react-native-vector-icons'),
                 path.resolve(nodeModules, 'react-native-ratings'),
               ],
@@ -40,6 +53,14 @@ const a = function () {
             'react-native$': 'react-native-web',
             'react-native-linear-gradient': 'react-native-web-linear-gradient',
           },
+          fallback: isServer
+            ? {}
+            : {
+                path: require.resolve('path-browserify'),
+                os: require.resolve('os-browserify/browser'),
+                fs: false,
+                process: 'process/browser',
+              },
         },
       };
     },

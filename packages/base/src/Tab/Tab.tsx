@@ -66,34 +66,40 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
   >([]);
   const [tabContainerWidth, setTabContainerWidth] = React.useState(0);
 
-  const scrollHandler = React.useCallback(() => {
-    if (tabItemsPosition.current.length > value) {
-      let itemStartPosition =
-        value === 0 ? 0 : tabItemsPosition.current[value - 1].position;
-      let itemEndPosition = tabItemsPosition.current[value].position;
+  const scrollHandler = React.useCallback(
+    (currValue: number) => {
+      if (tabItemsPosition.current.length > currValue) {
+        let itemStartPosition =
+          currValue === 0
+            ? 0
+            : tabItemsPosition.current[currValue - 1].position;
+        let itemEndPosition = tabItemsPosition.current[currValue].position;
 
-      const scrollCurrentPosition = scrollViewPosition.current;
-      const tabContainerCurrentWidth = tabContainerWidth;
+        const scrollCurrentPosition = scrollViewPosition.current;
+        const tabContainerCurrentWidth = tabContainerWidth;
 
-      let scrollX = scrollCurrentPosition;
+        let scrollX = scrollCurrentPosition;
 
-      if (itemStartPosition < scrollCurrentPosition) {
-        scrollX += itemStartPosition - scrollCurrentPosition;
-      } else if (
-        scrollCurrentPosition + tabContainerCurrentWidth <
-        itemEndPosition
-      ) {
-        scrollX +=
-          itemEndPosition - (scrollCurrentPosition + tabContainerCurrentWidth);
+        if (itemStartPosition < scrollCurrentPosition) {
+          scrollX += itemStartPosition - scrollCurrentPosition;
+        } else if (
+          scrollCurrentPosition + tabContainerCurrentWidth <
+          itemEndPosition
+        ) {
+          scrollX +=
+            itemEndPosition -
+            (scrollCurrentPosition + tabContainerCurrentWidth);
+        }
+
+        scrollViewRef.current.scrollTo({
+          x: scrollX,
+          y: 0,
+          animated: true,
+        });
       }
-
-      scrollViewRef.current.scrollTo({
-        x: scrollX,
-        y: 0,
-        animated: true,
-      });
-    }
-  }, [tabContainerWidth, value]);
+    },
+    [tabContainerWidth]
+  );
 
   React.useEffect(() => {
     Animated.timing(animationRef.current, {
@@ -101,7 +107,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
       useNativeDriver: true,
       duration: 170,
     }).start();
-    scrollable && requestAnimationFrame(scrollHandler);
+    scrollable && requestAnimationFrame(() => scrollHandler(value));
   }, [animationRef, scrollHandler, value, scrollable]);
 
   const onScrollHandler = React.useCallback((event) => {
@@ -113,20 +119,20 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     if (countItems < 2 || !tabItemsPosition.current.length) {
       return 0;
     }
-    const inputRange = [...Array(countItems).keys()];
+    const inputRange = [...Array(tabItemsPosition.current.length).keys()];
     const outputRange = tabItemsPosition.current.map(
       ({ position }) => position
     );
-    if (inputRange.length !== outputRange.length) {
-      return 0;
-    }
     return animationRef.current.interpolate({
       inputRange,
       outputRange: [0, ...outputRange].slice(0, -1),
     });
   }, [animationRef, validChildren]);
 
-  const WIDTH = tabItemsPosition.current[value]?.width;
+  const WIDTH = React.useMemo(() => {
+    return tabItemsPosition.current[value]?.width;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value, tabItemsPosition.current.length]);
 
   return (
     <View
@@ -166,6 +172,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                       position: previousItemPosition + width,
                       width,
                     };
+                    // setWidths({ ...widths, [index]: width });
                   },
                   active: index === value,
                   variant,
