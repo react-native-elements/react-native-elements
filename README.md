@@ -6,16 +6,11 @@
 
 <div align="center">
 
-<!-- Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit -->
-![GitHub README Banner Light](https://user-images.githubusercontent.com/55053424/167305547-b87ea94a-34e7-4e74-9d3d-a95a82764035.png#gh-light-mode-only)
-
-![GitHub README Banner Dark](https://user-images.githubusercontent.com/55053424/167305573-9ee4d97c-d9b5-4644-a0c0-cd207f873364.png#gh-dark-mode-only)
+Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 
 </div>
 
 <br/>
-
-
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=0089E3"></a>

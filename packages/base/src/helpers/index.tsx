@@ -64,4 +64,4 @@ export {
 export { default as BackgroundImage } from './BackgroundImage';
 export { default as fonts } from './fonts';
 
-export { makeStyles } from './makeStyle';
+export { makeStyles } from './makeStyles';
