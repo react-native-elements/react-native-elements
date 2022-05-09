@@ -1,18 +1,24 @@
 ---
-title: Color
-sidebar_position: 1
+title: Theme Object
+sidebar_position: 2
 ---
 
 import { Palette } from './Color';
 
-### The Theme Object
+#### Colors
 
 By default, the theme object looks like this. You can add whatever values you
 want to the theme, and they will be merged with the default. By default the
 platform colors aren't used anywhere. These native colors are added for
 your convenience.
 
+##### Default Light Colors
+
 <Palette />
+
+##### Default Dark Colors
+
+<Palette dark />
 
 ```tsx
 interface theme {
@@ -71,12 +77,7 @@ const theme = createTheme({
 });
 
 const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      {/* ... */}
-      {/* ... */}
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={theme}>{/* ... */}</ThemeProvider>;
 };
 ```
 
