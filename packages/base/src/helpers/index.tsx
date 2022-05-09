@@ -19,12 +19,22 @@ export type RneFunctionComponent<T> = React.FunctionComponent<
   }
 >;
 
-export const defaultTheme = {
+export interface ThemeSpacing {
+  xs: number;
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
+}
+
+export const defaultTheme: Theme = {
   colors: lightColors,
+  spacing: { xl: 16, lg: 12, md: 8, sm: 4, xs: 2 },
 };
 
 export type Theme = {
   colors: Colors;
+  spacing: ThemeSpacing;
 };
 
 export const androidRipple = (

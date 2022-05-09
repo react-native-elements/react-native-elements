@@ -1,13 +1,13 @@
 import React from 'react';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { useTheme, makeStyles } from '../makeStyles';
+import { makeStyles } from '../makeStyles';
 import Text from '../../Text';
-import { ThemeProps } from '../ThemeProvider';
+import { ThemeProps, useTheme } from '../ThemeProvider';
 import { StyleSheet } from 'react-native';
 
 describe('useTheme()', () => {
   it('should return theme, updateTheme and replaceTheme', () => {
-    const Inner: React.FC<ThemeProps<{}>> = () => {
+    const Inner: React.FC<ThemeProps> = () => {
       return <Text testID="myComponent" />;
     };
     const Component = () => {

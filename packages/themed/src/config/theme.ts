@@ -3,6 +3,8 @@ import { ComponentTheme } from './theme.component';
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
+export type ThemeMode = 'light' | 'dark';
+
 export interface ThemeSpacing {
   xs: number;
   sm: number;
@@ -10,8 +12,6 @@ export interface ThemeSpacing {
   lg: number;
   xl: number;
 }
-
-export type ThemeMode = 'light' | 'dark';
 
 export interface Theme {
   mode: ThemeMode;
