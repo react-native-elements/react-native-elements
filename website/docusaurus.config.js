@@ -35,6 +35,11 @@ const config = {
         },
         docs: {
           path: 'docs',
+          versions: {
+            current: {
+              label: 'Bleeding Edge 🚧',
+            },
+          },
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.ts'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
