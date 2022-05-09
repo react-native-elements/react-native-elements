@@ -199,7 +199,7 @@ exports[`Speed Dial Component should render 1`] = `
                       "height": 40,
                       "justifyContent": "center",
                       "padding": 8,
-                      "paddingHorizontal": 12,
+                      "paddingHorizontal": 10,
                       "width": 40,
                     }
                   }
@@ -397,7 +397,7 @@ exports[`Speed Dial Component should render 1`] = `
                       "height": 40,
                       "justifyContent": "center",
                       "padding": 8,
-                      "paddingHorizontal": 12,
+                      "paddingHorizontal": 10,
                       "width": 40,
                     }
                   }
@@ -539,7 +539,7 @@ exports[`Speed Dial Component should render 1`] = `
                   "height": 56,
                   "justifyContent": "center",
                   "padding": 16,
-                  "paddingHorizontal": 12,
+                  "paddingHorizontal": 10,
                   "width": 56,
                 }
               }

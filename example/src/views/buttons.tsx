@@ -33,7 +33,7 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                 <Button type="outline">Outline</Button>
                 <Button type="clear">Clear</Button>
                 <Button uppercase>Uppercase</Button>
-                <Button radius="xxl">Rounded</Button>
+                <Button radius="xl">Rounded</Button>
                 <Button loading>Loading</Button>
                 <Button disabled>Disabled</Button>
               </Stack>
@@ -43,11 +43,11 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
             <View style={styles.buttonsContainer}>
               <Button
                 title="LOG IN"
+                radius={30}
                 buttonStyle={{
                   backgroundColor: 'black',
                   borderWidth: 2,
                   borderColor: 'white',
-                  borderRadius: 30,
                 }}
                 containerStyle={{
                   width: 200,
@@ -70,8 +70,8 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                   backgroundColor: 'rgba(90, 154, 230, 1)',
                   borderColor: 'transparent',
                   borderWidth: 0,
-                  borderRadius: 30,
                 }}
+                radius={30}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,
@@ -93,8 +93,8 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
                   backgroundColor: 'rgba(199, 43, 98, 1)',
                   borderColor: 'transparent',
                   borderWidth: 0,
-                  borderRadius: 30,
                 }}
+                radius={30}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,

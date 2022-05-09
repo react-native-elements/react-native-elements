@@ -22,6 +22,7 @@ import {
   Theme,
   StringOmit,
   RneFunctionComponent,
+  ThemeSpacing,
 } from '../helpers';
 import { IconNode, Icon } from '../Icon';
 import { TextProps } from '../Text';
@@ -108,13 +109,17 @@ export interface ButtonProps
   uppercase?: boolean;
 
   /** Radius of button
-   * @type string | number | sm | md | lg | none
+   * @type   number | sm | md | lg
    */
-  radius?: StringOmit<'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'none'>;
+  radius?: number | StringOmit<keyof ThemeSpacing>;
 
   /** Button size */
   size?: 'sm' | 'md' | 'lg';
 
+  /**
+   * Color of Button
+   * @type   string | primary | secondary | success | warning | error
+   */
   color?: StringOmit<'primary' | 'secondary' | 'success' | 'error' | 'warning'>;
 }
 
@@ -294,6 +299,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
             styles.button,
             {
               padding: theme.spacing[size],
+              paddingHorizontal: theme.spacing[size] + 2,
               borderRadius,
               // flex direction based on iconPosition
               // if iconRight is true, default to right
