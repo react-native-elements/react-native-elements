@@ -22,7 +22,7 @@
     },
     "userInterfaceStyle": "automatic",
     "android": {
-      "package": "com.reactnativeelements"
+      "package": "com.rneui"
     }
   }
 }

@@ -147,7 +147,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   return (
     <View
       style={StyleSheet.flatten([
-        styles.container,
+        !raised && styles.container,
         (reverse || raised) && styles.button,
         (reverse || raised) && buttonStyles,
         raised && styles.raised,
