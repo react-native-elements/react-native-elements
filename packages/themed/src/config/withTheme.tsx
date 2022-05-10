@@ -54,7 +54,11 @@ const ThemedComponent = (
                 : theme[themeKey];
 
             const newProps = {
-              theme: { colors: theme.colors, mode: theme.mode },
+              theme: {
+                colors: theme.colors,
+                mode: theme.mode,
+                spacing: theme.spacing,
+              },
               updateTheme,
               replaceTheme,
               ...deepmerge<FullTheme>(themedProps || {}, rest, {
