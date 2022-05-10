@@ -34,7 +34,7 @@ body:
   - type: textarea
     attributes:
       label: Steps To Reproduce
-      render: markdown
+      render: Markdown
       description: |
         We highly recommend that you re-create the bug on [Snack](https://snack.expo.io). If not, list the steps that a reviewer can take to reproduce the behaviour:
         1. Go to '...'
@@ -50,12 +50,13 @@ body:
   - type: textarea
     attributes:
       label: Your Environment
-      description: |
-        examples:
-          - **react-native-elements**: 3.4.0
-          - **react-native**: 0.64
-      render: markdown
-  - type: markdown
-    attributes:
+      description: Run `npx @rneui/envinfo` and paste the results.
       value: |
-        If you like React Native Elements, give us a star! ⭐ and sponsor us via [Github Sponsor](https://github.com/sponsors/react-native-elements) or [Open Collective](https://opencollective.com/react-native-elements/)
+        <details>
+        <summary>`npx @rneui/envinfo`</summary>
+
+              ```
+                Output from `npx @rneui/envinfo` goes here.
+              ```
+
+        </details>

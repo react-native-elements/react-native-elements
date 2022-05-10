@@ -1,9 +1,7 @@
 ---
 title: Google Summer of Code'21 Arpit Bhalla
 
-author: Arpit Bhalla
-
-authorURL: https://github.com/arpitBhalla
+authors: [arpitBhalla]
 ---
 
 <div align='center'>
