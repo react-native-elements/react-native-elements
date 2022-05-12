@@ -1,9 +1,7 @@
 import React from 'react';
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { ButtonProps, Button } from '../Button';
 import { RneFunctionComponent } from '../helpers';
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export interface DialogButtonProps extends ButtonProps {}
 
@@ -19,7 +17,6 @@ export const DialogButton: RneFunctionComponent<DialogButtonProps> = ({
       titleStyle={StyleSheet.flatten([styles.buttonTitle, titleStyle])}
       containerStyle={{
         width: 'auto',
-        marginRight: SCREEN_WIDTH * 0.01,
       }}
       testID="Dialog__Button"
       {...rest}
