@@ -2,8 +2,8 @@ import React from 'react';
 import { Animated } from 'react-native';
 import { ListItemBase, ListItemProps } from './ListItem';
 import { ListItemContent } from './ListItem.Content';
-import { Icon, IconNode, IconProps } from '../Icon';
-import { RneFunctionComponent } from '../helpers';
+import { Icon, IconNode } from '../Icon';
+import { renderNode, RneFunctionComponent } from '../helpers';
 
 export interface ListItemAccordionProps extends ListItemProps {
   /** Decide if Accordion is Expanded. */
@@ -20,6 +20,9 @@ export interface ListItemAccordionProps extends ListItemProps {
 
   /** Don't rotate when Accordion is expanded. */
   noRotation?: boolean;
+
+  /** Rotate Icon left side */
+  leftRotate?: boolean;
 
   /** Don't show accordion icon. */
   noIcon?: boolean;
@@ -42,9 +45,10 @@ export const ListItemAccordion: RneFunctionComponent<
 > = ({
   children,
   isExpanded = false,
-  icon,
+  icon = <Icon name={'chevron-down'} type="material-community" />,
   expandIcon,
   content,
+  leftRotate = false,
   noRotation,
   noIcon,
   animation = {
@@ -53,67 +57,59 @@ export const ListItemAccordion: RneFunctionComponent<
   },
   ...rest
 }) => {
-  const { current: transition } = React.useRef(new Animated.Value(0));
+  const transition = React.useRef(new Animated.Value(0));
 
   const startAnimation = React.useCallback(() => {
     if (typeof animation !== 'boolean') {
-      Animated[animation.type || 'timing'](transition, {
+      Animated[animation.type || 'timing'](transition.current, {
         toValue: Number(isExpanded),
         useNativeDriver: true,
         duration: animation.duration || 350,
       }).start();
     }
-  }, [isExpanded, transition, animation]);
+  }, [isExpanded, animation]);
 
   React.useEffect(() => {
     startAnimation();
   }, [isExpanded, startAnimation]);
 
-  const rotate =
-    noRotation || (typeof animation === 'boolean' && animation)
-      ? '0deg'
-      : transition.interpolate({
-          inputRange: [0, 1],
-          outputRange: ['0deg', '-180deg'],
-        });
+  const iconAnimation = React.useMemo(
+    () => ({
+      transform: [
+        {
+          rotate: noRotation
+            ? '0deg'
+            : transition.current.interpolate({
+                inputRange: [0, 1],
+                outputRange: ['0deg', leftRotate ? '180deg' : '-180deg'],
+              }),
+        },
+      ],
+    }),
+    [leftRotate, noRotation]
+  );
 
   return (
     <>
       <ListItemBase {...rest}>
         {React.isValidElement(content) ? content : <ListItemContent />}
-        {!noIcon &&
-          (icon ? (
-            React.createElement(
-              Icon,
-              (isExpanded ? expandIcon : icon) as IconProps
-            )
-          ) : (
-            <Animated.View
-              testID="RNE__ListItem__Accordion__Icon"
-              style={{
-                transform: [
-                  {
-                    rotate,
-                  },
-                ],
-              }}
-            >
-              <Icon name={'chevron-down'} type="material-community" />
-            </Animated.View>
-          ))}
+        {!noIcon && (
+          <Animated.View
+            testID="RNE__ListItem__Accordion__Icon"
+            style={iconAnimation}
+          >
+            {renderNode(Icon, isExpanded ? expandIcon ?? icon : icon)}
+          </Animated.View>
+        )}
       </ListItemBase>
-      {isExpanded && (
-        <Animated.View
-          testID="RNE__ListItem__Accordion__Children"
-          style={[
-            {
-              opacity: transition,
-            },
-          ]}
-        >
-          {children}
-        </Animated.View>
-      )}
+      <Animated.View
+        testID="RNE__ListItem__Accordion__Children"
+        style={{
+          opacity: transition.current,
+        }}
+      >
+        {children}
+      </Animated.View>
     </>
   );
 };

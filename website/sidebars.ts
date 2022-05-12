@@ -143,6 +143,16 @@ module.exports = {
           label: 'Sponsors',
           href: '/sponsor',
         },
+        {
+          type: 'link',
+          label: 'Blog',
+          href: '/blog',
+        },
+        {
+          type: 'link',
+          label: 'Help',
+          href: '/help',
+        },
       ],
     },
   ],

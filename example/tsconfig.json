@@ -5,9 +5,6 @@
       "path": "../packages/base"
     },
     {
-      "path": "../packages/circular-slider"
-    },
-    {
       "path": "../packages/themed"
     }
   ],

@@ -3,7 +3,7 @@ import { StyleSheet, Animated, StyleProp, ViewStyle } from 'react-native';
 import { Button, ButtonProps } from '../Button';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export interface FABProps extends ButtonProps {
+export interface FABProps extends Omit<ButtonProps, 'size' | 'color'> {
   /** Change the color of the FAB. */
   color?: string;
 

@@ -6,16 +6,22 @@
  */
 
 import React from 'react';
+import { info } from '@docusaurus/logger';
 import * as RNE from 'react-native-elements';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import * as RNEUI from '@rneui/base';
+import * as RNEUI_Layout from '@rneui/layout';
+import LinearGradient from 'react-native-linear-gradient';
+
+console.log(RNEUI.Button);
+info`YO`;
 
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
-  FontAwesomeIcon,
-  MaterialIcons,
+  LinearGradient,
   ...RNE,
+  ...RNEUI,
+  ...RNEUI_Layout,
   ...React,
 };
 
