@@ -298,7 +298,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   list: {
-    marginTop: 20,
     borderTopWidth: 1,
     borderColor: colors.greyOutline,
   },
