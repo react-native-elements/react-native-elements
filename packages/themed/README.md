@@ -10,13 +10,13 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@rneui/themed"><img src="https://img.shields.io/npm/v/@rneui/themed.svg?style=flat-square"></a>
-   <a href="https://www.npmjs.com/package/@rneui/themed"><img src="https://img.shields.io/npm/dm/@rneui/base.svg?style=flat-square"></a>
+   <a href="https://www.npmjs.com/package/@rneui/themed"><img src="https://img.shields.io/npm/dm/@rneui/themed.svg?style=flat-square"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=0089E3"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?label=stars&logo&style=flat-square&color=0089E3"></a>
 </p>
 
 <div align="center">
-  <a href="https://twitter.com/rn_elements"><img src="https://img.shields.io/twitter/follow/rn_elements?style=flat-square&label=Follow%20%40rn_elements&logo=TWITTER&logoColor=FFFFFF&labelColor=00aced&logoWidth=15&color=lightgray"></a>
+   <a href="https://twitter.com/rn_elements"><img src="https://img.shields.io/twitter/follow/rn_elements?style=flat-square&label=Twitter&logo=TWITTER&color=0089E3"></a>
   <a href="https://github.com/react-native-elements/react-native-elements/discussions"><img src="https://img.shields.io/github/discussions/react-native-elements/react-native-elements?label=Discussions&logo=github&style=flat-square"></a>
   <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://img.shields.io/badge/Join-Slack-4A154B?style=flat-square&logo=slack&color=0089E3&"></a>
 
