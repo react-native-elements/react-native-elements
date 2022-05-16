@@ -161,11 +161,11 @@ export interface ButtonProps
  * ```
  * ### Button with icon
  * ```tsx live
- *  <Button title="Solid" type="solid" icon="home" />
+ *  <Button type="solid" ><Icon name='home' color='white'/>Icon</Button>
  * ```
  * ### Button with right icon
  * ```tsx live
- * <Button title="Solid" type="solid" icon="home" iconRight />
+ *  <Button type="solid" >Icon<Icon name='home' color='white'/></Button>
  * ```
  * ### Button with loading spinner
  * %live <Button title="Solid" type="solid" loading />
