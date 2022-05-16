@@ -21,9 +21,9 @@ export const DialogActions: RneFunctionComponent<DialogActionsProps> = ({
 const styles = StyleSheet.create({
   actionsView: {
     marginTop: 10,
-    marginRight: -35,
     flexDirection: 'row-reverse',
     justifyContent: 'flex-start',
+    flexWrap: 'wrap',
   },
 });
 

@@ -102,14 +102,16 @@ export const ListItemAccordion: RneFunctionComponent<
           </Animated.View>
         )}
       </ListItemBase>
-      <Animated.View
-        testID="RNE__ListItem__Accordion__Children"
-        style={{
-          opacity: transition.current,
-        }}
-      >
-        {children}
-      </Animated.View>
+      {isExpanded && (
+        <Animated.View
+          testID="RNE__ListItem__Accordion__Children"
+          style={{
+            opacity: transition.current,
+          }}
+        >
+          {children}
+        </Animated.View>
+      )}
     </>
   );
 };
