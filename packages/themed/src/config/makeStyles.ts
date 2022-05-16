@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { Colors } from './colors';
-import { ThemeMode, Theme } from './theme';
+import { Theme } from './theme';
 import { useTheme } from './ThemeProvider';
 
 export const makeStyles =
@@ -11,7 +11,6 @@ export const makeStyles =
       | ((
           theme: {
             colors: Colors;
-            mode: ThemeMode;
           } & Theme,
           props: V
         ) => T)
