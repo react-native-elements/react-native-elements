@@ -25,7 +25,7 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
               <Button size="lg">Large</Button>
             </Stack>
             <View>
-              <Stack spacing={8}>
+              <Stack dir="column" spacing={8}>
                 <Button>Primary</Button>
                 <Button color="secondary">Secondary</Button>
                 <Button color="warning">Warning</Button>
