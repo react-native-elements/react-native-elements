@@ -9,7 +9,7 @@ const Home: React.FunctionComponent<{}> = () => {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout title={siteConfig.title} description={siteConfig.tagline}>
+    <Layout title={'Sponsors'} description={siteConfig.tagline}>
       <div className="margin-vert--lg">
         <Sponsor />
         <OpenCollective />
