@@ -170,7 +170,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
-            { backgroundColor: theme?.colors?.searchBg },
+            { backgroundColor: theme?.colors?.grey5 },
             hasFocus && {
               marginRight: this.state.cancelButtonWidth
                 ? this.state.cancelButtonWidth

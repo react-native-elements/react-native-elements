@@ -108,12 +108,8 @@ export class SearchBarDefault extends React.Component<
         testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
-            borderTopWidth: 1,
-            borderBottomWidth: 1,
-            borderBottomColor: '#000',
-            borderTopColor: '#000',
             padding: 8,
-            backgroundColor: theme?.colors?.grey0,
+            backgroundColor: theme?.colors?.grey4,
           },
           containerStyle,
         ])}
@@ -143,7 +139,7 @@ export class SearchBarDefault extends React.Component<
               borderRadius: 3,
               overflow: 'hidden',
               minHeight: 30,
-              backgroundColor: theme?.colors?.searchBg,
+              backgroundColor: theme?.colors?.grey5,
             },
             round && styles.round,
             inputContainerStyle,
