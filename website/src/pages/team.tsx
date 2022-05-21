@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { SiGithub, SiTwitter } from 'react-icons/si';
 import { SectionHeader } from '../components/SectionHeader';
 import { BsPeople } from 'react-icons/bs';
@@ -39,10 +38,8 @@ const TeamSection = ({ members }: { members: MemberType[] }) => (
 );
 
 const Home: React.FunctionComponent<{}> = () => {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
   return (
-    <Layout title={'The Team'} description={siteConfig.tagline}>
+    <Layout title={'The Team'}>
       <section className="container ">
         <h1 className="text--center text--primary margin-vert--md">Our Team</h1>
         <div className="margin-vert--lg">
