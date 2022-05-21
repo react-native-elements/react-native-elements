@@ -134,7 +134,7 @@ export interface ButtonProps
  *
  * ### Variants
  * ```tsx live
- *  <Stack dir="row" align="center" spacing={4}>
+ *  <Stack row align="center" spacing={4}>
  * <Button title="Solid" />
  * <Button title="Outline" type="outline" />
  * <Button title="Clear" type="clear" />
@@ -143,7 +143,7 @@ export interface ButtonProps
  * ### Size
  *
  * ```tsx live
- *  <Stack dir="row" align="center" spacing={4}>
+ *  <Stack row align="center" spacing={4}>
  *            <Button size="sm">Small</Button>
  *            <Button size="md">Medium</Button>
  *             <Button size="lg">Large</Button>
@@ -152,7 +152,7 @@ export interface ButtonProps
  * ### Colors
  *
  * ```tsx live
- *  <Stack dir="row" align="center" spacing={4}>
+ *  <Stack row align="center" spacing={4}>
  *        <Button>Primary</Button>
  *        <Button color="secondary">Secondary</Button>
  *        <Button color="warning">Warning</Button>

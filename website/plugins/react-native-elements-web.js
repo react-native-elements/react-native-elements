@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const rootNodeModules = path.join(__dirname, '..', '..', 'node_modules');
 const nodeModules = path.join(__dirname, '..', 'node_modules');
 
 /** @type {()=>import('@docusaurus/types').Plugin} */
@@ -15,8 +16,6 @@ const a = function () {
           : [
               new webpack.ProvidePlugin({
                 Buffer: ['buffer', 'Buffer'],
-              }),
-              new webpack.ProvidePlugin({
                 process: 'process/browser',
               }),
             ],
@@ -47,11 +46,12 @@ const a = function () {
                 }),
               ],
               include: [
+                path.resolve(nodeModules, '@rneui/base/src'),
                 path.resolve(nodeModules, 'react-native-elements'),
-                path.resolve(nodeModules, '@rneui/themed'),
-                path.resolve(nodeModules, '@rneui/base'),
                 path.resolve(nodeModules, 'react-native-vector-icons'),
                 path.resolve(nodeModules, 'react-native-ratings'),
+                path.resolve(rootNodeModules, 'react-native-vector-icons'),
+                path.resolve(rootNodeModules, 'react-native-ratings'),
               ],
             },
           ],
@@ -59,6 +59,7 @@ const a = function () {
         resolve: {
           alias: {
             'react-native$': 'react-native-web',
+            '@rneui/base$': path.resolve(nodeModules, '@rneui/base/src'),
             'react-native-linear-gradient': 'react-native-web-linear-gradient',
           },
           fallback: isServer
