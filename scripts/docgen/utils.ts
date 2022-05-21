@@ -92,10 +92,10 @@ export const filterPropType = (value: string) => {
     return '`None`';
   }
   if (value.includes('|')) {
-    return value.replace(/"/g, '').split('|').map(codify).join(' or ');
+    return value.replace(/"/g, '').split('|').map(codify).join(' \\| ');
   }
   if (value.includes('&')) {
-    return value.replace(/"/g, '').split('&').map(codify).join(' and ');
+    return value.replace(/"/g, '').split('&').map(codify).join(' & ');
   }
   return value;
 };
