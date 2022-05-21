@@ -8,24 +8,28 @@ export function SectionHeader({
   primary,
   color,
   icon: Icon,
+  noMargin,
   ...iconProps
 }: Partial<IconProps> & {
   header?: string;
   subheader?: string;
   primary?: boolean;
+  noMargin?: boolean;
 }) {
   return (
-    <div className="container margin-vert--lg">
+    <div className={'container ' + (noMargin ? '' : 'margin-vert--lg')}>
       <div className="row">
         <div>
-          <IconTag
-            icon={Icon}
-            color={color}
-            padding={8}
-            size={size}
-            style={{ marginRight: 12 }}
-            {...iconProps}
-          />
+          {Icon && (
+            <IconTag
+              icon={Icon}
+              color={color}
+              padding={8}
+              size={size}
+              style={{ marginRight: 12 }}
+              {...iconProps}
+            />
+          )}
         </div>
         <div>
           <h1
@@ -34,7 +38,7 @@ export function SectionHeader({
           >
             {header}
           </h1>
-          <small>{subheader}</small>
+          {subheader && <small>{subheader}</small>}
         </div>
       </div>
     </div>
