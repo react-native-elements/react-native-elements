@@ -139,20 +139,8 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
   underlayColor = theme?.colors?.primary,
   ...rest
 }) => {
-  let innerBorderWidth = 1;
-  const hasElementKey = (
-    button: string | ButtonComponent | ButtonObject
-  ): button is ButtonObject => {
-    return (
-      typeof button === 'object' && Boolean((button as ButtonObject).element)
-    );
-  };
-  if (
-    innerBorderStyle &&
-    Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
-  ) {
-    innerBorderWidth = innerBorderStyle.width as number;
-  }
+  let innerBorderWidth = innerBorderStyle?.width ?? 1;
+
   return (
     <View
       testID="RNE__ButtonGroupContainer"
@@ -313,3 +301,11 @@ const styles = StyleSheet.create({
 });
 
 ButtonGroup.displayName = 'ButtonGroup';
+
+const hasElementKey = (
+  button: string | ButtonComponent | ButtonObject
+): button is ButtonObject => {
+  return (
+    typeof button === 'object' && Boolean((button as ButtonObject).element)
+  );
+};

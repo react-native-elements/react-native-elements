@@ -207,7 +207,6 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "backgroundColor": "yellow",
@@ -222,7 +221,6 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
       }
     }
     testID="RNE__ButtonGroupContainer"
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -240,6 +238,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -301,6 +300,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -360,6 +360,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -414,7 +415,6 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "backgroundColor": "yellow",
@@ -429,7 +429,6 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
       }
     }
     testID="RNE__ButtonGroupContainer"
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -447,6 +446,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -498,6 +498,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -547,6 +548,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
         onBlur={[Function]}
         onClick={[Function]}
