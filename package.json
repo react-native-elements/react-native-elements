@@ -67,8 +67,7 @@
   "lint-staged": {
     "packages/**/*.{ts,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "tsc --noEmit --composite false"
+      "prettier --write"
     ],
     "packages/**/*.{js,jsx}": [
       "eslint --fix",

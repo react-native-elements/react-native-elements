@@ -8,16 +8,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
     style={
       Object {
         "backgroundColor": "#303337",
-        "elevation": 2,
         "paddingBottom": 8,
         "paddingTop": 8,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 1,
-          "width": 0,
-        },
-        "shadowOpacity": 0.2,
-        "shadowRadius": 1.41,
       }
     }
     testID="RNE__SearchBar-wrapper"
