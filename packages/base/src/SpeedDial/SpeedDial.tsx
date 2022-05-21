@@ -11,8 +11,9 @@ import { FAB, FABProps } from '../FAB';
 import { IconNode } from '../Icon';
 import Color from 'color';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
+import { SpeedDialActionProps } from './SpeedDial.Action';
 
-export type SpeedDialProps = {
+export interface SpeedDialProps extends FABProps {
   /** Opens the action stack. */
   isOpen: boolean;
 
@@ -28,15 +29,21 @@ export type SpeedDialProps = {
   /** Add overlay color to the speed dial. */
   overlayColor?: string;
 
-  /** SpeedDial Action as children. */
-  children?: React.ReactChild[];
+  /** SpeedDial Action as children.
+   * @type SpeedDial.Action
+   *
+   */
+  children?: React.ReactElement[];
 
   /** The duration for the transition, in milliseconds. */
   transitionDuration?: number;
 
   /** Props for Backdrop Pressable */
   backdropPressableProps?: PressableProps;
-} & FABProps;
+
+  /** onPress on Label Press for all Actions*/
+  labelPressable?: boolean;
+}
 
 /** When pressed, a floating action button can display three to six related actions in the form of a speed dial.
  * If more than six actions are needed, something other than a FAB should be used to present them.
@@ -44,7 +51,7 @@ export type SpeedDialProps = {
  * If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
  */
 export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
-  isOpen,
+  isOpen = false,
   onOpen = () => {},
   onClose = () => {},
   icon,
@@ -54,6 +61,8 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   style,
   overlayColor,
   theme = defaultTheme,
+  placement,
+  labelPressable,
   backdropPressableProps: pressableProps,
   ...rest
 }) => {
@@ -100,22 +109,43 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
         />
       </Pressable>
 
-      <SafeAreaView pointerEvents="box-none" style={styles.safeArea}>
-        {React.Children.toArray(children).map((ChildAction, i: number) => (
-          <Animated.View
-            pointerEvents={isOpen ? 'auto' : 'none'}
-            key={i}
-            style={{
-              transform: [{ scale: animations.current[i] }],
-              opacity: animations.current[i],
-            }}
-          >
-            {ChildAction}
-          </Animated.View>
-        ))}
+      <SafeAreaView
+        pointerEvents="box-none"
+        style={[
+          {
+            alignItems: placement === 'left' ? 'flex-start' : 'flex-end',
+          },
+          placement && {
+            [placement]: 0,
+            bottom: 0,
+            position: 'absolute',
+          },
+        ]}
+      >
+        {React.Children.toArray(children).map(
+          (
+            ChildAction: React.ReactElement<SpeedDialActionProps>,
+            i: number
+          ) => (
+            <Animated.View
+              pointerEvents={isOpen ? 'auto' : 'none'}
+              key={i}
+              style={{
+                transform: [{ scale: animations.current[i] }],
+                opacity: animations.current[i],
+              }}
+            >
+              {React.cloneElement(ChildAction, {
+                placement,
+                labelPressable,
+              })}
+            </Animated.View>
+          )
+        )}
         <FAB
           style={[styles.fab]}
           icon={isOpen ? openIcon : icon}
+          theme={theme}
           {...rest}
           onPress={isOpen ? onClose : onOpen}
         />

@@ -15,11 +15,10 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
     }
     accessible={true}
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Array [
         Object {
-          "backgroundColor": "rgba(202, 113, 235, 0.4)",
+          "backgroundColor": "rgba(3, 218, 196, 0.4)",
           "height": 4,
           "overflow": "hidden",
           "position": "relative",
@@ -29,12 +28,13 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
       ]
     }
     testID="RNE__LinearProgress_Bar"
-    updateTheme={[Function]}
   >
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       style={
         Object {
-          "backgroundColor": "#ca71eb",
+          "backgroundColor": "#03dac4",
           "flex": 1,
           "transform": Array [
             Object {
@@ -67,11 +67,10 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
     }
     accessible={true}
     onLayout={[Function]}
-    replaceTheme={[Function]}
     style={
       Array [
         Object {
-          "backgroundColor": "rgba(202, 113, 235, 0.4)",
+          "backgroundColor": "rgba(3, 218, 196, 0.4)",
           "height": 4,
           "overflow": "hidden",
           "position": "relative",
@@ -81,12 +80,11 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
       ]
     }
     testID="RNE__LinearProgress_Bar"
-    updateTheme={[Function]}
   >
     <View
       style={
         Object {
-          "backgroundColor": "#ca71eb",
+          "backgroundColor": "#03dac4",
           "flex": 1,
           "transform": Array [
             Object {

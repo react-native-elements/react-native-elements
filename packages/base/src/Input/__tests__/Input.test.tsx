@@ -1,10 +1,9 @@
 import React from 'react';
 import { View, TextInput, Image, Animated } from 'react-native';
-import Input from '../index';
+import { Input } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
-import Icon from '../../Icon';
-import { FullTheme } from '../../config';
+import { Icon } from '../../Icon';
 
 describe('Input component', () => {
   it('should match snapshot', () => {
@@ -204,17 +203,6 @@ describe('Input component', () => {
         fireEvent(component.findByType(TextInput), 'focus');
         expect(focus).toHaveBeenCalledTimes(1);
       });
-    });
-
-    it('should apply values from theme', () => {
-      const testTheme: Partial<FullTheme> = {
-        Input: {
-          placeholder: 'Enter text',
-        },
-      };
-      const { queryByTestId } = renderWithWrapper(<Input />, '', testTheme);
-      const component = queryByTestId('RNE__Input__text-input');
-      expect(component.props.placeholder).toBe(testTheme.Input.placeholder);
     });
   });
 });

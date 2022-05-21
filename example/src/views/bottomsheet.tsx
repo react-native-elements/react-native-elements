@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BottomSheet, Button, ListItem } from '@react-native-elements/themed';
+import { BottomSheet, Button, ListItem } from '@rneui/themed';
 import { StyleSheet } from 'react-native';
 import { Header } from '../components/header';
 
@@ -24,11 +24,15 @@ const BottomSheetComponent: React.FunctionComponent<
     <>
       <Header title="BottomSheet" view="bottomsheet" />
       <Button
-        title="Open Bottom Sheet"
+        title="Open Bottom Sheet with handler"
         onPress={() => setIsVisible(true)}
         buttonStyle={styles.button}
       />
-      <BottomSheet modalProps={{}} isVisible={isVisible}>
+      <BottomSheet
+        modalProps={{}}
+        onBackdropPress={() => setIsVisible(false)}
+        isVisible={isVisible}
+      >
         {list.map((l, i) => (
           <ListItem
             key={i}

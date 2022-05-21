@@ -1,0 +1,4 @@
+coverage
+**/coverage
+**/dist
+**/CHANGELOG.md

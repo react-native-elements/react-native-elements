@@ -38,9 +38,10 @@ import SearchBar, {
   SearchBarIosProps,
 } from './SearchBar';
 import Slider, { SliderProps } from './Slider';
-import SocialIcon, { SocialIconProps } from './SocialIcon';
+import SocialIcon, { SocialIconProps, SocialMediaType } from './SocialIcon';
 import SpeedDial, { SpeedDialActionProps, SpeedDialProps } from './SpeedDial';
 import Switch, { SwitchProps } from './Switch';
+import Skeleton, { SkeletonProps } from './Skeleton';
 import Tab, { TabItemProps, TabProps } from './Tab';
 import TabView, { TabViewProps } from './TabView';
 import Text, { TextProps } from './Text';
@@ -49,21 +50,28 @@ import Tooltip, { TooltipProps } from './Tooltip';
 
 import {
   Colors,
-  colors,
+  lightColors,
+  darkColors,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
   withTheme,
   makeStyles,
   useTheme,
+  useThemeMode,
   UpdateTheme,
   ReplaceTheme,
   FullTheme,
   Theme,
-  ThemeProps,
+  ThemeMode,
+  normalizeText,
+  getIconType,
+  registerCustomIconType,
+  ComponentTheme,
+  createTheme,
+  CreateThemeOptions,
+  ThemeOptions,
 } from './config';
-import getIconType, { registerCustomIconType } from './helpers/getIconType';
-import normalize from './helpers/normalizeText';
 
 // Components exports
 export {
@@ -92,6 +100,7 @@ export {
   Slider,
   SocialIcon,
   SpeedDial,
+  Skeleton,
   Switch,
   Tab,
   TabView,
@@ -102,17 +111,20 @@ export {
 
 // Theme utils exports
 export {
-  colors,
+  lightColors,
+  darkColors,
   getIconType,
   registerCustomIconType,
-  normalize,
+  normalizeText as normalize,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
   withBadge,
   withTheme,
   useTheme,
+  useThemeMode,
   makeStyles,
+  createTheme,
 };
 
 // Components Props exports
@@ -145,7 +157,9 @@ export type {
   SearchBarIosProps,
   SearchBarProps,
   SliderProps,
+  SkeletonProps,
   SocialIconProps,
+  SocialMediaType,
   SpeedDialActionProps,
   SpeedDialProps,
   SwipeRatingProps,
@@ -160,4 +174,13 @@ export type {
 };
 
 // Theme props export
-export type { FullTheme, ReplaceTheme, Theme, ThemeProps, UpdateTheme };
+export type {
+  FullTheme,
+  ReplaceTheme,
+  Theme,
+  UpdateTheme,
+  CreateThemeOptions,
+  ThemeOptions,
+  ThemeMode,
+  ComponentTheme,
+};

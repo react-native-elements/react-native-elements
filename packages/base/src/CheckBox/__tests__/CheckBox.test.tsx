@@ -1,8 +1,7 @@
 import React from 'react';
-import CheckBox from '..';
+import { CheckBox } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Pressable, View, Text, Image } from 'react-native';
-import { FullTheme } from '../../config';
 
 describe('CheckBox Component', () => {
   it('should match snapshot', () => {
@@ -129,19 +128,5 @@ describe('CheckBox Component', () => {
     );
     expect(wrapper.props.children).toBe('Demo Text');
     expect(wrapper.props.numberOfLines).toBe(2);
-  });
-
-  it('should use values from theme', () => {
-    const testTheme: Partial<FullTheme> = {
-      CheckBox: {
-        title: 'George is Cool',
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <CheckBox checked />,
-      'RNE__CheckBox__Title',
-      testTheme
-    );
-    expect(wrapper.props.children).toBe('George is Cool');
   });
 });

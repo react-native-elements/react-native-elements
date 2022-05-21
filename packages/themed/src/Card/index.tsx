@@ -1,16 +1,20 @@
 import { withTheme } from '../config';
-import { RneFunctionComponent } from '../helpers';
+import { CardBase, CardProps } from '@rneui/base/dist/Card/Card';
 import {
-  CardBase,
-  CardBaseProps,
-} from '@react-native-elements/base/dist/Card/Card';
-import { CardDivider } from '@react-native-elements/base/dist/Card/Card.Divider';
-import { CardFeaturedSubtitle } from '@react-native-elements/base/dist/Card/Card.FeaturedSubtitle';
-import { CardFeaturedTitle } from '@react-native-elements/base/dist/Card/Card.FeaturedTitle';
-import { CardImage } from '@react-native-elements/base/dist/Card/Card.Image';
-import { CardTitle } from '@react-native-elements/base/dist/Card/Card.Title';
+  CardDivider,
+  CardDividerProps,
+} from '@rneui/base/dist/Card/Card.Divider';
+import { CardFeaturedSubtitle } from '@rneui/base/dist/Card/Card.FeaturedSubtitle';
+import { CardFeaturedTitle } from '@rneui/base/dist/Card/Card.FeaturedTitle';
+import { CardImage, CardImageProps } from '@rneui/base/dist/Card/Card.Image';
+import { CardTitle, CardTitleProps } from '@rneui/base/dist/Card/Card.Title';
+import { CardFeaturedSubtitleProps } from '@rneui/base/dist/Card';
+import { CardFeaturedTitleProps } from '@rneui/base/dist/Card';
 
-const ThemedCardDivider = withTheme(CardDivider, 'CardDivider');
+const ThemedCardDivider = withTheme<CardDividerProps>(
+  CardDivider,
+  'CardDivider'
+);
 const ThemedCardFeaturedSubtitle = withTheme(
   CardFeaturedSubtitle,
   'CardFeaturedSubtitle'
@@ -19,20 +23,10 @@ const ThemedCardFeaturedTitle = withTheme(
   CardFeaturedTitle,
   'CardFeaturedTitle'
 );
-const ThemedCardImage = withTheme(CardImage, 'CardImage');
-const ThemedCardTitle = withTheme(CardTitle, 'CardTitle');
+const ThemedCardTitle = withTheme<CardTitleProps>(CardTitle, 'CardTitle');
+const ThemedCardImage = withTheme<CardImageProps>(CardImage, 'CardImage');
 
-export type CardProps = RneFunctionComponent<CardBaseProps> & {
-  Divider: typeof ThemedCardDivider;
-  Image: typeof ThemedCardImage;
-  Title: typeof ThemedCardTitle;
-  FeaturedTitle: typeof ThemedCardFeaturedTitle;
-  FeaturedSubTitle: typeof ThemedCardFeaturedSubtitle;
-};
-
-export const Card: CardProps = Object.assign(CardBase);
-
-const ThemedCard = Object.assign(withTheme(Card, 'Card'), {
+const ThemedCard = Object.assign(withTheme(CardBase, 'Card'), {
   Divider: ThemedCardDivider,
   Image: ThemedCardImage,
   Title: ThemedCardTitle,
@@ -41,3 +35,11 @@ const ThemedCard = Object.assign(withTheme(Card, 'Card'), {
 });
 
 export default ThemedCard;
+
+export type {
+  CardProps,
+  CardDividerProps,
+  CardFeaturedSubtitleProps,
+  CardFeaturedTitleProps,
+  CardImageProps,
+};

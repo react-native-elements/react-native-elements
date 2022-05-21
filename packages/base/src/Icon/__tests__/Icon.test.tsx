@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../index';
+import { Icon } from '../index';
 import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 
 describe('Icon component', () => {
@@ -82,17 +82,10 @@ describe('Icon component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('should apply values from theme', () => {
-    const localTheme = {
-      Icon: {
-        size: 26,
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <Icon name="edit" />,
-      'RNE__ICON__Component',
-      localTheme
+  it('should have overridable testID', () => {
+    const { queryByTestId } = renderWithWrapper(
+      <Icon name="wifi" testID="wifiIcon" />
     );
-    expect(wrapper.props.style[0].fontSize).toBe(26);
+    expect(queryByTestId('wifiIcon')).toBeTruthy();
   });
 });

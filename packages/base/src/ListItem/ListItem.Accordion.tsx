@@ -1,11 +1,11 @@
 import React from 'react';
 import { Animated } from 'react-native';
-import { ListItemBase, ListItemBaseProps } from './ListItem';
+import { ListItemBase, ListItemProps } from './ListItem';
 import { ListItemContent } from './ListItem.Content';
-import { Icon, IconNode, IconProps } from '../Icon';
-import { RneFunctionComponent } from '../helpers';
+import { Icon, IconNode } from '../Icon';
+import { renderNode, RneFunctionComponent } from '../helpers';
 
-export type ListItemAccordionProps = ListItemBaseProps & {
+export interface ListItemAccordionProps extends ListItemProps {
   /** Decide if Accordion is Expanded. */
   isExpanded?: boolean;
 
@@ -21,11 +21,15 @@ export type ListItemAccordionProps = ListItemBaseProps & {
   /** Don't rotate when Accordion is expanded. */
   noRotation?: boolean;
 
+  /** Rotate Icon left side */
+  leftRotate?: boolean;
+
   /** Don't show accordion icon. */
   noIcon?: boolean;
 
   /** Decide whether to show animation.
    * @default Object with duration 350ms and type timing
+   * @type Animated.TimingAnimationConfig
    */
   animation?:
     | {
@@ -33,17 +37,18 @@ export type ListItemAccordionProps = ListItemBaseProps & {
         duration?: number;
       }
     | boolean;
-};
+}
 
 /** This allows making a accordion list which can show/hide content. */
 export const ListItemAccordion: RneFunctionComponent<
   ListItemAccordionProps
 > = ({
   children,
-  isExpanded,
-  icon,
+  isExpanded = false,
+  icon = <Icon name={'chevron-down'} type="material-community" />,
   expandIcon,
   content,
+  leftRotate = false,
   noRotation,
   noIcon,
   animation = {
@@ -52,29 +57,37 @@ export const ListItemAccordion: RneFunctionComponent<
   },
   ...rest
 }) => {
-  const { current: transition } = React.useRef(new Animated.Value(0));
+  const transition = React.useRef(new Animated.Value(0));
 
   const startAnimation = React.useCallback(() => {
     if (typeof animation !== 'boolean') {
-      Animated[animation.type || 'timing'](transition, {
+      Animated[animation.type || 'timing'](transition.current, {
         toValue: Number(isExpanded),
-        useNativeDriver: false,
+        useNativeDriver: true,
         duration: animation.duration || 350,
       }).start();
     }
-  }, [isExpanded, transition, animation]);
+  }, [isExpanded, animation]);
 
   React.useEffect(() => {
     startAnimation();
   }, [isExpanded, startAnimation]);
 
-  const rotate =
-    noRotation || (typeof animation === 'boolean' && animation)
-      ? '0deg'
-      : transition.interpolate({
-          inputRange: [0, 1],
-          outputRange: ['0deg', '-180deg'],
-        });
+  const iconAnimation = React.useMemo(
+    () => ({
+      transform: [
+        {
+          rotate: noRotation
+            ? '0deg'
+            : transition.current.interpolate({
+                inputRange: [0, 1],
+                outputRange: ['0deg', leftRotate ? '180deg' : '-180deg'],
+              }),
+        },
+      ],
+    }),
+    [leftRotate, noRotation]
+  );
 
   return (
     <>
@@ -82,41 +95,23 @@ export const ListItemAccordion: RneFunctionComponent<
         {React.isValidElement(content) ? content : <ListItemContent />}
         {!noIcon && (
           <Animated.View
-            style={{
-              transform: [
-                {
-                  rotate,
-                },
-              ],
-            }}
+            testID="RNE__ListItem__Accordion__Icon"
+            style={iconAnimation}
           >
-            {icon ? (
-              <Icon
-                {...((expandIcon
-                  ? isExpanded
-                    ? expandIcon
-                    : icon
-                  : icon) as IconProps)}
-              />
-            ) : (
-              <Icon name={'chevron-down'} type="material-community" />
-            )}
+            {renderNode(Icon, isExpanded ? expandIcon ?? icon : icon)}
           </Animated.View>
         )}
       </ListItemBase>
-      <Animated.View
-        style={[
-          Boolean(animation) && {
-            maxHeight: transition.interpolate({
-              inputRange: [0, 1],
-              outputRange: ['0%', '100%'],
-            }),
-            opacity: transition,
-          },
-        ]}
-      >
-        {children}
-      </Animated.View>
+      {isExpanded && (
+        <Animated.View
+          testID="RNE__ListItem__Accordion__Children"
+          style={{
+            opacity: transition.current,
+          }}
+        >
+          {children}
+        </Animated.View>
+      )}
     </>
   );
 };

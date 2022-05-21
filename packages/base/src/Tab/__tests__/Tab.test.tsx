@@ -1,7 +1,7 @@
 import React from 'react';
-import Tab from '../index';
+import { Tab } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import theme from '../../config/theme';
+import { lightColors } from '../../helpers';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Tab Component', () => {
@@ -29,7 +29,7 @@ describe('Tab Component', () => {
     const TabItemComponent = queryByA11yRole('tablist');
 
     expect(TabItemComponent.props.style).toContainEqual({
-      backgroundColor: theme?.colors?.primary,
+      backgroundColor: lightColors?.primary,
     });
   });
 
@@ -61,11 +61,49 @@ describe('Tab Component', () => {
           iconPosition="bottom"
           icon={{ name: 'book' }}
         />
+        <Tab.Item
+          title={'World'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
       </Tab>
     );
 
     const tabs = queryAllByRole('tab');
     fireEvent(tabs[0], 'press');
-    expect(tabs.length).toBe(1);
+    expect(tabs.length).toBe(2);
+  });
+
+  it('should render as scrollable', () => {
+    const changeTab = jest.fn();
+    const { queryAllByRole } = renderWithWrapper(
+      <Tab scrollable onChange={changeTab}>
+        <Tab.Item
+          title={'Hello'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
+        <Tab.Item
+          title={'World'}
+          iconPosition="bottom"
+          icon={{ name: 'book' }}
+        />
+      </Tab>
+    );
+
+    const tabs = queryAllByRole('tab');
+    fireEvent(tabs[1], 'press');
+    expect(tabs.length).toBe(2);
+  });
+
+  it('should ignore conditionally unrendered children', () => {
+    const { queryAllByRole } = renderWithWrapper(
+      <Tab>
+        <Tab.Item />
+        {false && <Tab.Item />}
+        <Tab.Item />
+      </Tab>
+    );
+    expect(queryAllByRole('tab').length).toBe(2);
   });
 });

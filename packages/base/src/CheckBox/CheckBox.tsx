@@ -12,44 +12,52 @@ import {
 } from 'react-native';
 import { Text as TextElement } from '../Text';
 import { CheckBoxIcon, CheckBoxIconProps } from './components/CheckBoxIcon';
-import { fonts } from '../helpers/index-config';
-import { defaultTheme, RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers';
+import { color, defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type CheckBoxProps = PressableProps &
-  CheckBoxIconProps & {
-    /** Specify React Native component for main button. */
-    Component?: typeof React.Component;
+export interface CheckBoxProps extends PressableProps, CheckBoxIconProps {
+  /** Specify React Native component for main button. */
+  Component?: typeof React.Component;
 
-    /** Moves icon to right of text. */
-    iconRight?: boolean;
+  /** Moves icon to right of text. */
+  iconRight?: boolean;
 
-    /** Title of checkbox. */
-    title?: string | React.ReactElement<{}>;
+  /** Title of checkbox. */
+  title?: string | React.ReactElement<{}>;
 
-    /** Additional props for the title Text component. */
-    titleProps?: TextProps;
+  /** Additional props for the title Text component. */
+  titleProps?: TextProps;
 
-    /** Aligns checkbox to center. */
-    center?: boolean;
+  /** Aligns checkbox to center. */
+  center?: boolean;
 
-    /** Aligns checkbox to right. */
-    right?: boolean;
+  /** Aligns checkbox to right. */
+  right?: boolean;
 
-    /** Style of main container. */
-    containerStyle?: StyleProp<ViewStyle>;
+  /** Style of main container. */
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /** Style for the wrapper of checkbox. */
-    wrapperStyle?: StyleProp<ViewStyle>;
+  /** Style for the wrapper of checkbox. */
+  wrapperStyle?: StyleProp<ViewStyle>;
 
-    /** Style of text. */
-    textStyle?: StyleProp<TextStyle>;
+  /** Style of text. */
+  textStyle?: StyleProp<TextStyle>;
 
-    /** Specify a custom checked message. */
-    checkedTitle?: string;
+  /** Disables user interaction. */
+  disabled?: boolean;
 
-    /** Specify different font family. */
-    fontFamily?: string;
-  };
+  /** Style of the checkbox container when disabled. */
+  disabledStyle?: StyleProp<ViewStyle>;
+
+  /** Style of the title when disabled. */
+  disabledTitleStyle?: StyleProp<TextStyle>;
+
+  /** Specify a custom checked message. */
+  checkedTitle?: string;
+
+  /** Specify different font family. */
+  fontFamily?: string;
+}
 
 /** CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off.
  * It provides a clear visual of either a true or false choice. */
@@ -69,6 +77,9 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
   theme = defaultTheme,
   onPress,
   onLongPress,
+  disabled = false,
+  disabledStyle,
+  disabledTitleStyle,
   checkedColor = theme?.colors?.primary,
   ...rest
 }) => {
@@ -89,12 +100,17 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
       accessibilityState={accessibilityState}
       testID="RNE__CheckBox__Wrapper"
       {...rest}
+      disabled={disabled}
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
+        {
+          backgroundColor: theme.colors.background,
+          borderColor: theme.colors.white,
+        },
         styles.container,
-        title && styles.containerHasTitle,
         containerStyle && containerStyle,
+        disabled && disabledStyle,
       ])}
     >
       <View
@@ -132,6 +148,12 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
                     },
                     textStyle && textStyle,
                     fontFamily && { fontFamily },
+                    disabled && {
+                      color: color(theme?.colors?.disabled)
+                        .darken(0.3)
+                        .string(),
+                    },
+                    disabled && disabledTitleStyle,
                   ]) as any
                 }
                 {...titleProps}

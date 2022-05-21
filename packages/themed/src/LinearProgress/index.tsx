@@ -2,7 +2,7 @@ import { withTheme } from '../config';
 import {
   LinearProgress,
   LinearProgressProps,
-} from '@react-native-elements/base/dist/LinearProgress/LinearProgress';
+} from '@rneui/base/dist/LinearProgress/LinearProgress';
 
 export { LinearProgress };
 export type { LinearProgressProps };
@@ -15,7 +15,10 @@ export type { LinearProgressProps };
  *
  * [API Documentation](https://reactnativeelements.com/docs/linearProgress)
  */
-export default Object.assign(withTheme(LinearProgress, 'LinearProgress'), {
-  INDETERMINATE: 'indeterminate' as LinearProgressProps['variant'],
-  DETERMINATE: 'determinate' as LinearProgressProps['variant'],
-});
+export default Object.assign(
+  withTheme<LinearProgressProps>(LinearProgress, 'LinearProgress'),
+  {
+    INDETERMINATE: 'indeterminate' as LinearProgressProps['variant'],
+    DETERMINATE: 'determinate' as LinearProgressProps['variant'],
+  }
+);

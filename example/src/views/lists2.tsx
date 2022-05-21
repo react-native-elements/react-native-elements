@@ -9,7 +9,7 @@ import {
   ListItemProps,
   Button,
   Switch,
-} from '@react-native-elements/themed';
+} from '@rneui/themed';
 import { LinearGradient } from '../components/LinearGradient';
 import { Header } from '../components/header';
 import colors from '../config/colors';
@@ -91,18 +91,25 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
   const [expanded, setExpanded] = React.useState(false);
 
   const listItemProps = {};
-  const renderRow = ({ item }: { item: List1Data }) => {
+  const RenderRow = ({ item }: { item: List1Data }) => {
     return (
       <ListItem.Swipeable
         onPress={log}
         bottomDivider
-        leftContent={
+        onSwipeBegin={(swipeDirection) =>
+          console.log('onSwipeBegin ', swipeDirection)
+        }
+        onSwipeEnd={() => console.log('onSwipeEnd')}
+        // use as callback
+        leftContent={(resetToDefault) => (
           <Button
             title="Info"
+            onPress={() => resetToDefault()}
             icon={{ name: 'info', color: 'white' }}
             buttonStyle={{ minHeight: '100%' }}
           />
-        }
+        )}
+        // or pass component
         rightContent={
           <Button
             title="Delete"
@@ -173,6 +180,8 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
                   </>
                 }
                 isExpanded={expanded}
+                icon={<Icon name="place" />}
+                leftRotate
                 onPress={() => {
                   setExpanded(!expanded);
                 }}
@@ -278,7 +287,7 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
         }
         data={list1}
         keyExtractor={(a: List1Data, index: number) => index.toString()}
-        renderItem={renderRow}
+        renderItem={RenderRow}
       />
     </>
   );
@@ -289,7 +298,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   list: {
-    marginTop: 20,
     borderTopWidth: 1,
     borderColor: colors.greyOutline,
   },

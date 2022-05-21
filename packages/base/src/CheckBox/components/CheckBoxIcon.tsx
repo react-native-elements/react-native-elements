@@ -3,7 +3,7 @@ import { RneFunctionComponent } from '../../helpers';
 import getIconType from '../../helpers/getIconType';
 import { IconType } from '../../Icon';
 
-export type CheckBoxIconProps = {
+export interface CheckBoxIconProps {
   /** Flag for checking the icon. */
   checked: boolean;
 
@@ -30,7 +30,7 @@ export type CheckBoxIconProps = {
 
   /** Default unchecked color. */
   uncheckedColor?: string;
-};
+}
 
 export const CheckBoxIcon: RneFunctionComponent<CheckBoxIconProps> = ({
   checked,

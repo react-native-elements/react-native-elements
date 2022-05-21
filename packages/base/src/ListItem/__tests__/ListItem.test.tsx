@@ -78,13 +78,13 @@ describe('ListItem component', () => {
   });
 
   it('should warn the user when using linearGradient without it installed', () => {
-    console.error = jest.fn();
+    console.warn = jest.fn();
     renderWithWrapper(
       <ListItem
         linearGradientProps={{ colors: ['#4c669f', '#3b5998', '#192f6a'] }}
       />
     );
-    expect((console.error as jest.Mock).mock.calls[0][0]).toBe(
+    expect((console.warn as jest.Mock).mock.calls[0][0]).toBe(
       "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
     );
   });
@@ -99,22 +99,17 @@ describe('ListItem component', () => {
     const input = wrapper.findByType(TextInput);
     expect(input.props.placeholder).toBe('Enter Text');
   });
-
-  it('should apply values from theme', () => {
-    const theme = {
-      ListItemTitle: {
-        style: {
-          color: 'red',
-        },
-      },
-    };
+  it('should render accordion', () => {
     const { wrapper } = renderWithWrapper(
-      <ListItem>
-        <ListItem.Title />
-      </ListItem>,
-      'listItemTitle',
-      theme
+      <ListItem.Accordion
+        isExpanded={false}
+        icon={<Icon name="place" />}
+        noRotation
+      ></ListItem.Accordion>,
+      'RNE__ListItem__Accordion__Icon'
     );
-    expect(wrapper.props.style.color).toBe('red');
+    expect(wrapper.props.style).toMatchObject({
+      transform: [{ rotate: '0deg' }],
+    });
   });
 });

@@ -6,28 +6,19 @@ on:
     paths-ignore:
       - "website/**"
       - "example/**"
+      - "scripts/**"
+      - ".github/**"
 jobs:
+  checks:
+    uses: ./.github/workflows/test.yml
   build:
+    needs: checks
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js Env
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-dist-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-dist-
-      - name: Install Dependencies
-        run: yarn
+      - name: Install dependencies
+        uses: ./.github/actions/install
       - name: Build packages
         run: yarn build
       - name: Config git
@@ -37,13 +28,14 @@ jobs:
       - name: Create local changes
         run: |
           sed -i -e 's/dist/src/g' .gitignore
-          echo "tsconfig.json" >> .gitignore
-          echo "*.config.json" >> .gitignore
+          git rm -rf packages/*/src    
+          jq 'del(.devDependencies."@rneui/base",.peerDependencies."@rneui/base")'  packages/themed/package.json >  packages/themed/package.json.temp
+          mv packages/themed/package.json.temp packages/themed/package.json
           git add .
-          git commit -m "Bleeding Edge Version" -a
-      - name: Deploy Bleeding Edge version'@react-native-elements/*' packages
+          git commit -m "Bleeding Edge Version" -a --no-verify
+      - name: Deploy Bleeding Edge version'@rneui/*' packages
         run: |
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
-               echo "Deploying @react-native-elements/$pkg"
+               echo "Deploying @rneui/$pkg"
                git push origin `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
           done

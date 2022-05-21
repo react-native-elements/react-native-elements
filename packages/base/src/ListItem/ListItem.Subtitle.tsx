@@ -5,7 +5,9 @@ import { Text } from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
-export type ListItemSubtitleProps = TextProps & { right?: boolean };
+export interface ListItemSubtitleProps extends TextProps {
+  right?: boolean;
+}
 
 /** This allows adding SubTitle to the ListItem.
  * This, Receives all [Text](text#props) props. */
@@ -38,7 +40,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
       },
       default: {
-        color: ANDROID_SECONDARY,
         fontSize: 14,
       },
     }),

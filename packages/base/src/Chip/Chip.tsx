@@ -3,13 +3,11 @@ import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import { ButtonProps, Button } from '../Button';
 
-export type ChipProps = Omit<
-  ButtonProps,
-  'loading' | 'loadingStyle' | 'loadingProps'
-> & {
+export interface ChipProps
+  extends Omit<ButtonProps, 'loading' | 'loadingStyle' | 'loadingProps'> {
   /** Type of button. */
   type?: 'solid' | 'outline';
-};
+}
 
 /** Chips are compact elements that represent an input, attribute, or action.
  * They may display text, icons, or both. */
@@ -25,7 +23,8 @@ export const Chip: RneFunctionComponent<ChipProps> = ({
         { fontSize: 14, paddingHorizontal: 2 },
         titleStyle,
       ])}
-      buttonStyle={StyleSheet.flatten([{ borderRadius: 30 }, buttonStyle])}
+      radius={30}
+      buttonStyle={buttonStyle}
       {...(onPress === undefined
         ? {
             TouchableComponent: TouchableWithoutFeedback,

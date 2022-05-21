@@ -14,41 +14,34 @@ import {
 } from 'react-native';
 import { InlinePressableProps, RneFunctionComponent } from '../helpers';
 
-export type ImageProps = RNImageProps &
-  InlinePressableProps & {
-    /** Define the component passed to image.
-     *  @default `Press handlers present then Pressable else View`
-     */
-    Component?: typeof React.Component;
+export interface ImageProps extends RNImageProps, InlinePressableProps {
+  /** Define the component passed to image.
+   *  @default `Press handlers present then Pressable else View`
+   */
+  Component?: typeof React.Component;
 
-    /** Callback function when pressing component. */
-    onPress?(): void;
+  /** Specify a different component as the Image component. */
+  ImageComponent?: typeof React.Component;
 
-    /** Callback function when long pressing component. */
-    onLongPress?(): void;
+  /** Content to load when Image is rendering.
+   */
+  PlaceholderContent?: React.ReactElement;
 
-    /** Specify a different component as the Image component. */
-    ImageComponent?: typeof React.Component;
+  /** Additional styling for the container. */
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /** Content to load when Image is rendering.
-     */
-    PlaceholderContent?: React.ReactElement;
+  /** Additional styling for the children container. */
+  childrenContainerStyle?: StyleProp<ViewStyle>;
 
-    /** Additional styling for the container. */
-    containerStyle?: StyleProp<ViewStyle>;
+  /** Additional styling for the placeholder container. */
+  placeholderStyle?: StyleProp<ViewStyle>;
 
-    /** Additional styling for the children container. */
-    childrenContainerStyle?: StyleProp<ViewStyle>;
+  /** Perform fade transition on image load. */
+  transition?: boolean;
 
-    /** Additional styling for the placeholder container. */
-    placeholderStyle?: StyleProp<ViewStyle>;
-
-    /** Perform fade transition on image load. */
-    transition?: boolean;
-
-    /** Perform fade transition on image load. */
-    transitionDuration?: number;
-  };
+  /** Perform fade transition on image load. */
+  transitionDuration?: number;
+}
 
 /** Drop-in replacement for the standard React Native Image component that displays
 images with a placeholder and smooth image load transitioning. */

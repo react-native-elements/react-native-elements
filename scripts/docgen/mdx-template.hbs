@@ -1,0 +1,96 @@
+---
+id: {{id}}
+title: {{title}}
+---
+
+import {IconsStyle} from '@site/src/components/Docs_Icons';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+{{#if usageFileExists}}
+import Usage from "../component_usage/{{title}}.mdx";
+{{/if}}
+{{#if playgroundExists}}
+import Play from '@site/playground/{{title}}/{{id}}.playground';
+{{/if}}
+
+<IconsStyle/>
+
+{{{description}}}
+
+
+## Import
+
+```tsx
+import { {{parentComponent}} } from '@rneui/themed'
+```
+
+
+{{#if installation}}
+## Installation
+
+<Tabs
+  groupId="component"
+  defaultValue="npm"
+  values={[
+    { label: "NPM", value: "npm" },
+    { label: "Yarn", value: "yarn" },
+  ]}
+>
+<TabItem value="npm">
+  
+```bash
+npm install @rneui/{{installation}}
+```
+
+</TabItem>
+<TabItem value="yarn">
+
+```bash
+yarn add @rneui/{{installation}}
+```
+
+</TabItem>
+</Tabs>
+{{/if}}
+
+{{#if showUsage}}
+## Usage
+
+{{{usage}}}
+
+{{#if usageFileExists}}
+<Usage/>
+{{/if}}
+
+
+{{/if}}
+
+{{#if showProps}}
+## Props
+{{#if includeProps}}
+:::note
+Includes all {{includeProps}} props.
+:::
+{{/if}}
+{{#if props}}
+<div class='table-responsive'>
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+{{#each props}}
+{{#with this}}
+|{{{name}}}|{{{type}}}|{{{default}}}|{{{description}}}|
+{{/with}}
+{{/each}}
+
+</div>
+{{/if}}
+{{/if}}
+
+
+{{#if playgroundExists}}
+## Playground
+
+<Play/>
+
+{{/if}}

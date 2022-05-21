@@ -10,11 +10,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-import {
-  Header as HeaderRNE,
-  HeaderProps,
-  Icon,
-} from '@react-native-elements/themed';
+import { Header as HeaderRNE, HeaderProps, Icon } from '@rneui/themed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 type HeaderComponentProps = {
@@ -32,13 +28,13 @@ const Header: React.FunctionComponent<HeaderComponentProps> = (props) => {
   const navigation = useNavigation<DrawerNavigationProp<ParamList, 'Detail'>>();
 
   const docsNavigate = () => {
-    Linking.openURL(`https://reactnativeelements.com/docs/${props.view}`);
+    Linking.openURL(
+      `https://reactnativeelements.com/docs/components/${props.view}`
+    );
   };
 
   const playgroundNavigate = () => {
-    Linking.openURL(
-      `https://@react-native-elements/themed.js.org/#/${props.view}`
-    );
+    Linking.openURL(`https://react-native-elements.js.org/#/${props.view}`);
   };
 
   return (

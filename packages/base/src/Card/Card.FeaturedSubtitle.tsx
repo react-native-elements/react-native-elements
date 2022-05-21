@@ -1,11 +1,11 @@
 import React from 'react';
 import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { Text, TextProps } from '../Text';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type CardFeaturedSubtitleProps = TextProps;
+export interface CardFeaturedSubtitleProps extends TextProps {}
 
 /** Add a featured subtitle to the Card.
  * This, Receives all [Text](text#props) props. */

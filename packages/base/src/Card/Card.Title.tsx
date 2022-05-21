@@ -1,11 +1,11 @@
 import React from 'react';
 import { Platform, StyleSheet, TextStyle } from 'react-native';
 import normalize from '../helpers/normalizeText';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { Text, TextProps } from '../Text';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-type CardTitleProps = TextProps;
+export interface CardTitleProps extends TextProps {}
 
 /** Add a general title to the Card.
  * This, Receives all [Text](text#props) props. */

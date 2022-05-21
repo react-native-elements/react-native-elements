@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Overlay, Icon } from '@react-native-elements/themed';
+import { Button, Overlay, Icon } from '@rneui/themed';
 import { View, Text, StyleSheet } from 'react-native';
 import { Header } from '../components/header';
 

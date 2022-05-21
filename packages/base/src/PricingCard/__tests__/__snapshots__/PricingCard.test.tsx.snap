@@ -5,7 +5,6 @@ exports[`PricingCard component should match snapshot 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "backgroundColor": "#ffffff",
@@ -23,7 +22,6 @@ exports[`PricingCard component should match snapshot 1`] = `
         "shadowRadius": 0.5,
       }
     }
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -107,8 +105,10 @@ exports[`PricingCard component should match snapshot 1`] = `
         style={
           Array [
             Object {
-              "borderRadius": 3,
               "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 2,
             },
             undefined,
             false,
@@ -125,7 +125,9 @@ exports[`PricingCard component should match snapshot 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
+          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -146,13 +148,14 @@ exports[`PricingCard component should match snapshot 1`] = `
                 "alignItems": "center",
                 "backgroundColor": "#2089dc",
                 "borderColor": "#2089dc",
-                "borderRadius": 3,
+                "borderRadius": 2,
                 "borderWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "center",
                 "marginBottom": 10,
                 "marginTop": 15,
                 "padding": 8,
+                "paddingHorizontal": 10,
               }
             }
           >
@@ -174,9 +177,7 @@ exports[`PricingCard component should match snapshot 1`] = `
                   }
                 }
                 disabled={false}
-                replaceTheme={[Function]}
                 testID="RNE__ICON__CONTAINER_ACTION"
-                updateTheme={[Function]}
               >
                 <View
                   style={
@@ -239,7 +240,6 @@ exports[`PricingCard component should render with props 1`] = `
   testID="wrapper"
 >
   <View
-    replaceTheme={[Function]}
     style={
       Object {
         "backgroundColor": "peru",
@@ -257,7 +257,6 @@ exports[`PricingCard component should render with props 1`] = `
         "shadowRadius": 0.5,
       }
     }
-    updateTheme={[Function]}
   >
     <View
       style={
@@ -346,8 +345,10 @@ exports[`PricingCard component should render with props 1`] = `
         style={
           Array [
             Object {
-              "borderRadius": 3,
               "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 2,
             },
             undefined,
             false,
@@ -364,7 +365,9 @@ exports[`PricingCard component should render with props 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
+          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -385,13 +388,14 @@ exports[`PricingCard component should render with props 1`] = `
                 "alignItems": "center",
                 "backgroundColor": "#2089dc",
                 "borderColor": "#2089dc",
-                "borderRadius": 3,
+                "borderRadius": 2,
                 "borderWidth": 0,
                 "flexDirection": "row",
                 "justifyContent": "center",
                 "marginBottom": 10,
                 "marginTop": 15,
                 "padding": 8,
+                "paddingHorizontal": 10,
               }
             }
           >
@@ -413,9 +417,7 @@ exports[`PricingCard component should render with props 1`] = `
                   }
                 }
                 disabled={false}
-                replaceTheme={[Function]}
                 testID="RNE__ICON__CONTAINER_ACTION"
-                updateTheme={[Function]}
               >
                 <View
                   style={

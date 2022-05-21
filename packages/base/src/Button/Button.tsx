@@ -1,5 +1,5 @@
 import Color from 'color';
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import {
   ActivityIndicator,
   ActivityIndicatorProps,
@@ -20,7 +20,9 @@ import {
   defaultTheme,
   renderNode,
   Theme,
+  StringOmit,
   RneFunctionComponent,
+  ThemeSpacing,
 } from '../helpers';
 import { IconNode, Icon } from '../Icon';
 import { TextProps } from '../Text';
@@ -40,96 +42,147 @@ const positionStyle = {
   right: 'row-reverse',
 };
 
-export type ButtonProps = TouchableOpacityProps &
-  TouchableNativeFeedbackProps & {
-    /** Add button title. */
-    title?: string | React.ReactElement<{}>;
+export interface ButtonProps
+  extends TouchableOpacityProps,
+    TouchableNativeFeedbackProps {
+  /** Add button title. */
+  title?: string | React.ReactElement<{}>;
 
-    /** Add additional styling for title component. */
-    titleStyle?: StyleProp<TextStyle>;
+  /** Add additional styling for title component. */
+  titleStyle?: StyleProp<TextStyle>;
 
-    /** Add additional props for Text component. */
-    titleProps?: TextProps;
+  /** Add additional props for Text component. */
+  titleProps?: TextProps;
 
-    /** Add additional styling for button component. */
-    buttonStyle?: StyleProp<ViewStyle>;
+  /** Add additional styling for button component. */
+  buttonStyle?: StyleProp<ViewStyle>;
 
-    /** Type of button. */
-    type?: 'solid' | 'clear' | 'outline';
+  /** Type of button. */
+  type?: 'solid' | 'clear' | 'outline';
 
-    /** Prop to display a loading spinner. */
-    loading?: boolean;
+  /** Prop to display a loading spinner. */
+  loading?: boolean;
 
-    /** Add additional styling for loading component. */
-    loadingStyle?: StyleProp<ViewStyle>;
+  /** Add additional styling for loading component. */
+  loadingStyle?: StyleProp<ViewStyle>;
 
-    /** Add additional props for ActivityIndicator component. */
-    loadingProps?: ActivityIndicatorProps;
+  /** Add additional props for ActivityIndicator component. */
+  loadingProps?: ActivityIndicatorProps;
 
-    /** Styling for Component container. */
-    containerStyle?: StyleProp<ViewStyle>;
+  /** Styling for Component container. */
+  containerStyle?: StyleProp<ViewStyle>;
 
-    /** Displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component. */
-    icon?: IconNode;
+  /** Displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component. */
+  icon?: IconNode;
 
-    /** Styling for Icon Component container. */
-    iconContainerStyle?: StyleProp<ViewStyle>;
+  /** Styling for Icon Component container. */
+  iconContainerStyle?: StyleProp<ViewStyle>;
 
-    /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
-    iconRight?: boolean;
+  /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
+  iconRight?: boolean;
 
-    /** Displays a linear gradient. See [usage](#lineargradient-usage). */
-    linearGradientProps?: object;
+  /** Displays a linear gradient. See [usage](#lineargradient-usage). */
+  linearGradientProps?: object;
 
-    /** Component for user interaction. */
-    TouchableComponent?: typeof React.Component;
+  /** Component for user interaction. */
+  TouchableComponent?: typeof React.Component;
 
-    /** Component for container. */
-    ViewComponent?: typeof React.Component;
+  /** Component for container. */
+  ViewComponent?: typeof React.Component;
 
-    /** Disables user interaction. */
-    disabled?: boolean;
+  /** Disables user interaction. */
+  disabled?: boolean;
 
-    /** Style of the button when disabled. */
-    disabledStyle?: StyleProp<ViewStyle>;
+  /** Style of the button when disabled. */
+  disabledStyle?: StyleProp<ViewStyle>;
 
-    /** Style of the title when disabled. */
-    disabledTitleStyle?: StyleProp<TextStyle>;
+  /** Style of the title when disabled. */
+  disabledTitleStyle?: StyleProp<TextStyle>;
 
-    /** Add raised button styling (optional). Has no effect if `type="clear"`. */
-    raised?: boolean;
+  /** Add raised button styling (optional). Has no effect if `type="clear"`. */
+  raised?: boolean;
 
-    /** Displays Icon to the position mentioned. Needs to be used along with `icon` prop. */
-    iconPosition?: 'left' | 'right' | 'top' | 'bottom';
-  };
+  /** Displays Icon to the position mentioned. Needs to be used along with `icon` prop. */
+  iconPosition?: 'left' | 'right' | 'top' | 'bottom';
 
-/** Buttons are touchable elements used to interact with the screen and to perform and operation.
+  /** Uppercase button title*/
+  uppercase?: boolean;
+
+  /** Radius of button
+   * @type   number | sm | md | lg
+   */
+  radius?: number | StringOmit<keyof ThemeSpacing>;
+
+  /** Button size */
+  size?: 'sm' | 'md' | 'lg';
+
+  /**
+   * Color of Button
+   * @type   string | primary | secondary | success | warning | error
+   */
+  color?: StringOmit<'primary' | 'secondary' | 'success' | 'error' | 'warning'>;
+}
+
+/**
+ * Buttons are touchable elements used to interact with the screen and to perform and operation.
  * They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
  * Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
+ *
  * %jsx <Button title="Solid Button" />
- * @tabName Types
- * @tabLabel ['Solid','Outline','Clear']
- * @tabItem
- * <Button title="Solid" type="solid" />
+ *
+ * @usage
+ *
+ * ### Variants
+ * ```tsx live
+ *  <Stack row align="center" spacing={4}>
+ * <Button title="Solid" />
  * <Button title="Outline" type="outline" />
  * <Button title="Clear" type="clear" />
- * @usage
+ * </Stack>
+ * ```
+ * ### Size
+ *
+ * ```tsx live
+ *  <Stack row align="center" spacing={4}>
+ *            <Button size="sm">Small</Button>
+ *            <Button size="md">Medium</Button>
+ *             <Button size="lg">Large</Button>
+ *  </Stack>
+ * ```
+ * ### Colors
+ *
+ * ```tsx live
+ *  <Stack row align="center" spacing={4}>
+ *        <Button>Primary</Button>
+ *        <Button color="secondary">Secondary</Button>
+ *        <Button color="warning">Warning</Button>
+          <Button color="error">Error</Button>
+ *  </Stack>
+ * ```
  * ### Button with icon
- * %live <Button title="Solid" type="solid" icon="home" />
+ * ```tsx live
+ *  <Button type="solid" ><Icon name='home' color='white'/>Icon</Button>
+ * ```
  * ### Button with right icon
- * %live <Button title="Solid" type="solid" icon="home" iconRight />
+ * ```tsx live
+ *  <Button type="solid" >Icon<Icon name='home' color='white'/></Button>
+ * ```
  * ### Button with loading spinner
  * %live <Button title="Solid" type="solid" loading />
  */
 export const Button: RneFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
-  onPress = () => console.log('Please attach a method to this component'),
+  onPress = () => console.warn('Please attach a method to this component'),
   buttonStyle,
   type = 'solid',
   loading = false,
   loadingStyle,
   loadingProps: passedLoadingProps,
+  size = 'md',
+  radius = 'xs',
+  uppercase = false,
+  color: buttonColor = 'primary',
   title = '',
   titleProps,
   titleStyle: passedTitleStyle,
@@ -144,11 +197,12 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
   ViewComponent = View,
   theme = defaultTheme,
   iconPosition = 'left',
+  children = title,
   ...rest
 }) => {
   useEffect(() => {
     if (linearGradientProps && !ViewComponent) {
-      console.error(
+      console.warn(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
     }
@@ -171,23 +225,36 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
       default: TouchableOpacity,
     });
 
-  const titleStyle: StyleProp<TextStyle> = StyleSheet.flatten([
-    {
-      color: type === 'solid' ? 'white' : theme?.colors?.primary,
-    },
-    styles.title,
-    passedTitleStyle,
-    disabled && {
-      color: color(theme?.colors?.disabled).darken(0.3).string(),
-    },
-    disabled && disabledTitleStyle,
-  ]);
+  const titleStyle: StyleProp<TextStyle> = useMemo(
+    () =>
+      StyleSheet.flatten([
+        {
+          color: type === 'solid' ? 'white' : theme?.colors?.primary,
+        },
+        uppercase && { textTransform: 'uppercase' },
+        styles.title,
+        passedTitleStyle,
+        disabled && {
+          color: color(theme?.colors?.disabled).darken(0.3).string(),
+        },
+        disabled && disabledTitleStyle,
+      ]),
+    [
+      disabled,
+      disabledTitleStyle,
+      passedTitleStyle,
+      theme?.colors?.disabled,
+      theme?.colors?.primary,
+      type,
+      uppercase,
+    ]
+  );
 
   const background =
     Platform.OS === 'android' && Platform.Version >= 21
       ? TouchableNativeFeedback.Ripple(
           Color(titleStyle?.color?.toString()).alpha(0.32).rgb().string(),
-          true
+          false
         )
       : undefined;
 
@@ -201,10 +268,16 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
     busy: !!loading,
   };
 
+  const borderRadius =
+    Number(
+      theme.spacing[radius as keyof typeof theme.spacing] ?? (radius || '0')
+    ) || 0;
+
   return (
     <View
       style={[
         styles.container,
+        { borderRadius },
         containerStyle,
         raised && !disabled && type !== 'clear' && styles.raised,
       ]}
@@ -224,16 +297,20 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
           {...linearGradientProps}
           style={StyleSheet.flatten([
             styles.button,
-            styles.buttonOrientation,
             {
+              padding: theme.spacing[size],
+              paddingHorizontal: theme.spacing[size] + 2,
+              borderRadius,
               // flex direction based on iconPosition
               // if iconRight is true, default to right
               flexDirection:
                 positionStyle[iconRight ? 'right' : iconPosition] || 'row',
-            },
-            {
               backgroundColor:
-                type === 'solid' ? theme?.colors?.primary : 'transparent',
+                type === 'solid'
+                  ? theme.colors[buttonColor as PropertyKey] ||
+                    buttonColor ||
+                    theme?.colors?.primary
+                  : 'transparent',
               borderColor: theme?.colors?.primary,
               borderWidth: type === 'outline' ? StyleSheet.hairlineWidth : 0,
             },
@@ -271,11 +348,18 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
             })}
           {/* Title for Button, hide while loading */}
           {!loading &&
-            !!title &&
-            renderNode(Text, title, {
-              style: titleStyle,
-              ...titleProps,
-            })}
+            React.Children.toArray(children).map((child, index) => (
+              <React.Fragment key={index}>
+                {typeof child === 'string'
+                  ? renderNode(Text, child, {
+                      style: {
+                        ...titleStyle,
+                      },
+                      ...titleProps,
+                    })
+                  : child}
+              </React.Fragment>
+            ))}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>
@@ -287,18 +371,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 3,
-    padding: 8,
-  },
-  buttonOrientation: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 3,
-    padding: 8,
+    padding: defaultTheme.spacing.md,
+    paddingHorizontal: defaultTheme.spacing.lg,
   },
   container: {
     overflow: 'hidden',
-    borderRadius: 3,
   },
   title: {
     fontSize: 16,

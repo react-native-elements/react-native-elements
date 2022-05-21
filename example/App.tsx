@@ -1,26 +1,12 @@
-import React, { useState, useReducer, useEffect } from 'react';
-import { ThemeProvider } from '@react-native-elements/themed';
-import { useColorScheme } from 'react-native-appearance';
+import React, { useState } from 'react';
+import { ThemeProvider, createTheme } from '@rneui/themed';
 import RootNavigator from './src/navigation/RootNavigator';
 import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
 import vectorFonts from './src/helpers/vector-fonts';
-import {
-  ThemeReducer,
-  initialState,
-  ThemeReducerContext,
-} from './src/helpers/ThemeReducer';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default () => {
-  const [ThemeState, dispatch] = useReducer(ThemeReducer, initialState);
-  const colorScheme = useColorScheme();
-
-  useEffect(() => {
-    if (colorScheme === 'dark') {
-      dispatch({ type: 'set-theme', payload: 'dark' });
-    }
-  }, [colorScheme]);
-
   const [isReady, setIsReady] = useState(false);
 
   const loadAssetsAsync = async () => {
@@ -50,21 +36,27 @@ export default () => {
 
   if (!isReady) {
     return (
-      <AppLoading
-        startAsync={loadAssetsAsync}
-        onFinish={() => {
-          setIsReady(true);
-        }}
-        onError={console.warn}
-      />
+      <SafeAreaProvider>
+        <AppLoading
+          startAsync={loadAssetsAsync}
+          onFinish={() => {
+            setIsReady(true);
+          }}
+          onError={console.warn}
+        />
+      </SafeAreaProvider>
     );
   }
 
   return (
-    <ThemeReducerContext.Provider value={{ ThemeState, dispatch }}>
-      <ThemeProvider useDark={ThemeState.themeMode === 'dark' ? true : false}>
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
         <RootNavigator />
       </ThemeProvider>
-    </ThemeReducerContext.Provider>
+    </SafeAreaProvider>
   );
 };
+
+const theme = createTheme({
+  mode: 'dark',
+});

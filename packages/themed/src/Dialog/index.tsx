@@ -2,38 +2,48 @@ import { withTheme } from '../config';
 import {
   DialogLoading,
   DialogLoadingProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Loading';
+} from '@rneui/base/dist/Dialog/Dialog.Loading';
 import {
   DialogTitle,
   DialogTitleProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Title';
-import { DialogButton } from '@react-native-elements/base/dist/Dialog/Dialog.Button';
+} from '@rneui/base/dist/Dialog/Dialog.Title';
+import {
+  DialogButton,
+  DialogButtonProps,
+} from '@rneui/base/dist/Dialog/Dialog.Button';
 import {
   DialogActions,
   DialogActionsProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog.Actions';
-import {
-  DialogBase,
-  DialogBaseProps,
-} from '@react-native-elements/base/dist/Dialog/Dialog';
+} from '@rneui/base/dist/Dialog/Dialog.Actions';
+import { DialogBase, DialogProps } from '@rneui/base/dist/Dialog/Dialog';
 
-const ThemedDialogLoading = withTheme(DialogLoading, 'DialogLoading');
-const ThemedDialogTitle = withTheme(DialogTitle, 'DialogTitle');
-const ThemedDialogButton = withTheme(DialogButton, 'DialogButton');
-const ThemedDialogActions = withTheme(DialogActions, 'DialogActions');
+const ThemedDialogLoading = withTheme<DialogLoadingProps>(
+  DialogLoading,
+  'DialogLoading'
+);
+const ThemedDialogTitle = withTheme<DialogTitleProps>(
+  DialogTitle,
+  'DialogTitle'
+);
+const ThemedDialogButton = withTheme<DialogButtonProps>(
+  DialogButton,
+  'DialogButton'
+);
+const ThemedDialogActions = withTheme<DialogActionsProps>(
+  DialogActions,
+  'DialogActions'
+);
 
 export type {
-  DialogBaseProps as DialogProps,
+  DialogProps,
   DialogLoadingProps,
   DialogTitleProps,
   DialogActionsProps,
 };
 
-const ThemedDialog = Object.assign(withTheme(DialogBase, 'Dialog'), {
+export default Object.assign(withTheme<DialogProps>(DialogBase, 'Dialog'), {
   Loading: ThemedDialogLoading,
   Title: ThemedDialogTitle,
   Actions: ThemedDialogActions,
   Button: ThemedDialogButton,
 });
-
-export default ThemedDialog;

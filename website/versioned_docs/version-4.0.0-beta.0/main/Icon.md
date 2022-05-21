@@ -33,6 +33,7 @@ They are also used for displaying information.
 - [iconProps](#iconprops)
 - [iconStyle](#iconstyle)
 - [name](#name)
+- [pressableProps](#pressableprops)
 - [raised](#raised)
 - [reverse](#reverse)
 - [reverseColor](#reversecolor)
@@ -157,13 +158,20 @@ Good for setting margins or a different color.
 
 Name of the icon to show
 
-See Icon Explorer app
+See [Icon Explorer app](https://github.com/oblador/react-native-vector-icons/tree/master/Examples/IconExplorer)
 
-{@link https://github.com/oblador/react-native-vector-icons/tree/master/Examples/IconExplorer}
 
 | Type   | Default |
 | ------ | ------- |
 | string | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---
 

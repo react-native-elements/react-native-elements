@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '..';
+import { Card } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Image } from '../../Image';
 

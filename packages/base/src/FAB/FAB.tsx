@@ -3,7 +3,7 @@ import { StyleSheet, Animated, StyleProp, ViewStyle } from 'react-native';
 import { Button, ButtonProps } from '../Button';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
-export type FABProps = ButtonProps & {
+export interface FABProps extends Omit<ButtonProps, 'size' | 'color'> {
   /** Change the color of the FAB. */
   color?: string;
 
@@ -21,7 +21,7 @@ export type FABProps = ButtonProps & {
 
   /** Style for FAB */
   style?: StyleProp<ViewStyle>;
-};
+}
 
 /** A floating action button (FAB) performs the primary, or most common, action on a screen.
  * It appears in front of all screen content, typically as a circular shape with an icon in its center.
@@ -73,7 +73,9 @@ export const FAB: RneFunctionComponent<FABProps> = ({
       <Button
         buttonStyle={StyleSheet.flatten([
           rest.title
-            ? styles.extendedLabel
+            ? size === 'small'
+              ? styles.smallExtendedLabel
+              : styles.extendedLabel
             : size === 'small'
             ? styles.smallFAB
             : styles.largeFAB,
@@ -139,6 +141,10 @@ const styles = StyleSheet.create({
   extendedLabel: {
     height: 48,
     paddingHorizontal: 16,
+  },
+  smallExtendedLabel: {
+    height: 40,
+    paddingHorizontal: 12,
   },
   disabled: {
     elevation: 0,

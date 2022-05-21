@@ -3,7 +3,7 @@ import { StyleSheet, TextInput } from 'react-native';
 import { Theme } from '../helpers';
 import { Input, InputProps } from '../Input';
 
-export type ListItemInputProps = InputProps;
+export interface ListItemInputProps extends InputProps {}
 
 /** This allows adding an Text Input within the ListItem.
  * This, Receives all [Input](Input.mdx#props) props. */

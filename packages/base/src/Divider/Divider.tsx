@@ -11,7 +11,7 @@ import {
 import { defaultTheme } from '../helpers';
 import { RneFunctionComponent } from '../helpers';
 
-export type DividerProps = ViewProps & {
+export interface DividerProps extends ViewProps {
   /**  The color of the component. */
   color?: string;
 
@@ -35,7 +35,7 @@ export type DividerProps = ViewProps & {
 
   /**  Apply width to the divider. */
   width?: number;
-};
+}
 
 /**  Dividers are visual separators of content.
  * Use Divider when you want to make a distinction between sections of content.

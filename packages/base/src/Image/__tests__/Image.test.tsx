@@ -1,9 +1,7 @@
 import React from 'react';
 import { Image as RNImage, Text } from 'react-native';
-import Image from '../index';
+import { Image } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-
-jest.useFakeTimers();
 
 describe('Image Component', () => {
   const FAKE_URI = 'https://i.imgur.com/0y8Ftya.jpg';
@@ -28,23 +26,6 @@ describe('Image Component', () => {
     );
     const image = queryByTestId('RNE__Image');
     expect(image.props.source.uri).toBe(FAKE_URI);
-  });
-
-  it('should apply values from theme', () => {
-    const textTheme = {
-      Image: {
-        placeholderStyle: {
-          backgroundColor: 'red',
-        },
-      },
-    };
-    const { queryByTestId } = renderWithWrapper(
-      <Image source={{ uri: FAKE_URI }} />,
-      '',
-      textTheme
-    );
-    const placeholder = queryByTestId('RNE__Image__placeholder');
-    expect(placeholder.props.style.backgroundColor).toBe('red');
   });
 
   it('should render without the transition', () => {

@@ -73,7 +73,7 @@ enum EventTypes {
   onSlidingComplete = 'onSlidingComplete',
 }
 
-export type SliderProps = {
+export interface SliderProps {
   /** Initial value of the slider. */
   value?: number;
 
@@ -142,9 +142,11 @@ export type SliderProps = {
     | Animated.TimingAnimationConfig
     | Animated.SpringAnimationConfig;
 
-  /** Apply style to the container of the slider. */
+  /** Apply style to the container of the slider.
+   * @type Style
+   */
   containerStyle?: typeof styles;
-};
+}
 
 /** Sliders allow users to select a value from a fixed set of values using drag utility.*/
 export const Slider: RneFunctionComponent<SliderProps> = ({

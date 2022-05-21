@@ -7,7 +7,7 @@ import {
   TextStyle,
   StyleProp,
 } from 'react-native';
-import { fonts } from '../helpers/index-config';
+import { fonts } from '../helpers';
 import { defaultTheme, patchWebProps, RneFunctionComponent } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
@@ -40,7 +40,8 @@ export interface TextProps extends TextProperties {
   h4Style?: StyleProp<TextStyle>;
 }
 
-/** Text displays words and characters of various sizes. */
+/** Text displays words and characters of various sizes.
+ */
 export const Text: RneFunctionComponent<TextProps> = ({
   style = {},
   h1 = false,

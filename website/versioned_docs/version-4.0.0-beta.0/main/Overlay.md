@@ -28,6 +28,7 @@ Overlays are an easy way to inform or request information from the user.
 - [isVisible](#isvisible)
 - [onBackdropPress](#onbackdroppress)
 - [overlayStyle](#overlaystyle)
+- [pressableProps](#pressableprops)
 
 ## Reference
 
@@ -90,5 +91,13 @@ Style of the actual overlay.
 | Type               | Default |
 | ------------------ | ------- |
 | View style(Object) | None    |
+
+---
+
+#### pressableProps
+
+| Type                                                                            | Default |
+| ------------------------------------------------------------------------------- | ------- |
+| Omit<PressableProps, "onPress" or "onLongPress" or "onPressIn" or "onPressOut"> | None    |
 
 ---

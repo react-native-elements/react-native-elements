@@ -1,29 +1,41 @@
 import { Platform, Dimensions, PressableProps, ColorValue } from 'react-native';
 import color from 'color';
 import renderNode from './renderNode';
-import getIconType from './getIconType';
+import getIconType, { registerCustomIconType } from './getIconType';
 import normalizeText from './normalizeText';
-import { colors, Colors } from './index-config';
+import { Colors, lightColors, darkColors } from './colors';
+import { InlinePressableProps } from './InlinePressableProps';
+import React from 'react';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
 
+export type StringOmit<K extends string> = K | Omit<string, K>;
+
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
-    theme?: {
-      colors: Colors;
-    };
+    theme?: Theme;
   }
 >;
 
-export const defaultTheme = {
-  colors,
+export interface ThemeSpacing {
+  xs: number;
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
+}
+
+export const defaultTheme: Theme = {
+  colors: lightColors,
+  spacing: { xs: 2, sm: 4, md: 8, lg: 12, xl: 24 },
 };
 
 export type Theme = {
   colors: Colors;
+  spacing: ThemeSpacing;
 };
 
 export const androidRipple = (
@@ -45,6 +57,8 @@ export const patchWebProps = <T extends Record<any, any>>({
   return rest;
 };
 
+export type { Colors, InlinePressableProps };
+
 export {
   renderNode,
   getIconType,
@@ -52,16 +66,13 @@ export {
   ScreenWidth,
   ScreenHeight,
   isIOS,
+  lightColors,
+  darkColors,
   color,
+  registerCustomIconType,
 };
 
-type Inline<T, K extends keyof T> = Partial<
-  {
-    pressableProps: Omit<T, K>;
-  } & Pick<T, K>
->;
+export { default as BackgroundImage } from './BackgroundImage';
+export { default as fonts } from './fonts';
 
-export type InlinePressableProps = Inline<
-  PressableProps,
-  'onPress' | 'onLongPress' | 'onPressIn' | 'onPressOut'
->;
+export { makeStyles } from './makeStyles';

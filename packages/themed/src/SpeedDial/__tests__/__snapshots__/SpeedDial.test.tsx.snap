@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Speed Dial Component should match snapshot 1`] = `
+exports[`Speed Dial Component should render 1`] = `
 <View
   testID="wrapper"
 >
@@ -22,6 +22,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
   >
     <View
       accessible={true}
+      collapsable={false}
       focusable={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -46,6 +47,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       }
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "backgroundColor": "rgba(36, 36, 36, 0.6)",
@@ -63,12 +66,17 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       emulateUnlessSupported={true}
       pointerEvents="box-none"
       style={
-        Object {
-          "alignItems": "flex-end",
-        }
+        Array [
+          Object {
+            "alignItems": "flex-end",
+          },
+          undefined,
+        ]
       }
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         pointerEvents="auto"
         style={
           Object {
@@ -82,14 +90,29 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         }
       >
         <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-              "marginBottom": 16,
-              "marginRight": 24,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "marginBottom": 16,
+                "marginRight": 24,
+              },
+              false,
+            ]
           }
         >
           <Text
@@ -112,6 +135,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             Add
           </Text>
           <View
+            collapsable={false}
+            nativeID="animatedComponent"
             style={
               Object {
                 "alignItems": "center",
@@ -131,8 +156,10 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "borderRadius": 2,
                   },
                   Object {
                     "borderRadius": 28,
@@ -152,7 +179,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   }
                 }
                 accessible={true}
+                collapsable={false}
                 focusable={true}
+                nativeID="animatedComponent"
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -170,14 +199,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#ca71eb",
+                      "backgroundColor": "#03dac4",
                       "borderColor": "#2089dc",
-                      "borderRadius": 3,
+                      "borderRadius": 2,
                       "borderWidth": 0,
                       "flexDirection": "row",
                       "height": 40,
                       "justifyContent": "center",
                       "padding": 8,
+                      "paddingHorizontal": 10,
                       "width": 40,
                     }
                   }
@@ -204,9 +234,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                         }
                       }
                       disabled={false}
-                      replaceTheme={[Function]}
                       testID="RNE__ICON__CONTAINER_ACTION"
-                      updateTheme={[Function]}
                     >
                       <View
                         style={
@@ -251,6 +279,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         pointerEvents="auto"
         style={
           Object {
@@ -264,14 +294,29 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         }
       >
         <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-              "marginBottom": 16,
-              "marginRight": 24,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "marginBottom": 16,
+                "marginRight": 24,
+              },
+              false,
+            ]
           }
         >
           <Text
@@ -294,6 +339,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             Delete
           </Text>
           <View
+            collapsable={false}
+            nativeID="animatedComponent"
             style={
               Object {
                 "alignItems": "center",
@@ -313,8 +360,10 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "borderRadius": 2,
                   },
                   Object {
                     "borderRadius": 28,
@@ -334,7 +383,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   }
                 }
                 accessible={true}
+                collapsable={false}
                 focusable={true}
+                nativeID="animatedComponent"
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -352,14 +403,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#ca71eb",
+                      "backgroundColor": "#03dac4",
                       "borderColor": "#2089dc",
-                      "borderRadius": 3,
+                      "borderRadius": 2,
                       "borderWidth": 0,
                       "flexDirection": "row",
                       "height": 40,
                       "justifyContent": "center",
                       "padding": 8,
+                      "paddingHorizontal": 10,
                       "width": 40,
                     }
                   }
@@ -386,9 +438,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                         }
                       }
                       disabled={false}
-                      replaceTheme={[Function]}
                       testID="RNE__ICON__CONTAINER_ACTION"
-                      updateTheme={[Function]}
                     >
                       <View
                         style={
@@ -433,6 +483,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -454,8 +506,10 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           style={
             Array [
               Object {
-                "borderRadius": 3,
                 "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 2,
               },
               Object {
                 "borderRadius": 28,
@@ -475,7 +529,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               }
             }
             accessible={true}
+            collapsable={false}
             focusable={true}
+            nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -493,14 +549,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#ca71eb",
+                  "backgroundColor": "#03dac4",
                   "borderColor": "#2089dc",
-                  "borderRadius": 3,
+                  "borderRadius": 2,
                   "borderWidth": 0,
                   "flexDirection": "row",
                   "height": 56,
                   "justifyContent": "center",
                   "padding": 16,
+                  "paddingHorizontal": 10,
                   "width": 56,
                 }
               }
@@ -527,9 +584,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     }
                   }
                   disabled={false}
-                  replaceTheme={[Function]}
                   testID="RNE__ICON__CONTAINER_ACTION"
-                  updateTheme={[Function]}
                 >
                   <View
                     style={

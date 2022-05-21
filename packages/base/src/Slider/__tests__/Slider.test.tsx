@@ -1,7 +1,6 @@
 import React from 'react';
-import Slider from '../index';
+import { Slider } from '../index';
 import { act, fireEvent, renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../..';
 
 describe('Slider component', () => {
   it('should match snapshot', () => {
@@ -68,22 +67,6 @@ describe('Slider component', () => {
     expect(thumb.props.style).toMatchObject({
       // thumb should not go below 0
       transform: [{ translateX: 0 }],
-    });
-  });
-
-  it('should apply values from theme', () => {
-    const theme: Partial<FullTheme> = {
-      Slider: {
-        thumbTintColor: 'blue',
-      },
-    };
-    const { wrapper } = renderWithWrapper(
-      <Slider value={20} minimumValue={0} maximumValue={100} />,
-      'RNE__Slider_Thumb',
-      theme
-    );
-    expect(wrapper.props.style).toMatchObject({
-      backgroundColor: 'blue',
     });
   });
 

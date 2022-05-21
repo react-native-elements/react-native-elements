@@ -3,17 +3,19 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@react-native-elements/*": ["./packages/*/src"]
+      "@rneui/*": ["./packages/*/src"],
+      "@rneui/base/dist/*": ["./packages/base/src/*"]
     },
+    "removeComments": true,
     "composite": true,
     "declaration": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-native",
+    "jsx": "react",
     "lib": ["esnext", "dom"],
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -21,14 +23,14 @@
     "noStrictGenericChecks": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "target": "esnext",
+    "target": "ES6",
     "allowJs": true
   },
   "exclude": [
     "node_modules",
     "website",
     "example",
-    "packages/*/.ci",
+    "coverage",
     "packages/*/src/**/__tests__"
   ]
 }

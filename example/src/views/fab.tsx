@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { FAB } from '@react-native-elements/themed';
+import { FAB } from '@rneui/themed';
 import { Header } from '../components/header';
 
 export default () => {
@@ -41,6 +41,7 @@ export default () => {
           title="Navigate"
           upperCase
           icon={{ name: 'place', color: 'white' }}
+          size="small"
         />
 
         <Text style={{ color: '#397af8', paddingVertical: 10 }}>Disabled</Text>

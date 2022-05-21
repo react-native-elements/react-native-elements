@@ -24,7 +24,7 @@ type ButtonObject = {
   element: React.ElementType<any & { isSelected?: boolean }>;
 };
 
-export type ButtonGroupProps = InlinePressableProps & {
+export interface ButtonGroupProps extends InlinePressableProps {
   /** Button for the component. */
   button?: object;
 
@@ -102,7 +102,7 @@ export type ButtonGroupProps = InlinePressableProps & {
 
   /** Display the ButtonGroup vertically. */
   vertical?: boolean;
-};
+}
 
 /** ButtonGroup is a linear set of segments, each of which function as a button that can display a different view/or perform a different action.
  * Use a ButtonGroup to offer choices that are closely related but mutually exclusive.
@@ -172,7 +172,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
           <View
             key={i}
             style={StyleSheet.flatten([
-              styles.button,
+              !vertical && styles.button,
               vertical && styles.verticalComponent,
               i !== buttons.length - 1 &&
                 (vertical

@@ -1,0 +1,43 @@
+---
+id: tooltip
+title: Tooltip
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/Tooltip.mdx";
+
+Tooltips display informative text when users tap on an element.
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                       | Type                                                       | Default       | Description                                                                                                                                                                                                                                             |
+| -------------------------- | ---------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ModalComponent`           | typeof Component                                           |               | Override React Native `Modal` component (usable for web-platform).                                                                                                                                                                                      |
+| `backgroundColor`          | ColorValue                                                 | `#617080`     | Sets backgroundColor of the tooltip and pointer.                                                                                                                                                                                                        |
+| `closeOnlyOnBackdropPress` | boolean                                                    | `false`       | Flag to determine whether to disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. When `true`, Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed. |
+| `containerStyle`           | View Style                                                 | `{}`          | Passes style object to tooltip container                                                                                                                                                                                                                |
+| `height`                   | number                                                     | `40`          | Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.                                                                              |
+| `highlightColor`           | ColorValue                                                 | `transparent` | Color to highlight the item the tooltip is surrounding.                                                                                                                                                                                                 |
+| `onClose`                  | Function                                                   | `Function`    | Function which gets called on closing the tooltip.                                                                                                                                                                                                      |
+| `onOpen`                   | Function                                                   | `Function`    | Function which gets called on opening the tooltip.                                                                                                                                                                                                      |
+| `overlayColor`             | ColorValue                                                 | `#fafafa14`   | Color of overlay shadow when tooltip is open.                                                                                                                                                                                                           |
+| `pointerColor`             | ColorValue                                                 | `#617080`     | Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolor) if none is passed.                                                                                                                                                   |
+| `pointerStyle`             | View Style                                                 |               | Style to be applied on the pointer.                                                                                                                                                                                                                     |
+| `popover`                  | `ReactElement<{}, string` or `JSXElementConstructor<any>>` |               | Component to be rendered as the display container.                                                                                                                                                                                                      |
+| `skipAndroidStatusBar`     | boolean                                                    | `false`       | Force skip StatusBar height when calculating element position. Pass `true` if Tooltip used inside react-native Modal component.                                                                                                                         |
+| `toggleAction`             | string                                                     | `onPress`     | Define type of action that should trigger tooltip. Available options _onPress_, _onLongPress_                                                                                                                                                           |
+| `toggleOnPress`            | boolean                                                    | `true`        | Flag to determine to toggle or not the tooltip on press.                                                                                                                                                                                                |
+| `visible`                  | boolean                                                    | `false`       | To show the tooltip.                                                                                                                                                                                                                                    |
+| `width`                    | number                                                     | `150`         | Tooltip container width. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container.                                                                               |
+| `withOverlay`              | boolean                                                    | `true`        | Flag to determine whether or not display overlay shadow when tooltip is open.                                                                                                                                                                           |
+| `withPointer`              | boolean                                                    | `true`        | Flag to determine whether or not to display the pointer.                                                                                                                                                                                                |
+
+</div>

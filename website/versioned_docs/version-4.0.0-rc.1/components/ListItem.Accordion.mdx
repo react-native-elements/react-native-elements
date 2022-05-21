@@ -1,0 +1,35 @@
+---
+id: listitem_accordion
+title: ListItem.Accordion
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/ListItem.Accordion.mdx";
+
+This allows making a accordion list which can show/hide content.
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [ListItem](listitem#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name         | Type                           | Default                                      | Description                                                                     |
+| ------------ | ------------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------- |
+| `animation`  | Animated.TimingAnimationConfig | `Object with duration 350ms and type timing` | Decide whether to show animation.                                               |
+| `content`    | ReactNode                      |                                              | Similar to ListItem's child.                                                    |
+| `expandIcon` | IconNode                       |                                              | Icon when Accordion is expanded, if not provided `icon` will be rotated 180deg. |
+| `icon`       | IconNode                       |                                              | Icon for unexpanded Accordion.                                                  |
+| `isExpanded` | boolean                        |                                              | Decide if Accordion is Expanded.                                                |
+| `noIcon`     | boolean                        |                                              | Don't show accordion icon.                                                      |
+| `noRotation` | boolean                        |                                              | Don't rotate when Accordion is expanded.                                        |
+
+</div>

@@ -21,8 +21,11 @@ import { HeaderIcon } from './components/HeaderIcon';
 
 type HeaderSubComponent = React.ReactElement<{}> | TextProps | HeaderIcon;
 
-export type HeaderProps = ViewProps & {
-  /** Component for container. */
+export interface HeaderProps extends ViewProps {
+  /** Component for container.
+   *
+   * @default View
+   */
   ViewComponent?: typeof React.Component;
 
   /** Displays a linear gradient. See [usage](#lineargradient-usage). */
@@ -72,11 +75,11 @@ export type HeaderProps = ViewProps & {
 
   /** Elevation for header */
   elevated?: boolean;
-};
+}
 
 /** Headers are navigation components that display information and actions relating to the current screen.
  * **Note:**
- * Make sure that you have completed [Step 3](getting_started.md#step-3-setup-react-native-safe-area-context) in the setup guide before using `Header`.
+ * Make sure that you have completed [Step 3](../installation#install-react-native-safe-area-context) in the setup guide before using `Header`.
  */
 export const Header: RneFunctionComponent<HeaderProps> = ({
   statusBarProps,
@@ -103,7 +106,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
 }) => {
   React.useEffect(() => {
     if (linearGradientProps && !ViewComponent) {
-      console.error(
+      console.warn(
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}"
       );
     }

@@ -1,0 +1,58 @@
+---
+id: socialicon
+title: SocialIcon
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/SocialIcon.mdx";
+import Play from "@site/playground/SocialIcon/socialicon.playground";
+
+SocialIcons are visual cues to online and social media networks. We offer a varied range of social icons.
+
+## Import
+
+```tsx
+import { SocialIcon } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                     | Type                                 | Default                                           | Description                                                                        |
+| ------------------------ | ------------------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `Component`              | React Component                      | `Press handlers present then Pressable else View` | Type of button.                                                                    |
+| `activityIndicatorStyle` | View Style                           |                                                   | Style to render when in loading state.                                             |
+| `button`                 | boolean                              | `false`                                           | Creates button with a social icon.                                                 |
+| `disabled`               | boolean                              |                                                   | Disables the button, if true.                                                      |
+| `fontFamily`             | string                               |                                                   | Specify different font family.                                                     |
+| `fontStyle`              | Text Style                           |                                                   | Specify text styling.                                                              |
+| `fontWeight`             | string                               |                                                   | Specify font weight of title if set as a button with a title.                      |
+| `iconColor`              | string                               | `white`                                           | Specify the color of the icon.                                                     |
+| `iconSize`               | number                               | `24`                                              | Specify the size of the icon.                                                      |
+| `iconStyle`              | View Style                           |                                                   | Extra styling for icon component.                                                  |
+| `iconType`               | string                               | `font-awesome`                                    | Type of icon set. [Supported sets here](icon#available-icon-sets).                 |
+| `light`                  | boolean                              |                                                   | Reverses icon color scheme, setting background to white and icon to primary color. |
+| `loading`                | boolean                              |                                                   | Shows loading indicator.                                                           |
+| `onLongPress`            | GestureResponderEventHandler         |                                                   | Called when a long-tap gesture is detected.                                        |
+| `onPress`                | GestureResponderEventHandler         |                                                   | Called when a single tap gesture is detected.                                      |
+| `onPressIn`              | GestureResponderEventHandler         |                                                   | Called when a touch is engaged before `onPress`.                                   |
+| `onPressOut`             | GestureResponderEventHandler         |                                                   | Called when a touch is released before `onPress`.                                  |
+| `pressableProps`         | PressableProps except click handlers | `None`                                            |                                                                                    |
+| `raised`                 | boolean                              | `true`                                            | Raised adds a drop shadow, set to false to remove.                                 |
+| `small`                  | string                               |                                                   | Decides the size of the activity indicator.                                        |
+| `style`                  | View Style                           |                                                   | Adds styling to the button.                                                        |
+| `title`                  | string                               |                                                   | Title if made into a button.                                                       |
+| `type`                   | SocialMediaType                      |                                                   | Social media type.                                                                 |
+| `underlayColor`          | string                               |                                                   | Add Underlay color.                                                                |
+
+</div>
+
+## Playground
+
+<Play />

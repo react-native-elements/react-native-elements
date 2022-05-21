@@ -9,7 +9,7 @@ import {
   Dimensions,
   StatusBar,
 } from 'react-native';
-import { Button } from '@react-native-elements/themed';
+import { Button } from '@rneui/themed';
 import { LinearGradient } from '../components/LinearGradient';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;

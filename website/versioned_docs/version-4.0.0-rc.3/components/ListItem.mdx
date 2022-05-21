@@ -1,0 +1,48 @@
+---
+id: listitem
+title: ListItem
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/ListItem.mdx";
+import Play from "@site/playground/ListItem/listitem.playground";
+
+ListItems are used to display rows of information, such as a contact list, playlist, or menu.
+They are very customizable and can contain switches, avatars, badges, icons, and more.
+
+## Import
+
+```tsx
+import { ListItem } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                  | Type            | Default | Description                                                                    |
+| --------------------- | --------------- | ------- | ------------------------------------------------------------------------------ |
+| `Component`           | React Component |         | Replace element with custom element.                                           |
+| `ViewComponent`       | React Component |         | Container for linear gradient.                                                 |
+| `bottomDivider`       | boolean         |         | Add divider at the bottom of the list item.                                    |
+| `children`            | any             |         | Add enclosed children.                                                         |
+| `containerStyle`      | View Style      |         | Additional main container styling.                                             |
+| `disabledStyle`       | View Style      |         | Specific styling to be used when list item is disabled.                        |
+| `linearGradientProps` | any             |         | Props for linear gradient component.                                           |
+| `pad`                 | number          |         | Adds spacing between the leftComponent, the title component & right component. |
+| `topDivider`          | boolean         |         | Add divider at the top of the list item.                                       |
+
+</div>
+
+## Playground
+
+<Play />

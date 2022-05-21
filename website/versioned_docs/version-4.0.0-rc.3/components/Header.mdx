@@ -1,0 +1,57 @@
+---
+id: header
+title: Header
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Header.mdx";
+import Play from "@site/playground/Header/header.playground";
+
+Headers are navigation components that display information and actions relating to the current screen.
+**Note:**
+Make sure that you have completed [Step 3](../installation#install-react-native-safe-area-context) in the setup guide before using `Header`.
+
+## Import
+
+```tsx
+import { Header } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                   | Type                                   | Default  | Description                                                     |
+| ---------------------- | -------------------------------------- | -------- | --------------------------------------------------------------- |
+| `ViewComponent`        | React Component                        | `View`   | Component for container.                                        |
+| `backgroundColor`      | string                                 |          | Sets backgroundColor of the parent component.                   |
+| `backgroundImage`      | ImageSourcePropType                    |          | Sets backgroundImage for parent component.                      |
+| `backgroundImageStyle` | ImageStyle                             |          | Styling for backgroundImage in the main container.              |
+| `barStyle`             | StatusBarStyle                         |          | Sets the color of the status bar text.                          |
+| `centerComponent`      | HeaderSubComponent                     |          | Define your center component here.                              |
+| `centerContainerStyle` | View Style                             |          | Styling for container around the centerComponent.               |
+| `children`             | `(Element` or `Element[]) & ReactNode` | `[]`     | Add children component to the header.                           |
+| `containerStyle`       | View Style                             |          | Styling around the main container.                              |
+| `elevated`             | boolean                                |          | Elevation for header                                            |
+| `leftComponent`        | HeaderSubComponent                     |          | Define your left component here.                                |
+| `leftContainerStyle`   | View Style                             |          | Styling for container around the leftComponent.                 |
+| `linearGradientProps`  | Object                                 |          | Displays a linear gradient. See [usage](#lineargradient-usage). |
+| `placement`            | `center` or `left` or `right`          | `center` | Alignment for title.                                            |
+| `rightComponent`       | HeaderSubComponent                     |          | Define your right component here.                               |
+| `rightContainerStyle`  | View Style                             |          | Styling for container around the rightComponent.                |
+| `statusBarProps`       | StatusBarProps                         |          | Accepts all props for StatusBar.                                |
+
+</div>
+
+## Playground
+
+<Play />

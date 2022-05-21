@@ -1,10 +1,9 @@
 import React from 'react';
-import SocialIcon from '..';
+import { SocialIcon } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import Text from '../../Text';
-import Icon from '../../Icon';
+import { Text } from '../../Text';
+import { Icon } from '../../Icon';
 import { fireEvent } from '@testing-library/react-native';
-import { SocialMediaType } from '../SocialIcon';
 
 describe('SocialIcon component', () => {
   it('should match snapshot', () => {
@@ -127,17 +126,5 @@ describe('SocialIcon component', () => {
     fireEvent(rootComponent, 'press');
 
     expect(onPress).not.toHaveBeenCalled();
-  });
-
-  it('should apply values from theme', () => {
-    const theme = {
-      SocialIcon: {
-        type: 'facebook' as SocialMediaType,
-      },
-    };
-    const { queryByTestId } = renderWithWrapper(<SocialIcon />, '', theme);
-    const rootComponent = queryByTestId('RNE_SocialIcon');
-    const iconComponent = rootComponent.findByType(Icon);
-    expect(iconComponent.props.name).toBe('facebook');
   });
 });

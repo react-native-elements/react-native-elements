@@ -1,0 +1,46 @@
+---
+id: badge
+title: Badge
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Badge.mdx";
+import Play from "@site/playground/Badge/badge.playground";
+
+Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user.
+
+## Import
+
+```tsx
+import { Badge } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name             | Type                                           | Default                                           | Description                                               |
+| ---------------- | ---------------------------------------------- | ------------------------------------------------- | --------------------------------------------------------- |
+| `Component`      | React Component                                | `Press handlers present then Pressable else View` | Custom component to replace the badge outer component.    |
+| `badgeStyle`     | View Style                                     |                                                   | Additional styling for badge (background) view component. |
+| `containerStyle` | View Style                                     |                                                   | Style for the container.                                  |
+| `onLongPress`    | GestureResponderEventHandler                   |                                                   | Called when a long-tap gesture is detected.               |
+| `onPress`        | Function                                       |                                                   | Called when a single tap gesture is detected.             |
+| `onPressIn`      | GestureResponderEventHandler                   |                                                   | Called when a touch is engaged before `onPress`.          |
+| `onPressOut`     | GestureResponderEventHandler                   |                                                   | Called when a touch is released before `onPress`.         |
+| `pressableProps` | PressableProps except click handlers           | `None`                                            |                                                           |
+| `status`         | `primary` or `success` or `warning` or `error` | `primary`                                         | Determines color of the indicator.                        |
+| `textProps`      | TextProps                                      |                                                   | Extra props for text component.                           |
+| `textStyle`      | Text Style                                     |                                                   | Extra styling for icon component.                         |
+| `value`          | ReactNode                                      |                                                   | Text value to be displayed by badge, defaults to empty.   |
+
+</div>
+
+## Playground
+
+<Play />

@@ -1,13 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import {
-  Avatar,
-  Button,
-  Icon,
-  Theme,
-  withTheme,
-} from '@react-native-elements/themed';
+import { Avatar, Button, Icon, Theme, withTheme } from '@rneui/themed';
 
 type UserData = {
   name: string;
@@ -283,6 +277,7 @@ const ListContent = (props: ListContentType) => {
                   width: 120,
                   backgroundColor: 'rgba(222, 223, 226, 1)',
                   borderRadius: 5,
+                  paddingVertical: 5,
                 }}
                 titleStyle={{
                   fontFamily: 'regular',
@@ -300,6 +295,7 @@ const ListContent = (props: ListContentType) => {
                   width: 120,
                   backgroundColor: 'rgba(113, 154, 112, 1)',
                   borderRadius: 5,
+                  paddingVertical: 5,
                 }}
                 titleStyle={{
                   fontFamily: 'regular',

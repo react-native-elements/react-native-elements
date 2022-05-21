@@ -5,8 +5,8 @@ import {
   IconNode,
   IconObject,
   IconType,
-} from '@react-native-elements/base/dist/Icon/Icon';
+} from '@rneui/base/dist/Icon/Icon';
 
 export { Icon };
 export type { IconProps, IconNode, IconObject, IconType };
-export default withTheme(Icon, 'Icon');
+export default withTheme<IconProps>(Icon, 'Icon');

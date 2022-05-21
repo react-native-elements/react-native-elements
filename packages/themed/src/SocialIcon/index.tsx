@@ -2,8 +2,9 @@ import { withTheme } from '../config';
 import {
   SocialIcon,
   SocialIconProps,
-} from '@react-native-elements/base/dist/SocialIcon/SocialIcon';
+  SocialMediaType,
+} from '@rneui/base/dist/SocialIcon/SocialIcon';
 
 export { SocialIcon };
-export type { SocialIconProps };
-export default withTheme(SocialIcon, 'SocialIcon');
+export type { SocialIconProps, SocialMediaType };
+export default withTheme<SocialIconProps>(SocialIcon, 'SocialIcon');

@@ -3,7 +3,7 @@ import { Text, StyleSheet, TextStyle, StyleProp, Platform } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
 import { TextProps } from '../Text';
 
-export type DialogTitleProps = {
+export interface DialogTitleProps {
   /** Add Dialog title. */
   title?: string;
 
@@ -12,7 +12,7 @@ export type DialogTitleProps = {
 
   /** Add additional props for Text component. */
   titleProps?: TextProps;
-};
+}
 
 /** `DialogTitle` allows you to add title to the Dialog. */
 export const DialogTitle: RneFunctionComponent<DialogTitleProps> = ({

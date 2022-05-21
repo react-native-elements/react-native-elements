@@ -17,7 +17,7 @@ import { ScreenWidth, isIOS, RneFunctionComponent } from '../helpers';
 import { getElementVisibleWidth } from './helpers/getTooltipCoordinate';
 import { getTooltipStyle } from './helpers/getTooltipStyle';
 
-export type TooltipProps = {
+export interface TooltipProps {
   /** To show the tooltip. */
   visible?: boolean;
 
@@ -79,7 +79,10 @@ export type TooltipProps = {
 
   /** Style to be applied on the pointer. */
   pointerStyle?: StyleProp<ViewStyle>;
-};
+
+  /** */
+  animationType?: 'fade' | 'none';
+}
 
 /** Tooltips display informative text when users tap on an element. */
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({
@@ -101,6 +104,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   skipAndroidStatusBar = false,
   ModalComponent = Modal,
   closeOnlyOnBackdropPress = false,
+  animationType = 'fade',
   ...props
 }) => {
   const isMounted = React.useRef(false);
@@ -114,33 +118,32 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   });
 
   const getElementPosition = React.useCallback(() => {
-    renderedElement.current &&
-      renderedElement.current.measure(
-        (
-          _frameOffsetX,
-          _frameOffsetY,
-          _width,
-          _height,
-          pageOffsetX,
-          pageOffsetY
-        ) => {
-          isMounted.current &&
-            setDimensions({
-              xOffset: pageOffsetX,
-              yOffset:
-                isIOS || skipAndroidStatusBar
-                  ? pageOffsetY
-                  : pageOffsetY -
-                    Platform.select({
-                      android: StatusBar.currentHeight,
-                      ios: 20,
-                      default: 0,
-                    }),
-              elementWidth: _width,
-              elementHeight: _height,
-            });
-        }
-      );
+    renderedElement.current?.measure(
+      (
+        _frameOffsetX,
+        _frameOffsetY,
+        _width,
+        _height,
+        pageOffsetX,
+        pageOffsetY
+      ) => {
+        isMounted.current &&
+          setDimensions({
+            xOffset: pageOffsetX,
+            yOffset:
+              isIOS || skipAndroidStatusBar
+                ? pageOffsetY
+                : pageOffsetY -
+                  Platform.select({
+                    android: StatusBar.currentHeight,
+                    ios: 20,
+                    default: 0,
+                  }),
+            elementWidth: _width,
+            elementHeight: _height,
+          });
+      }
+    );
   }, [skipAndroidStatusBar]);
 
   const handleOnPress = React.useCallback(() => {
@@ -214,10 +217,20 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
     isMounted.current = true;
     // Wait till element's position is calculated
     requestAnimationFrame(getElementPosition);
-    Dimensions.addEventListener('change', getElementPosition);
+    const dimensionsListener = Dimensions.addEventListener(
+      'change',
+      getElementPosition
+    );
+
     return () => {
       isMounted.current = false;
-      Dimensions.removeEventListener('change', getElementPosition);
+      if (dimensionsListener?.remove) {
+        // react-native >= 0.65.*
+        dimensionsListener.remove();
+      } else {
+        // react-native < 0.65.*
+        Dimensions.removeEventListener('change', getElementPosition);
+      }
     };
   }, [getElementPosition]);
 
@@ -246,7 +259,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
         transparent
         visible={visible}
         onShow={onOpen}
-        animationType="fade"
+        animationType={animationType}
       >
         <TouchableOpacity
           style={{

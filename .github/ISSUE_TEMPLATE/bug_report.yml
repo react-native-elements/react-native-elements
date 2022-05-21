@@ -1,0 +1,62 @@
+name: 🐛 Bug report
+description: Create a report to help us improve
+labels: ["Needs Triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug means that there is something broken or outside expectations in `react-native-elements`. If you only need help writing your own components, check out the [Slack channel](https://react-native-elements-slack.herokuapp.com/) FIRST.
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please [search the history](https://github.com/react-native-elements/react-native-elements/issues) to see if an issue already exists for the same problem.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    attributes:
+      label: Explain what you did
+      description: What you were trying to accomplish.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: Describe what happens instead of the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      render: Markdown
+      description: |
+        We highly recommend that you re-create the bug on [Snack](https://snack.expo.io). If not, list the steps that a reviewer can take to reproduce the behaviour:
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+  - type: textarea
+    attributes:
+      label: Your Environment
+      description: Run `npx @rneui/envinfo` and paste the results.
+      value: |
+        <details>
+        <summary>`npx @rneui/envinfo`</summary>
+
+              ```
+                Output from `npx @rneui/envinfo` goes here.
+              ```
+
+        </details>

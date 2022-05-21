@@ -9,9 +9,11 @@ exports[`CheckBox Component should match snapshot 1`] = `
     accessibilityState={
       Object {
         "checked": true,
+        "disabled": false,
       }
     }
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -22,9 +24,10 @@ exports[`CheckBox Component should match snapshot 1`] = `
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    replaceTheme={[Function]}
     style={
       Object {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#ffffff",
         "margin": 5,
         "marginLeft": 10,
         "marginRight": 10,
@@ -32,7 +35,6 @@ exports[`CheckBox Component should match snapshot 1`] = `
       }
     }
     testID="RNE__CheckBox__Wrapper"
-    updateTheme={[Function]}
   >
     <View
       style={

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Component Button type $type should display disabled undefined button 1`] = `
+exports[`Button Component clear should display clear button 1`] = `
 <View
   testID="wrapper"
 >
@@ -8,8 +8,87 @@ exports[`Button Component Button type $type should display disabled undefined bu
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#2089dc",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          clear
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component clear should display disabled clear button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -26,7 +105,163 @@ exports[`Button Component Button type $type should display disabled undefined bu
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "hsl(208, 8%, 63%)",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          clear
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component clear should display raised clear button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#2089dc",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          clear
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component lg should display disabled lg button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": true,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -46,20 +281,34 @@ exports[`Button Component Button type $type should display disabled undefined bu
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
-            "padding": 8,
+            "padding": 12,
+            "paddingHorizontal": 14,
           }
         }
-      />
+      >
+        <Text
+          style={
+            Object {
+              "color": "hsl(208, 8%, 63%)",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          lg
+        </Text>
+      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`Button Component Button type $type should display disabled undefined button 2`] = `
+exports[`Button Component lg should display lg button 1`] = `
 <View
   testID="wrapper"
 >
@@ -67,8 +316,10 @@ exports[`Button Component Button type $type should display disabled undefined bu
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -81,11 +332,13 @@ exports[`Button Component Button type $type should display disabled undefined bu
       accessibilityState={
         Object {
           "busy": false,
-          "disabled": true,
+          "disabled": false,
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -103,22 +356,36 @@ exports[`Button Component Button type $type should display disabled undefined bu
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "hsl(208, 8%, 90%)",
+            "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
-            "padding": 8,
+            "padding": 12,
+            "paddingHorizontal": 14,
           }
         }
-      />
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          lg
+        </Text>
+      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`Button Component Button type $type should display disabled undefined button 3`] = `
+exports[`Button Component lg should display raised lg button 1`] = `
 <View
   testID="wrapper"
 >
@@ -126,67 +393,10 @@ exports[`Button Component Button type $type should display disabled undefined bu
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
         },
-        undefined,
-        false,
-      ]
-    }
-    testID="RNE_BUTTON_WRAPPER"
-  >
-    <View
-      accessibilityRole="button"
-      accessibilityState={
         Object {
-          "busy": false,
-          "disabled": true,
-        }
-      }
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "hsl(208, 8%, 90%)",
-            "borderColor": "#2089dc",
-            "borderRadius": 3,
-            "borderWidth": 0,
-            "flexDirection": "row",
-            "justifyContent": "center",
-            "padding": 8,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Button Component Button type $type should display raised undefined button 1`] = `
-<View
-  testID="wrapper"
->
-  <View
-    style={
-      Array [
-        Object {
-          "borderRadius": 3,
-          "overflow": "hidden",
+          "borderRadius": 2,
         },
         undefined,
         Object {
@@ -213,7 +423,9 @@ exports[`Button Component Button type $type should display raised undefined butt
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -233,20 +445,34 @@ exports[`Button Component Button type $type should display raised undefined butt
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
-            "padding": 8,
+            "padding": 12,
+            "paddingHorizontal": 14,
           }
         }
-      />
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          lg
+        </Text>
+      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`Button Component Button type $type should display raised undefined button 2`] = `
+exports[`Button Component md should display disabled md button 1`] = `
 <View
   testID="wrapper"
 >
@@ -254,8 +480,164 @@ exports[`Button Component Button type $type should display raised undefined butt
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": true,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "hsl(208, 8%, 90%)",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "hsl(208, 8%, 63%)",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          md
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component md should display md button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2089dc",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          md
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component md should display raised md button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         Object {
@@ -282,7 +664,9 @@ exports[`Button Component Button type $type should display raised undefined butt
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -302,20 +686,34 @@ exports[`Button Component Button type $type should display raised undefined butt
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 10,
           }
         }
-      />
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          md
+        </Text>
+      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`Button Component Button type $type should display raised undefined button 3`] = `
+exports[`Button Component outline should display disabled outline button 1`] = `
 <View
   testID="wrapper"
 >
@@ -323,8 +721,164 @@ exports[`Button Component Button type $type should display raised undefined butt
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": true,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "hsl(208, 8%, 63%)",
+            "borderRadius": 2,
+            "borderWidth": 0.5,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "hsl(208, 8%, 63%)",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          outline
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component outline should display outline button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0.5,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#2089dc",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          outline
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component outline should display raised outline button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         Object {
@@ -351,7 +905,173 @@ exports[`Button Component Button type $type should display raised undefined butt
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0.5,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#2089dc",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          outline
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component sm should display disabled sm button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": true,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "hsl(208, 8%, 90%)",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 4,
+            "paddingHorizontal": 6,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "hsl(208, 8%, 63%)",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          sm
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component sm should display raised sm button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#fff",
+          "overflow": "visible",
+          "shadowColor": "rgba(0,0,0, .4)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 1,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 1,
+        },
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -371,20 +1091,34 @@ exports[`Button Component Button type $type should display raised undefined butt
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
-            "padding": 8,
+            "padding": 4,
+            "paddingHorizontal": 6,
           }
         }
-      />
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          sm
+        </Text>
+      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`Button Component Button type $type should display undefined button 1`] = `
+exports[`Button Component sm should display sm button 1`] = `
 <View
   testID="wrapper"
 >
@@ -392,8 +1126,10 @@ exports[`Button Component Button type $type should display undefined button 1`] 
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -410,7 +1146,9 @@ exports[`Button Component Button type $type should display undefined button 1`] 
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -430,20 +1168,34 @@ exports[`Button Component Button type $type should display undefined button 1`] 
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
-            "padding": 8,
+            "padding": 4,
+            "paddingHorizontal": 6,
           }
         }
-      />
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          sm
+        </Text>
+      </View>
     </View>
   </View>
 </View>
 `;
 
-exports[`Button Component Button type $type should display undefined button 2`] = `
+exports[`Button Component solid should display disabled solid button 1`] = `
 <View
   testID="wrapper"
 >
@@ -451,8 +1203,174 @@ exports[`Button Component Button type $type should display undefined button 2`] 
     style={
       Array [
         Object {
-          "borderRadius": 3,
           "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        false,
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": true,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "hsl(208, 8%, 90%)",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "hsl(208, 8%, 63%)",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          solid
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component solid should display raised solid button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#fff",
+          "overflow": "visible",
+          "shadowColor": "rgba(0,0,0, .4)",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 1,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 1,
+        },
+      ]
+    }
+    testID="RNE_BUTTON_WRAPPER"
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "busy": false,
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2089dc",
+            "borderColor": "#2089dc",
+            "borderRadius": 2,
+            "borderWidth": 0,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 8,
+            "paddingHorizontal": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          solid
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component solid should display solid button 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
         },
         undefined,
         false,
@@ -469,7 +1387,9 @@ exports[`Button Component Button type $type should display undefined button 2`] 
         }
       }
       accessible={true}
+      collapsable={false}
       focusable={true}
+      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -489,73 +1409,28 @@ exports[`Button Component Button type $type should display undefined button 2`] 
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
-            "borderRadius": 3,
+            "borderRadius": 2,
             "borderWidth": 0,
             "flexDirection": "row",
             "justifyContent": "center",
             "padding": 8,
+            "paddingHorizontal": 10,
           }
         }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`Button Component Button type $type should display undefined button 3`] = `
-<View
-  testID="wrapper"
->
-  <View
-    style={
-      Array [
-        Object {
-          "borderRadius": 3,
-          "overflow": "hidden",
-        },
-        undefined,
-        false,
-      ]
-    }
-    testID="RNE_BUTTON_WRAPPER"
-  >
-    <View
-      accessibilityRole="button"
-      accessibilityState={
-        Object {
-          "busy": false,
-          "disabled": false,
-        }
-      }
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#2089dc",
-            "borderColor": "#2089dc",
-            "borderRadius": 3,
-            "borderWidth": 0,
-            "flexDirection": "row",
-            "justifyContent": "center",
-            "padding": 8,
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 1,
+              "textAlign": "center",
+            }
           }
-        }
-      />
+        >
+          solid
+        </Text>
+      </View>
     </View>
   </View>
 </View>
