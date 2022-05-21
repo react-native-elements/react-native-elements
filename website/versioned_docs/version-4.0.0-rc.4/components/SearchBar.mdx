@@ -1,0 +1,57 @@
+---
+id: searchbar
+title: SearchBar
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/SearchBar.mdx";
+import Play from "@site/playground/SearchBar/searchbar.playground";
+
+<IconsStyle />
+
+## Import
+
+```tsx
+import { SearchBar } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [Input](input#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                      | Type                            | Default   | Description                |
+| ------------------------- | ------------------------------- | --------- | -------------------------- |
+| `cancelButtonProps`       | Text Style                      |           |                            |
+| `cancelButtonTitle`       | string                          |           |                            |
+| `cancelIcon`              | IconNode                        |           |                            |
+| `clearIcon`               | IconNode                        |           | Clear Icon                 |
+| `containerStyle`          | View Style                      |           | Style for container        |
+| `inputContainerStyle`     | View Style                      |           | Style for input container  |
+| `inputStyle`              | Text Style                      |           | Input Style                |
+| `leftIconContainerStyle`  | View Style                      |           | Left Icon Container Style  |
+| `lightTheme`              | boolean                         |           |                            |
+| `loadingProps`            | ActivityIndicatorProps          |           | ActivityIndicatorProps     |
+| `onCancel`                | `(() => any)` \| `(() => any)`  |           |                            |
+| `onClear`                 | Function                        |           |                            |
+| `platform`                | `default` \| `android` \| `ios` | `default` |                            |
+| `rightIconContainerStyle` | View Style                      |           | Right Icon Container Style |
+| `round`                   | boolean                         |           |                            |
+| `searchIcon`              | IconNode                        |           | Icon for search            |
+| `showCancel`              | boolean                         |           | Show cancel                |
+| `showLoading`             | boolean                         |           | Show loading               |
+
+</div>
+
+## Playground
+
+<Play />
