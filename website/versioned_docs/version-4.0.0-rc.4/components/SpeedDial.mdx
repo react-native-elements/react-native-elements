@@ -1,0 +1,53 @@
+---
+id: speeddial
+title: SpeedDial
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/SpeedDial.mdx";
+import Play from "@site/playground/SpeedDial/speeddial.playground";
+
+<IconsStyle />
+
+When pressed, a floating action button can display three to six related actions in the form of a speed dial.
+If more than six actions are needed, something other than a FAB should be used to present them.
+Upon press, the FAB remains visible and emits a stack of related actions.
+If the FAB is tapped in this state, it should either initiate its default action or close the speed dial actions.
+
+## Import
+
+```tsx
+import { SpeedDial } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [Button](button#props), [FAB](fab#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                     | Type             | Default    | Description                                              |
+| ------------------------ | ---------------- | ---------- | -------------------------------------------------------- |
+| `backdropPressableProps` | PressableProps   |            | Props for Backdrop Pressable                             |
+| `children`               | SpeedDial.Action |            | SpeedDial Action as children.                            |
+| `isOpen`                 | boolean          | `false`    | Opens the action stack.                                  |
+| `labelPressable`         | boolean          |            | onPress on Label Press for all Actions                   |
+| `onClose`                | Function         | `Function` | Callback fired when the component requests to be closed. |
+| `onOpen`                 | Function         | `Function` | Callback fired when the component requests to be open.   |
+| `openIcon`               | IconNode         |            | Icon shown on FAB when action stack is open.             |
+| `overlayColor`           | string           |            | Add overlay color to the speed dial.                     |
+| `transitionDuration`     | number           | `150`      | The duration for the transition, in milliseconds.        |
+
+</div>
+
+## Playground
+
+<Play />
