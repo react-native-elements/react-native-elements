@@ -97,7 +97,7 @@ export const ListItemSwipeable: RneFunctionComponent<
   const onRelease = React.useCallback(
     (_: unknown, { dx }: PanResponderGestureState) => {
       if (Math.abs(panX.current + dx) >= ScreenWidth / 3) {
-        slideAnimation(panX.current + dx > 0 ? rightWidth : -leftWidth);
+        slideAnimation(panX.current + dx > 0 ? leftWidth : -rightWidth);
       } else {
         slideAnimation(0);
       }

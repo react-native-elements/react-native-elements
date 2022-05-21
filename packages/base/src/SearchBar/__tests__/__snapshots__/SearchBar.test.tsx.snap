@@ -27,6 +27,8 @@ exports[`SearchBar wrapper component should match snapshot 1`] = `
       testID="RNE__Input__view-wrapper"
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -115,14 +117,12 @@ exports[`SearchBar wrapper component should match snapshot 1`] = `
           </View>
         </View>
         <TextInput
-          allowFontScaling={true}
           editable={true}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholderTextColor="#86939e"
           platform="default"
-          rejectResponderTermination={true}
           style={
             Object {
               "color": "#86939e",
@@ -197,6 +197,8 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
       testID="RNE__Input__view-wrapper"
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -282,7 +284,6 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
           </View>
         </View>
         <TextInput
-          allowFontScaling={true}
           editable={true}
           onBlur={[Function]}
           onCancel={[Function]}
@@ -290,7 +291,6 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
           onFocus={[Function]}
           placeholderTextColor="#86939e"
           platform="android"
-          rejectResponderTermination={true}
           style={
             Object {
               "color": "#242424",
@@ -368,6 +368,8 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
       testID="RNE__Input__view-wrapper"
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -457,7 +459,6 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
           </View>
         </View>
         <TextInput
-          allowFontScaling={true}
           editable={true}
           onBlur={[Function]}
           onCancel={[Function]}
@@ -465,7 +466,6 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
           onFocus={[Function]}
           placeholderTextColor="#7d7d7d"
           platform="ios"
-          rejectResponderTermination={true}
           style={
             Object {
               "color": "#242424",

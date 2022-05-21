@@ -164,6 +164,11 @@ exports[`Icon component should render with icon type 1`] = `
   >
     <View
       accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}
@@ -235,6 +240,11 @@ exports[`Icon component should set underlayColor to color when styles when under
   >
     <View
       accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={true}

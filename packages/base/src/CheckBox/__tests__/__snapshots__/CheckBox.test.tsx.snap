@@ -9,6 +9,7 @@ exports[`CheckBox Component should match snapshot 1`] = `
     accessibilityState={
       Object {
         "checked": true,
+        "disabled": false,
       }
     }
     accessible={true}

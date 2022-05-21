@@ -74,7 +74,7 @@ export default function () {
               </li>
               <li className="footer__item">
                 <a
-                  href="https://twitter.com/rne_org"
+                  href="https://twitter.com/rn_elements"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer__link-item"
@@ -128,7 +128,7 @@ export default function () {
         <div className="footer__bottom text--center">
           <div className="margin-bottom--sm">
             <Link
-              to="https://opencollective.com/react-native-elements"
+              to="https://twitter.com/rn_elements"
               className="button button--primary button--md  margin-horiz--sm margin-vert--sm "
               style={{ backgroundColor: '#1DA1F2', color: 'white' }}
             >

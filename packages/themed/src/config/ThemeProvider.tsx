@@ -142,7 +142,6 @@ interface UseTheme {
   updateTheme: UpdateTheme;
   theme: {
     colors: Colors;
-    mode: ThemeMode;
   } & Theme;
 }
 

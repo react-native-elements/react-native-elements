@@ -3,6 +3,7 @@ id: {{id}}
 title: {{title}}
 ---
 
+import {IconsStyle} from '@site/src/components/Docs_Icons';
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 {{#if usageFileExists}}
@@ -11,6 +12,8 @@ import Usage from "../component_usage/{{title}}.mdx";
 {{#if playgroundExists}}
 import Play from '@site/playground/{{title}}/{{id}}.playground';
 {{/if}}
+
+<IconsStyle/>
 
 {{{description}}}
 

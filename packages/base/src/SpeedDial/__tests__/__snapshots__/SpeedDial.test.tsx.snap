@@ -47,6 +47,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       }
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "backgroundColor": "rgba(36, 36, 36, 0.6)",
@@ -73,6 +75,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       }
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         pointerEvents="auto"
         style={
           Object {
@@ -131,6 +135,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             Add
           </Text>
           <View
+            collapsable={false}
+            nativeID="animatedComponent"
             style={
               Object {
                 "alignItems": "center",
@@ -173,7 +179,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   }
                 }
                 accessible={true}
+                collapsable={false}
                 focusable={true}
+                nativeID="animatedComponent"
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -271,6 +279,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         pointerEvents="auto"
         style={
           Object {
@@ -329,6 +339,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             Delete
           </Text>
           <View
+            collapsable={false}
+            nativeID="animatedComponent"
             style={
               Object {
                 "alignItems": "center",
@@ -371,7 +383,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   }
                 }
                 accessible={true}
+                collapsable={false}
                 focusable={true}
+                nativeID="animatedComponent"
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -469,6 +483,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         </View>
       </View>
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -513,7 +529,9 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               }
             }
             accessible={true}
+            collapsable={false}
             focusable={true}
+            nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

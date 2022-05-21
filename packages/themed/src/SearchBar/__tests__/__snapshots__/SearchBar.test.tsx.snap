@@ -24,6 +24,8 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       testID="RNE__Input__view-wrapper"
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -109,7 +111,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           </View>
         </View>
         <TextInput
-          allowFontScaling={true}
           editable={true}
           onBlur={[Function]}
           onCancel={[Function]}
@@ -118,7 +119,6 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           placeholder="Enter search term"
           placeholderTextColor="#86939e"
           platform="android"
-          rejectResponderTermination={true}
           style={
             Object {
               "color": "#242424",
