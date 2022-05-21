@@ -125,7 +125,9 @@ exports[`PricingCard component should match snapshot 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
+          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -363,7 +365,9 @@ exports[`PricingCard component should render with props 1`] = `
             }
           }
           accessible={true}
+          collapsable={false}
           focusable={true}
+          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

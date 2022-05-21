@@ -24,15 +24,13 @@
     "@react-navigation/drawer": "^5.12.9",
     "@react-navigation/native": "^5.9.8",
     "@react-navigation/stack": "^5.14.9",
-    "@rneui/layout": "^0.0.0-alpha.3",
+    "@rneui/layout": "^0.0.0-alpha.4",
     "expo": "^44.0.6",
     "expo-app-loading": "~1.3.0",
     "expo-asset": "~8.4.6",
     "expo-font": "~10.0.5",
     "expo-linear-gradient": "~11.0.3",
     "expo-updates": "~0.11.7",
-    "lodash": "^4.17.21",
-    "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.64.3",
@@ -46,17 +44,8 @@
   },
   "devDependencies": {
     "@expo/webpack-config": "~0.16.2",
-    "@types/lodash": "^4.14.182",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "~0.67.6",
     "babel-loader": "^8.2.5",
     "babel-preset-expo": "9.0.2",
-    "eslint": "^7.32.0",
-    "gh-pages": "^2.2.0",
-    "jest-expo": "^44.0.1",
-    "typescript": "~4.6.4"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "jest-expo": "^44.0.1"
   }
 }

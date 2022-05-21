@@ -26,7 +26,7 @@ const Home: React.FunctionComponent<{}> = () => {
                   backgroundColor: '#1DA1F2',
                   color: 'white',
                 }}
-                href="https://twitter.com/rne_org"
+                href="https://twitter.com/rn_elements"
                 className="card shadow--md"
               >
                 <div className="card__body padding--lg">
