@@ -31,11 +31,7 @@ module.exports = async function (env, argv) {
     .forEach((name) => {
       const pak = require(`../packages/${name}/package.json`);
 
-      if (pak.source == null) {
-        return;
-      }
-
-      config.resolve.alias[pak.name] = path.resolve(packages, name, pak.source);
+      config.resolve.alias[pak.name] = path.resolve(packages, name, 'src');
     });
 
   return config;

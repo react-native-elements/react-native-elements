@@ -30,6 +30,8 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
     testID="RNE__LinearProgress_Bar"
   >
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       style={
         Object {
           "backgroundColor": "#03dac4",

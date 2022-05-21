@@ -134,7 +134,7 @@ export interface ButtonProps
  *
  * ### Variants
  * ```tsx live
- *  <Stack dir="row" align="center" spacing={4}>
+ *  <Stack row align="center" spacing={4}>
  * <Button title="Solid" />
  * <Button title="Outline" type="outline" />
  * <Button title="Clear" type="clear" />
@@ -143,7 +143,7 @@ export interface ButtonProps
  * ### Size
  *
  * ```tsx live
- *  <Stack dir="row" align="center" spacing={4}>
+ *  <Stack row align="center" spacing={4}>
  *            <Button size="sm">Small</Button>
  *            <Button size="md">Medium</Button>
  *             <Button size="lg">Large</Button>
@@ -152,7 +152,7 @@ export interface ButtonProps
  * ### Colors
  *
  * ```tsx live
- *  <Stack dir="row" align="center" spacing={4}>
+ *  <Stack row align="center" spacing={4}>
  *        <Button>Primary</Button>
  *        <Button color="secondary">Secondary</Button>
  *        <Button color="warning">Warning</Button>
@@ -161,11 +161,11 @@ export interface ButtonProps
  * ```
  * ### Button with icon
  * ```tsx live
- *  <Button title="Solid" type="solid" icon="home" />
+ *  <Button type="solid" ><Icon name='home' color='white'/>Icon</Button>
  * ```
  * ### Button with right icon
  * ```tsx live
- * <Button title="Solid" type="solid" icon="home" iconRight />
+ *  <Button type="solid" >Icon<Icon name='home' color='white'/></Button>
  * ```
  * ### Button with loading spinner
  * %live <Button title="Solid" type="solid" loading />
