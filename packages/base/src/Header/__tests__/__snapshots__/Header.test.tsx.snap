@@ -201,9 +201,10 @@ exports[`Header Component should render left component by passing a component th
       >
         <View
           accessibilityRole="button"
-          accessibilityState={Object {}}
           accessible={true}
+          collapsable={false}
           focusable={true}
+          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
