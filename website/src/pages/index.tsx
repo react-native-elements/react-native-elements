@@ -16,7 +16,7 @@ const Home: React.FunctionComponent<{}> = () => {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout title={siteConfig.title} description={siteConfig.tagline}>
+    <Layout>
       <Hero />
       <Features />
       <Installation />
