@@ -50,7 +50,6 @@ export class SearchBarAndroid extends Component<
   input!: TextInput;
 
   static defaultProps = {
-    lightTheme: false,
     onClear: () => null,
     onCancel: () => null,
     onFocus: () => null,
@@ -122,7 +121,6 @@ export class SearchBarAndroid extends Component<
   render() {
     const {
       theme = defaultTheme,
-      lightTheme,
       clearIcon = { name: 'clear' },
       containerStyle,
       leftIconContainerStyle,
@@ -146,17 +144,6 @@ export class SearchBarAndroid extends Component<
             backgroundColor: theme?.colors?.searchBg,
             paddingTop: 8,
             paddingBottom: 8,
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 1,
-            },
-            shadowOpacity: 0.2,
-            shadowRadius: 1.41,
-            elevation: 2,
-          },
-          lightTheme && {
-            backgroundColor: theme?.colors?.white,
           },
           containerStyle,
         ])}

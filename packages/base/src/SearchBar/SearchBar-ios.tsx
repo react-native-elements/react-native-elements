@@ -20,14 +20,14 @@ const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
   size: 20,
   name: 'ios-search',
-  color: theme?.colors?.platform?.ios?.grey,
+  color: theme?.colors?.grey3,
 });
 
 const defaultClearIcon = (theme: Theme) => ({
   type: 'ionicon',
   name: 'ios-close-circle',
   size: 20,
-  color: theme?.colors?.platform?.ios?.grey,
+  color: theme?.colors?.grey3,
 });
 
 type SearchBarState = {
@@ -43,7 +43,6 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
     cancelButtonTitle: 'Cancel',
     loadingProps: {},
     cancelButtonProps: {},
-    lightTheme: false,
     showLoading: false,
     onClear: () => null,
     onCancel: () => null,
@@ -118,7 +117,6 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
   render() {
     const {
       theme = defaultTheme,
-      lightTheme,
       cancelButtonProps,
       cancelButtonTitle,
       clearIcon,
@@ -173,9 +171,6 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
             { backgroundColor: theme?.colors?.searchBg },
-            lightTheme && {
-              backgroundColor: theme?.colors?.grey5,
-            },
             hasFocus && {
               marginRight: this.state.cancelButtonWidth
                 ? this.state.cancelButtonWidth

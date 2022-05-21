@@ -17,7 +17,6 @@ import {
   Button,
   ThemeProvider,
   InputProps,
-  CheckBox,
 } from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 
@@ -43,8 +42,6 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
   let password2Input = useRef(null);
   let shakeInput = useRef(null);
   let confirmPassword2Input = useRef(null);
-  const [lightTheme, setLightTheme] = useState(false);
-
   const InputFieldsStyle = {
     borderWidth: 0,
   };
@@ -64,7 +61,6 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
         </View>
         <View>
           <SearchBarCustom
-            lightTheme={lightTheme}
             placeholder="iOS searchbar"
             platform="ios"
             style={InputFieldsStyle}
@@ -73,7 +69,6 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
         </View>
         <View style={{ paddingTop: 10 }}>
           <SearchBarCustom
-            lightTheme={lightTheme}
             placeholder="Android searchbar"
             platform="android"
             style={InputFieldsStyle}
@@ -82,18 +77,11 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
         </View>
         <View style={{ paddingTop: 15 }}>
           <SearchBarCustom
-            lightTheme={lightTheme}
             placeholder="Default searchbar"
             style={InputFieldsStyle}
             {...dummySearchBarProps}
           />
         </View>
-        <CheckBox
-          center
-          title="Light Theme"
-          checked={lightTheme}
-          onPress={() => setLightTheme(!lightTheme)}
-        />
         <View style={{ paddingTop: 20 }}>
           <SubHeader title={'Inputs'} />
         </View>
