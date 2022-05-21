@@ -1,6 +1,6 @@
 {
   "name": "@rneui/base",
-  "version": "4.0.0-rc.3",
+  "version": "4.0.0-rc.4",
   "description": "Cross Platform React Native UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

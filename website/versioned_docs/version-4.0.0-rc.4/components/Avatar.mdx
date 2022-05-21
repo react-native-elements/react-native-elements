@@ -1,0 +1,59 @@
+---
+id: avatar
+title: Avatar
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Avatar.mdx";
+import Play from "@site/playground/Avatar/avatar.playground";
+
+<IconsStyle />
+
+Avatars are found all over ui design from lists to profile screens.
+They are commonly used to represent a user and can contain photos, icons, or even text.
+
+## Import
+
+```tsx
+import { Avatar } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                       | Type                                                       | Default                                           | Description                                                                                                                                                  |
+| -------------------------- | ---------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Component`                | React Component                                            | `Press handlers present then Pressable else View` | Component for enclosing element (eg: TouchableHighlight, View, etc).                                                                                         |
+| `ImageComponent`           | ComponentClass<{}, any>                                    |                                                   | Custom ImageComponent for Avatar.                                                                                                                            |
+| `activeOpacity`            | number                                                     |                                                   | Opacity when pressed.                                                                                                                                        |
+| `avatarStyle`              | ImageStyle                                                 |                                                   | Style for avatar image.                                                                                                                                      |
+| `containerStyle`           | View Style                                                 |                                                   | Styling for outer container.                                                                                                                                 |
+| `icon`                     | AvatarIcon                                                 |                                                   | Displays an icon as the main content of the Avatar. **Cannot be used alongside title**. When used with the `source` prop it will be used as the placeholder. |
+| `iconStyle`                | Text Style                                                 |                                                   | Extra styling for icon component.                                                                                                                            |
+| `imageProps`               | ImageProps(Object)                                         |                                                   | Optional properties to pass to the avatar e.g "resizeMode".                                                                                                  |
+| `onLongPress`              | Function                                                   |                                                   | Callback function when long pressing component.                                                                                                              |
+| `onPress`                  | Function                                                   |                                                   | Callback function when pressing component.                                                                                                                   |
+| `onPressIn`                | GestureResponderEventHandler                               |                                                   | Called when a touch is engaged before `onPress`.                                                                                                             |
+| `onPressOut`               | GestureResponderEventHandler                               |                                                   | Called when a touch is released before `onPress`.                                                                                                            |
+| `overlayContainerStyle`    | Text Style                                                 |                                                   | Style for the view outside image or icon.                                                                                                                    |
+| `placeholderStyle`         | View Style                                                 |                                                   | Adds style to the placeholder wrapper.                                                                                                                       |
+| `pressableProps`           | PressableProps except click handlers                       | `None`                                            |                                                                                                                                                              |
+| `renderPlaceholderContent` | `ReactElement<{}, string` \| `JSXElementConstructor<any>>` |                                                   | Custom placeholder element (by default, it's the title).                                                                                                     |
+| `rounded`                  | boolean                                                    |                                                   | Makes the avatar circular.                                                                                                                                   |
+| `size`                     | `number` \| `small` \| `medium` \| `large` \| `xlarge`     | `small`                                           | Size of the avatar.                                                                                                                                          |
+| `source`                   | ImageSourcePropType                                        |                                                   | Image source to be displayed on avatar.                                                                                                                      |
+| `title`                    | string                                                     |                                                   | Renders title in the placeholder.                                                                                                                            |
+| `titleStyle`               | Text Style                                                 |                                                   | Style for the title.                                                                                                                                         |
+
+</div>
+
+## Playground
+
+<Play />

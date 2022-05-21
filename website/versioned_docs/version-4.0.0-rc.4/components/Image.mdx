@@ -1,0 +1,50 @@
+---
+id: image
+title: Image
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Image.mdx";
+
+<IconsStyle />
+
+Drop-in replacement for the standard React Native Image component that displays
+images with a placeholder and smooth image load transitioning.
+
+## Import
+
+```tsx
+import { Image } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [React Native Image](https://reactnative.dev/docs/image#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                     | Type                                                        | Default                                           | Description                                           |
+| ------------------------ | ----------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| `Component`              | React Component                                             | `Press handlers present then Pressable else View` | Define the component passed to image.                 |
+| `ImageComponent`         | typeof Component                                            |                                                   | Specify a different component as the Image component. |
+| `PlaceholderContent`     | `ReactElement<any, string` \| `JSXElementConstructor<any>>` |                                                   | Content to load when Image is rendering.              |
+| `childrenContainerStyle` | View Style                                                  | `null`                                            | Additional styling for the children container.        |
+| `containerStyle`         | View Style                                                  |                                                   | Additional styling for the container.                 |
+| `onLongPress`            | GestureResponderEventHandler                                |                                                   | Called when a long-tap gesture is detected.           |
+| `onPress`                | GestureResponderEventHandler                                |                                                   | Called when a single tap gesture is detected.         |
+| `onPressIn`              | GestureResponderEventHandler                                |                                                   | Called when a touch is engaged before `onPress`.      |
+| `onPressOut`             | GestureResponderEventHandler                                |                                                   | Called when a touch is released before `onPress`.     |
+| `placeholderStyle`       | View Style                                                  |                                                   | Additional styling for the placeholder container.     |
+| `pressableProps`         | PressableProps except click handlers                        | `None`                                            |                                                       |
+| `transition`             | boolean                                                     |                                                   | Perform fade transition on image load.                |
+| `transitionDuration`     | number                                                      | `360`                                             | Perform fade transition on image load.                |
+
+</div>

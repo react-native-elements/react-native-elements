@@ -1,0 +1,58 @@
+---
+id: skeleton
+title: Skeleton
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<IconsStyle />
+
+A placeholder preview for content before the data gets loaded, an alternative for spinners.
+
+## Import
+
+```tsx
+import { Skeleton } from "@rneui/themed";
+```
+
+## Usage
+
+### Variants
+
+The component supports 2 shape variants, i.e. `circle`, `rectangle`.
+
+```tsx live
+<Skeleton width={120} height={40} />
+<Skeleton circle width={40} height={40} />
+```
+
+### Animations
+
+By default, the skeleton pulsates, but you can change the animation to a wave or disable it entirely.
+
+```tsx live
+<Skeleton animation="pulse" width={80} height={40} />
+<Skeleton LinearGradientComponent={LinearGradient} animation="wave" width={80} height={40} />
+<Skeleton animation="none" width={80} height={40} />
+```
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                      | Type                        | Default | Description                        |
+| ------------------------- | --------------------------- | ------- | ---------------------------------- |
+| `LinearGradientComponent` | React Component             |         | Custom Linear Gradient Component   |
+| `animation`               | `none` \| `pulse` \| `wave` | `pulse` | Type of animation                  |
+| `circle`                  | boolean                     |         | show circular variant              |
+| `height`                  | number                      | `12`    | Height of Skeleton View            |
+| `skeletonStyle`           | View Style                  |         | Custom style for skeleton gradient |
+| `width`                   | number                      | `100%`  | Width of Skeleton View             |
+
+</div>
