@@ -61,7 +61,9 @@ exports[`Tile component should render 1`] = `
       />
       <View
         accessibilityElementsHidden={true}
+        collapsable={false}
         importantForAccessibility="no-hide-descendants"
+        nativeID="animatedComponent"
         pointerEvents="none"
         style={
           Object {

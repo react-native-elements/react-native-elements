@@ -27,6 +27,8 @@ exports[`Default SearchBar component should match snapshot 1`] = `
       testID="RNE__Input__view-wrapper"
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         style={
           Object {
             "alignItems": "center",
@@ -115,13 +117,11 @@ exports[`Default SearchBar component should match snapshot 1`] = `
           </View>
         </View>
         <TextInput
-          allowFontScaling={true}
           editable={true}
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholderTextColor="#86939e"
-          rejectResponderTermination={true}
           style={
             Object {
               "color": "#86939e",
