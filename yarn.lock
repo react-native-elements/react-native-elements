@@ -3726,7 +3726,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/normalize-color@npm:2.0.0, @react-native/normalize-color@npm:^2.0.0":
+"@react-native/normalize-color@npm:^2.0.0":
   version: 2.0.0
   resolution: "@react-native/normalize-color@npm:2.0.0"
   checksum: 2da373297f0d22b700edb9ab1b2cca34684e94a5dfe172e1cfd114e74ac17e139e802bc671e9868e0a580190eccbf3fa804f67be8cc1d9cbd0e216e994495931
@@ -4271,12 +4271,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native@npm:^0.67.7":
-  version: 0.67.7
-  resolution: "@types/react-native@npm:0.67.7"
+"@types/react-native@npm:^0.66.17":
+  version: 0.66.18
+  resolution: "@types/react-native@npm:0.66.18"
   dependencies:
     "@types/react": "*"
-  checksum: 28f5bdfb4463e5cbcbaa842674ae0b4640bf1f829a6dc650d879e4e7d326b9dd9146e18ce82264289a6a22b4f844746ccba95c3c2e9daf49d5a0548f1741695b
+  checksum: b9422ba60d6d154f70f7522fe1aeec1b9d22fba374905b2a7efca1c5a66a8b93cbd42abb41dad6ef21bce32025604000ae146470d31582180bbd618fbd0a30cc
   languageName: node
   linkType: hard
 
@@ -16147,13 +16147,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-devtools-core@npm:4.19.1":
-  version: 4.19.1
-  resolution: "react-devtools-core@npm:4.19.1"
+"react-devtools-core@npm:^4.13.0":
+  version: 4.24.6
+  resolution: "react-devtools-core@npm:4.24.6"
   dependencies:
     shell-quote: ^1.6.1
     ws: ^7
-  checksum: 20471dde740e25a6f51b7b2b719fb1e1a9213cfb2a14d6defb44eced93646f73c9c5e376fcfdc78827c4fb587bc030ca99a14a0154a94acf7a1e1496d2b59ef6
+  checksum: 1c4ac2186de57c75755cb3ee2db884e49df9fb6bb4b4a718379f3d4ed5be4f17bc7a9a4175f0e249f5f91520b59703505f5e3fb155cf4d428c89b96255091e4d
   languageName: node
   linkType: hard
 
@@ -16241,14 +16241,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-codegen@npm:^0.0.8":
-  version: 0.0.8
-  resolution: "react-native-codegen@npm:0.0.8"
+"react-native-codegen@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "react-native-codegen@npm:0.0.7"
   dependencies:
     flow-parser: ^0.121.0
     jscodeshift: ^0.11.0
     nullthrows: ^1.1.1
-  checksum: c5ccdcb2a2f249756aca8e729cf96737368c8d33673b08d4c928a469bcb58ff37fbf3c7a070398f33b19846c4261948e2c5107c561934a41ac034620f7207bbd
+  checksum: d550d6e985a0d564f0ac470b19c9a2e4e78ffc0f5769ba46992a4d10130928093e9c2ada7eda0ec8bd976db4ba4c21ef410280e979226f11844aa0215335cde5
   languageName: node
   linkType: hard
 
@@ -16478,16 +16478,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native@npm:^0.67.4":
-  version: 0.67.4
-  resolution: "react-native@npm:0.67.4"
+"react-native@npm:^0.66.4":
+  version: 0.66.4
+  resolution: "react-native@npm:0.66.4"
   dependencies:
     "@jest/create-cache-key-function": ^27.0.1
     "@react-native-community/cli": ^6.0.0
     "@react-native-community/cli-platform-android": ^6.0.0
     "@react-native-community/cli-platform-ios": ^6.0.0
     "@react-native/assets": 1.0.0
-    "@react-native/normalize-color": 2.0.0
+    "@react-native/normalize-color": 1.0.0
     "@react-native/polyfills": 2.0.0
     abort-controller: ^3.0.0
     anser: ^1.4.9
@@ -16496,6 +16496,7 @@ __metadata:
     hermes-engine: ~0.9.0
     invariant: ^2.2.4
     jsc-android: ^250230.2.1
+    metro-babel-register: 0.66.2
     metro-react-native-babel-transformer: 0.66.2
     metro-runtime: 0.66.2
     metro-source-map: 0.66.2
@@ -16503,8 +16504,8 @@ __metadata:
     pretty-format: ^26.5.2
     promise: ^8.0.3
     prop-types: ^15.7.2
-    react-devtools-core: 4.19.1
-    react-native-codegen: ^0.0.8
+    react-devtools-core: ^4.13.0
+    react-native-codegen: ^0.0.7
     react-refresh: ^0.4.0
     regenerator-runtime: ^0.13.2
     scheduler: ^0.20.2
@@ -16516,7 +16517,7 @@ __metadata:
     react: 17.0.2
   bin:
     react-native: cli.js
-  checksum: 662cee2e5ddbfbaa2adfeaff42e6edc3b96a0116de2c75c2c73e605a87ff25d33319cf26349abbffef0c94ba9ba0c2231ddfd3568cbc2146bf715317370aa5e3
+  checksum: fccfe21339fe88f3cfb38a9495fb42687c6dcc9837b0e4f161083d89936492dcc31a1b5cf1b0194615f5b0d04c5620e3647a02d3264f8bf086289a9c38580874
   languageName: node
   linkType: hard
 
@@ -17214,7 +17215,7 @@ __metadata:
     "@types/dedent": ^0.7.0
     "@types/jest": ^27.4.0
     "@types/lodash.orderby": ^4.6.7
-    "@types/react-native": ^0.67.7
+    "@types/react-native": ^0.66.17
     "@types/react-test-renderer": ^17.0.1
     babel-jest: ^27.5.1
     codecov: ^3.8.3
@@ -17232,7 +17233,7 @@ __metadata:
     react: ^17.0.2
     react-docgen-typescript: ^2.2.2
     react-dom: ^17.0.2
-    react-native: ^0.67.4
+    react-native: ^0.66.4
     react-test-renderer: ^17.0.2
     rimraf: ^3.0.2
     ts-node: ^10.7.0
