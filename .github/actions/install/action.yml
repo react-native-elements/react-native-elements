@@ -36,6 +36,6 @@ runs:
           ${{ runner.os }}-rne-website-${{ hashFiles('website/yarn.lock') }}
     - name: Install website dependencies
       if: steps.website_cache.outputs.cache-hit != 'true' && inputs.install_website == 'true'
-      run: yarn install
+      run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
       working-directory: website
       shell: bash
