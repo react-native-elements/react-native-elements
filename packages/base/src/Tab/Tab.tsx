@@ -41,13 +41,7 @@ export interface TabProps extends ViewProps {
  * :::note
  * This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
  * :::
- * @usage
- *  ```tsx live
- * <Tab value={0} variant='primary'>
- * <Tab.Item>Tab 1</Tab.Item>
- * <Tab.Item>Tab 2</Tab.Item>
- * </Tab>
- * ```
+ * %jsx <Tab.Item title="Tab 1" buttonStyle={(active)=>{backgroundColor: active ? 'red' : 'blue'}} />
  *
  *  */
 export const TabBase: RneFunctionComponent<TabProps> = ({
@@ -65,24 +59,21 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
   const animationRef = React.useRef(new Animated.Value(0));
   const scrollViewRef = React.useRef<ScrollView>(null);
   const scrollViewPosition = React.useRef(0);
-  const validChildren = React.useMemo(
-    () => React.Children.toArray(children),
-    [children]
-  );
+  const validChildren = React.Children.toArray(children);
 
-  const tabItemPositions = React.useRef<
+  const tabItemsPosition = React.useRef<
     Array<{ position: number; width: number }>
   >([]);
   const [tabContainerWidth, setTabContainerWidth] = React.useState(0);
 
   const scrollHandler = React.useCallback(
     (currValue: number) => {
-      if (tabItemPositions.current.length > currValue) {
+      if (tabItemsPosition.current.length > currValue) {
         let itemStartPosition =
           currValue === 0
             ? 0
-            : tabItemPositions.current[currValue - 1].position;
-        let itemEndPosition = tabItemPositions.current[currValue].position;
+            : tabItemsPosition.current[currValue - 1].position;
+        let itemEndPosition = tabItemsPosition.current[currValue].position;
 
         const scrollCurrentPosition = scrollViewPosition.current;
         const tabContainerCurrentWidth = tabContainerWidth;
@@ -125,23 +116,23 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
 
   const indicatorTransitionInterpolate = React.useMemo(() => {
     const countItems = validChildren.length;
-    if (countItems < 2 || !tabItemPositions.current.length) {
+    if (countItems < 2 || !tabItemsPosition.current.length) {
       return 0;
     }
-    const inputRange = Array.from(Array(countItems + 1).keys());
-    const outputRange = tabItemPositions.current.map(
+    const inputRange = [...Array(tabItemsPosition.current.length).keys()];
+    const outputRange = tabItemsPosition.current.map(
       ({ position }) => position
     );
     return animationRef.current.interpolate({
       inputRange,
-      outputRange: [0, ...outputRange],
+      outputRange: [0, ...outputRange].slice(0, -1),
     });
   }, [animationRef, validChildren]);
 
   const WIDTH = React.useMemo(() => {
-    return tabItemPositions.current[value]?.width;
+    return tabItemsPosition.current[value]?.width;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value, tabItemPositions.current.length]);
+  }, [value, tabItemsPosition.current.length]);
 
   return (
     <View
@@ -175,12 +166,13 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                   onLayout: (event: LayoutChangeEvent) => {
                     const { width } = event.nativeEvent.layout;
                     const previousItemPosition =
-                      tabItemPositions.current[index - 1]?.position || 0;
+                      tabItemsPosition.current[index - 1]?.position || 0;
 
-                    tabItemPositions.current[index] = {
+                    tabItemsPosition.current[index] = {
                       position: previousItemPosition + width,
                       width,
                     };
+                    // setWidths({ ...widths, [index]: width });
                   },
                   active: index === value,
                   variant,
