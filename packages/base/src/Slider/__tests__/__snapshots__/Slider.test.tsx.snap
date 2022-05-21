@@ -231,6 +231,8 @@ exports[`Slider component should match snapshot 1`] = `
       testID="RNE__Slider_Track_maximum"
     />
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       style={
         Object {
           "backgroundColor": "#3f3f3f",
@@ -243,6 +245,8 @@ exports[`Slider component should match snapshot 1`] = `
       testID="RNE__Slider_Track_minimum"
     />
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       onLayout={[Function]}
       style={
         Object {
@@ -329,6 +333,8 @@ exports[`Slider component should render vertically 1`] = `
       testID="RNE__Slider_Track_maximum"
     />
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       style={
         Object {
           "backgroundColor": "#3f3f3f",
@@ -342,6 +348,8 @@ exports[`Slider component should render vertically 1`] = `
       testID="RNE__Slider_Track_minimum"
     />
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       onLayout={[Function]}
       style={
         Object {
@@ -426,6 +434,8 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       testID="RNE__Slider_Track_maximum"
     />
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       style={
         Object {
           "backgroundColor": "#3f3f3f",
@@ -438,6 +448,8 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       testID="RNE__Slider_Track_minimum"
     />
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       onLayout={[Function]}
       style={
         Object {
@@ -486,6 +498,8 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       testID="RNE__Slider_TouchArea"
     >
       <View
+        collapsable={false}
+        nativeID="animatedComponent"
         pointerEvents="none"
         style={
           Object {

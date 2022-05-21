@@ -29,12 +29,13 @@
     "@types/dedent": "^0.7.0",
     "@types/jest": "^27.4.0",
     "@types/lodash.orderby": "^4.6.7",
-    "@types/react-native": "^0.67.6",
+    "@types/react-native": "^0.66.17",
     "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^27.5.1",
     "codecov": "^3.8.3",
     "dedent": "^0.7.0",
     "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "handlebars": "^4.7.7",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
@@ -45,7 +46,8 @@
     "prettier": "^2.6.2",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.2.2",
-    "react-native": "^0.64.3",
+    "react-dom": "^17.0.2",
+    "react-native": "^0.66.4",
     "react-test-renderer": "^17.0.2",
     "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
@@ -96,8 +98,5 @@
       "themed": "@rneui/themed",
       "website/docs": "Docs"
     }
-  },
-  "dependencies": {
-    "eslint-plugin-prettier": "^4.0.0"
   }
 }

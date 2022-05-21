@@ -5,6 +5,8 @@ exports[`FAB Component should match snapshot 1`] = `
   testID="wrapper"
 >
   <View
+    collapsable={false}
+    nativeID="animatedComponent"
     style={
       Object {
         "alignItems": "center",
@@ -47,7 +49,9 @@ exports[`FAB Component should match snapshot 1`] = `
           }
         }
         accessible={true}
+        collapsable={false}
         focusable={true}
+        nativeID="animatedComponent"
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

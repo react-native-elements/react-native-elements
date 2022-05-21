@@ -34,7 +34,9 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
     >
       <View
         accessible={true}
+        collapsable={false}
         focusable={true}
+        nativeID="animatedComponent"
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

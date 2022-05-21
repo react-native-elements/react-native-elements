@@ -59,7 +59,9 @@ exports[`Tile component should match snapshot 1`] = `
       />
       <View
         accessibilityElementsHidden={true}
+        collapsable={false}
         importantForAccessibility="no-hide-descendants"
+        nativeID="animatedComponent"
         pointerEvents="none"
         style={
           Object {
@@ -202,7 +204,9 @@ exports[`Tile component should render tile with icon 1`] = `
       />
       <View
         accessibilityElementsHidden={true}
+        collapsable={false}
         importantForAccessibility="no-hide-descendants"
+        nativeID="animatedComponent"
         pointerEvents="none"
         style={
           Object {

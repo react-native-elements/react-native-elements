@@ -48,7 +48,9 @@ exports[`Avatar Component should match snapshot 1`] = `
       />
       <View
         accessibilityElementsHidden={true}
+        collapsable={false}
         importantForAccessibility="no-hide-descendants"
+        nativeID="animatedComponent"
         pointerEvents="none"
         style={
           Object {

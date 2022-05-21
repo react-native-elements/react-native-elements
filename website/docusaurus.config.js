@@ -33,7 +33,13 @@ const config = {
         googleAnalytics: {
           trackingID: 'UA-173589068-1',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['**/component_usage/**'],
+        },
         docs: {
+          exclude: ['**/component_usage/**'],
           path: 'docs',
           versions: {
             current: {
@@ -55,19 +61,16 @@ const config = {
   themeConfig: {
     image: '/img/website/seo.png',
     metadata: [
-      { name: 'title', content: 'React Native Elements' },
       {
         name: 'description',
-        content:
-          'React Native Elements | Cross-Platform React Native UI Toolkit | backed by community',
+        content: 'Cross-Platform React Native UI Toolkit | backed by community',
       },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: 'https://reactnativeelements.com/' },
       { name: 'og:title', content: 'React Native Elements' },
       {
         name: 'og:description',
-        content:
-          'React Native Elements | Cross-Platform React Native UI Toolkit | backed by community',
+        content: 'Cross-Platform React Native UI Toolkit | backed by community',
       },
       {
         name: 'og:image',
@@ -78,8 +81,7 @@ const config = {
       { name: 'twitter:title', content: 'React Native Elements' },
       {
         name: 'twitter:description',
-        content:
-          'React Native Elements | Cross-Platform React Native UI Toolkit | backed by community',
+        content: 'Cross-Platform React Native UI Toolkit | backed by community',
       },
       {
         name: 'twitter:image',
@@ -152,11 +154,10 @@ const config = {
       defaultLanguage: 'typescript',
     },
     algolia: {
-      appId: 'react_native_elements',
-      apiKey: '89e04a9445d16350e100c2d2421f2d39',
+      appId: 'RE3E65KUI0',
+      apiKey: 'dbc0364e21346919060006f77fd462f1',
       indexName: 'react_native_elements',
     },
-
     footer: {
       style: 'dark',
       logo: {
