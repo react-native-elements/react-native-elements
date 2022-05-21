@@ -51,7 +51,7 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
   return (
     <KeyboardAvoidingView
       style={styles.keyboardAvoidingView}
-      behavior={'padding'}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       enabled
       keyboardVerticalOffset={Platform.OS === 'ios' ? 64 : 84}
     >

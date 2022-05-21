@@ -21,4 +21,33 @@ describe('SearchBar wrapper component', () => {
     expect(component).not.toBeNull();
     expect(component.toJSON()).toMatchSnapshot();
   });
+
+  describe('keyboard eventListener', () => {
+    const mockListener = {
+      remove: jest.fn(),
+    };
+    const originalAddListener = Keyboard.addListener;
+    const mockAddListener = jest.fn().mockReturnValue(mockListener);
+
+    beforeAll(() => {
+      Keyboard.addListener = mockAddListener;
+    });
+    beforeEach(() => {
+      mockAddListener.mockClear();
+      mockListener.remove.mockClear();
+    });
+    afterAll(() => {
+      Keyboard.addListener = originalAddListener;
+    });
+    it('should subscribe to KeyboardDidClose event', () => {
+      renderWithWrapper(<SearchBar platform="android" />);
+      expect(Keyboard.addListener).toHaveBeenCalled();
+    });
+
+    it('should call listener.remove on unmount', () => {
+      const component = renderWithWrapper(<SearchBar platform="android" />);
+      component.unmount();
+      expect(mockListener.remove).toHaveBeenCalled();
+    });
+  });
 });

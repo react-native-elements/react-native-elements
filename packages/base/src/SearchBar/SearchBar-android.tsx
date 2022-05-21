@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ActivityIndicator, TextInput } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  ActivityIndicator,
+  Keyboard,
+  TextInput,
+  EmitterSubscription,
+} from 'react-native';
 import { defaultTheme, renderNode } from '../helpers';
 import { Input, InputProps } from '../Input';
 import { Icon } from '../Icon';
@@ -29,6 +36,8 @@ const defaultClearIcon = (theme: Theme) => ({
   name: 'clear',
 });
 
+type NewType = 'android';
+
 type SearchBarState = {
   hasFocus: boolean;
   isEmpty: boolean;
@@ -47,6 +56,8 @@ export class SearchBarAndroid extends Component<
     onBlur: () => null,
     onChangeText: () => null,
   };
+
+  keyboardListener: EmitterSubscription;
 
   focus = () => {
     this.input.focus();
@@ -92,6 +103,19 @@ export class SearchBarAndroid extends Component<
       hasFocus: false,
       isEmpty: value ? value === '' : true,
     };
+    this.keyboardListener = Keyboard.addListener(
+      'keyboardDidHide',
+      this._keyboardDidHide
+    );
+  }
+  _keyboardDidHide = () => {
+    this.cancel();
+  };
+
+  componentWillUnmount() {
+    if (this.keyboardListener) {
+      this.keyboardListener.remove();
+    }
   }
 
   render() {
@@ -145,7 +169,7 @@ export class SearchBarAndroid extends Component<
             hasFocus
               ? renderNode(Icon, cancelIcon, {
                   ...defaultCancelIcon(theme as Theme),
-                  onPress: this.cancel,
+                  onPress: () => Keyboard.dismiss(),
                 })
               : renderNode(Icon, searchIcon, defaultSearchIcon(theme as Theme))
           }
