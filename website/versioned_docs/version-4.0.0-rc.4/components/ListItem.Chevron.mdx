@@ -1,0 +1,37 @@
+---
+id: listitem_chevron
+title: ListItem.Chevron
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<IconsStyle />
+
+This allows adding a Chevron Icon(arrow) to the ListItem.
+This, Receives all [Icon](icon#props) props.
+
+## Import
+
+```tsx
+import { ListItem } from "@rneui/themed";
+```
+
+## Props
+
+:::note
+Includes all [Icon](icon#props), [Text](https://reactnative.dev/docs/text#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name             | Type                                 | Default | Description                                       |
+| ---------------- | ------------------------------------ | ------- | ------------------------------------------------- |
+| `onLongPress`    | GestureResponderEventHandler         |         | Called when a long-tap gesture is detected.       |
+| `onPress`        | GestureResponderEventHandler         |         | Called when a single tap gesture is detected.     |
+| `onPressIn`      | GestureResponderEventHandler         |         | Called when a touch is engaged before `onPress`.  |
+| `onPressOut`     | GestureResponderEventHandler         |         | Called when a touch is released before `onPress`. |
+| `pressableProps` | PressableProps except click handlers | `None`  |                                                   |
+
+</div>

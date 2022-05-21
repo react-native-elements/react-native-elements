@@ -1,0 +1,43 @@
+---
+id: pricingcard
+title: PricingCard
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/PricingCard.mdx";
+
+<IconsStyle />
+
+Pricing is a convenience component used to display features and pricing tables in a beautiful and engaging way.
+
+## Import
+
+```tsx
+import { PricingCard } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name             | Type                                 | Default           | Description                                |
+| ---------------- | ------------------------------------ | ----------------- | ------------------------------------------ |
+| `button`         | `ButtonProps` \| `ButtonInformation` |                   | Button information.                        |
+| `color`          | string                               | `Color [Primary]` | Color scheme for button & title.           |
+| `containerStyle` | View Style                           |                   | Outer component styling.                   |
+| `info`           | string[]                             | `[]`              | Pricing information.                       |
+| `infoStyle`      | Text Style                           |                   | Specify pricing information style.         |
+| `onButtonPress`  | Function                             |                   | Function to be run when button is pressed. |
+| `price`          | `string` \| `number`                 |                   | Price mentioned in the pricing card.       |
+| `pricingStyle`   | Text Style                           |                   | Specify pricing text style.                |
+| `title`          | string                               |                   | Add title in the pricing card.             |
+| `titleStyle`     | Text Style                           |                   | Specify title text style.                  |
+| `wrapperStyle`   | View Style                           |                   | Inner wrapper component styling.           |
+
+</div>

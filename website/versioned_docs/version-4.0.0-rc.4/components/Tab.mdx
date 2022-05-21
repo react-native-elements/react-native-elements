@@ -1,0 +1,59 @@
+---
+id: tab
+title: Tab
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Tab.mdx";
+import Play from "@site/playground/Tab/tab.playground";
+
+<IconsStyle />
+
+Tabs organize content across different screens, data sets, and other interactions.
+
+:::note
+This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
+:::
+
+## Import
+
+```tsx
+import { Tab } from "@rneui/themed";
+```
+
+## Usage
+
+```tsx live
+<Tab value={0} variant="primary">
+  <Tab.Item>Tab 1</Tab.Item>
+  <Tab.Item>Tab 2</Tab.Item>
+</Tab>
+```
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name               | Type                    | Default    | Description                           |
+| ------------------ | ----------------------- | ---------- | ------------------------------------- |
+| `containerStyle`   | View Style              |            | Style for Tab container               |
+| `disableIndicator` | boolean                 |            | Disable the indicator below.          |
+| `indicatorStyle`   | View Style              |            | Additional styling for tab indicator. |
+| `onChange`         | (value: number) => void | `Function` | On Index Change Callback.             |
+| `scrollable`       | boolean                 | `false`    | Makes Tab Scrolling                   |
+| `value`            | number                  |            | Child position index value.           |
+| `variant`          | `primary` \| `default`  |            | Define the background Variant.        |
+
+</div>
+
+## Playground
+
+<Play />
