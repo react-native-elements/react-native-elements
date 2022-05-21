@@ -3,7 +3,7 @@ import { Text, Button } from '../..';
 import { lightColors } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent, render } from '@testing-library/react-native';
-import { useTheme } from '../makeStyles';
+import { useTheme } from '../ThemeProvider';
 import { ThemeProvider, createTheme, ThemeConsumer } from '../ThemeProvider';
 import { View } from 'react-native';
 

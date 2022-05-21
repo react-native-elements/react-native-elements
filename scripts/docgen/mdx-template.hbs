@@ -3,15 +3,27 @@ id: {{id}}
 title: {{title}}
 ---
 
+import {IconsStyle} from '@site/src/components/Docs_Icons';
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import { {{imports}} } from "react-native-elements";
 {{#if usageFileExists}}
 import Usage from "../component_usage/{{title}}.mdx";
 {{/if}}
+{{#if playgroundExists}}
+import Play from '@site/playground/{{title}}/{{id}}.playground';
+{{/if}}
 
+<IconsStyle/>
 
 {{{description}}}
+
+
+## Import
+
+```tsx
+import { {{parentComponent}} } from '@rneui/themed'
+```
+
 
 {{#if installation}}
 ## Installation
@@ -44,11 +56,12 @@ yarn add @rneui/{{installation}}
 {{#if showUsage}}
 ## Usage
 
+{{{usage}}}
+
 {{#if usageFileExists}}
 <Usage/>
 {{/if}}
 
-{{{usage}}}
 
 {{/if}}
 
@@ -72,4 +85,12 @@ Includes all {{includeProps}} props.
 
 </div>
 {{/if}}
+{{/if}}
+
+
+{{#if playgroundExists}}
+## Playground
+
+<Play/>
+
 {{/if}}

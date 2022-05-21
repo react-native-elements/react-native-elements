@@ -3,15 +3,24 @@ id: divider
 title: Divider
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Divider.mdx";
+import Play from "@site/playground/Divider/divider.playground";
+
+<IconsStyle />
 
 Dividers are visual separators of content.
 Use Divider when you want to make a distinction between sections of content.
 Our divider offers adding inset, color, orientation and subHeader to the component using props.
 Also receives all [View](https://reactnative.dev/docs/view#props) props.
+
+## Import
+
+```tsx
+import { Divider } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -37,3 +46,7 @@ Includes all [View](https://reactnative.dev/docs/view#props) props.
 | `width`          | number                        |              | Apply width to the divider.                           |
 
 </div>
+
+## Playground
+
+<Play />

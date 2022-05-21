@@ -1,0 +1,41 @@
+---
+id: bottomsheet
+title: BottomSheet
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/BottomSheet.mdx";
+import Play from "@site/playground/BottomSheet/bottomsheet.playground";
+
+Overlay Modal that displays content from the bottom of the screen.
+This opens from the bottom of the screen.
+
+## Import
+
+```tsx
+import { BottomSheet } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name              | Type            | Default    | Description                                                                          |
+| ----------------- | --------------- | ---------- | ------------------------------------------------------------------------------------ |
+| `backdropStyle`   | View Style      |            | Style of the backdrop container.                                                     |
+| `containerStyle`  | View Style      |            | Style of the bottom sheet's container. Use this to change the color of the underlay. |
+| `isVisible`       | boolean         | `false`    | Is the modal component shown.                                                        |
+| `modalProps`      | ModalProps      | `{}`       | Additional props handed to the `Modal`.                                              |
+| `onBackdropPress` | Function        | `Function` | Handler for backdrop press.                                                          |
+| `scrollViewProps` | ScrollViewProps | `{}`       | Used to add props to Scroll view.                                                    |
+
+</div>
+
+## Playground
+
+<Play />

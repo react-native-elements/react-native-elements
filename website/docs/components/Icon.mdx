@@ -3,13 +3,22 @@ id: icon
 title: Icon
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Icon.mdx";
+import Play from "@site/playground/Icon/icon.playground";
+
+<IconsStyle />
 
 Icons are visual indicators usually used to describe action or intent.
 They are also used for displaying information.
+
+## Import
+
+```tsx
+import { Icon } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -43,3 +52,7 @@ Includes all [Text](https://reactnative.dev/docs/text#props) props.
 | `type`           | string                               | `material`                                        | Type of icon set. [Supported sets here](#available-icon-sets).               |
 
 </div>
+
+## Playground
+
+<Play />

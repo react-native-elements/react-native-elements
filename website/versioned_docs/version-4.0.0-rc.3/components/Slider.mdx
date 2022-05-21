@@ -1,0 +1,57 @@
+---
+id: slider
+title: Slider
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Slider.mdx";
+import Play from "@site/playground/Slider/slider.playground";
+
+Sliders allow users to select a value from a fixed set of values using drag utility.
+
+## Import
+
+```tsx
+import { Slider } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                    | Type                                               | Default                                     | Description                                                                                                                                                                                                   |
+| ----------------------- | -------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `allowTouchTrack`       | boolean                                            | `false`                                     | If true, thumb will respond and jump to any touch along the track.                                                                                                                                            |
+| `animateTransitions`    | boolean                                            |                                             | Set to true if you want to use the default 'spring' animation.                                                                                                                                                |
+| `animationConfig`       | `TimingAnimationConfig` or `SpringAnimationConfig` |                                             | Used to configure the animation parameters. These are the same parameters in the [Animated library](https://reactnative.dev/docs/animations.html).                                                            |
+| `animationType`         | `spring` or `timing`                               | `timing`                                    | Set to 'spring' or 'timing' to use one of those two types of animations with the default [animation properties](https://reactnative.dev/docs/animations.html).                                                |
+| `containerStyle`        | Style                                              |                                             | Apply style to the container of the slider.                                                                                                                                                                   |
+| `debugTouchArea`        | boolean                                            | `false`                                     | Set this to true to visually see the thumb touch rect in green.                                                                                                                                               |
+| `disabled`              | boolean                                            |                                             | If true the user won't be able to move the slider.                                                                                                                                                            |
+| `maximumTrackTintColor` | string                                             | `#b3b3b3`                                   | The color used for the track to the right of the button.                                                                                                                                                      |
+| `maximumValue`          | number                                             | `1`                                         | Initial maximum value of the slider.                                                                                                                                                                          |
+| `minimumTrackTintColor` | string                                             | `#3f3f3f`                                   | The color used for the track to the left of the button.                                                                                                                                                       |
+| `minimumValue`          | number                                             | `0`                                         | Initial minimum value of the slider.                                                                                                                                                                          |
+| `onSlidingComplete`     | (value: number) => void                            |                                             | Callback called when the user finishes changing the value (e.g. when the slider is released).                                                                                                                 |
+| `onSlidingStart`        | (value: number) => void                            |                                             | Callback called when the user starts changing the value (e.g. when the slider is pressed).                                                                                                                    |
+| `onValueChange`         | (value: number) => void                            |                                             | Callback continuously called while the user is dragging the slider.                                                                                                                                           |
+| `orientation`           | `vertical` or `horizontal`                         | `horizontal`                                | Set the orientation of the slider.                                                                                                                                                                            |
+| `step`                  | number                                             | `0`                                         | Step value of the slider. The value should be between 0 and maximumValue - minimumValue).                                                                                                                     |
+| `style`                 | View Style                                         |                                             | The style applied to the slider container.                                                                                                                                                                    |
+| `thumbProps`            | any                                                |                                             | The props applied to the thumb. Uses `Component` prop which can accept `Animated` components.                                                                                                                 |
+| `thumbStyle`            | View Style                                         |                                             | The style applied to the thumb.                                                                                                                                                                               |
+| `thumbTintColor`        | string                                             | `red`                                       | The color used for the thumb.                                                                                                                                                                                 |
+| `thumbTouchSize`        | Sizable                                            | `{ width: THUMB_SIZE, height: THUMB_SIZE }` | The size of the touch area that allows moving the thumb. The touch area has the same center as the visible thumb. This allows to have a visually small thumb while still allowing the user to move it easily. |
+| `trackStyle`            | View Style                                         |                                             | The style applied to the track.                                                                                                                                                                               |
+| `value`                 | number                                             | `0`                                         | Initial value of the slider.                                                                                                                                                                                  |
+
+</div>
+
+## Playground
+
+<Play />

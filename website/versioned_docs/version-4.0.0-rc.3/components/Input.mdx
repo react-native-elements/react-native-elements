@@ -1,0 +1,54 @@
+---
+id: input
+title: Input
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Input.mdx";
+import Play from "@site/playground/Input/input.playground";
+
+## Import
+
+```tsx
+import { Input } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [React Native TextInput](https://reactnative.dev/docs/textinput#props), [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                      | Type                                                    | Default | Description |
+| ------------------------- | ------------------------------------------------------- | ------- | ----------- |
+| `InputComponent`          | `ComponentType<{}>` or `ForwardRefExoticComponent<any>` |         |             |
+| `containerStyle`          | View Style                                              |         |             |
+| `disabled`                | boolean                                                 |         |             |
+| `disabledInputStyle`      | Text Style                                              |         |             |
+| `errorMessage`            | string                                                  |         |             |
+| `errorProps`              | object                                                  |         |             |
+| `errorStyle`              | Text Style                                              |         |             |
+| `inputContainerStyle`     | View Style                                              |         |             |
+| `inputStyle`              | Text Style                                              |         |             |
+| `label`                   | ReactNode                                               |         |             |
+| `labelProps`              | object                                                  |         |             |
+| `labelStyle`              | Text Style                                              |         |             |
+| `leftIcon`                | IconNode                                                |         |             |
+| `leftIconContainerStyle`  | View Style                                              |         |             |
+| `renderErrorMessage`      | boolean                                                 |         |             |
+| `rightIcon`               | IconNode                                                |         |             |
+| `rightIconContainerStyle` | View Style                                              |         |             |
+| `shake`                   | Function                                                |         |             |
+
+</div>
+
+## Playground
+
+<Play />

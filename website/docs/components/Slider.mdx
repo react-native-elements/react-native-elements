@@ -3,12 +3,21 @@ id: slider
 title: Slider
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Slider.mdx";
+import Play from "@site/playground/Slider/slider.playground";
+
+<IconsStyle />
 
 Sliders allow users to select a value from a fixed set of values using drag utility.
+
+## Import
+
+```tsx
+import { Slider } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -45,3 +54,7 @@ Sliders allow users to select a value from a fixed set of values using drag util
 | `value`                 | number                                             | `0`                                         | Initial value of the slider.                                                                                                                                                                                  |
 
 </div>
+
+## Playground
+
+<Play />

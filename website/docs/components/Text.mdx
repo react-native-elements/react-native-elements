@@ -3,12 +3,21 @@ id: text
 title: Text
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Text.mdx";
+import Play from "@site/playground/Text/text.playground";
+
+<IconsStyle />
 
 Text displays words and characters of various sizes.
+
+## Import
+
+```tsx
+import { Text } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -31,3 +40,7 @@ Text displays words and characters of various sizes.
 | `style`   | Text Style | `{}`    | Add additional styling for Text. |
 
 </div>
+
+## Playground
+
+<Play />

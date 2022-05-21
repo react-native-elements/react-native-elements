@@ -3,13 +3,22 @@ id: listitem
 title: ListItem
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/ListItem.mdx";
+import Play from "@site/playground/ListItem/listitem.playground";
+
+<IconsStyle />
 
 ListItems are used to display rows of information, such as a contact list, playlist, or menu.
 They are very customizable and can contain switches, avatars, badges, icons, and more.
+
+## Import
+
+```tsx
+import { ListItem } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -36,3 +45,7 @@ Includes all [View](https://reactnative.dev/docs/view#props) props.
 | `topDivider`          | boolean         |         | Add divider at the top of the list item.                                       |
 
 </div>
+
+## Playground
+
+<Play />

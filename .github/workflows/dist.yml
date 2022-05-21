@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - "website/**"
       - "example/**"
+      - "scripts/**"
       - ".github/**"
 jobs:
   checks:

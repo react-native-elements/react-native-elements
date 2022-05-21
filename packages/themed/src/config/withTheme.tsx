@@ -1,7 +1,12 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, UpdateTheme, ReplaceTheme } from './ThemeProvider';
+import {
+  ThemeConsumer,
+  UpdateTheme,
+  ReplaceTheme,
+  themeSpacing,
+} from './ThemeProvider';
 import { FullTheme, ThemeMode } from './theme';
 import { Colors, lightColors } from './colors';
 
@@ -37,7 +42,7 @@ const ThemedComponent = (
             if (!context) {
               const newProps = {
                 ...rest,
-                theme: { colors: lightColors },
+                theme: { colors: lightColors, spacing: themeSpacing },
                 children,
               };
               return isClassComponent(WrappedComponent) ? (
@@ -54,7 +59,11 @@ const ThemedComponent = (
                 : theme[themeKey];
 
             const newProps = {
-              theme: { colors: theme.colors, mode: theme.mode },
+              theme: {
+                colors: theme.colors,
+                mode: theme.mode,
+                spacing: theme.spacing,
+              },
               updateTheme,
               replaceTheme,
               ...deepmerge<FullTheme>(themedProps || {}, rest, {

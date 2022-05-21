@@ -180,6 +180,8 @@ const Lists2: React.FunctionComponent<ListComponentProps> = () => {
                   </>
                 }
                 isExpanded={expanded}
+                icon={<Icon name="place" />}
+                leftRotate
                 onPress={() => {
                   setExpanded(!expanded);
                 }}
@@ -296,7 +298,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   list: {
-    marginTop: 20,
     borderTopWidth: 1,
     borderColor: colors.greyOutline,
   },

@@ -20,6 +20,11 @@ import {
 } from '../helpers';
 import { Text } from '../Text';
 
+type ButtonComponent = React.ReactElement;
+type ButtonObject = {
+  element: React.ElementType<any & { isSelected?: boolean }>;
+};
+
 export interface ButtonGroupProps extends InlinePressableProps {
   /** Button for the component. */
   button?: object;
@@ -31,7 +36,7 @@ export interface ButtonGroupProps extends InlinePressableProps {
   onPress?(...args: any[]): void;
 
   /** Array of buttons for component (required), if returning a component, must be an object with { element: componentName }. */
-  buttons?: (string | React.ReactElement<{}>)[];
+  buttons?: (string | ButtonComponent | ButtonObject)[];
 
   /** Specify styling for main button container. */
   containerStyle?: StyleProp<ViewStyle>;
@@ -135,13 +140,8 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
   underlayColor = theme?.colors?.primary,
   ...rest
 }) => {
-  let innerBorderWidth = 1;
-  if (
-    innerBorderStyle &&
-    Object.prototype.hasOwnProperty.call(innerBorderStyle, 'width')
-  ) {
-    innerBorderWidth = innerBorderStyle.width as number;
-  }
+  let innerBorderWidth = innerBorderStyle?.width ?? 1;
+
   return (
     <View
       testID="RNE__ButtonGroupContainer"
@@ -152,7 +152,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
         containerStyle && containerStyle,
       ])}
     >
-      {buttons?.map((button: any, i: number) => {
+      {buttons?.map((button, i) => {
         const isSelected = selectedIndex === i || selectedIndexes.includes(i);
         const isDisabled =
           disabled === true ||
@@ -161,7 +161,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
           <View
             key={i}
             style={StyleSheet.flatten([
-              styles.button,
+              !vertical && styles.button,
               vertical && styles.verticalComponent,
               i !== buttons.length - 1 &&
                 (vertical
@@ -230,7 +230,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                   isDisabled && isSelected && disabledSelectedStyle,
                 ])}
               >
-                {button.element ? (
+                {hasElementKey(button) ? (
                   <button.element isSelected={isSelected} />
                 ) : (
                   <Text
@@ -303,3 +303,11 @@ const styles = StyleSheet.create({
 });
 
 ButtonGroup.displayName = 'ButtonGroup';
+
+const hasElementKey = (
+  button: string | ButtonComponent | ButtonObject
+): button is ButtonObject => {
+  return (
+    typeof button === 'object' && Boolean((button as ButtonObject).element)
+  );
+};

@@ -99,4 +99,17 @@ describe('ListItem component', () => {
     const input = wrapper.findByType(TextInput);
     expect(input.props.placeholder).toBe('Enter Text');
   });
+  it('should render accordion', () => {
+    const { wrapper } = renderWithWrapper(
+      <ListItem.Accordion
+        isExpanded={false}
+        icon={<Icon name="place" />}
+        noRotation
+      ></ListItem.Accordion>,
+      'RNE__ListItem__Accordion__Icon'
+    );
+    expect(wrapper.props.style).toMatchObject({
+      transform: [{ rotate: '0deg' }],
+    });
+  });
 });

@@ -1,25 +1,8 @@
-import { useContext, useMemo } from 'react';
+import { useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import { Colors } from './colors';
-import { Theme, ThemeMode } from './theme';
-import { ReplaceTheme, ThemeContext, UpdateTheme } from './ThemeProvider';
-
-interface useThemeI {
-  replaceTheme: ReplaceTheme;
-  updateTheme: UpdateTheme;
-  theme: {
-    colors: Colors;
-    mode: ThemeMode;
-  } & Theme;
-}
-
-export const useTheme = (): useThemeI => {
-  return useContext(ThemeContext);
-};
-
-export const useThemeMode = () => {
-  return useContext(ThemeContext).theme.mode;
-};
+import { Theme } from './theme';
+import { useTheme } from './ThemeProvider';
 
 export const makeStyles =
   <T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>, V>(
@@ -28,8 +11,7 @@ export const makeStyles =
       | ((
           theme: {
             colors: Colors;
-            mode: ThemeMode;
-          },
+          } & Theme,
           props: V
         ) => T)
   ) =>
@@ -37,10 +19,7 @@ export const makeStyles =
     const { theme } = useTheme();
 
     return useMemo(() => {
-      const css =
-        typeof styles === 'function'
-          ? styles({ colors: theme.colors, mode: theme.mode }, props)
-          : styles;
+      const css = typeof styles === 'function' ? styles(theme, props) : styles;
       return StyleSheet.create(css);
-    }, [props, theme.colors, theme.mode]);
+    }, [props, theme]);
   };

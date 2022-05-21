@@ -3,12 +3,21 @@ id: badge
 title: Badge
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Badge.mdx";
+import Play from "@site/playground/Badge/badge.playground";
+
+<IconsStyle />
 
 Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user.
+
+## Import
+
+```tsx
+import { Badge } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -34,3 +43,7 @@ Badges are small components typically used to communicate a numerical value or i
 | `value`          | ReactNode                                      |                                                   | Text value to be displayed by badge, defaults to empty.   |
 
 </div>
+
+## Playground
+
+<Play />

@@ -3,10 +3,13 @@ id: tab
 title: Tab
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Tab.mdx";
+import Play from "@site/playground/Tab/tab.playground";
+
+<IconsStyle />
 
 Tabs organize content across different screens, data sets, and other interactions.
 
@@ -14,16 +17,20 @@ Tabs organize content across different screens, data sets, and other interaction
 This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
 :::
 
-```jsx
-<Tab.Item
-  title="Tab 1"
-  buttonStyle={(active) => {
-    backgroundColor: active ? "red" : "blue";
-  }}
-/>
+## Import
+
+```tsx
+import { Tab } from "@rneui/themed";
 ```
 
 ## Usage
+
+```tsx live
+<Tab value={0} variant="primary">
+  <Tab.Item>Tab 1</Tab.Item>
+  <Tab.Item>Tab 2</Tab.Item>
+</Tab>
+```
 
 <Usage />
 
@@ -46,3 +53,7 @@ Includes all [View](https://reactnative.dev/docs/view#props) props.
 | `variant`          | `primary` or `default`  |            | Define the background Variant.        |
 
 </div>
+
+## Playground
+
+<Play />

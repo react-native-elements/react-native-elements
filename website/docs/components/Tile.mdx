@@ -3,13 +3,22 @@ id: tile
 title: Tile
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import {} from "react-native-elements";
 import Usage from "../component_usage/Tile.mdx";
+import Play from "@site/playground/Tile/tile.playground";
+
+<IconsStyle />
 
 Tiles like Cards, are a convenient way to display related content about a single subject.
 Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
+
+## Import
+
+```tsx
+import { Tile } from "@rneui/themed";
+```
 
 ## Usage
 
@@ -45,3 +54,7 @@ Includes all [View](https://reactnative.dev/docs/view#props) props.
 | `width`                 | number                            | `'screen width'` | Width for the tile.                                                             |
 
 </div>
+
+## Playground
+
+<Play />
