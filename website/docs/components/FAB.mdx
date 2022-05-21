@@ -3,10 +3,13 @@ id: fab
 title: FAB
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import Usage from "../component_usage/FAB.mdx";
 import Play from "@site/playground/FAB/fab.playground";
+
+<IconsStyle />
 
 A floating action button (FAB) performs the primary, or most common, action on a screen.
 It appears in front of all screen content, typically as a circular shape with an icon in its center.
@@ -33,8 +36,8 @@ Includes all [Button](button#props) props.
 | Name        | Type               | Default | Description                                                                            |
 | ----------- | ------------------ | ------- | -------------------------------------------------------------------------------------- |
 | `color`     | string             |         | Change the color of the FAB.                                                           |
-| `placement` | `left` or `right`  |         | FAB placement at bottom, (optional) use [`style`](#style) in case of custom placement. |
-| `size`      | `small` or `large` | `large` | Change Size of FAB.                                                                    |
+| `placement` | `left` \| `right`  |         | FAB placement at bottom, (optional) use [`style`](#style) in case of custom placement. |
+| `size`      | `small` \| `large` | `large` | Change Size of FAB.                                                                    |
 | `style`     | View Style         |         | Style for FAB                                                                          |
 | `upperCase` | boolean            |         | Transform Extended Label text to uppercase.                                            |
 | `visible`   | boolean            | `true`  | Decide the visibility of the FAB.                                                      |

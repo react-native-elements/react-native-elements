@@ -3,9 +3,12 @@ id: tabview
 title: TabView
 ---
 
+import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import Usage from "../component_usage/TabView.mdx";
+
+<IconsStyle />
 
 Tabs organize content across different screens, data sets, and other interactions.
 TabView enables swipeable tabs.
@@ -27,7 +30,7 @@ import { TabView } from "@rneui/themed";
 | Name                    | Type                   | Default    | Description                                                                                      |
 | ----------------------- | ---------------------- | ---------- | ------------------------------------------------------------------------------------------------ |
 | `animationConfig`       | AnimationConfig        | `{}`       | Define the animation configurations.                                                             |
-| `animationType`         | `spring` or `timing`   | `spring`   | Choose the animation type among `spring` and `timing`. This is visible when there is tab change. |
+| `animationType`         | `spring` \| `timing`   | `spring`   | Choose the animation type among `spring` and `timing`. This is visible when there is tab change. |
 | `containerStyle`        | View Style             |            | Styling for Component container.                                                                 |
 | `disableSwipe`          | Boolean                | `false`    | Swipe disabled or not                                                                            |
 | `disableTransition`     | Boolean                | `false`    | Disables transition                                                                              |
