@@ -7,7 +7,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "#303337",
+        "backgroundColor": "#ffffff",
         "paddingBottom": 8,
         "paddingTop": 8,
       }
