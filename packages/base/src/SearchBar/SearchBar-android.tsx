@@ -169,7 +169,7 @@ export class SearchBarAndroid extends Component<
             hasFocus
               ? renderNode(Icon, cancelIcon, {
                   ...defaultCancelIcon(theme as Theme),
-                  onPress: () => Keyboard.dismiss(),
+                  onPress: Keyboard.dismiss,
                 })
               : renderNode(Icon, searchIcon, defaultSearchIcon(theme as Theme))
           }
