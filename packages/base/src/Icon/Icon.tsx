@@ -8,6 +8,8 @@ import {
   TextStyle,
   Pressable,
   ColorValue,
+  ActivityIndicatorProps,
+  ActivityIndicator,
 } from 'react-native';
 import {
   IconButtonProps,
@@ -22,6 +24,11 @@ import {
   InlinePressableProps,
   RneFunctionComponent,
 } from '../helpers';
+
+const defaultLoadingProps = (color): ActivityIndicatorProps => ({
+  color: color,
+  size: 'small',
+});
 
 export type IconType =
   | 'material'
@@ -92,6 +99,15 @@ export interface IconProps extends InlinePressableProps, IconButtonProps {
 
   /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
+
+  /** Prop to display a loading spinner. */
+  loading?: boolean;
+
+  /** Add additional styling for loading component. */
+  loadingStyle?: StyleProp<ViewStyle>;
+
+  /** Add additional props for ActivityIndicator component. */
+  loadingProps?: ActivityIndicatorProps;
 }
 
 /** Icons are visual indicators usually used to describe action or intent.
@@ -103,6 +119,9 @@ export const Icon: RneFunctionComponent<IconProps> = ({
   color: colorProp,
   iconStyle,
   iconProps,
+  loading = false,
+  loadingStyle,
+  loadingProps: passedLoadingProps,
   underlayColor = 'transparent',
   reverse = false,
   raised = false,
@@ -144,6 +163,11 @@ export const Icon: RneFunctionComponent<IconProps> = ({
     [size]
   );
 
+  const loadingProps: ActivityIndicatorProps = {
+    ...defaultLoadingProps(reverse ? reverseColor : color),
+    ...passedLoadingProps,
+  };
+
   return (
     <View
       style={StyleSheet.flatten([
@@ -162,6 +186,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
     >
       <Component
         testID="RNE__ICON__CONTAINER_ACTION"
+        disabled={loading || disabled}
         {...{
           android_ripple: androidRipple(
             Color(reverse ? color : (underlayColor as string))
@@ -173,7 +198,6 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           onLongPress,
           onPressIn,
           onPressOut,
-          disabled,
           accessibilityRole: 'button',
           ...pressableProps,
           ...rest,
@@ -192,18 +216,30 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           ])}
           testID="RNE__ICON"
         >
-          <IconComponent
-            testID="RNE__ICON__Component"
-            style={StyleSheet.flatten([
-              { backgroundColor: 'transparent' },
-              iconStyle && iconStyle,
-            ])}
-            size={size}
-            name={name}
-            color={reverse ? reverseColor : color}
-            {...iconSpecificStyle}
-            {...iconProps}
-          />
+          {/* Activity Indicator on loading */}
+          {loading && (
+            <ActivityIndicator
+              style={loadingStyle}
+              color={loadingProps.color}
+              size={loadingProps.size}
+              {...loadingProps}
+            />
+          )}
+          {/* Display Icon */}
+          {!loading && (
+            <IconComponent
+              testID="RNE__ICON__Component"
+              style={StyleSheet.flatten([
+                { backgroundColor: 'transparent' },
+                iconStyle && iconStyle,
+              ])}
+              size={size}
+              name={name}
+              color={reverse ? reverseColor : color}
+              {...iconSpecificStyle}
+              {...iconProps}
+            />
+          )}
         </View>
       </Component>
     </View>
