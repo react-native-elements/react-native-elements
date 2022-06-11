@@ -3821,7 +3821,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@4.0.0-rc.3, @rneui/base@workspace:packages/base":
+"@rneui/base@4.0.0-rc.4, @rneui/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@rneui/base@workspace:packages/base"
   dependencies:
@@ -3837,7 +3837,7 @@ __metadata:
     react-native-size-matters: ^0.4.0
     react-native-vector-icons: ^7.1.0
   peerDependencies:
-    react-native-safe-area-context: ^3.1.9
+    react-native-safe-area-context: ^3.1.9 || ^4.0.0
     react-native-vector-icons: ">7.0.0"
   languageName: unknown
   linkType: soft
@@ -3853,9 +3853,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rneui/themed@workspace:packages/themed"
   dependencies:
-    "@rneui/base": 4.0.0-rc.3
+    "@rneui/base": 4.0.0-rc.4
   peerDependencies:
-    "@rneui/base": 4.0.0-rc.3
+    "@rneui/base": 4.0.0-rc.4
   languageName: unknown
   linkType: soft
 
