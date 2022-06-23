@@ -68,7 +68,7 @@ const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
             >
               <Text>I'm different</Text>
             </Tooltip>
-            <Tooltip>
+            <Tooltip
               width={200}
               popover={<Text>Tooltip info goes here</Text>}
             >
