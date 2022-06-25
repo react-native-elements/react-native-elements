@@ -27,9 +27,9 @@ jobs:
       #       });
       #       return pr.data.head.sha
       - uses: actions/checkout@v3
-        with:
-          # token: ${{ secrets.RNE_BOT_TOKEN }}
-          #   ref: ${{ steps.sha.outputs.result }}
+        # with:
+        # token: ${{ secrets.RNE_BOT_TOKEN }}
+        #   ref: ${{ steps.sha.outputs.result }}
       - run: |
           mv README.md UNREADME.md
           git config --local user.email "104670806+rneui@users.noreply.github.com"
