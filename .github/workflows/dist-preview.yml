@@ -34,7 +34,7 @@ jobs:
         uses: ./.github/actions/install
       - name: Build packages
         run: yarn build
-      - run: echo ${{github.actor}}
+      # - run: echo ${{github.actor}}
       - name: Config git
         run: |
           git config --local user.email "104670806+rneui@users.noreply.github.com"
@@ -50,7 +50,7 @@ jobs:
 
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
                echo "Deploying @rneui/$pkg"
-               git push origin `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
+               git push https://rneui:${{ secrets.RNE_BOT_TOKEN }}@github.com/rneui/rneui.git `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
           done
       # - name: Message success
       #   if: ${{ success() }}
