@@ -27,10 +27,11 @@ jobs:
       #       });
       #       return pr.data.head.sha
       - uses: actions/checkout@v3
-        with:
-          token: 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
+        # with:
+        # token: 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
         #   ref: ${{ steps.sha.outputs.result }}
       - run: |
+          rm ~/.ssh
           mv README.md UNREADME.md
           git config --local user.email "104670806+rneui@users.noreply.github.com"
           git config --local user.name "rneui"
