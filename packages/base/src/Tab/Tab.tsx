@@ -139,7 +139,6 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animationRef, validChildren, tabItemPositions.current.length]);
 
-  console.log(indicatorTransitionInterpolate);
   const WIDTH = React.useMemo(() => {
     return tabItemPositions.current[value]?.width;
     // eslint-disable-next-line react-hooks/exhaustive-deps
