@@ -24,12 +24,9 @@ jobs:
       #       });
       #       return pr.data.head.sha
       - uses: actions/checkout@v2
-        # with:
-        #   ref: ${{ steps.sha.outputs.result }}
-      - name: Git checkout
-        uses: actions/checkout@v2
         with:
-          github_token: ${{ secrets.RNE_BOT_TOKEN }}
+          #   ref: ${{ steps.sha.outputs.result }}
+          token: ${{ secrets.RNE_BOT_TOKEN }}
       - name: Install dependencies
         uses: ./.github/actions/install
       - name: Build packages
