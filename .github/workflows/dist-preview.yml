@@ -28,10 +28,12 @@ jobs:
       #       return pr.data.head.sha
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.RNE_BOT_TOKEN }}
+          # token: ${{ secrets.RNE_BOT_TOKEN }}
           #   ref: ${{ steps.sha.outputs.result }}
       - run: |
           mv README.md UNREADME.md
+          git config --local user.email "104670806+rneui@users.noreply.github.com"
+          git config --local user.name "rneui"
           git remote set-url origin https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
           git remote -v
           git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
