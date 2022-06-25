@@ -66,7 +66,7 @@ jobs:
               issue_number: ${{github.event.inputs.pr}},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Hey, @${{github.actor}} PR Preview Build succeeded! ✅\n \n Install using \n```bash\n npm i ${{github.repository}}#base-${{ github.event.inputs.pr }} ${{github.repository}}#themed-${{ github.event.number }}\n```',
+              body: 'Hey, @${{github.actor}} PR Preview Build succeeded! ✅\n \n Install using \n```bash\n npm i ${{github.repository}}#base-${{ github.event.inputs.pr }} ${{github.repository}}#themed-${{ github.event.inputs.pr }}\n```',
             });
       - name: Message failure
         if: ${{ failure() }}
