@@ -36,7 +36,7 @@ export interface TextProps extends TextProperties {
   /**  Styling when h3 is set. */
   h3Style?: StyleProp<TextStyle>;
 
-  /**  Styling when h3 is set. */
+  /**  Styling when h4 is set. */
   h4Style?: StyleProp<TextStyle>;
 }
 
