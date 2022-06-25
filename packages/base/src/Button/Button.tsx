@@ -173,7 +173,7 @@ export interface ButtonProps
 export const Button: RneFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
-  onPress = () => console.warn('Please attach a method to this component'),
+  onPress = () => {},
   buttonStyle,
   type = 'solid',
   loading = false,
