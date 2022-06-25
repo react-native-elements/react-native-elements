@@ -27,13 +27,13 @@ jobs:
       #       });
       #       return pr.data.head.sha
       - uses: actions/checkout@v3
-
-        # with:
-        #   ref: ${{ steps.sha.outputs.result }}
-        # token: ${{ secrets.RNE_BOT_TOKEN }}
+        with:
+          #   ref: ${{ steps.sha.outputs.result }}
+          token: ${{ secrets.RNE_BOT_TOKEN }}
       - run: |
           mv README.md UNREADME.md
           git remote set-url origin https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
+          git remote -v
           git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
 
       # - name: Install dependencies
