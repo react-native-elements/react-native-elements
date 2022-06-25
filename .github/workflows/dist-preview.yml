@@ -28,9 +28,8 @@ jobs:
       #       return pr.data.head.sha
 
       - uses: actions/checkout@v2
-        with:
-          #   ref: ${{ steps.sha.outputs.result }}
-          token: ${{ secrets.RNE_BOT_TOKEN }}
+        # with:
+        #   ref: ${{ steps.sha.outputs.result }}
       - name: Install dependencies
         uses: ./.github/actions/install
       - name: Build packages
