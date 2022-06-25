@@ -27,8 +27,8 @@ jobs:
       #       });
       #       return pr.data.head.sha
       - uses: actions/checkout@v3
-        # with:
-        # token: ${{ secrets.RNE_BOT_TOKEN }}
+        with:
+          token: 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
         #   ref: ${{ steps.sha.outputs.result }}
       - run: |
           mv README.md UNREADME.md
