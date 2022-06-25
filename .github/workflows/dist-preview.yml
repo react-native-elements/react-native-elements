@@ -33,6 +33,7 @@ jobs:
         # token: ${{ secrets.RNE_BOT_TOKEN }}
       - run: |
           mv README.md UNREADME.md
+          git remote set-url origin https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
           git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
 
       # - name: Install dependencies
