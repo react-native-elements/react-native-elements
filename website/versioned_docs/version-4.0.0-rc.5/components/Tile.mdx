@@ -1,0 +1,60 @@
+---
+id: tile
+title: Tile
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Tile.mdx";
+import Play from "@site/playground/Tile/tile.playground";
+
+<IconsStyle />
+
+Tiles like Cards, are a convenient way to display related content about a single subject.
+Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
+
+## Import
+
+```tsx
+import { Tile } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                    | Type                              | Default          | Description                                                                     |
+| ----------------------- | --------------------------------- | ---------------- | ------------------------------------------------------------------------------- |
+| `ImageComponent`        | typeof Component                  | `RNE Image`      | Custom ImageComponent for Tile.                                                 |
+| `activeOpacity`         | number                            |                  | Number passed to control opacity on press.                                      |
+| `caption`               | ReactNode                         |                  | Text inside the tilt when tile is featured.                                     |
+| `captionStyle`          | Text Style                        |                  | Styling for the caption (optional); You only use this if `caption` is a string. |
+| `containerStyle`        | View Style                        |                  | Styling for the outer tile container.                                           |
+| `contentContainerStyle` | View Style                        |                  | Styling for bottom container when not featured tile.                            |
+| `featured`              | boolean                           |                  | Changes the look of the tile.                                                   |
+| `height`                | number                            | `'width/2'`      | Height for the tile.                                                            |
+| `icon`                  | IconObject                        |                  | Icon Component Props.                                                           |
+| `iconContainerStyle`    | View Style                        |                  | Styling for the outer icon container.                                           |
+| `imageContainerStyle`   | View Style                        |                  | Styling for the image.                                                          |
+| `imageProps`            | ImageProps(Object)                | `{}`             | Optional properties to pass to the image if provided e.g "resizeMode".          |
+| `imageSrc`              | `string` \| `ImageSourcePropType` |                  | Source for the image.                                                           |
+| `overlayContainerStyle` | View Style                        |                  | Styling for the overlay container when using featured tile.                     |
+| `title`                 | string                            |                  | Text inside the tile.                                                           |
+| `titleNumberOfLines`    | number                            |                  | Number of lines for Title.                                                      |
+| `titleStyle`            | Text Style                        |                  | Styling for the title.                                                          |
+| `width`                 | number                            | `'screen width'` | Width for the tile.                                                             |
+
+</div>
+
+## Playground
+
+<Play />

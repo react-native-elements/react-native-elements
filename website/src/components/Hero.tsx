@@ -49,9 +49,9 @@ const Home: React.FunctionComponent<{}> = () => {
                   className={
                     'button button--secondary button--outline   margin-vert--sm heroButton'
                   }
-                  to={'https://react-native-elements.js.org/'}
+                  to={'https://github.com/sponsors/react-native-elements'}
                 >
-                  Playground 🚀
+                  Sponsor Us
                 </Link>
                 <div className="ball" style={{ left: 80, top: '20%' }}>
                   <SiReact />
