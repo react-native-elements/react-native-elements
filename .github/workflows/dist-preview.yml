@@ -26,6 +26,7 @@ jobs:
       #         pull_number: number,
       #       });
       #       return pr.data.head.sha
+
       - uses: actions/checkout@v3
         with:
           #   ref: ${{ steps.sha.outputs.result }}
