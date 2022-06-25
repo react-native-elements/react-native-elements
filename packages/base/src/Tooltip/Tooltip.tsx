@@ -122,10 +122,10 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
       (
         _frameOffsetX,
         _frameOffsetY,
-        _width,
-        _height,
-        pageOffsetX,
-        pageOffsetY
+        _width = 0,
+        _height = 0,
+        pageOffsetX = 0,
+        pageOffsetY = 0
       ) => {
         isMounted.current &&
           setDimensions({
