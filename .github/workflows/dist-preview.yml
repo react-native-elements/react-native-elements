@@ -2,6 +2,12 @@ name: PR Deploy on comment
 on:
   issue_comment:
     types: [created]
+  workflow_dispatch:
+    inputs:
+      pr:
+        type: string
+        description: PR Number
+        required: true
 
 jobs:
   preview:
@@ -14,11 +20,11 @@ jobs:
         with:
           result-encoding: string
           script: |
-            const { owner, repo, number } = context.issue;
+            const { owner, repo,  } = context.issue;
             const pr = await github.pulls.get({
               owner,
               repo,
-              pull_number: number,
+              pull_number: ${{github.event.inputs.pr}},
             });
             return pr.data.head.sha
       - uses: actions/checkout@v2
@@ -45,7 +51,7 @@ jobs:
 
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
                echo "Deploying @rneui/$pkg"
-               git push origin `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg-${{ github.event.number }} --force
+               git push origin `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg-${{ github.event.inputs.pr }} --force
           done
       - name: Message success
         if: ${{ success() }}
@@ -56,7 +62,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Hey, @${{github.actor}} PR Preview Build succeeded! ✅\n \n Install using \n```bash npm i ${{github.repository}}#base-${{ github.event.number }} ${{github.repository}}#themed-${{ github.event.number }}```',
+              body: 'Hey, @${{github.actor}} PR Preview Build succeeded! ✅\n \n Install using \n```bash npm i ${{github.repository}}#base-${{ github.event.inputs.pr }} ${{github.repository}}#themed-${{ github.event.number }}```',
             });
       - name: Message failure
         if: ${{ failure() }}
