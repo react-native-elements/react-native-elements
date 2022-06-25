@@ -34,9 +34,10 @@ jobs:
           mv README.md UNREADME.md
           git config --local user.email "104670806+rneui@users.noreply.github.com"
           git config --local user.name "rneui"
-          git remote set-url origin https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
+          git remote set-url origin  https://rneui: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@github.com/rneui/rneui
           git remote -v
-          git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
+          # git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
+          git push https://rneui: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@github.com/rneui/rneui
 
       # - name: Install dependencies
       #   uses: ./.github/actions/install
