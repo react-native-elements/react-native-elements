@@ -19,13 +19,13 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
         <View style={styles.contentView}>
           <SubHeader title="Basic Buttons" />
           <View style={{ alignItems: 'center' }}>
-            <Stack dir="row" align="center" spacing={4}>
+            <Stack row align="center" spacing={4}>
               <Button size="sm">Small</Button>
               <Button size="md">Medium</Button>
               <Button size="lg">Large</Button>
             </Stack>
             <View>
-              <Stack dir="column" spacing={8}>
+              <Stack align="center" spacing={8}>
                 <Button>Primary</Button>
                 <Button color="secondary">Secondary</Button>
                 <Button color="warning">Warning</Button>

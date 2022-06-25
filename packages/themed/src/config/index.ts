@@ -15,10 +15,10 @@ import {
 } from '@rneui/base/dist/helpers';
 import { type Colors, darkColors, lightColors } from './colors';
 import {
-  type ReplaceTheme,
-  type UpdateTheme,
-  type ThemeOptions,
-  type CreateThemeOptions,
+  ReplaceTheme,
+  UpdateTheme,
+  ThemeOptions,
+  CreateThemeOptions,
   createTheme,
   ThemeConsumer,
   ThemeContext,
@@ -28,7 +28,7 @@ import {
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles } from './makeStyles';
-import type { Theme, FullTheme, ThemeMode } from './theme';
+import type { Theme, FullTheme, ThemeMode, ThemeSpacing } from './theme';
 import type { ComponentTheme } from './theme.component';
 
 export {
@@ -66,5 +66,6 @@ export type {
   ComponentTheme,
   ThemeMode,
   ThemeOptions,
+  ThemeSpacing,
   CreateThemeOptions,
 };

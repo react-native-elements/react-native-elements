@@ -1,16 +1,41 @@
 import React from 'react';
-import { Text, Button } from '../..';
+import Button, { Button as BaseButton } from '../../Button';
+import Text from '../../Text';
 import { lightColors } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent, render } from '@testing-library/react-native';
 import { useTheme } from '../ThemeProvider';
 import { ThemeProvider, createTheme, ThemeConsumer } from '../ThemeProvider';
 import { View } from 'react-native';
+import { ReactTestInstance } from 'react-test-renderer';
+import { defaultSpacing } from '../theme';
 
 describe('ThemeProvider', () => {
   it('render ThemeProvider', () => {
-    const { toJSON } = renderWithWrapper(<Text />);
-    expect(toJSON).toMatchSnapshot();
+    const { toJSON, queryAllByRole } = render(
+      <>
+        <BaseButton testID="xl" radius={'xl'}>
+          Test
+        </BaseButton>
+        <Button testID="lg" radius={'lg'}>
+          Test
+        </Button>
+        <ThemeProvider theme={createTheme({ Button: { radius: 'md' } })}>
+          <Button testID="sm" radius={'sm'}>
+            Test
+          </Button>
+          <Button testID="md">Test</Button>
+        </ThemeProvider>
+      </>
+    );
+    const buttons = queryAllByRole('button');
+    buttons.forEach((el) => {
+      const size = el.props.testID;
+      expect((el.children[0] as ReactTestInstance).props?.style).toMatchObject({
+        borderRadius: defaultSpacing[size],
+      });
+    });
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('should update and replace theme', () => {
@@ -48,9 +73,9 @@ describe('ThemeProvider', () => {
         <TestComp />
       </ThemeProvider>
     );
-    const updateButton = queryByTestId('updateTheme');
-    const replaceButton = queryByTestId('replaceThemeButton');
-    const textTheme = queryByTestId('themeChild');
+    const updateButton = queryByTestId('updateTheme')!;
+    const replaceButton = queryByTestId('replaceThemeButton')!;
+    const textTheme = queryByTestId('themeChild')!;
     expect(textTheme.props.children).toEqual(lightColors.primary);
 
     fireEvent.press(updateButton);
@@ -70,7 +95,7 @@ describe('ThemeProvider', () => {
         </ThemeConsumer>
       </ThemeProvider>
     );
-    const instance = queryByTestId('viewComp');
+    const instance = queryByTestId('viewComp')!;
     expect(JSON.parse(instance.props.children)).toMatchObject({
       colors: lightColors,
     });
@@ -109,8 +134,8 @@ describe('ThemeProvider', () => {
         <TestComp />
       </ThemeProvider>
     );
-    const updateButton = queryByTestId('updateTheme');
-    const textTheme = queryByTestId('themeChild');
+    const updateButton = queryByTestId('updateTheme')!;
+    const textTheme = queryByTestId('themeChild')!;
 
     expect(textTheme.props.accessibilityLabel).toEqual('theme-test');
 

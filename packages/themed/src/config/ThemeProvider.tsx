@@ -1,18 +1,16 @@
 import React, { useCallback, useContext } from 'react';
 import deepmerge from 'deepmerge';
 import { Colors, lightColors, darkColors } from './colors';
-import { ThemeMode, RecursivePartial, Theme, ThemeSpacing } from './theme';
+import {
+  ThemeMode,
+  RecursivePartial,
+  Theme,
+  ThemeSpacing,
+  defaultSpacing,
+} from './theme';
 import { ComponentTheme } from './theme.component';
 
 export type { RecursivePartial };
-
-export const themeSpacing: ThemeSpacing = {
-  xl: 16,
-  lg: 12,
-  md: 8,
-  sm: 4,
-  xs: 2,
-};
 
 type ComponentFunctionProps<Components = ComponentTheme> = {
   [Key in keyof Components]?:
@@ -51,9 +49,9 @@ export type ThemeProps<T = {}> = {
 
 export type ThemeProviderContext<T = {}> = ThemeProps<ThemeOptions & T>;
 
-export const ThemeContext = React.createContext<ThemeProviderContext>({
-  theme: { colors: lightColors, mode: 'light' },
-} as ThemeProviderContext);
+export const ThemeContext = React.createContext<ThemeProviderContext>(
+  {} as ThemeProviderContext
+);
 
 export const createTheme = (
   theme: CreateThemeOptions = {}
@@ -61,7 +59,7 @@ export const createTheme = (
   return {
     ...theme,
     ...deepmerge<CreateThemeOptions>(
-      { lightColors, darkColors, spacing: themeSpacing },
+      { lightColors, darkColors, spacing: defaultSpacing },
       {
         lightColors: theme.lightColors || ({} as Colors),
         darkColors: theme.darkColors || ({} as Colors),
