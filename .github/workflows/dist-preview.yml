@@ -26,13 +26,10 @@ jobs:
       #         pull_number: number,
       #       });
       #       return pr.data.head.sha
-
-      - run: |
-          git clone https://github.com/react-native-elements/react-native-elements
-          cd react-native-elements
-      # - uses: actions/checkout@v3
-      # with:
-      #   ref: ${{ steps.sha.outputs.result }}
+      - uses: actions/checkout@v3
+        with:
+          #   ref: ${{ steps.sha.outputs.result }}
+          token: ${{ secrets.RNE_BOT_TOKEN }}
       - name: Install dependencies
         uses: ./.github/actions/install
       - name: Build packages
@@ -40,8 +37,8 @@ jobs:
       # - run: echo ${{github.actor}}
       - name: Config git
         run: |
-          git config --global user.email "104670806+rneui@users.noreply.github.com"
-          git config --global user.name "RNEUI"
+          git config --local user.email "104670806+rneui@users.noreply.github.com"
+          git config --local user.name "RNEUI"
           git config credential.helper 'cache --timeout=120'
           git remote set-url origin https://rneui:$TOKEN@github.com/rneui/rneui.git
       - name: Create local changes
@@ -56,6 +53,7 @@ jobs:
         run: |
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
                echo "Deploying @rneui/$pkg"
+              git push `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
 
           done
       # - name: Message success
