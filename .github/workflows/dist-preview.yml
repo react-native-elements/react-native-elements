@@ -36,7 +36,7 @@ jobs:
         run: |
           git config --local user.email "react-native-elements-ci@users.noreply.github.com"
           git config --local user.name "React Native Elements CI"
-          git remote add preview https://RNE_BOT_TOKEN:${{ secrets.RNE_BOT_TOKEN }}@github.com/rneui/rneui.git
+          git remote add preview https://PREVIEW_DEPLOY:${{ secrets.RNE_BOT_TOKEN }}@github.com/rneui/rneui.git
       - name: Create local changes
         run: |
           sed -i -e 's/dist/src/g' .gitignore
