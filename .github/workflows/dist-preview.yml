@@ -27,35 +27,40 @@ jobs:
       #       });
       #       return pr.data.head.sha
       - uses: actions/checkout@v3
+
         # with:
         #   ref: ${{ steps.sha.outputs.result }}
         # token: ${{ secrets.RNE_BOT_TOKEN }}
-      - name: Install dependencies
-        uses: ./.github/actions/install
-      - name: Build packages
-        run: yarn build
-      # - run: echo ${{github.actor}}
-      - name: Config git
-        run: |
-          git config --local user.email "104670806+rneui@users.noreply.github.com"
-          git config --local user.name "RNEUI"
-          git config credential.helper 'cache --timeout=120'
-          git remote set-url origin https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
-      - name: Create local changes
-        run: |
-          sed -i -e 's/dist/src/g' .gitignore
-          git rm -rf packages/*/src
-          jq 'del(.devDependencies."@rneui/base",.peerDependencies."@rneui/base")'  packages/themed/package.json >  packages/themed/package.json.temp
-          mv packages/themed/package.json.temp packages/themed/package.json
-          git add .
-          git commit -m "Bleeding Edge Version" -a --no-verify
-      - name: Push
-        run: |
-          for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
-               echo "Deploying @rneui/$pkg"
-              git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
+      - run: |
+          mv README.md UNREADME.md
+          git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
 
-          done
+      # - name: Install dependencies
+      #   uses: ./.github/actions/install
+      # - name: Build packages
+      #   run: yarn build
+      # # - run: echo ${{github.actor}}
+      # - name: Config git
+      #   run: |
+      #     git config --local user.email "104670806+rneui@users.noreply.github.com"
+      #     git config --local user.name "RNEUI"
+      #     git config credential.helper 'cache --timeout=120'
+      #     git remote set-url origin https://rneui:$GH_TOKEN@github.com/rneui/rneui.git
+      # - name: Create local changes
+      #   run: |
+      #     sed -i -e 's/dist/src/g' .gitignore
+      #     git rm -rf packages/*/src
+      #     jq 'del(.devDependencies."@rneui/base",.peerDependencies."@rneui/base")'  packages/themed/package.json >  packages/themed/package.json.temp
+      #     mv packages/themed/package.json.temp packages/themed/package.json
+      #     git add .
+      #     git commit -m "Bleeding Edge Version" -a --no-verify
+      # - name: Push
+      #   run: |
+      #     for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
+      #          echo "Deploying @rneui/$pkg"
+      #         git push  https://rneui:$GH_TOKEN@github.com/rneui/rneui.git `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
+
+      #     done
       # - name: Message success
       #   if: ${{ success() }}
       #   uses: actions/github-script@v4
