@@ -5,12 +5,13 @@ on:
   push:
     branches:
       - "*"
-env:
-  TOKEN: ${{ secrets.RNE_BOT_TOKEN }}
+
 jobs:
   preview:
     # if: ${{ github.event.issue.pull_request && github.event.comment.body == '/deploy'}}
     runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.RNE_BOT_TOKEN }}
     steps:
       # - name: Get PR SHA
       #   id: sha
@@ -48,7 +49,8 @@ jobs:
           mv packages/themed/package.json.temp packages/themed/package.json
           git add .
           git commit -m "Bleeding Edge Version" -a --no-verify
-
+      - name: Push
+        run: |
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
                echo "Deploying @rneui/$pkg"
                git push https://rneui:$TOKEN@github.com/rneui/rneui.git `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
