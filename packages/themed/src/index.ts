@@ -71,6 +71,7 @@ import {
   createTheme,
   CreateThemeOptions,
   ThemeOptions,
+  ThemeSpacing,
 } from './config';
 
 // Components exports
@@ -181,6 +182,7 @@ export type {
   UpdateTheme,
   CreateThemeOptions,
   ThemeOptions,
+  ThemeSpacing,
   ThemeMode,
   ComponentTheme,
 };

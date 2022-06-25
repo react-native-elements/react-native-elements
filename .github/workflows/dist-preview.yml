@@ -1,0 +1,81 @@
+name: PR Deploy on comment
+on:
+  # pull_request_review_comment:
+  #   types:
+  #     - "created"
+  # issue_comment:
+  #   types: [created]
+  workflow_dispatch:
+    inputs:
+      pr:
+        type: string
+        description: PR Number
+        required: true
+
+jobs:
+  preview:
+    # if: ${{ github.event.inputs.pr }}
+    #  || github.event.issue.pull_request && github.event.comment.body == '/build' && github.actor== 'arpitBhalla'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR SHA
+        id: sha
+        uses: actions/github-script@v4
+        with:
+          result-encoding: string
+          script: |
+            const { owner, repo,  } = context.issue;
+            const pr = await github.pulls.get({
+              owner,
+              repo,
+              pull_number: ${{github.event.inputs.pr}},
+            });
+            return pr.data.head.sha
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.sha.outputs.result }}
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: ./.github/actions/install
+      - name: Build packages
+        run: yarn build
+      - name: Config git
+        run: |
+          git config --local user.email "104670806+rneui@users.noreply.github.com"
+          git config --local user.name "RNEUI"
+      - name: Create local changes
+        run: |
+          sed -i -e 's/dist/src/g' .gitignore
+          git rm -rf packages/*/src
+          jq 'del(.devDependencies."@rneui/base",.peerDependencies."@rneui/base")'  packages/themed/package.json >  packages/themed/package.json.temp
+          mv packages/themed/package.json.temp packages/themed/package.json
+          git add .
+          git commit -m "Bleeding Edge Version" -a --no-verify
+
+          for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
+               echo "Deploying @rneui/$pkg"
+               git push origin `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg-${{ github.event.inputs.pr }} --force
+          done
+      - name: Message success
+        if: ${{ success() }}
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: ${{github.event.inputs.pr}},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Hey, @${{github.actor}} PR Preview Build succeeded! ✅\n \n Install using \n```bash\n npm i ${{github.repository}}#base-${{ github.event.inputs.pr }} ${{github.repository}}#themed-${{ github.event.inputs.pr }}\n```',
+            });
+      - name: Message failure
+        if: ${{ failure() }}
+        uses: actions/github-script@v4
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: ${{github.event.inputs.pr}},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Deployment failed! ❌',
+            });

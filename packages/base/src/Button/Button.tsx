@@ -173,7 +173,7 @@ export interface ButtonProps
 export const Button: RneFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
-  onPress = () => console.warn('Please attach a method to this component'),
+  onPress = () => {},
   buttonStyle,
   type = 'solid',
   loading = false,
@@ -258,20 +258,29 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
         )
       : undefined;
 
-  const loadingProps: ActivityIndicatorProps = {
-    ...defaultLoadingProps(type, theme),
-    ...passedLoadingProps,
-  };
+  const loadingProps: ActivityIndicatorProps = useMemo(
+    () => ({
+      ...defaultLoadingProps(type, theme),
+      ...passedLoadingProps,
+    }),
+    [passedLoadingProps, theme, type]
+  );
 
-  const accessibilityState = {
-    disabled: !!disabled,
-    busy: !!loading,
-  };
+  const accessibilityState = useMemo(
+    () => ({
+      disabled: !!disabled,
+      busy: !!loading,
+    }),
+    [disabled, loading]
+  );
 
-  const borderRadius =
-    Number(
-      theme.spacing[radius as keyof typeof theme.spacing] ?? (radius || '0')
-    ) || 0;
+  const borderRadius = useMemo(
+    () =>
+      Number(
+        theme.spacing[radius as keyof typeof theme.spacing] ?? (radius || '0')
+      ) || 0,
+    [radius, theme]
+  );
 
   return (
     <View
