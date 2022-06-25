@@ -34,9 +34,9 @@ jobs:
         run: yarn build
       - name: Config git
         run: |
-          git config --local user.email "react-native-elements-ci@users.noreply.github.com"
-          git config --local user.name "React Native Elements CI"
-          git remote add preview https://PREVIEW_DEPLOY:${{ secrets.RNE_BOT_TOKEN }}@github.com/rneui/rneui.git
+          git config --local user.email "104670806+rneui@users.noreply.github.com"
+          git config --local user.name "RNEUI"
+          git remote add preview https://rneui:${{ secrets.RNE_BOT_TOKEN }}@github.com/rneui/rneui.git
       - name: Create local changes
         run: |
           sed -i -e 's/dist/src/g' .gitignore
@@ -48,7 +48,7 @@ jobs:
 
           for pkg in $(find ./packages -mindepth 1 -maxdepth 1 -type d -printf '%f\n'); do
                echo "Deploying @rneui/$pkg"
-               git push preview `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
+               git push https://rneui:${{ secrets.RNE_BOT_TOKEN }}@github.com/rneui/rneui.git `git subtree split --prefix packages/$pkg -b $pkg`:refs/heads/$pkg --force
           done
       # - name: Message success
       #   if: ${{ success() }}
