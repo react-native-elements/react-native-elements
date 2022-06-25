@@ -1,8 +1,8 @@
 name: PR Deploy on comment
 on:
-  pull_request_review_comment:
-    types:
-      - "created"
+  # pull_request_review_comment:
+  #   types:
+  #     - "created"
   # issue_comment:
   #   types: [created]
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
 
 jobs:
   preview:
-    if: ${{ github.event.inputs.pr }}
+    # if: ${{ github.event.inputs.pr }}
     #  || github.event.issue.pull_request && github.event.comment.body == '/build' && github.actor== 'arpitBhalla'}}
     runs-on: ubuntu-latest
     steps:
