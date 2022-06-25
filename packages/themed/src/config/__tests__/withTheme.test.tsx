@@ -7,7 +7,7 @@ describe('withTheme', () => {
   it('passes theme props to function component', () => {
     const Component = withTheme(() => <Text testID="myText" />);
     const { queryByTestId } = render(<Component />);
-    const wrapper = queryByTestId('myText').parent.parent;
+    const wrapper = queryByTestId('myText')!.parent!.parent!;
     expect(Object.keys(wrapper.props)).toContain('theme');
   });
 
