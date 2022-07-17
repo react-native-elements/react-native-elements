@@ -13,7 +13,7 @@ import {
   ScreenWidth,
   registerCustomIconType,
 } from '@rneui/base/dist/helpers';
-import { type Colors, darkColors, lightColors } from './colors';
+import type { Colors, darkColors, lightColors } from './colors';
 import {
   ReplaceTheme,
   UpdateTheme,
