@@ -139,9 +139,11 @@ declare module '@rneui/themed' {
 import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
-  MyCustomComponent: {
-    titleStyle: {
-      color: 'red',
+  components: {
+    MyCustomComponent: {
+      titleStyle: {
+        color: 'red',
+      },
     },
   },
 });
@@ -155,6 +157,6 @@ const App = () => {
 };
 ```
 
-### Theming with no RNE components
+<!-- ### Theming with no RNE components
 
-You can install `@rneui/theming`, refer it's [documentation](https://www.npmjs.com/package/@rneui/theming)
+You can install `@rneui/theming`, refer it's [documentation](https://www.npmjs.com/package/@rneui/theming) -->

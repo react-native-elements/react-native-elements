@@ -14,8 +14,10 @@ Firstly you'll want to set up your `ThemeProvider`.
 import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
-  Button: {
-    raised: true,
+  components: {
+    Button: {
+      raised: true,
+    },
   },
 });
 
