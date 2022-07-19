@@ -18,15 +18,15 @@ type ComponentFunctionProps<Components = ComponentTheme> = {
     | ((props: Components[Key]) => Components[Key]);
 };
 
-export interface CreateThemeOptions
-  extends ComponentFunctionProps,
-    RecursivePartial<Theme> {
+export interface CreateThemeOptions extends RecursivePartial<Theme> {
   lightColors?: RecursivePartial<Colors>;
   darkColors?: RecursivePartial<Colors>;
+  components?: ComponentFunctionProps;
 }
 
-export interface ThemeOptions extends ComponentFunctionProps, Theme {
+export interface ThemeOptions extends Theme {
   colors: Colors;
+  components?: ComponentFunctionProps;
 }
 
 export type UpdateTheme = (
@@ -144,7 +144,13 @@ interface UseTheme {
 }
 
 export const useTheme = (): UseTheme => {
-  return useContext(ThemeContext);
+  const themeContext = useContext(ThemeContext);
+
+  if (themeContext.theme?.components) {
+    themeContext.theme.components = undefined;
+  }
+
+  return themeContext;
 };
 
 export const useThemeMode = () => {

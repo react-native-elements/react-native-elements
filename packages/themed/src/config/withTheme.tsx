@@ -49,16 +49,14 @@ const ThemedComponent = (
             }
 
             const themedProps =
-              typeof theme[themeKey] === 'function'
-                ? theme[themeKey]?.(rest)
-                : theme[themeKey];
+              typeof theme.components[themeKey] === 'function'
+                ? theme.components[themeKey]?.(rest)
+                : theme.components[themeKey];
+
+            theme.components = undefined;
 
             const newProps = {
-              theme: {
-                colors: theme.colors,
-                mode: theme.mode,
-                spacing: theme.spacing,
-              },
+              theme,
               updateTheme,
               replaceTheme,
               ...deepmerge<FullTheme>(themedProps || {}, rest, {
