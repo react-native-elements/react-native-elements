@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { CheckBox, Icon } from '@rneui/themed';
+import { Switch as S } from 'react-native';
+import { CheckBox, Icon, Switch, Text } from '@rneui/themed';
 import { Header } from '../components/header';
+import { Stack } from '@rneui/layout';
 
 type CheckboxComponentProps = {};
 
@@ -11,6 +13,7 @@ const CheckboxComponent: React.FunctionComponent<
   const [check2, setCheck2] = useState(false);
   const [check3, setCheck3] = useState(false);
   const [check4, setCheck4] = useState(false);
+  const [check5, setCheck5] = useState(false);
 
   return (
     <>
@@ -67,6 +70,12 @@ const CheckboxComponent: React.FunctionComponent<
         checked={check4}
         onPress={() => setCheck4(!check4)}
       />
+      <Text>As a Switch</Text>
+      <Stack align="center">
+        <Switch value={check5} onValueChange={setCheck5} />
+        <Switch disabled value={check5} onValueChange={setCheck5} />
+        <S value={check5} onValueChange={setCheck5} />
+      </Stack>
     </>
   );
 };

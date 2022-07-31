@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {
   Switch as NativeSwitch,
   SwitchProps as NativeSwitchProps,
@@ -16,7 +16,15 @@ export interface SwitchProps extends NativeSwitchProps {
  * Switch represents user's decision of a process and indicates whether a state is on/off.
  * Switch is a controlled component that requires an `onValueChange` to update the `value` prop.
  * This renders a `boolean` value. React native elements provide you with additional `theme` and `color` support in the Switch Button.
- * This component inherits [all native Switch props that come with a standard React Native Switch element](https://reactnative.dev/docs/switch.html).
+ * @usage
+ *
+ *
+ *```tsx live
+ *  <Stack row align="center" spacing={4}>
+ *     <Switch/>
+ *  </Stack>
+ * ```
+ *
  */
 export const Switch: RneFunctionComponent<SwitchProps> = ({
   value = false,
@@ -28,41 +36,45 @@ export const Switch: RneFunctionComponent<SwitchProps> = ({
   ...rest
 }) => {
   // switchedOnColor deals with picking up a color provided as props by user or picks up default theme
-  const switchedOnColor: ColorValue =
-    color === 'primary'
-      ? theme?.colors?.primary
-        ? theme.colors.primary
-        : ''
-      : color;
+  const switchColor: ColorValue = useMemo(
+    () => theme?.colors[color] || color || theme?.colors.primary,
+    [color, theme?.colors]
+  );
 
-  const onTintColor: ColorValue =
-    Platform.OS === 'ios' || !disabled
-      ? switchedOnColor
-      : theme?.colors?.disabled
-      ? theme.colors.disabled
-      : '';
+  const trackColor: ColorValue = useMemo(
+    () =>
+      Platform.select({
+        ios: switchColor,
+        default: disabled ? theme?.colors.disabled : switchColor,
+      }),
+    [disabled, switchColor, theme?.colors.disabled]
+  );
 
-  const thumbTintColor =
-    Platform.OS === 'ios'
-      ? undefined
-      : disabled || !value
-      ? theme?.colors?.disabled
-      : switchedOnColor;
+  const thumbTintColor = useMemo(
+    () =>
+      Platform.select({
+        ios: undefined,
+        default: disabled ? theme?.colors?.disabled || '#fff' : switchColor,
+      }),
+    [disabled, switchColor, theme?.colors?.disabled]
+  );
 
-  const props =
-    Platform.OS === 'web'
-      ? {
-          activeTrackColor: onTintColor,
-          thumbColor: thumbTintColor,
-          activeThumbColor: switchedOnColor,
-        }
-      : {
-          thumbColor: thumbTintColor,
+  const props = useMemo(
+    () =>
+      Platform.select({
+        web: {
+          activeTrackColor: trackColor,
+          activeThumbColor: switchColor,
+        },
+        default: {
           trackColor: {
-            true: onTintColor,
-            false: '',
+            true: trackColor,
+            false: disabled ? theme?.colors?.disabled : '',
           },
-        };
+        },
+      }),
+    [trackColor, switchColor, disabled, theme.colors.disabled]
+  );
 
   return (
     <NativeSwitch
@@ -73,6 +85,7 @@ export const Switch: RneFunctionComponent<SwitchProps> = ({
         disabled,
       }}
       disabled={disabled}
+      thumbColor={thumbTintColor}
       onValueChange={disabled ? undefined : onValueChange}
       style={style}
       {...props}

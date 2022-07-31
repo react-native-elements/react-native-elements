@@ -11,6 +11,8 @@ const ALLOWED_INCLUDES = {
     '[TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props)',
   TextInputProps:
     '[React Native TextInput](https://reactnative.dev/docs/textinput#props)',
+  SwitchPropsIOS:
+    '[React Native Switch](https://reactnative.dev/docs/switch.html#props)',
 };
 
 export const MUST_INCLUDE_PROP_TYPES = [

@@ -24,16 +24,16 @@ import { Tab } from "@rneui/themed";
 :::note
 Includes all [Button](button#props) props.
 :::
-
 <div class='table-responsive'>
 
-| Name                 | Type                                          | Default | Description                                      |
-| -------------------- | --------------------------------------------- | ------- | ------------------------------------------------ |
+| Name                 | Type                                          | Default | Description | Usage Example                                     |
+| -------------------- | --------------------------------------------- | ------- | ------------------------------------------------ | ------------ |
 | `active`             | boolean                                       |         | Allows to define if TabItem is active.           |
-| `buttonStyle`        | `ViewStyle or (active: boolean) => ViewStyle` |         | Additional button style                          |
-| `containerStyle`     | ViewStyle or (active: boolean) => ViewStyle   |         | Additional Styling for button container.         |
+| `buttonStyle`        | `ViewStyle or (active: boolean) => ViewStyle` |         | Additional button styles | `buttonStyle={(active) => ({backgroundColor: active ? "red": "blue",})}` 
+|
+| `containerStyle`     | ViewStyle or (active: boolean) => ViewStyle   |         | Additional Styling for button container.   | `containerStyle={(active) => ({backgroundColor: active ? "red": "blue",})}` |
 | `iconContainerStyle` | ViewStyle or (active: boolean) => ViewStyle   |         | Additional Styling for Icon Component container. |
-| `titleStyle`         | TextStyle or (active: boolean) => TextStyle   |         | Additional button title style                    |
-| `variant`            | `primary` \| `default`                        |         | Define the background Variant.                   |
+| `titleStyle`         | TextStyle or (active: boolean) => TextStyle   |         | Additional button title style                    | `titleStyle={(active) => ({backgroundColor: active ? "red": "blue",})}` |
+| `variant`            | `primary` \| `default`                        |         | Define the background Variant.                   | 
 
 </div>

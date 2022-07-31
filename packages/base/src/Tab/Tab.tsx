@@ -42,13 +42,35 @@ export interface TabProps extends ViewProps {
  * This component is not for (complex) navigation. Use [React Navigation](https://reactnavigation.org) for that.
  * :::
  * @usage
+ * ### Basic Tabs
  *  ```tsx live
  * <Tab value={0} variant='primary'>
- * <Tab.Item>Tab 1</Tab.Item>
- * <Tab.Item>Tab 2</Tab.Item>
+ * <Tab.Item>Tab</Tab.Item>
+ * <Tab.Item>Tab</Tab.Item>
  * </Tab>
  * ```
  *
+ * ### Active Tab Items
+ * ```tsx live
+* <Tab value={0} variant="primary" scrollable>
+*   <Tab.Item
+*     containerStyle={(active) => ({
+*       backgroundColor: active ? 'red' : undefined,
+*     })}
+*   >
+*     Tab
+*   </Tab.Item>
+*   <Tab.Item
+*     buttonStyle={(active) => ({
+*       backgroundColor: active ? 'red' : undefined,
+*     })}
+*   >
+*     Tab
+*   </Tab.Item>
+* </Tab>
+* ```
+ *
+
  *  */
 export const TabBase: RneFunctionComponent<TabProps> = ({
   theme = defaultTheme,
