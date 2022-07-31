@@ -59,4 +59,16 @@ export default () => {
 
 const theme = createTheme({
   mode: 'dark',
+  components: {
+    Button: (props) => ({
+      buttonStyle: {
+        backgroundColor: props.type === 'outline' ? 'red' : 'blue',
+      },
+    }),
+    Text: {
+      h1Style: {
+        fontSize: 80,
+      },
+    },
+  },
 });

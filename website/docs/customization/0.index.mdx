@@ -75,9 +75,11 @@ are applied second.
 import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
-  Button: {
-    titleStyle: {
-      color: 'red',
+  components: {
+    Button: {
+      titleStyle: {
+        color: 'red',
+      },
     },
   },
 });
@@ -102,9 +104,11 @@ are applied last and have the highest precedence.
 import { ThemeProvider, Button, createTheme } from '@rneui/themed';
 
 const theme = createTheme({
-  Button: {
-    titleStyle: {
-      color: 'red',
+  components: {
+    Button: {
+      titleStyle: {
+        color: 'red',
+      },
     },
   },
 });

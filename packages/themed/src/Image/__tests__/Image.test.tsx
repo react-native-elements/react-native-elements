@@ -17,9 +17,11 @@ describe('Image Component', () => {
     const { queryByTestId } = renderWithWrapper(
       <Image source={{ uri: FAKE_URI }} />,
       '',
-      textTheme
+      {
+        components: textTheme,
+      }
     );
-    const placeholder = queryByTestId('RNE__Image__placeholder');
+    const placeholder = queryByTestId('RNE__Image__placeholder')!;
     expect(placeholder.props.style.backgroundColor).toBe('red');
   });
 

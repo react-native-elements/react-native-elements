@@ -1,13 +1,15 @@
 import React from 'react';
 import Dialog from '..';
-import { FullTheme } from '../..';
+import { CreateThemeOptions } from '../..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('Dialog Component', () => {
   it('should apply props from theme', () => {
-    const theme: Partial<FullTheme> = {
-      Dialog: {
-        transparent: false,
+    const theme: Partial<CreateThemeOptions> = {
+      components: {
+        Dialog: {
+          transparent: false,
+        },
       },
     };
     const { wrapper } = renderWithWrapper(

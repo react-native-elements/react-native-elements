@@ -1,13 +1,15 @@
 import React from 'react';
 import Slider from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../..';
+import { CreateThemeOptions } from '../..';
 
 describe('Slider component', () => {
   it('should apply values from theme', () => {
-    const theme: Partial<FullTheme> = {
-      Slider: {
-        thumbTintColor: 'blue',
+    const theme: Partial<CreateThemeOptions> = {
+      components: {
+        Slider: {
+          thumbTintColor: 'blue',
+        },
       },
     };
     const { wrapper } = renderWithWrapper(
