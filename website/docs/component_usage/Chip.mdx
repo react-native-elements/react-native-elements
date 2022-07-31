@@ -30,7 +30,7 @@ import LinearGradient from 'react-native-linear-gradient';
 ```SnackPlayer name=RNE Chip
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import { Chip, withTheme, colors } from '@rneui/themed';
+import { Chip, withTheme, lightColors } from '@rneui/themed';
 
 type ChipsComponentProps = {};
 
@@ -84,7 +84,7 @@ return (
               name: 'bluetooth',
               type: 'font-awesome',
               size: 20,
-              color: colors.primary2,
+              color: lightColors.primary2,
             }}
             onPress={() => console.log('Icon chip was pressed!')}
             type="outline"
@@ -96,7 +96,7 @@ return (
               name: 'close',
               type: 'font-awesome',
               size: 20,
-              color: colors.primary2,
+              color: lightColors.primary2,
             }}
             onPress={() => console.log('Icon chip was pressed!')}
             iconRight

@@ -70,7 +70,7 @@ function ThemedLiveEditor() {
 }
 
 function EditorWithHeader() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const [state, setState] = React.useState(undefined);
 
@@ -96,14 +96,14 @@ function EditorWithHeader() {
       {open && (
         <>
           {' '}
-          <Header>
+          {/* <Header>
             <Translate
               id="theme.Playground.liveEditor"
               description="The live editor label of the live codeblocks"
             >
               Live Editor
             </Translate>
-          </Header>
+          </Header> */}
           <ThemedLiveEditor />
         </>
       )}

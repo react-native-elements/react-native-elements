@@ -17,6 +17,7 @@ export type StringOmit<K extends string> = K | Omit<string, K>;
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
     theme?: Theme;
+    children?: React.ReactNode | undefined;
   }
 >;
 
