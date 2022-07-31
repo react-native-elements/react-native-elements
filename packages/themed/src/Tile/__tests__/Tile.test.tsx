@@ -20,7 +20,7 @@ describe('Tile component', () => {
     const { wrapper } = renderWithWrapper(
       <Tile imageSrc={{ uri: 'http://google.com' }} activeOpacity={0.9} />,
       '',
-      theme
+      { components: theme }
     );
     expect(wrapper.findByType(Text).props.children).toBe('Mary is friendly');
   });

@@ -12,7 +12,7 @@ describe('FeaturedTitle component', () => {
     const { queryByText } = renderWithWrapper(
       <FeaturedTile featured imageSrc={{ uri: 'http://google.com' }} />,
       '',
-      theme
+      { components: theme }
     );
     expect(queryByText('I am featured')).not.toBeNull();
   });

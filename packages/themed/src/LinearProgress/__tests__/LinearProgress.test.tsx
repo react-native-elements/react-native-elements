@@ -1,13 +1,15 @@
 import React from 'react';
 import LinearProgress from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config';
+import { CreateThemeOptions, FullTheme } from '../../config';
 
 describe('LinearProgress Component', () => {
   it('should apply props from theme', () => {
-    const theme: Partial<FullTheme> = {
-      LinearProgress: {
-        color: 'rgb(255, 0, 0)',
+    const theme: Partial<CreateThemeOptions> = {
+      components: {
+        LinearProgress: {
+          color: 'rgb(255, 0, 0)',
+        },
       },
     };
     const { wrapper } = renderWithWrapper(

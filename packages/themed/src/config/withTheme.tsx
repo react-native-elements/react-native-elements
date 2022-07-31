@@ -47,16 +47,14 @@ const ThemedComponent = (
                 <WrappedComponent {...newProps} />
               );
             }
-
+            const { components, ...restTheme } = theme;
             const themedProps =
-              typeof theme.components[themeKey] === 'function'
-                ? theme.components[themeKey]?.(rest)
-                : theme.components[themeKey];
-
-            theme.components = undefined;
+              typeof components?.[themeKey] === 'function'
+                ? components?.[themeKey]?.(rest)
+                : components?.[themeKey];
 
             const newProps = {
-              theme,
+              theme: restTheme,
               updateTheme,
               replaceTheme,
               ...deepmerge<FullTheme>(themedProps || {}, rest, {

@@ -9,11 +9,9 @@ describe('SearchBar wrapper component', () => {
         placeholder: 'Enter search term',
       },
     };
-    const component = renderWithWrapper(
-      <SearchBar platform="android" />,
-      '',
-      theme
-    );
+    const component = renderWithWrapper(<SearchBar platform="android" />, '', {
+      components: theme,
+    });
     expect(component.queryByTestId('RNE__SearchBar').props.placeholder).toBe(
       'Enter search term'
     );

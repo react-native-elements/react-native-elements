@@ -71,10 +71,12 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>,
       '',
-      theme
+      {
+        components: theme,
+      }
     );
     expect(
-      queryByTestId('tooltipPopoverContainer').props.style.backgroundColor
+      queryByTestId('tooltipPopoverContainer')!.props.style.backgroundColor
     ).toBe('pink');
   });
 
@@ -133,7 +135,7 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-    const tooltip = queryByTestId('tooltipTouchableHighlightedButton');
+    const tooltip = queryByTestId('tooltipTouchableHighlightedButton')!;
     fireEvent.press(tooltip);
     expect(fn).toBeCalledTimes(0); // 0 because tooltip is only closed by backdrop press
   });
