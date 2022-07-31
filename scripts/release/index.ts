@@ -49,6 +49,9 @@ class Release {
     for (const pkg of pkgPath) {
       const location = path.resolve(pkgRootPath, pkg);
       const manifestLocation = path.resolve(location, 'package.json');
+      if (!fs.existsSync(manifestLocation)) {
+        continue;
+      }
       const { version } = JSON.parse(fs.readFileSync(manifestLocation, 'utf8'));
       const recommendedVersion = await this.recommendVersion({
         name: pkg,
