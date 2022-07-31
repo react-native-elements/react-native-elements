@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckBox, Icon } from '@rneui/themed';
+import { CheckBox, Icon, Switch } from '@rneui/themed';
 import { Header } from '../components/header';
 
 type CheckboxComponentProps = {};
@@ -11,6 +11,7 @@ const CheckboxComponent: React.FunctionComponent<
   const [check2, setCheck2] = useState(false);
   const [check3, setCheck3] = useState(false);
   const [check4, setCheck4] = useState(false);
+  const [check5, setCheck5] = useState(false);
 
   return (
     <>
@@ -67,6 +68,7 @@ const CheckboxComponent: React.FunctionComponent<
         checked={check4}
         onPress={() => setCheck4(!check4)}
       />
+      <Switch value={check5} onValueChange={setCheck5} />
     </>
   );
 };
