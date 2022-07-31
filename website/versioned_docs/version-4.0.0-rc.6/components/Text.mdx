@@ -1,0 +1,46 @@
+---
+id: text
+title: Text
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Text.mdx";
+import Play from "@site/playground/Text/text.playground";
+
+<IconsStyle />
+
+Text displays words and characters of various sizes.
+
+## Import
+
+```tsx
+import { Text } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name      | Type       | Default | Description                      |
+| --------- | ---------- | ------- | -------------------------------- |
+| `h1`      | boolean    | `false` | Text with Font size 40.          |
+| `h1Style` | Text Style | `{}`    | Styling when h1 is set.          |
+| `h2`      | boolean    | `false` | Text with Font size 34.          |
+| `h2Style` | Text Style | `{}`    | Styling when h2 is set.          |
+| `h3`      | boolean    | `false` | Text with Font size 28.          |
+| `h3Style` | Text Style | `{}`    | Styling when h3 is set.          |
+| `h4`      | boolean    | `false` | Text with Font size 22.          |
+| `h4Style` | Text Style | `{}`    | Styling when h4 is set.          |
+| `style`   | Text Style | `{}`    | Add additional styling for Text. |
+
+</div>
+
+## Playground
+
+<Play />

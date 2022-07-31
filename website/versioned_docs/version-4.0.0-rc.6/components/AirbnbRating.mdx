@@ -1,0 +1,54 @@
+---
+id: airbnbrating
+title: AirbnbRating
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/AirbnbRating.mdx";
+import Play from "@site/playground/AirbnbRating/airbnbrating.playground";
+
+<IconsStyle />
+
+Ratings are used to collect measurable feedback from users.
+Use Rating over an Input where imagery can increase user interaction.
+This component is imported from [react-native-ratings](https://github.com/Monte9/react-native-ratings).
+There are two types of rating - TapRating and SwipeRating.
+This documentation is for Tap Rating version.
+
+## Import
+
+```tsx
+import { AirbnbRating } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                   | Type                  | Default | Description                                                                                                                                                                      |
+| ---------------------- | --------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `count`                | number                |         | Total number of ratings to displayDefault is 5                                                                                                                                   |
+| `defaultRating`        | number                |         | Initial value for the ratingDefault is 3                                                                                                                                         |
+| `isDisabled`           | boolean               |         | Whether the rating can be modiefied by the userDefault is false                                                                                                                  |
+| `onFinishRating`       | (number: any) => void |         | Callback method when the user finishes rating. Gives you the final rating value as a whole number                                                                                |
+| `ratingContainerStyle` | View Style            |         | Style for rating containerDefault is none                                                                                                                                        |
+| `reviewColor`          | string                |         | Color value for review.Default is #f1c40f                                                                                                                                        |
+| `reviewSize`           | number                |         | Size value for review.Default is 40                                                                                                                                              |
+| `reviews`              | string[]              |         | Labels to show when each value is tappede.g. If the first star is tapped, then value in index 0 will be used as the labelDefault is ['Terrible', 'Bad', 'Okay', 'Good', 'Great'] |
+| `selectedColor`        | string                |         | Color value for filled stars.Default is #004666                                                                                                                                  |
+| `showRating`           | boolean               |         | Determines if to show the reviews above the ratingDefault is true                                                                                                                |
+| `size`                 | number                |         | Size of rating imageDefault is 40                                                                                                                                                |
+| `starContainerStyle`   | View Style            |         | Style for star containerDefault is none                                                                                                                                          |
+| `starImage`            | string                |         | Pass in a custom base image source                                                                                                                                               |
+
+</div>
+
+## Playground
+
+<Play />
