@@ -50,6 +50,11 @@ const colors={
 }
 ```
 
+```diff
+- import { colors } from 'react-native-elements'
++ import { lightColors, darkColors } from '@rneui/themed'
+```
+
 ### Theme
 
 ```diff

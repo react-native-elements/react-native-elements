@@ -19,7 +19,7 @@ import Modal from 'modal-react-native-web';
 
 ```SnackPlayer name=RNE Tooltip
 import React from 'react';
-import { Tooltip, Text, colors } from '@rneui/themed';
+import { Tooltip, Text, lightColors } from '@rneui/themed';
 import { View, StyleSheet, Dimensions, ScrollView } from 'react-native';
 
 const { height } = Dimensions.get('window');
@@ -42,14 +42,14 @@ return (
           <Tooltip
             popover={<Text>Tooltip info goes here</Text>}
             width={200}
-            backgroundColor={colors.primary}
+            backgroundColor={lightColors.primary}
           >
             <Text>Press me</Text>
           </Tooltip>
         </View>
         <View style={styles.view}>
           <Tooltip
-            backgroundColor={colors.secondary}
+            backgroundColor={lightColors.secondary}
             popover={
               <Text>Tooltip info goes here too. Find tooltip everywhere</Text>
             }
@@ -73,7 +73,7 @@ return (
         <View style={styles.view}>
           <Tooltip
             width={200}
-            backgroundColor={colors.primary1}
+            backgroundColor={lightColors.primary1}
             popover={<Text>Tooltip info goes here</Text>}
           >
             <Text>More attention</Text>
@@ -82,7 +82,7 @@ return (
         <View style={styles.view}>
           <Tooltip
             width={200}
-            backgroundColor={colors.primary2}
+            backgroundColor={lightColors.primary2}
             popover={<Text>Tooltip info goes here</Text>}
           >
             <Text>I'm different</Text>
