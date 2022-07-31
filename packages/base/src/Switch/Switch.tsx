@@ -19,9 +19,9 @@ export interface SwitchProps extends NativeSwitchProps {
  * @usage
  *
  *
- *  * ```tsx live
+ *```tsx live
  *  <Stack row align="center" spacing={4}>
- *          <Switch />
+ *     <Switch/>
  *  </Stack>
  * ```
  *
