@@ -23,6 +23,6 @@ export const renderWithWrapper = (
     ...renderOptions,
   };
   const renderApi = render(children, options);
-  const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');
+  const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper')!;
   return { wrapper, ...renderApi };
 };
