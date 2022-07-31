@@ -72,6 +72,8 @@ function ThemedLiveEditor() {
 function EditorWithHeader() {
   const [open, setOpen] = React.useState(true);
 
+  const [state, setState] = React.useState(undefined);
+
   const handleToggle = () => {
     setOpen((isOpen) => !isOpen);
   };
