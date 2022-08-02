@@ -31,6 +31,9 @@ export interface BottomSheetProps {
 
   /** Used to add props to Scroll view. */
   scrollViewProps?: ScrollViewProps;
+
+  /** The content inside of the bottom sheet */
+  children?: React.ReactNode;
 }
 
 /**
