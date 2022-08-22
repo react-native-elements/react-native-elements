@@ -1,0 +1,37 @@
+---
+id: listitem_swipeable
+title: ListItem.Swipeable
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/ListItem.Swipeable.mdx";
+
+We offer a special kind of ListItem which is swipeable from both ends and allows users select an event.
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [ListItem](listitem#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name           | Type                                      | Default                                      | Description                           |
+| -------------- | ----------------------------------------- | -------------------------------------------- | ------------------------------------- |
+| `animation`    | Animated.TimingAnimationConfig            | `Object with duration 350ms and type timing` | Decide whether to show animation.     |
+| `leftContent`  | ReactNode or resetCallback => ReactNode   |                                              | Left Content.                         |
+| `leftStyle`    | View Style                                |                                              | Style of left container.              |
+| `leftWidth`    | number                                    | `ScreenWidth / 3`                            | Width to swipe left.                  |
+| `onSwipeBegin` | `(direction: left` or `right) => unknown` |                                              | Handler for swipe in either direction |
+| `onSwipeEnd`   | () => unknown                             |                                              | Handler for swipe end.                |
+| `rightContent` | ReactNode or resetCallback => ReactNode   |                                              | Right Content.                        |
+| `rightStyle`   | View Style                                |                                              | Style of right container.             |
+| `rightWidth`   | number                                    | `ScreenWidth / 3`                            | Width to swipe right.                 |
+
+</div>

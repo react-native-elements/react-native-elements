@@ -1,9 +1,9 @@
 import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, ThemeProps } from './ThemeProvider';
-import { FullTheme } from './theme';
-import { colors } from './colors';
+import { ThemeConsumer, UpdateTheme, ReplaceTheme } from './ThemeProvider';
+import { FullTheme, ThemeMode, defaultSpacing } from './theme';
+import { Colors, lightColors } from './colors';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component?.prototype?.isReactComponent);
@@ -11,6 +11,15 @@ const isClassComponent = (Component: any) =>
 export interface ThemedComponent {
   displayName: string;
 }
+
+const combineByStyles = (propName = '') => {
+  if (propName.endsWith('Style') || propName.endsWith('style')) {
+    return (prop1: any, prop2: any) => {
+      return [prop1, prop2].flat();
+    };
+  }
+  return undefined;
+};
 
 const ThemedComponent = (
   WrappedComponent: any,
@@ -23,32 +32,35 @@ const ThemedComponent = (
 
       return (
         <ThemeConsumer>
-          {(context) => {
+          {({ theme, updateTheme, replaceTheme }) => {
             // If user isn't using ThemeProvider
-            if (!context) {
-              const newProps = { ...rest, theme: { colors }, children };
+            if (!theme) {
+              const newProps = {
+                ...rest,
+                theme: { colors: lightColors, spacing: defaultSpacing },
+                children,
+              };
+
               return isClassComponent(WrappedComponent) ? (
                 <WrappedComponent ref={forwardedRef} {...newProps} />
               ) : (
                 <WrappedComponent {...newProps} />
               );
             }
-            const { theme, updateTheme, replaceTheme } = context;
+            const { components, ...restTheme } = theme;
+            const themedProps =
+              typeof components?.[themeKey] === 'function'
+                ? components?.[themeKey]?.(rest)
+                : components?.[themeKey];
+
             const newProps = {
-              theme,
+              theme: restTheme,
               updateTheme,
               replaceTheme,
-              ...deepmerge<FullTheme>(
-                (themeKey &&
-                  (theme[
-                    themeKey as keyof Partial<FullTheme>
-                  ] as Partial<FullTheme>)) ||
-                  {},
-                rest,
-                {
-                  clone: false,
-                }
-              ),
+              ...deepmerge<FullTheme>(themedProps || {}, rest, {
+                customMerge: combineByStyles,
+                clone: false,
+              }),
               children,
             };
 
@@ -64,8 +76,14 @@ const ThemedComponent = (
   );
 };
 
+interface ThemeProps<T = {}> {
+  theme?: { colors: Colors; mode?: ThemeMode } & T;
+  updateTheme?: UpdateTheme;
+  replaceTheme?: ReplaceTheme;
+}
+
 function withTheme<P = {}, T = {}>(
-  WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
+  WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
   themeKey?: string
 ): React.FunctionComponent<P> | React.ForwardRefExoticComponent<P> {
   const name = themeKey
@@ -79,6 +97,7 @@ function withTheme<P = {}, T = {}>(
   if (isClassComponent(WrappedComponent)) {
     return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
+
   return Component;
 }
 

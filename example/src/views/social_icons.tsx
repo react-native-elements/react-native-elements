@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
-import { SocialIcon, SocialIconProps } from '@react-native-elements/themed';
+import { SocialIcon, SocialIconProps } from '@rneui/themed';
 import { Header } from '../components/header';
-import { SocialMediaType } from '@react-native-elements/themed';
+import { SocialMediaType } from '@rneui/themed';
 import _ from 'lodash';
 
 type IconData = {

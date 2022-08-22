@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Avatar, Badge, Icon, withBadge } from '@react-native-elements/themed';
+import { Avatar, Badge, Icon, withBadge } from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 
 const BadgedIcon = withBadge(15)(Icon);
@@ -71,6 +71,7 @@ const badgeComponent = () => {
               containerStyle={{ position: 'absolute', top: 5, left: 40 }}
             />
           </View>
+          {/* @ts-ignore */}
           <BadgedIcon type="ionicon" name="ios-chatbubbles" />
           <View>
             <Avatar

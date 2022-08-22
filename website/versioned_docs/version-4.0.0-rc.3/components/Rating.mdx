@@ -1,0 +1,57 @@
+---
+id: rating
+title: Rating
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Rating.mdx";
+import Play from "@site/playground/Rating/rating.playground";
+
+Ratings are used to collect measurable feedback from users.
+Use Rating over an Input where imagery can increase user interaction.
+This component is imported from [react-native-ratings](https://github.com/Monte9/react-native-ratings).
+There are two tyoes of rating - TapRating and SwipeRating.
+This documentation is for Swipe Rating version.
+
+## Import
+
+```tsx
+import { Rating } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                    | Type                  | Default | Description                                                                                                                |
+| ----------------------- | --------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `fractions`             | any                   |         | The number of decimal places for the rating value; must be between 0 and 20                                                |
+| `imageSize`             | number                |         | The size of each rating imageDefault is 50                                                                                 |
+| `jumpValue`             | number                |         | The number to jump per swipeDefault is 0 (not to jump)                                                                     |
+| `minValue`              | number                |         | The minimum value the user can selectDefault is 0                                                                          |
+| `onFinishRating`        | Function              |         | Callback method when the user finishes rating. Gives you the final rating value as a whole number                          |
+| `onStartRating`         | Function              |         | Callback method when the user starts rating.                                                                               |
+| `onSwipeRating`         | (number: any) => void |         | Callback method when the user is swiping.                                                                                  |
+| `ratingBackgroundColor` | string                |         | Pass in a custom background-fill-color for the rating icon; use this along with type='custom' prop aboveDefault is 'white' |
+| `ratingColor`           | string                |         | Pass in a custom fill-color for the rating icon; use this along with type='custom' prop aboveDefault is '#f1c40f'          |
+| `ratingCount`           | number                |         | Number of rating images to displayDefault is 5                                                                             |
+| `ratingImage`           | ReactNode             |         | Pass in a custom image source; use this along with type='custom' prop above                                                |
+| `ratingTextColor`       | string                |         | Color used for the text labels                                                                                             |
+| `readonly`              | boolean               |         | Whether the rating can be modiefied by the userDefault is false                                                            |
+| `showRating`            | boolean               |         | Displays the Built-in Rating UI to show the rating value in real-timeDefault is false                                      |
+| `showReadOnlyText`      | boolean               |         | Whether the text is read onlyDefault is false                                                                              |
+| `startingValue`         | number                |         | The initial rating to renderDefault is ratingCount/2                                                                       |
+| `style`                 | View Style            |         | Exposes style prop to add additonal styling to the container view                                                          |
+| `tintColor`             | string                |         | Color used for the background                                                                                              |
+| `type`                  | string                |         | Graphic used for represent a ratingDefault is 'star'                                                                       |
+
+</div>
+
+## Playground
+
+<Play />

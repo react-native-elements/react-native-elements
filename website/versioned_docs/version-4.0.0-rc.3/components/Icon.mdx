@@ -1,0 +1,55 @@
+---
+id: icon
+title: Icon
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Icon.mdx";
+import Play from "@site/playground/Icon/icon.playground";
+
+Icons are visual indicators usually used to describe action or intent.
+They are also used for displaying information.
+
+## Import
+
+```tsx
+import { Icon } from "@rneui/themed";
+```
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [Text](https://reactnative.dev/docs/text#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name             | Type                                 | Default                                           | Description                                                                  |
+| ---------------- | ------------------------------------ | ------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `Component`      | React Component                      | `Press handlers present then Pressable else View` | Update React Native Component.                                               |
+| `brand`          | boolean                              | `false`                                           | Uses the brands font (FontAwesome5 only).                                    |
+| `containerStyle` | View Style                           |                                                   | Add styling to container holding icon.                                       |
+| `disabled`       | boolean                              | `false`                                           | Disables onPress events. Only works when `onPress` has a handler.            |
+| `disabledStyle`  | View Style                           |                                                   | Style for the button when disabled. Only works when `onPress` has a handler. |
+| `iconProps`      | IconProps                            |                                                   | Provide all props from react-native Icon component.                          |
+| `onLongPress`    | GestureResponderEventHandler         |                                                   | Called when a long-tap gesture is detected.                                  |
+| `onPress`        | GestureResponderEventHandler         |                                                   | Called when a single tap gesture is detected.                                |
+| `onPressIn`      | GestureResponderEventHandler         |                                                   | Called when a touch is engaged before `onPress`.                             |
+| `onPressOut`     | GestureResponderEventHandler         |                                                   | Called when a touch is released before `onPress`.                            |
+| `pressableProps` | PressableProps except click handlers | `None`                                            |                                                                              |
+| `raised`         | boolean                              | `false`                                           | Adds box shadow to button.                                                   |
+| `reverse`        | boolean                              | `false`                                           | Reverses color scheme.                                                       |
+| `reverseColor`   | string                               |                                                   | Specify reverse icon color.                                                  |
+| `solid`          | boolean                              | `false`                                           | Uses the solid font.                                                         |
+| `type`           | string                               | `material`                                        | Type of icon set. [Supported sets here](#available-icon-sets).               |
+
+</div>
+
+## Playground
+
+<Play />

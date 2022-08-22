@@ -1,0 +1,40 @@
+---
+id: checkbox
+title: CheckBox
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/CheckBox.mdx";
+
+CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off.
+It provides a clear visual of either a true or false choice.
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [CheckBoxIcon](checkboxicon#props), [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name             | Type                                                                   | Default | Description                                     |
+| ---------------- | ---------------------------------------------------------------------- | ------- | ----------------------------------------------- |
+| `Component`      | React Component                                                        |         | Specify React Native component for main button. |
+| `center`         | boolean                                                                | `false` | Aligns checkbox to center.                      |
+| `checkedTitle`   | string                                                                 |         | Specify a custom checked message.               |
+| `containerStyle` | View Style                                                             |         | Style of main container.                        |
+| `fontFamily`     | string                                                                 |         | Specify different font family.                  |
+| `iconRight`      | boolean                                                                | `false` | Moves icon to right of text.                    |
+| `right`          | boolean                                                                | `false` | Aligns checkbox to right.                       |
+| `textStyle`      | Text Style                                                             |         | Style of text.                                  |
+| `title`          | `string` or `ReactElement<{}, string` or `JSXElementConstructor<any>>` |         | Title of checkbox.                              |
+| `titleProps`     | TextProps                                                              | `{}`    | Additional props for the title Text component.  |
+| `wrapperStyle`   | View Style                                                             |         | Style for the wrapper of checkbox.              |
+
+</div>

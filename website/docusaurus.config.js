@@ -33,8 +33,19 @@ const config = {
         googleAnalytics: {
           trackingID: 'UA-173589068-1',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['**/component_usage/**'],
+        },
         docs: {
+          exclude: ['**/component_usage/**'],
           path: 'docs',
+          versions: {
+            current: {
+              label: 'Bleeding Edge 🚧',
+            },
+          },
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.ts'),
           remarkPlugins: [require('./plugins/remark-snackplayer')],
@@ -48,11 +59,44 @@ const config = {
     ],
   ],
   themeConfig: {
+    image: '/img/website/seo.png',
+    metadata: [
+      {
+        name: 'description',
+        content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://reactnativeelements.com/' },
+      { name: 'og:title', content: 'React Native Elements' },
+      {
+        name: 'og:description',
+        content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      },
+      {
+        name: 'og:image',
+        content: 'https://reactnativeelements.com/img/website/seo.png',
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:url', content: 'https://reactnativeelements.com/' },
+      { name: 'twitter:title', content: 'React Native Elements' },
+      {
+        name: 'twitter:description',
+        content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://reactnativeelements.com/img/website/seo.png',
+      },
+    ],
+
+    liveCodeBlock: {
+      playgroundPosition: 'top',
+    },
     announcementBar: {
       id: 'support_us',
       content:
         'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐' +
-        ' and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/rne_org">Twitter</a>!',
+        ' and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/rn_elements">Twitter</a>!',
       backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
       isCloseable: false,
@@ -60,18 +104,6 @@ const config = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
-      switchConfig: {
-        darkIcon: '🌙',
-        darkIconStyle: {
-          marginLeft: '2px',
-        },
-        // Unicode icons such as '\u2600' will work
-        // Unicode with 5 chars require brackets: '\u{1F602}'
-        lightIcon: '🌞',
-        lightIconStyle: {
-          marginLeft: '1px',
-        },
-      },
     },
     navbar: {
       title: 'React Native Elements',
@@ -89,9 +121,10 @@ const config = {
           dropdownActiveClassDisabled: true,
           docsPluginId: 'default',
         },
-        { to: 'docs/', label: 'Docs', position: 'right' },
-        { to: 'help', label: 'Help', position: 'right' },
-        { to: 'blog', label: 'Blog', position: 'right' },
+        // { to: 'docs/', label: 'Docs', position: 'right' },
+        // { to: 'help', label: 'Help', position: 'right' },
+        // { to: 'blog', label: 'Blog', position: 'right' },
+        { type: 'search', position: 'right' },
         {
           href: 'https://github.com/sponsors/react-native-elements',
           // label: 'Sponsor',
@@ -100,7 +133,7 @@ const config = {
           'aria-label': 'GitHub Sponsor',
         },
         {
-          href: 'https://twitter.com/rne_org',
+          href: 'https://twitter.com/rn_elements',
           // label: 'Sponsor',
           position: 'right',
           className: 'header-twitter-link',
@@ -113,17 +146,18 @@ const config = {
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
         },
-        { type: 'search', position: 'right' },
       ],
     },
     prism: {
-      theme: require('prism-react-renderer/themes/dracula'),
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/shadesOfPurple'),
+      defaultLanguage: 'typescript',
     },
     algolia: {
-      apiKey: '89e04a9445d16350e100c2d2421f2d39',
+      appId: 'RE3E65KUI0',
+      apiKey: 'dbc0364e21346919060006f77fd462f1',
       indexName: 'react_native_elements',
     },
-
     footer: {
       style: 'dark',
       logo: {

@@ -18,14 +18,14 @@ const Home: React.FunctionComponent<{}> = () => {
             }}
           >
             <div style={{ position: 'absolute', top: 40, left: 10 }}>
-              <CodeBlock language="bash">{`expo init my-app --template react-native-elements-template`}</CodeBlock>
+              <CodeBlock language="bash">{`expo init my-app --template @rneui/template`}</CodeBlock>
             </div>
             <img src="/img/website/start_now.png" />
           </div>
           <Link
             className="button button--primary"
             style={{ color: 'white' }}
-            to="/docs/getting-started/installation"
+            to="/docs"
           >
             Documentation
           </Link>

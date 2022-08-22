@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Platform, ScrollView } from 'react-native';
-import { Rating, AirbnbRating } from '@react-native-elements/themed';
+import { Rating, AirbnbRating } from '@rneui/themed';
 import { Header } from '../components/header';
 
 const WATER_IMAGE = require('../images/water.png');

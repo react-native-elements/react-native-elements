@@ -1,8 +1,5 @@
 import { withTheme } from '../config';
-import {
-  CheckBox,
-  CheckBoxProps,
-} from '@react-native-elements/base/dist/CheckBox/CheckBox';
+import { CheckBox, CheckBoxProps } from '@rneui/base/dist/CheckBox/CheckBox';
 
 export { CheckBox };
 export type { CheckBoxProps };

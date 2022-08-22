@@ -11,9 +11,14 @@ const ALLOWED_INCLUDES = {
     '[TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props)',
   TextInputProps:
     '[React Native TextInput](https://reactnative.dev/docs/textinput#props)',
+  SwitchPropsIOS:
+    '[React Native Switch](https://reactnative.dev/docs/switch.html#props)',
 };
 
-export const MUST_INCLUDE_PROP_TYPES = ['InlinePressableProps'];
+export const MUST_INCLUDE_PROP_TYPES = [
+  'InlinePressableProps',
+  'SearchBarBaseProps',
+];
 
 export function separateParent(components: ComponentDoc[]) {
   const parentComp: Record<string, ParentType[]> = {};
@@ -65,7 +70,7 @@ export function separateParent(components: ComponentDoc[]) {
         }
 
         const compName = parent.name.replace(/Props|\./, '');
-        return `[${compName}](/docs/documentation/${compName.toLowerCase()}#props)`;
+        return `[${compName}](${compName.toLowerCase()}#props)`;
       })
       .filter(Boolean);
   }

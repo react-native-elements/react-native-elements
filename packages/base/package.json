@@ -1,19 +1,26 @@
 {
-  "name": "@react-native-elements/base",
-  "version": "4.0.0-rc.0",
-  "description": "React Native Elements & UI Toolkit",
+  "name": "@rneui/base",
+  "version": "4.0.0-rc.6",
+  "description": "Cross Platform React Native UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "react-native": "src/index.ts",
-  "source": "src/index.ts",
   "prepublish": "tsc --composite false",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/react-native-elements"
+  },
   "keywords": [
     "react",
     "native",
     "react native",
+    "react native elements",
+    "rneui",
     "react native ui",
     "react native components",
     "ui library",
@@ -21,54 +28,42 @@
     "android",
     "bootstrap"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "build": "tsc --composite false",
     "test": "jest",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",
     "test:watch": "jest --watch",
-    "postinstall": "opencollective-postinstall || exit 0",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean-install": "rimraf node_modules && yarn"
   },
-  "author": "Nader Dabit & Monte Thakkar",
+  "author": "RNE Core Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-elements/react-native-elements/issues"
+    "url": "https://github.com/react-native-elements/react-native-elements/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+-label%3A%22pkg%3A+circular-slider%22+-label%3A%22pkg%3A+themed%22+"
   },
   "homepage": "https://reactnativeelements.com/",
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/react-native-elements",
-    "logo": "https://opencollective.com/react-native-elements/logo.txt"
-  },
   "dependencies": {
-    "@types/react-native-vector-icons": "^6.4.6",
-    "color": "^3.1.2",
+    "@types/react-native-vector-icons": "^6.4.10",
+    "color": "^3.2.1",
     "deepmerge": "^4.2.2",
     "hoist-non-react-statics": "^3.3.2",
-    "opencollective-postinstall": "^2.0.3",
     "react-native-ratings": "^8.1.0",
-    "react-native-size-matters": "^0.3.1"
+    "react-native-size-matters": "^0.4.0"
   },
   "devDependencies": {
-    "@types/color": "^3.0.1",
+    "@types/color": "^3.0.3",
     "@types/hoist-non-react-statics": "^3.3.1",
-    "metro-react-native-babel-preset": "^0.63.0",
-    "react-native-safe-area-context": "^3.1.9",
-    "react-native-vector-icons": "^7.0.0",
-    "react-test-renderer": "^16.13.1",
-    "utility-types": "^3.10.0"
+    "metro-react-native-babel-preset": "^0.70.2",
+    "react-native-safe-area-context": "^3.4.1",
+    "react-native-vector-icons": "^7.1.0"
   },
   "peerDependencies": {
-    "react-native-safe-area-context": "^3.1.9",
+    "react-native-safe-area-context": "^3.1.9 || ^4.0.0",
     "react-native-vector-icons": ">7.0.0"
   },
   "jest": {
-    "displayName": "@react-native-elements/base",
+    "displayName": "@rneui/base",
     "preset": "react-native",
     "timers": "fake",
     "testPathIgnorePatterns": [
@@ -109,6 +104,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-elements/react-native-elements.git"
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git",
+    "directory": "packages/base"
   }
 }

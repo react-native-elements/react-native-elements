@@ -1,0 +1,36 @@
+---
+id: dialog
+title: Dialog
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import {} from "react-native-elements";
+import Usage from "../component_usage/Dialog.mdx";
+
+Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
+You can wrap any component with a simple Dialog component to display quick information to the user.
+Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) props except `fullscreen`.
+
+## Usage
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [Overlay](overlay#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name             | Type                                 | Default | Description                                               |
+| ---------------- | ------------------------------------ | ------- | --------------------------------------------------------- |
+| `children`       | ReactNode                            |         | Add Enclosed components.                                  |
+| `onLongPress`    | GestureResponderEventHandler         |         | Called when a long-tap gesture is detected.               |
+| `onPressIn`      | GestureResponderEventHandler         |         | Called when a touch is engaged before `onPress`.          |
+| `onPressOut`     | GestureResponderEventHandler         |         | Called when a touch is released before `onPress`.         |
+| `overlayStyle`   | View Style                           |         | Add additional styling to the internal Overlay component. |
+| `pressableProps` | PressableProps except click handlers | `None`  |                                                           |
+
+</div>

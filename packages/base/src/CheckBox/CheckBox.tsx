@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 import { Text as TextElement } from '../Text';
 import { CheckBoxIcon, CheckBoxIconProps } from './components/CheckBoxIcon';
-import { fonts } from '../helpers/index-config';
-import { defaultTheme, RneFunctionComponent } from '../helpers';
+import { fonts } from '../helpers';
+import { color, defaultTheme, RneFunctionComponent } from '../helpers';
 
 export interface CheckBoxProps extends PressableProps, CheckBoxIconProps {
   /** Specify React Native component for main button. */
@@ -43,6 +43,15 @@ export interface CheckBoxProps extends PressableProps, CheckBoxIconProps {
   /** Style of text. */
   textStyle?: StyleProp<TextStyle>;
 
+  /** Disables user interaction. */
+  disabled?: boolean;
+
+  /** Style of the checkbox container when disabled. */
+  disabledStyle?: StyleProp<ViewStyle>;
+
+  /** Style of the title when disabled. */
+  disabledTitleStyle?: StyleProp<TextStyle>;
+
   /** Specify a custom checked message. */
   checkedTitle?: string;
 
@@ -68,6 +77,9 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
   theme = defaultTheme,
   onPress,
   onLongPress,
+  disabled = false,
+  disabledStyle,
+  disabledTitleStyle,
   checkedColor = theme?.colors?.primary,
   ...rest
 }) => {
@@ -88,15 +100,17 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
       accessibilityState={accessibilityState}
       testID="RNE__CheckBox__Wrapper"
       {...rest}
+      disabled={disabled}
       onLongPress={onLongPress}
       onPress={onPress}
       style={StyleSheet.flatten([
         {
-          backgroundColor: theme.colors.white,
+          backgroundColor: theme.colors.background,
           borderColor: theme.colors.white,
         },
         styles.container,
         containerStyle && containerStyle,
+        disabled && disabledStyle,
       ])}
     >
       <View
@@ -134,6 +148,12 @@ export const CheckBox: RneFunctionComponent<CheckBoxProps> = ({
                     },
                     textStyle && textStyle,
                     fontFamily && { fontFamily },
+                    disabled && {
+                      color: color(theme?.colors?.disabled)
+                        .darken(0.3)
+                        .string(),
+                    },
+                    disabled && disabledTitleStyle,
                   ]) as any
                 }
                 {...titleProps}

@@ -4,6 +4,7 @@
     "resolveJsonModule": true,
     "jsx": "preserve",
     "module": "CommonJS",
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "lib": ["DOM"]
   }
 }

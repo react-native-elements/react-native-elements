@@ -47,7 +47,19 @@ export interface TabItemProps
 /**
  * They are individual item of the parent Tab.
  * They are clickable and allows users to click and change Tab.
- * Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
+ * @usage
+ *
+ * ### Active Tab Items
+ * ```tsx
+ *   <Tab.Item
+ *     containerStyle={(active) => ({
+ *       backgroundColor: active ? 'red' : undefined,
+ *     })}
+ *   >
+ *     Tab
+ *   </Tab.Item>
+ * ```
+ *
  *  */
 export const TabItem: RneFunctionComponent<TabItemProps> = ({
   active,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { colors } from '../../helpers';
+import { lightColors } from '../../helpers';
 import { fireEvent } from '@testing-library/react-native';
 
 describe('Tab Component', () => {
@@ -29,7 +29,7 @@ describe('Tab Component', () => {
     const TabItemComponent = queryByA11yRole('tablist');
 
     expect(TabItemComponent.props.style).toContainEqual({
-      backgroundColor: colors?.primary,
+      backgroundColor: lightColors?.primary,
     });
   });
 
@@ -94,5 +94,16 @@ describe('Tab Component', () => {
     const tabs = queryAllByRole('tab');
     fireEvent(tabs[1], 'press');
     expect(tabs.length).toBe(2);
+  });
+
+  it('should ignore conditionally unrendered children', () => {
+    const { queryAllByRole } = renderWithWrapper(
+      <Tab>
+        <Tab.Item />
+        {false && <Tab.Item />}
+        <Tab.Item />
+      </Tab>
+    );
+    expect(queryAllByRole('tab').length).toBe(2);
   });
 });

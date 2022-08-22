@@ -50,23 +50,29 @@ import Tooltip, { TooltipProps } from './Tooltip';
 
 import {
   Colors,
-  colors,
+  lightColors,
+  darkColors,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
   withTheme,
   makeStyles,
   useTheme,
+  useThemeMode,
   UpdateTheme,
   ReplaceTheme,
   FullTheme,
   Theme,
-  ThemeProps,
+  ThemeMode,
+  normalizeText,
+  getIconType,
+  registerCustomIconType,
+  ComponentTheme,
+  createTheme,
+  CreateThemeOptions,
+  ThemeOptions,
+  ThemeSpacing,
 } from './config';
-import { ThemeOptions, createTheme } from './config/ThemeProvider';
-
-import getIconType, { registerCustomIconType } from './helpers/getIconType';
-import normalize from './helpers/normalizeText';
 
 // Components exports
 export {
@@ -106,16 +112,18 @@ export {
 
 // Theme utils exports
 export {
-  colors,
+  lightColors,
+  darkColors,
   getIconType,
   registerCustomIconType,
-  normalize,
+  normalizeText as normalize,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
   withBadge,
   withTheme,
   useTheme,
+  useThemeMode,
   makeStyles,
   createTheme,
 };
@@ -171,7 +179,10 @@ export type {
   FullTheme,
   ReplaceTheme,
   Theme,
-  ThemeProps,
   UpdateTheme,
+  CreateThemeOptions,
   ThemeOptions,
+  ThemeSpacing,
+  ThemeMode,
+  ComponentTheme,
 };

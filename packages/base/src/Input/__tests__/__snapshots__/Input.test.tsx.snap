@@ -14,6 +14,8 @@ exports[`Input component should match snapshot 1`] = `
     testID="RNE__Input__view-wrapper"
   >
     <View
+      collapsable={false}
+      nativeID="animatedComponent"
       style={
         Object {
           "alignItems": "center",
@@ -29,10 +31,8 @@ exports[`Input component should match snapshot 1`] = `
       }
     >
       <TextInput
-        allowFontScaling={true}
         editable={true}
         placeholderTextColor="#86939e"
-        rejectResponderTermination={true}
         style={
           Object {
             "color": "#242424",

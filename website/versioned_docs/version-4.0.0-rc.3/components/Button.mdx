@@ -1,0 +1,117 @@
+---
+id: button
+title: Button
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Button.mdx";
+import Play from "@site/playground/Button/button.playground";
+
+Buttons are touchable elements used to interact with the screen and to perform and operation.
+They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
+Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
+
+```jsx
+<Button title="Solid Button" />
+```
+
+## Import
+
+```tsx
+import { Button } from "@rneui/themed";
+```
+
+## Usage
+
+### Variants
+
+```tsx live
+<Stack dir="row" align="center" spacing={4}>
+  <Button title="Solid" />
+  <Button title="Outline" type="outline" />
+  <Button title="Clear" type="clear" />
+</Stack>
+```
+
+### Size
+
+```tsx live
+<Stack dir="row" align="center" spacing={4}>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</Stack>
+```
+
+### Colors
+
+```tsx live
+<Stack dir="row" align="center" spacing={4}>
+  <Button>Primary</Button>
+  <Button color="secondary">Secondary</Button>
+  <Button color="warning">Warning</Button>
+  <Button color="error">Error</Button>
+</Stack>
+```
+
+### Button with icon
+
+```tsx live
+<Button title="Solid" type="solid" icon="home" />
+```
+
+### Button with right icon
+
+```tsx live
+<Button title="Solid" type="solid" icon="home" iconRight />
+```
+
+### Button with loading spinner
+
+```jsx live
+<Button title="Solid" type="solid" loading />
+```
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                  | Type                                                                      | Default | Description                                                                                                                                              |
+| --------------------- | ------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TouchableComponent`  | typeof Component                                                          |         | Component for user interaction.                                                                                                                          |
+| `ViewComponent`       | React Component                                                           |         | Component for container.                                                                                                                                 |
+| `buttonStyle`         | View Style                                                                |         | Add additional styling for button component.                                                                                                             |
+| `color`               | `string` or `primary` or `secondary` or `success` or `warning` or `error` |         | Color of Button                                                                                                                                          |
+| `containerStyle`      | View Style                                                                |         | Styling for Component container.                                                                                                                         |
+| `disabled`            | boolean                                                                   | `false` | Disables user interaction.                                                                                                                               |
+| `disabledStyle`       | View Style                                                                |         | Style of the button when disabled.                                                                                                                       |
+| `disabledTitleStyle`  | Text Style                                                                |         | Style of the title when disabled.                                                                                                                        |
+| `icon`                | IconNode                                                                  |         | Displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component. |
+| `iconContainerStyle`  | View Style                                                                |         | Styling for Icon Component container.                                                                                                                    |
+| `iconPosition`        | `left` or `right` or `top` or `bottom`                                    | `left`  | Displays Icon to the position mentioned. Needs to be used along with `icon` prop.                                                                        |
+| `iconRight`           | boolean                                                                   | `false` | Displays Icon to the right of title. Needs to be used along with `icon` prop.                                                                            |
+| `linearGradientProps` | object                                                                    |         | Displays a linear gradient. See [usage](#lineargradient-usage).                                                                                          |
+| `loading`             | boolean                                                                   | `false` | Prop to display a loading spinner.                                                                                                                       |
+| `loadingProps`        | ActivityIndicatorProps                                                    |         | Add additional props for ActivityIndicator component.                                                                                                    |
+| `loadingStyle`        | View Style                                                                |         | Add additional styling for loading component.                                                                                                            |
+| `radius`              | `number` or `sm` or `md` or `lg`                                          | `xs`    | Radius of button                                                                                                                                         |
+| `raised`              | boolean                                                                   | `false` | Add raised button styling (optional). Has no effect if `type="clear"`.                                                                                   |
+| `size`                | `sm` or `md` or `lg`                                                      | `md`    | Button size                                                                                                                                              |
+| `title`               | `string` or `ReactElement<{}, string` or `JSXElementConstructor<any>>`    |         | Add button title.                                                                                                                                        |
+| `titleProps`          | TextProps                                                                 |         | Add additional props for Text component.                                                                                                                 |
+| `titleStyle`          | Text Style                                                                |         | Add additional styling for title component.                                                                                                              |
+| `type`                | `solid` or `clear` or `outline`                                           | `solid` | Type of button.                                                                                                                                          |
+| `uppercase`           | boolean                                                                   | `false` | Uppercase button title                                                                                                                                   |
+
+</div>
+
+## Playground
+
+<Play />

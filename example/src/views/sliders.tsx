@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Slider, Text, Icon } from '@react-native-elements/themed';
+import { Slider, Text, Icon } from '@rneui/themed';
 import { Header, SubHeader } from '../components/header';
 
 type SlidersComponentProps = {};

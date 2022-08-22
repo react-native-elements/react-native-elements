@@ -1,7 +1,4 @@
-import {
-  Switch,
-  SwitchProps,
-} from '@react-native-elements/base/dist/Switch/Switch';
+import { Switch, SwitchProps } from '@rneui/base/dist/Switch/Switch';
 import { withTheme } from '../config';
 
 export { Switch };

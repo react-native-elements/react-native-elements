@@ -1,0 +1,39 @@
+---
+id: skeleton
+title: Skeleton
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {} from 'react-native-elements';
+
+A placeholder preview for content before the data gets loaded, an alternative for spinners.
+
+## Usage
+
+```jsx
+<Skeleton circle width={40} height={40} />
+```
+
+```jsx
+<Skeleton width={210} height={118} />
+```
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                      | Type                        | Default | Description                        |
+| ------------------------- | --------------------------- | ------- | ---------------------------------- |
+| `LinearGradientComponent` | React Component             |         | Custom Linear Gradient Component   |
+| `animation`               | `none` or `pulse` or `wave` | `pulse` | Type of animation                  |
+| `circle`                  | boolean                     |         | show circular variant              |
+| `height`                  | number                      | `12`    | Height of Skeleton View            |
+| `skeletonStyle`           | View Style                  |         | Custom style for skeleton gradient |
+| `width`                   | number                      | `100%`  | Width of Skeleton View             |
+
+</div>

@@ -26,7 +26,7 @@ const processNode = (node, parent) => {
         : 'Example usage';
       const sampleCode = node.value;
       const encodedSampleCode = encodeURIComponent(sampleCode);
-      const dependencies = params.dependencies || 'react-native-elements';
+      const dependencies = params.dependencies || '@rneui/themed,@rneui/base';
       const platform = params.platform || 'web';
       const supportedPlatforms = params.supportedPlatforms || 'ios,android,web';
       const theme = params.theme || 'light';

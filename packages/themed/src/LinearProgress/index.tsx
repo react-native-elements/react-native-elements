@@ -2,7 +2,7 @@ import { withTheme } from '../config';
 import {
   LinearProgress,
   LinearProgressProps,
-} from '@react-native-elements/base/dist/LinearProgress/LinearProgress';
+} from '@rneui/base/dist/LinearProgress/LinearProgress';
 
 export { LinearProgress };
 export type { LinearProgressProps };

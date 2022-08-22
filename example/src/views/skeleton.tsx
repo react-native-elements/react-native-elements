@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { Header } from '../components/header';
-import { Skeleton, Text } from '@react-native-elements/themed';
+import { Skeleton, Text } from '@rneui/themed';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const Avatars = () => {
   return (
     <>
-      <Header title="Avatars" view="avatar" />
+      <Header title="Skeleton" view="skeleton" />
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.rowCenter}>
@@ -22,9 +22,13 @@ const Avatars = () => {
               </View>
             </View>
           </View>
-          <Text>With Linear Gradient</Text>
+          <Text>Wave (With Linear Gradient)</Text>
           <View style={{ marginVertical: 8 }}>
-            <Skeleton height={200} LinearGradientComponent={LinearGradient} />
+            <Skeleton
+              animation="wave"
+              height={200}
+              LinearGradientComponent={LinearGradient}
+            />
           </View>
           <Text>Pulse Animation</Text>
           <View style={{ marginVertical: 8 }}>

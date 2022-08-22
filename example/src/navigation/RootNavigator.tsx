@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { ThemeContext } from '@react-native-elements/themed';
-import { ThemeReducerContext } from '../helpers/ThemeReducer';
+import { useTheme } from '@rneui/themed';
 import DrawerNavigator from './DrawerNavigator';
 import Avatars from '../views/avatars';
 import Cards from '../views/cards';
@@ -14,7 +13,6 @@ import Lists2 from '../views/lists2';
 import Inputs from '../views/inputs';
 import Image from '../views/image';
 import LinearProgress from '../views/linearProgress';
-import CircularSlider from '../views/circularSlider';
 import Login from '../views/login';
 import Pricing from '../views/pricing';
 import Ratings from '../views/ratings';
@@ -40,22 +38,20 @@ import Divider from '../views/Divider';
 const Drawer = createDrawerNavigator();
 
 function RootNavigator() {
-  const { ThemeState } = useContext(ThemeReducerContext);
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   return (
     <NavigationContainer
       theme={{
         colors: {
-          background:
-            theme?.colors?.white !== undefined ? theme.colors.white : '',
+          background: theme?.colors.background,
           primary: '',
           card: '',
           text: '',
           border: '',
           notification: '',
         },
-        dark: ThemeState.themeMode === 'dark',
+        dark: theme.mode === 'dark',
       }}
     >
       <Drawer.Navigator
@@ -83,7 +79,6 @@ function RootNavigator() {
         <Drawer.Screen name="Chips" component={Chips} />
         <Drawer.Screen name="Dialogs" component={Dialogs} />
         <Drawer.Screen name="Divider" component={Divider} />
-        <Drawer.Screen name="Circular Slider" component={CircularSlider} />
         <Drawer.Screen name="FAB" component={FAB} />
         <Drawer.Screen name="Fonts" component={Fonts} />
         <Drawer.Screen name="Image" component={Image} />

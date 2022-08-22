@@ -40,7 +40,7 @@ const Home: React.FunctionComponent<{}> = () => {
                   className={
                     'button button--secondary button--outline button--sm  margin-horiz--sm margin-vert--sm'
                   }
-                  to={'https://expo.io/@flyingcircle/react-native-elements-app'}
+                  to={'https://expo.dev/@rne_org/react-native-elements'}
                 >
                   Run on Expo Go
                 </Link>
@@ -49,7 +49,7 @@ const Home: React.FunctionComponent<{}> = () => {
                     'button button--secondary button--sm margin-horiz--sm margin-vert--sm'
                   }
                   to={
-                    'https://github.com/react-native-elements/react-native-elements-app'
+                    'https://github.com/react-native-elements/react-native-elements/tree/next/example'
                   }
                 >
                   View on Github
