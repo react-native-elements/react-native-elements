@@ -22,7 +22,7 @@ export default function () {
                 </a>
               </li>
               <li className="footer__item">
-                <a className="footer__link-item" href="/docs/overview">
+                <a className="footer__link-item" href="/docs">
                   Components
                 </a>
               </li>
