@@ -209,7 +209,7 @@ type Params = {
   fullWidth?: boolean;
 };
 
-const MyComponent = (props: Props) => {
+const MyComponent = (props: Params) => {
   const styles = useStyles(props);
 
   return (
@@ -219,7 +219,7 @@ const MyComponent = (props: Props) => {
   );
 };
 
-const useStyles = makeStyles((theme, props: Props) => ({
+const useStyles = makeStyles((theme, props: Params) => ({
   container: {
     background: theme.colors.white,
     width: props.fullWidth ? '100%' : 'auto',
