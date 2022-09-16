@@ -65,9 +65,6 @@ export interface AvatarProps extends InlinePressableProps {
   /** Style for the view outside image or icon. */
   overlayContainerStyle?: StyleProp<TextStyle>;
 
-  /** Opacity when pressed. */
-  activeOpacity?: number;
-
   /** Displays an icon as the main content of the Avatar. **Cannot be used alongside title**. When used with the `source` prop it will be used as the placeholder. */
   icon?: AvatarIcon;
 
