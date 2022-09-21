@@ -1,54 +1,72 @@
 <!-- Web specific usage which is to be displayed on the documentation and not added as comment in the component. -->
 
+import Admonition from '@theme-original/Admonition';
+
+<Admonition type="tip" icon="💡" title="Web-platform specific note">
+  You <b>must</b> pass a valid React Native{' '}
+  <a href="https://reactnative.dev/docs/modal">Modal</a> component
+  implementation into <a href="#modalcomponent">ModalComponent</a> prop because
+  `Modal` component is not implemented yet in `react-native-web`
+</Admonition>
+
 ---
 
-> **Web-platform specific note**:
->
-> You **must** pass a valid React Native [`Modal`](https://reactnative.dev/docs/modal) component implementation
-> into [`ModalComponent`](#modalcomponent) prop because `Modal` component is not implemented yet in `react-native-web`
-
 ```js
-...
+
 import Modal from 'modal-react-native-web';
 
-...
 
 <Tooltip ModalComponent={Modal} ... />
-...
+
 ```
 
 ```SnackPlayer name=RNE Tooltip
 import React from 'react';
 import { Tooltip, Text, lightColors } from '@rneui/themed';
 import { View, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import Modal from 'modal-react-native-web';
 
 const { height } = Dimensions.get('window');
 
-type ToolTipComponentProps = {};
+const ControlledTooltip: React.FC<TooltipProps> = (props) => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Tooltip
+      visible={open}
+      onOpen={() => {
+        setOpen(true);
+      }}
+      onClose={() => {
+        setOpen(false);
+      }}
+      {...props}
+    />
+  );
+};
+const TooltipComponent = () => {
 
-const TooltipComponent: React.FunctionComponent<ToolTipComponentProps> = () => {
-const toolProps = {};
 return (
   <>
     <ScrollView>
       <View style={{ marginVertical: height / 8 }}>
         <View style={styles.view}>
-          <Tooltip
+          <ControlledTooltip
             popover={<Text>no caret!</Text>}
             withPointer={false}
           >
             <Text>without caret</Text>
-          </Tooltip>
-          <Tooltip
+          </ControlledTooltip>
+          <ControlledTooltip
             popover={<Text>Tooltip info goes here</Text>}
             width={200}
             backgroundColor={lightColors.primary}
           >
             <Text>Press me</Text>
-          </Tooltip>
+          </ControlledTooltip>
         </View>
         <View style={styles.view}>
-          <Tooltip
+          <ControlledTooltip
+            ModalComponent={Modal}
             backgroundColor={lightColors.secondary}
             popover={
               <Text>Tooltip info goes here too. Find tooltip everywhere</Text>
@@ -56,8 +74,8 @@ return (
             containerStyle={{ width: 200, height: 60 }}
           >
             <Text>Press me</Text>
-          </Tooltip>
-          <Tooltip
+          </ControlledTooltip>
+          <ControlledTooltip
             containerStyle={{ width: 145, height: 130 }}
             popover={
               <Text>
@@ -68,31 +86,31 @@ return (
             }
           >
             <Text>HUGE</Text>
-          </Tooltip>
+          </ControlledTooltip>
         </View>
         <View style={styles.view}>
-          <Tooltip
+          <ControlledTooltip
             width={200}
             backgroundColor={lightColors.primary1}
             popover={<Text>Tooltip info goes here</Text>}
           >
             <Text>More attention</Text>
-          </Tooltip>
+          </ControlledTooltip>
         </View>
         <View style={styles.view}>
-          <Tooltip
+          <ControlledTooltip
             width={200}
             backgroundColor={lightColors.primary2}
             popover={<Text>Tooltip info goes here</Text>}
           >
             <Text>I'm different</Text>
-          </Tooltip>
-          <Tooltip
+          </ControlledTooltip>
+          <ControlledTooltip
             width={200}
             popover={<Text>Tooltip info goes here</Text>}
           >
             <Text>Press me</Text>
-          </Tooltip>
+          </ControlledTooltip>
         </View>
       </View>
     </ScrollView>
