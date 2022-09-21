@@ -71,3 +71,25 @@ function Demo() {
   return <Button onPress={() => setMode('dark')} title={mode} />;
 }
 ```
+
+### make-styles
+
+```tsx
+import { makeStyles } from '@rneui/themed';
+
+type StyleProps = {
+  primary: boolean;
+};
+
+function ExtendedButton() {
+  const styles = useStyles({ primary: true });
+
+  return <Button style={styles.button} title={mode} />;
+}
+
+const useStyles = makeStyles((theme, props: StyleProps) => ({
+  button: {
+    backgroundColor: props.primary ? theme.colors.primary : '',
+  },
+}));
+```

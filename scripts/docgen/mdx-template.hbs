@@ -88,6 +88,22 @@ Includes all {{includeProps}} props.
 {{/if}}
 
 
+
+## Theming
+
+```tsx
+const theme = createTheme({
+  components: {
+  '{{themeKey}}':{
+    // ...props
+  }
+ }
+})
+```
+
+You may refer [customization docs](../customization)
+
+
 {{#if playgroundExists}}
 ## Playground
 
