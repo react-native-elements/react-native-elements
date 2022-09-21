@@ -1,5 +1,5 @@
 ---
-title: Theme Object
+title: Theme object
 sidebar_position: 2
 ---
 
@@ -60,53 +60,3 @@ interface theme {
   };
 }
 ```
-
-Setting styles in the theme is as simple as using the name of the component, as
-a key and the props you want to change as the value.
-
-```jsx
-import { ThemeProvider, createTheme } from '@rneui/themed';
-
-const theme = createTheme({
-  lightColors: {
-    primary: '#e7e7e8',
-  },
-  darkColors: {
-    primary: '#000',
-  },
-});
-
-const App = () => {
-  return <ThemeProvider theme={theme}>{/* ... */}</ThemeProvider>;
-};
-```
-
-### Using the respective platform's native colors
-
-You may want to style your app using the native color palette. You can do this
-using the `colors` object and the `Platform` API.
-
-```jsx
-import { Platform } from 'react-native';
-import { Button, lightColors, createTheme, ThemeProvider } from '@rneui/themed';
-
-const theme = createTheme({
-  lightColors: {
-    ...Platform.select({
-      default: lightColors.platform.android,
-      ios: lightColors.platform.ios,
-    }),
-  },
-});
-
-const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      {/* This button's color will now be the default iOS / Android blue. */}
-      <Button title="My Button" />
-    </ThemeProvider>
-  );
-};
-```
-
----

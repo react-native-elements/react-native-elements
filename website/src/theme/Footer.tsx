@@ -26,6 +26,11 @@ export default function () {
                   Customizing
                 </a>
               </li>
+              <li className="footer__item">
+                <a className="footer__link-item" href="/migration-guides">
+                  Migration Guides
+                </a>
+              </li>
             </ul>
           </div>
           <div className="col footer__col">
