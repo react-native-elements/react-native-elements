@@ -50,7 +50,7 @@ const ThemedComponent = (
             const { components, ...restTheme } = theme;
             const themedProps =
               typeof components?.[themeKey] === 'function'
-                ? components?.[themeKey]?.(rest)
+                ? components?.[themeKey]?.(rest, restTheme)
                 : components?.[themeKey];
 
             const newProps = {
