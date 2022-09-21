@@ -26,7 +26,7 @@ const processNode = (node, parent) => {
         : 'Example usage';
       const sampleCode = node.value;
       const encodedSampleCode = encodeURIComponent(sampleCode);
-      console.log(name);
+
       const dependencies =
         params.dependencies ||
         '@rneui/themed,@rneui/base' +
