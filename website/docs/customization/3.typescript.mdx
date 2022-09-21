@@ -1,6 +1,6 @@
 ---
-sidebar_label: With Typescript
-title: Typescript
+sidebar_label: Extending Theme
+title: Extending Theme
 sidebar_position: 3
 ---
 
@@ -15,10 +15,9 @@ import '@rneui/themed';
 
 declare module '@rneui/themed' {
   export interface Colors {
-    primaryLight: string;
-    primaryDark: string;
-    secondaryLight: string;
-    secondaryDark: string;
+    tertiary: string;
+    accent: string;
+    surface: string;
   }
 }
 ```
@@ -28,19 +27,19 @@ Then when you create your `ThemeProvider` instance,
 ```tsx
 const theme = createTheme({
   lightColors: {
-    ...yourCustomColorShape
+    ...yourCustomColorShape,
   },
   darkColors: {
-    ...yourCustomColorShape
+    ...yourCustomColorShape,
   },
-  mode: // your light or dark mode value
-})
+  mode: 'light', // your light or dark mode value
+});
 ```
 
 ```tsx
 const App = () => {
   const { theme } = useTheme();
-  return <Text style={{ color: theme.colors.primaryLight }} />;
+  return <Text style={{ color: theme.colors.accent }} />;
 };
 ```
 
@@ -156,7 +155,3 @@ const App = () => {
   );
 };
 ```
-
-<!-- ### Theming with no RNE components
-
-You can install `@rneui/theming`, refer it's [documentation](https://www.npmjs.com/package/@rneui/theming) -->

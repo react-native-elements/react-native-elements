@@ -55,6 +55,28 @@ normal `Button` just that it has the `raised` prop set by default.
 
 ---
 
+### Using ThemeProvider
+
+The previous solution works great for only one component, but imagine having to
+do this for every component you want custom styles for. That could get a bit
+tedious to manage. Thankfully, there's a better way to do this.
+
+```jsx
+import { ThemeProvider, Button, createTheme } from '@rneui/themed';
+
+const theme = createTheme({
+  components: {
+    [themeKey]: {
+      // ... props
+    },
+  },
+});
+
+const App = () => {
+  return <ThemeProvider theme={theme}>{/* ... */}</ThemeProvider>;
+};
+```
+
 ### Order of Styles
 
 What happens now if we want a `Button` that isn't raised? To do that we have to understand the order in which styles are applied.
@@ -125,107 +147,8 @@ const App = () => {
 This will override both the white color for the title set in the component's
 style as well as the red color set in the theme.
 
-> Remember if you want to override the values set in the theme you can always
-> use component props.
+:::info
 
-Note: To theme subcomponents such as `ListItem.Title`, in your theme remove the dot and list them as "ListItemTitle"
+Remember if you want to override the values set in the theme you can always use component props.
 
-### Using the theme in your own components
-
-```tsx title='App.tsx'
-import { ThemeProvider, createTheme } from '@rneui/themed';
-
-const myTheme = createTheme({
-  lightColors: {
-    primary: '#a4e2f5',
-  },
-});
-
-const App = () => {
-  return (
-    <ThemeProvider theme={myTheme}>
-      {/* ... */}
-      {/* ... */}
-    </ThemeProvider>
-  );
-};
-```
-
-The updateTheme function merges the theme passed in with the current theme.
-
-```tsx
-updateTheme({
-  lightColors: {
-    primary: 'purple',
-  },
-});
-```
-
-The `replaceTheme` function merges the theme passed in with the default theme.
-
-Don't want to wrap your components with `withTheme`? You can use the `ThemeConsumer` component
-which uses render props!
-
-```tsx
-import React from 'react';
-import { Text } from 'react-native';
-import { ThemeConsumer } from '@rneui/themed';
-
-const MyComponent = () => (
-  <ThemeConsumer>
-    {({ theme }) => (
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
-    )}
-  </ThemeConsumer>
-)
-```
-
-You can also use `useTheme()` if you use hooks.
-
-```tsx
-import React from 'react';
-import { Text } from 'react-native';
-import { useTheme } from '@rneui/themed';
-
-const MyComponent = () => {
-  const { theme } = useTheme();
-
-  return (
-    <View style={styles.container}>
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
-    </View>
-  );
-};
-```
-
-If you want to keep your styles outside the component use `makeStyles()` (hook generator) to reference the `theme` and component props (optional param).
-
-```tsx
-import React from 'react';
-import { Text } from 'react-native';
-import { makeStyles } from '@rneui/themed';
-
-type Props = {
-  fullWidth?: boolean;
-};
-
-const MyComponent = (props: Props) => {
-  const styles = useStyles(props);
-
-  return (
-    <View style={styles.container}>
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
-    </View>
-  );
-};
-
-const useStyles = makeStyles((theme, props: Props) => ({
-  container: {
-    background: theme.colors.white,
-    width: props.fullWidth ? '100%' : 'auto',
-  },
-  text: {
-    color: theme.colors.primary,
-  },
-}));
-```
+:::
