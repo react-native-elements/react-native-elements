@@ -26,7 +26,11 @@ const processNode = (node, parent) => {
         : 'Example usage';
       const sampleCode = node.value;
       const encodedSampleCode = encodeURIComponent(sampleCode);
-      const dependencies = params.dependencies || '@rneui/themed,@rneui/base';
+
+      const dependencies =
+        params.dependencies ||
+        '@rneui/themed,@rneui/base' +
+          (name.includes('Tooltip') ? ',modal-react-native-web' : '');
       const platform = params.platform || 'web';
       const supportedPlatforms = params.supportedPlatforms || 'ios,android,web';
       const theme = params.theme || 'light';
