@@ -111,25 +111,27 @@ const App = () => {
 
 ### Using the theme in your own components
 
-You may want to make use of the theming utilities in your own components. For this you can use the `withTheme` HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
+You may want to make use of the theming utilities in your own components. For this you can use the `withTheme(Component,ComponentThemeKey)` HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
 
 ```tsx
 import { withTheme } from '@rneui/themed';
 
-type MyCustomComponentProps = {
+type CustomComponentProps = {
   title: string;
   titleStyle: StyleProps<TextStyle>;
 };
 
-export const MyCustomComponent = withTheme<MyCustomComponentProps>((props) => {
+const CustomComponent = (props: CustomComponentProps) => {
   // Access theme from props
   const { theme, updateTheme, replaceTheme } = props;
   // ...
-});
+};
+
+export default withTheme<CustomComponentProps>(CustomComponent, 'ComponentKey');
 
 declare module '@rneui/themed' {
   export interface ComponentTheme {
-    MyCustomComponent: Partial<MyCustomComponentProps>;
+    ComponentKey: Partial<CustomComponentProps>;
   }
 }
 ```
@@ -139,7 +141,7 @@ import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   components: {
-    MyCustomComponent: {
+    ComponentKey: {
       titleStyle: {
         color: 'red',
       },
@@ -150,8 +152,14 @@ const myTheme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={myTheme}>
-      <MyCustomComponent title="My Component" />
+      <CustomComponent title="My Component" />
     </ThemeProvider>
   );
 };
 ```
+
+:::info
+
+Theme Key for custom component must be unique
+
+:::
