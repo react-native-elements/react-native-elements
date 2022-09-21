@@ -163,10 +163,11 @@ const theme = createTheme({
 
 const ColorScheme = ({ children }) => {
   const colorMode = useColorScheme();
-  const { theme, setThemeMode } = useTheme();
+  const { theme } = useTheme();
+  const { setMode } = useThemeMode();
 
   React.useEffect(() => {
-    setThemeMode(colorMode);
+    setMode(colorMode);
   }, [colorMode]);
 
   return (

@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useMemo } from 'react';
 import deepmerge from 'deepmerge';
 import { Colors, lightColors, darkColors } from './colors';
 import {
@@ -146,31 +146,24 @@ interface UseTheme {
 }
 
 export const useTheme = (): UseTheme => {
-  const {
-    theme: { components, ...restTheme },
-    replaceTheme,
-    updateTheme,
-  } = useContext(ThemeContext);
-
-  return {
-    theme: restTheme,
-    replaceTheme,
-    updateTheme,
-  };
+  return useContext(ThemeContext);
 };
 
 export const useThemeMode = () => {
-  const {
-    updateTheme,
-    theme: { mode },
-  } = useTheme();
+  const themeContext = useContext(ThemeContext);
 
   const setMode = useCallback(
     (colorMode: ThemeMode) => {
-      updateTheme({ mode: colorMode });
+      themeContext?.updateTheme({ mode: colorMode });
     },
-    [updateTheme]
+    [themeContext]
   );
 
-  return { mode, setMode };
+  return useMemo(
+    () => ({
+      mode: themeContext?.theme?.mode,
+      setMode,
+    }),
+    [setMode, themeContext?.theme?.mode]
+  );
 };
