@@ -141,3 +141,40 @@ const MyComponent = () => (
   </ThemeConsumer>
 )
 ```
+
+### Dark Mode
+
+```tsx
+import { useColorScheme } from 'react-native-appearance';
+
+const theme = createTheme({
+  lightColors: {
+    primary: '#899656',
+  },
+  darkColors: {
+    primary: '#344512',
+  },
+  mode: 'light',
+});
+
+const ColorScheme = ({ children }) => {
+  const colorMode = useColorScheme();
+  const { theme, setThemeMode } = useTheme();
+
+  React.useEffect(() => {
+    setThemeMode(colorMode);
+  }, [colorMode]);
+
+  return (
+    <View style={{ backgroundColor: theme.colors.background }}>{children}</View>
+  );
+};
+
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <ColorScheme>{/*  */}</ColorScheme>
+    </ThemeProvider>
+  );
+};
+```
