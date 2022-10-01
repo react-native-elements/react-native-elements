@@ -15,7 +15,10 @@ export type { RecursivePartial };
 type ComponentFunctionProps<Components = ComponentTheme> = {
   [Key in keyof Components]?:
     | Components[Key]
-    | ((props: Components[Key]) => Components[Key]);
+    | ((
+        props: Components[Key],
+        theme: Theme & { colors: Colors }
+      ) => Components[Key]);
 };
 
 export interface CreateThemeOptions extends RecursivePartial<Theme> {
