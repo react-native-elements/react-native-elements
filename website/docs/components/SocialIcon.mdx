@@ -6,6 +6,8 @@ title: SocialIcon
 import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
 import Usage from "../component_usage/SocialIcon.mdx";
 import Play from "@site/playground/SocialIcon/socialicon.playground";
 
@@ -13,13 +15,27 @@ import Play from "@site/playground/SocialIcon/socialicon.playground";
 
 SocialIcons are visual cues to online and social media networks. We offer a varied range of social icons.
 
-## Import
-
-```tsx
-import { SocialIcon } from "@rneui/themed";
-```
-
 ## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { SocialIcon } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`SocialIcon`}</CodeBlock>
+  </div>
+</div>
 
 <Usage />
 

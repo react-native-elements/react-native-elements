@@ -39,6 +39,7 @@ type TemplateOptionsT = {
   usage: string;
   showProps: boolean;
   props?: PropRowT[];
+  themeKey: string;
   includeProps?: string;
 };
 
@@ -76,6 +77,7 @@ export class Markdown implements ComponentDoc {
     const pkgRegExp = new RegExp('packages/(.*)/src');
     const [, pkg] = this.filePath.match(pkgRegExp);
     const [parentComp = '', childComp = ''] = this.displayName.split('.');
+
     if (pkg !== Markdown.packageName) {
       Markdown.packageName = pkg;
       console.log();
@@ -98,6 +100,8 @@ export class Markdown implements ComponentDoc {
 
   private generate(): TemplateOptionsT {
     const id = this.displayName.toLowerCase().replace('.', '_');
+    const themeKey = this.displayName.replace('.', '');
+
     const parentComponent = this.displayName.split('.')[0];
     const { imports = '', installation = '', usage = '' } = this.tags || {};
 
@@ -117,6 +121,7 @@ export class Markdown implements ComponentDoc {
       playgroundExists,
       usage: dedent(tabify(snippetToCode(usage)).trim()),
       showProps: true,
+      themeKey,
       ...this.propTable(),
     };
   }

@@ -154,6 +154,9 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     const outputRange = tabItemPositions.current.map(
       ({ position }) => position
     );
+    if (inputRange.length - 1 !== outputRange.length) {
+      return 0;
+    }
     return animationRef.current.interpolate({
       inputRange,
       outputRange: [0, ...outputRange],

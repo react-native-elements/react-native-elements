@@ -6,6 +6,8 @@ title: Slider
 import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
 import Usage from "../component_usage/Slider.mdx";
 import Play from "@site/playground/Slider/slider.playground";
 
@@ -13,13 +15,27 @@ import Play from "@site/playground/Slider/slider.playground";
 
 Sliders allow users to select a value from a fixed set of values using drag utility.
 
-## Import
-
-```tsx
-import { Slider } from "@rneui/themed";
-```
-
 ## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Slider } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Slider`}</CodeBlock>
+  </div>
+</div>
 
 <Usage />
 

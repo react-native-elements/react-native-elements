@@ -6,6 +6,8 @@ title: Badge
 import { IconsStyle } from "@site/src/components/Docs_Icons";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
 import Usage from "../component_usage/Badge.mdx";
 import Play from "@site/playground/Badge/badge.playground";
 
@@ -13,13 +15,27 @@ import Play from "@site/playground/Badge/badge.playground";
 
 Badges are small components typically used to communicate a numerical value or indicate the status of an item to the user.
 
-## Import
-
-```tsx
-import { Badge } from "@rneui/themed";
-```
-
 ## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Badge } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Badge`}</CodeBlock>
+  </div>
+</div>
 
 <Usage />
 

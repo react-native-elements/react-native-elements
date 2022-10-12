@@ -1,6 +1,6 @@
 ---
-sidebar_label: With Typescript
-title: Typescript
+sidebar_label: Extending Theme
+title: Extending Theme
 sidebar_position: 3
 ---
 
@@ -15,10 +15,9 @@ import '@rneui/themed';
 
 declare module '@rneui/themed' {
   export interface Colors {
-    primaryLight: string;
-    primaryDark: string;
-    secondaryLight: string;
-    secondaryDark: string;
+    tertiary: string;
+    accent: string;
+    surface: string;
   }
 }
 ```
@@ -28,19 +27,19 @@ Then when you create your `ThemeProvider` instance,
 ```tsx
 const theme = createTheme({
   lightColors: {
-    ...yourCustomColorShape
+    ...yourCustomColorShape,
   },
   darkColors: {
-    ...yourCustomColorShape
+    ...yourCustomColorShape,
   },
-  mode: // your light or dark mode value
-})
+  mode: 'light', // your light or dark mode value
+});
 ```
 
 ```tsx
 const App = () => {
   const { theme } = useTheme();
-  return <Text style={{ color: theme.colors.primaryLight }} />;
+  return <Text style={{ color: theme.colors.accent }} />;
 };
 ```
 
@@ -112,25 +111,27 @@ const App = () => {
 
 ### Using the theme in your own components
 
-You may want to make use of the theming utilities in your own components. For this you can use the `withTheme` HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
+You may want to make use of the theming utilities in your own components. For this you can use the `withTheme(Component,ComponentThemeKey)` HOC exported from this library. It adds three props to the component it wraps - theme, updateTheme and replaceTheme.
 
 ```tsx
 import { withTheme } from '@rneui/themed';
 
-type MyCustomComponentProps = {
+type CustomComponentProps = {
   title: string;
   titleStyle: StyleProps<TextStyle>;
 };
 
-export const MyCustomComponent = withTheme<MyCustomComponentProps>((props) => {
+const CustomComponent = (props: CustomComponentProps) => {
   // Access theme from props
   const { theme, updateTheme, replaceTheme } = props;
   // ...
-});
+};
+
+export default withTheme<CustomComponentProps>(CustomComponent, 'ComponentKey');
 
 declare module '@rneui/themed' {
   export interface ComponentTheme {
-    MyCustomComponent: Partial<MyCustomComponentProps>;
+    ComponentKey: Partial<CustomComponentProps>;
   }
 }
 ```
@@ -140,7 +141,7 @@ import { ThemeProvider, createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
   components: {
-    MyCustomComponent: {
+    ComponentKey: {
       titleStyle: {
         color: 'red',
       },
@@ -151,12 +152,14 @@ const myTheme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={myTheme}>
-      <MyCustomComponent title="My Component" />
+      <CustomComponent title="My Component" />
     </ThemeProvider>
   );
 };
 ```
 
-<!-- ### Theming with no RNE components
+:::info
 
-You can install `@rneui/theming`, refer it's [documentation](https://www.npmjs.com/package/@rneui/theming) -->
+Theme Key for custom component must be unique
+
+:::

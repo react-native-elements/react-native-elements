@@ -22,13 +22,13 @@ export default function () {
                 </a>
               </li>
               <li className="footer__item">
-                <a className="footer__link-item" href="/docs/overview">
-                  Components
+                <a className="footer__link-item" href="/docs/customizing">
+                  Customizing
                 </a>
               </li>
               <li className="footer__item">
-                <a className="footer__link-item" href="/docs/universe">
-                  Universal Components
+                <a className="footer__link-item" href="/migration-guides">
+                  Migration Guides
                 </a>
               </li>
             </ul>
