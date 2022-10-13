@@ -167,7 +167,7 @@ See you on the other side! 👋😃
 
 ## Sponsors
 
-Do you use React Native Elements in production? If so, consider supporting this project as it will allow the maintainers to dedicate more time to maintaining this project and also building new features for everyone. Also, your app or company's logo will show [on GitHub](https://github.com/react-native-elements/react-native-elements#sponsors) and link to your website - who doesn't want a little extra exposure? [Here's the info](https://opencollective.com/react-native-elements#sponsor). Check our sponsors on [website](http://localhost:3000/#sponsor)
+Do you use React Native Elements in production? If so, consider supporting this project as it will allow the maintainers to dedicate more time to maintaining this project and also building new features for everyone. Also, your app or company's logo will show [on GitHub](https://github.com/react-native-elements/react-native-elements#sponsors) and link to your website - who doesn't want a little extra exposure? [Here's the info](https://opencollective.com/react-native-elements#sponsor). Check our sponsors on [website](https://reactnativeelements.com/sponsor).
 
 [![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/0/avatar)](https://opencollective.com/react-native-elements/sponsor/0/website)
 [![React Native Elements Backer](https://opencollective.com/react-native-elements/sponsor/1/avatar)](https://opencollective.com/react-native-elements/sponsor/1/website)
