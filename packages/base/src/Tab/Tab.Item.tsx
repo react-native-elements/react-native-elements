@@ -4,15 +4,49 @@ import { StyleProp, StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import { Button, ButtonProps } from '../Button';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 
+export interface ParentProps {
+  /**
+   * Dense Tab Item
+   * @default none
+   */
+  dense?: boolean;
+  /**
+   * Additional button style
+   * @default none
+   * @type `ViewStyle or (active: boolean) => ViewStyle`
+   */
+  buttonStyle?: ActiveTabItemStyle<ViewStyle>;
+
+  /**
+   * Additional button title style
+   * @default none
+   *  @type TextStyle or (active: boolean) => TextStyle
+   */
+  titleStyle?: ActiveTabItemStyle<TextStyle>;
+
+  /**
+   * Additional Styling for button container.
+   * @default none
+   * @type ViewStyle or (active: boolean) => ViewStyle
+   */
+  containerStyle?: ActiveTabItemStyle<ViewStyle>;
+  /**
+   * @default none
+   *
+   */
+  iconPosition?: ButtonProps['iconPosition'];
+}
+
 type ActiveTabItemStyle<T = {}> =
   | ((active: boolean) => StyleProp<T>)
   | StyleProp<T>;
 
 export interface TabItemProps
   extends Omit<
-    ButtonProps,
-    'buttonStyle' | 'titleStyle' | 'containerStyle' | 'iconContainerStyle'
-  > {
+      ButtonProps,
+      'buttonStyle' | 'titleStyle' | 'containerStyle' | 'iconContainerStyle'
+    >,
+    ParentProps {
   /** Allows to define if TabItem is active. */
   active?: boolean;
 
@@ -20,28 +54,15 @@ export interface TabItemProps
   variant?: 'primary' | 'default';
 
   /**
-   * Additional button style
-   * @type `ViewStyle or (active: boolean) => ViewStyle`
-   */
-  buttonStyle?: ActiveTabItemStyle<ViewStyle>;
-
-  /**
-   * Additional button title style
-   *  @type TextStyle or (active: boolean) => TextStyle
-   */
-  titleStyle?: ActiveTabItemStyle<TextStyle>;
-
-  /**
-   * Additional Styling for button container.
-   * @type ViewStyle or (active: boolean) => ViewStyle
-   */
-  containerStyle?: ActiveTabItemStyle<ViewStyle>;
-
-  /**
    * Additional Styling for Icon Component container.
    * @type ViewStyle or (active: boolean) => ViewStyle
    */
   iconContainerStyle?: ActiveTabItemStyle<ViewStyle>;
+
+  /**
+   * @hidden true
+   */
+  _parentProps?: ParentProps;
 }
 
 /**
@@ -64,21 +85,24 @@ export interface TabItemProps
 export const TabItem: RneFunctionComponent<TabItemProps> = ({
   active,
   theme = defaultTheme,
-  titleStyle,
-  containerStyle,
-  buttonStyle,
+  _parentProps,
+  titleStyle = _parentProps.titleStyle,
+  containerStyle = _parentProps.containerStyle,
+  buttonStyle = _parentProps.buttonStyle,
+  iconPosition = _parentProps.iconPosition || 'top',
+  dense = _parentProps.dense,
   iconContainerStyle,
   variant,
-  iconPosition = 'top',
   title,
+  icon,
   ...rest
 }) => {
   /**
    * Allow user to define custom style for active Tab Item.
    * buttonStyle={(active) => ({ backgroundColor: active ? 'red' : 'blue' })}
    */
-  const activeStyle = React.useCallback(
-    (type) => (typeof type === 'function' ? type(active) : type),
+  const activeProp = React.useCallback(
+    (prop) => (typeof prop === 'function' ? prop(active) : prop),
     [active]
   );
 
@@ -89,25 +113,26 @@ export const TabItem: RneFunctionComponent<TabItemProps> = ({
       accessibilityValue={
         typeof title === 'string' ? { text: title } : undefined
       }
-      buttonStyle={[styles.buttonStyle, activeStyle(buttonStyle)]}
+      buttonStyle={[styles.buttonStyle, activeProp(buttonStyle)]}
       titleStyle={[
-        styles.titleStyle,
+        !dense && styles.titleStyle,
         {
           color: variant === 'primary' ? 'white' : theme?.colors?.secondary,
-          paddingVertical: !rest.icon ? 8 : 2,
+          paddingVertical: !dense && !icon ? 8 : 2,
         },
-        activeStyle(titleStyle),
+        activeProp(titleStyle),
       ]}
       containerStyle={[
         styles.containerStyle,
-        {
+        variant === 'primary' && {
           backgroundColor: active
             ? Color(theme?.colors?.primary).darken(0.05).rgb().toString()
             : 'transparent',
         },
-        activeStyle(containerStyle),
+        activeProp(containerStyle),
       ]}
-      iconContainerStyle={[activeStyle(iconContainerStyle)]}
+      iconContainerStyle={activeProp(iconContainerStyle)}
+      icon={activeProp(icon)}
       iconPosition={iconPosition}
       title={title}
       {...rest}
@@ -127,16 +152,6 @@ const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
     borderRadius: 0,
-  },
-  viewStyle: {
-    flexDirection: 'row',
-    position: 'relative',
-  },
-  indicator: {
-    display: 'flex',
-    position: 'absolute',
-    height: 2,
-    bottom: 0,
   },
 });
 

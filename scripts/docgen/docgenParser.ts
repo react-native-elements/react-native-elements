@@ -9,7 +9,11 @@ const parserOptions: ParserOptions = {
   shouldIncludePropTagMap: true,
   propFilter: (prop, component) => {
     // This removes the theme props(theme, updateTheme, replaceTheme) from the documentation as they are common to all
-    if (themeProps.includes(prop.name)) {
+    if (
+      themeProps.includes(prop.name) ||
+      (prop?.tags as { hidden?: boolean }).hidden ||
+      (prop?.tags as { hide?: boolean }).hide
+    ) {
       return false;
     }
 

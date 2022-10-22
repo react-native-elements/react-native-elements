@@ -26,7 +26,7 @@ describe('Tab Component', () => {
         ))}
       </Tab>
     );
-    const TabItemComponent = queryByA11yRole('tablist');
+    const TabItemComponent = queryByA11yRole('tablist')!;
 
     expect(TabItemComponent.props.style).toContainEqual({
       backgroundColor: lightColors?.primary,
