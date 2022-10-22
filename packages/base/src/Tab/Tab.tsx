@@ -46,7 +46,7 @@ export interface TabProps extends ViewProps, ParentProps {
  *    const [index, setIndex] = React.useState(0);
  *    return (
  *      <>
- *        <Tab value={index} onChange={setIndex}>
+ *        <Tab value={index} onChange={setIndex} dense>
  *          <Tab.Item>Tab</Tab.Item>
  *          <Tab.Item>Tab</Tab.Item>
  *        </Tab>
