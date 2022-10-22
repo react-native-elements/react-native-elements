@@ -23,7 +23,7 @@
     "noStrictGenericChecks": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "target": "ESNext",
+    "target": "ES6",
     "allowJs": true
   },
   "exclude": [

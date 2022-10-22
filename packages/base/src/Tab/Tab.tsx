@@ -221,6 +221,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                   active: index === value,
                   variant,
                   _parentProps: {
+                    dense,
                     iconPosition,
                     buttonStyle,
                     containerStyle,
