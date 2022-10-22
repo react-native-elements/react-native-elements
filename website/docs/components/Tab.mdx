@@ -44,16 +44,23 @@ This component is not for (complex) navigation. Use [React Navigation](https://r
 ### Basic Tabs
 
 ```tsx live
-<Tab value={0} variant="primary">
-  <Tab.Item>Tab</Tab.Item>
-  <Tab.Item>Tab</Tab.Item>
-</Tab>
+function RneTab() {
+  const [index, setIndex] = React.useState(0);
+  return (
+    <>
+      <Tab value={index} onChange={setIndex} dense>
+        <Tab.Item>Tab</Tab.Item>
+        <Tab.Item>Tab</Tab.Item>
+      </Tab>
+    </>
+  );
+}
 ```
 
 ### Active Tab Items
 
 ```tsx live
-<Tab value={0} variant="primary" scrollable>
+<Tab value={0} scrollable>
   <Tab.Item
     containerStyle={(active) => ({
       backgroundColor: active ? "red" : undefined,
@@ -81,15 +88,19 @@ Includes all [View](https://reactnative.dev/docs/view#props) props.
 
 <div class='table-responsive'>
 
-| Name               | Type                    | Default    | Description                           |
-| ------------------ | ----------------------- | ---------- | ------------------------------------- |
-| `containerStyle`   | View Style              |            | Style for Tab container               |
-| `disableIndicator` | boolean                 |            | Disable the indicator below.          |
-| `indicatorStyle`   | View Style              |            | Additional styling for tab indicator. |
-| `onChange`         | (value: number) => void | `Function` | On Index Change Callback.             |
-| `scrollable`       | boolean                 | `false`    | Makes Tab Scrolling                   |
-| `value`            | number                  |            | Child position index value.           |
-| `variant`          | `primary` \| `default`  |            | Define the background Variant.        |
+| Name               | Type                                          | Default    | Description                              |
+| ------------------ | --------------------------------------------- | ---------- | ---------------------------------------- |
+| `buttonStyle`      | `ViewStyle or (active: boolean) => ViewStyle` | `none`     | Additional button style                  |
+| `containerStyle`   | ViewStyle or (active: boolean) => ViewStyle   | `none`     | Additional Styling for button container. |
+| `dense`            | boolean                                       | `none`     | Dense Tab Item                           |
+| `disableIndicator` | boolean                                       |            | Disable the indicator below.             |
+| `iconPosition`     | `left` \| `right` \| `top` \| `bottom`        | `none`     |                                          |
+| `indicatorStyle`   | View Style                                    |            | Additional styling for tab indicator.    |
+| `onChange`         | (value: number) => void                       | `Function` | On Index Change Callback.                |
+| `scrollable`       | boolean                                       | `false`    | Makes Tab Scrolling                      |
+| `titleStyle`       | TextStyle or (active: boolean) => TextStyle   | `none`     | Additional button title style            |
+| `value`            | number                                        | `0`        | Child position index value.              |
+| `variant`          | `primary` \| `default`                        | `default`  | Define the background Variant.           |
 
 </div>
 

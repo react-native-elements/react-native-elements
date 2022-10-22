@@ -26,7 +26,7 @@ describe('Tab Component', () => {
         ))}
       </Tab>
     );
-    const TabItemComponent = queryByA11yRole('tablist');
+    const TabItemComponent = queryByA11yRole('tablist')!;
 
     expect(TabItemComponent.props.style).toContainEqual({
       backgroundColor: lightColors?.primary,
@@ -46,7 +46,8 @@ describe('Tab Component', () => {
 
     const tabs = component.getAllByA11yRole('tab');
     expect(tabs.length).toBe(items.length);
-    tabs.forEach((tab) => {
+    tabs.forEach((tab, index) => {
+      if (index === 0) return;
       expect(tab.props.accessibilityState.selected).toBe(false);
       expect(items.includes(tab.props.accessibilityValue.text)).toBe(true);
     });

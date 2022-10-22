@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import {
-  tabify,
+  // tabify,
   codify,
   snippetToCode,
   removeNewline,
@@ -119,7 +119,7 @@ export class Markdown implements ComponentDoc {
       showUsage: Boolean(usage) || usageFileExists,
       usageFileExists,
       playgroundExists,
-      usage: dedent(tabify(snippetToCode(usage)).trim()),
+      usage: dedent(snippetToCode(usage).trim()),
       showProps: true,
       themeKey,
       ...this.propTable(),

@@ -18,6 +18,7 @@ const ALLOWED_INCLUDES = {
 export const MUST_INCLUDE_PROP_TYPES = [
   'InlinePressableProps',
   'SearchBarBaseProps',
+  'ParentProps',
 ];
 
 export function separateParent(components: ComponentDoc[]) {
