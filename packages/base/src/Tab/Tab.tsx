@@ -205,9 +205,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
           <>
             {validChildren.map((child, index) => {
               return React.cloneElement(
-                child as React.ReactElement<
-                  TabItemProps & { _parentProps: ParentProps }
-                >,
+                child as React.ReactElement<TabItemProps>,
                 {
                   onPress: () => onChange(index),
                   onLayout: (event: LayoutChangeEvent) => {
