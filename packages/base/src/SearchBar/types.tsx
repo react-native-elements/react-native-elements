@@ -13,9 +13,13 @@ export type SearchBarAndroidProps = SearchBarBaseProps & {
   platform?: 'android';
   cancelIcon?: IconNode;
   /**
-   * @type Callback Function on cancel icon press
+   * Callback Function on cancel icon press
    */
   onCancel?: () => any;
+  /**
+   * Callback Function on keyboard hides
+   */
+  onKeyboardHide?: () => any;
 };
 
 export type SearchBarIosProps = SearchBarBaseProps & {
@@ -38,7 +42,7 @@ export type SearchBarIosProps = SearchBarBaseProps & {
   searchIcon?: IconNode;
   clearIcon?: IconNode;
   /**
-   * @type Callback Function on cancel icon press
+   * Callback Function on cancel icon press
    */
   onCancel?: () => any;
 };

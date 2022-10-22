@@ -103,13 +103,15 @@ export class SearchBarAndroid extends Component<
       hasFocus: false,
       isEmpty: value ? value === '' : true,
     };
-    this.keyboardListener = Keyboard.addListener(
-      'keyboardDidHide',
-      this._keyboardDidHide
-    );
+    if (this.props?.onKeyboardHide) {
+      this.keyboardListener = Keyboard.addListener(
+        'keyboardDidHide',
+        this._keyboardDidHide
+      );
+    }
   }
   _keyboardDidHide = () => {
-    this.cancel();
+    this.props?.onKeyboardHide?.();
   };
 
   componentWillUnmount() {
