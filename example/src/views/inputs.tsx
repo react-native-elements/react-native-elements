@@ -42,7 +42,6 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
   let password2Input = useRef(null);
   let shakeInput = useRef(null);
   let confirmPassword2Input = useRef(null);
-
   const InputFieldsStyle = {
     borderWidth: 0,
   };
@@ -60,24 +59,30 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
         <View>
           <SubHeader title={'Search Bars'} />
         </View>
-        <SearchBarCustom
-          placeholder="iOS searchbar"
-          platform="ios"
-          style={InputFieldsStyle}
-          {...dummySearchBarProps}
-        />
-        <SearchBarCustom
-          placeholder="Android searchbar"
-          platform="android"
-          style={InputFieldsStyle}
-          {...dummySearchBarProps}
-        />
-        <SearchBarCustom
-          placeholder="Default searchbar"
-          style={InputFieldsStyle}
-          {...dummySearchBarProps}
-        />
-        <View style={{ paddingTop: 30 }}>
+        <View>
+          <SearchBarCustom
+            placeholder="iOS searchbar"
+            platform="ios"
+            style={InputFieldsStyle}
+            {...dummySearchBarProps}
+          />
+        </View>
+        <View style={{ paddingTop: 10 }}>
+          <SearchBarCustom
+            placeholder="Android searchbar"
+            platform="android"
+            style={InputFieldsStyle}
+            {...dummySearchBarProps}
+          />
+        </View>
+        <View style={{ paddingTop: 15 }}>
+          <SearchBarCustom
+            placeholder="Default searchbar"
+            style={InputFieldsStyle}
+            {...dummySearchBarProps}
+          />
+        </View>
+        <View style={{ paddingTop: 20 }}>
           <SubHeader title={'Inputs'} />
         </View>
         <View style={{ alignItems: 'center', marginBottom: 16 }}>

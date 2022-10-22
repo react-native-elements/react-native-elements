@@ -88,7 +88,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                   style={
                     Array [
                       Object {
-                        "color": "rgba(0, 0, 0, 0.54)",
+                        "color": "#86939e",
                         "fontSize": 25,
                       },
                       Object {
@@ -121,7 +121,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           platform="android"
           style={
             Object {
-              "color": "#242424",
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 24,

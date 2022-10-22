@@ -20,14 +20,14 @@ const defaultSearchIcon = (theme: Theme) => ({
   type: 'ionicon',
   size: 20,
   name: 'ios-search',
-  color: theme?.colors?.platform?.ios?.grey,
+  color: theme?.colors?.grey3,
 });
 
 const defaultClearIcon = (theme: Theme) => ({
   type: 'ionicon',
   name: 'ios-close-circle',
   size: 20,
-  color: theme?.colors?.platform?.ios?.grey,
+  color: theme?.colors?.grey3,
 });
 
 type SearchBarState = {
@@ -147,11 +147,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
     return (
       <View
         testID="RNE__SearchBar-wrapper"
-        style={StyleSheet.flatten([
-          styles.container,
-          { backgroundColor: theme?.colors?.white },
-          containerStyle,
-        ])}
+        style={StyleSheet.flatten([styles.container, containerStyle])}
       >
         <Input
           testID="RNE__SearchBar"
@@ -164,13 +160,17 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
           ref={(input: TextInput) => {
             this.input = input;
           }}
-          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
+          inputStyle={StyleSheet.flatten([
+            styles.input,
+            { color: theme?.colors?.grey3 },
+            inputStyle,
+          ])}
           containerStyle={{
             paddingHorizontal: 0,
           }}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
-            { backgroundColor: theme?.colors?.platform?.ios?.searchBg },
+            { backgroundColor: theme?.colors?.grey5 },
             hasFocus && {
               marginRight: this.state.cancelButtonWidth
                 ? this.state.cancelButtonWidth

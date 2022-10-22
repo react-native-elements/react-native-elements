@@ -7,11 +7,7 @@ exports[`SearchBar wrapper component should match snapshot 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
+        "backgroundColor": "#bdc6cf",
         "padding": 8,
       }
     }
@@ -32,7 +28,7 @@ exports[`SearchBar wrapper component should match snapshot 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#303337",
+            "backgroundColor": "#e1e8ee",
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
             "borderRadius": 3,
@@ -261,7 +257,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
                   style={
                     Array [
                       Object {
-                        "color": "rgba(0, 0, 0, 0.54)",
+                        "color": "#86939e",
                         "fontSize": 25,
                       },
                       Object {
@@ -293,7 +289,7 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
           platform="android"
           style={
             Object {
-              "color": "#242424",
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 24,
@@ -349,7 +345,6 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#ffffff",
         "flexDirection": "row",
         "overflow": "hidden",
         "paddingBottom": 13,
@@ -373,7 +368,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#dcdce1",
+            "backgroundColor": "#e1e8ee",
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
             "borderRadius": 9,
@@ -436,7 +431,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
                   style={
                     Array [
                       Object {
-                        "color": "#7d7d7d",
+                        "color": "#86939e",
                         "fontSize": 20,
                       },
                       Object {
@@ -468,7 +463,7 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
           platform="ios"
           style={
             Object {
-              "color": "#242424",
+              "color": "#86939e",
               "flex": 1,
               "fontSize": 18,
               "marginLeft": 6,

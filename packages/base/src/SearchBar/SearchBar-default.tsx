@@ -41,7 +41,6 @@ export class SearchBarDefault extends React.Component<
     value: '',
     loadingProps: {},
     showLoading: false,
-    lightTheme: false,
     round: false,
     onClear: () => null,
     onFocus: () => null,
@@ -88,7 +87,6 @@ export class SearchBarDefault extends React.Component<
   render() {
     const { theme = defaultTheme, ...rest } = this.props;
     const {
-      lightTheme,
       round,
       clearIcon = defaultClearIcon(theme as Theme),
       containerStyle,
@@ -110,17 +108,8 @@ export class SearchBarDefault extends React.Component<
         testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
-            borderTopWidth: 1,
-            borderBottomWidth: 1,
-            borderBottomColor: '#000',
-            borderTopColor: '#000',
             padding: 8,
-            backgroundColor: theme?.colors?.grey0,
-          },
-          lightTheme && {
-            borderTopColor: '#e1e1e1',
-            borderBottomColor: '#e1e1e1',
-            backgroundColor: theme?.colors?.grey5,
+            backgroundColor: theme?.colors?.grey4,
           },
           containerStyle,
         ])}
@@ -150,10 +139,7 @@ export class SearchBarDefault extends React.Component<
               borderRadius: 3,
               overflow: 'hidden',
               minHeight: 30,
-              backgroundColor: theme?.colors?.searchBg,
-            },
-            lightTheme && {
-              backgroundColor: theme?.colors?.grey4,
+              backgroundColor: theme?.colors?.grey5,
             },
             round && styles.round,
             inputContainerStyle,

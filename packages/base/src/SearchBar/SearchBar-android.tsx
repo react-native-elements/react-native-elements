@@ -18,21 +18,21 @@ export type { SearchBarAndroidProps };
 const defaultSearchIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme?.colors?.platform?.android?.grey,
+  color: theme?.colors?.grey3,
   name: 'search',
 });
 
 const defaultCancelIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme?.colors?.platform?.android?.grey,
+  color: theme?.colors?.grey3,
   name: 'arrow-back',
 });
 
 const defaultClearIcon = (theme: Theme) => ({
   type: 'material',
   size: 25,
-  color: theme?.colors?.platform?.android?.grey,
+  color: theme?.colors?.grey3,
   name: 'clear',
 });
 
@@ -163,7 +163,11 @@ export class SearchBarAndroid extends Component<
             this.input = input;
           }}
           containerStyle={{ paddingHorizontal: 0 }}
-          inputStyle={StyleSheet.flatten([styles.input, inputStyle])}
+          inputStyle={StyleSheet.flatten([
+            styles.input,
+            { color: theme?.colors?.grey3 },
+            inputStyle,
+          ])}
           inputContainerStyle={StyleSheet.flatten([
             styles.inputContainer,
             inputContainerStyle,

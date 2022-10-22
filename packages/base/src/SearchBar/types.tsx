@@ -11,6 +11,7 @@ import { InputProps } from '../Input';
 
 export type SearchBarAndroidProps = SearchBarBaseProps & {
   platform?: 'android';
+  lightTheme?: boolean;
   cancelIcon?: IconNode;
   /**
    * Callback Function on cancel icon press
@@ -36,6 +37,7 @@ export type SearchBarIosProps = SearchBarBaseProps & {
    * Show cancel
    */
   showCancel?: boolean;
+  lightTheme?: boolean;
   /**
    * Icon for search
    */

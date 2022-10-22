@@ -7,11 +7,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "#393e42",
-        "borderBottomColor": "#000",
-        "borderBottomWidth": 1,
-        "borderTopColor": "#000",
-        "borderTopWidth": 1,
+        "backgroundColor": "#bdc6cf",
         "padding": 8,
       }
     }
@@ -32,7 +28,7 @@ exports[`Default SearchBar component should match snapshot 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#303337",
+            "backgroundColor": "#e1e8ee",
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
             "borderRadius": 3,
