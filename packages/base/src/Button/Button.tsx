@@ -72,7 +72,7 @@ export interface ButtonProps
   /** Styling for Component container. */
   containerStyle?: StyleProp<ViewStyle>;
 
-  /** Displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component. */
+  /** Displays a centered icon (when no title) or to the left (with text). (Can be used along with iconRight as well). Can be an object or a custom component. */
   icon?: IconNode;
 
   /** Styling for Icon Component container. */
@@ -81,7 +81,7 @@ export interface ButtonProps
   /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
   iconRight?: boolean;
 
-  /** Displays a linear gradient. See [usage](#lineargradient-usage). */
+  /** Displays a linear gradient. */
   linearGradientProps?: object;
 
   /** Component for user interaction. */
@@ -105,19 +105,19 @@ export interface ButtonProps
   /** Displays Icon to the position mentioned. Needs to be used along with `icon` prop. */
   iconPosition?: 'left' | 'right' | 'top' | 'bottom';
 
-  /** Uppercase button title*/
+  /** Uppercase button title. */
   uppercase?: boolean;
 
-  /** Radius of button
+  /** Radius of button.
    * @type   number | sm | md | lg
    */
   radius?: number | StringOmit<keyof ThemeSpacing>;
 
-  /** Button size */
+  /** Button size. */
   size?: 'sm' | 'md' | 'lg';
 
   /**
-   * Color of Button
+   * Color of button.
    * @type   string | primary | secondary | success | warning | error
    */
   color?: StringOmit<'primary' | 'secondary' | 'success' | 'error' | 'warning'>;
