@@ -144,7 +144,7 @@ export class SearchBarAndroid extends Component<
         testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           {
-            backgroundColor: theme?.colors?.white,
+            backgroundColor: theme?.colors?.background,
             paddingTop: 8,
             paddingBottom: 8,
           },
