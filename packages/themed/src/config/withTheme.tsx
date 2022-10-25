@@ -85,7 +85,11 @@ interface ThemeProps<T = {}> {
 function withTheme<P = {}, T = {}>(
   WrappedComponent: React.ComponentType<P & ThemeProps<T>>,
   themeKey?: string
-): React.FunctionComponent<P> | React.ForwardRefExoticComponent<P> {
+):
+  | React.FunctionComponent<React.PropsWithChildren<P>>
+  | React.ForwardRefExoticComponent<
+      React.RefAttributes<React.PropsWithChildren<P>>
+    > {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
