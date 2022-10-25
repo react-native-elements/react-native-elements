@@ -149,7 +149,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
         testID="RNE__SearchBar-wrapper"
         style={StyleSheet.flatten([
           styles.container,
-          { backgroundColor: theme?.colors?.white },
+          { backgroundColor: theme?.colors?.background },
           containerStyle,
         ])}
       >
