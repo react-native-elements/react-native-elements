@@ -1,0 +1,153 @@
+---
+id: avatar
+title: Avatar
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/Avatar.mdx";
+import Play from "@site/playground/Avatar/avatar.playground";
+
+<IconsStyle />
+
+Avatars are found all over ui design from lists to profile screens.
+They are commonly used to represent a user and can contain photos, icons, or even text.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Avatar } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Avatar`}</CodeBlock>
+  </div>
+</div>
+
+### Shape
+
+```tsx live
+<Stack row spacing={4}>
+  <Avatar
+    size={32}
+    rounded
+    icon={{ name: "pencil", type: "font-awesome" }}
+    containerStyle={{ backgroundColor: "#9700b9" }}
+  />
+  <Avatar
+    size={32}
+    icon={{ name: "pencil", type: "font-awesome" }}
+    containerStyle={{ backgroundColor: "#9700b9" }}
+  />
+</Stack>
+```
+
+### Sizes
+
+```tsx live
+<Stack row spacing={4}>
+  <Avatar
+    size={24}
+    rounded
+    icon={{ name: "pencil", type: "font-awesome" }}
+    containerStyle={{ backgroundColor: "#9700b9" }}
+  />
+  <Avatar
+    size={32}
+    rounded
+    icon={{ name: "pencil", type: "font-awesome" }}
+    containerStyle={{ backgroundColor: "#9700b9" }}
+  />
+  <Avatar
+    size={48}
+    rounded
+    icon={{ name: "pencil", type: "font-awesome" }}
+    containerStyle={{ backgroundColor: "#9700b9" }}
+  />
+</Stack>
+```
+
+### Image Avatar
+
+```tsx live
+<Stack row spacing={4}>
+  <Avatar
+    size={32}
+    rounded
+    source={{ uri: "https://randomuser.me/api/portraits/men/36.jpg" }}
+  />
+  <Avatar
+    size={32}
+    rounded
+    source={{ uri: "https://randomuser.me/api/portraits/men/35.jpg" }}
+  />
+</Stack>
+```
+
+### Letter Avatar
+
+```tsx live
+<Stack row spacing={4}>
+  <Avatar
+    size={32}
+    rounded
+    title="Rd"
+    containerStyle={{ backgroundColor: "blue" }}
+  />
+  <Avatar
+    size={32}
+    rounded
+    title="AB"
+    containerStyle={{ backgroundColor: "purple" }}
+  />
+</Stack>
+```
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                       | Type                                                       | Default                                           | Description                                                                                                                                                  |
+| -------------------------- | ---------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Component`                | React Component                                            | `Press handlers present then Pressable else View` | Component for enclosing element (eg: TouchableHighlight, View, etc).                                                                                         |
+| `ImageComponent`           | ComponentClass<{}, any>                                    |                                                   | Custom ImageComponent for Avatar.                                                                                                                            |
+| `avatarStyle`              | ImageStyle                                                 |                                                   | Style for avatar image.                                                                                                                                      |
+| `containerStyle`           | View Style                                                 |                                                   | Styling for outer container.                                                                                                                                 |
+| `icon`                     | AvatarIcon                                                 |                                                   | Displays an icon as the main content of the Avatar. **Cannot be used alongside title**. When used with the `source` prop it will be used as the placeholder. |
+| `iconStyle`                | Text Style                                                 |                                                   | Extra styling for icon component.                                                                                                                            |
+| `imageProps`               | ImageProps(Object)                                         |                                                   | Optional properties to pass to the avatar e.g "resizeMode".                                                                                                  |
+| `onLongPress`              | Function                                                   |                                                   | Callback function when long pressing component.                                                                                                              |
+| `onPress`                  | Function                                                   |                                                   | Callback function when pressing component.                                                                                                                   |
+| `onPressIn`                | GestureResponderEventHandler                               |                                                   | Called when a touch is engaged before `onPress`.                                                                                                             |
+| `onPressOut`               | GestureResponderEventHandler                               |                                                   | Called when a touch is released before `onPress`.                                                                                                            |
+| `overlayContainerStyle`    | Text Style                                                 |                                                   | Style for the view outside image or icon.                                                                                                                    |
+| `placeholderStyle`         | View Style                                                 |                                                   | Adds style to the placeholder wrapper.                                                                                                                       |
+| `pressableProps`           | PressableProps except click handlers                       | `None`                                            |                                                                                                                                                              |
+| `renderPlaceholderContent` | `ReactElement<{}, string` \| `JSXElementConstructor<any>>` |                                                   | Custom placeholder element (by default, it's the title).                                                                                                     |
+| `rounded`                  | boolean                                                    |                                                   | Makes the avatar circular.                                                                                                                                   |
+| `size`                     | `number` \| `small` \| `medium` \| `large` \| `xlarge`     | `small`                                           | Size of the avatar.                                                                                                                                          |
+| `source`                   | ImageSourcePropType                                        |                                                   | Image source to be displayed on avatar.                                                                                                                      |
+| `title`                    | string                                                     |                                                   | Renders title in the placeholder.                                                                                                                            |
+| `titleStyle`               | Text Style                                                 |                                                   | Style for the title.                                                                                                                                         |
+
+</div>
+
+## Playground
+
+<Play />
