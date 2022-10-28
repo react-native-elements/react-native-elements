@@ -3,14 +3,12 @@ import { ColorValue, View } from 'react-native';
 import { makeStyles } from '../system/makeStyles';
 import { SystemProp } from '../system/SystemProp';
 
-export interface BoxProps extends Record<SystemProp, string | number> {
+export interface BoxProps extends Partial<Record<SystemProp, string | number>> {
   bgColor?: ColorValue;
-
   h?: number;
   w?: number;
   height?: number;
   width?: number;
-
   children?: React.ReactNode;
 }
 
@@ -34,58 +32,58 @@ export const Box = ({ children, ...rest }: BoxProps): JSX.Element => {
 const useStyles = makeStyles(
   ({
     h,
-    height,
+    height = h,
     w,
-    width,
+    width = w,
     m,
-    margin,
-    marginBottom,
-    marginHorizontal,
-    marginLeft,
-    marginRight,
-    marginTop,
-    marginVertical,
     mb,
     ml,
     mr,
     mt,
     mx,
     my,
+    margin = m,
+    marginBottom = mb,
+    marginHorizontal = mx,
+    marginLeft = ml,
+    marginRight = mr,
+    marginTop = mt,
+    marginVertical = my,
     p,
-    padding,
-    paddingBottom,
-    paddingHorizontal,
-    paddingLeft,
-    paddingRight,
-    paddingTop,
-    paddingVertical,
     pb,
     pl,
     pr,
     pt,
     px,
     py,
+    padding = p,
+    paddingBottom = pb,
+    paddingHorizontal = px,
+    paddingLeft = pl,
+    paddingRight = pr,
+    paddingTop = pt,
+    paddingVertical = py,
     bgColor,
   }: BoxProps) => {
     return {
       container: {
-        height: h || height,
-        width: w || width,
+        height,
+        width,
         backgroundColor: bgColor,
-        margin: m || margin,
-        marginBottom: mb || marginBottom,
-        marginLeft: ml || marginLeft,
-        marginRight: mr || marginRight,
-        marginTop: mt || marginTop,
-        marginHorizontal: mx || marginHorizontal,
-        marginVertical: my || marginVertical,
-        padding: p || padding,
-        paddingBottom: pb || paddingBottom,
-        paddingLeft: pl || paddingLeft,
-        paddingRight: pr || paddingRight,
-        paddingTop: pt || paddingTop,
-        paddingHorizontal: px || paddingHorizontal,
-        paddingVertical: py || paddingVertical,
+        margin,
+        marginBottom,
+        marginHorizontal,
+        marginLeft,
+        marginRight,
+        marginTop,
+        marginVertical,
+        padding,
+        paddingBottom,
+        paddingLeft,
+        paddingRight,
+        paddingTop,
+        paddingHorizontal,
+        paddingVertical,
       },
     };
   }
