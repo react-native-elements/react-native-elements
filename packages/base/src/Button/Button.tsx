@@ -81,7 +81,7 @@ export interface ButtonProps
   /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
   iconRight?: boolean;
 
-  /** Displays a linear gradient. See [usage](#lineargradient-usage). */
+  /** Displays a linear gradient. See [usage](#linear-gradient). */
   linearGradientProps?: object;
 
   /** Component for user interaction. */
@@ -158,6 +158,19 @@ export interface ButtonProps
  *        <Button color="warning">Warning</Button>
           <Button color="error">Error</Button>
  *  </Stack>
+ * ```
+ * ### Linear Gradient
+ * ```tsx live
+<Button
+  ViewComponent={LinearGradient} // Don't forget this!
+  linearGradientProps={{
+    colors: ["#FF9800", "#F44336"],
+    start: { x: 0, y: 0.5 },
+    end: { x: 1, y: 0.5 },
+  }}
+>
+  Linear Gradient
+</Button>
  * ```
  * ### Button with icon
  * ```tsx live

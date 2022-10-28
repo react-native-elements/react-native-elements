@@ -74,6 +74,21 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 </Stack>
 ```
 
+### Linear Gradient
+
+```tsx live
+<Button
+  ViewComponent={LinearGradient} // Don't forget this!
+  linearGradientProps={{
+    colors: ["#FF9800", "#F44336"],
+    start: { x: 0, y: 0.5 },
+    end: { x: 1, y: 0.5 },
+  }}
+>
+  Linear Gradient
+</Button>
+```
+
 ### Button with icon
 
 ```tsx live
@@ -122,7 +137,7 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 | `iconContainerStyle`  | View Style                                                                |         | Styling for Icon Component container.                                                                                                                    |
 | `iconPosition`        | `left` \| `right` \| `top` \| `bottom`                                    | `left`  | Displays Icon to the position mentioned. Needs to be used along with `icon` prop.                                                                        |
 | `iconRight`           | boolean                                                                   | `false` | Displays Icon to the right of title. Needs to be used along with `icon` prop.                                                                            |
-| `linearGradientProps` | object                                                                    |         | Displays a linear gradient. See [usage](#lineargradient-usage).                                                                                          |
+| `linearGradientProps` | object                                                                    |         | Displays a linear gradient. See [usage](#linear-gradient).                                                                                               |
 | `loading`             | boolean                                                                   | `false` | Prop to display a loading spinner.                                                                                                                       |
 | `loadingProps`        | ActivityIndicatorProps                                                    |         | Add additional props for ActivityIndicator component.                                                                                                    |
 | `loadingStyle`        | View Style                                                                |         | Add additional styling for loading component.                                                                                                            |
