@@ -1,6 +1,6 @@
 {
   "name": "@rneui/layout",
-  "version": "0.0.0-alpha.4",
+  "version": "0.0.0-alpha.5",
   "description": "Cross Platform React Native UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -48,12 +48,6 @@
     "type": "opencollective",
     "url": "https://opencollective.com/react-native-elements",
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
-  },
-  "peerDependencies": {
-    "@rneui/base": "4.0.0-rc.6"
-  },
-  "devDependencies": {
-    "@rneui/base": "4.0.0-rc.6"
   },
   "jest": {
     "displayName": "@rneui/layout",

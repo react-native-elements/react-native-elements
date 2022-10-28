@@ -28,6 +28,7 @@ function main(sourcePath: string) {
     }
   );
 
+  // eslint-disable-next-line no-console
   console.log('Found', filePaths.length, 'components');
 
   const componentDocs = docgenParser.parse(filePaths);

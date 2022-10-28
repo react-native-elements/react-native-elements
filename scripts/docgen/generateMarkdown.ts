@@ -40,15 +40,18 @@ type TemplateOptionsT = {
   showProps: boolean;
   props?: PropRowT[];
   themeKey: string;
+  pkg: string;
   includeProps?: string;
 };
 
-const pkgPath = path.join(__dirname, '../../packages');
+// const pkgPath = path.join(__dirname, '../../packages');
 const docsPath = path.join(__dirname, '../../website/docs');
 
 const template = Handlebars.compile(
   String(fs.readFileSync(path.join(__dirname, 'mdx-template.hbs')))
 );
+
+const pkgRegExp = new RegExp('packages/(.*)/src');
 
 export class Markdown implements ComponentDoc {
   description: string;
@@ -57,6 +60,7 @@ export class Markdown implements ComponentDoc {
   props: Props;
   tags?: StringIndexedObject<string>;
   methods: Method[];
+  pkg: string;
   static packageName: string;
   static parents: Record<string, string[]>;
 
@@ -67,6 +71,8 @@ export class Markdown implements ComponentDoc {
     this.props = component.props;
     this.methods = component.methods;
     this.tags = component.tags;
+
+    this.pkg = this.filePath.match(pkgRegExp)[1];
   }
 
   save() {
@@ -74,25 +80,24 @@ export class Markdown implements ComponentDoc {
   }
 
   private print(mdContent: TemplateOptionsT) {
-    const pkgRegExp = new RegExp('packages/(.*)/src');
-    const [, pkg] = this.filePath.match(pkgRegExp);
     const [parentComp = '', childComp = ''] = this.displayName.split('.');
 
-    if (pkg !== Markdown.packageName) {
-      Markdown.packageName = pkg;
+    if (this.pkg !== Markdown.packageName) {
+      Markdown.packageName = this.pkg;
       console.log();
-      console.log(`@rneui/${pkg}`);
+      console.log(`@rneui/${this.pkg}`);
     }
-    const isUniverse = !this.filePath.startsWith(pkgPath + '/base');
     const mdFilePath = path.join(
       docsPath,
-      isUniverse ? 'universe' : 'components',
-      `${this.displayName}.mdx`
+      this.pkg === 'base' ? 'components' : this.pkg
     );
+    if (!fs.existsSync(mdFilePath)) {
+      fs.mkdirSync(mdFilePath);
+    }
     console.log('', childComp ? '  ' + childComp : parentComp);
 
     fs.writeFileSync(
-      mdFilePath,
+      path.join(mdFilePath, `${this.displayName}.mdx`),
       // './test.mdx',
       prettier.format(template(mdContent), { parser: 'mdx' })
     );
@@ -100,7 +105,9 @@ export class Markdown implements ComponentDoc {
 
   private generate(): TemplateOptionsT {
     const id = this.displayName.toLowerCase().replace('.', '_');
-    const themeKey = this.displayName.replace('.', '');
+    const themeKey =
+      this.pkg === 'base' ? this.displayName.replace('.', '') : undefined;
+    const pkg = this.pkg === 'base' ? 'themed' : this.pkg;
 
     const parentComponent = this.displayName.split('.')[0];
     const { imports = '', installation = '', usage = '' } = this.tags || {};
@@ -122,6 +129,7 @@ export class Markdown implements ComponentDoc {
       usage: dedent(snippetToCode(usage).trim()),
       showProps: true,
       themeKey,
+      pkg,
       ...this.propTable(),
     };
   }

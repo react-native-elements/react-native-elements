@@ -3845,10 +3845,6 @@ __metadata:
 "@rneui/layout@^0.0.0-alpha.4, @rneui/layout@workspace:packages/layout":
   version: 0.0.0-use.local
   resolution: "@rneui/layout@workspace:packages/layout"
-  dependencies:
-    "@rneui/base": 4.0.0-rc.6
-  peerDependencies:
-    "@rneui/base": 4.0.0-rc.6
   languageName: unknown
   linkType: soft
 
