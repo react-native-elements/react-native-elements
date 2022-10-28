@@ -2,7 +2,7 @@
 const config = {
   title: 'React Native Elements' /* title for your website */,
   tagline: 'Cross Platform React Native UI Toolkit',
-  url: 'https://reactnativeelements.com/' /* your website url */,
+  url: 'https://reactnativeelements.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
@@ -11,18 +11,15 @@ const config = {
   favicon: '/img/website/logo.png',
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  scripts: [
-    'https://buttons.github.io/buttons.js',
-    { src: 'https://snack.expo.io/embed.js', defer: true },
-  ],
+  scripts: [{ src: 'https://snack.expo.io/embed.js', defer: true }],
   themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        fromExtensions: ['html'],
-      },
-    ],
+    // [
+    // '@docusaurus/plugin-client-redirects',
+    // {
+    //   fromExtensions: ['html'],
+    // },
+    // ],
     './plugins/react-native-elements-web.js',
   ],
   presets: [
@@ -61,32 +58,32 @@ const config = {
   themeConfig: {
     image: '/img/website/seo.png',
     metadata: [
-      {
-        name: 'description',
-        content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      },
-      { name: 'og:type', content: 'website' },
-      { name: 'og:url', content: 'https://reactnativeelements.com/' },
-      { name: 'og:title', content: 'React Native Elements' },
-      {
-        name: 'og:description',
-        content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      },
-      {
-        name: 'og:image',
-        content: 'https://reactnativeelements.com/img/website/seo.png',
-      },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:url', content: 'https://reactnativeelements.com/' },
-      { name: 'twitter:title', content: 'React Native Elements' },
-      {
-        name: 'twitter:description',
-        content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      },
-      {
-        name: 'twitter:image',
-        content: 'https://reactnativeelements.com/img/website/seo.png',
-      },
+      // {
+      //   name: 'description',
+      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      // },
+      // { name: 'og:type', content: 'website' },
+      // { name: 'og:url', content: 'https://reactnativeelements.com' },
+      // { name: 'og:title', content: 'React Native Elements' },
+      // {
+      //   name: 'og:description',
+      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      // },
+      // {
+      //   name: 'og:image',
+      //   content: 'https://reactnativeelements.com/img/website/seo.png',
+      // },
+      // { name: 'twitter:card', content: 'summary_large_image' },
+      // { name: 'twitter:url', content: 'https://reactnativeelements.com' },
+      // { name: 'twitter:title', content: 'React Native Elements' },
+      // {
+      //   name: 'twitter:description',
+      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      // },
+      // {
+      //   name: 'twitter:image',
+      //   content: 'https://reactnativeelements.com/img/website/seo.png',
+      // },
     ],
 
     liveCodeBlock: {
