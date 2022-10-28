@@ -49,6 +49,17 @@
 .toggleIcon {
   position: absolute;
   bottom: 2px;
-  right: 10px;
+  right: 4px;
   color: var(--ifm-pre-color-gray-200);
+  display: flex;
+  align-items: center;
+  background-color: var(--ifm-color-emphasis-200);
+  padding: 2px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggleIcon .showCode {
+  margin-left: 2px;
+  font-size: x-small;
 }

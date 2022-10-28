@@ -11,11 +11,6 @@ import * as RNEUI from '@rneui/base';
 import * as RNEUI_Layout from '@rneui/layout';
 import LinearGradient from 'react-native-linear-gradient';
 
-const StateLessSwitch = () => {
-  const [state, setState] = React.useState(false);
-  return <RNEUI.Switch value={state} onValueChange={setState} />;
-};
-
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
@@ -23,7 +18,6 @@ const ReactLiveScope = {
   ...RNE,
   ...RNEUI,
   ...RNEUI_Layout,
-  Switch: StateLessSwitch,
   ...React,
 };
 
