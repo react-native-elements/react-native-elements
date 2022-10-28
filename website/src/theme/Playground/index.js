@@ -70,7 +70,7 @@ function ThemedLiveEditor() {
 }
 
 function EditorWithHeader() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const [state, setState] = React.useState(undefined);
 

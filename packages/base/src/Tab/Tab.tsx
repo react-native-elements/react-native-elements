@@ -9,10 +9,11 @@ import {
   ScrollView,
   LayoutChangeEvent,
 } from 'react-native';
+import { ParentProps } from './Tab.Item';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
 
-export interface TabProps extends ViewProps {
+export interface TabProps extends ViewProps, ParentProps {
   /** Child position index value. */
   value?: number;
 
@@ -28,9 +29,6 @@ export interface TabProps extends ViewProps {
   /** Additional styling for tab indicator. */
   indicatorStyle?: StyleProp<ViewStyle>;
 
-  /** Style for Tab container */
-  containerStyle?: StyleProp<ViewStyle>;
-
   /** Define the background Variant. */
   variant?: 'primary' | 'default';
 }
@@ -44,15 +42,22 @@ export interface TabProps extends ViewProps {
  * @usage
  * ### Basic Tabs
  *  ```tsx live
- * <Tab value={0} variant='primary'>
- * <Tab.Item>Tab</Tab.Item>
- * <Tab.Item>Tab</Tab.Item>
- * </Tab>
+ *   function RneTab() {
+ *    const [index, setIndex] = React.useState(0);
+ *    return (
+ *      <>
+ *        <Tab value={index} onChange={setIndex} dense>
+ *          <Tab.Item>Tab</Tab.Item>
+ *          <Tab.Item>Tab</Tab.Item>
+ *        </Tab>
+ *      </>
+ *    );
+ *  }
  * ```
  *
  * ### Active Tab Items
  * ```tsx live
-* <Tab value={0} variant="primary" scrollable>
+* <Tab value={0} scrollable>
 *   <Tab.Item
 *     containerStyle={(active) => ({
 *       backgroundColor: active ? 'red' : undefined,
@@ -75,12 +80,17 @@ export interface TabProps extends ViewProps {
 export const TabBase: RneFunctionComponent<TabProps> = ({
   theme = defaultTheme,
   children,
-  value,
+  value = 0,
   scrollable = false,
   onChange = () => {},
   indicatorStyle,
   disableIndicator,
-  variant,
+  variant = 'default',
+  style,
+  dense,
+  iconPosition,
+  buttonStyle,
+  titleStyle,
   containerStyle,
   ...rest
 }) => {
@@ -122,7 +132,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
             (scrollCurrentPosition + tabContainerCurrentWidth);
         }
 
-        scrollViewRef.current.scrollTo({
+        scrollViewRef.current!.scrollTo({
           x: scrollX,
           y: 0,
           animated: true,
@@ -178,7 +188,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
           backgroundColor: theme?.colors?.primary,
         },
         styles.viewStyle,
-        containerStyle,
+        style,
       ]}
       onLayout={({ nativeEvent: { layout } }) => {
         setTabContainerWidth(layout.width);
@@ -210,6 +220,13 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                   },
                   active: index === value,
                   variant,
+                  _parentProps: {
+                    dense,
+                    iconPosition,
+                    buttonStyle,
+                    containerStyle,
+                    titleStyle,
+                  },
                 }
               );
             })}
@@ -238,19 +255,6 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
 };
 
 const styles = StyleSheet.create({
-  buttonStyle: {
-    borderRadius: 0,
-    backgroundColor: 'transparent',
-  },
-  titleStyle: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    textTransform: 'uppercase',
-  },
-  containerStyle: {
-    flex: 1,
-    borderRadius: 0,
-  },
   viewStyle: {
     flexDirection: 'row',
     position: 'relative',
