@@ -4133,7 +4133,7 @@ __metadata:
 
 "@rneui/base@file:../packages/base::locator=rne-website%40workspace%3A.":
   version: 4.0.0-rc.6
-  resolution: "@rneui/base@file:../packages/base#../packages/base::hash=c245b3&locator=rne-website%40workspace%3A."
+  resolution: "@rneui/base@file:../packages/base#../packages/base::hash=ba444e&locator=rne-website%40workspace%3A."
   dependencies:
     "@types/react-native-vector-icons": ^6.4.10
     color: ^3.2.1
@@ -4144,14 +4144,14 @@ __metadata:
   peerDependencies:
     react-native-safe-area-context: ^3.1.9 || ^4.0.0
     react-native-vector-icons: ">7.0.0"
-  checksum: 8a69385fdbd98a09d99bfc359e3713243cae52ddc06a07f6a886699db02f953aabe7cee4caa97e80ccb792ef4ac64d9b3be32a0cd11e71c2b5850abf715d20ff
+  checksum: f0006465ee9f12193ea1b6fa639807d026fa40dd636a8bc055597ab8d854c26e7d2af20324276b1c1db358cc027b3b6585312fa6abb5d5a5c1ab6e601e543c85
   languageName: node
   linkType: hard
 
-"@rneui/layout@npm:^0.0.0-alpha.4":
-  version: 0.0.0-alpha.4
-  resolution: "@rneui/layout@npm:0.0.0-alpha.4"
-  checksum: 50ab27edfe98df51df693eb769e2ba6dc94ab8a33dc3cc3dc64d8f892ed9b0765c44704bedcac84183f08e0d479508bc4574c4e45c5f2f724785e39ccf4bfd0f
+"@rneui/layout@file:../packages/layout::locator=rne-website%40workspace%3A.":
+  version: 0.0.0-alpha.5
+  resolution: "@rneui/layout@file:../packages/layout#../packages/layout::hash=50faab&locator=rne-website%40workspace%3A."
+  checksum: 8937817b2d0bb291b4b6dcf42fee72b272d42ff1fb99b31e8ed0fec2596e23801e74c969d1137bd8583bac8def7cfa092a34edfc7853cb03418a9c7ba27dab44
   languageName: node
   linkType: hard
 
@@ -13693,7 +13693,7 @@ __metadata:
     "@docusaurus/theme-live-codeblock": ^2.1.0
     "@docusaurus/types": ^2.1.0
     "@rneui/base": ../packages/base
-    "@rneui/layout": ^0.0.0-alpha.4
+    "@rneui/layout": ../packages/layout
     "@tsconfig/docusaurus": ^1.0.4
     "@types/assert": ^1.5.6
     "@types/jest": ^27.0.3

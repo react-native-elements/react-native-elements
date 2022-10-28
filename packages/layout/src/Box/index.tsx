@@ -19,8 +19,8 @@ export interface BoxProps extends Record<SystemProp, string | number> {
  * @usage
  *
  * ```tsx live
- * <Box spacing="md">
- *
+ * <Box spacing="md" bgColor="#d2f000" w={200} px={40} py={20}>
+ *   <Button>Button</Button>
  * </Box>
  * ```
  *

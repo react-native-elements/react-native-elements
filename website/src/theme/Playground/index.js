@@ -14,7 +14,8 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { usePrismTheme } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { MdCode, MdOpenInNew } from 'react-icons/md';
+import { MdCode } from 'react-icons/md';
+import { SiExpo } from 'react-icons/si';
 //  import type {Props} from '@theme/Playground';
 //  import type {ThemeConfig} from '@docusaurus/theme-live-codeblock';
 
@@ -69,10 +70,8 @@ function ThemedLiveEditor() {
   );
 }
 
-function EditorWithHeader() {
-  const [open, setOpen] = React.useState(false);
-
-  const [state, setState] = React.useState(undefined);
+function EditorWithHeader({ show_code, openInSnack }) {
+  const [open, setOpen] = React.useState(show_code);
 
   const handleToggle = () => {
     setOpen((isOpen) => !isOpen);
@@ -87,26 +86,13 @@ function EditorWithHeader() {
               <LiveError />
               <div className={clsx(styles.toggleIcon)}>
                 <MdCode onClick={handleToggle} />{' '}
-                {/* <MdOpenInNew onClick={openInSnack} /> */}
+                {/* <SiExpo size={12} onClick={openInSnack} /> */}
               </div>
             </>
           )}
         </BrowserOnly>
       </div>
-      {open && (
-        <>
-          {' '}
-          {/* <Header>
-            <Translate
-              id="theme.Playground.liveEditor"
-              description="The live editor label of the live codeblocks"
-            >
-              Live Editor
-            </Translate>
-          </Header> */}
-          <ThemedLiveEditor />
-        </>
-      )}
+      {open && <ThemedLiveEditor />}
     </>
   );
 }
@@ -120,6 +106,8 @@ export default function Playground({ children, transformCode, ...props }) {
   } = themeConfig;
   const prismTheme = usePrismTheme();
 
+  console.log(props);
+
   return (
     <div className={styles.playgroundContainer}>
       {/* @ts-expect-error: type incompatibility with refs */}
@@ -129,15 +117,7 @@ export default function Playground({ children, transformCode, ...props }) {
         theme={prismTheme}
         {...props}
       >
-        {playgroundPosition === 'top' ? (
-          <>
-            <EditorWithHeader />
-          </>
-        ) : (
-          <>
-            <EditorWithHeader />
-          </>
-        )}
+        <EditorWithHeader show_code={props.show_code} />
       </LiveProvider>
     </div>
   );
