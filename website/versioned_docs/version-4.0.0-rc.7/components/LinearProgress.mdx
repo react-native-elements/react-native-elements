@@ -1,0 +1,65 @@
+---
+id: linearprogress
+title: LinearProgress
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/LinearProgress.mdx";
+import Play from "@site/playground/LinearProgress/linearprogress.playground";
+
+<IconsStyle />
+
+Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates.
+They communicate an app’s state and indicate available actions, such as whether users can navigate away from the current screen.
+Also receives all [View](https://reactnative.dev/docs/view#props) props
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { LinearProgress } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`LinearProgress`}</CodeBlock>
+  </div>
+</div>
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name         | Type                                  | Default                                                 | Description                                                                             |
+| ------------ | ------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `animation`  | `boolean` \| `{ duration?: number; }` | `{ duration: 2000 }`                                    | Animation duration                                                                      |
+| `color`      | string                                | `secondary`                                             | Color for linear progress.                                                              |
+| `style`      | View Style                            |                                                         | Add additional styling for linear progress component.                                   |
+| `trackColor` | string                                |                                                         | Track color for linear progress.                                                        |
+| `value`      | number                                |                                                         | The value of the progress indicator for the determinate variant. Value between 0 and 1. |
+| `variant`    | `determinate` \| `indeterminate`      | `value === undefined ? 'indeterminate' : 'determinate'` | Type of button.                                                                         |
+
+</div>
+
+## Playground
+
+<Play />

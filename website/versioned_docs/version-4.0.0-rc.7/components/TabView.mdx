@@ -1,0 +1,60 @@
+---
+id: tabview
+title: TabView
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/TabView.mdx";
+
+<IconsStyle />
+
+Tabs organize content across different screens, data sets, and other interactions.
+TabView enables swipeable tabs.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { TabView } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`TabView`}</CodeBlock>
+  </div>
+</div>
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name                    | Type                   | Default    | Description                                                                                      |
+| ----------------------- | ---------------------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| `animationConfig`       | AnimationConfig        | `{}`       | Define the animation configurations.                                                             |
+| `animationType`         | `spring` \| `timing`   | `spring`   | Choose the animation type among `spring` and `timing`. This is visible when there is tab change. |
+| `containerStyle`        | View Style             |            | Styling for Component container.                                                                 |
+| `disableSwipe`          | Boolean                | `false`    | Swipe disabled or not                                                                            |
+| `disableTransition`     | Boolean                | `false`    | Disables transition                                                                              |
+| `minSwipeRatio`         | number                 | `0.4`      | Minimum distance to swipe before the view changes.                                               |
+| `minSwipeSpeed`         | number                 | `1`        | Minimum speed to swipe before the view changes.                                                  |
+| `onChange`              | (value: number) => any | `Function` | On Index Change Callback.                                                                        |
+| `onSwipeStart`          | (direction) => void    | `Function` | Handler when the user swipes the view.                                                           |
+| `tabItemContainerStyle` | View Style             |            | Styling for TabView.Item Component container.                                                    |
+| `value`                 | number                 | `0`        | Child position index value.                                                                      |
+
+</div>

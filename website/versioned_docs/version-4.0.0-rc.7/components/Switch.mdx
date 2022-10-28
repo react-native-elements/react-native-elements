@@ -1,0 +1,71 @@
+---
+id: switch
+title: Switch
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/Switch.mdx";
+import Play from "@site/playground/Switch/switch.playground";
+
+<IconsStyle />
+
+Switch represents user's decision of a process and indicates whether a state is on/off.
+Switch is a controlled component that requires an `onValueChange` to update the `value` prop.
+This renders a `boolean` value. React native elements provide you with additional `theme` and `color` support in the Switch Button.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Switch } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Switch`}</CodeBlock>
+  </div>
+</div>
+
+```tsx live
+function RNESwitch() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Stack row align="center">
+      <Switch value={open} onValueChange={setOpen} />
+    </Stack>
+  );
+}
+```
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [React Native Switch](https://reactnative.dev/docs/switch.html#props), [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name    | Type   | Default   | Description                        |
+| ------- | ------ | --------- | ---------------------------------- |
+| `color` | string | `primary` | The color of the Switch component. |
+
+</div>
+
+## Playground
+
+<Play />
