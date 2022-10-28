@@ -28,8 +28,6 @@ export interface SwitchProps extends NativeSwitchProps {
     </Stack>
   );
 }
-
-}
  * ```
  *
  */

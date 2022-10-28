@@ -41,10 +41,10 @@ This renders a `boolean` value. React native elements provide you with additiona
 
 ```tsx live
 function RNESwitch() {
-  const [state, setState] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   return (
     <Stack row align="center">
-      <Switch value={state} onValueChange={setState} />
+      <Switch value={open} onValueChange={setOpen} />
     </Stack>
   );
 }
