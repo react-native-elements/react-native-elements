@@ -20,10 +20,10 @@ module.exports = function (api) {
               '..',
               'packages/themed/src'
             ),
-            '@rneui/circular-slider': path.resolve(
+            '@rneui/layout': path.resolve(
               __dirname,
               '..',
-              'packages/circular-slider/src'
+              'packages/layout/src'
             ),
             '@rneui/base': path.resolve(__dirname, '..', 'packages/base/src'),
           },
