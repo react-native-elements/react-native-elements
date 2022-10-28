@@ -72,7 +72,7 @@ export interface ButtonProps
   /** Styling for Component container. */
   containerStyle?: StyleProp<ViewStyle>;
 
-  /** Displays a centered icon (when no title) or to the left (with text). (Can be used along with iconRight as well). Can be an object or a custom component. */
+  /** Displays a centered icon (when no title) or to the left (with text). (can be used along with iconRight as well). Can be an object or a custom component. */
   icon?: IconNode;
 
   /** Styling for Icon Component container. */
@@ -81,7 +81,7 @@ export interface ButtonProps
   /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
   iconRight?: boolean;
 
-  /** Displays a linear gradient. */
+  /** Displays a linear gradient. See [usage](#linear-gradient). */
   linearGradientProps?: object;
 
   /** Component for user interaction. */
@@ -105,19 +105,19 @@ export interface ButtonProps
   /** Displays Icon to the position mentioned. Needs to be used along with `icon` prop. */
   iconPosition?: 'left' | 'right' | 'top' | 'bottom';
 
-  /** Uppercase button title. */
+  /** Uppercase button title*/
   uppercase?: boolean;
 
-  /** Radius of button.
+  /** Radius of button
    * @type   number | sm | md | lg
    */
   radius?: number | StringOmit<keyof ThemeSpacing>;
 
-  /** Button size. */
+  /** Button size */
   size?: 'sm' | 'md' | 'lg';
 
   /**
-   * Color of button.
+   * Color of Button
    * @type   string | primary | secondary | success | warning | error
    */
   color?: StringOmit<'primary' | 'secondary' | 'success' | 'error' | 'warning'>;
@@ -158,6 +158,19 @@ export interface ButtonProps
  *        <Button color="warning">Warning</Button>
           <Button color="error">Error</Button>
  *  </Stack>
+ * ```
+ * ### Linear Gradient
+ * ```tsx live
+<Button
+  ViewComponent={LinearGradient} // Don't forget this!
+  linearGradientProps={{
+    colors: ["#FF9800", "#F44336"],
+    start: { x: 0, y: 0.5 },
+    end: { x: 1, y: 0.5 },
+  }}
+>
+  Linear Gradient
+</Button>
  * ```
  * ### Button with icon
  * ```tsx live
