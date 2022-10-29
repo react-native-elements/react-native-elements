@@ -135,30 +135,32 @@ class Release {
   }
 }
 
-async function main() {
-  const pkgs = await Release.getVersion();
-  const prompts = pkgs.map(Release.questions).flat();
+/*Mail Function to Call*/
 
-  inquirer
-    .prompt([
-      ...prompts,
-      { type: 'confirm', name: 'confirm', message: 'confirm' },
-    ])
-    .then((versions) => {
-      pkgs.forEach((pkg) => {
-        if (!semver.gt(versions[pkg.name], pkg.version)) {
-          throw Error(
-            pkg.name + ' version is not greater than current version'
-          );
-        }
-        pkg.version = versions[pkg.name];
-        Release.bump(pkg);
-      });
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
-main();
+// async function main() {
+//   const pkgs = await Release.getVersion();
+//   const prompts = pkgs.map(Release.questions).flat();
+
+//   inquirer
+//     .prompt([
+//       ...prompts,
+//       { type: 'confirm', name: 'confirm', message: 'confirm' },
+//     ])
+//     .then((versions) => {
+//       pkgs.forEach((pkg) => {
+//         if (!semver.gt(versions[pkg.name], pkg.version)) {
+//           throw Error(
+//             pkg.name + ' version is not greater than current version'
+//           );
+//         }
+//         pkg.version = versions[pkg.name];
+//         Release.bump(pkg);
+//       });
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// }
+// main();
 
 console.log('Remember to exec `yarn` to update yarn.lock ');
