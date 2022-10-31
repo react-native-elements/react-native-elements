@@ -1,0 +1,9 @@
+**/index.tsx
+src/*/components/**
+**/__tests__/**
+**/helpers/**
+
+
+  
+**/config/**
+src/SearchBar/SearchBar-**
