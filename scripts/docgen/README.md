@@ -1,7 +1,3 @@
-source: { type: 'string', alias: 's' },
-component: { type: 'string', alias: 'c' },
-pkg: { type: 'string', alias: 'p' },
-
 # RNE DocGen
 
 ```bash
