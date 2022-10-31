@@ -3,30 +3,19 @@ import path from 'path';
 import { Markdown } from './generateMarkdown';
 import { separateParent } from './parentProps';
 import { docgenParser } from './docgenParser';
+import { findIgnoredComponents } from './utils';
 import yargs from 'yargs';
 
 const rootPath = path.join(__dirname, '../../packages/');
 
-const ignore = [
-  // Ignore themed package
-  rootPath + 'themed/**',
-  '**/base/**/index.tsx',
-  '**/src/*/components/**',
-  '**/__tests__/**',
-  '**/helpers/**',
-  '**/config/**',
-  '**/base/src/SearchBar/SearchBar-**',
-];
+function main({ source = '*/src/**/*.tsx' }: typeof argv) {
+  const ignoredFiles = findIgnoredComponents(rootPath);
 
-function main(sourcePath: string) {
-  const filePaths = glob.sync(
-    path.join(rootPath, sourcePath || '*/src/**/*.tsx'),
-    {
-      absolute: true,
-      ignore,
-      onlyFiles: true,
-    }
-  );
+  const filePaths = glob.sync(path.join(rootPath, source), {
+    absolute: true,
+    ignore: ignoredFiles,
+    onlyFiles: true,
+  });
 
   console.log('Found', filePaths.length, 'components');
 
@@ -39,8 +28,10 @@ function main(sourcePath: string) {
   });
 }
 
-const argv = yargs(process.argv.slice(2)).options({
-  include: { type: 'string', alias: 'i' },
-}).argv;
+const { argv } = yargs(process.argv.slice(2)).options({
+  source: { type: 'string', alias: 's' },
+  component: { type: 'string', alias: 'c' },
+  pkg: { type: 'string', alias: 'p' },
+});
 
-main(argv.include);
+main(argv);
