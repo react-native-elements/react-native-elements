@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import glob from 'fast-glob';
 import path from 'path';
 import { Markdown } from './generateMarkdown';
@@ -9,7 +8,7 @@ import yargs from 'yargs';
 
 const rootPath = path.join(__dirname, '../../packages/');
 
-function main({ component, source, pkg }: typeof argv) {
+function main({ source }: typeof argv) {
   const ignoredFiles = findIgnoredComponents(rootPath);
 
   const filePaths = glob.sync(path.join(rootPath, source || '*/src/**/*.tsx'), {
@@ -18,7 +17,7 @@ function main({ component, source, pkg }: typeof argv) {
     onlyFiles: true,
   });
 
-  console.warn('Found', filePaths.length, 'components');
+  console.log('Found', filePaths.length, 'components');
 
   const componentDocs = docgenParser.parse(filePaths);
 
