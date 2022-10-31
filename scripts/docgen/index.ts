@@ -8,10 +8,10 @@ import yargs from 'yargs';
 
 const rootPath = path.join(__dirname, '../../packages/');
 
-function main({ source }: typeof argv) {
+function main({ source = '*/src/**/*.tsx' }: typeof argv) {
   const ignoredFiles = findIgnoredComponents(rootPath);
 
-  const filePaths = glob.sync(path.join(rootPath, source || '*/src/**/*.tsx'), {
+  const filePaths = glob.sync(path.join(rootPath, source), {
     absolute: true,
     ignore: ignoredFiles,
     onlyFiles: true,
