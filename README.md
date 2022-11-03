@@ -23,7 +23,7 @@ Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 <div align="center">
   <a href="https://twitter.com/rn_elements"><img src="https://img.shields.io/twitter/follow/rn_elements?style=flat-square&label=Twitter&logo=TWITTER&color=0089E3"></a>
   <a href="https://github.com/react-native-elements/react-native-elements/discussions"><img src="https://img.shields.io/github/discussions/react-native-elements/react-native-elements?label=Discussions&logo=github&style=flat-square"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://img.shields.io/badge/Join-Slack-4A154B?style=flat-square&logo=slack&color=0089E3&"></a>
+  <a href="https://discord.com/invite/e9RBHjkKHa"><img src="https://img.shields.io/badge/Join-Discord-5865F2?style=flat-square&logo=discord&logoColor=FFFFFF"></a>
 
 </div>
 
@@ -108,7 +108,7 @@ and submit a PR for a new feature/bug fix.
 
 A big shoutout to all our contributors! You could be here too!
 <a href="https://github.com/react-native-elements/react-native-elements/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=react-native-elements/react-native-elements" />
+<img src="https://contrib.rocks/image?repo=react-native-elements/react-native-elements" />
 </a>
 
 ### First Contributors
@@ -124,10 +124,10 @@ an
 or a
 [pull request](https://github.com/react-native-elements/react-native-elements/pulls).
 
-### Slack Community
+### Discord Community
 
 In case you have any other question or would like to come say **Hi!** to the RNE
-community, join our [Slack team](https://react-native-elements-slack.herokuapp.com).
+community, join our [Discord Server](https://discord.com/invite/e9RBHjkKHa).
 See you on the other side! 👋😃
 
 ## Backers

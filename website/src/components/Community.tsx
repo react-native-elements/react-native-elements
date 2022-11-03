@@ -2,7 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import '../../static/css/components.css';
 import { SectionHeader } from './SectionHeader';
-import { SiTwitter, SiStackoverflow } from 'react-icons/si';
+import { SiTwitter, SiStackoverflow, SiDiscord } from 'react-icons/si';
 import { MdOutlinePeopleAlt } from 'react-icons/md';
 
 const Home: React.FunctionComponent<{}> = () => {
@@ -40,13 +40,13 @@ const Home: React.FunctionComponent<{}> = () => {
             </div>
             <div className="col col--4">
               <Link
-                style={{ backgroundColor: '#4A154B', color: 'white' }}
-                href="https://react-native-elements-slack.herokuapp.com/"
+                style={{ backgroundColor: '#5865F2', color: 'white' }}
+                href="https://discord.com/invite/e9RBHjkKHa"
                 className="card shadow--md"
               >
                 <div className="card__body padding--lg">
                   <h3 className="margin-bottom--sm ">
-                    <img src="/img/website/slack.png" width={24} />
+                    <SiDiscord fill="#fff" />
                   </h3>
                   <h4>Talk to us</h4>
                   <b>
