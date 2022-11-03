@@ -11,6 +11,7 @@ const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
+const getBehaviorType = Platform.OS === 'ios' ? 'padding' : 'height';
 
 export type StringOmit<K extends string> = K | Omit<string, K>;
 
@@ -72,6 +73,7 @@ export {
   lightColors,
   darkColors,
   color,
+  getBehaviorType,
   registerCustomIconType,
 };
 
