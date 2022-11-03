@@ -6,6 +6,6 @@ contact_links:
   - name: ⚛️ React Native Issues
     url: https://github.com/facebook/react-native/issues
     about: Please report bugs or issues in the React Native repository.
-  - name: 😄 Want to say Hi? Join Slack
-    url: https://react-native-elements-slack.herokuapp.com/
-    about: Looking for help with your app? Please refer to the React Native Element's slack.
+  - name: 😄 Want to say Hi? Join Discord
+    url: https://discord.com/invite/e9RBHjkKHa
+    about: Looking for help with your app? Please refer to the React Native Element's discord server.

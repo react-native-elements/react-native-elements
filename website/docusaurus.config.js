@@ -15,9 +15,12 @@ const config = {
   themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
     // [
-    // '@docusaurus/plugin-client-redirects',
+    //   '@docusaurus/plugin-client-redirects',
     // {
-    //   fromExtensions: ['html'],
+    // fromExtensions: ['html'],
+    // redirects: [
+    // /docs/oldDoc -> /docs/newDoc
+    // ],
     // },
     // ],
     './plugins/react-native-elements-web.js',
@@ -93,7 +96,7 @@ const config = {
       id: 'support_us',
       content:
         'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐' +
-        ' and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/rn_elements">Twitter</a>!',
+        ' and join the <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/e9RBHjkKHa">Discord server</a>!',
       backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
       isCloseable: false,
@@ -182,8 +185,12 @@ const config = {
           title: 'Community',
           items: [
             {
-              label: 'Chat with us on Slack',
-              to: 'https://react-native-elements-slack.herokuapp.com/',
+              label: 'Join discord server',
+              to: 'https://discord.com/invite/e9RBHjkKHa',
+            },
+            {
+              label: 'Discord Server',
+              to: '/discord',
             },
             {
               label: 'Submit a bug or feature',
