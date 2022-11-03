@@ -6,7 +6,12 @@ import {
   fireEvent,
   act,
 } from '@testing-library/react-native';
-import { ThemeProvider, FullTheme, createTheme } from '../src/config';
+import {
+  ThemeProvider,
+  FullTheme,
+  createTheme,
+  CreateThemeOptions,
+} from '../src/config';
 
 export { fireEvent, act };
 
@@ -14,7 +19,7 @@ export { fireEvent, act };
 export const renderWithWrapper = (
   children: React.ReactElement<any, string | JSXElementConstructor<any>>,
   wrapperTestID?: string,
-  themeProp: Partial<FullTheme> = {},
+  themeProp: Partial<CreateThemeOptions> = {},
   renderOptions?: RenderOptions
 ) => {
   const options: RenderOptions = {
@@ -27,6 +32,6 @@ export const renderWithWrapper = (
     <ThemeProvider theme={createTheme(themeProp)}>{children}</ThemeProvider>,
     options
   );
-  const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper');
+  const wrapper = renderApi.queryByTestId(wrapperTestID || 'wrapper')!;
   return { wrapper, ...renderApi };
 };

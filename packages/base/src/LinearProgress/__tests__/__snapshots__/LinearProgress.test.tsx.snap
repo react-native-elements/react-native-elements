@@ -18,7 +18,7 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "rgba(3, 218, 196, 0.4)",
+          "backgroundColor": "rgba(173, 20, 87, 0.4)",
           "height": 4,
           "overflow": "hidden",
           "position": "relative",
@@ -34,7 +34,7 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
       nativeID="animatedComponent"
       style={
         Object {
-          "backgroundColor": "#03dac4",
+          "backgroundColor": "#ad1457",
           "flex": 1,
           "transform": Array [
             Object {
@@ -70,7 +70,7 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "rgba(3, 218, 196, 0.4)",
+          "backgroundColor": "rgba(173, 20, 87, 0.4)",
           "height": 4,
           "overflow": "hidden",
           "position": "relative",
@@ -84,7 +84,7 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "#03dac4",
+          "backgroundColor": "#ad1457",
           "flex": 1,
           "transform": Array [
             Object {

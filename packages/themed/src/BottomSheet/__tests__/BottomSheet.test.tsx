@@ -12,8 +12,10 @@ describe('BottomSheet Component', () => {
       />,
       '',
       {
-        BottomSheet: {
-          containerStyle: { backgroundColor: 'rgba(1, 0.5, 0.25, 1.0)' },
+        components: {
+          BottomSheet: {
+            containerStyle: { backgroundColor: 'rgba(1, 0.5, 0.25, 1.0)' },
+          },
         },
       }
     );

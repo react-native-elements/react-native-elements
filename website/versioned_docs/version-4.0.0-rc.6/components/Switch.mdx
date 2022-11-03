@@ -1,0 +1,50 @@
+---
+id: switch
+title: Switch
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Usage from "../component_usage/Switch.mdx";
+import Play from "@site/playground/Switch/switch.playground";
+
+<IconsStyle />
+
+Switch represents user's decision of a process and indicates whether a state is on/off.
+Switch is a controlled component that requires an `onValueChange` to update the `value` prop.
+This renders a `boolean` value. React native elements provide you with additional `theme` and `color` support in the Switch Button.
+
+## Import
+
+```tsx
+import { Switch } from "@rneui/themed";
+```
+
+## Usage
+
+```tsx live
+<Stack row align="center" spacing={4}>
+  <Switch />
+</Stack>
+```
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [React Native Switch](https://reactnative.dev/docs/switch.html#props), [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name    | Type   | Default   | Description                        |
+| ------- | ------ | --------- | ---------------------------------- |
+| `color` | string | `primary` | The color of the Switch component. |
+
+</div>
+
+## Playground
+
+<Play />

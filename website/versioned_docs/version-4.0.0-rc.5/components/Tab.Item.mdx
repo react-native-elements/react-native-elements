@@ -1,0 +1,39 @@
+---
+id: tab_item
+title: Tab.Item
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<IconsStyle />
+
+They are individual item of the parent Tab.
+They are clickable and allows users to click and change Tab.
+Receives all [Button](https://reactnativeelements.com/docs/button#props) props.
+
+## Import
+
+```tsx
+import { Tab } from "@rneui/themed";
+```
+
+## Props
+
+:::note
+Includes all [Button](button#props) props.
+:::
+<div class='table-responsive'>
+
+| Name                 | Type                                          | Default | Description | Usage Example                                     |
+| -------------------- | --------------------------------------------- | ------- | ------------------------------------------------ | ------------ |
+| `active`             | boolean                                       |         | Allows to define if TabItem is active.           |
+| `buttonStyle`        | `ViewStyle or (active: boolean) => ViewStyle` |         | Additional button styles | `buttonStyle={(active) => ({backgroundColor: active ? "red": "blue",})}` 
+|
+| `containerStyle`     | ViewStyle or (active: boolean) => ViewStyle   |         | Additional Styling for button container.   | `containerStyle={(active) => ({backgroundColor: active ? "red": "blue",})}` |
+| `iconContainerStyle` | ViewStyle or (active: boolean) => ViewStyle   |         | Additional Styling for Icon Component container. |
+| `titleStyle`         | TextStyle or (active: boolean) => TextStyle   |         | Additional button title style                    | `titleStyle={(active) => ({backgroundColor: active ? "red": "blue",})}` |
+| `variant`            | `primary` \| `default`                        |         | Define the background Variant.                   | 
+
+</div>

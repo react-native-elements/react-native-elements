@@ -1,17 +1,11 @@
 import { Colors } from './colors';
 import { ComponentTheme } from './theme.component';
-
+import { ThemeSpacing, defaultSpacing } from '@rneui/base/dist/helpers';
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 
 export type ThemeMode = 'light' | 'dark';
 
-export interface ThemeSpacing {
-  xs: number;
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-}
+export { ThemeSpacing, defaultSpacing };
 
 export interface Theme {
   mode: ThemeMode;

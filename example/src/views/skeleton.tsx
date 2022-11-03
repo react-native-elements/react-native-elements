@@ -22,9 +22,13 @@ const Avatars = () => {
               </View>
             </View>
           </View>
-          <Text>With Linear Gradient</Text>
+          <Text>Wave (With Linear Gradient)</Text>
           <View style={{ marginVertical: 8 }}>
-            <Skeleton height={200} LinearGradientComponent={LinearGradient} />
+            <Skeleton
+              animation="wave"
+              height={200}
+              LinearGradientComponent={LinearGradient}
+            />
           </View>
           <Text>Pulse Animation</Text>
           <View style={{ marginVertical: 8 }}>

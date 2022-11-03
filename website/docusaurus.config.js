@@ -2,7 +2,7 @@
 const config = {
   title: 'React Native Elements' /* title for your website */,
   tagline: 'Cross Platform React Native UI Toolkit',
-  url: 'https://reactnativeelements.com/' /* your website url */,
+  url: 'https://reactnativeelements.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
@@ -11,18 +11,18 @@ const config = {
   favicon: '/img/website/logo.png',
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  scripts: [
-    'https://buttons.github.io/buttons.js',
-    { src: 'https://snack.expo.io/embed.js', defer: true },
-  ],
+  scripts: [{ src: 'https://snack.expo.io/embed.js', defer: true }],
   themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        fromExtensions: ['html'],
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-client-redirects',
+    // {
+    // fromExtensions: ['html'],
+    // redirects: [
+    // /docs/oldDoc -> /docs/newDoc
+    // ],
+    // },
+    // ],
     './plugins/react-native-elements-web.js',
   ],
   presets: [
@@ -61,32 +61,32 @@ const config = {
   themeConfig: {
     image: '/img/website/seo.png',
     metadata: [
-      {
-        name: 'description',
-        content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      },
-      { name: 'og:type', content: 'website' },
-      { name: 'og:url', content: 'https://reactnativeelements.com/' },
-      { name: 'og:title', content: 'React Native Elements' },
-      {
-        name: 'og:description',
-        content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      },
-      {
-        name: 'og:image',
-        content: 'https://reactnativeelements.com/img/website/seo.png',
-      },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:url', content: 'https://reactnativeelements.com/' },
-      { name: 'twitter:title', content: 'React Native Elements' },
-      {
-        name: 'twitter:description',
-        content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      },
-      {
-        name: 'twitter:image',
-        content: 'https://reactnativeelements.com/img/website/seo.png',
-      },
+      // {
+      //   name: 'description',
+      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      // },
+      // { name: 'og:type', content: 'website' },
+      // { name: 'og:url', content: 'https://reactnativeelements.com' },
+      // { name: 'og:title', content: 'React Native Elements' },
+      // {
+      //   name: 'og:description',
+      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      // },
+      // {
+      //   name: 'og:image',
+      //   content: 'https://reactnativeelements.com/img/website/seo.png',
+      // },
+      // { name: 'twitter:card', content: 'summary_large_image' },
+      // { name: 'twitter:url', content: 'https://reactnativeelements.com' },
+      // { name: 'twitter:title', content: 'React Native Elements' },
+      // {
+      //   name: 'twitter:description',
+      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
+      // },
+      // {
+      //   name: 'twitter:image',
+      //   content: 'https://reactnativeelements.com/img/website/seo.png',
+      // },
     ],
 
     liveCodeBlock: {
@@ -96,7 +96,7 @@ const config = {
       id: 'support_us',
       content:
         'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐' +
-        ' and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/rn_elements">Twitter</a>!',
+        ' and join the <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/e9RBHjkKHa">Discord server</a>!',
       backgroundColor: 'var(--ifm-hero-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
       isCloseable: false,
@@ -185,8 +185,12 @@ const config = {
           title: 'Community',
           items: [
             {
-              label: 'Chat with us on Slack',
-              to: 'https://react-native-elements-slack.herokuapp.com/',
+              label: 'Join discord server',
+              to: 'https://discord.com/invite/e9RBHjkKHa',
+            },
+            {
+              label: 'Discord Server',
+              to: '/discord',
             },
             {
               label: 'Submit a bug or feature',

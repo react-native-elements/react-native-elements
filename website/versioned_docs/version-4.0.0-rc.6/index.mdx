@@ -1,0 +1,123 @@
+---
+id: overview
+title: Overview
+slug: /
+hide_table_of_contents: true
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from '@docusaurus/Link';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { SiExpo, SiReact, SiNextdotjs } from 'react-icons/si';
+import Admonition from '@theme/Admonition';
+
+<div className="admonition admonition-info alert alert--info">
+  <div className="admonition-content">
+    The aim of React Native Elements is to provide an all-in-one UI kit for
+    creating apps in react native. There are many great ui components made by
+    developers all around open source. React Native Elements takes the hassle of
+    assembling these packages together by giving you a ready made kit with
+    consistent api and look and feel.
+  </div>
+</div>
+
+## Installation
+
+<div class="container" style={{ padding: 0 }}>
+  <div class="row is-multiline">
+    <div class="col col--6">
+      <Link
+        class="card shadow--md"
+        to="docs/installation#using-expo"
+        style={{ height: '100%' }}
+      >
+        <div class="card__body position-relative">
+          <h4>
+            Expo CLI
+            <SiExpo class="card__icon" />
+          </h4>
+          <p>Guide to install with expo-cli</p>
+        </div>
+      </Link>
+    </div>
+    <div class="col col--6">
+      <Link
+        class="card shadow--md"
+        to="docs/installation"
+        style={{ height: '100%' }}
+      >
+        <div class="card__body  position-relative">
+          <h4>
+            React Native CLI <SiReact class="card__icon" />
+          </h4>
+          <p>Guide to install with react-native cli</p>
+        </div>
+      </Link>
+    </div>
+    <div class="col col--6">
+      <Link
+        class="card shadow--md"
+        to="docs/installation#using-on-web"
+        style={{ height: '100%' }}
+      >
+        <div class="card__body position-relative">
+          <h4>
+            React JS <SiReact class="card__icon" />
+          </h4>
+          <p>
+            Guide to install with <code>create-react-app</code>
+          </p>
+        </div>
+      </Link>
+    </div>
+    <div class="col col--6">
+      <Link class="card shadow--md" to="#" style={{ height: '100%' }}>
+        <div class="card__body position-relative">
+          <h4>
+            Next JS (coming soon) <SiNextdotjs class="card__icon" />
+          </h4>
+          <p>Guide to install with create-next-app</p>
+        </div>
+      </Link>
+    </div>
+  </div>
+</div>
+
+## Quick start
+
+Here's a quick example to get you started, **it's literally all you need:**
+
+```ts
+import { Button } from '@rneui/base';
+
+const App = () => {
+  return <Button title="Hello World" />;
+};
+```
+
+## Using themed components
+
+The components in this library have a single theme running through them. From
+one central location, we can update the colours used in all components. While
+this was great for the developers of the library, the actual users also needed a
+way to use this feature.
+
+But why stop at colours? Why not allow the props of every component to be
+defined in one central place? And so the idea behind theming with React Native
+Elements was born!
+
+```jsx
+import { Button, ThemeProvider } from '@rneui/themed';
+
+const MyApp = () => {
+  return (
+    <ThemeProvider>
+      <Button title="Hey!" />
+    </ThemeProvider>
+  );
+};
+```
+
+To customize the theme, or use it within your own components, be sure to check
+the docs on [Customization](https://reactnativeelements.com/docs/customizing).

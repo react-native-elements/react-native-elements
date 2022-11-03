@@ -81,7 +81,7 @@ export interface ButtonProps
   /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
   iconRight?: boolean;
 
-  /** Displays a linear gradient. See [usage](#lineargradient-usage). */
+  /** Displays a linear gradient. See [usage](#linear-gradient). */
   linearGradientProps?: object;
 
   /** Component for user interaction. */
@@ -159,6 +159,19 @@ export interface ButtonProps
           <Button color="error">Error</Button>
  *  </Stack>
  * ```
+ * ### Linear Gradient
+ * ```tsx live
+<Button
+  ViewComponent={LinearGradient} // Don't forget this!
+  linearGradientProps={{
+    colors: ["#FF9800", "#F44336"],
+    start: { x: 0, y: 0.5 },
+    end: { x: 1, y: 0.5 },
+  }}
+>
+  Linear Gradient
+</Button>
+ * ```
  * ### Button with icon
  * ```tsx live
  *  <Button type="solid" ><Icon name='home' color='white'/>Icon</Button>
@@ -173,7 +186,7 @@ export interface ButtonProps
 export const Button: RneFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
-  onPress = () => console.warn('Please attach a method to this component'),
+  onPress = () => {},
   buttonStyle,
   type = 'solid',
   loading = false,
@@ -258,20 +271,29 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
         )
       : undefined;
 
-  const loadingProps: ActivityIndicatorProps = {
-    ...defaultLoadingProps(type, theme),
-    ...passedLoadingProps,
-  };
+  const loadingProps: ActivityIndicatorProps = useMemo(
+    () => ({
+      ...defaultLoadingProps(type, theme),
+      ...passedLoadingProps,
+    }),
+    [passedLoadingProps, theme, type]
+  );
 
-  const accessibilityState = {
-    disabled: !!disabled,
-    busy: !!loading,
-  };
+  const accessibilityState = useMemo(
+    () => ({
+      disabled: !!disabled,
+      busy: !!loading,
+    }),
+    [disabled, loading]
+  );
 
-  const borderRadius =
-    Number(
-      theme.spacing[radius as keyof typeof theme.spacing] ?? (radius || '0')
-    ) || 0;
+  const borderRadius = useMemo(
+    () =>
+      Number(
+        theme.spacing[radius as keyof typeof theme.spacing] ?? (radius || '0')
+      ) || 0,
+    [radius, theme]
+  );
 
   return (
     <View

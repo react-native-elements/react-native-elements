@@ -7,7 +7,7 @@ describe('withTheme', () => {
   it('passes theme props to function component', () => {
     const Component = withTheme(() => <Text testID="myText" />);
     const { queryByTestId } = render(<Component />);
-    const wrapper = queryByTestId('myText').parent.parent;
+    const wrapper = queryByTestId('myText')!.parent!.parent!;
     expect(Object.keys(wrapper.props)).toContain('theme');
   });
 
@@ -19,7 +19,7 @@ describe('withTheme', () => {
     }
     const WrappedComponent = withTheme(Component);
     const { queryByTestId } = render(<WrappedComponent />);
-    const wrapper = queryByTestId('myText').parent.parent;
+    const wrapper = queryByTestId('myText')!.parent!.parent!;
     expect(Object.keys(wrapper.props)).toContain('theme');
   });
 
@@ -49,7 +49,7 @@ describe('withTheme', () => {
     }
     const WrappedComponent = withTheme(Component);
     const { queryByTestId } = render(<WrappedComponent />);
-    const instanceMethods = queryByTestId('myText').parent.parent.instance;
+    const instanceMethods = queryByTestId('myText')!.parent!.parent!.instance;
     expect(instanceMethods.hello()).toBe('Hey');
   });
 });

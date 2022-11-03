@@ -19,15 +19,14 @@ const Help: React.FunctionComponent<{}> = (props) => {
     {
       content: 'Ask questions about the documentation and project in our ',
       title: 'Join the community',
-      link: 'Slack.',
-      href: 'https://react-native-elements-slack.herokuapp.com',
+      link: 'Discord Server.',
+      href: 'https://discord.com/invite/e9RBHjkKHa',
     },
     {
       content: `Find out what's new for each release by checking the `,
       title: 'Stay up to date',
       link: 'releases tab on the GitHub repo.',
-      href:
-        'https://github.com/react-native-elements/react-native-elements/releases',
+      href: 'https://github.com/react-native-elements/react-native-elements/releases',
     },
   ];
 

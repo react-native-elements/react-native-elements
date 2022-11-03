@@ -1,34 +1,35 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useMemo } from 'react';
 import deepmerge from 'deepmerge';
 import { Colors, lightColors, darkColors } from './colors';
-import { ThemeMode, RecursivePartial, Theme, ThemeSpacing } from './theme';
+import {
+  ThemeMode,
+  RecursivePartial,
+  Theme,
+  ThemeSpacing,
+  defaultSpacing,
+} from './theme';
 import { ComponentTheme } from './theme.component';
 
 export type { RecursivePartial };
 
-export const themeSpacing: ThemeSpacing = {
-  xl: 16,
-  lg: 12,
-  md: 8,
-  sm: 4,
-  xs: 2,
-};
-
 type ComponentFunctionProps<Components = ComponentTheme> = {
   [Key in keyof Components]?:
     | Components[Key]
-    | ((props: Components[Key]) => Components[Key]);
+    | ((
+        props: Components[Key],
+        theme: Theme & { colors: Colors }
+      ) => Components[Key]);
 };
 
-export interface CreateThemeOptions
-  extends ComponentFunctionProps,
-    RecursivePartial<Theme> {
+export interface CreateThemeOptions extends RecursivePartial<Theme> {
   lightColors?: RecursivePartial<Colors>;
   darkColors?: RecursivePartial<Colors>;
+  components?: ComponentFunctionProps;
 }
 
-export interface ThemeOptions extends ComponentFunctionProps, Theme {
+export interface ThemeOptions extends Theme {
   colors: Colors;
+  components?: ComponentFunctionProps;
 }
 
 export type UpdateTheme = (
@@ -51,9 +52,9 @@ export type ThemeProps<T = {}> = {
 
 export type ThemeProviderContext<T = {}> = ThemeProps<ThemeOptions & T>;
 
-export const ThemeContext = React.createContext<ThemeProviderContext>({
-  theme: { colors: lightColors, mode: 'light' },
-} as ThemeProviderContext);
+export const ThemeContext = React.createContext<ThemeProviderContext>(
+  {} as ThemeProviderContext
+);
 
 export const createTheme = (
   theme: CreateThemeOptions = {}
@@ -61,12 +62,13 @@ export const createTheme = (
   return {
     ...theme,
     ...deepmerge<CreateThemeOptions>(
-      { lightColors, darkColors, spacing: themeSpacing },
+      { lightColors, darkColors, spacing: defaultSpacing },
       {
         lightColors: theme.lightColors || ({} as Colors),
         darkColors: theme.darkColors || ({} as Colors),
         mode: theme.mode || 'light',
         spacing: theme.spacing || {},
+        components: theme.components || {},
       }
     ),
   };
@@ -89,6 +91,7 @@ const separateColors = (
     colors: themeColors as Colors,
     mode,
     spacing: spacing as ThemeSpacing,
+    components: theme.components || {},
     ...restTheme,
   };
 };
@@ -150,17 +153,20 @@ export const useTheme = (): UseTheme => {
 };
 
 export const useThemeMode = () => {
-  const {
-    updateTheme,
-    theme: { mode },
-  } = useTheme();
+  const themeContext = useContext(ThemeContext);
 
   const setMode = useCallback(
     (colorMode: ThemeMode) => {
-      updateTheme({ mode: colorMode });
+      themeContext?.updateTheme({ mode: colorMode });
     },
-    [updateTheme]
+    [themeContext]
   );
 
-  return { mode, setMode };
+  return useMemo(
+    () => ({
+      mode: themeContext?.theme?.mode,
+      setMode,
+    }),
+    [setMode, themeContext?.theme?.mode]
+  );
 };

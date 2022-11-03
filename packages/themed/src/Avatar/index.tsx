@@ -6,7 +6,7 @@ import {
 import { withTheme } from '../config';
 
 export default Object.assign(withTheme<AvatarProps>(Avatar, 'Avatar'), {
-  Accessory: withTheme<AccessoryProps>(Accessory, 'Accessory'),
+  Accessory: withTheme<AccessoryProps>(Accessory, 'AvatarAccessory'),
 });
 
 export type { AccessoryProps, AvatarProps };

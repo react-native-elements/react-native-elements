@@ -1,13 +1,15 @@
 import React from 'react';
 import CheckBox from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../../config';
+import { CreateThemeOptions, FullTheme } from '../../config';
 
 describe('CheckBox Component', () => {
   it('should use values from theme', () => {
-    const testTheme: Partial<FullTheme> = {
-      CheckBox: {
-        title: 'George is Cool',
+    const testTheme: Partial<CreateThemeOptions> = {
+      components: {
+        CheckBox: {
+          title: 'George is Cool',
+        },
       },
     };
     const { wrapper } = renderWithWrapper(

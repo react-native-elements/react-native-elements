@@ -50,6 +50,11 @@ const colors={
 }
 ```
 
+```diff
+- import { colors } from 'react-native-elements'
++ import { lightColors, darkColors } from '@rneui/themed'
+```
+
 ### Theme
 
 ```diff
@@ -174,11 +179,13 @@ You can use props for components while defining themes
 import { createTheme } from '@rneui/themed';
 
 const myTheme = createTheme({
-  Button: (buttonProps) => ({
-    titleStyle: {
-      color: buttonProps.type === 'solid' ? 'blue' : 'red',
-    },
-  }),
+  components: {
+    Button: (buttonProps) => ({
+      titleStyle: {
+        color: buttonProps.type === 'solid' ? 'blue' : 'red',
+      },
+    }),
+  },
 });
 ```
 

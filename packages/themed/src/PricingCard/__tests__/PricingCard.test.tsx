@@ -1,13 +1,15 @@
 import React from 'react';
 import PricingCard from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
-import { FullTheme } from '../..';
+import { CreateThemeOptions } from '../..';
 
 describe('PricingCard component', () => {
   it('should apply values from theme', () => {
-    const theme: Partial<FullTheme> = {
-      PricingCard: {
-        title: 'ALL YOU CAN EAT',
+    const theme: Partial<CreateThemeOptions> = {
+      components: {
+        PricingCard: {
+          title: 'ALL YOU CAN EAT',
+        },
       },
     };
     const { queryByText } = renderWithWrapper(

@@ -88,7 +88,7 @@ export const ListItemBase: RneFunctionComponent<ListItemProps> = (props) => {
             }),
             flexDirection: 'row',
             alignItems: 'center',
-            backgroundColor: theme?.colors?.white,
+            backgroundColor: theme?.colors?.background,
             borderColor: theme?.colors?.divider,
           },
           topDivider && { borderTopWidth: StyleSheet.hairlineWidth },

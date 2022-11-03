@@ -5,16 +5,13 @@ import { renderWithWrapper } from '../../../.ci/testHelper';
 
 describe('FAB Component', () => {
   it('render with theme', () => {
-    const testTheme = {
-      FAB: {
-        placement: 'right',
+    const { wrapper } = renderWithWrapper(<FAB placement="right" />, '', {
+      components: {
+        FAB: {
+          placement: 'right',
+        },
       },
-    };
-    const { wrapper } = renderWithWrapper(
-      <FAB placement="right" />,
-      '',
-      testTheme
-    );
+    });
     expect(wrapper.findByType(Animated.View).props.style).toMatchObject({
       position: 'absolute',
       bottom: 0,

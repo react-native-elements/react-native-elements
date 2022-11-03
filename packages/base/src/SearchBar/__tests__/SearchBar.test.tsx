@@ -40,12 +40,16 @@ describe('SearchBar wrapper component', () => {
       Keyboard.addListener = originalAddListener;
     });
     it('should subscribe to KeyboardDidClose event', () => {
-      renderWithWrapper(<SearchBar platform="android" />);
+      renderWithWrapper(
+        <SearchBar platform="android" onKeyboardHide={() => {}} />
+      );
       expect(Keyboard.addListener).toHaveBeenCalled();
     });
 
     it('should call listener.remove on unmount', () => {
-      const component = renderWithWrapper(<SearchBar platform="android" />);
+      const component = renderWithWrapper(
+        <SearchBar platform="android" onKeyboardHide={() => {}} />
+      );
       component.unmount();
       expect(mockListener.remove).toHaveBeenCalled();
     });

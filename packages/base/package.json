@@ -1,6 +1,6 @@
 {
   "name": "@rneui/base",
-  "version": "4.0.0-rc.4",
+  "version": "4.0.0-rc.7",
   "description": "Cross Platform React Native UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -59,7 +59,7 @@
     "react-native-vector-icons": "^7.1.0"
   },
   "peerDependencies": {
-    "react-native-safe-area-context": "^3.1.9",
+    "react-native-safe-area-context": "^3.1.9 || ^4.0.0",
     "react-native-vector-icons": ">7.0.0"
   },
   "jest": {

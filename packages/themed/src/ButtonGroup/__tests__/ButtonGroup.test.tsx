@@ -2,16 +2,18 @@ import React from 'react';
 import ButtonGroup from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { Text } from 'react-native';
-import { FullTheme } from '../../config';
+import { CreateThemeOptions, FullTheme } from '../../config';
 
 const buttons = ['Button 1', 'Button 2', 'Button 3'];
 
 describe('ButtonGroup Component', () => {
   it('should apply props from theme', () => {
-    const testTheme: Partial<FullTheme> = {
-      ButtonGroup: {
-        selectedTextStyle: {
-          color: 'red',
+    const testTheme: Partial<CreateThemeOptions> = {
+      components: {
+        ButtonGroup: {
+          selectedTextStyle: {
+            color: 'red',
+          },
         },
       },
     };

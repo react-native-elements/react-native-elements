@@ -18,6 +18,7 @@ export type StringOmit<K extends string> = K | Omit<string, K>;
 export type RneFunctionComponent<T> = React.FunctionComponent<
   T & {
     theme?: Theme;
+    children?: React.ReactNode | undefined;
   }
 >;
 
@@ -29,9 +30,11 @@ export interface ThemeSpacing {
   xl: number;
 }
 
+export const defaultSpacing = { xs: 2, sm: 4, md: 8, lg: 12, xl: 24 };
+
 export const defaultTheme: Theme = {
   colors: lightColors,
-  spacing: { xs: 2, sm: 4, md: 8, lg: 12, xl: 24 },
+  spacing: defaultSpacing,
 };
 
 export type Theme = {

@@ -199,7 +199,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#03dac4",
+                      "backgroundColor": "#ad1457",
                       "borderColor": "#2089dc",
                       "borderRadius": 2,
                       "borderWidth": 0,
@@ -403,7 +403,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "#03dac4",
+                      "backgroundColor": "#ad1457",
                       "borderColor": "#2089dc",
                       "borderRadius": 2,
                       "borderWidth": 0,
@@ -549,7 +549,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#03dac4",
+                  "backgroundColor": "#ad1457",
                   "borderColor": "#2089dc",
                   "borderRadius": 2,
                   "borderWidth": 0,

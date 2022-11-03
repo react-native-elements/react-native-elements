@@ -645,8 +645,8 @@ Card
 a.card {
   text-decoration: none !important;
   color: var(--ifm-color-content);
-  box-shadow: none;
-  border: 1px solid transparent;
+  box-shadow: none !important;
+  border: 1px solid var(--ifm-color-primary-contrast-background);
   display: flex;
   font-size: 0.8rem;
 }
@@ -660,6 +660,7 @@ a.card:hover {
   box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1),
     0 0 0 1px var(--ifm-color-primary) !important;
 }
+
 .row.is-multiline .col {
   margin-top: var(--ifm-spacing-horizontal) !important;
   margin-bottom: var(--ifm-spacing-horizontal) !important;

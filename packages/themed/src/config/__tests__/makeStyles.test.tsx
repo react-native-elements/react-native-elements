@@ -21,7 +21,7 @@ describe('useTheme()', () => {
       );
     };
     const { wrapper } = renderWithWrapper(<Component />, 'myComponent');
-    const innerProps = wrapper.parent.parent.props;
+    const innerProps = wrapper.parent!.parent!.props;
     expect(typeof innerProps.theme).toEqual('object');
     expect(typeof innerProps.replaceTheme).toEqual('function');
     expect(typeof innerProps.updateTheme).toEqual('function');

@@ -58,5 +58,18 @@ export default () => {
 };
 
 const theme = createTheme({
+  lightColors: {
+    primary: '#3d5afe',
+  },
+  darkColors: {
+    primary: '#3d5afe',
+  },
   mode: 'dark',
+  components: {
+    Text: {
+      h1Style: {
+        fontSize: 80,
+      },
+    },
+  },
 });
