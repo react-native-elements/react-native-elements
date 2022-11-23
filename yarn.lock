@@ -3821,7 +3821,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rneui/base@4.0.0-rc.6, @rneui/base@workspace:packages/base":
+"@rneui/base@4.0.0-rc.7, @rneui/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@rneui/base@workspace:packages/base"
   dependencies:
@@ -3853,9 +3853,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rneui/themed@workspace:packages/themed"
   dependencies:
-    "@rneui/base": 4.0.0-rc.6
+    "@rneui/base": 4.0.0-rc.7
   peerDependencies:
-    "@rneui/base": 4.0.0-rc.6
+    "@rneui/base": 4.0.0-rc.7
   languageName: unknown
   linkType: soft
 
