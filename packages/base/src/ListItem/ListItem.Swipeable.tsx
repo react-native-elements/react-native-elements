@@ -190,21 +190,21 @@ export const ListItemSwipeable: RneFunctionComponent<
   );
 };
 
-const CallableContent = <
-  Callback extends Function,
-  ContentType extends React.ReactNode
->({
-  callback,
-  content,
-}: {
-  content: ContentType | ((callback: Callback) => ContentType);
-  callback: Callback;
-}) => {
-  return React.useMemo(
-    () => (typeof content === 'function' ? content(callback) : content),
-    [callback, content]
-  );
-};
+// const CallableContent = <
+//   Callback extends Function,
+//   ContentType extends React.ReactNode
+// >({
+//   callback,
+//   content,
+// }: {
+//   content: ContentType | ((callback: Callback) => ContentType);
+//   callback: Callback;
+// }) => {
+//   return React.useMemo(
+//     () => (typeof content === 'function' ? content(callback) : content),
+//     [callback, content]
+//   );
+// };
 
 const styles = StyleSheet.create({
   actions: {
