@@ -30,11 +30,14 @@ export interface ListItemSwipeableProps extends ListItemProps {
   /** Style of right container.*/
   rightStyle?: StyleProp<ViewStyle>;
 
-  /** Width to swipe left. */
+  /** Width of swipe left container. */
   leftWidth?: number;
 
-  /** Width to swipe right. */
+  /** Width of swipe right container.*/
   rightWidth?: number;
+
+  /**  */
+  minSlideWidth?: number;
 
   /** Handler for swipe in either direction */
   onSwipeBegin?: (direction: 'left' | 'right') => unknown;
@@ -63,6 +66,7 @@ export const ListItemSwipeable: RneFunctionComponent<
   rightContent,
   leftWidth = ScreenWidth / 3,
   rightWidth = ScreenWidth / 3,
+  minSlideWidth = ScreenWidth / 3,
   onSwipeBegin,
   onSwipeEnd,
   animation = { type: 'spring', duration: 200 },
@@ -96,13 +100,13 @@ export const ListItemSwipeable: RneFunctionComponent<
 
   const onRelease = React.useCallback(
     (_: unknown, { dx }: PanResponderGestureState) => {
-      if (Math.abs(panX.current + dx) >= ScreenWidth / 3) {
+      if (Math.abs(panX.current + dx) >= minSlideWidth) {
         slideAnimation(panX.current + dx > 0 ? leftWidth : -rightWidth);
       } else {
         slideAnimation(0);
       }
     },
-    [leftWidth, rightWidth, slideAnimation]
+    [leftWidth, rightWidth, slideAnimation, minSlideWidth]
   );
 
   const shouldSlide = React.useCallback(
@@ -139,11 +143,7 @@ export const ListItemSwipeable: RneFunctionComponent<
   );
 
   return (
-    <View
-      style={{
-        justifyContent: 'center',
-      }}
-    >
+    <View style={styles.container}>
       <View style={styles.actions}>
         <View
           style={[
@@ -158,7 +158,7 @@ export const ListItemSwipeable: RneFunctionComponent<
             ? leftContent(resetCallBack)
             : leftContent}
         </View>
-        <View style={{ flex: 0 }} />
+        <View style={styles.empty} />
         <View
           style={[
             {
@@ -171,6 +171,7 @@ export const ListItemSwipeable: RneFunctionComponent<
           {typeof rightContent === 'function'
             ? rightContent(resetCallBack)
             : rightContent}
+          {/* <CallableContent content={rightContent} callback={resetCallBack} /> */}
         </View>
       </View>
       <Animated.View
@@ -189,6 +190,22 @@ export const ListItemSwipeable: RneFunctionComponent<
   );
 };
 
+const CallableContent = <
+  Callback extends Function,
+  ContentType extends React.ReactNode
+>({
+  callback,
+  content,
+}: {
+  content: ContentType | ((callback: Callback) => ContentType);
+  callback: Callback;
+}) => {
+  return React.useMemo(
+    () => (typeof content === 'function' ? content(callback) : content),
+    [callback, content]
+  );
+};
+
 const styles = StyleSheet.create({
   actions: {
     bottom: 0,
@@ -201,6 +218,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  container: {
+    justifyContent: 'center',
+  },
+  empty: {
+    flex: 0,
   },
 });
 
