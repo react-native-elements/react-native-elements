@@ -19,7 +19,11 @@ import { IconProps } from '../Icon';
 import { ImageProps } from '../Image';
 import { InputProps } from '../Input';
 import { LinearProgressProps } from '../LinearProgress';
-import { ListItemProps, ListItemAccordionProps } from '../ListItem';
+import {
+  ListItemProps,
+  ListItemAccordionProps,
+  ListItemSwipeableProps,
+} from '../ListItem';
 import { OverlayProps } from '../Overlay';
 import { PricingCardProps } from '../PricingCard';
 import { SearchBarProps } from '../SearchBar';
@@ -74,6 +78,7 @@ export interface ComponentTheme {
   ListItemContent: Partial<ViewProps>;
   ListItemInput: Partial<InputProps>;
   ListItemSubtitle: Partial<TextProps>;
+  ListItemSwipeable: Partial<ListItemSwipeableProps>;
   ListItemTitle: Partial<TextProps>;
   Overlay: Partial<OverlayProps>;
   PricingCard: Partial<PricingCardProps>;
