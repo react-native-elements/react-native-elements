@@ -40,7 +40,7 @@ const Home: React.FunctionComponent<{}> = () => {
                   className={
                     'button button--secondary button--outline button--sm  margin-horiz--sm margin-vert--sm'
                   }
-                  to={'https://expo.dev/@rne_org/react-native-elements'}
+                  to={'https://expo.dev/@rneui/react-native-elements'}
                 >
                   Run on Expo Go
                 </Link>

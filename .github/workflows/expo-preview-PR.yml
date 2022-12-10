@@ -47,7 +47,7 @@ jobs:
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v1
         env:
-          QR_PATH: https://qr.expo.dev/expo-go?owner=rne_org&slug=react-native-elements&releaseChannel=pr-${{ github.event.number }}&host=exp.host
+          QR_PATH: https://qr.expo.dev/expo-go?owner=rneui&slug=react-native-elements&releaseChannel=pr-${{ github.event.number }}&host=exp.host
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
