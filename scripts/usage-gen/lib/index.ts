@@ -1,26 +1,38 @@
 // import fs from 'fs';
 import { parse } from './parser';
-import glob from 'fast-glob';
+
 import path from 'path';
 
-const rootPath = path.join(__dirname, '../../packages/');
+const rootPath = path.join(__dirname);
 
-function main(source = '*/src/**/*.usage.tsx') {
-  const filePaths = glob.sync(path.join(rootPath, source), {
-    absolute: true,
-    onlyFiles: true,
-  });
+const f = parse(path.join(rootPath, './demo.tsx'));
+console.log(f);
 
-  console.log('Found', filePaths.length, 'components');
+// import { Markdown } from './generateMarkdown';
+// import { separateParent } from './parentProps';
+// import { docgenParser } from './docgenParser';
+// import { findIgnoredComponents } from './utils';
+// import yargs from 'yargs';
 
-  const componentDocs = parse(filePaths);
+// function main({ source = '*/src/**/*.tsx' }: typeof argv) {
+//   const ignoredFiles = findIgnoredComponents(rootPath);
 
-  Markdown.parents = separateParent(componentDocs);
+//   const filePaths = glob.sync(path.join(rootPath, source), {
+//     absolute: true,
+//     ignore: ignoredFiles,
+//     onlyFiles: true,
+//   });
 
-  componentDocs.forEach((componentDoc) => {
-    new Markdown(componentDoc).save();
-  });
-}
+//   console.log('Found', filePaths.length, 'components');
+
+//   const componentDocs = docgenParser.parse(filePaths);
+
+//   Markdown.parents = separateParent(componentDocs);
+
+//   componentDocs.forEach((componentDoc) => {
+//     new Markdown(componentDoc).save();
+//   });
+// }
 
 // const { argv } = yargs(process.argv.slice(2)).options({
 //   source: { type: 'string', alias: 's' },

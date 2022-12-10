@@ -7,7 +7,7 @@ export function parse(filePath: string) {
   const fileName = path.basename(filePath).split('.');
   const fileKey = fileName.slice(0, fileName.length > 2 ? -2 : -1).join('');
 
-  const component = { info: '', usage: [], stack: '', fileKey };
+  const component = { info: '', usage: [], meta: [], fileKey };
   transformSync(file, {
     filename: filePath,
     presets: ['@babel/preset-typescript'],
@@ -26,6 +26,23 @@ export function parse(filePath: string) {
                         component.info += arg.value;
                       }
                     });
+                  } else if (name === 'meta') {
+                    const [objs] = node.expression.arguments;
+                    if (t.isObjectExpression(objs)) {
+                      objs.properties.forEach((obj) => {
+                        if (
+                          t.isObjectProperty(obj) &&
+                          t.isIdentifier(obj.key)
+                        ) {
+                          if (t.isStringLiteral(obj.value)) {
+                            component.meta.push([
+                              obj.key.name,
+                              obj.value.value,
+                            ]);
+                          }
+                        }
+                      });
+                    }
                   } else if (name === 'usage') {
                     let usage = {
                       title: '',

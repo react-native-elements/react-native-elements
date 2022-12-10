@@ -1,7 +1,11 @@
 import React from 'react';
 import { Button } from '@rneui/base/dist';
-import { Stack, info, usage } from '../src/index';
+import { Stack, info, usage, meta } from '../src/index';
 
+meta({
+  name: 'hehe',
+  installation: 'haah',
+});
 info(
   'Buttons are touchable elements used to interact with the screen and to perform and operation.',
   'They may display text, icons, or both. Buttons can be styled with several props to look a specific way.'

@@ -1,5 +1,5 @@
-import { StackProps } from '@rneui/layout';
 import React from 'react';
+import { StackProps } from '@rneui/layout';
 
 declare const Stack: React.ElementType<StackProps>;
 
