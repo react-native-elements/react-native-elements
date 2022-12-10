@@ -27,7 +27,7 @@ jobs:
       - name: Upgrade Expo
         run: |
           cd example
-          npx expo upgrade
+          npx expo upgrade --non-interactive
         continue-on-error: true
       - name: Checkout
         run: |
