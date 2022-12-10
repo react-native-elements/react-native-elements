@@ -1,4 +1,4 @@
-name: Expo Default Channel Preview CI
+name: Upgrade expo SDK
 
 on: workflow_dispatch
 
