@@ -55,6 +55,7 @@ jobs:
         if: ${{ success() }}
         uses: actions/github-script@v4
         with:
+          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             github.issues.createComment({
               issue_number: ${{github.event.inputs.pr}},
@@ -66,6 +67,7 @@ jobs:
         if: ${{ failure() }}
         uses: actions/github-script@v4
         with:
+          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             github.issues.createComment({
               issue_number: ${{github.event.inputs.pr}},
