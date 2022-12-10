@@ -25,11 +25,16 @@ jobs:
           BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d")"
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
           echo ${{env.BRANCH_NAME}}
+
       - name: Upgrade Expo
         run: |
           cd example
           npx expo upgrade --non-interactive
         continue-on-error: true
+      - name: Config git
+        run: |
+          git config --local user.email "104670806+rneui@users.noreply.github.com"
+          git config --local user.name "RNEUI"
       - name: Checkout
         continue-on-error: true
         run: |
