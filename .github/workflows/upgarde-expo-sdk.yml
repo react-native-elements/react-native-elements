@@ -18,7 +18,7 @@ jobs:
 
       - name: Set env
         run: |
-          BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d")"
+          BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d%H%M%S")"
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
       - name: Upgrade Expo
@@ -37,7 +37,7 @@ jobs:
           git add .
           git commit -m "Upgrade Expo SDK"
           git checkout -b ${{ env.BRANCH_NAME }}
-          git push --set-upstream origin ${{ env.BRANCH_NAME }}
+          git push --set-upstream origin ${{ env.BRANCH_NAME }} --force
 
       - name: Create Pull Request
         continue-on-error: true
