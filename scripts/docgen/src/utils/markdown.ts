@@ -127,7 +127,8 @@ export class Markdown implements ComponentDoc {
       imports,
       parentComponent,
       installation: installation,
-      showUsage: Boolean(usage) || usageFileExists,
+      showUsage:
+        !!this.metadata?.usage.length || Boolean(usage) || usageFileExists,
       usageFileExists,
       playgroundExists,
       usage: this.makeUsages() || dedent(snippetToCode(usage).trim()),
