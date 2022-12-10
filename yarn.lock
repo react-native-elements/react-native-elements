@@ -3842,6 +3842,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rneui/doc-gen@file:./scripts/docgen/lib::locator=rneui%40workspace%3A.":
+  version: 1.0.0
+  resolution: "@rneui/doc-gen@file:./scripts/docgen/lib#./scripts/docgen/lib::hash=28a0f9&locator=rneui%40workspace%3A."
+  checksum: f2144111b668054e898c95a5fbe65ec1051bd987e3eafaab59e6625ba892bbfe1797f58a571ac3a8ef05a6ac3ee2c06f2903b5eea285871f1a322e4c69b8ee5a
+  languageName: node
+  linkType: hard
+
 "@rneui/layout@npm:^0.0.0-alpha.4":
   version: 0.0.0-alpha.4
   resolution: "@rneui/layout@npm:0.0.0-alpha.4"
@@ -17218,6 +17225,7 @@ __metadata:
   resolution: "rneui@workspace:."
   dependencies:
     "@react-native-community/eslint-config": ^2.0.0
+    "@rneui/doc-gen": ./scripts/docgen/lib
     "@testing-library/jest-dom": ^5.11.10
     "@testing-library/react": ^11.2.6
     "@testing-library/react-native": ^7.0.2
