@@ -23,6 +23,8 @@
   --ifm-tabs-padding-horizontal: 0.8rem;
 
   --doc-sidebar-width: 260px !important;
+
+  --navbar-background-color: rgba(255, 255, 255, 0.615);
 }
 
 :root[data-theme='dark'] {
@@ -34,6 +36,7 @@
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
   --ifm-hero-background-color: #27292b;
+  --navbar-background-color: rgba(0, 0, 0, 0.615);
 }
 
 .table-responsive {
@@ -408,13 +411,12 @@ sidebar
 */
 
 .navbar {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.615);
+  background: var(--navbar-background-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .navbar__logo {
   max-width: 200px;
 }
@@ -458,6 +460,15 @@ nav.menu {
 .menu__list-item svg,
 .navbar__link svg {
   display: none;
+}
+
+.dropdown > .navbar__link:after {
+  border: none !important;
+  top: 14px;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' viewBox='0 0 24 24' class='text-icon' data-v-fe4c30c3=''%3E%3Cpath d='M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z'%3E%3C/path%3E%3C/svg%3E");
+  color: #e3e3e3;
 }
 
 /*

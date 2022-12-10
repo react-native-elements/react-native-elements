@@ -86,7 +86,7 @@ const config = {
       items: [
         {
           type: 'docsVersionDropdown',
-          position: 'left',
+          position: 'right',
           dropdownItemsAfter: [{ to: 'versions', label: 'All versions' }],
           // Do not add the link active class when browsing docs.
           dropdownActiveClassDisabled: true,
@@ -95,7 +95,7 @@ const config = {
         // { to: 'docs/', label: 'Docs', position: 'right' },
         // { to: 'help', label: 'Help', position: 'right' },
         // { to: 'blog', label: 'Blog', position: 'right' },
-        { type: 'search', position: 'right' },
+        { type: 'search', position: 'left' },
         {
           href: 'https://github.com/sponsors/react-native-elements',
           // label: 'Sponsor',
