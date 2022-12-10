@@ -43,7 +43,6 @@ jobs:
         continue-on-error: true
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             const { repo, owner } = context.repo;
             const result = await github.rest.pulls.create({
