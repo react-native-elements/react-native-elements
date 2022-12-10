@@ -3859,6 +3859,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rneui/usage-gen@file:./scripts/usage-gen::locator=rneui%40workspace%3A.":
+  version: 1.0.0
+  resolution: "@rneui/usage-gen@file:./scripts/usage-gen#./scripts/usage-gen::hash=767105&locator=rneui%40workspace%3A."
+  checksum: 136202767478b05756035fd02279f4bc8cab21316a699b5bc8a37aa50e15e840748acbc92bbb61e7ffbcb1400ccb31998addd99376f197c957646f27ee3f4f85
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.3":
   version: 4.1.4
   resolution: "@sideway/address@npm:4.1.4"
@@ -17218,6 +17225,7 @@ __metadata:
   resolution: "rneui@workspace:."
   dependencies:
     "@react-native-community/eslint-config": ^2.0.0
+    "@rneui/usage-gen": ./scripts/usage-gen
     "@testing-library/jest-dom": ^5.11.10
     "@testing-library/react": ^11.2.6
     "@testing-library/react-native": ^7.0.2

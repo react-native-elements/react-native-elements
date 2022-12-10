@@ -99,5 +99,8 @@
       "themed": "@rneui/themed",
       "website/docs": "Docs"
     }
+  },
+  "dependencies": {
+    "@rneui/usage-gen": "./scripts/usage-gen"
   }
 }
