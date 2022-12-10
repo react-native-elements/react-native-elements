@@ -20,8 +20,7 @@ jobs:
       - name: Upgrade Expo
         run: |
           cd example
-          yarn add expo@latest
-          yarn dlx expo upgrade
+          yarn dlx expo-cli upgrade
 
       - name: Install dependencies
         uses: ./.github/actions/install
