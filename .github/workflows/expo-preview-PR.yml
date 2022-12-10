@@ -7,10 +7,6 @@ on:
         type: string
         description: PR Number
         required: true
-  pull_request_target:
-    types: [review_requested]
-    paths:
-      - "example/**"
 
 jobs:
   publish:
@@ -20,13 +16,27 @@ jobs:
         working-directory: example
     runs-on: ubuntu-latest
     steps:
-      - name: 🏗 Setup repo
-        uses: actions/checkout@v2
+      - name: Get PR SHA
+        id: sha
+        uses: actions/github-script@v4
+        with:
+          result-encoding: string
+          script: |
+            const { owner, repo,  } = context.issue;
+            const pr = await github.pulls.get({
+              owner,
+              repo,
+              pull_number: ${{github.event.inputs.pr}},
+            });
+            return pr.data.head.sha
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.sha.outputs.result }}
 
       - name: 🏗 Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: latest
 
       - name: 🏗 Setup Expo
         uses: expo/expo-github-action@v7
@@ -36,13 +46,13 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/install
       - name: 🚀 Publish preview
-        run: expo publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: expo publish --release-channel=pr-${{ github.event.inputs.pr }} --non-interactive
       - name: Find Comment
         uses: peter-evans/find-comment@v1
         id: fc
         with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: "react-native-elements[bot]"
+          issue-number: ${{ github.event.inputs.pr }}
+          comment-author: "rneui"
           body-includes: Preview published
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v1

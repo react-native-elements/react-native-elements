@@ -16,30 +16,33 @@ jobs:
       - name: 🏗 Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: latest
           cache: yarn
+
       - name: Install dependencies
         uses: ./.github/actions/install
+
       - name: Set env
         run: |
           BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d")"
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
+
       - name: Upgrade Expo
+        working-directory: example
         run: |
-          cd example
           npm --global install expo-cli@latest
           npx expo upgrade --non-interactive
-        continue-on-error: true
+
       - name: Config git
         run: |
           git config --local user.email "104670806+rneui@users.noreply.github.com"
           git config --local user.name "RNEUI"
+
       - name: Checkout
-        continue-on-error: true
         run: |
-          git checkout -b ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "Upgrade Expo SDK"
+          git checkout -b ${{ env.BRANCH_NAME }}
           git push --set-upstream origin ${{ env.BRANCH_NAME }}
 
       - name: Create Pull Request
