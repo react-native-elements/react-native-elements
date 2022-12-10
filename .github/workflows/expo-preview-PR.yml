@@ -33,18 +33,15 @@ jobs:
         with:
           ref: ${{ steps.sha.outputs.result }}
 
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: latest
+      - name: Install dependencies
+        uses: ./.github/actions/install
 
       - name: 🏗 Setup Expo
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
-      - name: Install dependencies
-        uses: ./.github/actions/install
+
       - name: 🚀 Publish preview
         run: expo publish --release-channel=pr-${{ github.event.inputs.pr }} --non-interactive
       - name: Find Comment

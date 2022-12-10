@@ -13,12 +13,6 @@ jobs:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
 
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: latest
-          cache: yarn
-
       - name: Install dependencies
         uses: ./.github/actions/install
 
