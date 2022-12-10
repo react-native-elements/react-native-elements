@@ -1,4 +1,4 @@
-name: Build PR and deploy Bleeding Edge version
+name: (manual) PR's Bleeding Edge Version
 
 on:
   workflow_dispatch:
@@ -28,10 +28,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ steps.sha.outputs.result }}
-      - name: Git checkout
-        uses: actions/checkout@v2
+
       - name: Install dependencies
         uses: ./.github/actions/install
+
       - name: Build packages
         run: yarn build
       - name: Config git
@@ -55,6 +55,7 @@ jobs:
         if: ${{ success() }}
         uses: actions/github-script@v4
         with:
+          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             github.issues.createComment({
               issue_number: ${{github.event.inputs.pr}},
@@ -66,6 +67,7 @@ jobs:
         if: ${{ failure() }}
         uses: actions/github-script@v4
         with:
+          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             github.issues.createComment({
               issue_number: ${{github.event.inputs.pr}},
