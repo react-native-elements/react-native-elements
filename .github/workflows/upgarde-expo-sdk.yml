@@ -24,8 +24,6 @@ jobs:
         run: |
           BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d")"
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
-          echo ${{env.BRANCH_NAME}}
-
       - name: Upgrade Expo
         run: |
           cd example
@@ -38,9 +36,6 @@ jobs:
       - name: Checkout
         continue-on-error: true
         run: |
-          echo ${{ env.BRANCH_NAME }}
-          echo ${{ env.BRANCH_NAME }}
-          echo "a" >> README.logs
           git checkout -b ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "Upgrade Expo SDK"
