@@ -1,4 +1,5 @@
 name: Bleeding Edge version
+
 on:
   push:
     branches:
@@ -10,7 +11,7 @@ on:
       - ".github/**"
 jobs:
   checks:
-    uses: ./.github/workflows/test.yml
+    uses: ./.github/workflows/ci-checks.yml
   build:
     needs: checks
     runs-on: ubuntu-latest

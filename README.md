@@ -35,7 +35,7 @@ Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 
 <div align="center">
 
-<a href="https://reactnativeelements.com">Getting Started 🚀</a> - <a href="https://reactnativeelements.com/docs">Documentation 📚</a> - <a href="https://expo.dev/@rne_org/react-native-elements">Expo demo </a> - <a href="https://reactnativeelements.com/blog">Blog</a> - <a href="https://github.com/react-native-elements/react-native-elements/releases">Releases</a>
+<a href="https://reactnativeelements.com">Getting Started 🚀</a> - <a href="https://reactnativeelements.com/docs">Documentation 📚</a> - <a href="https://expo.dev/@rneui/react-native-elements">Expo demo </a> - <a href="https://reactnativeelements.com/blog">Blog</a> - <a href="https://github.com/react-native-elements/react-native-elements/releases">Releases</a>
 
 </div>
 
@@ -80,7 +80,7 @@ Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) f
 ## Expo demo app
 
 Checkout the official
-[React Native Elements App](https://expo.dev/@rne_org/react-native-elements)
+[React Native Elements App](https://expo.dev/@rneui/react-native-elements)
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App,
