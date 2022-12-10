@@ -16,17 +16,20 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
+      - name: Install dependencies
+        uses: ./.github/actions/install
 
       - name: Upgrade Expo
         run: |
           cd example
-          yarn add expo-cli -g
-          expo upgrade
+          npx expo upgrade
         continue-on-error: true
-      - run: echo "a" >> README.logs
-
-      - name: Install dependencies
-        uses: ./.github/actions/install
+      - run: |
+          echo "a" >> README.logs
+          git checkout -b upgrade-expo-sdk
+          git add .
+          git commit -m "Upgrade Expo SDK"
+          git push --set-upstream origin upgrade-expo-sdk
 
       - name: Create Pull Request
         uses: actions/github-script@v6
