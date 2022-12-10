@@ -1,4 +1,4 @@
-name: Bleeding Edge version
+name: Build and deploy Bleeding Edge version
 on:
   push:
     branches:

@@ -1,6 +1,12 @@
 name: Expo Preview PR CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        type: string
+        description: PR Number
+        required: true
   pull_request_target:
     types: [review_requested]
     paths:

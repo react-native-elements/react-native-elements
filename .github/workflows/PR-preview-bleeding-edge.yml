@@ -1,10 +1,6 @@
-name: PR Deploy on comment
+name: Build PR and deploy Bleeding Edge version
+
 on:
-  # pull_request_review_comment:
-  #   types:
-  #     - "created"
-  # issue_comment:
-  #   types: [created]
   workflow_dispatch:
     inputs:
       pr:
@@ -14,8 +10,6 @@ on:
 
 jobs:
   preview:
-    # if: ${{ github.event.inputs.pr }}
-    #  || github.event.issue.pull_request && github.event.comment.body == '/build' && github.actor== 'arpitBhalla'}}
     runs-on: ubuntu-latest
     steps:
       - name: Get PR SHA

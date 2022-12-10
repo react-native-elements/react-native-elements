@@ -1,4 +1,4 @@
-name: Expo Default Channel Preview CI
+name: Build and deploy example app on Expo Default Channel
 
 on: workflow_dispatch
 
