@@ -79,6 +79,7 @@
     ],
     "collectCoverageFrom": [
       "src/**/*.tsx",
+      "!src/**/*.usage.tsx",
       "!src/index.tsx",
       "!src/helpers/*.tsx"
     ],

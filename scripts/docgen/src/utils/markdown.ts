@@ -1,11 +1,10 @@
-/* eslint-disable no-console */
 import {
   // tabify,
   codify,
   snippetToCode,
   removeNewline,
   filterPropType,
-} from './utils';
+} from './common';
 import { MUST_INCLUDE_PROP_TYPES } from './parentProps';
 import { ComponentDoc, Props } from 'react-docgen-typescript';
 import orderBy from 'lodash/orderBy';
@@ -26,6 +25,15 @@ type PropRowT = {
   type?: string;
 };
 
+export type UsageT = {
+  desc: string;
+  usage: {
+    title: string;
+    desc: string;
+    code: string;
+  }[];
+};
+
 type TemplateOptionsT = {
   id: string;
   title: string;
@@ -43,11 +51,11 @@ type TemplateOptionsT = {
   includeProps?: string;
 };
 
-const pkgPath = path.join(__dirname, '../../packages');
-const docsPath = path.join(__dirname, '../../website/docs');
+const pkgPath = path.join(__dirname, '../../../../packages');
+const docsPath = path.join(__dirname, '../../../../website/docs');
 
 const template = Handlebars.compile(
-  String(fs.readFileSync(path.join(__dirname, 'mdx-template.hbs')))
+  String(fs.readFileSync(path.join(__dirname, '../templates/mdx-template.hbs')))
 );
 
 export class Markdown implements ComponentDoc {
@@ -57,8 +65,10 @@ export class Markdown implements ComponentDoc {
   props: Props;
   tags?: StringIndexedObject<string>;
   methods: Method[];
+  metadata: UsageT;
   static packageName: string;
   static parents: Record<string, string[]>;
+  static usages: Record<string, UsageT>;
 
   constructor(component: ComponentDoc) {
     this.displayName = component.displayName;
@@ -67,6 +77,7 @@ export class Markdown implements ComponentDoc {
     this.props = component.props;
     this.methods = component.methods;
     this.tags = component.tags;
+    this.metadata = Markdown.usages[this.displayName];
   }
 
   save() {
@@ -83,7 +94,7 @@ export class Markdown implements ComponentDoc {
       console.log();
       console.log(`@rneui/${pkg}`);
     }
-    const isUniverse = !this.filePath.startsWith(pkgPath + '/base');
+    const isUniverse = 0 && !this.filePath.startsWith(pkgPath + '/base');
     const mdFilePath = path.join(
       docsPath,
       isUniverse ? 'universe' : 'components',
@@ -112,18 +123,29 @@ export class Markdown implements ComponentDoc {
     return {
       id,
       title: this.displayName,
-      description: dedent(snippetToCode(this.description)),
+      description: this.metadata?.desc.trim() || this.description,
       imports,
       parentComponent,
       installation: installation,
-      showUsage: Boolean(usage) || usageFileExists,
+      showUsage:
+        !!this.metadata?.usage.length || Boolean(usage) || usageFileExists,
       usageFileExists,
       playgroundExists,
-      usage: dedent(snippetToCode(usage).trim()),
+      usage: this.makeUsages() || dedent(snippetToCode(usage).trim()),
       showProps: true,
       themeKey,
       ...this.propTable(),
     };
+  }
+
+  private makeUsages() {
+    return (
+      this.metadata?.usage
+        .map(({ title, desc, code }) => {
+          return `### ${title} \n ${desc} \n \`\`\`tsx live \n ${code} \n\`\`\`\n `;
+        })
+        .join('\n') || ''
+    );
   }
 
   private propTable() {

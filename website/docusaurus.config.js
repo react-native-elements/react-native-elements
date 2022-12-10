@@ -60,35 +60,6 @@ const config = {
   ],
   themeConfig: {
     image: '/img/website/seo.png',
-    metadata: [
-      // {
-      //   name: 'description',
-      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      // },
-      // { name: 'og:type', content: 'website' },
-      // { name: 'og:url', content: 'https://reactnativeelements.com' },
-      // { name: 'og:title', content: 'React Native Elements' },
-      // {
-      //   name: 'og:description',
-      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      // },
-      // {
-      //   name: 'og:image',
-      //   content: 'https://reactnativeelements.com/img/website/seo.png',
-      // },
-      // { name: 'twitter:card', content: 'summary_large_image' },
-      // { name: 'twitter:url', content: 'https://reactnativeelements.com' },
-      // { name: 'twitter:title', content: 'React Native Elements' },
-      // {
-      //   name: 'twitter:description',
-      //   content: 'Cross-Platform React Native UI Toolkit | backed by community',
-      // },
-      // {
-      //   name: 'twitter:image',
-      //   content: 'https://reactnativeelements.com/img/website/seo.png',
-      // },
-    ],
-
     liveCodeBlock: {
       playgroundPosition: 'top',
     },
@@ -111,11 +82,11 @@ const config = {
         alt: 'React Native Elements Logo',
         src: '/img/website/logo.png',
       },
-      hideOnScroll: true,
+      // hideOnScroll: true,
       items: [
         {
           type: 'docsVersionDropdown',
-          position: 'left',
+          position: 'right',
           dropdownItemsAfter: [{ to: 'versions', label: 'All versions' }],
           // Do not add the link active class when browsing docs.
           dropdownActiveClassDisabled: true,
@@ -124,7 +95,7 @@ const config = {
         // { to: 'docs/', label: 'Docs', position: 'right' },
         // { to: 'help', label: 'Help', position: 'right' },
         // { to: 'blog', label: 'Blog', position: 'right' },
-        { type: 'search', position: 'right' },
+        { type: 'search', position: 'left' },
         {
           href: 'https://github.com/sponsors/react-native-elements',
           // label: 'Sponsor',
@@ -138,6 +109,13 @@ const config = {
           position: 'right',
           className: 'header-twitter-link',
           'aria-label': 'Twitter',
+        },
+        {
+          href: 'https://discord.gg/e9RBHjkKHa',
+          // label: 'Discord',
+          position: 'right',
+          className: 'header-discord-link',
+          'aria-label': 'Discord server',
         },
         {
           href: 'https://github.com/react-native-elements/react-native-elements',

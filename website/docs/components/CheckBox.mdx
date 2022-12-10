@@ -13,8 +13,7 @@ import Play from "@site/playground/CheckBox/checkbox.playground";
 
 <IconsStyle />
 
-CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off.
-It provides a clear visual of either a true or false choice.
+CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off. It provides a clear visual of either a true or false choice.
 
 ## Usage
 
@@ -37,6 +36,36 @@ It provides a clear visual of either a true or false choice.
     <CodeBlock>{`CheckBox`}</CodeBlock>
   </div>
 </div>
+
+### Controlled CheckBox
+
+```tsx live
+function RNECheckBox() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Stack row align="center">
+      <CheckBox checked={open} onPress={() => setOpen(!open)} />
+    </Stack>
+  );
+}
+```
+
+### More examples
+
+```tsx live
+<Stack row align="center">
+  <CheckBox checked />
+  <CheckBox checked checkedIcon="dot-circle-o" uncheckedIcon="circle-o" />
+  <CheckBox
+    center
+    checked
+    iconType="material"
+    checkedIcon="clear"
+    uncheckedIcon="add"
+    checkedColor="red"
+  />
+</Stack>
+```
 
 <Usage />
 
