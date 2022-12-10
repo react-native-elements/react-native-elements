@@ -23,13 +23,15 @@ jobs:
       - name: Set env
         run: |
           BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d")"
-          echo "BRANCH_NAME=$($BRANCH_NAME)" >> $GITHUB_ENV
+          echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
+          echo ${{env.BRANCH_NAME}}
       - name: Upgrade Expo
         run: |
           cd example
           npx expo upgrade --non-interactive
         continue-on-error: true
       - name: Checkout
+        continue-on-error: true
         run: |
           echo ${{ env.BRANCH_NAME }}
           echo ${{ env.BRANCH_NAME }}
@@ -40,6 +42,7 @@ jobs:
           git push --set-upstream origin ${{ env.BRANCH_NAME }}
 
       - name: Create Pull Request
+        continue-on-error: true
         uses: actions/github-script@v6
         with:
           script: |
