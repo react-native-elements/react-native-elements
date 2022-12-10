@@ -1,7 +1,12 @@
-name: (manual PR) Upgrade expo SDK
+name: (manual PR) Bump release version
 
 on:
   workflow_dispatch:
+    name:
+      version:
+        type: string
+        description: Release name
+        required: true
 
 jobs:
   publish:
@@ -17,14 +22,22 @@ jobs:
 
       - name: Set env
         run: |
-          BRANCH_NAME="upgrade-expo-sdk-$(date "+%Y%m%d%H%M%S")"
+          BRANCH_NAME="bump-docs-$(date "+%Y%m%d%H%M%S")"
           echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
-      - name: Upgrade Expo
-        working-directory: example
+      - name: Bump docs version
+        working-directory: website
         run: |
-          npm --global install expo-cli@latest
-          npx expo upgrade --non-interactive
+          yarn version ${{github.event.inputs.name}}
+
+      - name: Bump base version
+        working-directory: packages/base
+        run: |
+          npm version v${{github.event.inputs.name}}
+      - name: Bump themed version
+        working-directory: packages/themed
+        run: |
+          npm version v${{github.event.inputs.name}}
 
       - name: Config git
         run: |
@@ -34,7 +47,7 @@ jobs:
       - name: Checkout
         run: |
           git add .
-          git commit -m "Upgrade Expo SDK"
+          git commit -m "Bump v${{github.event.inputs.pr}}"
           git checkout -b ${{ env.BRANCH_NAME }}
           git push --set-upstream origin ${{ env.BRANCH_NAME }} --force
 
@@ -45,7 +58,7 @@ jobs:
           script: |
             const { repo, owner } = context.repo;
             const result = await github.rest.pulls.create({
-              title: 'example: upgrade expo SDK to latest',
+              title: 'chore: bump v${{github.event.inputs.pr}}',
               owner,
               repo,
               head: '${{ env.BRANCH_NAME }}',
