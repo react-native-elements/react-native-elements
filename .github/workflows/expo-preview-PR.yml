@@ -1,4 +1,4 @@
-name: (manual) Expo preview Channel
+name: (manual) PR's Expo preview Channel
 
 on:
   workflow_dispatch:
