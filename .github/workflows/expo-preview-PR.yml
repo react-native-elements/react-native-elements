@@ -1,4 +1,4 @@
-name: (manual) Build and deploy example app on Expo preview Channel
+name: (manual) Expo preview Channel
 
 on:
   workflow_dispatch:
