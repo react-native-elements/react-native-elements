@@ -31,11 +31,13 @@ jobs:
         continue-on-error: true
       - name: Checkout
         run: |
+          echo ${{ env.BRANCH_NAME }}
+          echo ${{ env.BRANCH_NAME }}
           echo "a" >> README.logs
-          git checkout -b $BRANCH_NAME
+          git checkout -b ${{ env.BRANCH_NAME }}
           git add .
           git commit -m "Upgrade Expo SDK"
-          git push --set-upstream origin $BRANCH_NAME
+          git push --set-upstream origin ${{ env.BRANCH_NAME }}
 
       - name: Create Pull Request
         uses: actions/github-script@v6
