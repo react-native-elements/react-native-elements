@@ -1,4 +1,4 @@
-name: Upgrade expo SDK
+name: (manual) Upgrade expo SDK
 
 on: workflow_dispatch
 

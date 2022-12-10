@@ -1,4 +1,4 @@
-name: Build PR and deploy Bleeding Edge version
+name: (manual) Build and publish PR's Bleeding Edge Version
 
 on:
   workflow_dispatch:

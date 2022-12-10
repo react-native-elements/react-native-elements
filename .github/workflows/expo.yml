@@ -1,4 +1,4 @@
-name: Build and deploy example app on Expo Default Channel
+name: (manual) Build and deploy example app on Expo Default Channel
 
 on: workflow_dispatch
 
