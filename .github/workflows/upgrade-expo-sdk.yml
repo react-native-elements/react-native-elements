@@ -59,5 +59,5 @@ jobs:
               owner,
               repo,
               issue_number: result.data.number,
-              labels: ['feature', 'automated pr']
+              labels: ['feature', 'automated pr', 'need-review']
             });
