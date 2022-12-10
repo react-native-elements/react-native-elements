@@ -26,7 +26,7 @@ const Home: React.FunctionComponent<{}> = () => {
       <Sponsor />
       {/* <OpenCollective /> */}
       <Community />
-      <StartNow />
+      {/* <StartNow /> */}
     </Layout>
   );
 };

@@ -49,7 +49,7 @@ const features: FeatureTypes[] = [
 
 const Home: React.FunctionComponent<{}> = () => {
   return (
-    <section className="margin-vert--sm" id="why">
+    <section className="" id="why">
       <div className="container text--center">
         <h1 className="hero__title gradient clip-text">
           Why React Native Elements?

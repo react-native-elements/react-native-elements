@@ -2,7 +2,7 @@ name: (manual PR) Bump release version
 
 on:
   workflow_dispatch:
-    name:
+    inputs:
       version:
         type: string
         description: Release name
