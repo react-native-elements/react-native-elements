@@ -27,6 +27,7 @@ jobs:
       - name: Upgrade Expo
         run: |
           cd example
+          yarn add ecpo-cli
           npx expo upgrade --non-interactive
         continue-on-error: true
       - name: Config git
