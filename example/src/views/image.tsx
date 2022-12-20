@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
 import { Image } from '@rneui/themed';
-import AppLoading from 'expo-app-loading';
+
 import { Header } from '../components/header';
 
 const BASE_URI = 'https://source.unsplash.com/random?sig=';
@@ -20,7 +20,6 @@ const ImageAPI = () => {
             <Image
               source={{ uri: BASE_URI + item }}
               containerStyle={styles.item}
-              PlaceholderContent={<AppLoading />}
             />
           )}
         />

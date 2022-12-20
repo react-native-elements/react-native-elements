@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@rneui/themed';
 import RootNavigator from './src/navigation/RootNavigator';
-import AppLoading from './src/components/AppLoading';
 import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
 import vectorFonts from './src/helpers/vector-fonts';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
 
 export default () => {
   const [isReady, setIsReady] = useState(false);
+
+  React.useEffect(() => {
+    loadAssetsAsync();
+  }, []);
 
   const loadAssetsAsync = async () => {
     const imageAssets = cacheImages([
@@ -32,24 +38,21 @@ export default () => {
       { UbuntuLightItalic: require('./assets/fonts/Ubuntu-Light-Italic.ttf') },
     ]);
     await Promise.all([...imageAssets, ...fontAssets]);
+    setIsReady(true);
   };
 
+  const onLayoutRootView = React.useCallback(async () => {
+    if (isReady) {
+      await SplashScreen.hideAsync();
+    }
+  }, [isReady]);
+
   if (!isReady) {
-    return (
-      <SafeAreaProvider>
-        <AppLoading
-          startAsync={loadAssetsAsync}
-          onFinish={() => {
-            setIsReady(true);
-          }}
-          onError={console.warn}
-        />
-      </SafeAreaProvider>
-    );
+    return null;
   }
 
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider onLayout={onLayoutRootView}>
       <ThemeProvider theme={theme}>
         <RootNavigator />
       </ThemeProvider>
