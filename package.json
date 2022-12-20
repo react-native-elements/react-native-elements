@@ -5,7 +5,8 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "example"
+      "example",
+      "scripts/docgen/lib"
     ]
   },
   "scripts": {
@@ -24,7 +25,6 @@
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "@rneui/doc-gen": "./scripts/docgen/lib",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-native": "^7.0.2",
@@ -45,6 +45,7 @@
     "lerna": "^4.0.0",
     "lint-staged": "^12.4.1",
     "lodash.orderby": "^4.6.0",
+    "ora": "5.4.1",
     "prettier": "^2.6.2",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.2.2",

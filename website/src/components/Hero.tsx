@@ -59,7 +59,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 <div className="ball" style={{ left: 20, top: '70%' }}>
                   <MdInvertColors />
                 </div>
-                <div className="ball" style={{ right: '40%', bottom: 10 }}>
+                <div className="ball" style={{ right: '40%', bottom: 90 }}>
                   <MdAndroid />
                 </div>
                 <div className="ball" style={{ left: '40%', top: 180 }}>
