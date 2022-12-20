@@ -1,0 +1,57 @@
+---
+id: card
+title: Card
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/Card.mdx";
+import Play from "@site/playground/Card/card.playground";
+
+<IconsStyle />
+
+Cards are a great way to display information, usually containing content and actions about a single subject.
+Cards can contain images, buttons, text and more.
+Cards are mainly used for informative purpose.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Card } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Card`}</CodeBlock>
+  </div>
+</div>
+
+<Usage />
+
+## Props
+
+<div class='table-responsive'>
+
+| Name             | Type       | Default | Description            |
+| ---------------- | ---------- | ------- | ---------------------- |
+| `containerStyle` | View Style |         | Outer container style. |
+| `wrapperStyle`   | View Style |         | Inner container style. |
+
+</div>
+
+## Playground
+
+<Play />

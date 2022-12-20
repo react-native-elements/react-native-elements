@@ -20,9 +20,14 @@ export interface SwitchProps extends NativeSwitchProps {
  *
  *
  *```tsx live
- *  <Stack row align="center" spacing={4}>
- *     <Switch/>
- *  </Stack>
+ function RNESwitch() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <Stack row align="center">
+      <Switch value={open} onValueChange={setOpen} />
+    </Stack>
+  );
+}
  * ```
  *
  */

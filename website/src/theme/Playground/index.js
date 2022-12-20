@@ -15,7 +15,7 @@ import { usePrismTheme } from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { MdCode } from 'react-icons/md';
-import { SiExpo } from 'react-icons/si';
+// import { SiExpo } from 'react-icons/si';
 //  import type {Props} from '@theme/Playground';
 //  import type {ThemeConfig} from '@docusaurus/theme-live-codeblock';
 
@@ -32,13 +32,13 @@ function ResultWithHeader({ setOpen }) {
   return (
     <>
       {/* <Header>
-        <Translate
-          id="theme.Playground.result"
-          description="The result label of the live codeblocks"
-        >
-          Result
-        </Translate>
-      </Header> */}
+         <Translate
+           id="theme.Playground.result"
+           description="The result label of the live codeblocks"
+         >
+           Result
+         </Translate>
+       </Header> */}
       {/* https://github.com/facebook/docusaurus/issues/5747 */}
       <div className={styles.playgroundPreview}>
         <BrowserOnly fallback={<LivePreviewLoader />}>
@@ -84,8 +84,11 @@ function EditorWithHeader({ show_code, openInSnack }) {
             <>
               <LivePreview />
               <LiveError />
-              <div className={clsx(styles.toggleIcon)}>
-                <MdCode onClick={handleToggle} />{' '}
+              <div className={clsx(styles.toggleIcon)} onClick={handleToggle}>
+                <MdCode />
+                <span className={styles.showCode}>
+                  {open ? 'Hide' : 'Show'} Code
+                </span>
                 {/* <SiExpo size={12} onClick={openInSnack} /> */}
               </div>
             </>

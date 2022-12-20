@@ -116,11 +116,20 @@
     display: none;
   }
   .rne-hero-logo {
-    display: none;
+    /* display: none; */
+    width: 50%;
+  }
+  .hero .row {
+    flex-direction: column;
+    text-align: center;
   }
   .ball {
     display: none;
   }
+}
+
+.hero img.rne-hero-logo {
+  box-shadow: 0px 0px 40px var(--ifm-color-primary);
 }
 
 /* background-color: #ffffff;

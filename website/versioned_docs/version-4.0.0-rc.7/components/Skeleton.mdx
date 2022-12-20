@@ -1,0 +1,83 @@
+---
+id: skeleton
+title: Skeleton
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+
+<IconsStyle />
+
+A placeholder preview for content before the data gets loaded, an alternative for spinners.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Skeleton } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Skeleton`}</CodeBlock>
+  </div>
+</div>
+
+### Variants
+
+The component supports 2 shape variants, i.e. `circle`, `rectangle`.
+
+```tsx live
+<Stack row align="center" spacing={4}>
+  <Skeleton width={120} height={40} />
+  <Skeleton circle width={40} height={40} />
+</Stack>
+```
+
+### Animations
+
+By default, the skeleton pulsates, but you can change the animation to a wave or disable it entirely.
+
+```tsx live
+<Stack row align="center" spacing={4}>
+  <Skeleton animation="pulse" width={80} height={40} />
+  <Skeleton
+    LinearGradientComponent={LinearGradient}
+    animation="wave"
+    width={80}
+    height={40}
+  />
+  <Skeleton animation="none" width={80} height={40} />
+</Stack>
+```
+
+## Props
+
+:::note
+Includes all [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                      | Type                        | Default | Description                        |
+| ------------------------- | --------------------------- | ------- | ---------------------------------- |
+| `LinearGradientComponent` | React Component             |         | Custom Linear Gradient Component   |
+| `animation`               | `none` \| `pulse` \| `wave` | `pulse` | Type of animation                  |
+| `circle`                  | boolean                     |         | show circular variant              |
+| `height`                  | number                      | `12`    | Height of Skeleton View            |
+| `skeletonStyle`           | View Style                  |         | Custom style for skeleton gradient |
+| `width`                   | number                      | `100%`  | Width of Skeleton View             |
+
+</div>

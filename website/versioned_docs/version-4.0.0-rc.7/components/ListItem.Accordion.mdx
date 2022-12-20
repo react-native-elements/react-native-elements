@@ -1,0 +1,60 @@
+---
+id: listitem_accordion
+title: ListItem.Accordion
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/ListItem.Accordion.mdx";
+
+<IconsStyle />
+
+This allows making a accordion list which can show/hide content.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { ListItem } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`ListItemAccordion`}</CodeBlock>
+  </div>
+</div>
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [ListItem](listitem#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name         | Type                           | Default                                                    | Description                                                                     |
+| ------------ | ------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `animation`  | Animated.TimingAnimationConfig | `Object with duration 350ms and type timing`               | Decide whether to show animation.                                               |
+| `content`    | ReactNode                      |                                                            | Similar to ListItem's child.                                                    |
+| `expandIcon` | IconNode                       |                                                            | Icon when Accordion is expanded, if not provided `icon` will be rotated 180deg. |
+| `icon`       | IconNode                       | `<Icon name={'chevron-down'} type="material-community" />` | Icon for unexpanded Accordion.                                                  |
+| `isExpanded` | boolean                        | `false`                                                    | Decide if Accordion is Expanded.                                                |
+| `leftRotate` | boolean                        | `false`                                                    | Rotate Icon left side                                                           |
+| `noIcon`     | boolean                        |                                                            | Don't show accordion icon.                                                      |
+| `noRotation` | boolean                        |                                                            | Don't rotate when Accordion is expanded.                                        |
+
+</div>

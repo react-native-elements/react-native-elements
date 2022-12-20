@@ -1,10 +1,6 @@
-name: PR Deploy on comment
+name: (manual) PR's Bleeding Edge Version
+
 on:
-  # pull_request_review_comment:
-  #   types:
-  #     - "created"
-  # issue_comment:
-  #   types: [created]
   workflow_dispatch:
     inputs:
       pr:
@@ -14,8 +10,6 @@ on:
 
 jobs:
   preview:
-    # if: ${{ github.event.inputs.pr }}
-    #  || github.event.issue.pull_request && github.event.comment.body == '/build' && github.actor== 'arpitBhalla'}}
     runs-on: ubuntu-latest
     steps:
       - name: Get PR SHA
@@ -34,10 +28,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ steps.sha.outputs.result }}
-      - name: Git checkout
-        uses: actions/checkout@v2
+
       - name: Install dependencies
         uses: ./.github/actions/install
+
       - name: Build packages
         run: yarn build
       - name: Config git
@@ -61,6 +55,7 @@ jobs:
         if: ${{ success() }}
         uses: actions/github-script@v4
         with:
+          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             github.issues.createComment({
               issue_number: ${{github.event.inputs.pr}},
@@ -72,6 +67,7 @@ jobs:
         if: ${{ failure() }}
         uses: actions/github-script@v4
         with:
+          github-token: ${{ secrets.RNE_BOT_TOKEN }}
           script: |
             github.issues.createComment({
               issue_number: ${{github.event.inputs.pr}},

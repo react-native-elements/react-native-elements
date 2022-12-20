@@ -81,7 +81,7 @@ export interface ButtonProps
   /** Displays Icon to the right of title. Needs to be used along with `icon` prop. */
   iconRight?: boolean;
 
-  /** Displays a linear gradient. See [usage](#lineargradient-usage). */
+  /** Displays a linear gradient. See [usage](#linear-gradient). */
   linearGradientProps?: object;
 
   /** Component for user interaction. */
@@ -123,53 +123,6 @@ export interface ButtonProps
   color?: StringOmit<'primary' | 'secondary' | 'success' | 'error' | 'warning'>;
 }
 
-/**
- * Buttons are touchable elements used to interact with the screen and to perform and operation.
- * They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
- * Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
- *
- * %jsx <Button title="Solid Button" />
- *
- * @usage
- *
- * ### Variants
- * ```tsx live
- *  <Stack row align="center" spacing={4}>
- * <Button title="Solid" />
- * <Button title="Outline" type="outline" />
- * <Button title="Clear" type="clear" />
- * </Stack>
- * ```
- * ### Size
- *
- * ```tsx live
- *  <Stack row align="center" spacing={4}>
- *            <Button size="sm">Small</Button>
- *            <Button size="md">Medium</Button>
- *             <Button size="lg">Large</Button>
- *  </Stack>
- * ```
- * ### Colors
- *
- * ```tsx live
- *  <Stack row align="center" spacing={4}>
- *        <Button>Primary</Button>
- *        <Button color="secondary">Secondary</Button>
- *        <Button color="warning">Warning</Button>
-          <Button color="error">Error</Button>
- *  </Stack>
- * ```
- * ### Button with icon
- * ```tsx live
- *  <Button type="solid" ><Icon name='home' color='white'/>Icon</Button>
- * ```
- * ### Button with right icon
- * ```tsx live
- *  <Button type="solid" >Icon<Icon name='home' color='white'/></Button>
- * ```
- * ### Button with loading spinner
- * %live <Button title="Solid" type="solid" loading />
- */
 export const Button: RneFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,

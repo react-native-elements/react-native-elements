@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "React Native Elements",
-    "owner": "rne_org",
+    "owner": "rneui",
     "slug": "react-native-elements",
     "description": "A demo app for React Native Elements UI Library",
     "privacy": "public",

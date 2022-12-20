@@ -1,5 +1,8 @@
 import { transform, types as t } from '@babel/core';
 import dedent from 'dedent';
+import glob from 'fast-glob';
+import { join, dirname } from 'path';
+import fs from 'fs';
 
 export const tabify = (str: string) => {
   return transform(`<>\n${str}\n</>`, {
@@ -99,3 +102,22 @@ export const filterPropType = (value: string) => {
   }
   return value;
 };
+
+export function findIgnoredComponents(rootPath: string) {
+  const docgenIgnoreFiles = glob.sync(join(rootPath, '**/.docgenignore'), {
+    absolute: true,
+    onlyFiles: true,
+  });
+  const ignoredFiles = [];
+  docgenIgnoreFiles.forEach((filePath) => {
+    const content = fs.readFileSync(filePath, 'utf-8').trim();
+    content.split('\n').forEach((componentPath) => {
+      const trimmedPath = componentPath.trim();
+      if (trimmedPath) {
+        ignoredFiles.push(join(dirname(filePath), trimmedPath));
+      }
+    });
+  });
+
+  return ignoredFiles;
+}

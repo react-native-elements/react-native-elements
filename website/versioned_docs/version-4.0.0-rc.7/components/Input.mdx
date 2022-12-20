@@ -1,0 +1,73 @@
+---
+id: input
+title: Input
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+import Usage from "../component_usage/Input.mdx";
+import Play from "@site/playground/Input/input.playground";
+
+<IconsStyle />
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Input } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Input`}</CodeBlock>
+  </div>
+</div>
+
+<Usage />
+
+## Props
+
+:::note
+Includes all [React Native TextInput](https://reactnative.dev/docs/textinput#props), [View](https://reactnative.dev/docs/view#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name                      | Type            | Default | Description                                                                                                                                                    |
+| ------------------------- | --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InputComponent`          | React Component |         | component that will be rendered in place of the React Native TextInput                                                                                         |
+| `containerStyle`          | View Style      |         | Style for container                                                                                                                                            |
+| `disabled`                | boolean         |         | disables the input component                                                                                                                                   |
+| `disabledInputStyle`      | Text Style      |         | disabled styles that will be passed to the style props of the React Native TextInput                                                                           |
+| `errorMessage`            | string          |         | Error message to be displayed under the input field                                                                                                            |
+| `errorProps`              | object          |         | props to be passed to the React Native Text component used to display the error message                                                                        |
+| `errorStyle`              | Text Style      |         | add styling to error message                                                                                                                                   |
+| `inputContainerStyle`     | View Style      |         | styling for Input Component Container                                                                                                                          |
+| `inputStyle`              | Text Style      |         | Style for Input Component                                                                                                                                      |
+| `label`                   | ReactNode       |         | add a label on top of the input                                                                                                                                |
+| `labelProps`              | object          |         | props to be passed to the React Native Text component used to display the label or React Component used instead of simple string in label prop                 |
+| `labelStyle`              | Text Style      |         | styling for the label; You can only use this if label is a string                                                                                              |
+| `leftIcon`                | IconNode        |         | displays an icon on the left                                                                                                                                   |
+| `leftIconContainerStyle`  | View Style      |         | styling for left Icon Component container                                                                                                                      |
+| `renderErrorMessage`      | boolean         |         | If the error message container should be rendered (take up vertical space). If false, when showing errorMessage, the layout will shift to add it at that time. |
+| `rightIcon`               | IconNode        |         | displays an icon on the right                                                                                                                                  |
+| `rightIconContainerStyle` | View Style      |         | styling for right Icon Component container                                                                                                                     |
+| `shake`                   | Function        |         | Shake method                                                                                                                                                   |
+
+</div>
+
+## Playground
+
+<Play />
