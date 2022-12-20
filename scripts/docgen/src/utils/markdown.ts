@@ -17,21 +17,13 @@ import {
   StringIndexedObject,
 } from 'react-docgen-typescript/lib/parser';
 import Handlebars from 'handlebars';
+import { ComponentUsage, usageGenParser } from '../parser/usageParser';
 
 type PropRowT = {
   name?: string;
   description?: string;
   default?: string;
   type?: string;
-};
-
-export type UsageT = {
-  desc: string;
-  usage: {
-    title: string;
-    desc: string;
-    code: string;
-  }[];
 };
 
 type TemplateOptionsT = {
@@ -45,30 +37,48 @@ type TemplateOptionsT = {
   usageFileExists: boolean;
   playgroundExists: boolean;
   usage: string;
+  usages: ComponentUsage['usage'];
   showProps: boolean;
   props?: PropRowT[];
   themeKey: string;
   includeProps?: string;
 };
 
-const pkgPath = path.join(__dirname, '../../../../packages');
-const docsPath = path.join(__dirname, '../../../../website/docs');
+const root = path.join(__dirname, '../../../../');
+const pkgRegExp = new RegExp('packages/(.*)/src');
+// const pkgPath = path.join(root, 'packages');
+const docsPath = path.join(root, 'website/docs');
+const usagePath = path.join(docsPath, 'component_usage');
+const playgroundPath = path.join(docsPath, '..', 'playground');
+
+const File = {
+  exist(...paths: string[]) {
+    return fs.existsSync(path.join(...paths));
+  },
+  read(...paths: string[]) {
+    return String(fs.readFileSync(path.join(...paths)));
+  },
+  write(content: string, ...paths: string[]) {
+    fs.writeFileSync(content, path.join(...paths));
+  },
+};
 
 const template = Handlebars.compile(
-  String(fs.readFileSync(path.join(__dirname, '../templates/mdx-template.hbs')))
+  File.read(__dirname, '../templates/mdx-template.hbs')
 );
 
-export class Markdown implements ComponentDoc {
+export class Component implements ComponentDoc {
   description: string;
   displayName: string;
   filePath: string;
   props: Props;
   tags?: StringIndexedObject<string>;
   methods: Method[];
-  metadata: UsageT;
+  usages: ComponentUsage['usage'];
+  meta: ComponentUsage['meta'];
+
   static packageName: string;
   static parents: Record<string, string[]>;
-  static usages: Record<string, UsageT>;
 
   constructor(component: ComponentDoc) {
     this.displayName = component.displayName;
@@ -77,70 +87,69 @@ export class Markdown implements ComponentDoc {
     this.props = component.props;
     this.methods = component.methods;
     this.tags = component.tags;
-    this.metadata = Markdown.usages[this.displayName];
+
+    this.extractUsage();
+    this.generate();
   }
 
-  save() {
-    this.print(this.generate());
-  }
-
-  private print(mdContent: TemplateOptionsT) {
-    const pkgRegExp = new RegExp('packages/(.*)/src');
-    const [, pkg] = this.filePath.match(pkgRegExp);
-    const [parentComp = '', childComp = ''] = this.displayName.split('.');
-
-    if (pkg !== Markdown.packageName) {
-      Markdown.packageName = pkg;
-      console.log();
-      console.log(`@rneui/${pkg}`);
+  extractUsage() {
+    const usageFilePath = path.basename(this.filePath);
+    if (!File.exist(usageFilePath, `${this.displayName}.usage.tsx`)) {
+      return;
     }
-    const isUniverse = 0 && !this.filePath.startsWith(pkgPath + '/base');
-    const mdFilePath = path.join(
-      docsPath,
-      isUniverse ? 'universe' : 'components',
-      `${this.displayName}.mdx`
-    );
-    console.log('', childComp ? '  ' + childComp : parentComp);
-
-    fs.writeFileSync(
-      mdFilePath,
-      // './test.mdx',
-      prettier.format(template(mdContent), { parser: 'mdx' })
-    );
+    const { desc, meta, usage } = usageGenParser(usageFilePath);
+    this.usages = usage;
+    this.meta = meta;
+    this.description ??= desc;
   }
 
-  private generate(): TemplateOptionsT {
-    const id = this.displayName.toLowerCase().replace('.', '_');
-    const themeKey = this.displayName.replace('.', '');
+  generate() {
+    const { displayName, tags, description } = this;
+    const id = displayName.toLowerCase().replace('.', '_');
+    const themeKey = displayName.replace('.', '');
+    const [parentComponent, childComponent] = displayName.split('.');
+    const [, pkg] = this.filePath.match(pkgRegExp);
 
-    const parentComponent = this.displayName.split('.')[0];
-    const { imports = '', installation = '', usage = '' } = this.tags || {};
+    const { imports = '', installation = '', usage = '' } = tags || {};
 
-    const usagePath = `component_usage/${this.displayName}.mdx`;
-    const usageFileExists = fs.existsSync(path.join(docsPath, usagePath));
-    const playgroundPath = `../playground/${this.displayName}/${id}.playground.tsx`;
-    const playgroundExists = fs.existsSync(path.join(docsPath, playgroundPath));
-    return {
+    const usageFileExists = File.exist(usagePath, `${displayName}.mdx`);
+
+    const playgroundExists = File.exist(
+      playgroundPath,
+      displayName,
+      `${id}.playground.tsx`
+    );
+    const handleBar: TemplateOptionsT = {
       id,
-      title: this.displayName,
-      description: this.metadata?.desc.trim() || this.description,
+      title: displayName,
+      description,
       imports,
       parentComponent,
-      installation: installation,
-      showUsage:
-        !!this.metadata?.usage.length || Boolean(usage) || usageFileExists,
+      installation,
+      showUsage: !!this.usages.length || Boolean(usage) || usageFileExists,
       usageFileExists,
       playgroundExists,
       usage: this.makeUsages() || dedent(snippetToCode(usage).trim()),
+      usages: this.usages,
       showProps: true,
       themeKey,
       ...this.propTable(),
     };
+    const mdFile = prettier.format(template(handleBar), { parser: 'mdx' });
+
+    const mdFilePath = path.join(
+      docsPath,
+      'components',
+      `${this.displayName}.mdx`
+    );
+    console.log(pkg, parentComponent, childComponent);
+
+    File.write(mdFile, mdFilePath);
   }
 
   private makeUsages() {
     return (
-      this.metadata?.usage
+      this.usages
         .map(({ title, desc, code }) => {
           return `### ${title} \n ${desc} \n \`\`\`tsx live \n ${code} \n\`\`\`\n `;
         })
@@ -180,7 +189,7 @@ export class Markdown implements ComponentDoc {
     }
     return {
       props: rows,
-      includeProps: Markdown.parents[this.displayName].sort().join(', '),
+      includeProps: Component.parents[this.displayName].sort().join(', '),
     };
   }
 }

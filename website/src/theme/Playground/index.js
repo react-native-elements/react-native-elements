@@ -70,8 +70,8 @@ function ThemedLiveEditor() {
   );
 }
 
-function EditorWithHeader({ show_code, openInSnack }) {
-  const [open, setOpen] = React.useState(show_code);
+function EditorWithHeader({ showCode, openInSnack }) {
+  const [open, setOpen] = React.useState(showCode);
 
   const handleToggle = () => {
     setOpen((isOpen) => !isOpen);
@@ -118,7 +118,7 @@ export default function Playground({ children, transformCode, ...props }) {
         theme={prismTheme}
         {...props}
       >
-        <EditorWithHeader show_code={props.show_code} />
+        <EditorWithHeader showCode={props.showCode} />
       </LiveProvider>
     </div>
   );

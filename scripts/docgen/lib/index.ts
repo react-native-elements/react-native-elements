@@ -3,13 +3,18 @@ import { StackProps } from '@rneui/layout';
 
 declare const Stack: React.ElementType<StackProps>;
 
+type UsageMetadata = Record<string, any> & {
+  live: boolean;
+  showCode: boolean;
+};
+
 declare function meta(args: Record<string, any>): void;
 declare function info(...args: string[]): void;
 declare function usage(
   title: string,
   desc: string | string[],
-  component: (...other: any[]) => React.ReactNode
-  // live?: boolean
+  component: (...other: any[]) => React.ReactNode,
+  usageMetadata?: Partial<UsageMetadata>
 ): void;
 
 export { info, usage, meta, Stack };

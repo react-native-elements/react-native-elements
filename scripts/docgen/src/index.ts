@@ -1,28 +1,12 @@
 import glob from 'fast-glob';
 import path from 'path';
-import { usageGenParser } from './parser/usageParser';
-import { Markdown, UsageT } from './utils/markdown';
+import { Component } from './utils/markdown';
 import { separateParent } from './utils/parentProps';
 import { docgenParser } from './parser/docgenParser';
 import { findIgnoredComponents } from './utils/common';
 import yargs from 'yargs';
 
 const rootPath = path.join(__dirname, '../../../packages/');
-
-function usageGen(source = '*/src/**/*.usage.tsx'): Record<string, UsageT> {
-  const filePaths = glob.sync(path.join(rootPath, source), {
-    absolute: true,
-    onlyFiles: true,
-    ignore: [],
-  });
-  const usages: Record<string, UsageT> = {};
-  filePaths.forEach((filePath) => {
-    const { fileKey, info: desc, usage, meta } = usageGenParser.parse(filePath);
-    usages[fileKey] = { desc, usage, ...Object.fromEntries(meta) };
-  });
-
-  return usages;
-}
 
 function main({ source = '*/src/**/*.tsx' }: typeof argv) {
   const ignoredFiles = findIgnoredComponents(rootPath);
@@ -37,11 +21,11 @@ function main({ source = '*/src/**/*.tsx' }: typeof argv) {
 
   const componentDocs = docgenParser.parse(filePaths);
 
-  Markdown.usages = usageGen();
-  Markdown.parents = separateParent(componentDocs);
+  Component.parents = separateParent(componentDocs);
 
-  componentDocs.forEach((componentDoc) => {
-    new Markdown(componentDoc).save();
+  componentDocs.forEach((doc) => {
+    const component = new Component(doc);
+    component.generate();
   });
 }
 

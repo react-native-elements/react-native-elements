@@ -5,7 +5,8 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "example"
+      "example",
+      "scripts/docgen/lib"
     ]
   },
   "scripts": {
@@ -24,7 +25,6 @@
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "@rneui/doc-gen": "./scripts/docgen/lib",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-native": "^7.0.2",
