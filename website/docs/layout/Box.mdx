@@ -20,11 +20,24 @@ import { BiInfoCircle } from "react-icons/bi";
   <div class="col col--9">
     <CodeBlock>{`import { Box } from '@rneui/layout';`}</CodeBlock>
   </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`Box`}</CodeBlock>
+  </div>
 </div>
 
+###
+
 ```tsx live
-<Box spacing="md" bgColor="#d2f000" w={200} px={40} py={20}>
-  <Button>Button</Button>
+<Box bgColor="#d2f000" w={200} px={40} py={20}>
+  <Button>Hey There</Button>
 </Box>
 ```
 

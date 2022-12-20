@@ -3,7 +3,7 @@ import { View, FlexStyle, ViewStyle, StyleProp } from 'react-native';
 import { makeStyles } from '../system/makeStyles';
 
 export interface StackProps {
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
   /**
    * @default flex-start
    */

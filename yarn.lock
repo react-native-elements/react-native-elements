@@ -4598,12 +4598,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rneui/layout@npm:^0.0.0-alpha.4":
-  version: 0.0.0-alpha.4
-  resolution: "@rneui/layout@npm:0.0.0-alpha.4"
-  checksum: 50ab27edfe98df51df693eb769e2ba6dc94ab8a33dc3cc3dc64d8f892ed9b0765c44704bedcac84183f08e0d479508bc4574c4e45c5f2f724785e39ccf4bfd0f
-  languageName: node
-  linkType: hard
+"@rneui/layout@^0.0.0-alpha.4, @rneui/layout@workspace:packages/layout":
+  version: 0.0.0-use.local
+  resolution: "@rneui/layout@workspace:packages/layout"
+  languageName: unknown
+  linkType: soft
 
 "@rneui/themed@workspace:packages/themed":
   version: 0.0.0-use.local
