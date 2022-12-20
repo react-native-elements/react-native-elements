@@ -6,12 +6,12 @@ exports[`Icon component should apply raised styles 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "borderRadius": 28,
         "height": 52,
         "margin": 7,
         "shadowColor": "rgba(0,0,0, .4)",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 1,
           "width": 1,
         },
@@ -25,7 +25,7 @@ exports[`Icon component should apply raised styles 1`] = `
     <View
       accessibilityRole="button"
       android_ripple={
-        Object {
+        {
           "borderless": false,
           "color": "rgba(0, 0, 0, 0.3)",
           "radius": -5,
@@ -36,7 +36,7 @@ exports[`Icon component should apply raised styles 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#ffffff",
             "borderRadius": 28,
@@ -50,20 +50,20 @@ exports[`Icon component should apply raised styles 1`] = `
         <Text
           allowFontScaling={false}
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#242424",
                 "fontSize": 24,
               },
-              Object {
+              {
                 "backgroundColor": "transparent",
               },
-              Object {
+              {
                 "fontFamily": "Material Icons",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
-              Object {},
+              {},
             ]
           }
           testID="RNE__ICON__Component"
@@ -82,7 +82,7 @@ exports[`Icon component should apply reverse styles 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "borderRadius": 28,
         "height": 52,
         "margin": 7,
@@ -95,7 +95,7 @@ exports[`Icon component should apply reverse styles 1`] = `
     <View
       accessibilityRole="button"
       android_ripple={
-        Object {
+        {
           "borderless": false,
           "color": "rgba(36, 36, 36, 0.3)",
           "radius": -5,
@@ -106,7 +106,7 @@ exports[`Icon component should apply reverse styles 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#242424",
             "borderRadius": 28,
@@ -120,20 +120,20 @@ exports[`Icon component should apply reverse styles 1`] = `
         <Text
           allowFontScaling={false}
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#ffffff",
                 "fontSize": 24,
               },
-              Object {
+              {
                 "backgroundColor": "transparent",
               },
-              Object {
+              {
                 "fontFamily": "Material Icons",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
-              Object {},
+              {},
             ]
           }
           testID="RNE__ICON__Component"
@@ -152,7 +152,7 @@ exports[`Icon component should render with icon type 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "borderRadius": 30,
         "height": 52,
         "margin": 7,
@@ -165,7 +165,7 @@ exports[`Icon component should render with icon type 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "disabled": false,
         }
       }
@@ -185,7 +185,7 @@ exports[`Icon component should render with icon type 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "red",
             "borderRadius": 28,
@@ -199,21 +199,21 @@ exports[`Icon component should render with icon type 1`] = `
         <Text
           allowFontScaling={false}
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#ffffff",
                 "fontSize": 24,
               },
-              Object {
+              {
                 "backgroundColor": "peru",
                 "borderRadius": 30,
               },
-              Object {
+              {
                 "fontFamily": "Octicons",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
-              Object {},
+              {},
             ]
           }
           testID="RNE__ICON__Component"
@@ -232,7 +232,7 @@ exports[`Icon component should set underlayColor to color when styles when under
 >
   <View
     style={
-      Object {
+      {
         "overflow": "hidden",
       }
     }
@@ -241,7 +241,7 @@ exports[`Icon component should set underlayColor to color when styles when under
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "disabled": false,
         }
       }
@@ -261,7 +261,7 @@ exports[`Icon component should set underlayColor to color when styles when under
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "justifyContent": "center",
@@ -272,20 +272,20 @@ exports[`Icon component should set underlayColor to color when styles when under
         <Text
           allowFontScaling={false}
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#242424",
                 "fontSize": 24,
               },
-              Object {
+              {
                 "backgroundColor": "transparent",
               },
-              Object {
+              {
                 "fontFamily": "Material Icons",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
               },
-              Object {},
+              {},
             ]
           }
           testID="RNE__ICON__Component"

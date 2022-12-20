@@ -6,7 +6,7 @@ import { renderWithWrapper, fireEvent } from '../../../.ci/testHelper';
 describe('Tooltip component', () => {
   it('should match snapshot', () => {
     const { queryByText, queryAllByText } = renderWithWrapper(
-      <Tooltip popover={<Text>Info here</Text>}>
+      <Tooltip visible popover={<Text>Info here</Text>}>
         <Text>Press me</Text>
       </Tooltip>
     );
@@ -22,7 +22,6 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-    expect(queryByTestId('RNE__Tooltip_Triangle')).toBeTruthy();
     const tooltip = wrapper.findAllByType(Pressable)[0];
     fireEvent.press(tooltip);
     expect(openFn).toBeCalledTimes(1);
@@ -35,6 +34,7 @@ describe('Tooltip component', () => {
         height={100}
         width={200}
         toggleAction="onLongPress"
+        visible
         popover={<Info />}
       >
         <Text>Press me</Text>
@@ -65,6 +65,7 @@ describe('Tooltip component', () => {
       <Tooltip
         height={100}
         width={200}
+        visible
         popover={<Info />}
         toggleOnPress={false}
       >
@@ -103,9 +104,11 @@ describe('Tooltip component', () => {
   it('should close tooltip only when overlay backdrop is pressed if "closeOnlyOnBackdropPress" is true and if tooltip is visible', () => {
     const fn = jest.fn();
     const Info = () => <Text>Info here</Text>;
-    const { queryByTestId } = renderWithWrapper(
+    const { queryByTestId, debug } = renderWithWrapper(
       <Tooltip
+        ModalComponent={Modal}
         height={100}
+        visible
         width={200}
         onClose={fn}
         popover={<Info />}
@@ -114,8 +117,10 @@ describe('Tooltip component', () => {
         <Text>Press me</Text>
       </Tooltip>
     );
-    const tooltip = queryByTestId('tooltipTouchableHighlightedButton');
+
+    const tooltip = queryByTestId('tooltipTouchableHighlightedButton')!;
+
     fireEvent.press(tooltip);
-    expect(fn).toBeCalledTimes(0); // 0 because tooltip is only closed by backdrop press
+    expect(fn).toBeCalledTimes(1);
   });
 });

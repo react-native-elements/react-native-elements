@@ -7,7 +7,7 @@ exports[`Header Component should match snapshot 1`] = `
   <View
     accessibilityIgnoresInvertColors={true}
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#2089dc",
         "borderBottomColor": "#f2f2f2",
@@ -21,20 +21,20 @@ exports[`Header Component should match snapshot 1`] = `
   >
     <Image
       source={
-        Object {
+        {
           "uri": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
         }
       }
       style={
-        Array [
-          Object {
+        [
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
             "right": 0,
             "top": 0,
           },
-          Object {
+          {
             "height": undefined,
             "width": undefined,
           },
@@ -45,14 +45,14 @@ exports[`Header Component should match snapshot 1`] = `
     />
     <RNCSafeAreaView
       edges={
-        Array [
+        [
           "left",
           "top",
           "right",
         ]
       }
       style={
-        Object {
+        {
           "flexDirection": "row",
           "width": "100%",
         }
@@ -60,7 +60,7 @@ exports[`Header Component should match snapshot 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "flex": 1,
           }
@@ -68,7 +68,7 @@ exports[`Header Component should match snapshot 1`] = `
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "flex": 3,
           }
@@ -76,7 +76,7 @@ exports[`Header Component should match snapshot 1`] = `
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-end",
             "flex": 1,
           }
@@ -93,7 +93,7 @@ exports[`Header Component should render center component by passing a config thr
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#2089dc",
         "borderBottomColor": "#f2f2f2",
@@ -108,14 +108,14 @@ exports[`Header Component should render center component by passing a config thr
   >
     <RNCSafeAreaView
       edges={
-        Array [
+        [
           "left",
           "top",
           "right",
         ]
       }
       style={
-        Object {
+        {
           "flexDirection": "row",
           "width": "100%",
         }
@@ -123,7 +123,7 @@ exports[`Header Component should render center component by passing a config thr
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "flex": 1,
           }
@@ -131,7 +131,7 @@ exports[`Header Component should render center component by passing a config thr
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "flex": 3,
           }
@@ -146,7 +146,7 @@ exports[`Header Component should render center component by passing a config thr
       </View>
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-end",
             "flex": 1,
           }
@@ -163,7 +163,7 @@ exports[`Header Component should render left component by passing a component th
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#2089dc",
         "borderBottomColor": "#f2f2f2",
@@ -178,14 +178,14 @@ exports[`Header Component should render left component by passing a component th
   >
     <RNCSafeAreaView
       edges={
-        Array [
+        [
           "left",
           "top",
           "right",
         ]
       }
       style={
-        Object {
+        {
           "flexDirection": "row",
           "width": "100%",
         }
@@ -193,7 +193,7 @@ exports[`Header Component should render left component by passing a component th
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "flex": 1,
           }
@@ -204,7 +204,6 @@ exports[`Header Component should render left component by passing a component th
           accessible={true}
           collapsable={false}
           focusable={true}
-          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -213,22 +212,22 @@ exports[`Header Component should render left component by passing a component th
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
         >
           <View
             style={
-              Array [
-                Object {},
+              [
+                {},
               ]
             }
           >
             <Text
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "color": "#007AFF",
                     "fontSize": 18,
                     "margin": 8,
@@ -244,7 +243,7 @@ exports[`Header Component should render left component by passing a component th
       </View>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "flex": 3,
           }
@@ -252,7 +251,7 @@ exports[`Header Component should render left component by passing a component th
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-end",
             "flex": 1,
           }
@@ -269,7 +268,7 @@ exports[`Header Component should render left component by passing a config throu
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#2089dc",
         "borderBottomColor": "#f2f2f2",
@@ -284,14 +283,14 @@ exports[`Header Component should render left component by passing a config throu
   >
     <RNCSafeAreaView
       edges={
-        Array [
+        [
           "left",
           "top",
           "right",
         ]
       }
       style={
-        Object {
+        {
           "flexDirection": "row",
           "width": "100%",
         }
@@ -299,7 +298,7 @@ exports[`Header Component should render left component by passing a config throu
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "flex": 1,
           }
@@ -307,7 +306,7 @@ exports[`Header Component should render left component by passing a config throu
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "flex-start",
               "overflow": "hidden",
             }
@@ -317,7 +316,7 @@ exports[`Header Component should render left component by passing a config throu
           <View
             accessibilityRole="button"
             android_ripple={
-              Object {
+              {
                 "borderless": false,
                 "color": "rgba(0, 0, 0, 0.3)",
                 "radius": -5,
@@ -329,7 +328,7 @@ exports[`Header Component should render left component by passing a config throu
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "backgroundColor": "transparent",
                   "justifyContent": "center",
@@ -340,20 +339,20 @@ exports[`Header Component should render left component by passing a config throu
               <Text
                 allowFontScaling={false}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "color": "#242424",
                       "fontSize": 24,
                     },
-                    Object {
+                    {
                       "backgroundColor": "transparent",
                     },
-                    Object {
+                    {
                       "fontFamily": "Material Icons",
                       "fontStyle": "normal",
                       "fontWeight": "normal",
                     },
-                    Object {},
+                    {},
                   ]
                 }
                 testID="RNE__ICON__Component"
@@ -366,7 +365,7 @@ exports[`Header Component should render left component by passing a config throu
       </View>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "flex": 3,
           }
@@ -374,7 +373,7 @@ exports[`Header Component should render left component by passing a config throu
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-end",
             "flex": 1,
           }
@@ -391,7 +390,7 @@ exports[`Header Component should render right component by passing a config thro
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "backgroundColor": "#2089dc",
         "borderBottomColor": "#f2f2f2",
@@ -406,14 +405,14 @@ exports[`Header Component should render right component by passing a config thro
   >
     <RNCSafeAreaView
       edges={
-        Array [
+        [
           "left",
           "top",
           "right",
         ]
       }
       style={
-        Object {
+        {
           "flexDirection": "row",
           "width": "100%",
         }
@@ -421,7 +420,7 @@ exports[`Header Component should render right component by passing a config thro
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-start",
             "flex": 1,
           }
@@ -429,7 +428,7 @@ exports[`Header Component should render right component by passing a config thro
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "flex": 3,
           }
@@ -437,7 +436,7 @@ exports[`Header Component should render right component by passing a config thro
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "flex-end",
             "flex": 1,
           }
@@ -445,7 +444,7 @@ exports[`Header Component should render right component by passing a config thro
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "flex-end",
               "overflow": "hidden",
             }
@@ -455,7 +454,7 @@ exports[`Header Component should render right component by passing a config thro
           <View
             accessibilityRole="button"
             android_ripple={
-              Object {
+              {
                 "borderless": false,
                 "color": "rgba(0, 0, 0, 0.3)",
                 "radius": -5,
@@ -467,7 +466,7 @@ exports[`Header Component should render right component by passing a config thro
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "backgroundColor": "transparent",
                   "justifyContent": "center",
@@ -478,20 +477,20 @@ exports[`Header Component should render right component by passing a config thro
               <Text
                 allowFontScaling={false}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "color": "#242424",
                       "fontSize": 24,
                     },
-                    Object {
+                    {
                       "backgroundColor": "transparent",
                     },
-                    Object {
+                    {
                       "fontFamily": "Material Icons",
                       "fontStyle": "normal",
                       "fontWeight": "normal",
                     },
-                    Object {},
+                    {},
                   ]
                 }
                 testID="RNE__ICON__Component"

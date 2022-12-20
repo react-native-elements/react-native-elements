@@ -7,7 +7,7 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
   <View
     accessibilityRole="progressbar"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 0.4,
@@ -16,8 +16,8 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
     accessible={true}
     onLayout={[Function]}
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "rgba(173, 20, 87, 0.4)",
           "height": 4,
           "overflow": "hidden",
@@ -31,16 +31,15 @@ exports[`LinearProgress Component should render determinant variant 1`] = `
   >
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       style={
-        Object {
+        {
           "backgroundColor": "#ad1457",
           "flex": 1,
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": -0,
             },
-            Object {
+            {
               "scaleX": 0.0001,
             },
           ],
@@ -59,7 +58,7 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
   <View
     accessibilityRole="progressbar"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 0,
@@ -68,8 +67,8 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
     accessible={true}
     onLayout={[Function]}
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "rgba(173, 20, 87, 0.4)",
           "height": 4,
           "overflow": "hidden",
@@ -82,15 +81,16 @@ exports[`LinearProgress Component should render inDeterminant variant 1`] = `
     testID="RNE__LinearProgress_Bar"
   >
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#ad1457",
           "flex": 1,
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": -0,
             },
-            Object {
+            {
               "scaleX": 0.0001,
             },
           ],

@@ -25,8 +25,8 @@ exports[`BottomSheet Component renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Array [
-          Object {
+        [
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -41,7 +41,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
     <RNCSafeAreaView
       pointerEvents="box-none"
       style={
-        Object {
+        {
           "backgroundColor": "rgba(0,0,0,0.2)",
           "flex": 1,
           "flexDirection": "column-reverse",
@@ -54,7 +54,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
             <View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "#ffffff",
                     "borderColor": "#bcbbc1",
@@ -66,8 +66,8 @@ exports[`BottomSheet Component renders correctly 1`] = `
               >
                 <View
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "alignItems": "flex-start",
                         "flex": 1,
                         "justifyContent": "center",
@@ -79,7 +79,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                   <Text
                     accessibilityRole="text"
                     style={
-                      Object {
+                      {
                         "backgroundColor": "transparent",
                         "color": "#242424",
                         "fontSize": 17,
@@ -95,7 +95,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
             <View>
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "#ffffff",
                     "borderColor": "#bcbbc1",
@@ -107,8 +107,8 @@ exports[`BottomSheet Component renders correctly 1`] = `
               >
                 <View
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "alignItems": "flex-start",
                         "flex": 1,
                         "justifyContent": "center",
@@ -120,7 +120,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
                   <Text
                     accessibilityRole="text"
                     style={
-                      Object {
+                      {
                         "backgroundColor": "transparent",
                         "color": "#242424",
                         "fontSize": 17,

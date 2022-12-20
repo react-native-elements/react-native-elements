@@ -18,7 +18,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "height": 600,
         "width": 750,
       }
@@ -27,7 +27,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
     <View
       accessibilityIgnoresInvertColors={true}
       style={
-        Object {
+        {
           "alignItems": "center",
           "height": 600,
           "justifyContent": "center",
@@ -38,20 +38,20 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
       <Image
         resizeMode="cover"
         source={
-          Object {
+          {
             "uri": "http://google.com",
           }
         }
         style={
-          Array [
-            Object {
+          [
+            {
               "bottom": 0,
               "left": 0,
               "position": "absolute",
               "right": 0,
               "top": 0,
             },
-            Object {
+            {
               "height": 600,
               "width": 750,
             },
@@ -61,7 +61,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
       />
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "alignSelf": "stretch",
             "bottom": 0,
@@ -80,7 +80,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "alignSelf": "center",
               "justifyContent": "center",
@@ -90,7 +90,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
         <Text
           accessibilityRole="text"
           style={
-            Object {
+            {
               "backgroundColor": "rgba(0,0,0,0)",
               "color": "#ffffff",
               "fontSize": 28.285714285714285,
@@ -99,9 +99,7 @@ exports[`FeaturedTitle component should match snapshot 1`] = `
             }
           }
           testID="featuredTileTitle"
-        >
-          
-        </Text>
+        />
       </View>
     </View>
   </View>

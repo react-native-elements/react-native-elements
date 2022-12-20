@@ -6,7 +6,7 @@ exports[`PricingCard component should match snapshot 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "#ffffff",
         "borderColor": "#e1e8ee",
         "borderWidth": 1,
@@ -14,7 +14,7 @@ exports[`PricingCard component should match snapshot 1`] = `
         "marginBottom": 15,
         "padding": 15,
         "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 1,
           "width": 0,
         },
@@ -25,7 +25,7 @@ exports[`PricingCard component should match snapshot 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
         }
       }
@@ -33,7 +33,7 @@ exports[`PricingCard component should match snapshot 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#2089dc",
             "fontSize": 38.57142857142857,
             "fontWeight": "800",
@@ -41,13 +41,11 @@ exports[`PricingCard component should match snapshot 1`] = `
           }
         }
         testID="pricingCardTitle"
-      >
-        
-      </Text>
+      />
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#242424",
             "fontSize": 51.42857142857143,
             "fontWeight": "700",
@@ -56,13 +54,11 @@ exports[`PricingCard component should match snapshot 1`] = `
             "textAlign": "center",
           }
         }
-      >
-        
-      </Text>
+      />
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#86939e",
             "fontWeight": "600",
             "marginBottom": 5,
@@ -76,7 +72,7 @@ exports[`PricingCard component should match snapshot 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#86939e",
             "fontWeight": "600",
             "marginBottom": 5,
@@ -90,7 +86,7 @@ exports[`PricingCard component should match snapshot 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#86939e",
             "fontWeight": "600",
             "marginBottom": 5,
@@ -103,11 +99,11 @@ exports[`PricingCard component should match snapshot 1`] = `
       </Text>
       <View
         style={
-          Array [
-            Object {
+          [
+            {
               "overflow": "hidden",
             },
-            Object {
+            {
               "borderRadius": 2,
             },
             undefined,
@@ -119,7 +115,7 @@ exports[`PricingCard component should match snapshot 1`] = `
         <View
           accessibilityRole="button"
           accessibilityState={
-            Object {
+            {
               "busy": false,
               "disabled": false,
             }
@@ -127,7 +123,6 @@ exports[`PricingCard component should match snapshot 1`] = `
           accessible={true}
           collapsable={false}
           focusable={true}
-          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -136,7 +131,7 @@ exports[`PricingCard component should match snapshot 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
@@ -144,7 +139,7 @@ exports[`PricingCard component should match snapshot 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#2089dc",
                 "borderColor": "#2089dc",
@@ -161,7 +156,7 @@ exports[`PricingCard component should match snapshot 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "overflow": "hidden",
                 }
               }
@@ -170,7 +165,7 @@ exports[`PricingCard component should match snapshot 1`] = `
               <View
                 accessibilityRole="button"
                 android_ripple={
-                  Object {
+                  {
                     "borderless": false,
                     "color": "rgba(0, 0, 0, 0.3)",
                     "radius": -5,
@@ -181,7 +176,7 @@ exports[`PricingCard component should match snapshot 1`] = `
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "backgroundColor": "transparent",
                       "justifyContent": "center",
@@ -192,20 +187,20 @@ exports[`PricingCard component should match snapshot 1`] = `
                   <Text
                     allowFontScaling={false}
                     style={
-                      Array [
-                        Object {
+                      [
+                        {
                           "color": "white",
                           "fontSize": 15,
                         },
-                        Object {
+                        {
                           "backgroundColor": "transparent",
                         },
-                        Object {
+                        {
                           "fontFamily": "Material Icons",
                           "fontStyle": "normal",
                           "fontWeight": "normal",
                         },
-                        Object {},
+                        {},
                       ]
                     }
                     testID="RNE__ICON__Component"
@@ -217,7 +212,7 @@ exports[`PricingCard component should match snapshot 1`] = `
             </View>
             <Text
               style={
-                Object {
+                {
                   "color": "white",
                   "fontSize": 18,
                   "paddingVertical": 1,
@@ -241,7 +236,7 @@ exports[`PricingCard component should render with props 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "peru",
         "borderColor": "#e1e8ee",
         "borderWidth": 1,
@@ -249,7 +244,7 @@ exports[`PricingCard component should render with props 1`] = `
         "marginBottom": 15,
         "padding": 15,
         "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 1,
           "width": 0,
         },
@@ -260,7 +255,7 @@ exports[`PricingCard component should render with props 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "backgroundColor": "peru",
         }
       }
@@ -268,7 +263,7 @@ exports[`PricingCard component should render with props 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#2089dc",
             "fontFamily": "arial",
             "fontSize": 38.57142857142857,
@@ -283,7 +278,7 @@ exports[`PricingCard component should render with props 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#242424",
             "fontFamily": "arial",
             "fontSize": 51.42857142857143,
@@ -299,7 +294,7 @@ exports[`PricingCard component should render with props 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#86939e",
             "fontFamily": "arial",
             "fontWeight": "600",
@@ -314,7 +309,7 @@ exports[`PricingCard component should render with props 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#86939e",
             "fontFamily": "arial",
             "fontWeight": "600",
@@ -329,7 +324,7 @@ exports[`PricingCard component should render with props 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#86939e",
             "fontFamily": "arial",
             "fontWeight": "600",
@@ -343,11 +338,11 @@ exports[`PricingCard component should render with props 1`] = `
       </Text>
       <View
         style={
-          Array [
-            Object {
+          [
+            {
               "overflow": "hidden",
             },
-            Object {
+            {
               "borderRadius": 2,
             },
             undefined,
@@ -359,7 +354,7 @@ exports[`PricingCard component should render with props 1`] = `
         <View
           accessibilityRole="button"
           accessibilityState={
-            Object {
+            {
               "busy": false,
               "disabled": false,
             }
@@ -367,7 +362,6 @@ exports[`PricingCard component should render with props 1`] = `
           accessible={true}
           collapsable={false}
           focusable={true}
-          nativeID="animatedComponent"
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -376,7 +370,7 @@ exports[`PricingCard component should render with props 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "opacity": 1,
             }
           }
@@ -384,7 +378,7 @@ exports[`PricingCard component should render with props 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#2089dc",
                 "borderColor": "#2089dc",
@@ -401,7 +395,7 @@ exports[`PricingCard component should render with props 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "overflow": "hidden",
                 }
               }
@@ -410,7 +404,7 @@ exports[`PricingCard component should render with props 1`] = `
               <View
                 accessibilityRole="button"
                 android_ripple={
-                  Object {
+                  {
                     "borderless": false,
                     "color": "rgba(0, 0, 0, 0.3)",
                     "radius": -5,
@@ -421,7 +415,7 @@ exports[`PricingCard component should render with props 1`] = `
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "backgroundColor": "transparent",
                       "justifyContent": "center",
@@ -432,20 +426,20 @@ exports[`PricingCard component should render with props 1`] = `
                   <Text
                     allowFontScaling={false}
                     style={
-                      Array [
-                        Object {
+                      [
+                        {
                           "color": "white",
                           "fontSize": 15,
                         },
-                        Object {
+                        {
                           "backgroundColor": "transparent",
                         },
-                        Object {
+                        {
                           "fontFamily": "Material Icons",
                           "fontStyle": "normal",
                           "fontWeight": "normal",
                         },
-                        Object {},
+                        {},
                       ]
                     }
                     testID="RNE__ICON__Component"
@@ -457,7 +451,7 @@ exports[`PricingCard component should render with props 1`] = `
             </View>
             <Text
               style={
-                Object {
+                {
                   "color": "white",
                   "fontSize": 18,
                   "paddingVertical": 1,
