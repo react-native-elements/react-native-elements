@@ -3835,16 +3835,25 @@ __metadata:
     react-native-size-matters: ^0.4.0
     react-native-vector-icons: ^7.1.0
   peerDependencies:
-    react-native-safe-area-context: ^3.1.9 || ^4.0.0
+    react-native-safe-area-context: ">= 3.0.0"
     react-native-vector-icons: ">7.0.0"
   languageName: unknown
   linkType: soft
 
-"@rneui/doc-gen@workspace:scripts/docgen/lib":
+"@rneui/doc-gen@workspace:scripts/docgen":
   version: 0.0.0-use.local
-  resolution: "@rneui/doc-gen@workspace:scripts/docgen/lib"
+  resolution: "@rneui/doc-gen@workspace:scripts/docgen"
   dependencies:
+    "@types/dedent": ^0.7.0
+    "@types/lodash.orderby": ^4.6.7
     "@types/node": ^18.11.13
+    dedent: ^0.7.0
+    handlebars: ^4.7.7
+    lodash.orderby: ^4.6.0
+    ora: 5.4.1
+    prettier: ^2.6.2
+    react-docgen-typescript: ^2.2.2
+    ts-node: ^10.7.0
   languageName: unknown
   linkType: soft
 
@@ -4285,21 +4294,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native@npm:*":
-  version: 0.67.3
-  resolution: "@types/react-native@npm:0.67.3"
+"@types/react-native@npm:*, @types/react-native@npm:^0.70.8":
+  version: 0.70.8
+  resolution: "@types/react-native@npm:0.70.8"
   dependencies:
     "@types/react": "*"
-  checksum: b38a9ce339e8623e5227c524941fc9894a77a2e7ca3a0cd57f2dcaca4d59fcdad98d57024d8af0c3f09e345398adf8cce2e1462bff97f114e159790129e9730f
-  languageName: node
-  linkType: hard
-
-"@types/react-native@npm:^0.66.17":
-  version: 0.66.18
-  resolution: "@types/react-native@npm:0.66.18"
-  dependencies:
-    "@types/react": "*"
-  checksum: b9422ba60d6d154f70f7522fe1aeec1b9d22fba374905b2a7efca1c5a66a8b93cbd42abb41dad6ef21bce32025604000ae146470d31582180bbd618fbd0a30cc
+  checksum: e951992178f0a6a2a5bc5312824ad67146594840c03ec51156022eacb23e8db7be7470d0c9ad61828dbae840e531bf0cf553205b9dc290b358091329746fd094
   languageName: node
   linkType: hard
 
@@ -17039,9 +17039,6 @@ __metadata:
     expo-splash-screen: ~0.17.5
     expo-updates: ~0.15.6
     jest-expo: ^47.0.0
-    react: 18.1.0
-    react-dom: 18.1.0
-    react-native: 0.70.5
     react-native-gesture-handler: ~2.8.0
     react-native-reanimated: ~2.12.0
     react-native-screens: ~3.18.0
@@ -17285,12 +17282,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.1.0":
-  version: 18.1.0
-  resolution: "react@npm:18.1.0"
+"react@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "react@npm:18.2.0"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 5bb296b561b43ef2220395da4faac86c14a087c8c80e1a7598a5740f01ee605c11eaf249985c1e2000971c4cd32ccb46d40f00479bbd9fb6b1c7cf857393b7d4
+  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
   languageName: node
   linkType: hard
 
@@ -17990,26 +17987,23 @@ __metadata:
     "@testing-library/jest-dom": ^5.11.10
     "@testing-library/react": ^11.2.6
     "@testing-library/react-native": ^7.0.2
-    "@types/dedent": ^0.7.0
     "@types/jest": ^27.4.0
-    "@types/lodash.orderby": ^4.6.7
-    "@types/react-native": ^0.66.17
+    "@types/react-native": ^0.70.8
     "@types/react-test-renderer": ^17.0.1
     babel-jest: ^27.5.1
     codecov: ^3.8.3
-    dedent: ^0.7.0
     eslint: ^7.32.0
     eslint-plugin-prettier: ^4.0.0
-    handlebars: ^4.7.7
     husky: ^7.0.4
     jest: ^27.4.7
     jest-transform-stub: ^2.0.0
     lerna: ^4.0.0
     lint-staged: ^12.4.1
-    lodash.orderby: ^4.6.0
-    ora: 5.4.1
     prettier: ^2.6.2
+    react: ^18.2.0
     react-docgen-typescript: ^2.2.2
+    react-dom: 18.1.0
+    react-native: 0.70.5
     react-test-renderer: ^17.0.2
     rimraf: ^3.0.2
     ts-node: ^10.7.0

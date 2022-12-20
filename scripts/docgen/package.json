@@ -1,0 +1,28 @@
+{
+  "name": "@rneui/doc-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "private": true,
+  "packageManager": "yarn@3.2.4",
+  "devDependencies": {
+    "@types/dedent": "^0.7.0",
+    "@types/lodash.orderby": "^4.6.7",
+    "@types/node": "^18.11.13",
+    "dedent": "^0.7.0",
+    "handlebars": "^4.7.7",
+    "lodash.orderby": "^4.6.0",
+    "ora": "5.4.1",
+    "prettier": "^2.6.2",
+    "react-docgen-typescript": "^2.2.2",
+    "ts-node": "^10.7.0"
+  },
+  "author": "RNE Core Team",
+  "license": "MIT"
+}

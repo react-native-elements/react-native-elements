@@ -16,7 +16,7 @@ function CustomContentComponent(
   const colorScheme = useColorScheme();
 
   React.useEffect(() => {
-    // updateTheme({ mode: colorScheme === 'dark' ? 'dark' : 'light' });
+    updateTheme({ mode: colorScheme === 'dark' ? 'dark' : 'light' });
   }, [colorScheme, updateTheme]);
   return (
     <SafeAreaView
