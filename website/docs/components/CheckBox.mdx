@@ -37,34 +37,33 @@ CheckBoxes allow users to complete tasks that involve making choices such as sel
   </div>
 </div>
 
-### Controlled CheckBox
+### Simple CheckBox
 
-```tsx live
-function RNECheckBox() {
-  const [open, setOpen] = React.useState(false);
+```tsx live showCode=false
+function CheckBoxComponent() {
+  const [state, setState] = React.useState(false);
+  const toggleCheckbox = () => setState(!state);
   return (
     <Stack row align="center">
-      <CheckBox checked={open} onPress={() => setOpen(!open)} />
+      <CheckBox checked={state} onPress={toggleCheckbox} />
+      <CheckBox
+        checked
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        onPress={toggleCheckbox}
+      />
+      <CheckBox
+        center
+        checked
+        iconType="material"
+        checkedIcon="clear"
+        uncheckedIcon="add"
+        checkedColor="red"
+        onPress={toggleCheckbox}
+      />
     </Stack>
   );
 }
-```
-
-### More examples
-
-```tsx live
-<Stack row align="center">
-  <CheckBox checked />
-  <CheckBox checked checkedIcon="dot-circle-o" uncheckedIcon="circle-o" />
-  <CheckBox
-    center
-    checked
-    iconType="material"
-    checkedIcon="clear"
-    uncheckedIcon="add"
-    checkedColor="red"
-  />
-</Stack>
 ```
 
 <Usage />

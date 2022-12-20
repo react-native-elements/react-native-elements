@@ -35,8 +35,9 @@
   --ifm-color-primary-light: #7dbbec;
   --ifm-color-primary-lighter: #8bc2ee;
   --ifm-color-primary-lightest: #b6d9f4;
-  --ifm-hero-background-color: #27292b;
+  --ifm-hero-background-color: #27292b00;
   --navbar-background-color: rgba(0, 0, 0, 0.615);
+  --docsearch-searchbox-background: #aeadad30 !important;
 }
 
 .table-responsive {
@@ -703,7 +704,7 @@ a.card:hover {
   margin-top: var(--ifm-spacing-horizontal) !important;
   margin-bottom: var(--ifm-spacing-horizontal) !important;
 }
-@media screen and (min-width: 996px) {
+@media screen and (max-width: 996px) {
 }
 
 .inline-flex-center {

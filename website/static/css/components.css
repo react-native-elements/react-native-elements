@@ -117,7 +117,11 @@
   }
   .rne-hero-logo {
     /* display: none; */
-    width: 50%;
+    width: 10rem;
+  }
+  .hero__title {
+    margin-top: 2rem;
+    font-size: 2.5rem;
   }
   .hero .row {
     flex-direction: column;

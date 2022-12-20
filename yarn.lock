@@ -4590,12 +4590,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rneui/doc-gen@file:./scripts/docgen/lib::locator=rneui%40workspace%3A.":
-  version: 1.0.0
-  resolution: "@rneui/doc-gen@file:./scripts/docgen/lib#./scripts/docgen/lib::hash=28a0f9&locator=rneui%40workspace%3A."
-  checksum: f2144111b668054e898c95a5fbe65ec1051bd987e3eafaab59e6625ba892bbfe1797f58a571ac3a8ef05a6ac3ee2c06f2903b5eea285871f1a322e4c69b8ee5a
-  languageName: node
-  linkType: hard
+"@rneui/doc-gen@workspace:scripts/docgen/lib":
+  version: 0.0.0-use.local
+  resolution: "@rneui/doc-gen@workspace:scripts/docgen/lib"
+  dependencies:
+    "@types/node": ^18.11.13
+  languageName: unknown
+  linkType: soft
 
 "@rneui/layout@npm:^0.0.0-alpha.4":
   version: 0.0.0-alpha.4
@@ -4986,6 +4987,13 @@ __metadata:
   version: 17.0.23
   resolution: "@types/node@npm:17.0.23"
   checksum: a3517554737cbb042e76c30d0e5482192ac4d9bea0eeb086e2622d9cabf460a0eb52a696b99fcd18e7fcc93c96db6cc7ae507f6608f256ef0b5c1d8c87a5a470
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.13":
+  version: 18.11.17
+  resolution: "@types/node@npm:18.11.17"
+  checksum: 1933afd068d5c75c068c6c4df6d10edb3b0b2bb6503d544e2f0496ac007c90596e6a5e284a8ef032451bc16f871b7e46719d7d2bea60e9b25d13a77d52161cac
   languageName: node
   linkType: hard
 
@@ -16745,7 +16753,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ora@npm:^5.4.1":
+"ora@npm:5.4.1, ora@npm:^5.4.1":
   version: 5.4.1
   resolution: "ora@npm:5.4.1"
   dependencies:
@@ -19469,7 +19477,6 @@ __metadata:
   resolution: "rneui@workspace:."
   dependencies:
     "@react-native-community/eslint-config": ^2.0.0
-    "@rneui/doc-gen": ./scripts/docgen/lib
     "@testing-library/jest-dom": ^5.11.10
     "@testing-library/react": ^11.2.6
     "@testing-library/react-native": ^7.0.2
@@ -19490,6 +19497,7 @@ __metadata:
     lerna: ^4.0.0
     lint-staged: ^12.4.1
     lodash.orderby: ^4.6.0
+    ora: 5.4.1
     prettier: ^2.6.2
     react: ^17.0.2
     react-docgen-typescript: ^2.2.2
