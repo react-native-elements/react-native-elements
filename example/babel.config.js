@@ -9,6 +9,7 @@ module.exports = function (api) {
       [
         'module-resolver',
         {
+          extensions: ['.js', '.ios.js', '.android.js', '.json', '.tsx', '.ts'],
           alias: {
             '@rneui/base/dist': path.resolve(
               __dirname,

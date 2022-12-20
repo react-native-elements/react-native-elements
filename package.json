@@ -50,7 +50,6 @@
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.2.2",
     "react-dom": "^17.0.2",
-    "react-native": "^0.66.4",
     "react-test-renderer": "^17.0.2",
     "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
