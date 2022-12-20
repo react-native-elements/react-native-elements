@@ -4,8 +4,8 @@ import {
   snippetToCode,
   removeNewline,
   filterPropType,
-} from './common';
-import { MUST_INCLUDE_PROP_TYPES } from './parentProps';
+} from './utils/common';
+import { MUST_INCLUDE_PROP_TYPES } from './utils/parentProps';
 import { ComponentDoc, Props } from 'react-docgen-typescript';
 import orderBy from 'lodash/orderBy';
 import prettier from 'prettier';
@@ -17,7 +17,7 @@ import {
   StringIndexedObject,
 } from 'react-docgen-typescript/lib/parser';
 import Handlebars from 'handlebars';
-import { ComponentUsage, usageGenParser } from '../parser/usageParser';
+import { ComponentUsage, usageGenParser } from './parser/usageParser';
 
 type PropRowT = {
   name?: string;
@@ -44,8 +44,8 @@ type TemplateOptionsT = {
   includeProps?: string;
 };
 
-const root = path.join(__dirname, '../../../../');
-const pkgRegExp = new RegExp('packages/(.*)/src');
+const root = path.join(__dirname, '../../../');
+// const pkgRegExp = new RegExp('packages/(.*)/src');
 // const pkgPath = path.join(root, 'packages');
 const docsPath = path.join(root, 'website/docs');
 const usagePath = path.join(docsPath, 'component_usage');
@@ -59,12 +59,12 @@ const File = {
     return String(fs.readFileSync(path.join(...paths)));
   },
   write(content: string, ...paths: string[]) {
-    fs.writeFileSync(content, path.join(...paths));
+    fs.writeFileSync(path.join(...paths), content);
   },
 };
 
 const template = Handlebars.compile(
-  File.read(__dirname, '../templates/mdx-template.hbs')
+  File.read(__dirname, './templates/mdx-template.hbs')
 );
 
 export class Component implements ComponentDoc {
@@ -77,7 +77,6 @@ export class Component implements ComponentDoc {
   usages: ComponentUsage['usage'];
   meta: ComponentUsage['meta'];
 
-  static packageName: string;
   static parents: Record<string, string[]>;
 
   constructor(component: ComponentDoc) {
@@ -89,69 +88,87 @@ export class Component implements ComponentDoc {
     this.tags = component.tags;
 
     this.extractUsage();
-    this.generate();
   }
 
   extractUsage() {
-    const usageFilePath = path.basename(this.filePath);
-    if (!File.exist(usageFilePath, `${this.displayName}.usage.tsx`)) {
+    const usageFilePath = path.resolve(
+      this.filePath,
+      '..',
+      `${this.displayName}.usage.tsx`
+    );
+    if (!File.exist(usageFilePath)) {
       return;
     }
     const { desc, meta, usage } = usageGenParser(usageFilePath);
     this.usages = usage;
     this.meta = meta;
-    this.description ??= desc;
+    this.description = desc || this.description;
   }
 
-  generate() {
-    const { displayName, tags, description } = this;
-    const id = displayName.toLowerCase().replace('.', '_');
-    const themeKey = displayName.replace('.', '');
-    const [parentComponent, childComponent] = displayName.split('.');
-    const [, pkg] = this.filePath.match(pkgRegExp);
+  async generate() {
+    return new Promise((resolve) => {
+      const { displayName, tags, description } = this;
+      const id = displayName.toLowerCase().replace('.', '_');
+      const themeKey = displayName.replace('.', '');
+      const [parentComponent] = displayName.split('.');
+      // const [, pkg] = this.filePath.match(pkgRegExp);
 
-    const { imports = '', installation = '', usage = '' } = tags || {};
+      const { imports = '', installation = '', usage = '' } = tags || {};
 
-    const usageFileExists = File.exist(usagePath, `${displayName}.mdx`);
+      const usageFileExists = File.exist(usagePath, `${displayName}.mdx`);
 
-    const playgroundExists = File.exist(
-      playgroundPath,
-      displayName,
-      `${id}.playground.tsx`
-    );
-    const handleBar: TemplateOptionsT = {
-      id,
-      title: displayName,
-      description,
-      imports,
-      parentComponent,
-      installation,
-      showUsage: !!this.usages.length || Boolean(usage) || usageFileExists,
-      usageFileExists,
-      playgroundExists,
-      usage: this.makeUsages() || dedent(snippetToCode(usage).trim()),
-      usages: this.usages,
-      showProps: true,
-      themeKey,
-      ...this.propTable(),
-    };
-    const mdFile = prettier.format(template(handleBar), { parser: 'mdx' });
+      const playgroundExists = File.exist(
+        playgroundPath,
+        displayName,
+        `${id}.playground.tsx`
+      );
+      const handleBar: TemplateOptionsT = {
+        id,
+        title: displayName,
+        description,
+        imports,
+        parentComponent,
+        installation,
+        showUsage: !!this.usages?.length || Boolean(usage) || usageFileExists,
+        usageFileExists,
+        playgroundExists,
+        usage: this.makeUsages() || dedent(snippetToCode(usage).trim()),
+        usages: this.usages,
+        showProps: true,
+        themeKey,
+        ...this.propTable(),
+      };
+      const mdFile = prettier.format(template(handleBar), { parser: 'mdx' });
 
-    const mdFilePath = path.join(
-      docsPath,
-      'components',
-      `${this.displayName}.mdx`
-    );
-    console.log(pkg, parentComponent, childComponent);
+      const mdFilePath = path.join(
+        docsPath,
+        'components',
+        `${this.displayName}.mdx`
+      );
+      // console.log(pkg, parentComponent, childComponent);
 
-    File.write(mdFile, mdFilePath);
+      File.write(mdFile, mdFilePath);
+      resolve(displayName);
+    });
   }
 
   private makeUsages() {
     return (
       this.usages
-        .map(({ title, desc, code }) => {
-          return `### ${title} \n ${desc} \n \`\`\`tsx live \n ${code} \n\`\`\`\n `;
+        ?.map(({ title, desc, code, metaData }) => {
+          let lang = 'tsx';
+          let live = 'live';
+          const defTags = {
+            lang: (v) => ((lang = v), ''),
+            live: (v) => ((live = v ? 'live' : ''), ''),
+          };
+          const props = metaData
+            ?.map(([tag, value]) =>
+              defTags[tag] ? defTags[tag](value) : `${tag}=${value}`
+            )
+            .join(' ');
+
+          return `### ${title} \n ${desc} \n \`\`\`${lang} ${live} ${props} \n ${code} \n\`\`\`\n `;
         })
         .join('\n') || ''
     );

@@ -46,7 +46,7 @@ export const usageGenParser = function parse(filePath: string) {
                   if (name === Methods.desc) {
                     node.expression.arguments.forEach((arg) => {
                       if (t.isStringLiteral(arg)) {
-                        component.desc += arg.value;
+                        component.desc += arg.value + ' ';
                       }
                     });
                   } else if (name === Methods.meta) {
@@ -91,7 +91,10 @@ export const usageGenParser = function parse(filePath: string) {
                           t.isObjectProperty(obj) &&
                           t.isIdentifier(obj.key)
                         ) {
-                          if (t.isStringLiteral(obj.value)) {
+                          if (
+                            t.isStringLiteral(obj.value) ||
+                            t.isBooleanLiteral(obj.value)
+                          ) {
                             usage.metaData.push([
                               obj.key.name,
                               obj.value.value,

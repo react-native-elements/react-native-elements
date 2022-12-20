@@ -45,6 +45,7 @@
     "lerna": "^4.0.0",
     "lint-staged": "^12.4.1",
     "lodash.orderby": "^4.6.0",
+    "ora": "5.4.1",
     "prettier": "^2.6.2",
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.2.2",
