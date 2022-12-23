@@ -88,8 +88,7 @@ If you are looking to contribute to the React Native Elements App,
 view the implementation & Use this command to start example app locally
 
 ```bash
-cd example
-yarn start
+yarn example:start
 ```
 
 ## VS Code Extension

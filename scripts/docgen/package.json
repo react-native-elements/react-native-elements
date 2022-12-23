@@ -6,7 +6,9 @@
   "files": [
     "src"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true ts-node src/index.ts"
+  },
   "author": "Arpit Bhalla <arpitbhalla@icloud.com>",
   "license": "MIT",
   "devDependencies": {

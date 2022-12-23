@@ -17,9 +17,9 @@
     "build": "lerna run build",
     "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
-    "example": "yarn --cwd example",
+    "example:start": "yarn workspace react-native-elements-app start",
     "docs-build": "yarn docs-build-api && cd website && yarn run build",
-    "docs-build-api": "TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true ts-node scripts/docgen/src/index.ts",
+    "docs-build-api": " yarn workspace @rneui/doc-gen build",
     "postinstall": "husky install",
     "lint-staged": "lint-staged"
   },
