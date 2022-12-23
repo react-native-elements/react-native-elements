@@ -6,7 +6,7 @@
     "packages": [
       "packages/*",
       "example",
-      "scripts/docgen/lib"
+      "scripts/docgen"
     ]
   },
   "scripts": {
@@ -17,43 +17,34 @@
     "build": "lerna run build",
     "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
-    "example": "yarn --cwd example",
+    "example:start": "yarn workspace react-native-elements-app start",
     "docs-build": "yarn docs-build-api && cd website && yarn run build",
-    "docs-build-api": "TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true ts-node scripts/docgen/src/index.ts",
+    "docs-build-api": " yarn workspace @rneui/doc-gen build",
     "postinstall": "husky install",
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/react-native": "^7.0.2",
-    "@types/dedent": "^0.7.0",
+    "@testing-library/react-native": "^11.5.0",
     "@types/jest": "^27.4.0",
-    "@types/lodash.orderby": "^4.6.7",
     "@types/react-native": "^0.66.17",
     "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^27.5.1",
     "codecov": "^3.8.3",
-    "dedent": "^0.7.0",
     "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "handlebars": "^4.7.7",
     "husky": "^7.0.4",
-    "jest": "^27.4.7",
+    "jest": "^29.3.1",
     "jest-transform-stub": "^2.0.0",
     "lerna": "^4.0.0",
     "lint-staged": "^12.4.1",
-    "lodash.orderby": "^4.6.0",
-    "ora": "5.4.1",
     "prettier": "^2.6.2",
-    "react": "^17.0.2",
+    "react": "18.1.0",
     "react-docgen-typescript": "^2.2.2",
-    "react-dom": "^17.0.2",
-    "react-native": "^0.66.4",
-    "react-test-renderer": "^17.0.2",
+    "react-dom": "18.0.0",
+    "react-native": "^0.70.5",
+    "react-test-renderer": "18.0.0",
     "rimraf": "^3.0.2",
-    "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
   "author": "RNE Core Team",
@@ -101,5 +92,8 @@
       "themed": "@rneui/themed",
       "website/docs": "Docs"
     }
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6"
   }
 }

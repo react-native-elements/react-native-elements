@@ -74,7 +74,7 @@ describe('Slider component', () => {
     const component = renderWithWrapper(
       <Slider value={15} maximumValue={10} minimumValue={5} />
     );
-    const slider = component.getByA11yRole('adjustable');
+    const slider = component.getByRole('adjustable');
     expect(slider.props.accessibilityValue).toMatchObject({
       min: 5,
       max: 10,

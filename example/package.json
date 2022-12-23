@@ -27,7 +27,7 @@
     "@rneui/layout": "^0.0.0-alpha.4",
     "expo": "^47.0.0",
     "expo-app-loading": "~2.1.1",
-    "expo-asset": "~8.6.2",
+    "expo-asset": "~8.7.0",
     "expo-font": "~11.0.1",
     "expo-linear-gradient": "~12.0.1",
     "expo-updates": "~0.15.6",

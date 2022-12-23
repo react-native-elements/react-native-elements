@@ -55,39 +55,6 @@
   "devDependencies": {
     "@rneui/base": "4.0.0-rc.7"
   },
-  "jest": {
-    "displayName": "@rneui/themed",
-    "preset": "react-native",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules",
-      "<rootDir>/dist"
-    ],
-    "moduleNameMapper": {
-      "^@rneui/base/dist/(.*)": [
-        "<rootDir>/../base/src/$1",
-        "<rootDir>/../../node_modules/@rneui/base/src/$1"
-      ]
-    },
-    "transformIgnorePatterns": [
-      "<rootDir>/../../node_modules/(?!(@react-native|react-native|@rneui/base)/)"
-    ],
-    "coveragePathIgnorePatterns": [],
-    "setupFilesAfterEnv": [
-      "<rootDir>/.ci/setupTests.ts"
-    ],
-    "collectCoverage": true,
-    "globals": {
-      "__DEV__": true
-    },
-    "transform": {
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
-    },
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/index.tsx",
-      "!src/helpers/*.tsx"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-elements/react-native-elements.git",

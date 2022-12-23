@@ -6,7 +6,7 @@ exports[`Card Component should have Card title without image 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "#ffffff",
         "borderColor": "#e1e8ee",
         "borderWidth": 1,
@@ -14,7 +14,7 @@ exports[`Card Component should have Card title without image 1`] = `
         "marginBottom": 0,
         "padding": 15,
         "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 0,
           "width": 0,
         },
@@ -25,7 +25,7 @@ exports[`Card Component should have Card title without image 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
         }
       }
@@ -33,7 +33,7 @@ exports[`Card Component should have Card title without image 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "color": "#43484d",
             "fontSize": 18,
             "fontWeight": "bold",
@@ -56,7 +56,7 @@ exports[`Card Component should match snapshot 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "#ffffff",
         "borderColor": "#e1e8ee",
         "borderWidth": 1,
@@ -64,7 +64,7 @@ exports[`Card Component should match snapshot 1`] = `
         "marginBottom": 0,
         "padding": 15,
         "shadowColor": "rgba(0,0,0, .2)",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 0,
           "width": 0,
         },
@@ -75,7 +75,7 @@ exports[`Card Component should match snapshot 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
         }
       }

@@ -62,47 +62,6 @@
     "react-native-safe-area-context": "^3.1.9 || ^4.0.0",
     "react-native-vector-icons": ">7.0.0"
   },
-  "jest": {
-    "displayName": "@rneui/base",
-    "preset": "react-native",
-    "timers": "fake",
-    "testPathIgnorePatterns": [
-      "./src/SearchBar/__tests__/common.tsx",
-      "<rootDir>/node_modules",
-      "<rootDir>/dist"
-    ],
-    "transformIgnorePatterns": [
-      "<rootDir>/../../node_modules/(?!(@react-native|react-native)/)"
-    ],
-    "coveragePathIgnorePatterns": [
-      "./src/searchbar/__tests__/common.tsx"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.tsx",
-      "!src/**/*.usage.tsx",
-      "!src/index.tsx",
-      "!src/helpers/*.tsx"
-    ],
-    "collectCoverage": true,
-    "globals": {
-      "__DEV__": true
-    },
-    "setupFilesAfterEnv": [
-      "<rootDir>/.ci/setupTests.ts"
-    ],
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
-    "transform": {
-      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-elements/react-native-elements.git",

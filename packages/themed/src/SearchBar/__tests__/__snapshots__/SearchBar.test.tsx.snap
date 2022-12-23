@@ -6,7 +6,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "#ffffff",
         "paddingBottom": 8,
         "paddingTop": 8,
@@ -16,7 +16,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "paddingHorizontal": 0,
           "width": "100%",
         }
@@ -25,15 +25,14 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
     >
       <View
         collapsable={false}
-        nativeID="animatedComponent"
         style={
-          Object {
+          {
             "alignItems": "center",
             "borderBottomWidth": 0,
             "borderColor": "#86939e",
             "flexDirection": "row",
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "translateX": 0,
               },
             ],
@@ -43,7 +42,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "height": 40,
               "justifyContent": "center",
@@ -55,7 +54,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "overflow": "hidden",
               }
             }
@@ -64,7 +63,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             <View
               accessibilityRole="button"
               android_ripple={
-                Object {
+                {
                   "borderless": false,
                   "color": "rgba(0, 0, 0, 0.3)",
                   "radius": -5,
@@ -75,7 +74,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
@@ -86,20 +85,20 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
                 <Text
                   allowFontScaling={false}
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "color": "rgba(0, 0, 0, 0.54)",
                         "fontSize": 25,
                       },
-                      Object {
+                      {
                         "backgroundColor": "transparent",
                       },
-                      Object {
+                      {
                         "fontFamily": "Material Icons",
                         "fontStyle": "normal",
                         "fontWeight": "normal",
                       },
-                      Object {},
+                      {},
                     ]
                   }
                   testID="RNE__ICON__Component"
@@ -120,7 +119,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
           placeholderTextColor="#86939e"
           platform="android"
           style={
-            Object {
+            {
               "color": "#242424",
               "flex": 1,
               "fontSize": 18,
@@ -134,7 +133,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         />
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "height": 40,
               "justifyContent": "center",
@@ -146,7 +145,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "flexDirection": "row",
               }
             }
@@ -155,7 +154,7 @@ exports[`SearchBar wrapper component should apply values from theme 1`] = `
       </View>
       <Text
         style={
-          Object {
+          {
             "color": "#ff190c",
             "fontSize": 12,
             "height": 0,
