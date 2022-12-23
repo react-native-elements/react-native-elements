@@ -3955,7 +3955,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rneui/base@workspace:packages/base"
   dependencies:
-    "@babel/plugin-proposal-private-methods": ^7.18.6
     "@types/color": ^3.0.3
     "@types/hoist-non-react-statics": ^3.3.1
     "@types/react-native-vector-icons": ^6.4.10
@@ -18125,6 +18124,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rneui@workspace:."
   dependencies:
+    "@babel/plugin-proposal-private-methods": ^7.18.6
     "@react-native-community/eslint-config": ^2.0.0
     "@testing-library/react-native": ^11.5.0
     "@types/jest": ^27.4.0

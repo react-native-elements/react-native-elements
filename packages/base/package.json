@@ -44,7 +44,6 @@
   },
   "homepage": "https://reactnativeelements.com/",
   "dependencies": {
-    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@types/react-native-vector-icons": "^6.4.10",
     "color": "^3.2.1",
     "deepmerge": "^4.2.2",

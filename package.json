@@ -92,5 +92,8 @@
       "themed": "@rneui/themed",
       "website/docs": "Docs"
     }
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6"
   }
 }
