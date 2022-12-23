@@ -8,6 +8,8 @@
   Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 </p>
 
+> This project has been renamed to [@rneui/themed](https://www.npmjs.com/package/@rneui/themed). Install using [@rneui/themed](https://www.npmjs.com/package/@rneui/themed) instead. See the guide https://reactnativeelements.com/migration/migration-v3 to upgrade to v4.
+
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
   <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>

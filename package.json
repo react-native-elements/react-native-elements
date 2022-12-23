@@ -1,6 +1,6 @@
 {
   "name": "react-native-elements",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "description": "React Native Elements & UI Toolkit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -80,7 +80,7 @@
     "utility-types": "^3.10.0"
   },
   "peerDependencies": {
-    "react-native-safe-area-context": "^3.1.9",
+    "react-native-safe-area-context": ">= 3.0.0",
     "react-native-vector-icons": ">7.0.0"
   },
   "jest": {
