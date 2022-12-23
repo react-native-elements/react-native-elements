@@ -4313,12 +4313,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native@npm:^0.70.8":
-  version: 0.70.8
-  resolution: "@types/react-native@npm:0.70.8"
+"@types/react-native@npm:^0.66.17":
+  version: 0.66.25
+  resolution: "@types/react-native@npm:0.66.25"
   dependencies:
-    "@types/react": "*"
-  checksum: e951992178f0a6a2a5bc5312824ad67146594840c03ec51156022eacb23e8db7be7470d0c9ad61828dbae840e531bf0cf553205b9dc290b358091329746fd094
+    "@types/react": ^17
+  checksum: 213b40cc607d87b8d6b352592e50cb821f6800a03d3c5ff850dfbedf8582706ec74053c6cc62d66df2ce474104056e0e69ddb53b373d275e6fc70065ef884709
   languageName: node
   linkType: hard
 
@@ -4339,6 +4339,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 981b0993f5b3ea9d3488b8cc883201e8ae47ba7732929f788f450a79fd72829e658080d5084e67caa008e58d989b0abc1d5f36ff0a1cda09315ea3a3c0c9dc11
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17":
+  version: 17.0.52
+  resolution: "@types/react@npm:17.0.52"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: a51b98dd87838d161278fdf9dd78e6a4ff8c018f406d6647f77963e144fb52a8beee40c89fd0e7e840eaeaa8bd9fe2f34519410540b1a52d43a6f8b4d2fbce33
   languageName: node
   linkType: hard
 
@@ -16937,7 +16948,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^17.0.1, react-is@npm:^17.0.2":
+"react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
@@ -17195,17 +17206,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react-test-renderer@npm:17.0.2"
+"react-test-renderer@npm:18.0.0":
+  version: 18.0.0
+  resolution: "react-test-renderer@npm:18.0.0"
   dependencies:
-    object-assign: ^4.1.1
-    react-is: ^17.0.2
+    react-is: ^18.0.0
     react-shallow-renderer: ^16.13.1
-    scheduler: ^0.20.2
+    scheduler: ^0.21.0
   peerDependencies:
-    react: 17.0.2
-  checksum: e6b5c6ed2a0bde2c34f1ab9523ff9bc4c141a271daf730d6b852374e83acc0155d58ab71a318251e953ebfa65b8bebb9c5dce3eba1ccfcbef7cc4e1e8261c401
+    react: ^18.0.0
+  checksum: c0e5250fa2e4c3650e247b986c262631bec68f18c06817269ab7a4e2cffa5a152bb58ce0fe4182ffa8c333e6c2a8d763ac92e0928e5f6914a7aa188c2de1943a
   languageName: node
   linkType: hard
 
@@ -17927,7 +17937,7 @@ __metadata:
     "@react-native-community/eslint-config": ^2.0.0
     "@testing-library/react-native": ^11.5.0
     "@types/jest": ^27.4.0
-    "@types/react-native": ^0.70.8
+    "@types/react-native": ^0.66.17
     "@types/react-test-renderer": ^17.0.1
     babel-jest: ^27.5.1
     codecov: ^3.8.3
@@ -17943,7 +17953,7 @@ __metadata:
     react-docgen-typescript: ^2.2.2
     react-dom: 18.1.0
     react-native: 0.70.5
-    react-test-renderer: ^17.0.2
+    react-test-renderer: 18.0.0
     rimraf: ^3.0.2
     typescript: ^4.6.4
   languageName: unknown
@@ -18059,16 +18069,6 @@ __metadata:
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
   checksum: d3df7d32b897a2c2f28e941f732c71ba90e27c24f62ee918bd4d9a8cfb3553f2f81e5493c7f0be94a11c1911b643a9108f231dd6f60df3fa9586b5d2e3e9e1fe
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.20.2":
-  version: 0.20.2
-  resolution: "scheduler@npm:0.20.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
   languageName: node
   linkType: hard
 
