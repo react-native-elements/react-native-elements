@@ -11,18 +11,20 @@
     ]
   },
   "scripts": {
-    "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
-    "typescript": "tsc --noEmit --composite false",
-    "format": "prettier --check ./packages",
-    "test": "lerna run test",
     "build": "lerna run build",
+    "build:docs-api": "yarn workspace @rneui/doc-gen build",
     "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
-    "example:start": "yarn workspace react-native-elements-app start",
+    "docs-build-api": "yarn workspace @rneui/doc-gen build",
     "docs-build": "yarn docs-build-api && cd website && yarn run build",
-    "docs-build-api": " yarn workspace @rneui/doc-gen build",
+    "example:start": "yarn workspace react-native-elements-app start",
+    "format": "prettier --check ./packages",
+    "lint-staged": "lint-staged",
+    "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
     "postinstall": "husky install",
-    "lint-staged": "lint-staged"
+    "test": "lerna run test",
+    "test:update": "lerna run test -- -u",
+    "typescript": "tsc --noEmit --composite false"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-methods": "^7.18.6",
