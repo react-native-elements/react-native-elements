@@ -8,25 +8,25 @@ describe('Tab Component', () => {
   const items = ['Tab 1', 'Tab 2', 'Tab 3'];
 
   it('should match snapshot', () => {
-    const { queryByA11yRole } = renderWithWrapper(
+    const { queryByRole } = renderWithWrapper(
       <Tab>
         <Tab.Item title="Tab 1" />
         <Tab.Item title="Tab 2" />
         <Tab.Item title="Tab 3" />
       </Tab>
     );
-    expect(queryByA11yRole('tablist')).toBeDefined();
+    expect(queryByRole('tablist')).toBeDefined();
   });
 
   it('should render primary variant ', () => {
-    const { queryByA11yRole } = renderWithWrapper(
+    const { queryByRole } = renderWithWrapper(
       <Tab variant="primary">
         {items.map((i) => (
           <Tab.Item key={i} />
         ))}
       </Tab>
     );
-    const TabItemComponent = queryByA11yRole('tablist')!;
+    const TabItemComponent = queryByRole('tablist')!;
 
     expect(TabItemComponent.props.style).toContainEqual({
       backgroundColor: lightColors?.primary,
@@ -41,10 +41,10 @@ describe('Tab Component', () => {
         ))}
       </Tab>
     );
-    const tabContainer = component.getByA11yRole('tablist');
+    const tabContainer = component.getByRole('tablist');
     expect(tabContainer).toBeDefined();
 
-    const tabs = component.getAllByA11yRole('tab');
+    const tabs = component.getAllByRole('tab');
     expect(tabs.length).toBe(items.length);
     tabs.forEach((tab, index) => {
       if (index === 0) return;

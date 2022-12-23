@@ -26,7 +26,7 @@
     "@react-navigation/stack": "^5.14.9",
     "@rneui/layout": "^0.0.0-alpha.4",
     "expo": "^47.0.0",
-    "expo-asset": "~8.6.2",
+    "expo-asset": "~8.7.0",
     "expo-font": "~11.0.1",
     "expo-linear-gradient": "~12.0.1",
     "expo-splash-screen": "~0.17.5",

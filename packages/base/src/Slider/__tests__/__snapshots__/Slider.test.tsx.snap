@@ -7,7 +7,7 @@ exports[`Slider component should handle all onLayout actions 1`] = `
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 0,
@@ -15,7 +15,7 @@ exports[`Slider component should handle all onLayout actions 1`] = `
     }
     onLayout={[Function]}
     style={
-      Object {
+      {
         "height": 40,
         "justifyContent": "center",
       }
@@ -25,7 +25,7 @@ exports[`Slider component should handle all onLayout actions 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "height": 4,
@@ -34,8 +34,9 @@ exports[`Slider component should handle all onLayout actions 1`] = `
       testID="RNE__Slider_Track_maximum"
     />
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "height": 4,
@@ -47,15 +48,16 @@ exports[`Slider component should handle all onLayout actions 1`] = `
       testID="RNE__Slider_Track_minimum"
     />
     <View
+      collapsable={false}
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "red",
           "borderRadius": 20,
           "height": 40,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": 0,
             },
           ],
@@ -78,7 +80,7 @@ exports[`Slider component should handle all onLayout actions 1`] = `
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
@@ -104,7 +106,7 @@ exports[`Slider component should handle all onLayout actions with vertical orien
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 0,
@@ -112,7 +114,7 @@ exports[`Slider component should handle all onLayout actions with vertical orien
     }
     onLayout={[Function]}
     style={
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "column",
         "width": 40,
@@ -123,7 +125,7 @@ exports[`Slider component should handle all onLayout actions with vertical orien
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "flex": 1,
@@ -133,8 +135,9 @@ exports[`Slider component should handle all onLayout actions with vertical orien
       testID="RNE__Slider_Track_maximum"
     />
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "flex": 1,
@@ -147,15 +150,16 @@ exports[`Slider component should handle all onLayout actions with vertical orien
       testID="RNE__Slider_Track_minimum"
     />
     <View
+      collapsable={false}
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "red",
           "borderRadius": 20,
           "height": 40,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateY": 0,
             },
           ],
@@ -178,7 +182,7 @@ exports[`Slider component should handle all onLayout actions with vertical orien
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
@@ -204,7 +208,7 @@ exports[`Slider component should match snapshot 1`] = `
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 0,
@@ -212,7 +216,7 @@ exports[`Slider component should match snapshot 1`] = `
     }
     onLayout={[Function]}
     style={
-      Object {
+      {
         "height": 40,
         "justifyContent": "center",
       }
@@ -222,7 +226,7 @@ exports[`Slider component should match snapshot 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "height": 4,
@@ -232,9 +236,8 @@ exports[`Slider component should match snapshot 1`] = `
     />
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       style={
-        Object {
+        {
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "height": 0,
@@ -246,16 +249,15 @@ exports[`Slider component should match snapshot 1`] = `
     />
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "red",
           "borderRadius": 20,
           "height": 40,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": 0,
             },
           ],
@@ -278,7 +280,7 @@ exports[`Slider component should match snapshot 1`] = `
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
@@ -304,7 +306,7 @@ exports[`Slider component should render vertically 1`] = `
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 1,
         "min": 0,
         "now": 0,
@@ -312,7 +314,7 @@ exports[`Slider component should render vertically 1`] = `
     }
     onLayout={[Function]}
     style={
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "column",
         "width": 40,
@@ -323,7 +325,7 @@ exports[`Slider component should render vertically 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "flex": 1,
@@ -334,9 +336,8 @@ exports[`Slider component should render vertically 1`] = `
     />
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       style={
-        Object {
+        {
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "flex": 1,
@@ -349,16 +350,15 @@ exports[`Slider component should render vertically 1`] = `
     />
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "red",
           "borderRadius": 20,
           "height": 40,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateY": 0,
             },
           ],
@@ -381,7 +381,7 @@ exports[`Slider component should render vertically 1`] = `
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,
@@ -407,7 +407,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 100,
         "min": 0,
         "now": 0,
@@ -415,7 +415,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     }
     onLayout={[Function]}
     style={
-      Object {
+      {
         "height": 40,
         "justifyContent": "center",
       }
@@ -425,7 +425,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "height": 4,
@@ -435,9 +435,8 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     />
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       style={
-        Object {
+        {
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "height": 0,
@@ -449,16 +448,15 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     />
     <View
       collapsable={false}
-      nativeID="animatedComponent"
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "red",
           "borderRadius": 20,
           "height": 40,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": 0,
             },
           ],
@@ -481,7 +479,7 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "orange",
           "bottom": 0,
           "left": 0,
@@ -499,10 +497,9 @@ exports[`Slider component should render with ThumbTouchRect 1`] = `
     >
       <View
         collapsable={false}
-        nativeID="animatedComponent"
         pointerEvents="none"
         style={
-          Object {
+          {
             "height": 40,
             "left": 0,
             "top": -20,
@@ -522,7 +519,7 @@ exports[`Slider component should support value changes 1`] = `
   <View
     accessibilityRole="adjustable"
     accessibilityValue={
-      Object {
+      {
         "max": 10,
         "min": 1,
         "now": 1,
@@ -530,7 +527,7 @@ exports[`Slider component should support value changes 1`] = `
     }
     onLayout={[Function]}
     style={
-      Object {
+      {
         "height": 40,
         "justifyContent": "center",
       }
@@ -540,7 +537,7 @@ exports[`Slider component should support value changes 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "#b3b3b3",
           "borderRadius": 2,
           "height": 4,
@@ -549,8 +546,9 @@ exports[`Slider component should support value changes 1`] = `
       testID="RNE__Slider_Track_maximum"
     />
     <View
+      collapsable={false}
       style={
-        Object {
+        {
           "backgroundColor": "#3f3f3f",
           "borderRadius": 2,
           "height": 0,
@@ -561,15 +559,16 @@ exports[`Slider component should support value changes 1`] = `
       testID="RNE__Slider_Track_minimum"
     />
     <View
+      collapsable={false}
       onLayout={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "red",
           "borderRadius": 20,
           "height": 40,
           "position": "absolute",
-          "transform": Array [
-            Object {
+          "transform": [
+            {
               "translateX": 0,
             },
           ],
@@ -592,7 +591,7 @@ exports[`Slider component should support value changes 1`] = `
       onStartShouldSetResponder={[Function]}
       onStartShouldSetResponderCapture={[Function]}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "bottom": 0,
           "left": 0,

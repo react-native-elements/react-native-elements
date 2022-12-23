@@ -213,7 +213,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   }, [dimensions, highlightColor]);
 
   const HighlightedButton: React.FC = () => {
-    if (closeOnlyOnBackdropPress) {
+    if (!closeOnlyOnBackdropPress) {
       return (
         <Pressable
           testID="tooltipTouchableHighlightedButton"
@@ -225,7 +225,12 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
       );
     } else {
       return (
-        <View style={TooltipHighlightedButtonStyle}>{props.children}</View>
+        <View
+          testID="tooltipTouchableHighlightedButton"
+          style={TooltipHighlightedButtonStyle}
+        >
+          {props.children}
+        </View>
       );
     }
   };

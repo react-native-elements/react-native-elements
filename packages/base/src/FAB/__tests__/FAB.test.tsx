@@ -56,9 +56,10 @@ describe('FAB Component', () => {
 
   it('should handle onPress', () => {
     const onPress = jest.fn();
-    const { queryByA11yRole } = renderWithWrapper(<FAB onPress={onPress} />);
-    const button = queryByA11yRole('button');
-    fireEvent.press(button);
+    const { queryByRole } = renderWithWrapper(<FAB onPress={onPress} />);
+    const button = queryByRole('button');
+    expect(button).toBeTruthy();
+    fireEvent.press(button!);
     expect(onPress).toBeCalledTimes(1);
   });
 

@@ -18,7 +18,7 @@ exports[`Tile component should match snapshot 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "height": 600,
         "width": 750,
       }
@@ -27,7 +27,7 @@ exports[`Tile component should match snapshot 1`] = `
     <View
       accessibilityIgnoresInvertColors={true}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "flex": 2,
           "overflow": "hidden",
@@ -39,12 +39,12 @@ exports[`Tile component should match snapshot 1`] = `
         onLoad={[Function]}
         resizeMode="cover"
         source={
-          Object {
+          {
             "uri": "http://google.com",
           }
         }
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -61,10 +61,9 @@ exports[`Tile component should match snapshot 1`] = `
         accessibilityElementsHidden={true}
         collapsable={false}
         importantForAccessibility="no-hide-descendants"
-        nativeID="animatedComponent"
         pointerEvents="none"
         style={
-          Object {
+          {
             "bottom": 0,
             "left": 0,
             "opacity": 1,
@@ -76,7 +75,7 @@ exports[`Tile component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#bdbdbd",
               "bottom": 0,
@@ -92,7 +91,7 @@ exports[`Tile component should match snapshot 1`] = `
       </View>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -106,7 +105,7 @@ exports[`Tile component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "alignSelf": "center",
               "justifyContent": "center",
@@ -117,7 +116,7 @@ exports[`Tile component should match snapshot 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "paddingBottom": 5,
           "paddingLeft": 15,
           "paddingRight": 15,
@@ -128,7 +127,7 @@ exports[`Tile component should match snapshot 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "backgroundColor": "rgba(0,0,0,0)",
             "color": "#242424",
             "fontSize": 28.285714285714285,
@@ -136,9 +135,7 @@ exports[`Tile component should match snapshot 1`] = `
           }
         }
         testID="tileTitle"
-      >
-        
-      </Text>
+      />
     </View>
   </View>
 </View>
@@ -162,7 +159,7 @@ exports[`Tile component should render tile with icon 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "height": 70,
         "width": 750,
       }
@@ -171,7 +168,7 @@ exports[`Tile component should render tile with icon 1`] = `
     <View
       accessibilityIgnoresInvertColors={true}
       style={
-        Object {
+        {
           "backgroundColor": "transparent",
           "flex": 2,
           "height": 70,
@@ -184,12 +181,12 @@ exports[`Tile component should render tile with icon 1`] = `
         onLoad={[Function]}
         resizeMode="cover"
         source={
-          Object {
+          {
             "uri": "http://google.com",
           }
         }
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -206,10 +203,9 @@ exports[`Tile component should render tile with icon 1`] = `
         accessibilityElementsHidden={true}
         collapsable={false}
         importantForAccessibility="no-hide-descendants"
-        nativeID="animatedComponent"
         pointerEvents="none"
         style={
-          Object {
+          {
             "bottom": 0,
             "left": 0,
             "opacity": 1,
@@ -221,7 +217,7 @@ exports[`Tile component should render tile with icon 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#bdbdbd",
               "bottom": 0,
@@ -237,7 +233,7 @@ exports[`Tile component should render tile with icon 1`] = `
       </View>
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "bottom": 0,
             "justifyContent": "center",
@@ -251,7 +247,7 @@ exports[`Tile component should render tile with icon 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "alignSelf": "center",
               "height": 70,
@@ -261,7 +257,7 @@ exports[`Tile component should render tile with icon 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "overflow": "hidden",
               }
             }
@@ -270,7 +266,7 @@ exports[`Tile component should render tile with icon 1`] = `
             <View
               accessibilityRole="button"
               android_ripple={
-                Object {
+                {
                   "borderless": false,
                   "color": "rgba(0, 0, 0, 0.3)",
                   "radius": -5,
@@ -281,7 +277,7 @@ exports[`Tile component should render tile with icon 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
                     "justifyContent": "center",
@@ -292,20 +288,20 @@ exports[`Tile component should render tile with icon 1`] = `
                 <Text
                   allowFontScaling={false}
                   style={
-                    Array [
-                      Object {
+                    [
+                      {
                         "color": "#242424",
                         "fontSize": 24,
                       },
-                      Object {
+                      {
                         "backgroundColor": "transparent",
                       },
-                      Object {
+                      {
                         "fontFamily": "FontAwesome",
                         "fontStyle": "normal",
                         "fontWeight": "normal",
                       },
-                      Object {},
+                      {},
                     ]
                   }
                   testID="RNE__ICON__Component"
@@ -320,7 +316,7 @@ exports[`Tile component should render tile with icon 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "height": 70,
           "paddingBottom": 5,
           "paddingLeft": 15,
@@ -332,7 +328,7 @@ exports[`Tile component should render tile with icon 1`] = `
       <Text
         accessibilityRole="text"
         style={
-          Object {
+          {
             "backgroundColor": "yellow",
             "color": "#242424",
             "fontSize": 28.285714285714285,

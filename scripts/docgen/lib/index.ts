@@ -1,7 +1,7 @@
 import React from 'react';
 import { StackProps } from '@rneui/layout';
 
-declare const Stack: React.ElementType<StackProps>;
+declare const Stack: React.FC<StackProps>;
 
 type UsageMetadata = Record<string, any> & {
   live: boolean;
