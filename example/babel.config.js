@@ -24,7 +24,7 @@ module.exports = function (api) {
             '@expo/vector-icons/Icon': path.resolve(
               __dirname,
               '..',
-              'node_modules/@expo/vector-icons/Icon'
+              'node_modules/@expo/vector-icons/build/Icons'
             ),
             '@rneui/base': path.resolve(__dirname, '..', 'packages/base/src'),
           },
