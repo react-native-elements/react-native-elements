@@ -1,5 +1,6 @@
 {
   "name": "rneui",
+  "displayName": "React Native Elements UI Toolkit",
   "private": true,
   "packageManager": "yarn@3.2.4",
   "workspaces": {
@@ -24,6 +25,7 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/react-native": "^11.5.0",
     "@types/jest": "^27.4.0",
@@ -92,8 +94,5 @@
       "themed": "@rneui/themed",
       "website/docs": "Docs"
     }
-  },
-  "dependencies": {
-    "@babel/plugin-proposal-private-methods": "^7.18.6"
   }
 }
