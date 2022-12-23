@@ -6,11 +6,9 @@
   "files": [
     "src"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\""
-  },
-  "author": "",
-  "license": "ISC",
+  "scripts": {},
+  "author": "Arpit Bhalla <arpitbhalla@icloud.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/dedent": "^0.7.0",
     "@types/lodash.orderby": "^4.6.7",
@@ -19,7 +17,6 @@
     "handlebars": "^4.7.7",
     "lodash.orderby": "^4.6.0",
     "ora": "5.4.1",
-    "react": "18.0.0",
     "react-docgen-typescript": "^2.2.2",
     "react-dom": "18.0.0",
     "ts-node": "^10.7.0",

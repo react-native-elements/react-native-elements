@@ -3984,7 +3984,6 @@ __metadata:
     handlebars: ^4.7.7
     lodash.orderby: ^4.6.0
     ora: 5.4.1
-    react: 18.0.0
     react-docgen-typescript: ^2.2.2
     react-dom: 18.0.0
     ts-node: ^10.7.0
@@ -9172,6 +9171,21 @@ __metadata:
     path-browserify: ^1.0.0
     url-parse: ^1.5.9
   checksum: d4576be5afd3b705544af40359c51e2f279044e624b1f03f611a14d35daf7089b2da6a9eac8010c7ae28dc0f69870e66827fb90f74decd75f02452c49e21af8c
+  languageName: node
+  linkType: hard
+
+"expo-asset@npm:~8.7.0":
+  version: 8.7.0
+  resolution: "expo-asset@npm:8.7.0"
+  dependencies:
+    blueimp-md5: ^2.10.0
+    expo-constants: ~14.0.0
+    expo-file-system: ~15.1.0
+    invariant: ^2.2.4
+    md5-file: ^3.2.3
+    path-browserify: ^1.0.0
+    url-parse: ^1.5.9
+  checksum: 49ca5e85ebdb6145f8032ee186643a7d17202db89965dc3f36eb56155c31220c7da49ab87b2d050a9e8c3d1a6af35046263c12a0159e857f768aa21ea847879c
   languageName: node
   linkType: hard
 
@@ -17016,6 +17030,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:18.1.0":
+  version: 18.1.0
+  resolution: "react-dom@npm:18.1.0"
+  dependencies:
+    loose-envify: ^1.1.0
+    scheduler: ^0.22.0
+  peerDependencies:
+    react: ^18.1.0
+  checksum: bb0d48eeb0b297c79c2a03978baa29f5b3ff7ba3d070b21e34c9af1a6e7fdf0ca8b8d73e41f9214d91ad40eeb6d1f3559f884cbbc338713374a51320637c23df
+  languageName: node
+  linkType: hard
+
 "react-error-overlay@npm:^6.0.9":
   version: 6.0.10
   resolution: "react-error-overlay@npm:6.0.10"
@@ -17092,13 +17118,13 @@ __metadata:
     babel-preset-expo: ~9.2.1
     expo: ^47.0.0
     expo-app-loading: ~2.1.1
-    expo-asset: ~8.6.2
+    expo-asset: ~8.7.0
     expo-font: ~11.0.1
     expo-linear-gradient: ~12.0.1
     expo-updates: ~0.15.6
     jest-expo: ^47.0.0
-    react: 18.0.0
-    react-dom: 18.0.0
+    react: 18.1.0
+    react-dom: 18.1.0
     react-native: 0.70.5
     react-native-appearance: ~0.3.4
     react-native-gesture-handler: ~2.8.0
@@ -17398,12 +17424,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.0.0":
-  version: 18.0.0
-  resolution: "react@npm:18.0.0"
+"react@npm:18.1.0":
+  version: 18.1.0
+  resolution: "react@npm:18.1.0"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 293020b96536b3c7113ee57ca5c990a3f25649d1751b1c7a3aabd16dff0691fe9f1eed1206616d0906d05933536052037340a0c8d0941ff870b0eb469a2f975b
+  checksum: 5bb296b561b43ef2220395da4faac86c14a087c8c80e1a7598a5740f01ee605c11eaf249985c1e2000971c4cd32ccb46d40f00479bbd9fb6b1c7cf857393b7d4
   languageName: node
   linkType: hard
 
@@ -18114,7 +18140,7 @@ __metadata:
     lerna: ^4.0.0
     lint-staged: ^12.4.1
     prettier: ^2.6.2
-    react: 18.0.0
+    react: 18.1.0
     react-docgen-typescript: ^2.2.2
     react-dom: 18.0.0
     react-native: ^0.70.5

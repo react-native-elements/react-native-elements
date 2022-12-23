@@ -39,7 +39,7 @@
     "lerna": "^4.0.0",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
-    "react": "18.0.0",
+    "react": "18.1.0",
     "react-docgen-typescript": "^2.2.2",
     "react-dom": "18.0.0",
     "react-native": "^0.70.5",
