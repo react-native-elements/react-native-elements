@@ -21,10 +21,10 @@ module.exports = function (api) {
               '..',
               'packages/themed/src'
             ),
-            '@rneui/circular-slider': path.resolve(
+            '@expo/vector-icons/Icon': path.resolve(
               __dirname,
               '..',
-              'packages/circular-slider/src'
+              'node_modules/@expo/vector-icons/Icon'
             ),
             '@rneui/base': path.resolve(__dirname, '..', 'packages/base/src'),
           },
