@@ -19,7 +19,7 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="row margin-horiz--lg">
           <div className="col col--4">
             <img
-              src="/img/website/app-preview3.png"
+              src="https://qr.expo.dev/expo-go?owner=rneui&slug=react-native-elements&releaseChannel=default&host=exp.host"
               style={{ width: 200, left: 60, top: -100 }}
             />
           </div>

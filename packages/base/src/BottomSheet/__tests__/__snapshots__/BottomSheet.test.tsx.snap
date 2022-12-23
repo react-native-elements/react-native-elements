@@ -39,6 +39,14 @@ exports[`BottomSheet Component renders correctly 1`] = `
       testID="RNE__Overlay__backdrop"
     />
     <RNCSafeAreaView
+      edges={
+        [
+          "bottom",
+          "left",
+          "right",
+          "top",
+        ]
+      }
       pointerEvents="box-none"
       style={
         {

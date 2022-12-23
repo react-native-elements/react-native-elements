@@ -9,6 +9,7 @@ module.exports = function (api) {
       [
         'module-resolver',
         {
+          extensions: ['.js', '.ios.js', '.android.js', '.json', '.tsx', '.ts'],
           alias: {
             '@rneui/base/dist': path.resolve(
               __dirname,
@@ -20,10 +21,10 @@ module.exports = function (api) {
               '..',
               'packages/themed/src'
             ),
-            '@rneui/circular-slider': path.resolve(
+            '@expo/vector-icons/Icon': path.resolve(
               __dirname,
               '..',
-              'packages/circular-slider/src'
+              'node_modules/@expo/vector-icons/build/Icons'
             ),
             '@rneui/base': path.resolve(__dirname, '..', 'packages/base/src'),
           },

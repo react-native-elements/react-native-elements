@@ -55,11 +55,11 @@
     "@types/color": "^3.0.3",
     "@types/hoist-non-react-statics": "^3.3.1",
     "metro-react-native-babel-preset": "^0.70.2",
-    "react-native-safe-area-context": "^3.4.1",
+    "react-native-safe-area-context": "4.4.1",
     "react-native-vector-icons": "^7.1.0"
   },
   "peerDependencies": {
-    "react-native-safe-area-context": "^3.1.9 || ^4.0.0",
+    "react-native-safe-area-context": ">= 3.0.0",
     "react-native-vector-icons": ">7.0.0"
   },
   "repository": {
