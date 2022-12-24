@@ -12,31 +12,38 @@ import {
   Dimensions,
   Pressable,
 } from 'react-native';
+import { Text } from '../Text';
 import Triangle from './components/Triangle';
-import { ScreenWidth, isIOS, RneFunctionComponent } from '../helpers';
+import {
+  ScreenWidth,
+  isIOS,
+  RneFunctionComponent,
+  renderNode,
+} from '../helpers';
 import { getElementVisibleWidth } from './helpers/getTooltipCoordinate';
 import { getTooltipStyle } from './helpers/getTooltipStyle';
 
 export interface TooltipProps {
   /** To show the tooltip. */
-  visible?: boolean;
+  isVisible?: boolean;
+
+  /** Function which gets called on opening the tooltip. */
+  onShow?(): void;
+
+  /** Function which gets called on closing the tooltip. */
+  onDismiss?(): void;
 
   /** Flag to determine whether or not to display the pointer. */
   withPointer?: boolean;
 
   /** Component to be rendered as the display container. */
-  popover?: React.ReactElement<{}>;
+  popover?: string | React.ReactElement<{}>;
 
   /** Flag to determine to toggle or not the tooltip on press. */
   toggleOnPress?: boolean;
 
   /** Define type of action that should trigger tooltip. Available options _onPress_, _onLongPress_ */
-  toggleAction?:
-    | string
-    | 'onPress'
-    | 'onLongPress'
-    | 'onPressIn'
-    | 'onPressOut';
+  toggleAction?: 'onPress' | 'onLongPress' | 'onPressIn' | 'onPressOut';
 
   /** Tooltip container height. Necessary in order to render the container in the correct place. Pass height according to the size of the content rendered inside the container. */
   height?: number;
@@ -49,12 +56,6 @@ export interface TooltipProps {
 
   /** Color of tooltip pointer, it defaults to the [`backgroundColor`](#backgroundcolor) if none is passed. */
   pointerColor?: ColorValue;
-
-  /** Function which gets called on closing the tooltip. */
-  onClose?(): void;
-
-  /** Function which gets called on opening the tooltip. */
-  onOpen?(): void;
 
   /** Color of overlay shadow when tooltip is open. */
   overlayColor?: ColorValue;
@@ -84,27 +85,6 @@ export interface TooltipProps {
   animationType?: 'fade' | 'none';
 }
 
-/** Tooltips display informative text when users tap on an element.
- * @usage
- * ### Example
- *```tsx live
-function RNETooltip() {
-  const [open, setOpen] = React.useState(false);
-  return (
-    <Stack row align="center">
-      <Tooltip
-        visible={open}
-        onOpen={() => setOpen(true)}
-        onClose={() => setOpen(false)}
-        popover={<Text style={{color:'#fff'}}>Tooltip text</Text>}
-      >
-        Click me
-      </Tooltip>
-    </Stack>
-  );
-}
- * ```
- */
 export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   withOverlay = true,
   overlayColor = '#fafafa14',
@@ -115,12 +95,13 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   height = 40,
   width = 150,
   containerStyle = {},
-  backgroundColor = '#617080',
+  theme,
+  backgroundColor = theme.colors.primary,
   pointerColor = backgroundColor,
   pointerStyle,
-  onClose = () => {},
-  onOpen = () => {},
-  visible = false,
+  isVisible = false,
+  onShow,
+  onDismiss,
   skipAndroidStatusBar = false,
   ModalComponent = Modal,
   closeOnlyOnBackdropPress = false,
@@ -129,6 +110,11 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
 }) => {
   const isMounted = React.useRef(false);
   const renderedElement = React.useRef<View>(null);
+  const [isOpenInternal, setIsOpenInternal] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsOpenInternal(isVisible);
+  }, [isVisible]);
 
   const [dimensions, setDimensions] = React.useState({
     yOffset: 0,
@@ -147,8 +133,8 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
         pageOffsetX = 0,
         pageOffsetY = 0
       ) => {
-        isMounted.current &&
-          setDimensions({
+        if (isMounted.current) {
+          const mountedDimensions = {
             xOffset: pageOffsetX,
             yOffset:
               isIOS || skipAndroidStatusBar
@@ -161,15 +147,25 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
                   }),
             elementWidth: _width,
             elementHeight: _height,
-          });
+          };
+          setDimensions(mountedDimensions);
+        }
       }
     );
   }, [skipAndroidStatusBar]);
 
   const handleOnPress = React.useCallback(() => {
     getElementPosition();
-    isMounted.current && toggleOnPress && (visible ? onClose?.() : onOpen?.());
-  }, [getElementPosition, onClose, onOpen, toggleOnPress, visible]);
+    if (isMounted.current && toggleOnPress) {
+      setIsOpenInternal((prevState) => {
+        if (onDismiss || onShow) {
+          prevState ? onDismiss?.() : onShow?.();
+          return prevState;
+        }
+        return !prevState;
+      });
+    }
+  }, [getElementPosition, onDismiss, onShow, toggleOnPress]);
 
   const Pointer: React.FC<{
     tooltipY: number | string;
@@ -282,8 +278,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
       </Pressable>
       <ModalComponent
         transparent
-        visible={visible}
-        onShow={onOpen}
+        visible={isOpenInternal}
         animationType={animationType}
       >
         <TouchableOpacity
@@ -298,7 +293,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
             <HighlightedButton />
             <Pointer tooltipY={tooltipStyle.top} />
             <View style={tooltipStyle} testID="tooltipPopoverContainer">
-              {props.popover}
+              {renderNode(Text, props.popover, { theme })}
             </View>
           </View>
         </TouchableOpacity>

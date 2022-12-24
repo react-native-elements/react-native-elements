@@ -14,7 +14,7 @@ export interface FABProps extends Omit<ButtonProps, 'size' | 'color'> {
   placement?: 'left' | 'right';
 
   /** Decide the visibility of the FAB. */
-  visible?: boolean;
+  isVisible?: boolean;
 
   /** Transform Extended Label text to uppercase. */
   upperCase?: boolean;
@@ -29,7 +29,7 @@ export interface FABProps extends Omit<ButtonProps, 'size' | 'color'> {
 export const FAB: RneFunctionComponent<FABProps> = ({
   color,
   size = 'large',
-  visible = true,
+  isVisible = true,
   disabled,
   upperCase,
   theme = defaultTheme,
@@ -42,16 +42,16 @@ export const FAB: RneFunctionComponent<FABProps> = ({
   ...rest
 }) => {
   const { current: animation } = React.useRef(
-    new Animated.Value(Number(visible))
+    new Animated.Value(Number(isVisible))
   );
 
   React.useEffect(() => {
     Animated.timing(animation, {
-      toValue: Number(visible),
+      toValue: Number(isVisible),
       duration: 200,
       useNativeDriver: true,
     }).start();
-  }, [animation, visible]);
+  }, [animation, isVisible]);
 
   return (
     <Animated.View
