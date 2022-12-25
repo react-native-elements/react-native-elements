@@ -6,7 +6,7 @@ const config = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
-  clientModules: [require.resolve('./snackPlayerInitializer.js')],
+  clientModules: [require.resolve('./plugins/snackPlayerInitializer.js')],
   /* path to images for header/footer */
   favicon: '/img/website/logo.png',
 

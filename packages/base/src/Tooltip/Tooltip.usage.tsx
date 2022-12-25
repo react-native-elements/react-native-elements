@@ -1,6 +1,6 @@
-import React from 'react';
-import { Tooltip, Text } from '..';
 import { info, Stack, usage } from '@rneui/doc-gen';
+import React from 'react';
+import { Text, Tooltip } from '..';
 
 info('Tooltips display informative text when users tap on an element.');
 

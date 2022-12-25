@@ -19,6 +19,7 @@ import {
   isIOS,
   RneFunctionComponent,
   renderNode,
+  defaultTheme,
 } from '../helpers';
 import { getElementVisibleWidth } from './helpers/getTooltipCoordinate';
 import { getTooltipStyle } from './helpers/getTooltipStyle';
@@ -95,7 +96,7 @@ export const Tooltip: RneFunctionComponent<TooltipProps> = ({
   height = 40,
   width = 150,
   containerStyle = {},
-  theme,
+  theme = defaultTheme,
   backgroundColor = theme.colors.primary,
   pointerColor = backgroundColor,
   pointerStyle,

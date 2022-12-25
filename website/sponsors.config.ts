@@ -21,12 +21,6 @@ export const sponsors: Sponsor[] = [
     colSize: 4,
     items: [
       {
-        title: 'onKeyPress LLC',
-        img: 'https://avatars.githubusercontent.com/u/78321386?s=200&v=4',
-        link: 'https://onkeypress.io/',
-        desc: 'It offers a variety of design, technology and marketing services',
-      },
-      {
         title: 'Icons8',
         link: 'https://icons8.com/',
         img: 'https://avatars.githubusercontent.com/u/6615749?s=200&v=4',
