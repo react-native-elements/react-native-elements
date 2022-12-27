@@ -1,19 +1,24 @@
 import React from 'react';
 import {
-  Text,
-  View,
-  TextInput,
   Animated,
   Easing,
   Platform,
-  StyleSheet,
-  ViewStyle,
   StyleProp,
-  TextStyle,
+  StyleSheet,
+  Text,
+  TextInput,
   TextInputProps,
+  TextStyle,
+  View,
+  ViewStyle,
 } from 'react-native';
-import { renderNode, patchWebProps, defaultTheme, Theme } from '../helpers';
-import { fonts } from '../helpers';
+import {
+  defaultTheme,
+  fonts,
+  patchWebProps,
+  renderNode,
+  Theme,
+} from '../helpers';
 import { Icon, IconNode } from '../Icon';
 
 const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
@@ -99,7 +104,9 @@ export interface InputProps
   renderErrorMessage?: boolean;
 }
 
-export class Input extends React.Component<InputProps & { theme?: Theme }> {
+export class Input extends React.Component<
+  InputProps & { theme: Theme; updateTheme: any; replaceTheme: any }
+> {
   static displayName = 'Input';
   input: any;
   shakeAnimationValue = new Animated.Value(0);

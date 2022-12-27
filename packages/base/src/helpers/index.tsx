@@ -15,8 +15,8 @@ const getBehaviorType = Platform.OS === 'ios' ? 'padding' : 'height';
 
 export type StringOmit<K extends string> = K | Omit<string, K>;
 
-type ThemeProps<T> = T & {
-  theme: Theme;
+export type ThemeProps<T> = T & {
+  theme?: Theme;
 };
 
 export type RneFunctionComponent<T> = React.FunctionComponent<

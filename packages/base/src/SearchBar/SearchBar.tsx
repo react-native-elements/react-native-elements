@@ -1,8 +1,8 @@
 import React from 'react';
-import { SearchBarIOS } from './SearchBar-ios';
+import { Theme } from '../helpers';
 import { SearchBarAndroid } from './SearchBar-android';
 import { SearchBarDefault } from './SearchBar-default';
-import { Theme } from '../helpers';
+import { SearchBarIOS } from './SearchBar-ios';
 import { SearchBarProps } from './types';
 
 const SEARCH_BAR_COMPONENTS = {
@@ -14,9 +14,7 @@ const SEARCH_BAR_COMPONENTS = {
 export type { SearchBarProps };
 
 export class SearchBar extends React.Component<
-  SearchBarProps & {
-    theme?: Theme;
-  }
+  SearchBarProps & { theme: Theme; updateTheme: any; replaceTheme: any }
 > {
   searchBar!: SearchBarIOS;
   static defaultProps = {
