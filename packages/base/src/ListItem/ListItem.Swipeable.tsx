@@ -36,7 +36,8 @@ export interface ListItemSwipeableProps extends ListItemProps {
   /** Width of swipe right container.*/
   rightWidth?: number;
 
-  /**  */
+  /** minimum horizontal distance to open content
+   */
   minSlideWidth?: number;
 
   /** Handler for swipe in either direction */
@@ -171,7 +172,6 @@ export const ListItemSwipeable: RneFunctionComponent<
           {typeof rightContent === 'function'
             ? rightContent(resetCallBack)
             : rightContent}
-          {/* <CallableContent content={rightContent} callback={resetCallBack} /> */}
         </View>
       </View>
       <Animated.View
@@ -189,22 +189,6 @@ export const ListItemSwipeable: RneFunctionComponent<
     </View>
   );
 };
-
-// const CallableContent = <
-//   Callback extends Function,
-//   ContentType extends React.ReactNode
-// >({
-//   callback,
-//   content,
-// }: {
-//   content: ContentType | ((callback: Callback) => ContentType);
-//   callback: Callback;
-// }) => {
-//   return React.useMemo(
-//     () => (typeof content === 'function' ? content(callback) : content),
-//     [callback, content]
-//   );
-// };
 
 const styles = StyleSheet.create({
   actions: {
