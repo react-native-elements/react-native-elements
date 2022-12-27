@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -23,7 +23,7 @@
     "noStrictGenericChecks": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "target": "ES6",
+    "target": "ES5",
     "allowJs": true
   },
   "exclude": [

@@ -2,12 +2,9 @@
   "name": "@rneui/base",
   "version": "4.0.0-rc.7",
   "description": "Cross Platform React Native UI Toolkit",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "prepublish": "tsc --composite false",
-  "files": [
-    "dist"
-  ],
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +26,7 @@
     "bootstrap"
   ],
   "scripts": {
-    "build": "tsc --composite false",
+    "build": "tsc --composite false && sh build.sh",
     "test": "jest",
     "test:update": "jest -u",
     "test:ci": "jest --runInBand",

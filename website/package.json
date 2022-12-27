@@ -1,5 +1,5 @@
 {
-  "name": "rne-website",
+  "name": "@rneui/website",
   "license": "MIT",
   "packageManager": "yarn@3.2.4",
   "scripts": {

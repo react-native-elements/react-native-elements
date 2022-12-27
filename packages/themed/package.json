@@ -2,8 +2,8 @@
   "name": "@rneui/themed",
   "version": "4.0.0-rc.7",
   "description": "Cross Platform React Native UI Toolkit",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "prepublish": "tsc --composite false",
   "files": [
     "dist"
