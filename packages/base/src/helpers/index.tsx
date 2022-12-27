@@ -15,11 +15,12 @@ const getBehaviorType = Platform.OS === 'ios' ? 'padding' : 'height';
 
 export type StringOmit<K extends string> = K | Omit<string, K>;
 
+type ThemeProps<T> = T & {
+  theme: Theme;
+};
+
 export type RneFunctionComponent<T> = React.FunctionComponent<
-  T & {
-    theme?: Theme;
-    children?: React.ReactNode | undefined;
-  }
+  React.PropsWithChildren<ThemeProps<T>>
 >;
 
 export interface ThemeSpacing {
@@ -35,11 +36,13 @@ export const defaultSpacing = { xs: 2, sm: 4, md: 8, lg: 12, xl: 24 };
 export const defaultTheme: Theme = {
   colors: lightColors,
   spacing: defaultSpacing,
+  mode: 'light',
 };
 
 export type Theme = {
   colors: Colors;
   spacing: ThemeSpacing;
+  mode: 'light' | 'dark';
 };
 
 export const androidRipple = (

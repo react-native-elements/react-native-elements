@@ -11,8 +11,6 @@ import { View } from 'react-native';
 import { ReactTestInstance } from 'react-test-renderer';
 import { defaultSpacing } from '../theme';
 
-import '@rneui/themed';
-
 declare module '../..' {
   export interface Theme {
     myCustomProperty: string;
