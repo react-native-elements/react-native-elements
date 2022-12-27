@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "build:docs-api": "yarn workspace @rneui/doc-gen build",
+    "build:docs": "yarn workspace @rneui/doc-gen build",
+    "build:website": "cd website && yarn build",
     "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
     "docs-build-api": "yarn workspace @rneui/doc-gen build",

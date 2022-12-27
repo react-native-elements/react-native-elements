@@ -1,7 +1,7 @@
 import path from 'path';
 import { ParserOptions, withCustomConfig } from 'react-docgen-typescript';
 
-const themeProps = ['theme'];
+const themeProps = ['theme', 'replaceTheme', 'updateTheme'];
 
 // The config object is passed to the parser.
 const parserOptions: ParserOptions = {
