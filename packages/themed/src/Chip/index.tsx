@@ -1,4 +1,4 @@
-import { Chip, ChipProps } from '@rneui/base/dist/Chip/Chip';
+import { Chip, ChipProps } from '@rneui/base/Chip/Chip';
 import { withTheme } from '../config';
 
 export { Chip };

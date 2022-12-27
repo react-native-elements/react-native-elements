@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@rneui/*": ["./packages/*/src"],
+      "@rneui/base/*": ["./packages/base/src/*"],
       "@rneui/base/dist/*": ["./packages/base/src/*"]
     },
     "removeComments": true,

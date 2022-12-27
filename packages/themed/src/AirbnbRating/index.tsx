@@ -1,8 +1,5 @@
 import { withTheme } from '../config';
-import {
-  AirbnbRating,
-  TapRatingProps,
-} from '@rneui/base/dist/AirbnbRating/index';
+import { AirbnbRating, TapRatingProps } from '@rneui/base/AirbnbRating';
 
 export { AirbnbRating };
 export type { TapRatingProps };

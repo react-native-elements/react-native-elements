@@ -1,5 +1,5 @@
 import { withTheme } from '../config';
-import { FAB, FABProps } from '@rneui/base/dist/FAB/FAB';
+import { FAB, FABProps } from '@rneui/base/FAB/FAB';
 
 export { FAB };
 export type { FABProps };

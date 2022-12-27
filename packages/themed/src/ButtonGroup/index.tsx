@@ -2,7 +2,7 @@ import { withTheme } from '../config';
 import {
   ButtonGroup,
   ButtonGroupProps,
-} from '@rneui/base/dist/ButtonGroup/ButtonGroup';
+} from '@rneui/base/ButtonGroup/ButtonGroup';
 
 export { ButtonGroup };
 export type { ButtonGroupProps };

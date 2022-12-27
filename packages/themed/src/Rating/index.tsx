@@ -1,5 +1,5 @@
 import { withTheme } from '../config';
-import { Rating, SwipeRatingProps } from '@rneui/base/dist/Rating/Rating';
+import { Rating, SwipeRatingProps } from '@rneui/base/Rating/Rating';
 
 export { Rating };
 export type { SwipeRatingProps };

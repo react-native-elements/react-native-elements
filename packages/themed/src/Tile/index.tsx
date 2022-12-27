@@ -1,6 +1,6 @@
 import { withTheme } from '../config';
-import { Tile, TileProps } from '@rneui/base/dist/Tile/Tile';
-import { FeaturedTile as BaseFeaturedTile } from '@rneui/base/dist/Tile/components/FeaturedTile';
+import { Tile, TileProps } from '@rneui/base/Tile/Tile';
+import { FeaturedTile as BaseFeaturedTile } from '@rneui/base/Tile/components/FeaturedTile';
 
 export type { TileProps };
 export const FeaturedTile = withTheme<TileProps>(

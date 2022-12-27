@@ -1,12 +1,9 @@
 import { withTheme } from '../config';
-import {
-  SpeedDial,
-  SpeedDialProps,
-} from '@rneui/base/dist/SpeedDial/SpeedDial';
+import { SpeedDial, SpeedDialProps } from '@rneui/base/SpeedDial/SpeedDial';
 import {
   SpeedDialAction,
   SpeedDialActionProps,
-} from '@rneui/base/dist/SpeedDial/SpeedDial.Action';
+} from '@rneui/base/SpeedDial/SpeedDial.Action';
 
 export type { SpeedDialProps, SpeedDialActionProps };
 export default Object.assign(

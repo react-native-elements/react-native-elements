@@ -3916,6 +3916,37 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rneui/example@workspace:example":
+  version: 0.0.0-use.local
+  resolution: "@rneui/example@workspace:example"
+  dependencies:
+    "@babel/preset-typescript": ^7.16.7
+    "@expo/vector-icons": ^13.0.0
+    "@expo/webpack-config": ^0.17.2
+    "@react-native-community/masked-view": 0.1.11
+    "@react-navigation/drawer": ^5.12.9
+    "@react-navigation/native": ^5.9.8
+    "@react-navigation/stack": ^5.14.9
+    "@rneui/layout": ^0.0.0-alpha.4
+    babel-loader: ^8.2.5
+    babel-preset-expo: ~9.2.1
+    expo: ^47.0.0
+    expo-asset: ~8.7.0
+    expo-font: ~11.0.1
+    expo-linear-gradient: ~12.0.1
+    expo-splash-screen: ~0.17.5
+    expo-updates: ~0.15.6
+    jest-expo: ^47.0.0
+    react: 18.1.0
+    react-native: 0.70.5
+    react-native-gesture-handler: ~2.8.0
+    react-native-reanimated: ~2.12.0
+    react-native-screens: ~3.18.0
+    react-native-svg: 13.4.0
+    react-native-web: ~0.18.7
+  languageName: unknown
+  linkType: soft
+
 "@rneui/layout@npm:^0.0.0-alpha.4":
   version: 0.0.0-alpha.4
   resolution: "@rneui/layout@npm:0.0.0-alpha.4"
@@ -16966,37 +16997,6 @@ __metadata:
   checksum: 2a50ad71e09bc8cbb3694057cf47d6e9665c16f3968d1dc2b71e83c8c4e7be3b07b74bea08750ec9c8f6c60e6c746a5f695963c8694e5a76edcbce35a53a6a06
   languageName: node
   linkType: hard
-
-"react-native-elements-app@workspace:example":
-  version: 0.0.0-use.local
-  resolution: "react-native-elements-app@workspace:example"
-  dependencies:
-    "@babel/preset-typescript": ^7.16.7
-    "@expo/vector-icons": ^13.0.0
-    "@expo/webpack-config": ^0.17.2
-    "@react-native-community/masked-view": 0.1.11
-    "@react-navigation/drawer": ^5.12.9
-    "@react-navigation/native": ^5.9.8
-    "@react-navigation/stack": ^5.14.9
-    "@rneui/layout": ^0.0.0-alpha.4
-    babel-loader: ^8.2.5
-    babel-preset-expo: ~9.2.1
-    expo: ^47.0.0
-    expo-asset: ~8.7.0
-    expo-font: ~11.0.1
-    expo-linear-gradient: ~12.0.1
-    expo-splash-screen: ~0.17.5
-    expo-updates: ~0.15.6
-    jest-expo: ^47.0.0
-    react: 18.1.0
-    react-native: 0.70.5
-    react-native-gesture-handler: ~2.8.0
-    react-native-reanimated: ~2.12.0
-    react-native-screens: ~3.18.0
-    react-native-svg: 13.4.0
-    react-native-web: ~0.18.7
-  languageName: unknown
-  linkType: soft
 
 "react-native-gesture-handler@npm:~2.8.0":
   version: 2.8.0

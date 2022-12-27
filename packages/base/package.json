@@ -8,6 +8,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "exports": {
+    "./*": "./dist/*"
+  },
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/react-native-elements"

@@ -1,5 +1,5 @@
 import { withTheme } from '../config';
-import { Skeleton, SkeletonProps } from '@rneui/base/dist/Skeleton';
+import { Skeleton, SkeletonProps } from '@rneui/base/Skeleton';
 
 export { Skeleton };
 export type { SkeletonProps };
