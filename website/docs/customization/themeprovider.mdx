@@ -3,6 +3,9 @@ title: Theme Provider
 sidebar_position: 2
 ---
 
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 The previous solution works great for only one component, but imagine having to
 do this for every component you want custom styles for. That could get a bit
 tedious to manage. Thankfully, there's a better way to do this. React Native
@@ -66,6 +69,14 @@ createTheme({
   },
 })
 ```
+
+<ThemedImage
+  alt="how createTheme works internally"
+  sources={{
+    light: useBaseUrl('/img/docs/light.png'),
+    dark: useBaseUrl('/img/docs/dark.png'),
+  }}
+/>
 
 :::note
 To theme subcomponents such as `ListItem.Title`, in your theme remove the dot and list them as "ListItemTitle"

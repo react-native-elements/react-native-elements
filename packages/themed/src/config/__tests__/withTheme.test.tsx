@@ -33,6 +33,7 @@ describe('withTheme', () => {
       }
     }
     const WrappedComponent = withTheme(Component);
+    // @ts-ignore
     expect(WrappedComponent.navigationOptions).toEqual({
       title: 'Hey',
     });

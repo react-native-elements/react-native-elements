@@ -1,5 +1,6 @@
 import React from 'react';
 import Button, { Button as BaseButton } from '../../Button';
+import { Theme } from '../..';
 import Text from '../../Text';
 import { lightColors } from '..';
 import { renderWithWrapper } from '../../../.ci/testHelper';
@@ -9,6 +10,15 @@ import { ThemeProvider, createTheme, ThemeConsumer } from '../ThemeProvider';
 import { View } from 'react-native';
 import { ReactTestInstance } from 'react-test-renderer';
 import { defaultSpacing } from '../theme';
+
+import '@rneui/themed';
+
+declare module '../..' {
+  export interface Theme {
+    myCustomProperty: string;
+    myCustomFunction: () => void;
+  }
+}
 
 describe('ThemeProvider', () => {
   it('render ThemeProvider', () => {
@@ -40,68 +50,79 @@ describe('ThemeProvider', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
-  // it('should update and replace theme', () => {
-  //   const TestComp = (): JSX.Element => {
-  //     const { theme, replaceTheme, updateTheme } = useTheme();
-  //     return (
-  //       <>
-  //         <Button
-  //           testID="updateTheme"
-  //           onPress={() => {
-  //             updateTheme({
-  //               lightColors: {
-  //                 primary: 'red',
-  //               },
-  //             });
-  //           }}
-  //         />
-  //         <Button
-  //           testID="replaceThemeButton"
-  //           onPress={() => {
-  //             replaceTheme({
-  //               lightColors: {
-  //                 primary: 'purple',
-  //               },
-  //             });
-  //           }}
-  //         />
-  //         <Text testID="themeChild" children={theme.colors.primary} />
-  //       </>
-  //     );
-  //   };
+  it('should extends the theme', () => {
+    const theme = createTheme({ myCustomProperty: 'myCustomProperty' });
+    const MyComp = () => {
+      const { theme } = useTheme();
+      return <Text testID="testID">{theme.myCustomProperty}</Text>;
+    };
 
-  //   const { queryByTestId } = render(
-  //     <ThemeProvider theme={createTheme({})}>
-  //       <TestComp />
-  //     </ThemeProvider>
-  //   );
-  //   const updateButton = queryByTestId('updateTheme')!;
-  //   const replaceButton = queryByTestId('replaceThemeButton')!;
-  //   const textTheme = queryByTestId('themeChild')!;
-  //   expect(textTheme.props.children).toEqual(lightColors.primary);
+    const { wrapper } = renderWithWrapper(<MyComp />, 'testID', theme);
+    expect(wrapper.props.children).toBe('myCustomProperty');
+  });
 
-  //   fireEvent.press(updateButton);
-  //   expect(textTheme.props.children).toEqual('red');
+  it('should update and replace theme', () => {
+    const TestComp = (): JSX.Element => {
+      const { theme, replaceTheme, updateTheme } = useTheme();
+      return (
+        <>
+          <Button
+            testID="updateTheme"
+            onPress={() => {
+              updateTheme({
+                lightColors: {
+                  primary: 'red',
+                },
+              });
+            }}
+          />
+          <Button
+            testID="replaceThemeButton"
+            onPress={() => {
+              replaceTheme({
+                lightColors: {
+                  primary: 'purple',
+                },
+              });
+            }}
+          />
+          <Text testID="themeChild" children={theme.colors.primary} />
+        </>
+      );
+    };
 
-  //   fireEvent.press(replaceButton);
-  //   expect(textTheme.props.children).toBe('purple');
-  // });
+    const { queryByTestId } = render(
+      <ThemeProvider theme={createTheme({})}>
+        <TestComp />
+      </ThemeProvider>
+    );
+    const updateButton = queryByTestId('updateTheme')!;
+    const replaceButton = queryByTestId('replaceThemeButton')!;
+    const textTheme = queryByTestId('themeChild')!;
+    expect(textTheme.props.children).toEqual(lightColors.primary);
 
-  // it('should use default theme', () => {
-  //   const { queryByTestId } = renderWithWrapper(
-  //     <ThemeProvider>
-  //       <ThemeConsumer>
-  //         {({ theme }) => (
-  //           <View testID="viewComp">{JSON.stringify(theme)}</View>
-  //         )}
-  //       </ThemeConsumer>
-  //     </ThemeProvider>
-  //   );
-  //   const instance = queryByTestId('viewComp')!;
-  //   expect(JSON.parse(instance.props.children)).toMatchObject({
-  //     colors: lightColors,
-  //   });
-  // });
+    fireEvent.press(updateButton);
+    expect(textTheme.props.children).toEqual('red');
+
+    fireEvent.press(replaceButton);
+    expect(textTheme.props.children).toBe('purple');
+  });
+
+  it('should use default theme', () => {
+    const { queryByTestId } = renderWithWrapper(
+      <ThemeProvider>
+        <ThemeConsumer>
+          {({ theme }) => (
+            <View testID="viewComp">{JSON.stringify(theme)}</View>
+          )}
+        </ThemeConsumer>
+      </ThemeProvider>
+    );
+    const instance = queryByTestId('viewComp')!;
+    expect(JSON.parse(instance.props.children)).toMatchObject({
+      colors: lightColors,
+    });
+  });
 
   it('should retain custom theme when switching between light / dark mode', () => {
     const customTheme = createTheme({
@@ -124,7 +145,7 @@ describe('ThemeProvider', () => {
           <Button
             testID="updateTheme"
             onPress={() =>
-              updateTheme((myTheme) => ({
+              updateTheme!((myTheme) => ({
                 mode: myTheme.mode === 'dark' ? 'light' : 'dark',
               }))
             }
@@ -133,10 +154,10 @@ describe('ThemeProvider', () => {
         </>
       );
     };
-    const { queryByTestId } = render(
-      <ThemeProvider theme={customTheme}>
-        <TestComp />
-      </ThemeProvider>
+    const { queryByTestId } = renderWithWrapper(
+      <TestComp />,
+      undefined,
+      customTheme
     );
     const updateButton = queryByTestId('updateTheme')!;
     const textTheme = queryByTestId('themeChild')!;

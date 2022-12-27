@@ -42,9 +42,9 @@ export type ReplaceTheme = (
 ) => void;
 
 export interface ThemeProps<T = {}> {
-  theme?: Theme & T;
-  updateTheme?: UpdateTheme;
-  replaceTheme?: ReplaceTheme;
+  theme: Theme & T;
+  updateTheme: UpdateTheme;
+  replaceTheme: ReplaceTheme;
 }
 
 export type ThemeProviderContext = ThemeProps<ThemeOptions>;
