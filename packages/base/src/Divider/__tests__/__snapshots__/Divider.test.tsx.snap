@@ -6,7 +6,7 @@ exports[`Divider Component should match snapshot 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "borderBottomColor": "#bcbbc1",
         "borderBottomWidth": 0.5,
       }
@@ -22,7 +22,7 @@ exports[`Divider Component should render with subHeader and subHeaderStyle 1`] =
 >
   <View
     style={
-      Object {
+      {
         "borderBottomColor": "#bcbbc1",
         "borderBottomWidth": 0.5,
       }
@@ -31,7 +31,7 @@ exports[`Divider Component should render with subHeader and subHeaderStyle 1`] =
   />
   <Text
     style={
-      Object {
+      {
         "color": "blue",
         "includeFontPadding": false,
       }
@@ -48,7 +48,7 @@ exports[`Divider Component should render with subHeader and subHeaderStyle and i
 >
   <View
     style={
-      Object {
+      {
         "borderBottomColor": "#bcbbc1",
         "borderBottomWidth": 0.5,
         "marginLeft": 72,
@@ -58,7 +58,7 @@ exports[`Divider Component should render with subHeader and subHeaderStyle and i
   />
   <Text
     style={
-      Object {
+      {
         "color": "blue",
         "includeFontPadding": false,
         "marginLeft": 72,

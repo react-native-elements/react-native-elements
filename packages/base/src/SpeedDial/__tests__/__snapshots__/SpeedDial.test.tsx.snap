@@ -7,8 +7,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
   <View
     pointerEvents="box-none"
     style={
-      Array [
-        Object {
+      [
+        {
           "bottom": 0,
           "justifyContent": "flex-end",
           "left": 0,
@@ -35,8 +35,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       onStartShouldSetResponder={[Function]}
       pointerEvents="auto"
       style={
-        Array [
-          Object {
+        [
+          {
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -48,9 +48,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
     >
       <View
         collapsable={false}
-        nativeID="animatedComponent"
         style={
-          Object {
+          {
             "backgroundColor": "rgba(36, 36, 36, 0.6)",
             "bottom": 0,
             "left": 0,
@@ -63,11 +62,10 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       />
     </View>
     <RCTSafeAreaView
-      emulateUnlessSupported={true}
       pointerEvents="box-none"
       style={
-        Array [
-          Object {
+        [
+          {
             "alignItems": "flex-end",
           },
           undefined,
@@ -76,13 +74,12 @@ exports[`Speed Dial Component should match snapshot 1`] = `
     >
       <View
         collapsable={false}
-        nativeID="animatedComponent"
         pointerEvents="auto"
         style={
-          Object {
+          {
             "opacity": 1,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "scale": 1,
               },
             ],
@@ -103,8 +100,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "flexDirection": "row",
                 "justifyContent": "flex-end",
@@ -117,8 +114,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         >
           <Text
             style={
-              Array [
-                Object {
+              [
+                {
                   "backgroundColor": "white",
                   "borderRadius": 5,
                   "color": "black",
@@ -136,16 +133,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           </Text>
           <View
             collapsable={false}
-            nativeID="animatedComponent"
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "borderRadius": 28,
                 "flexDirection": "row",
                 "justifyContent": "center",
                 "opacity": 1,
-                "transform": Array [
-                  Object {
+                "transform": [
+                  {
                     "scale": 1,
                   },
                 ],
@@ -154,14 +150,14 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           >
             <View
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "overflow": "hidden",
                   },
-                  Object {
+                  {
                     "borderRadius": 2,
                   },
-                  Object {
+                  {
                     "borderRadius": 28,
                     "elevation": 4,
                   },
@@ -173,7 +169,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               <View
                 accessibilityRole="button"
                 accessibilityState={
-                  Object {
+                  {
                     "busy": false,
                     "disabled": false,
                   }
@@ -181,7 +177,6 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 accessible={true}
                 collapsable={false}
                 focusable={true}
-                nativeID="animatedComponent"
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -190,14 +185,14 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "opacity": 1,
                   }
                 }
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "backgroundColor": "#ad1457",
                       "borderColor": "#2089dc",
@@ -214,7 +209,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 >
                   <View
                     style={
-                      Object {
+                      {
                         "height": 40,
                         "marginHorizontal": 5,
                         "overflow": "hidden",
@@ -227,7 +222,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     <View
                       accessibilityRole="button"
                       android_ripple={
-                        Object {
+                        {
                           "borderless": false,
                           "color": "rgba(0, 0, 0, 0.3)",
                           "radius": -5,
@@ -238,7 +233,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     >
                       <View
                         style={
-                          Object {
+                          {
                             "alignItems": "center",
                             "backgroundColor": "transparent",
                             "justifyContent": "center",
@@ -249,20 +244,20 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                         <Text
                           allowFontScaling={false}
                           style={
-                            Array [
-                              Object {
+                            [
+                              {
                                 "color": "#fff",
                                 "fontSize": 24,
                               },
-                              Object {
+                              {
                                 "backgroundColor": "transparent",
                               },
-                              Object {
+                              {
                                 "fontFamily": "Material Icons",
                                 "fontStyle": "normal",
                                 "fontWeight": "normal",
                               },
-                              Object {},
+                              {},
                             ]
                           }
                           testID="RNE__ICON__Component"
@@ -280,13 +275,12 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       </View>
       <View
         collapsable={false}
-        nativeID="animatedComponent"
         pointerEvents="auto"
         style={
-          Object {
+          {
             "opacity": 1,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "scale": 1,
               },
             ],
@@ -307,8 +301,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
+            [
+              {
                 "alignItems": "center",
                 "flexDirection": "row",
                 "justifyContent": "flex-end",
@@ -321,8 +315,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
         >
           <Text
             style={
-              Array [
-                Object {
+              [
+                {
                   "backgroundColor": "white",
                   "borderRadius": 5,
                   "color": "black",
@@ -340,16 +334,15 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           </Text>
           <View
             collapsable={false}
-            nativeID="animatedComponent"
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "borderRadius": 28,
                 "flexDirection": "row",
                 "justifyContent": "center",
                 "opacity": 1,
-                "transform": Array [
-                  Object {
+                "transform": [
+                  {
                     "scale": 1,
                   },
                 ],
@@ -358,14 +351,14 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           >
             <View
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "overflow": "hidden",
                   },
-                  Object {
+                  {
                     "borderRadius": 2,
                   },
-                  Object {
+                  {
                     "borderRadius": 28,
                     "elevation": 4,
                   },
@@ -377,7 +370,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
               <View
                 accessibilityRole="button"
                 accessibilityState={
-                  Object {
+                  {
                     "busy": false,
                     "disabled": false,
                   }
@@ -385,7 +378,6 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 accessible={true}
                 collapsable={false}
                 focusable={true}
-                nativeID="animatedComponent"
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -394,14 +386,14 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "opacity": 1,
                   }
                 }
               >
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "backgroundColor": "#ad1457",
                       "borderColor": "#2089dc",
@@ -418,7 +410,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 >
                   <View
                     style={
-                      Object {
+                      {
                         "height": 40,
                         "marginHorizontal": 5,
                         "overflow": "hidden",
@@ -431,7 +423,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     <View
                       accessibilityRole="button"
                       android_ripple={
-                        Object {
+                        {
                           "borderless": false,
                           "color": "rgba(0, 0, 0, 0.3)",
                           "radius": -5,
@@ -442,7 +434,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     >
                       <View
                         style={
-                          Object {
+                          {
                             "alignItems": "center",
                             "backgroundColor": "transparent",
                             "justifyContent": "center",
@@ -453,20 +445,20 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                         <Text
                           allowFontScaling={false}
                           style={
-                            Array [
-                              Object {
+                            [
+                              {
                                 "color": "#fff",
                                 "fontSize": 24,
                               },
-                              Object {
+                              {
                                 "backgroundColor": "transparent",
                               },
-                              Object {
+                              {
                                 "fontFamily": "Material Icons",
                                 "fontStyle": "normal",
                                 "fontWeight": "normal",
                               },
-                              Object {},
+                              {},
                             ]
                           }
                           testID="RNE__ICON__Component"
@@ -484,9 +476,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       </View>
       <View
         collapsable={false}
-        nativeID="animatedComponent"
         style={
-          Object {
+          {
             "alignItems": "center",
             "borderRadius": 28,
             "flexDirection": "row",
@@ -494,8 +485,8 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             "margin": 16,
             "marginTop": 0,
             "opacity": 1,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "scale": 1,
               },
             ],
@@ -504,14 +495,14 @@ exports[`Speed Dial Component should match snapshot 1`] = `
       >
         <View
           style={
-            Array [
-              Object {
+            [
+              {
                 "overflow": "hidden",
               },
-              Object {
+              {
                 "borderRadius": 2,
               },
-              Object {
+              {
                 "borderRadius": 28,
                 "elevation": 4,
               },
@@ -523,7 +514,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
           <View
             accessibilityRole="button"
             accessibilityState={
-              Object {
+              {
                 "busy": false,
                 "disabled": false,
               }
@@ -531,7 +522,6 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             accessible={true}
             collapsable={false}
             focusable={true}
-            nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -540,14 +530,14 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "opacity": 1,
               }
             }
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "backgroundColor": "#ad1457",
                   "borderColor": "#2089dc",
@@ -564,7 +554,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
             >
               <View
                 style={
-                  Object {
+                  {
                     "height": 56,
                     "marginHorizontal": 5,
                     "overflow": "hidden",
@@ -577,7 +567,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 <View
                   accessibilityRole="button"
                   android_ripple={
-                    Object {
+                    {
                       "borderless": false,
                       "color": "rgba(0, 0, 0, 0.3)",
                       "radius": -5,
@@ -588,7 +578,7 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                 >
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "justifyContent": "center",
@@ -599,20 +589,20 @@ exports[`Speed Dial Component should match snapshot 1`] = `
                     <Text
                       allowFontScaling={false}
                       style={
-                        Array [
-                          Object {
+                        [
+                          {
                             "color": "#fff",
                             "fontSize": 24,
                           },
-                          Object {
+                          {
                             "backgroundColor": "transparent",
                           },
-                          Object {
+                          {
                             "fontFamily": "Material Icons",
                             "fontStyle": "normal",
                             "fontWeight": "normal",
                           },
-                          Object {},
+                          {},
                         ]
                       }
                       testID="RNE__ICON__Component"

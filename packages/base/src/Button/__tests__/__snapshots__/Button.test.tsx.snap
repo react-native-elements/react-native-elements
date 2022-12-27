@@ -6,11 +6,11 @@ exports[`Button Component clear should display clear button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -22,7 +22,7 @@ exports[`Button Component clear should display clear button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -30,7 +30,6 @@ exports[`Button Component clear should display clear button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -39,14 +38,14 @@ exports[`Button Component clear should display clear button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "borderColor": "#2089dc",
@@ -61,7 +60,7 @@ exports[`Button Component clear should display clear button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2089dc",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -83,11 +82,11 @@ exports[`Button Component clear should display disabled clear button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -99,7 +98,7 @@ exports[`Button Component clear should display disabled clear button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": true,
         }
@@ -107,7 +106,6 @@ exports[`Button Component clear should display disabled clear button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -116,14 +114,14 @@ exports[`Button Component clear should display disabled clear button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "borderColor": "#2089dc",
@@ -138,7 +136,7 @@ exports[`Button Component clear should display disabled clear button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "hsl(208, 8%, 63%)",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -160,11 +158,11 @@ exports[`Button Component clear should display raised clear button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -176,7 +174,7 @@ exports[`Button Component clear should display raised clear button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -184,7 +182,6 @@ exports[`Button Component clear should display raised clear button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -193,14 +190,14 @@ exports[`Button Component clear should display raised clear button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "borderColor": "#2089dc",
@@ -215,7 +212,7 @@ exports[`Button Component clear should display raised clear button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2089dc",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -237,11 +234,11 @@ exports[`Button Component lg should display disabled lg button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -253,7 +250,7 @@ exports[`Button Component lg should display disabled lg button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": true,
         }
@@ -261,7 +258,6 @@ exports[`Button Component lg should display disabled lg button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -270,14 +266,14 @@ exports[`Button Component lg should display disabled lg button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
@@ -292,7 +288,7 @@ exports[`Button Component lg should display disabled lg button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "hsl(208, 8%, 63%)",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -314,11 +310,11 @@ exports[`Button Component lg should display lg button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -330,7 +326,7 @@ exports[`Button Component lg should display lg button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -338,7 +334,6 @@ exports[`Button Component lg should display lg button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -347,14 +342,14 @@ exports[`Button Component lg should display lg button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -369,7 +364,7 @@ exports[`Button Component lg should display lg button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -391,19 +386,19 @@ exports[`Button Component lg should display raised lg button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#fff",
           "overflow": "visible",
           "shadowColor": "rgba(0,0,0, .4)",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 1,
             "width": 1,
           },
@@ -417,7 +412,7 @@ exports[`Button Component lg should display raised lg button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -425,7 +420,6 @@ exports[`Button Component lg should display raised lg button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -434,14 +428,14 @@ exports[`Button Component lg should display raised lg button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -456,7 +450,7 @@ exports[`Button Component lg should display raised lg button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -478,11 +472,11 @@ exports[`Button Component md should display disabled md button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -494,7 +488,7 @@ exports[`Button Component md should display disabled md button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": true,
         }
@@ -502,7 +496,6 @@ exports[`Button Component md should display disabled md button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -511,14 +504,14 @@ exports[`Button Component md should display disabled md button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
@@ -533,7 +526,7 @@ exports[`Button Component md should display disabled md button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "hsl(208, 8%, 63%)",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -555,11 +548,11 @@ exports[`Button Component md should display md button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -571,7 +564,7 @@ exports[`Button Component md should display md button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -579,7 +572,6 @@ exports[`Button Component md should display md button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -588,14 +580,14 @@ exports[`Button Component md should display md button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -610,7 +602,7 @@ exports[`Button Component md should display md button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -632,19 +624,19 @@ exports[`Button Component md should display raised md button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#fff",
           "overflow": "visible",
           "shadowColor": "rgba(0,0,0, .4)",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 1,
             "width": 1,
           },
@@ -658,7 +650,7 @@ exports[`Button Component md should display raised md button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -666,7 +658,6 @@ exports[`Button Component md should display raised md button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -675,14 +666,14 @@ exports[`Button Component md should display raised md button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -697,7 +688,7 @@ exports[`Button Component md should display raised md button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -719,11 +710,11 @@ exports[`Button Component outline should display disabled outline button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -735,7 +726,7 @@ exports[`Button Component outline should display disabled outline button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": true,
         }
@@ -743,7 +734,6 @@ exports[`Button Component outline should display disabled outline button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -752,14 +742,14 @@ exports[`Button Component outline should display disabled outline button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "borderColor": "hsl(208, 8%, 63%)",
@@ -774,7 +764,7 @@ exports[`Button Component outline should display disabled outline button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "hsl(208, 8%, 63%)",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -796,11 +786,11 @@ exports[`Button Component outline should display outline button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -812,7 +802,7 @@ exports[`Button Component outline should display outline button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -820,7 +810,6 @@ exports[`Button Component outline should display outline button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -829,14 +818,14 @@ exports[`Button Component outline should display outline button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "borderColor": "#2089dc",
@@ -851,7 +840,7 @@ exports[`Button Component outline should display outline button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2089dc",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -873,19 +862,19 @@ exports[`Button Component outline should display raised outline button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#fff",
           "overflow": "visible",
           "shadowColor": "rgba(0,0,0, .4)",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 1,
             "width": 1,
           },
@@ -899,7 +888,7 @@ exports[`Button Component outline should display raised outline button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -907,7 +896,6 @@ exports[`Button Component outline should display raised outline button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -916,14 +904,14 @@ exports[`Button Component outline should display raised outline button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "transparent",
             "borderColor": "#2089dc",
@@ -938,7 +926,7 @@ exports[`Button Component outline should display raised outline button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "#2089dc",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -960,11 +948,11 @@ exports[`Button Component sm should display disabled sm button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -976,7 +964,7 @@ exports[`Button Component sm should display disabled sm button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": true,
         }
@@ -984,7 +972,6 @@ exports[`Button Component sm should display disabled sm button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -993,14 +980,14 @@ exports[`Button Component sm should display disabled sm button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
@@ -1015,7 +1002,7 @@ exports[`Button Component sm should display disabled sm button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "hsl(208, 8%, 63%)",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -1037,19 +1024,19 @@ exports[`Button Component sm should display raised sm button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#fff",
           "overflow": "visible",
           "shadowColor": "rgba(0,0,0, .4)",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 1,
             "width": 1,
           },
@@ -1063,7 +1050,7 @@ exports[`Button Component sm should display raised sm button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -1071,7 +1058,6 @@ exports[`Button Component sm should display raised sm button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1080,14 +1066,14 @@ exports[`Button Component sm should display raised sm button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -1102,7 +1088,7 @@ exports[`Button Component sm should display raised sm button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -1124,11 +1110,11 @@ exports[`Button Component sm should display sm button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -1140,7 +1126,7 @@ exports[`Button Component sm should display sm button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -1148,7 +1134,6 @@ exports[`Button Component sm should display sm button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1157,14 +1142,14 @@ exports[`Button Component sm should display sm button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -1179,7 +1164,7 @@ exports[`Button Component sm should display sm button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -1201,11 +1186,11 @@ exports[`Button Component solid should display disabled solid button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -1217,7 +1202,7 @@ exports[`Button Component solid should display disabled solid button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": true,
         }
@@ -1225,7 +1210,6 @@ exports[`Button Component solid should display disabled solid button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1234,14 +1218,14 @@ exports[`Button Component solid should display disabled solid button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "hsl(208, 8%, 90%)",
             "borderColor": "#2089dc",
@@ -1256,7 +1240,7 @@ exports[`Button Component solid should display disabled solid button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "hsl(208, 8%, 63%)",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -1278,19 +1262,19 @@ exports[`Button Component solid should display raised solid button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#fff",
           "overflow": "visible",
           "shadowColor": "rgba(0,0,0, .4)",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 1,
             "width": 1,
           },
@@ -1304,7 +1288,7 @@ exports[`Button Component solid should display raised solid button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -1312,7 +1296,6 @@ exports[`Button Component solid should display raised solid button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1321,14 +1304,14 @@ exports[`Button Component solid should display raised solid button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -1343,7 +1326,7 @@ exports[`Button Component solid should display raised solid button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,
@@ -1365,11 +1348,11 @@ exports[`Button Component solid should display solid button 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Object {
+        {
           "borderRadius": 2,
         },
         undefined,
@@ -1381,7 +1364,7 @@ exports[`Button Component solid should display solid button 1`] = `
     <View
       accessibilityRole="button"
       accessibilityState={
-        Object {
+        {
           "busy": false,
           "disabled": false,
         }
@@ -1389,7 +1372,6 @@ exports[`Button Component solid should display solid button 1`] = `
       accessible={true}
       collapsable={false}
       focusable={true}
-      nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1398,14 +1380,14 @@ exports[`Button Component solid should display solid button 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "opacity": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#2089dc",
             "borderColor": "#2089dc",
@@ -1420,7 +1402,7 @@ exports[`Button Component solid should display solid button 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "white",
               "fontSize": 18,
               "paddingVertical": 1,

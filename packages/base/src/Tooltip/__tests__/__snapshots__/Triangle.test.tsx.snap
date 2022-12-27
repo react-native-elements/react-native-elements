@@ -3,7 +3,7 @@
 exports[`Tooltip component should match snapshot  1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "transparent",
       "borderBottomColor": undefined,
       "borderBottomWidth": 15,

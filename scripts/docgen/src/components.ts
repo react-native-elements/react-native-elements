@@ -42,11 +42,10 @@ type TemplateOptionsT = {
   props?: PropRowT[];
   themeKey: string;
   includeProps?: string;
-  pkg: string;
 };
 
 const root = path.join(__dirname, '../../../');
-const pkgRegExp = new RegExp('packages/(.*)/src');
+// const pkgRegExp = new RegExp('packages/(.*)/src');
 // const pkgPath = path.join(root, 'packages');
 const docsPath = path.join(root, 'website/docs');
 const usagePath = path.join(docsPath, 'component_usage');
@@ -112,7 +111,7 @@ export class Component implements ComponentDoc {
       const id = displayName.toLowerCase().replace('.', '_');
       const themeKey = displayName.replace('.', '');
       const [parentComponent] = displayName.split('.');
-      const [, pkg] = this.filePath.match(pkgRegExp);
+      // const [, pkg] = this.filePath.match(pkgRegExp);
 
       const { imports = '', installation = '', usage = '' } = tags || {};
 
@@ -128,7 +127,6 @@ export class Component implements ComponentDoc {
         title: displayName,
         description,
         imports,
-        pkg: pkg === 'base' ? 'themed' : pkg,
         parentComponent,
         installation,
         showUsage: !!this.usages?.length || Boolean(usage) || usageFileExists,
@@ -144,7 +142,7 @@ export class Component implements ComponentDoc {
 
       const mdFilePath = path.join(
         docsPath,
-        pkg === 'base' ? 'components' : pkg,
+        'components',
         `${this.displayName}.mdx`
       );
       // console.log(pkg, parentComponent, childComponent);
@@ -161,8 +159,8 @@ export class Component implements ComponentDoc {
           let lang = 'tsx';
           let live = 'live';
           const defTags = {
-            lang: (v: any) => ((lang = v), ''),
-            live: (v: any) => ((live = v ? 'live' : ''), ''),
+            lang: (v) => ((lang = v), ''),
+            live: (v) => ((live = v ? 'live' : ''), ''),
           };
           const props = metaData
             ?.map(([tag, value]) =>

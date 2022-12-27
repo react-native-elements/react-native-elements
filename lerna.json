@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/*", "example", "scripts/docgen/lib"],
+  "packages": ["packages/*", "example", "scripts/docgen"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent",

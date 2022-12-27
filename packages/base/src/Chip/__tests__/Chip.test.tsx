@@ -5,8 +5,8 @@ import { fireEvent } from '@testing-library/react-native';
 
 describe('Chip Component', () => {
   it('should match snapshot', () => {
-    const { getByA11yRole } = renderWithWrapper(<Chip />);
-    const component = getByA11yRole('button');
+    const { getByRole } = renderWithWrapper(<Chip />);
+    const component = getByRole('button');
     expect(component.props.style.borderRadius).toBe(30);
   });
 
@@ -23,8 +23,8 @@ describe('Chip Component', () => {
 
   it('should have onPress function when specified', () => {
     const handlePress = jest.fn();
-    const { getByA11yRole } = renderWithWrapper(<Chip onPress={handlePress} />);
-    fireEvent(getByA11yRole('button'), 'press');
+    const { getByRole } = renderWithWrapper(<Chip onPress={handlePress} />);
+    fireEvent(getByRole('button'), 'press');
     expect(handlePress).toHaveBeenCalledTimes(1);
   });
 });

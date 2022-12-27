@@ -19,6 +19,7 @@ config.projectRoot = projectRoot;
 config.resolver.blacklistRE = [
   /website\/.*/,
   /coverage\/.*/,
+  /scripts\/.*/,
   // /packages\/.*\/node_modules\/.*/,
 ];
 

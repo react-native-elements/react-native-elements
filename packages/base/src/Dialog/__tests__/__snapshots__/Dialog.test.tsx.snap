@@ -25,7 +25,7 @@ exports[`Dialog Component should render without any children 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "rgba(0, 0, 0, .4)",
           "height": "100%",
@@ -42,13 +42,13 @@ exports[`Dialog Component should render without any children 1`] = `
       onLayout={[Function]}
       pointerEvents="box-none"
       style={
-        Array [
-          Object {
+        [
+          {
             "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
           },
-          Object {
+          {
             "paddingBottom": 0,
           },
         ]
@@ -57,12 +57,12 @@ exports[`Dialog Component should render without any children 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "backgroundColor": "rgb(0, 0, 0)",
             "borderRadius": 3,
             "padding": 20,
             "shadowColor": "rgba(0, 0, 0, .3)",
-            "shadowOffset": Object {
+            "shadowOffset": {
               "height": 1,
               "width": 0,
             },

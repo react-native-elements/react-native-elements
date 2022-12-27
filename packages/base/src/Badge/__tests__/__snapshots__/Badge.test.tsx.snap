@@ -5,12 +5,12 @@ exports[`Badge Component should match snapshot 1`] = `
   testID="wrapper"
 >
   <View
-    style={Object {}}
+    style={{}}
     testID="RNE__Badge__Container"
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#2089dc",
@@ -26,7 +26,7 @@ exports[`Badge Component should match snapshot 1`] = `
     >
       <Text
         style={
-          Object {
+          {
             "color": "white",
             "fontSize": 12,
             "paddingHorizontal": 4,
