@@ -6,7 +6,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "yellow",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
@@ -22,7 +22,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
           "flex": 1,
@@ -31,7 +31,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -48,7 +48,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -56,7 +56,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -67,7 +67,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
           <Text
             accessibilityRole="text"
             style={
-              Object {
+              {
                 "color": "pink",
                 "fontSize": 16.714285714285715,
                 "fontWeight": "500",
@@ -82,7 +82,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
           "flex": 1,
@@ -91,7 +91,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -108,7 +108,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -116,7 +116,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -127,7 +127,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
           <Text
             accessibilityRole="text"
             style={
-              Object {
+              {
                 "color": "pink",
                 "fontSize": 16.714285714285715,
                 "fontWeight": "500",
@@ -142,14 +142,14 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "flex": 1,
         }
       }
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -166,7 +166,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -174,7 +174,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -185,7 +185,7 @@ exports[`ButtonGroup Component should match snapshot 1`] = `
           <Text
             accessibilityRole="text"
             style={
-              Object {
+              {
                 "color": "pink",
                 "fontSize": 16.714285714285715,
                 "fontWeight": "500",
@@ -208,7 +208,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "yellow",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
@@ -224,7 +224,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
           "flex": 1,
@@ -233,7 +233,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -250,7 +250,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -258,7 +258,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -269,7 +269,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
           <Text
             accessibilityRole="text"
             style={
-              Object {
+              {
                 "color": "pink",
                 "fontSize": 16.714285714285715,
                 "fontWeight": "500",
@@ -286,7 +286,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
           "flex": 1,
@@ -295,7 +295,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -312,7 +312,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -320,7 +320,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -331,7 +331,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
           <Text
             accessibilityRole="text"
             style={
-              Object {
+              {
                 "color": "pink",
                 "fontSize": 16.714285714285715,
                 "fontWeight": "500",
@@ -348,14 +348,14 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "flex": 1,
         }
       }
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -372,7 +372,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -380,7 +380,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -391,7 +391,7 @@ exports[`ButtonGroup Component should match snapshot with components 1`] = `
           <Text
             accessibilityRole="text"
             style={
-              Object {
+              {
                 "color": "pink",
                 "fontSize": 16.714285714285715,
                 "fontWeight": "500",
@@ -416,7 +416,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "backgroundColor": "yellow",
         "borderColor": "#e3e3e3",
         "borderRadius": 3,
@@ -432,7 +432,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
           "flex": 1,
@@ -441,7 +441,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -458,7 +458,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -466,7 +466,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -484,7 +484,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "borderRightColor": "#bdc6cf",
           "borderRightWidth": 1,
           "flex": 1,
@@ -493,7 +493,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -510,7 +510,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -518,7 +518,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,
@@ -536,14 +536,14 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "flex": 1,
         }
       }
     >
       <View
         accessibilityState={
-          Object {
+          {
             "disabled": false,
           }
         }
@@ -560,7 +560,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -568,7 +568,7 @@ exports[`ButtonGroup Component should match snapshot with objects 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "blue",
               "flex": 1,

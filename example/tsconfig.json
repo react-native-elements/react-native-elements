@@ -11,11 +11,5 @@
   "compilerOptions": {
     // Avoid expo-cli auto-generating a tsconfig
   },
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js",
-    "website"
-  ]
+  "exclude": ["node_modules", "*.config.js", "website", "index.js"]
 }

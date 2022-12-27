@@ -137,7 +137,11 @@ module.exports = {
         'repo/contributing',
         'repo/testing',
         'repo/labels',
-        'migration_guide',
+        {
+          type: 'link',
+          label: 'Migration Guides',
+          href: '/migration',
+        },
         {
           type: 'link',
           label: 'Sponsors',

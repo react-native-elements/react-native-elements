@@ -1,0 +1,27 @@
+{
+  "name": "@rneui/doc-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "TS_NODE_FILES=true TS_NODE_TRANSPILE_ONLY=true ts-node src/index.ts"
+  },
+  "author": "Arpit Bhalla <arpitbhalla@icloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/dedent": "^0.7.0",
+    "@types/lodash.orderby": "^4.6.7",
+    "@types/node": "^18.11.13",
+    "dedent": "^0.7.0",
+    "handlebars": "^4.7.7",
+    "lodash.orderby": "^4.6.0",
+    "ora": "5.4.1",
+    "react-docgen-typescript": "^2.2.2",
+    "react-dom": "18.0.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}

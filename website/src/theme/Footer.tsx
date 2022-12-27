@@ -22,12 +22,17 @@ export default function () {
                 </a>
               </li>
               <li className="footer__item">
+                <a className="footer__link-item" href="/blog">
+                  Blogs
+                </a>
+              </li>
+              <li className="footer__item">
                 <a className="footer__link-item" href="/docs/customizing">
                   Customizing
                 </a>
               </li>
               <li className="footer__item">
-                <a className="footer__link-item" href="/migration-guides">
+                <a className="footer__link-item" href="/migration">
                   Migration Guides
                 </a>
               </li>
@@ -152,13 +157,13 @@ export default function () {
               </svg>
             </Link>
           </div>
-          <div className="margin-bottom--sm">
+          {/* <div className="margin-bottom--sm">
             <img
               src="/img/logo.png"
               alt=""
               className="themedImage_node_modules-@docusaurus-theme-classic-lib-next-theme-ThemedImage-styles-module themedImage--dark_node_modules-@docusaurus-theme-classic-lib-next-theme-ThemedImage-styles-module footer__logo"
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="text--center"></div>

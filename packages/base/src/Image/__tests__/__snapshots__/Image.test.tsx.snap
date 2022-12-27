@@ -7,7 +7,7 @@ exports[`Image Component should render 1`] = `
   <View
     accessibilityIgnoresInvertColors={true}
     style={
-      Object {
+      {
         "backgroundColor": "transparent",
         "overflow": "hidden",
         "position": "relative",
@@ -17,12 +17,12 @@ exports[`Image Component should render 1`] = `
     <Image
       onLoad={[Function]}
       source={
-        Object {
+        {
           "uri": "https://i.imgur.com/0y8Ftya.jpg",
         }
       }
       style={
-        Object {
+        {
           "bottom": 0,
           "left": 0,
           "position": "absolute",
@@ -37,10 +37,9 @@ exports[`Image Component should render 1`] = `
       accessibilityElementsHidden={true}
       collapsable={false}
       importantForAccessibility="no-hide-descendants"
-      nativeID="animatedComponent"
       pointerEvents="none"
       style={
-        Object {
+        {
           "bottom": 0,
           "left": 0,
           "opacity": 1,
@@ -52,7 +51,7 @@ exports[`Image Component should render 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#bdbdbd",
             "justifyContent": "center",
@@ -62,7 +61,7 @@ exports[`Image Component should render 1`] = `
       />
     </View>
     <View
-      style={Object {}}
+      style={{}}
       testID="RNE__Image__children__container"
     />
   </View>

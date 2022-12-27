@@ -36,7 +36,6 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
         accessible={true}
         collapsable={false}
         focusable={true}
-        nativeID="animatedComponent"
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -45,7 +44,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "backgroundColor": "#fafafa14",
             "flex": 1,
             "opacity": 1,
@@ -54,8 +53,20 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
       >
         <View>
           <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "backgroundColor": "transparent",
                 "height": 0,
                 "left": 0,
@@ -65,6 +76,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
                 "width": 0,
               }
             }
+            testID="tooltipTouchableHighlightedButton"
           >
             <Text>
               Press me
@@ -72,7 +84,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
           </View>
           <View
             style={
-              Object {
+              {
                 "left": -7.5,
                 "position": "absolute",
                 "top": -2,
@@ -81,7 +93,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
           >
             <View
               style={
-                Object {
+                {
                   "backgroundColor": "transparent",
                   "borderBottomColor": "#617080",
                   "borderBottomWidth": 15,
@@ -99,7 +111,7 @@ exports[`Tooltip component should exhibit default tooltip toggle behavior when "
           </View>
           <View
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#617080",
                 "borderRadius": 10,

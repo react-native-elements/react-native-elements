@@ -80,7 +80,7 @@ describe('LinearProgress Component', () => {
 
   it('should contain the required accessibility properties', () => {
     const component = renderWithWrapper(<LinearProgress value={0.4} />);
-    const progressBar = component.getByA11yRole('progressbar');
+    const progressBar = component.getByRole('progressbar');
     expect(progressBar.props).toMatchObject({
       accessibilityValue: {
         now: 0.4,
