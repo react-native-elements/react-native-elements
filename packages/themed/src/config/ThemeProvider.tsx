@@ -41,13 +41,13 @@ export type ReplaceTheme = (
     | ((myTheme: CreateThemeOptions) => CreateThemeOptions)
 ) => void;
 
-export type ThemeProps<T = {}> = {
-  theme: ThemeOptions & T;
-  updateTheme: UpdateTheme;
-  replaceTheme: ReplaceTheme;
-};
+export interface ThemeProps<T = {}> {
+  theme?: Theme & T;
+  updateTheme?: UpdateTheme;
+  replaceTheme?: ReplaceTheme;
+}
 
-export type ThemeProviderContext = ThemeProps;
+export type ThemeProviderContext = ThemeProps<ThemeOptions>;
 
 export const ThemeContext = React.createContext<ThemeProviderContext>(
   {} as ThemeProviderContext
@@ -137,13 +137,7 @@ export const ThemeProvider: React.FC<{
 
 export const ThemeConsumer = ThemeContext.Consumer;
 
-interface UseTheme {
-  replaceTheme: ReplaceTheme;
-  updateTheme: UpdateTheme;
-  theme: Theme;
-}
-
-export const useTheme = (): UseTheme => {
+export const useTheme = (): ThemeProps => {
   return useContext(ThemeContext);
 };
 

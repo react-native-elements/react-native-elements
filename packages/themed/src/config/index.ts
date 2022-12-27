@@ -23,15 +23,18 @@ import {
   ThemeConsumer,
   ThemeContext,
   ThemeProvider,
+  ThemeProps,
   useTheme,
   useThemeMode,
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles } from './makeStyles';
-import type { PartialTheme, FullTheme, ThemeMode, ThemeSpacing } from './theme';
+import { styled } from './styled';
+import type { FullTheme, ThemeMode, ThemeSpacing, Theme } from './theme';
 import type { ComponentTheme } from './theme.component';
 
 export {
+  styled,
   androidRipple,
   BackgroundImage,
   color,
@@ -61,11 +64,12 @@ export type {
   FullTheme,
   InlinePressableProps,
   ReplaceTheme,
-  PartialTheme as Theme,
+  Theme,
   UpdateTheme,
   ComponentTheme,
   ThemeMode,
   ThemeOptions,
+  ThemeProps,
   ThemeSpacing,
   CreateThemeOptions,
 };

@@ -5,6 +5,12 @@ sidebar_position: 3
 
 ### `makeStyles`
 
+**Imports**
+
+```tsx
+import { makeStyles } from '@rneui/themed';
+```
+
 **Function Signture**
 
 ```tsx
@@ -16,10 +22,6 @@ If you want to keep your styles outside the component use `makeStyles()` (hook g
 **Usage**
 
 ```tsx
-import React from 'react';
-import { Text } from 'react-native';
-import { makeStyles } from '@rneui/themed';
-
 type Props = {
   fullWidth?: boolean;
 };
@@ -39,7 +41,7 @@ const MyComponent = (props: Props) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
+      <Text style={styles.text}>Yo!</Text>
     </View>
   );
 };

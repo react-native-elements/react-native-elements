@@ -1,9 +1,9 @@
-import React from 'react';
 import deepmerge from 'deepmerge';
 import hoistNonReactStatics from 'hoist-non-react-statics';
-import { ThemeConsumer, UpdateTheme, ReplaceTheme } from './ThemeProvider';
-import { FullTheme, ThemeMode, defaultSpacing } from './theme';
-import { Colors, lightColors } from './colors';
+import React from 'react';
+import { lightColors } from './colors';
+import { defaultSpacing, FullTheme } from './theme';
+import { ThemeConsumer, ThemeProps } from './ThemeProvider';
 
 const isClassComponent = (Component: any) =>
   Boolean(Component?.prototype?.isReactComponent);
@@ -75,12 +75,6 @@ const ThemedComponent = (
     { displayName: displayName }
   );
 };
-
-interface ThemeProps<T = {}> {
-  theme?: { colors: Colors; mode?: ThemeMode } & T;
-  updateTheme?: UpdateTheme;
-  replaceTheme?: ReplaceTheme;
-}
 
 function withTheme<P = {}, T = {}>(
   WrappedComponent: React.ComponentType<P & ThemeProps<T>>,

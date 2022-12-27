@@ -13,11 +13,3 @@ export interface Theme {
 }
 
 export interface FullTheme extends Theme {}
-
-type Styles = {};
-
-function makeStyles(styles: Styles | ((theme, props) => Styles)) {
-  styles;
-}
-
-makeStyles;
