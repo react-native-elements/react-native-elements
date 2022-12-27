@@ -1,6 +1,6 @@
 ---
 title: ThemeProvider
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 The previous solution works great for only one component, but imagine having to
@@ -48,9 +48,11 @@ This is extremely convenient and is made possible through
 To theme subcomponents such as `ListItem.Title`, in your theme remove the dot and list them as "ListItemTitle"
 :::
 
+## Hooks
+
 ---
 
-### use-theme hook
+### `useTheme` hook
 
 Hook returns `theme`, `updateTheme` & `replaceTheme` from ThemeProvider context or default theme if you did not wrap application with ThemeProvider.
 
@@ -81,7 +83,7 @@ The `replaceTheme` function merges the theme passed in with the default theme.
 
 ---
 
-### use-theme-mode hook
+### `useThemeMode` hook
 
 You can get current theme mode (light or dark) and update it using setMode function from useThemeMode hook.
 
@@ -95,7 +97,104 @@ function Demo() {
 }
 ```
 
-### make-styles
+## HOC
+
+### with-theme `withTheme`
+
+#### Function Signture
+
+`withStyles<Props>(Component:ReactElement, styles: (theme: Theme, props:Props) => Style)): ReactElement`
+
+#### Usage
+
+```tsx
+import { withStyles } from '@rneui/themed';
+import { View } from 'react-native';
+
+type SurfaceProps = {};
+
+export const Surface = withStyles<SurfaceProps>(View, {
+  root: {
+    backgroundColor: '#e3e3e3',
+  },
+});
+```
+
+```tsx
+import { withStyles, Button, ButtonProps } from '@rneui/themed';
+
+export const Surface = withStyles<ButtonProps>(Button, ({ theme }) => ({
+  root: {
+    backgroundColor: theme.colors.background,
+  },
+  containerStyle: {
+    padding: 10,
+  },
+  titleStyle: {
+    color: theme.colors.text,
+  },
+}));
+```
+
+Don't want to wrap your components with `withTheme`? You can use the `ThemeConsumer` component
+which uses render props!
+
+```tsx
+import React from 'react';
+import { Text } from 'react-native';
+import { ThemeConsumer } from '@rneui/themed';
+
+const MyComponent = () => (
+  <ThemeConsumer>
+    {({ theme }) => (
+      <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
+    )}
+  </ThemeConsumer>
+)
+```
+
+### with-styles
+
+#### Function Signture
+
+`withStyles<Props>(Component:ReactElement, styles: (theme: Theme, props:Props) => Style)): ReactElement`
+
+#### Usage
+
+```tsx
+import { withStyles } from '@rneui/themed';
+import { View } from 'react-native';
+
+type SurfaceProps = {};
+
+export const Surface = withStyles<SurfaceProps>(View, {
+  root: {
+    backgroundColor: '#e3e3e3',
+  },
+});
+```
+
+```tsx
+import { withStyles, Button, ButtonProps } from '@rneui/themed';
+
+export const Surface = withStyles<ButtonProps>(Button, ({ theme }) => ({
+  root: {
+    backgroundColor: theme.colors.background,
+  },
+  containerStyle: {
+    padding: 10,
+  },
+  titleStyle: {
+    color: theme.colors.text,
+  },
+}));
+```
+
+## Functions
+
+### `makeStyles`
+
+`makeStyles(styles|(theme,props)=>styles)`
 
 If you want to keep your styles outside the component use `makeStyles()` (hook generator) to reference the `theme` and component props (optional param).
 
@@ -129,27 +228,12 @@ const useStyles = makeStyles((theme, props: Props) => ({
 }));
 ```
 
-Don't want to wrap your components with `withTheme`? You can use the `ThemeConsumer` component
-which uses render props!
+## Examples
+
+### Dark Mode with `useColorScheme` hook
 
 ```tsx
-import React from 'react';
-import { Text } from 'react-native';
-import { ThemeConsumer } from '@rneui/themed';
-
-const MyComponent = () => (
-  <ThemeConsumer>
-    {({ theme }) => (
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>;
-    )}
-  </ThemeConsumer>
-)
-```
-
-### Dark Mode
-
-```tsx
-import { useColorScheme } from 'react-native-appearance';
+import { useColorScheme } from 'react-native';
 
 const theme = createTheme({
   lightColors: {

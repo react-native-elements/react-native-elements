@@ -28,7 +28,7 @@ import {
 } from './ThemeProvider';
 import withTheme from './withTheme';
 import { makeStyles } from './makeStyles';
-import type { Theme, FullTheme, ThemeMode, ThemeSpacing } from './theme';
+import type { PartialTheme, FullTheme, ThemeMode, ThemeSpacing } from './theme';
 import type { ComponentTheme } from './theme.component';
 
 export {
@@ -61,7 +61,7 @@ export type {
   FullTheme,
   InlinePressableProps,
   ReplaceTheme,
-  Theme,
+  PartialTheme as Theme,
   UpdateTheme,
   ComponentTheme,
   ThemeMode,

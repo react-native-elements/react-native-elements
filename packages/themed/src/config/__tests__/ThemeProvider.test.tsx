@@ -11,34 +11,34 @@ import { ReactTestInstance } from 'react-test-renderer';
 import { defaultSpacing } from '../theme';
 
 describe('ThemeProvider', () => {
-  // it('render ThemeProvider', () => {
-  //   const { toJSON, queryAllByRole } = render(
-  //     <>
-  //       <BaseButton testID="xl" radius={'xl'}>
-  //         Test
-  //       </BaseButton>
-  //       <Button testID="lg" radius={'lg'}>
-  //         Test
-  //       </Button>
-  //       <ThemeProvider
-  //         theme={createTheme({ components: { Button: { radius: 'md' } } })}
-  //       >
-  //         <Button testID="sm" radius={'sm'}>
-  //           Test
-  //         </Button>
-  //         <Button testID="md">Test</Button>
-  //       </ThemeProvider>
-  //     </>
-  //   );
-  //   const buttons = queryAllByRole('button');
-  //   buttons.forEach((el) => {
-  //     const size = el.props.testID;
-  //     expect((el.children[0] as ReactTestInstance).props?.style).toMatchObject({
-  //       borderRadius: defaultSpacing[size],
-  //     });
-  //   });
-  //   expect(toJSON()).toMatchSnapshot();
-  // });
+  it('render ThemeProvider', () => {
+    const { toJSON, queryAllByRole } = render(
+      <>
+        <BaseButton testID="xl" radius={'xl'}>
+          Test
+        </BaseButton>
+        <Button testID="lg" radius={'lg'}>
+          Test
+        </Button>
+        <ThemeProvider
+          theme={createTheme({ components: { Button: { radius: 'md' } } })}
+        >
+          <Button testID="sm" radius={'sm'}>
+            Test
+          </Button>
+          <Button testID="md">Test</Button>
+        </ThemeProvider>
+      </>
+    );
+    const buttons = queryAllByRole('button');
+    buttons.forEach((el) => {
+      const size = el.props.testID;
+      expect((el.children[0] as ReactTestInstance).props?.style).toMatchObject({
+        borderRadius: defaultSpacing[size],
+      });
+    });
+    expect(toJSON()).toMatchSnapshot();
+  });
 
   // it('should update and replace theme', () => {
   //   const TestComp = (): JSX.Element => {

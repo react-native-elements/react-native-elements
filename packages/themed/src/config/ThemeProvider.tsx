@@ -1,13 +1,12 @@
-import React, { useCallback, useContext, useMemo } from 'react';
 import deepmerge from 'deepmerge';
-import { Colors, lightColors, darkColors } from './colors';
+import React, { useCallback, useContext, useMemo } from 'react';
+import { Colors, darkColors, lightColors } from './colors';
 import {
-  ThemeMode,
+  defaultSpacing,
   RecursivePartial,
   Theme,
+  ThemeMode,
   ThemeSpacing,
-  defaultSpacing,
-  RNETheme,
 } from './theme';
 import { ComponentTheme } from './theme.component';
 
@@ -16,16 +15,17 @@ export type { RecursivePartial };
 type ComponentFunctionProps<Components = ComponentTheme> = {
   [Key in keyof Components]?:
     | Components[Key]
-    | ((props: Components[Key], theme: RNETheme) => Components[Key]);
+    | ((props: Components[Key], theme: Theme) => Components[Key]);
 };
 
-export interface CreateThemeOptions extends RecursivePartial<Theme> {
+export interface CreateThemeOptions
+  extends RecursivePartial<Omit<Theme, 'colors'>> {
   lightColors?: RecursivePartial<Colors>;
   darkColors?: RecursivePartial<Colors>;
   components?: ComponentFunctionProps;
 }
 
-export interface ThemeOptions extends RNETheme {
+export interface ThemeOptions extends Theme {
   components?: ComponentFunctionProps;
 }
 
@@ -47,7 +47,7 @@ export type ThemeProps<T = {}> = {
   replaceTheme: ReplaceTheme;
 };
 
-export type ThemeProviderContext<T = {}> = ThemeProps<ThemeOptions & T>;
+export type ThemeProviderContext = ThemeProps;
 
 export const ThemeContext = React.createContext<ThemeProviderContext>(
   {} as ThemeProviderContext
@@ -140,7 +140,7 @@ export const ThemeConsumer = ThemeContext.Consumer;
 interface UseTheme {
   replaceTheme: ReplaceTheme;
   updateTheme: UpdateTheme;
-  theme: RNETheme;
+  theme: Theme;
 }
 
 export const useTheme = (): UseTheme => {

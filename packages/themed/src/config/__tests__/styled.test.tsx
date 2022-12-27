@@ -3,11 +3,12 @@ import React from 'react';
 import { Text, View, ViewProps } from 'react-native';
 import { Button as BaseButton } from '../../Button';
 import { ThemeProvider } from '../ThemeProvider';
-import { withStyles } from '../withStyles';
+import { styled } from '../styled';
+import { TextProps } from '@rneui/base';
 
 describe('withTheme', () => {
   it('should work', () => {
-    const Component = withStyles<ViewProps>(View, {
+    const Component = styled<ViewProps>(View)({
       root: {
         alignContent: 'center',
       },
@@ -21,8 +22,8 @@ describe('withTheme', () => {
   });
 
   it('should use props and theme', () => {
-    type MyCompProps = { testID: string; bold?: boolean };
-    const Component = withStyles<MyCompProps>(Text, (theme, { bold }) => ({
+    type MyCompProps = { bold?: boolean };
+    const Component = styled(Text)<MyCompProps>((theme, { bold }) => ({
       root: {
         fontWeight: bold ? 'bold' : 'normal',
         color: theme.colors.primary,
@@ -41,7 +42,7 @@ describe('withTheme', () => {
   });
 
   it('should work with RNE components', () => {
-    const Component = withStyles<{ testID: string }>(BaseButton, {
+    const Component = styled(BaseButton)({
       root: {
         alignContent: 'center',
       },
