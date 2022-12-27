@@ -12,6 +12,8 @@ export interface Theme {
   spacing: ThemeSpacing;
 }
 
-export interface FullTheme extends ComponentTheme, Theme {
+export interface RNETheme extends Theme {
   colors: Colors;
 }
+
+export interface FullTheme extends ComponentTheme, RNETheme {}

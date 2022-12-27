@@ -7,6 +7,7 @@ import {
   Theme,
   ThemeSpacing,
   defaultSpacing,
+  RNETheme,
 } from './theme';
 import { ComponentTheme } from './theme.component';
 
@@ -15,10 +16,7 @@ export type { RecursivePartial };
 type ComponentFunctionProps<Components = ComponentTheme> = {
   [Key in keyof Components]?:
     | Components[Key]
-    | ((
-        props: Components[Key],
-        theme: Theme & { colors: Colors }
-      ) => Components[Key]);
+    | ((props: Components[Key], theme: RNETheme) => Components[Key]);
 };
 
 export interface CreateThemeOptions extends RecursivePartial<Theme> {
@@ -27,8 +25,7 @@ export interface CreateThemeOptions extends RecursivePartial<Theme> {
   components?: ComponentFunctionProps;
 }
 
-export interface ThemeOptions extends Theme {
-  colors: Colors;
+export interface ThemeOptions extends RNETheme {
   components?: ComponentFunctionProps;
 }
 
@@ -143,9 +140,7 @@ export const ThemeConsumer = ThemeContext.Consumer;
 interface UseTheme {
   replaceTheme: ReplaceTheme;
   updateTheme: UpdateTheme;
-  theme: {
-    colors: Colors;
-  } & Theme;
+  theme: RNETheme;
 }
 
 export const useTheme = (): UseTheme => {
