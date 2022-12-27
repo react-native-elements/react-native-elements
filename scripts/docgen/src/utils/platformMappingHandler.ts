@@ -14,7 +14,9 @@ export function platformMappingHandler(value) {
         platformTypes[platform] = type;
       } else {
         Object.keys(platformTypes).map((key) => {
-          if (!platformTypes[key]) platformTypes[key] = type;
+          if (!platformTypes[key]) {
+            platformTypes[key] = type;
+          }
         });
       }
     }

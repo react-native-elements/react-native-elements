@@ -7,7 +7,7 @@ exports[`Switch Component should match snapshot 1`] = `
   <RCTSwitch
     accessibilityRole="switch"
     accessibilityState={
-      Object {
+      {
         "checked": true,
         "disabled": false,
       }
@@ -18,7 +18,7 @@ exports[`Switch Component should match snapshot 1`] = `
     onStartShouldSetResponder={[Function]}
     onTintColor="green"
     style={
-      Object {
+      {
         "height": 31,
         "width": 51,
       }

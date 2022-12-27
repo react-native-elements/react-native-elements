@@ -2,9 +2,9 @@
 
 # React Native Elements App
 
-**[Mobile App](https://expo.dev/@rne_org/react-native-elements)**
+**[Mobile App](https://expo.dev/@rneui/react-native-elements)**
 
-This is the Demo app for [React Native Elements](https://expo.dev/@rne_org/react-native-elements) built with [Expo](https://expo.io/). The purpose of this app is to demonstrate the usage of the various UI components that React Native Elements provides out of the box.
+This is the Demo app for [React Native Elements](https://expo.dev/@rneui/react-native-elements) built with [Expo](https://expo.io/). The purpose of this app is to demonstrate the usage of the various UI components that React Native Elements provides out of the box.
 
 This app also works on the `web` platform using [React Native Web](https://github.com/necolas/react-native-web). If you are looking to build a React Native mobile app which can reuse the code to deploy it on the web, this is the right place to begin. We decided to use [Expo](https://expo.io/), which reduces the effort required to build an app once and deploy it anywhere.
 

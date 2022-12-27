@@ -15,7 +15,7 @@ Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=0089E3"></a>
   <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements?label=stars&logo&style=flat-square&color=0089E3"></a>
-  <a href="https://github.com/react-native-elements/react-native-elements/actions/workflows/dist.yml"><img src="https://img.shields.io/github/workflow/status/react-native-elements/react-native-elements/Bleeding%20Edge%20version?style=flat-square"></a>
+  <a href="https://github.com/react-native-elements/react-native-elements/actions/workflows/bleeding-edge-dist.yml"><img src="https://img.shields.io/github/actions/workflow/status/react-native-elements/react-native-elements/bleeding-edge-dist.yml?branch=next&style=flat-square"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-F7B93E.svg?style=flat-square"></a>
   <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://img.shields.io/codecov/c/gh/react-native-elements/react-native-elements?color=F01F7A&style=flat-square"></a>
 </p>
@@ -35,7 +35,7 @@ Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 
 <div align="center">
 
-<a href="https://reactnativeelements.com">Getting Started 🚀</a> - <a href="https://reactnativeelements.com/docs">Documentation 📚</a> - <a href="https://expo.dev/@rne_org/react-native-elements">Expo demo </a> - <a href="https://reactnativeelements.com/blog">Blog</a> - <a href="https://github.com/react-native-elements/react-native-elements/releases">Releases</a>
+<a href="https://reactnativeelements.com">Getting Started 🚀</a> - <a href="https://reactnativeelements.com/docs">Documentation 📚</a> - <a href="https://expo.dev/@rneui/react-native-elements">Expo demo </a> - <a href="https://reactnativeelements.com/blog">Blog</a> - <a href="https://github.com/react-native-elements/react-native-elements/releases">Releases</a>
 
 </div>
 
@@ -80,7 +80,7 @@ Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) f
 ## Expo demo app
 
 Checkout the official
-[React Native Elements App](https://expo.dev/@rne_org/react-native-elements)
+[React Native Elements App](https://expo.dev/@rneui/react-native-elements)
 on Expo which uses all of the React Native Elements components.
 
 If you are looking to contribute to the React Native Elements App,
@@ -88,8 +88,7 @@ If you are looking to contribute to the React Native Elements App,
 view the implementation & Use this command to start example app locally
 
 ```bash
-cd example
-yarn start
+yarn example:start
 ```
 
 ## VS Code Extension
@@ -124,11 +123,11 @@ an
 or a
 [pull request](https://github.com/react-native-elements/react-native-elements/pulls).
 
-### Discord Community
+### Community
 
-In case you have any other question or would like to come say **Hi!** to the RNE
-community, join our [Discord Server](https://discord.com/invite/e9RBHjkKHa).
-See you on the other side! 👋😃
+- [Discord](https://discord.com/invite/e9RBHjkKHa) - In case you have any other question or would like to come say **Hi!** to the RNE community, join our [Discord Server](https://discord.com/invite/e9RBHjkKHa). See you on the other side! 👋😃
+
+- [Twitter](https://twitter.com/rn_elements) - Follow us on Twitter to get the latest updates.
 
 ## Backers
 

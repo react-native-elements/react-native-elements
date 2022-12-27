@@ -1,4 +1,4 @@
-name: Expo Default Channel Preview CI
+name: (manual) Expo default Channel
 
 on: workflow_dispatch
 
@@ -11,20 +11,14 @@ jobs:
       - name: 🏗 Setup repo
         uses: actions/checkout@v2
 
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-          cache: yarn
+      - name: Install dependencies
+        uses: ./.github/actions/install
 
       - name: 🏗 Setup Expo
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
-
-      - name: Install dependencies
-        uses: ./.github/actions/install
 
       - name: 🚀 Publish preview
         run: |

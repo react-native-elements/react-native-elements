@@ -7,7 +7,7 @@ exports[`CheckBox Component should match snapshot 1`] = `
   <View
     accessibilityRole="checkbox"
     accessibilityState={
-      Object {
+      {
         "checked": true,
         "disabled": false,
       }
@@ -25,7 +25,7 @@ exports[`CheckBox Component should match snapshot 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "backgroundColor": "#ffffff",
         "borderColor": "#ffffff",
         "margin": 5,
@@ -38,7 +38,7 @@ exports[`CheckBox Component should match snapshot 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
         }
@@ -47,20 +47,20 @@ exports[`CheckBox Component should match snapshot 1`] = `
       <Text
         allowFontScaling={false}
         style={
-          Array [
-            Object {
+          [
+            {
               "color": "#2089dc",
               "fontSize": 24,
             },
-            Object {
+            {
               "minWidth": 24,
             },
-            Object {
+            {
               "fontFamily": "FontAwesome",
               "fontStyle": "normal",
               "fontWeight": "normal",
             },
-            Object {},
+            {},
           ]
         }
         testID="RNE__Checkbox__Icon"

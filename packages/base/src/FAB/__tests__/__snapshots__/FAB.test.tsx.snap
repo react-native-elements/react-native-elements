@@ -6,16 +6,15 @@ exports[`FAB Component should match snapshot 1`] = `
 >
   <View
     collapsable={false}
-    nativeID="animatedComponent"
     style={
-      Object {
+      {
         "alignItems": "center",
         "borderRadius": 28,
         "flexDirection": "row",
         "justifyContent": "center",
         "opacity": 1,
-        "transform": Array [
-          Object {
+        "transform": [
+          {
             "scale": 1,
           },
         ],
@@ -24,14 +23,14 @@ exports[`FAB Component should match snapshot 1`] = `
   >
     <View
       style={
-        Array [
-          Object {
+        [
+          {
             "overflow": "hidden",
           },
-          Object {
+          {
             "borderRadius": 2,
           },
-          Object {
+          {
             "borderRadius": 28,
             "elevation": 4,
           },
@@ -43,7 +42,7 @@ exports[`FAB Component should match snapshot 1`] = `
       <View
         accessibilityRole="button"
         accessibilityState={
-          Object {
+          {
             "busy": false,
             "disabled": false,
           }
@@ -51,7 +50,6 @@ exports[`FAB Component should match snapshot 1`] = `
         accessible={true}
         collapsable={false}
         focusable={true}
-        nativeID="animatedComponent"
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -60,14 +58,14 @@ exports[`FAB Component should match snapshot 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "opacity": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#ad1457",
               "borderColor": "#2089dc",
@@ -83,7 +81,7 @@ exports[`FAB Component should match snapshot 1`] = `
         >
           <Text
             style={
-              Object {
+              {
                 "color": "#ffffff",
                 "fontSize": 18,
                 "marginHorizontal": 8,

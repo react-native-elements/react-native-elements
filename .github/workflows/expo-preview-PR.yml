@@ -1,0 +1,66 @@
+name: (manual) PR's Expo preview Channel
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        type: string
+        description: PR Number
+        required: true
+
+jobs:
+  publish:
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: example
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR SHA
+        id: sha
+        uses: actions/github-script@v4
+        with:
+          result-encoding: string
+          script: |
+            const { owner, repo,  } = context.issue;
+            const pr = await github.pulls.get({
+              owner,
+              repo,
+              pull_number: ${{github.event.inputs.pr}},
+            });
+            return pr.data.head.sha
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.sha.outputs.result }}
+
+      - name: Install dependencies
+        uses: ./.github/actions/install
+
+      - name: 🏗 Setup Expo
+        uses: expo/expo-github-action@v7
+        with:
+          expo-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 🚀 Publish preview
+        run: expo publish --release-channel=pr-${{ github.event.inputs.pr }} --non-interactive
+      - name: Find Comment
+        uses: peter-evans/find-comment@v1
+        id: fc
+        with:
+          issue-number: ${{ github.event.inputs.pr }}
+          comment-author: "rneui"
+          body-includes: Preview published
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v1
+        env:
+          QR_PATH: https://qr.expo.dev/expo-go?owner=rneui&slug=react-native-elements&releaseChannel=pr-${{ github.event.number }}&host=exp.host
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Preview published
+            The mobile version of example app from this branch is ready! You can [see it here](${{ env.QR_PATH }})<br><br><a href="${{ env.QR_PATH }}"><img src="${{env.QR_PATH}}" height="200px" width="200px"></a>.
+
+          edit-mode: replace
