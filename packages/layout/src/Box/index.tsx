@@ -1,32 +1,29 @@
 import React from 'react';
-import { ColorValue, View } from 'react-native';
+import { ColorValue, View, StyleProp, ViewStyle } from 'react-native';
 import { makeStyles } from '../system/makeStyles';
 import { SystemProp } from '../system/SystemProp';
 
 export interface BoxProps extends Partial<Record<SystemProp, string | number>> {
+  /** Background Color */
   bgColor?: ColorValue;
+  /** Alias for Height */
   h?: number;
+  /** Alias for Width */
   w?: number;
+  /** Height */
   height?: number;
+  /** Width */
   width?: number;
+  /** styles for Box */
+  style?: StyleProp<ViewStyle>;
+
   children?: React.ReactNode;
 }
 
-/**
- *
- * @usage
- *
- * ```tsx live
- * <Box spacing="md" bgColor="#d2f000" w={200} px={40} py={20}>
- *   <Button>Button</Button>
- * </Box>
- * ```
- *
- */
-export const Box = ({ children, ...rest }: BoxProps): JSX.Element => {
+export const Box = ({ children, style, ...rest }: BoxProps): JSX.Element => {
   const styles = useStyles(rest);
 
-  return <View style={styles.container}>{children}</View>;
+  return <View style={[styles.container, style]}>{children}</View>;
 };
 
 const useStyles = makeStyles(

@@ -29,7 +29,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@rneui/doc-gen": "./scripts/docgen/lib",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-native": "^7.0.2",

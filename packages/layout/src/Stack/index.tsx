@@ -74,7 +74,7 @@ const useStyles = makeStyles(
         justifyContent: justify,
       },
       childProps: {
-        padding: spacing,
+        [row ? 'paddingHorizontal' : 'paddingVertical']: spacing,
       },
     };
   }
