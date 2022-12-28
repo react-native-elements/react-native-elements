@@ -47,21 +47,24 @@ export const Palette = ({ dark = false }) => {
         display: 'flex',
         gap: '20px',
         flexWrap: 'wrap',
+        fontSize: 'smaller',
       }}
     >
       {Object.entries(dark ? darkColors : lightColors).map(([key, color]) => {
         return (
-          <div>
+          <div key={key} style={{ textAlign: 'center', fontSize: 'small' }}>
             <div
               style={{
                 background: color,
-                width: '80px',
-                height: '70px',
+                width: '85px',
+                height: '50px',
                 display: 'block',
                 borderRadius: '6px',
+                border: '1px solid #e2e2e2',
               }}
-            ></div>
-            <small>{key}</small>
+            />
+            <div>{color}</div>
+            {key}
           </div>
         );
       })}

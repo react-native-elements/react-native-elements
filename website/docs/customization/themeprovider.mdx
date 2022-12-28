@@ -1,7 +1,10 @@
 ---
-title: ThemeProvider
-sidebar_position: 1
+title: Theme Provider
+sidebar_position: 2
 ---
+
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The previous solution works great for only one component, but imagine having to
 do this for every component you want custom styles for. That could get a bit
@@ -10,10 +13,24 @@ Elements ships with a 3 utilities for large-scale theming.
 
 Firstly you'll want to set up your `ThemeProvider`.
 
-```jsx
-import { ThemeProvider, Button, createTheme } from '@rneui/themed';
+**Import**
 
+```tsx
+import { ThemeProvider } from '@rneui/themed';
+```
+
+**Usage**
+
+Use [createTheme](#createtheme) to generate a theme object. Then, pass it as a prop to ThemeProvider.
+
+```jsx
 const theme = createTheme({
+  lightColors: {
+    primary: 'red',
+  },
+  darkColors: {
+    primary: 'blue',
+  },
   components: {
     Button: {
       raised: true,
@@ -35,6 +52,10 @@ const App = () => {
 If you do not specify `theme` in ThemeProvider, it would use [defaultTheme](./theme_object#default-light-colors)
 :::
 
+:::tip
+Want to use custom color? refer [extending colors](./extending#adding-custom-colors)
+:::
+
 The example above achieves the same goals as the first example — apply the same
 styles to multiple instances of `Button` in the app. However this example
 applies the `raised` prop to every instance of `Button` inside the component
@@ -44,13 +65,40 @@ set to true.
 This is extremely convenient and is made possible through
 [React's Context API](https://reactjs.org/docs/context.html).
 
+### `createTheme`
+
+Generate a theme base on the options received. Then, pass it as a prop to ThemeProvider.
+
+```tsx
+createTheme({
+  lightColors: Colors,
+  darkColors: Colors,
+  mode: 'light' | 'dark',
+  components: {
+    componentName: (props, theme) => ({
+      // Props
+    }),
+  },
+});
+```
+
+**How it works**
+
+<ThemedImage
+  alt="how createTheme works internally"
+  sources={{
+    light: useBaseUrl('/img/docs/light.png'),
+    dark: useBaseUrl('/img/docs/dark.png'),
+  }}
+/>
+
 :::note
 To theme subcomponents such as `ListItem.Title`, in your theme remove the dot and list them as "ListItemTitle"
 :::
 
 ---
 
-### use-theme hook
+### `useTheme`
 
 Hook returns `theme`, `updateTheme` & `replaceTheme` from ThemeProvider context or default theme if you did not wrap application with ThemeProvider.
 
@@ -79,9 +127,36 @@ updateTheme({
 
 The `replaceTheme` function merges the theme passed in with the default theme.
 
+**Want single-theme?**
+
+```jsx
+const theme = createTheme({
+  // Use only one color scheme
+  lightColors: {
+    primary: 'red',
+  },
+  // And set that mode as default
+  mode: 'light',
+  components: {
+    Button: {
+      raised: true,
+    },
+  },
+});
+
+// Your App
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Button>My Button</Button>
+    </ThemeProvider>
+  );
+};
+```
+
 ---
 
-### use-theme-mode hook
+### `useThemeMode`
 
 You can get current theme mode (light or dark) and update it using setMode function from useThemeMode hook.
 
@@ -95,42 +170,37 @@ function Demo() {
 }
 ```
 
-### make-styles
+### `withTheme`
 
-If you want to keep your styles outside the component use `makeStyles()` (hook generator) to reference the `theme` and component props (optional param).
+**Function Signture**
 
 ```tsx
-import React from 'react';
-import { Text } from 'react-native';
-import { makeStyles } from '@rneui/themed';
+withTheme<Props>(Component, ?themeKey)
+```
 
-type Props = {
-  fullWidth?: boolean;
+**Usage**
+
+```tsx
+import { withTheme, ThemeProps } from '@rneui/themed';
+
+type CustomComponentProps = {
+  title: string;
+  titleStyle: StyleProps<TextStyle>;
 };
 
-const MyComponent = (props: Props) => {
-  const styles = useStyles(props);
-
-  return (
-    <View style={styles.container}>
-      <Text style={{ color: theme.colors.primary }}>Yo!</Text>
-    </View>
-  );
+const CustomComponent = (props: ThemeProps<CustomComponentProps>) => {
+  // Access theme from props
+  const { theme, updateTheme, replaceTheme } = props;
+  // ...
 };
 
-const useStyles = makeStyles((theme, props: Props) => ({
-  container: {
-    background: theme.colors.white,
-    width: props.fullWidth ? '100%' : 'auto',
-  },
-  text: {
-    color: theme.colors.primary,
-  },
-}));
+export default withTheme<CustomComponentProps>(CustomComponent, 'ComponentKey');
 ```
 
 Don't want to wrap your components with `withTheme`? You can use the `ThemeConsumer` component
 which uses render props!
+
+**Usage**
 
 ```tsx
 import React from 'react';
@@ -146,10 +216,10 @@ const MyComponent = () => (
 )
 ```
 
-### Dark Mode
+### Switch theme mode with `useColorScheme`
 
 ```tsx
-import { useColorScheme } from 'react-native-appearance';
+import { useColorScheme } from 'react-native';
 
 const theme = createTheme({
   lightColors: {
@@ -158,6 +228,7 @@ const theme = createTheme({
   darkColors: {
     primary: '#344512',
   },
+  // the default theme mode
   mode: 'light',
 });
 
