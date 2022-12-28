@@ -10,13 +10,6 @@ type UsageMetadata = Record<string, any> & {
   showLineNumbers: boolean;
 };
 
-type UsageMetadata = Record<string, any> & {
-  live: boolean;
-  showCode: boolean;
-  lang: string;
-  showLineNumbers: boolean;
-};
-
 declare function meta(args: Record<string, any>): void;
 declare function info(...args: string[]): void;
 declare function usage(

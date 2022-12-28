@@ -2,7 +2,7 @@
   "extends": "../../tsconfig",
   "references": [
     {
-      "path": "../base"
+      "path": "../themed"
     }
   ],
   "compilerOptions": {
