@@ -1,7 +1,7 @@
 ---
 sidebar_label: Extending Theme
 title: Extending Theme
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 TypeScript definitions for your theme can be extended by using TypeScript's [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) feature. First you need to create a declaration file called `themed.d.ts` and then declare the module `@rneui/themed` and 're-export' the types that you want to extend. i.e. below we add a custom `p1Style` to the `Text` theme object and we add a bunch of colors to the `colors` object.
@@ -11,6 +11,7 @@ TypeScript definitions for your theme can be extended by using TypeScript's [dec
 TypeScript will only autocomplete RNE's default colors when accessing the theme. To add your custom colors to the `Colors` type, you can use TypeScript module declaration:
 
 ```tsx
+// themed.d.ts
 import '@rneui/themed';
 
 declare module '@rneui/themed' {
@@ -25,19 +26,43 @@ declare module '@rneui/themed' {
 Then when you create your `ThemeProvider` instance,
 
 ```tsx
+// App.tsx
 const theme = createTheme({
   lightColors: {
-    ...yourCustomColorShape,
+    tertiary: '#124789',
+    accent: '#f98652',
+    surface: '#0990763',
   },
   darkColors: {
-    ...yourCustomColorShape,
+    tertiary: '#124789',
+    accent: '#908652',
+    surface: '#0990763',
   },
-  mode: 'light', // your light or dark mode value
+  components:{
+    Button:(props,theme)=>({
+      containerStyle:{
+        backgroundColor:theme.colors.tertiary
+      }
+    })
+  }
+  mode: 'light', // or 'dark'
 });
+
+// Wrap with ThemeProvider
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Component />
+    </ThemeProvider>
+  );
+};
 ```
 
+**Usage**
+
 ```tsx
-const App = () => {
+// Component.tsx
+export const Component = () => {
   const { theme } = useTheme();
   return <Text style={{ color: theme.colors.accent }} />;
 };
@@ -48,6 +73,7 @@ const App = () => {
 Similar to how you can extend/set custom colors, you can add your own properties to the `theme` type using TypeScript module declaration:
 
 ```tsx
+// themed.d.ts
 import '@rneui/themed';
 
 declare module '@rneui/themed' {
@@ -58,7 +84,10 @@ declare module '@rneui/themed' {
 }
 ```
 
+**Usage**
+
 ```tsx
+// App.tsx
 const App = () => {
   const { theme } = useTheme();
   return <Text>{theme.myCustomProperty}</Text>;
@@ -70,6 +99,7 @@ const App = () => {
 If you need to extend some props of RNE's default components, you can use TypeScript module declaration, Also remember to extend `ComponentTheme` too.
 
 ```tsx
+// themed.d.ts
 import '@rneui/themed';
 
 declare module '@rneui/themed' {

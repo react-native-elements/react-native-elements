@@ -11,15 +11,19 @@ meta({
   name: 'Button',
 });
 
-usage('Variants', '', () => (
-  <Stack row align="center" spacing={4}>
-    <Button title="Solid" />
-    <Button title="Outline" type="outline" />
-    <Button title="Clear" type="clear" />
-  </Stack>
-));
+usage(
+  'Variants',
+  'There are solid button, outline button and clear button types',
+  () => (
+    <Stack row align="center" spacing={4}>
+      <Button title="Solid" />
+      <Button title="Outline" type="outline" />
+      <Button title="Clear" type="clear" />
+    </Stack>
+  )
+);
 
-usage('Size', '', () => (
+usage('Size', 'Button can be small medium or large', () => (
   <Stack row align="center" spacing={4}>
     <Button size="sm">Small</Button>
     <Button size="md">Medium</Button>
@@ -36,6 +40,14 @@ usage('Colors', '', () => (
   </Stack>
 ));
 
+usage('Disabled', '', () => (
+  <Stack row align="center" spacing={4}>
+    <Button title="Solid" disabled />
+    <Button title="Outline" type="outline" disabled />
+    <Button title="Clear" type="clear" disabled />
+  </Stack>
+));
+
 usage('Linear Gradient', '', (LinearGradient) => (
   <Button
     ViewComponent={LinearGradient} // Don't forget this!
@@ -49,20 +61,17 @@ usage('Linear Gradient', '', (LinearGradient) => (
   </Button>
 ));
 
-usage('Button with icon', '', () => (
-  <Button type="solid">
-    <Icon name="home" color="white" />
-    Icon
-  </Button>
-));
+usage(
+  'Icon Button',
+  'Can contain an Icon by setting the icon prop or placing an Icon component within the Button.',
+  () => (
+    <Button radius={'sm'} type="solid">
+      Save
+      <Icon name="save" color="white" />
+    </Button>
+  )
+);
 
-usage('Button with right icon', '', () => (
-  <Button type="solid">
-    Icon
-    <Icon name="home" color="white" />
-  </Button>
-));
-
-usage('Button with loading spinner', '', () => (
+usage('Loading spinner', '', () => (
   <Button title="Solid" type="solid" loading />
 ));
