@@ -2,9 +2,7 @@ import { info, usage, Stack } from '@rneui/doc-gen';
 import React from 'react';
 import { Text } from '..';
 
-info(
-  'CheckBoxes allow users to complete tasks that involve making choices such as selecting options, or switching settings - On or Off. It provides a clear visual of either a true or false choice.'
-);
+info('Text displays words and characters of various sizes.');
 
 usage('Icon', '', () => (
   <Stack>
