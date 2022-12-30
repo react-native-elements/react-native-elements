@@ -122,11 +122,6 @@ export default function () {
                   VS Code Extension
                 </a>
               </li>
-              <li className="footer__item">
-                <a href="/sponsor" className="footer__link-item">
-                  Our Sponsors
-                </a>
-              </li>
             </ul>
           </div>
         </div>
