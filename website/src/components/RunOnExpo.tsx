@@ -19,7 +19,7 @@ const Home: React.FunctionComponent<{}> = () => {
         <div className="row margin-horiz--lg">
           <div className="col col--4">
             <img
-              src="https://qr.expo.dev/expo-go?owner=rneui&slug=react-native-elements&releaseChannel=default&host=exp.host"
+              src="/img/website/app-preview2.png"
               style={{ width: 200, left: 60, top: -100 }}
             />
           </div>
@@ -29,7 +29,8 @@ const Home: React.FunctionComponent<{}> = () => {
               <div className="padding-vert--lg hide-on-small">
                 <SiReact style={{ fontSize: 128, opacity: 0.1 }} />
                 <img
-                  src="/img/website/expo-go-qr.svg"
+                  src="https://qr.expo.dev/expo-go?owner=rneui&slug=react-native-elements&releaseChannel=default&host=exp.host"
+                  alt="Expo QR Code"
                   width={120}
                   className="margin-horiz--lg"
                 />
