@@ -25,16 +25,20 @@ const Home: React.FunctionComponent<{}> = () => {
           </div>
           <div className="col col--8 " style={{ alignSelf: 'center' }}>
             <div className="padding-vert--lg">
-              <h1>Check our Expo demo</h1>
+              <h1>Preview on Expo Go</h1>
+              Use android/iOS phone to scan the QR code with your
+              <br />
+              <a href="https://expo.dev/client">Expo Go</a> app to preview the
+              example.
               <div className="padding-vert--lg hide-on-small">
-                <SiReact style={{ fontSize: 128, opacity: 0.1 }} />
+                <SiReact style={{ fontSize: 128, opacity: 0.3 }} />
                 <img
                   src="https://qr.expo.dev/expo-go?owner=rneui&slug=react-native-elements&releaseChannel=default&host=exp.host"
                   alt="Expo QR Code"
-                  width={120}
+                  width={128}
                   className="margin-horiz--lg"
                 />
-                <SiExpo style={{ fontSize: 128, opacity: 0.1 }} />
+                <SiExpo style={{ fontSize: 128, opacity: 0.3 }} />
               </div>
               <div>
                 <Link
