@@ -27,7 +27,7 @@
     "@docusaurus/theme-live-codeblock": "2.1.0",
     "@docusaurus/types": "2.1.0",
     "@rneui/base": "../packages/base",
-    "@rneui/layout": "^0.0.0-alpha.4",
+    "@rneui/layout": "../packages/layout",
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
     "css-loader": "^6.5.1",

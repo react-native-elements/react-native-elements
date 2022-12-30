@@ -1,5 +1,10 @@
 {
   "extends": "../../tsconfig.json",
+  "references": [
+    {
+      "path": "../../packages/layout"
+    }
+  ],
   "compilerOptions": {
     "resolveJsonModule": true,
     "jsx": "preserve",

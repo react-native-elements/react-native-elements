@@ -12077,7 +12077,7 @@ __metadata:
     "@docusaurus/theme-live-codeblock": 2.1.0
     "@docusaurus/types": 2.1.0
     "@rneui/base": ../packages/base
-    "@rneui/layout": ^0.0.0-alpha.4
+    "@rneui/layout": ../packages/layout
     "@tsconfig/docusaurus": ^1.0.4
     "@types/assert": ^1.5.6
     "@types/jest": ^27.0.3

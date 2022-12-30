@@ -56,8 +56,9 @@ yarn add @rneui/{{installation}}
     <h4>Import</h4>
   </div>
   <div class="col col--9">
-    <CodeBlock>{`import { {{parentComponent}} } from '@rneui/themed';`}</CodeBlock>
+    <CodeBlock>{`import { {{parentComponent}} } from '@rneui/{{pkg}}';`}</CodeBlock>
   </div>
+  {{#if themeKey}}
   <div class="col col--3">
     <h4>
       Theme Key{' '}
@@ -69,6 +70,7 @@ yarn add @rneui/{{installation}}
   <div class="col col--9">
     <CodeBlock>{`{{themeKey}}`}</CodeBlock>
   </div>
+  {{/if}}
 </div>
 
 {{{usage}}}
