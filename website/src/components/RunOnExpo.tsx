@@ -26,7 +26,7 @@ const Home: React.FunctionComponent<{}> = () => {
           <div className="col col--8 " style={{ alignSelf: 'center' }}>
             <div className="padding-vert--lg">
               <h1>Preview on Expo Go</h1>
-              Use android/iOS phone to scan the QR code with your
+              Use android phone to scan the QR code with your
               <br />
               <a href="https://expo.dev/client">Expo Go</a> app to preview the
               example.
