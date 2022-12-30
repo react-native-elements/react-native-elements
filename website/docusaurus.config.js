@@ -73,7 +73,7 @@ const config = {
       isCloseable: false,
     },
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
     },
     navbar: {
