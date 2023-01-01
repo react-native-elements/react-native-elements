@@ -133,7 +133,7 @@
 }
 
 .hero img.rne-hero-logo {
-  box-shadow: 0px 0px 40px var(--ifm-color-primary);
+  box-shadow: 0px 0px 40px var(--ifm-color-primary-lighter);
 }
 
 /* background-color: #ffffff;
