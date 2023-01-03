@@ -216,41 +216,117 @@ const MyComponent = () => (
 )
 ```
 
-### Switch theme mode with `useColorScheme`
+---
+
+## More examples
+
+### Using with React Navigation
+
+[React Navigation](https://reactnavigation.org/) uses it's own [theming](https://reactnavigation.org/docs/themes/), you can use RNE UI's theme with it.
 
 ```tsx
-import { useColorScheme } from 'react-native';
-
-const theme = createTheme({
-  lightColors: {
-    primary: '#899656',
-  },
-  darkColors: {
-    primary: '#344512',
-  },
-  // the default theme mode
-  mode: 'light',
-});
-
-const ColorScheme = ({ children }) => {
-  const colorMode = useColorScheme();
+const Navigation = () => {
   const { theme } = useTheme();
-  const { setMode } = useThemeMode();
-
-  React.useEffect(() => {
-    setMode(colorMode);
-  }, [colorMode]);
 
   return (
-    <View style={{ backgroundColor: theme.colors.background }}>{children}</View>
+    <NavigationContainer
+      theme={{
+        colors: {
+          primary: theme.colors.primary,
+          background: theme.colors.background,
+          card: theme.colors.white,
+          text: theme.colors.black,
+        },
+        mode: theme.mode,
+      }}
+    >
+      {/*  Navigators */}
+    </NavigationContainer>
   );
 };
+```
 
-const App = () => {
+```tsx
+const theme=createTheme({
+  // ...
+})
+
+export const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ColorScheme>{/*  */}</ColorScheme>
+      <Navigation>
     </ThemeProvider>
   );
 };
+```
+
+### Switch theme mode with `useColorScheme`
+
+```tsx
+import React from 'react';
+import { useColorScheme } from 'react-native';
+import { useThemeMode } from '@rneui/themed';
+
+// create custom hook
+const useThemeModeScheme = () => {
+  const colorScheme = useColorScheme();
+  const { setMode } = useThemeMode();
+  React.useEffect(() => {
+    setMode(colorScheme);
+  }, [colorScheme, setMode]);
+};
+```
+
+**Usage**
+
+```tsx
+// use within ThemeProvider
+const ChildComp = ({ children }) => {
+  useThemeModeScheme(); // our custom hook
+  // ...
+  // ...
+};
+
+export const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <ChildComp>
+    </ThemeProvider>
+  );
+};
+```
+
+### Mode based background color
+
+```tsx
+const Background = ({ children }) => {
+  const styles = useStyles();
+  return <View style={styles.container}>{children}</View>;
+};
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    backgroundColor: theme.colors.background,
+  },
+}));
+```
+
+**Usage**
+
+```tsx
+const theme = createTheme({
+  // default mode
+  mode: 'dark',
+});
+
+export default function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Background>
+        {/*...*/}
+        {/*...*/}
+      </Background>
+    </ThemeProvider>
+  );
+}
 ```
