@@ -16,8 +16,8 @@ const Home: React.FunctionComponent<{}> = () => {
   const { siteConfig = {} } = context;
   return (
     <section>
-      <header className="hero padding-vert--xl">
-        <div className="container">
+      <header className="hero">
+        <div className="container  padding-vert--xl">
           <div
             className="row padding-vert--md"
             style={{ alignItems: 'center' }}
@@ -63,7 +63,7 @@ const Home: React.FunctionComponent<{}> = () => {
               <div className="ball" style={{ left: 20, top: '70%' }}>
                 <MdInvertColors />
               </div>
-              <div className="ball" style={{ right: '40%', bottom: 190 }}>
+              <div className="ball" style={{ right: '40%', bottom: 90 }}>
                 <MdAndroid />
               </div>
               <div className="ball" style={{ left: '40%', top: 180 }}>
