@@ -1,0 +1,105 @@
+---
+title: Styles
+sidebar_position: 3
+---
+
+### `makeStyles`
+
+**Imports**
+
+```tsx
+import { makeStyles } from '@rneui/themed';
+```
+
+**Function Signture**
+
+```tsx
+makeStyles(styles: Styles | ((theme, props) => Styles))
+```
+
+If you want to keep your styles outside the component use `makeStyles()` (hook generator) to reference the `theme` and component props (optional param).
+
+**Usage**
+
+```tsx
+type Props = {
+  fullWidth?: boolean;
+};
+
+const useStyles = makeStyles((theme, props: Props) => ({
+  container: {
+    background: theme.colors.white,
+    width: props.fullWidth ? '100%' : 'auto',
+  },
+  text: {
+    color: theme.colors.primary,
+  },
+}));
+
+const MyComponent = (props: Props) => {
+  const styles = useStyles(props);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Yo!</Text>
+    </View>
+  );
+};
+```
+
+### `styled`
+
+**Imports**
+
+```tsx
+import { styled } from '@rneui/themed';
+```
+
+**Function Signture**
+
+```tsx
+styled(Component)<Props>(styles: Styles | ((theme, props) => Styles))
+```
+
+**Usage**
+
+```tsx
+const Conatiner = styled(View)({
+  // default style of component
+  root: {
+    paddingHorizontal: 16,
+  },
+});
+```
+
+```tsx
+const Surface = styled(View)((theme) => ({
+  // default style of component
+  root: {
+    backgroundColor: theme.colors.background,
+  },
+}));
+```
+
+**Using RNE's component**
+
+```tsx
+const RedButton = styled(Button)({
+  containerStyle: {
+    backgroundColor: 'red',
+  },
+});
+```
+
+**Using custom props**
+
+```tsx
+type MyCompProps = { bold?: boolean };
+
+const Component = styled(Text)<MyCompProps>((theme, { bold }) => ({
+  root: {
+    fontWeight: bold ? 'bold' : 'normal',
+    color: theme.colors.primary,
+  },
+}));
+```

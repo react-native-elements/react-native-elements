@@ -85,7 +85,7 @@ export interface TabItemProps
 export const TabItem: RneFunctionComponent<TabItemProps> = ({
   active,
   theme = defaultTheme,
-  _parentProps,
+  _parentProps = {},
   titleStyle = _parentProps.titleStyle,
   containerStyle = _parentProps.containerStyle,
   buttonStyle = _parentProps.buttonStyle,

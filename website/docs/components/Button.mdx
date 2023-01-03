@@ -39,6 +39,8 @@ Buttons are touchable elements used to interact with the screen and to perform a
 
 ### Variants
 
+There are solid button, outline button and clear button types
+
 ```tsx live
 <Stack row align="center" spacing={4}>
   <Button title="Solid" />
@@ -48,6 +50,8 @@ Buttons are touchable elements used to interact with the screen and to perform a
 ```
 
 ### Size
+
+Button can be small medium or large
 
 ```tsx live
 <Stack row align="center" spacing={4}>
@@ -68,6 +72,16 @@ Buttons are touchable elements used to interact with the screen and to perform a
 </Stack>
 ```
 
+### Disabled
+
+```tsx live
+<Stack row align="center" spacing={4}>
+  <Button title="Solid" disabled />
+  <Button title="Outline" type="outline" disabled />
+  <Button title="Clear" type="clear" disabled />
+</Stack>
+```
+
 ### Linear Gradient
 
 ```tsx live
@@ -83,25 +97,18 @@ Buttons are touchable elements used to interact with the screen and to perform a
 </Button>
 ```
 
-### Button with icon
+### Icon Button
+
+Can contain an Icon by setting the icon prop or placing an Icon component within the Button.
 
 ```tsx live
-<Button type="solid">
-  <Icon name="home" color="white" />
-  Icon
+<Button radius={"sm"} type="solid">
+  Save
+  <Icon name="save" color="white" />
 </Button>
 ```
 
-### Button with right icon
-
-```tsx live
-<Button type="solid">
-  Icon
-  <Icon name="home" color="white" />
-</Button>
-```
-
-### Button with loading spinner
+### Loading spinner
 
 ```tsx live
 <Button title="Solid" type="solid" loading />
