@@ -260,43 +260,41 @@ export const App = () => {
 };
 ```
 
-### Switch theme mode with `useColorScheme`
+### Switch theme mode with useColorScheme
 
 ```tsx
-import React from 'react';
 import { useColorScheme } from 'react-native';
 import { useThemeMode } from '@rneui/themed';
 
-// create custom hook
-const useThemeModeScheme = () => {
+// use within ThemeProvider
+const ColorScheme = ({ children }) => {
   const colorScheme = useColorScheme();
   const { setMode } = useThemeMode();
+
   React.useEffect(() => {
     setMode(colorScheme);
   }, [colorScheme, setMode]);
+
+  return <>{children}</>;
 };
 ```
 
 **Usage**
 
 ```tsx
-// use within ThemeProvider
-const ChildComp = ({ children }) => {
-  useThemeModeScheme(); // our custom hook
-  // ...
-  // ...
-};
-
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <ChildComp>
+      <ColorScheme>
+        {/*...*/}
+        {/*...*/}
+      </ColorScheme>
     </ThemeProvider>
   );
 };
 ```
 
-### Mode based background color
+### Theme mode based background color
 
 ```tsx
 const Background = ({ children }) => {
