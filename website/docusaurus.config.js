@@ -6,25 +6,17 @@ const config = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
-  clientModules: [require.resolve('./snackPlayerInitializer.js')],
+  clientModules: [
+    require.resolve('./plugins/snackPlayerInitializer.js'),
+    require.resolve('./plugins/gtag.ts'),
+  ],
   /* path to images for header/footer */
   favicon: '/img/website/logo.png',
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   scripts: [{ src: 'https://snack.expo.io/embed.js', defer: true }],
   themes: ['@docusaurus/theme-live-codeblock'],
-  plugins: [
-    // [
-    //   '@docusaurus/plugin-client-redirects',
-    // {
-    // fromExtensions: ['html'],
-    // redirects: [
-    // /docs/oldDoc -> /docs/newDoc
-    // ],
-    // },
-    // ],
-    './plugins/react-native-elements-web.js',
-  ],
+  plugins: ['./plugins/react-native-elements-web.js'],
   presets: [
     [
       '@docusaurus/preset-classic',
