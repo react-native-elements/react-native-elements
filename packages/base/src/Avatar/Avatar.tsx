@@ -13,6 +13,7 @@ import {
   ImageStyle,
 } from 'react-native';
 import {
+  defaultTheme,
   InlinePressableProps,
   renderNode,
   RneFunctionComponent,
@@ -194,6 +195,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
   ImageComponent = RNImage,
   children,
   pressableProps,
+  theme = defaultTheme,
   ...rest
 }) => {
   const width =
@@ -244,7 +246,10 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
       style={StyleSheet.flatten([
         styles.container,
         { height, width },
-        rounded && { borderRadius: width / 2 },
+        rounded && {
+          borderRadius: width / 2,
+          backgroundColor: theme.colors.grey5,
+        },
         containerStyle,
       ])}
       {...{
