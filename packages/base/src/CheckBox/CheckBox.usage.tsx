@@ -21,8 +21,8 @@ usage(
             // Use ThemeProvider to make change for all checkbox
             iconType="material-community"
             checkedIcon="checkbox-marked"
+            uncheckedIcon="checkbox-blank-outline"
             checkedColor="red"
-            uncheckedIcon={'checkbox-blank-outline'}
           />
           <CheckBox
             checked={checked}
