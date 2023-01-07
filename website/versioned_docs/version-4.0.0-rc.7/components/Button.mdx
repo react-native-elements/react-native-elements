@@ -3,23 +3,17 @@ id: button
 title: Button
 ---
 
-import { IconsStyle } from "@site/src/components/Docs_Icons";
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import CodeBlock from "@theme/CodeBlock";
-import { BiInfoCircle } from "react-icons/bi";
-import Usage from "../component_usage/Button.mdx";
-import Play from "@site/playground/Button/button.playground";
+import { IconsStyle } from '@site/src/components/Docs_Icons';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+import { BiInfoCircle } from 'react-icons/bi';
+import Usage from '../component_usage/Button.mdx';
+import Play from '@site/playground/Button/button.playground';
 
 <IconsStyle />
 
-Buttons are touchable elements used to interact with the screen and to perform and operation.
-They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
-Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchablenativefeedback.html#props) (Android) or [TouchableOpacity](http://reactnative.dev/docs/touchableopacity.html#props) (iOS) props.
-
-```jsx
-<Button title="Solid Button" />
-```
+Buttons are touchable elements used to interact with the screen and to perform and operation. They may display text, icons, or both. Buttons can be styled with several props to look a specific way.
 
 ## Usage
 
@@ -32,7 +26,7 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
   </div>
   <div class="col col--3">
     <h4>
-      Theme Key{" "}
+      Theme Key{' '}
       <a href="../customizing#using-themeprovider">
         <BiInfoCircle />
       </a>
@@ -45,6 +39,8 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 
 ### Variants
 
+There are solid button, outline button and clear button types
+
 ```tsx live
 <Stack row align="center" spacing={4}>
   <Button title="Solid" />
@@ -54,6 +50,8 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 ```
 
 ### Size
+
+Button can be small medium or large
 
 ```tsx live
 <Stack row align="center" spacing={4}>
@@ -74,13 +72,23 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 </Stack>
 ```
 
+### Disabled
+
+```tsx live
+<Stack row align="center" spacing={4}>
+  <Button title="Solid" disabled />
+  <Button title="Outline" type="outline" disabled />
+  <Button title="Clear" type="clear" disabled />
+</Stack>
+```
+
 ### Linear Gradient
 
 ```tsx live
 <Button
   ViewComponent={LinearGradient} // Don't forget this!
   linearGradientProps={{
-    colors: ["#FF9800", "#F44336"],
+    colors: ['#FF9800', '#F44336'],
     start: { x: 0, y: 0.5 },
     end: { x: 1, y: 0.5 },
   }}
@@ -89,27 +97,20 @@ Also receives all [TouchableNativeFeedback](http://reactnative.dev/docs/touchabl
 </Button>
 ```
 
-### Button with icon
+### Icon Button
+
+Can contain an Icon by setting the icon prop or placing an Icon component within the Button.
 
 ```tsx live
-<Button type="solid">
-  <Icon name="home" color="white" />
-  Icon
+<Button radius={'sm'} type="solid">
+  Save
+  <Icon name="save" color="white" />
 </Button>
 ```
 
-### Button with right icon
+### Loading spinner
 
 ```tsx live
-<Button type="solid">
-  Icon
-  <Icon name="home" color="white" />
-</Button>
-```
-
-### Button with loading spinner
-
-```jsx live
 <Button title="Solid" type="solid" loading />
 ```
 
