@@ -102,6 +102,10 @@ export const ThemeProvider: React.FC<{
 }> = ({ theme = createTheme({}), children }) => {
   const [themeState, setThemeState] = React.useState<CreateThemeOptions>(theme);
 
+  React.useEffect(() => {
+    setThemeState(theme);
+  }, [theme]);
+
   const updateTheme: UpdateTheme = React.useCallback((updatedTheme) => {
     setThemeState((oldTheme) => {
       const newTheme =
