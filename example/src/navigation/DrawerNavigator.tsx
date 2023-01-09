@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, useColorScheme } from 'react-native';
+import { View, Image } from 'react-native';
 import {
   DrawerContentScrollView,
   DrawerItemList,
@@ -13,11 +13,11 @@ function CustomContentComponent(
   props: DrawerContentComponentProps<DrawerContentOptions>
 ) {
   const { updateTheme, theme } = useTheme();
-  const colorScheme = useColorScheme();
+  // const colorScheme = useColorScheme();
 
-  React.useEffect(() => {
-    updateTheme({ mode: colorScheme === 'dark' ? 'dark' : 'light' });
-  }, [colorScheme, updateTheme]);
+  // React.useEffect(() => {
+  //   updateTheme({ mode: colorScheme === 'dark' ? 'dark' : 'light' });
+  // }, [colorScheme, updateTheme]);
   return (
     <SafeAreaView
       style={{

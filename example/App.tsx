@@ -5,11 +5,14 @@ import { cacheImages, cacheFonts } from './src/helpers/AssetsCaching';
 import vectorFonts from './src/helpers/vector-fonts';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import * as SplashScreen from 'expo-splash-screen';
+import { useColorScheme } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
 export default () => {
   const [isReady, setIsReady] = useState(false);
+
+  theme.mode = useColorScheme();
 
   React.useEffect(() => {
     loadAssetsAsync();
