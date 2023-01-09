@@ -38,6 +38,7 @@ type TemplateOptionsT = {
   playgroundExists: boolean;
   usage: string;
   usages: ComponentUsage['usage'];
+  anatomy: boolean;
   showProps: boolean;
   props?: PropRowT[];
   themeKey: string;
@@ -48,6 +49,7 @@ const root = path.join(__dirname, '../../../');
 // const pkgRegExp = new RegExp('packages/(.*)/src');
 // const pkgPath = path.join(root, 'packages');
 const docsPath = path.join(root, 'website/docs');
+const imgPath = path.join(root, 'website/static/img/anatomy');
 const usagePath = path.join(docsPath, 'component_usage');
 const playgroundPath = path.join(docsPath, '..', 'playground');
 
@@ -122,6 +124,9 @@ export class Component implements ComponentDoc {
         displayName,
         `${id}.playground.tsx`
       );
+
+      const anatomyImgExist = File.exist(imgPath, `${id}.png`);
+
       const handleBar: TemplateOptionsT = {
         id,
         title: displayName,
@@ -134,6 +139,7 @@ export class Component implements ComponentDoc {
         playgroundExists,
         usage: this.makeUsages() || dedent(snippetToCode(usage).trim()),
         usages: this.usages,
+        anatomy: anatomyImgExist,
         showProps: true,
         themeKey,
         ...this.propTable(),
