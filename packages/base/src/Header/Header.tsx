@@ -75,6 +75,9 @@ export interface HeaderProps extends ViewProps {
 
   /** Elevation for header */
   elevated?: boolean;
+
+  /** SafeAreaView edges control. */
+  edges?: Array<string>;
 }
 
 /** Headers are navigation components that display information and actions relating to the current screen.
