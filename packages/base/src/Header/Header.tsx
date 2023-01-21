@@ -102,6 +102,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
     : ImageBackground,
   theme = defaultTheme,
   elevated,
+  edges = ['left', 'top', 'right'],
   ...rest
 }) => {
   React.useEffect(() => {
@@ -143,7 +144,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
         {...linearGradientProps}
       >
         <SafeAreaView
-          edges={['left', 'top', 'right']}
+          edges={edges}
           style={styles.headerSafeView}
         >
           <Children
