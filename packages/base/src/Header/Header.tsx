@@ -14,7 +14,7 @@ import {
   ImageStyle,
   ViewStyle,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, Edge } from 'react-native-safe-area-context';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { Children } from './components/HeaderChildren';
 import { HeaderIcon } from './components/HeaderIcon';
@@ -77,7 +77,7 @@ export interface HeaderProps extends ViewProps {
   elevated?: boolean;
 
   /** SafeAreaView edges control. */
-  edges?: Array<string>;
+  edges?: Array<Edge>[];
 }
 
 /** Headers are navigation components that display information and actions relating to the current screen.
@@ -105,7 +105,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
     : ImageBackground,
   theme = defaultTheme,
   elevated,
-  edges = ['left', 'top', 'right'],
+  edges = ['left' as Edge, 'top' as Edge, 'right' as Edge],
   ...rest
 }) => {
   React.useEffect(() => {
