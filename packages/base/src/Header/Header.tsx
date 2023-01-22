@@ -146,10 +146,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
         imageStyle={backgroundImageStyle}
         {...linearGradientProps}
       >
-        <SafeAreaView
-          edges={edges}
-          style={styles.headerSafeView}
-        >
+        <SafeAreaView edges={edges} style={styles.headerSafeView}>
           <Children
             style={StyleSheet.flatten([
               placement === 'center' && styles.rightLeftContainer,
