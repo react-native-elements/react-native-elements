@@ -77,7 +77,7 @@ export interface HeaderProps extends ViewProps {
   elevated?: boolean;
 
   /** SafeAreaView edges control. */
-  edges?: Array<Edge>;
+  edges?: Edge[];
 }
 
 /** Headers are navigation components that display information and actions relating to the current screen.
@@ -105,7 +105,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
     : ImageBackground,
   theme = defaultTheme,
   elevated,
-  edges = ['left' as Edge, 'top' as Edge, 'right' as Edge],
+  edges = ['left', 'top', 'right'],
   ...rest
 }) => {
   React.useEffect(() => {
