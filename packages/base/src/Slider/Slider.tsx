@@ -345,7 +345,7 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
   );
 
   const getThumbTouchRect = useCallback(() => {
-    const touchOverflowSize: any = getTouchOverflowSize();
+    const touchOverflowSize: Sizable = getTouchOverflowSize();
     const height =
       touchOverflowSize.height / 2 +
       (containerSize.height - thumbTouchSize.height) / 2;
