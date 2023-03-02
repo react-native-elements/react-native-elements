@@ -87,6 +87,7 @@ module.exports = {
         },
         'components/overlay',
         'components/pricingcard',
+        'components/rating',
         'components/searchbar',
         'components/slider',
         'components/skeleton',

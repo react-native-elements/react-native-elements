@@ -6,32 +6,24 @@ const config = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'react-native-elements',
   organizationName: 'react-native-elements',
-  clientModules: [require.resolve('./snackPlayerInitializer.js')],
+  clientModules: [
+    require.resolve('./plugins/snackPlayerInitializer.js'),
+    require.resolve('./plugins/gtag.ts'),
+  ],
   /* path to images for header/footer */
   favicon: '/img/website/logo.png',
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   scripts: [{ src: 'https://snack.expo.io/embed.js', defer: true }],
   themes: ['@docusaurus/theme-live-codeblock'],
-  plugins: [
-    // [
-    //   '@docusaurus/plugin-client-redirects',
-    // {
-    // fromExtensions: ['html'],
-    // redirects: [
-    // /docs/oldDoc -> /docs/newDoc
-    // ],
-    // },
-    // ],
-    './plugins/react-native-elements-web.js',
-  ],
+  plugins: ['./plugins/react-native-elements-web.js'],
   presets: [
     [
       '@docusaurus/preset-classic',
       {
-        /** https://github.com/facebook/docusaurus/pull/5832 */
-        googleAnalytics: {
-          trackingID: 'UA-173589068-1',
+        gtag: {
+          trackingID: 'G-RW24X04H53',
+          anonymizeIP: true,
         },
         sitemap: {
           changefreq: 'weekly',
@@ -68,12 +60,12 @@ const config = {
       content:
         'If you like React Native Elements, give it a  <a target="_blank" rel="noopener noreferrer" href="https://github.com/react-native-elements/react-native-elements">star on GitHub!</a> ⭐' +
         ' and join the <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/e9RBHjkKHa">Discord server</a>!',
-      backgroundColor: 'var(--ifm-hero-background-color)',
+      backgroundColor: 'var(--navbar-background-color)',
       textColor: 'var(--ifm-navbar-link-color)', // Defaults to `#000`.
       isCloseable: false,
     },
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
     },
     navbar: {
