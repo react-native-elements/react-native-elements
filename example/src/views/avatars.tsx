@@ -178,7 +178,6 @@ const Avatars: React.FunctionComponent<AvatarComponentProps> = () => {
             size={64}
             rounded
             source={{ uri: 'https://randomuser.me/api/portraits/women/57.jpg' }}
-            title="Bj"
             containerStyle={{ backgroundColor: 'grey' }}
           >
             <Avatar.Accessory size={23} />
