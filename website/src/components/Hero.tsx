@@ -47,11 +47,19 @@ const Home: React.FunctionComponent<{}> = () => {
 
                 <Link
                   className={
-                    'button button--secondary button--outline   margin-vert--sm heroButton'
+                    'button button--secondary button--outline margin-vert--sm heroButton margin-right--md'
                   }
                   to={'https://github.com/sponsors/react-native-elements'}
                 >
-                  Sponsor Us
+                  Sponsor us 💖
+                </Link>
+                <Link
+                  className={
+                    'button button--secondary button--outline  margin-vert--sm heroButton margin-right--md'
+                  }
+                  to={'https://react-native-elements.js.org'}
+                >
+                  Playground 🚀
                 </Link>
               </div>
               <div className="ball" style={{ left: 80, top: '20%' }}>
