@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-import { Header as HeaderRNE, HeaderProps, Icon } from '@rneui/themed';
+import { Header as HeaderRNE, Icon } from '@rneui/themed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 type HeaderComponentProps = {
