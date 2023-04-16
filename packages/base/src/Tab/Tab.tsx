@@ -8,6 +8,7 @@ import {
   StyleSheet,
   ScrollView,
   LayoutChangeEvent,
+  I18nManager,
 } from 'react-native';
 import { ParentProps } from './Tab.Item';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
@@ -162,7 +163,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     }
     const inputRange = Array.from(Array(countItems + 1).keys());
     const outputRange = tabItemPositions.current.map(
-      ({ position }) => position
+      ({ position }) => I18nManager.isRTL ? -position : position
     );
     if (inputRange.length - 1 !== outputRange.length) {
       return 0;
