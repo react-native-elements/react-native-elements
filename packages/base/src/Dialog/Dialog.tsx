@@ -13,7 +13,7 @@ export interface DialogProps extends Partial<Omit<OverlayProps, 'fullScreen'>> {
 
 /** Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
  * You can wrap any component with a simple Dialog component to display quick information to the user.
- * Also receives all [Overlay](https://reactnativeelements.com/docs/overlay#props) props except `fullscreen`. */
+ * Also receives all [Overlay](https://reactnativeelements.com/docs/components/overlay#props) props except `fullscreen`. */
 export const DialogBase: RneFunctionComponent<DialogProps> = ({
   children,
   overlayStyle,
