@@ -19,12 +19,12 @@ export interface SkeletonProps extends ViewProps {
   /**
    * Width of Skeleton View
    */
-  width?: number;
+  width?: number | string;
   /**
    * Height of Skeleton View
    * @default 12
    */
-  height?: number;
+  height?: number | string;
   /**
    * Type of animation
    */
@@ -38,6 +38,10 @@ export interface SkeletonProps extends ViewProps {
    * @type React Component
    */
   LinearGradientComponent?: React.ComponentType<any>;
+  /**
+   * Custom style for skeleton container
+   */
+  style: StyleProp<ViewStyle>;
 }
 
 export const Skeleton: RneFunctionComponent<SkeletonProps> = ({
