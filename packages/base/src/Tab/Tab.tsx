@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import {
   View,
   Animated,
@@ -12,6 +12,7 @@ import {
 import { ParentProps } from './Tab.Item';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { TabItemProps } from './Tab.Item';
+import { Button } from '../Button';
 
 export interface TabProps extends ViewProps, ParentProps {
   /** Child position index value. */
@@ -102,9 +103,9 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     [children]
   );
 
-  const tabItemPositions = React.useRef<
-    Array<{ position: number; width: number }>
-  >([]);
+  const tabItemPositions = React.useRef<{ position: number; width: number }[]>(
+    []
+  );
   const [tabContainerWidth, setTabContainerWidth] = React.useState(0);
 
   const scrollHandler = React.useCallback(
@@ -157,22 +158,24 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
 
   const indicatorTransitionInterpolate = React.useMemo(() => {
     const countItems = validChildren.length;
-    if (countItems < 2 || !tabItemPositions.current.length) {
+
+    if (countItems < 2 || tabItemPositions.current.length !== countItems) {
+      console.log(countItems, tabItemPositions, 'skipped');
       return 0;
     }
-    const inputRange = Array.from(Array(countItems + 1).keys());
-    const outputRange = tabItemPositions.current.map(
-      ({ position }) => position
+
+    const interpolate = tabItemPositions.current.reduce(
+      (prev, curr, index) => {
+        prev.inputRange.push(index);
+        prev.outputRange.push(curr.position);
+        return prev;
+      },
+      { inputRange: [], outputRange: [] }
     );
-    if (inputRange.length - 1 !== outputRange.length) {
-      return 0;
-    }
-    return animationRef.current.interpolate({
-      inputRange,
-      outputRange: [0, ...outputRange],
-    });
+
+    return animationRef.current.interpolate(interpolate);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [animationRef, validChildren, tabItemPositions.current.length]);
+  }, [validChildren, tabItemPositions.current.length]);
 
   const WIDTH = React.useMemo(() => {
     return tabItemPositions.current[value]?.width;
@@ -203,21 +206,24 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
         }),
         children: (
           <>
-            {validChildren.map((child, index) => {
-              return React.cloneElement(
-                child as React.ReactElement<TabItemProps>,
-                {
-                  onPress: () => onChange(index),
-                  onLayout: (event: LayoutChangeEvent) => {
-                    const { width } = event.nativeEvent.layout;
-                    const previousItemPosition =
-                      tabItemPositions.current[index - 1]?.position || 0;
-
+            {validChildren.map((child, index) => (
+              <View
+                key={index}
+                style={{
+                  flex: 1,
+                  flexDirection: 'column',
+                }}
+                ref={(node) => {
+                  node?.measure((x, y, width) => {
                     tabItemPositions.current[index] = {
-                      position: previousItemPosition + width,
+                      position: x,
                       width,
                     };
-                  },
+                  });
+                }}
+              >
+                {React.cloneElement(child as React.ReactElement<TabItemProps>, {
+                  onPress: () => onChange(index),
                   active: index === value,
                   variant,
                   _parentProps: {
@@ -227,20 +233,16 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                     containerStyle,
                     titleStyle,
                   },
-                }
-              );
-            })}
+                })}
+              </View>
+            ))}
             {!disableIndicator && (
               <Animated.View
                 style={[
                   styles.indicator,
                   {
                     backgroundColor: theme?.colors?.secondary,
-                    transform: [
-                      {
-                        translateX: indicatorTransitionInterpolate,
-                      },
-                    ],
+                    transform: [{ translateX: indicatorTransitionInterpolate }],
                     width: WIDTH,
                   },
                   indicatorStyle,

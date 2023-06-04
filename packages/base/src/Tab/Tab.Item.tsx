@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   containerStyle: {
-    flex: 1,
+    // flex: 1,
     borderRadius: 0,
   },
 });

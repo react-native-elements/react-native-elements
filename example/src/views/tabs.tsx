@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components/header';
 import { Tab, Text, TabView } from '@rneui/themed';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 export default () => {
   const [index, setIndex] = React.useState(0);
@@ -10,6 +10,47 @@ export default () => {
   return (
     <>
       <Header title="Tab" />
+
+      <View style={{ width: 290 }}>
+        <Tab
+          value={index}
+          onChange={(e) => setIndex(e)}
+          indicatorStyle={{
+            backgroundColor: 'red',
+            height: 2,
+          }}
+          variant="primary"
+          dense
+          containerStyle={{
+            // backgroundColor: style.backgroundColor,
+            // borderColor: style.backgroundColor,
+            borderWidth: 0,
+            height: 50,
+          }}
+          buttonStyle={{
+            // backgroundColor: style.backgroundColor,
+            // borderColor: style.backgroundColor,
+            borderWidth: 0,
+            height: 50,
+          }}
+        >
+          <Tab.Item
+            title="Tab 1"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'document-text', type: 'ionicon' }}
+          />
+          <Tab.Item
+            title="Tab 2"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'arrow-redo', type: 'ionicon' }}
+          />
+          <Tab.Item
+            title="Tab 3"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'heart', type: 'ionicon' }}
+          />
+        </Tab>
+      </View>
       <Tab
         value={Math.ceil(index > -1 ? index : 0)}
         onChange={(e) => setIndex(e)}
