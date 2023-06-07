@@ -3153,7 +3153,7 @@ __metadata:
 
 "@rneui/base@file:../packages/base::locator=rne-website%40workspace%3A.":
   version: 4.0.0-rc.7
-  resolution: "@rneui/base@file:../packages/base#../packages/base::hash=1f3114&locator=rne-website%40workspace%3A."
+  resolution: "@rneui/base@file:../packages/base#../packages/base::hash=bb3bd5&locator=rne-website%40workspace%3A."
   dependencies:
     "@types/react-native-vector-icons": ^6.4.10
     color: ^3.2.1
@@ -3164,7 +3164,7 @@ __metadata:
   peerDependencies:
     react-native-safe-area-context: ">= 3.0.0"
     react-native-vector-icons: ">7.0.0"
-  checksum: 50a9f1dec2cd987aed1c779201c911997aeb07c6c1a509f24f1b3f22c4c77a28f4123e47687a9b0d30d91e6132ea152c63c08f27e5b634db8784b09e8b8caba9
+  checksum: 8076aa889d64be794be2850985976491956a590dd2df71028cdccb1194a24adcf19070c7da6ff3ade410fdbe955bb1d71f86d336598906847394c0c7dd405857
   languageName: node
   linkType: hard
 
