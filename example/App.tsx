@@ -12,7 +12,8 @@ SplashScreen.preventAutoHideAsync();
 export default () => {
   const [isReady, setIsReady] = useState(false);
 
-  theme.mode = useColorScheme();
+  const colorScheme = useColorScheme();
+  theme.mode = colorScheme;
 
   React.useEffect(() => {
     loadAssetsAsync();
