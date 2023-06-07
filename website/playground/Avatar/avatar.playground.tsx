@@ -78,7 +78,7 @@ const AvatarPlay = () => {
         value: `{}`,
         type: PropTypes.Object,
       },
-      renderPlaceholderContent: {
+      renderCustomContent: {
         type: PropTypes.ReactNode,
       },
       Component: {
