@@ -39,6 +39,9 @@ export type IconType =
   | string;
 
 export interface IconObject {
+  /** Test ID of icon. */
+  testID?: string;
+
   /** Name of icon. */
   name?: string;
 
@@ -58,6 +61,9 @@ export interface IconObject {
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
 export interface IconProps extends InlinePressableProps, IconButtonProps {
+  /** Test ID of icon. */
+  testID?: string;
+
   /** Type of icon set. [Supported sets here](#available-icon-sets). */
   type?: IconType;
 
@@ -97,6 +103,7 @@ export interface IconProps extends InlinePressableProps, IconButtonProps {
 /** Icons are visual indicators usually used to describe action or intent.
  * They are also used for displaying information. */
 export const Icon: RneFunctionComponent<IconProps> = ({
+  testID = 'RNE__ICON__CONTAINER',
   type = 'material',
   name,
   size = 24,
@@ -146,6 +153,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
 
   return (
     <View
+      testID={testID}
       style={StyleSheet.flatten([
         !raised && styles.container,
         (reverse || raised) && styles.button,
@@ -158,7 +166,6 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           : {},
         containerStyle && containerStyle,
       ])}
-      testID="RNE__ICON__CONTAINER"
     >
       <Component
         testID="RNE__ICON__CONTAINER_ACTION"
