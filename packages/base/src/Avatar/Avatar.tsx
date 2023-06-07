@@ -125,8 +125,6 @@ export interface AvatarProps extends InlinePressableProps {
 /**
  * Avatars are found all over ui design from lists to profile screens.
  * They are commonly used to represent a user and can contain photos, icons, or even text.
-
-```
  * */
 export const Avatar: RneFunctionComponent<AvatarProps> = ({
   onPress,

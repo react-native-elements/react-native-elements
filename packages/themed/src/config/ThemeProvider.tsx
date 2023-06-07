@@ -74,15 +74,12 @@ export const createTheme = (
   };
 };
 
-const separateColors = (
-  theme: CreateThemeOptions,
-  themeMode?: ThemeMode
-): ThemeOptions => {
+const separateColors = (theme: CreateThemeOptions): ThemeOptions => {
   const {
     darkColors: themeDarkColors = {},
     lightColors: themeLightColors = {},
     spacing = {},
-    mode = themeMode,
+    mode,
     ...restTheme
   } = theme;
 
@@ -101,6 +98,10 @@ export const ThemeProvider: React.FC<{
   children?: React.ReactNode;
 }> = ({ theme = createTheme({}), children }) => {
   const [themeState, setThemeState] = React.useState<CreateThemeOptions>(theme);
+
+  React.useEffect(() => {
+    setThemeState(theme);
+  }, [theme, theme.mode]);
 
   const updateTheme: UpdateTheme = React.useCallback((updatedTheme) => {
     setThemeState((oldTheme) => {
@@ -124,11 +125,12 @@ export const ThemeProvider: React.FC<{
 
   const ThemeContextValue = React.useMemo(
     () => ({
-      theme: separateColors(themeState, themeState.mode),
+      theme: separateColors(themeState),
       updateTheme,
       replaceTheme,
     }),
-    [themeState, updateTheme, replaceTheme]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [themeState.mode, themeState, updateTheme, replaceTheme]
   );
 
   return (
