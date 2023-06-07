@@ -14,7 +14,7 @@ import {
   ImageStyle,
   ViewStyle,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaView, Edge } from 'react-native-safe-area-context';
 import { defaultTheme, RneFunctionComponent } from '../helpers';
 import { Children } from './components/HeaderChildren';
 import { HeaderIcon } from './components/HeaderIcon';
@@ -30,6 +30,9 @@ export interface HeaderProps extends ViewProps {
 
   /** Displays a linear gradient. See [usage](#lineargradient-usage). */
   linearGradientProps?: Object;
+
+  /** Accepts all props for StatusBar. */
+  hideStatusBar?: Boolean;
 
   /** Accepts all props for StatusBar. */
   statusBarProps?: StatusBarProps;
@@ -75,6 +78,9 @@ export interface HeaderProps extends ViewProps {
 
   /** Elevation for header */
   elevated?: boolean;
+
+  /** SafeAreaView edges control. */
+  edges?: Edge[];
 }
 
 /** Headers are navigation components that display information and actions relating to the current screen.
@@ -82,6 +88,7 @@ export interface HeaderProps extends ViewProps {
  * Make sure that you have completed [Step 3](../installation#install-react-native-safe-area-context) in the setup guide before using `Header`.
  */
 export const Header: RneFunctionComponent<HeaderProps> = ({
+  hideStatusBar = false,
   statusBarProps,
   leftComponent,
   centerComponent,
@@ -102,6 +109,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
     : ImageBackground,
   theme = defaultTheme,
   elevated,
+  edges = ['left', 'top', 'right'],
   ...rest
 }) => {
   React.useEffect(() => {
@@ -114,12 +122,14 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
 
   return (
     <>
-      <StatusBar
-        barStyle={barStyle}
-        translucent={true}
-        backgroundColor={backgroundColor || theme?.colors?.primary}
-        {...statusBarProps}
-      />
+      {!hideStatusBar && (
+        <StatusBar
+          barStyle={barStyle}
+          translucent={true}
+          backgroundColor={backgroundColor || theme?.colors?.primary}
+          {...statusBarProps}
+        />
+      )}
       <ViewComponent
         testID="headerContainer"
         {...rest}
@@ -142,10 +152,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
         imageStyle={backgroundImageStyle}
         {...linearGradientProps}
       >
-        <SafeAreaView
-          edges={['left', 'top', 'right']}
-          style={styles.headerSafeView}
-        >
+        <SafeAreaView edges={edges} style={styles.headerSafeView}>
           <Children
             style={StyleSheet.flatten([
               placement === 'center' && styles.rightLeftContainer,
