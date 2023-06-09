@@ -65,7 +65,7 @@ export const Divider: RneFunctionComponent<DividerProps> = ({
             ? styles.rightInset
             : { ...styles.leftInset, ...styles.rightInset }),
         orientation === 'vertical' && styles.vertical,
-        width &&
+        (width && !isNaN(width)) &&
           (orientation === 'horizontal'
             ? { borderBottomWidth: width }
             : { borderRightWidth: width }),
