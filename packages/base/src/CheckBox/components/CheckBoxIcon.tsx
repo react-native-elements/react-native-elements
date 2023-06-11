@@ -43,6 +43,8 @@ export const CheckBoxIcon: RneFunctionComponent<CheckBoxIconProps> = ({
   checkedColor,
   uncheckedColor = '#bfbfbf',
 }) => {
+  const style = React.useMemo(() => ({ minWidth: size || 24 }), [size]);
+
   if (checked && React.isValidElement(checkedIcon)) {
     return checkedIcon;
   }
@@ -58,7 +60,7 @@ export const CheckBoxIcon: RneFunctionComponent<CheckBoxIconProps> = ({
       color={checked ? checkedColor : uncheckedColor}
       name={checked ? checkedIcon : uncheckedIcon}
       size={size || 24}
-      style={{ minWidth: size || 24 }}
+      style={style}
       onLongPress={onLongIconPress}
       onPress={onIconPress}
     />

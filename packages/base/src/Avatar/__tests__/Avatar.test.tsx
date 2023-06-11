@@ -28,7 +28,10 @@ describe('Avatar Component', () => {
     const { wrapper } = renderWithWrapper(
       <Avatar
         source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-        imageProps={{ resizeMode: 'contain' }}
+        imageProps={{
+          resizeMode: 'contain',
+          containerStyle: { backgroundColor: 'red' },
+        }}
       />
     );
     expect(wrapper.findByType(Image).props.resizeMode).toBe('contain');
@@ -42,6 +45,22 @@ describe('Avatar Component', () => {
       />
     );
     expect(wrapper.findByType(Pressable)).toBeTruthy();
+  });
+
+  it('should render using image with imageProps', () => {
+    const { wrapper } = renderWithWrapper(
+      <Avatar
+        source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
+        imageProps={{ style: { backgroundColor: 'red' } }}
+      />
+    );
+    const img = wrapper.findByType(Image);
+    expect(img.props.source).toMatchObject({
+      uri: 'https://i.imgur.com/0y8Ftya.jpg',
+    });
+    expect(img.props.style).toMatchObject({
+      backgroundColor: 'red',
+    });
   });
 
   describe('Sizes', () => {
@@ -85,7 +104,7 @@ describe('Avatar Component', () => {
     });
   });
 
-  describe('Placeholders', () => {
+  describe('Title Avatars', () => {
     it('should renders title if given', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
@@ -95,19 +114,9 @@ describe('Avatar Component', () => {
       );
       expect(wrapper.findByType(Text).props.children).toBe('John');
     });
-    it('should renders custom renderPlaceholderContent', () => {
-      const { wrapper } = renderWithWrapper(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          renderPlaceholderContent={
-            <Text testID="my-custom-placeholder">Hey</Text>
-          }
-        />,
-        'my-custom-placeholder'
-      );
-      expect(wrapper.props.children).toBe('Hey');
-    });
+  });
 
+  describe('Icon Avatars', () => {
     it('should renders using icon prop', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
@@ -144,59 +153,18 @@ describe('Avatar Component', () => {
         style: { backgroundColor: 'red' },
       });
     });
+  });
 
-    it('should render using image with imageProps', () => {
+  describe('renderCustomContent Avatar', () => {
+    it('should renders custom renderCustomContent', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
           source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          imageProps={{ style: { backgroundColor: 'red' } }}
-        />
-      );
-      const img = wrapper.findByType(Image);
-      expect(img.props.source).toMatchObject({
-        uri: 'https://i.imgur.com/0y8Ftya.jpg',
-      });
-      expect(img.props.style).toMatchObject({
-        backgroundColor: 'red',
-      });
-    });
-
-    it('should not show placeholder if not using source', () => {
-      const { wrapper } = renderWithWrapper(
-        <Avatar
-          size="medium"
-          overlayContainerStyle={{ backgroundColor: 'pink' }}
-          title="MD"
+          renderCustomContent={<Text testID="my-custom-placeholder">Hey</Text>}
         />,
-        'RNE__Image__placeholder'
+        'my-custom-placeholder'
       );
-      expect(wrapper.props.style.backgroundColor).toBe('transparent');
-    });
-
-    it("shouldn't show placeholder if source doesn't contain uri property", () => {
-      const { wrapper } = renderWithWrapper(
-        <Avatar
-          size="medium"
-          overlayContainerStyle={{ backgroundColor: 'pink' }}
-          title="MD"
-          source={{}}
-        />,
-        'RNE__Image__placeholder'
-      );
-      expect(wrapper.props.style.backgroundColor).toBe('transparent');
-    });
-
-    it("shouldn't show placeholder if source exists but uri is undefined", () => {
-      const { wrapper } = renderWithWrapper(
-        <Avatar
-          size="medium"
-          overlayContainerStyle={{ backgroundColor: 'pink' }}
-          title="MD"
-          source={{ uri: undefined }}
-        />,
-        'RNE__Image__placeholder'
-      );
-      expect(wrapper.props.style.backgroundColor).toBe('transparent');
+      expect(wrapper.props.children).toBe('Hey');
     });
   });
 });
