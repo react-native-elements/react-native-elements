@@ -38,10 +38,6 @@ export interface SkeletonProps extends ViewProps {
    * @type React Component
    */
   LinearGradientComponent?: React.ComponentType<any>;
-  /**
-   * Custom style for skeleton container
-   */
-  style: StyleProp<ViewStyle>;
 }
 
 export const Skeleton: RneFunctionComponent<SkeletonProps> = ({
