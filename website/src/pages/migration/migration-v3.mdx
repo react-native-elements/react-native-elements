@@ -94,6 +94,20 @@ few other props (like `underlayColor`) will not be supported, you can remove the
 
 ## Components
 
+### `Avatar`
+
+The `placeholderStyle` and `renderPlaceholderContent` props are removed and is replaced by `renderCustomContent`.
+
+```diff
+  <Avatar
+-   renderPlaceholderContent={
+-       <Text testID="my-custom-placeholder">Hey</Text>
+-     }
+-   placeholderStyle = {{backgroundColor:"red"}}
++   renderCustomContent={<Text>Hey</Text>}
++  />
+```
+
 ### `Button`
 
 ```diff
