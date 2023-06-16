@@ -41,11 +41,7 @@ const ThemedComponent = (
                 children,
               };
 
-              return isClassComponent(WrappedComponent) ? (
-                <WrappedComponent ref={forwardedRef} {...newProps} />
-              ) : (
-                <WrappedComponent {...newProps} />
-              );
+              return <WrappedComponent ref={forwardedRef} {...newProps} />;
             }
             const { components, ...restTheme } = theme;
             const themedProps =
@@ -64,10 +60,7 @@ const ThemedComponent = (
               children,
             };
 
-            if (isClassComponent(WrappedComponent)) {
-              return <WrappedComponent ref={forwardedRef} {...newProps} />;
-            }
-            return <WrappedComponent {...newProps} />;
+            return <WrappedComponent ref={forwardedRef} {...newProps} />;
           }}
         </ThemeConsumer>
       );
@@ -102,7 +95,7 @@ function withTheme<P = {}, T = {}>(
     return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
   }
 
-  return Component;
+  return React.forwardRef(Component);
 }
 
 export default withTheme;

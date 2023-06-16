@@ -237,7 +237,7 @@ const Navigation = () => {
           card: theme.colors.white,
           text: theme.colors.black,
         },
-        mode: theme.mode,
+        dark: theme.mode === 'dark',
       }}
     >
       {/*  Navigators */}
@@ -262,33 +262,22 @@ export const App = () => {
 
 ### Switch theme mode with useColorScheme
 
-```tsx
-import { useColorScheme } from 'react-native';
-import { useThemeMode } from '@rneui/themed';
-
-// use within ThemeProvider
-const ColorScheme = ({ children }) => {
-  const colorScheme = useColorScheme();
-  const { setMode } = useThemeMode();
-
-  React.useEffect(() => {
-    setMode(colorScheme);
-  }, [colorScheme, setMode]);
-
-  return <>{children}</>;
-};
-```
-
 **Usage**
 
 ```tsx
+import { useColorScheme } from 'react-native';
+
+const theme = createTheme({
+  // ...
+});
+
 export const App = () => {
+  theme.mode = useColorScheme();
+
   return (
     <ThemeProvider theme={theme}>
-      <ColorScheme>
-        {/*...*/}
-        {/*...*/}
-      </ColorScheme>
+      {/*...*/}
+      {/*...*/}
     </ThemeProvider>
   );
 };
