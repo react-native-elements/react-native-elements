@@ -142,6 +142,47 @@ describe('Input component', () => {
         expect(textTree).not.toBeNull();
         expect(textTree.props.style.width).toBe(200);
       });
+
+      it('errorComponent class', () => {
+        const { queryByText, queryByTestId } = renderWithWrapper(
+          <Input
+            errorMessage="My Error Message"
+            ErrorComponent={(props) => (
+              <Animated.Text {...props} testID="myView" />
+            )}
+          />
+        );
+        expect(queryByText('My Error Message')).not.toBeNull();
+        expect(queryByTestId('myView')).not.toBeNull();
+
+        // It can override the errorMessage
+        const { queryByText: queryByText2, queryByTestId: queryByTestId2 } =
+          renderWithWrapper(
+            <Input
+              errorMessage="My Error Message"
+              ErrorComponent={(props) => {
+                return (
+                  <Animated.Text {...props} testID="myView">
+                    Some Other Error Message
+                  </Animated.Text>
+                );
+              }}
+            />
+          );
+        expect(queryByText2('My Error Message')).toBeNull();
+        expect(queryByTestId2('myView')).not.toBeNull();
+        expect(queryByText2('Some Other Error Message')).not.toBeNull();
+      });
+
+      it('errorComponent forwardRef', () => {
+        const CustomErrorComponent = React.forwardRef<Text>((props, ref) => {
+          return <Animated.Text ref={ref} {...props} testID="myView" />;
+        });
+        const { queryByTestId } = renderWithWrapper(
+          <Input ErrorComponent={CustomErrorComponent} />
+        );
+        expect(queryByTestId('myView')).not.toBeNull();
+      });
     });
 
     it('placeholder', () => {
