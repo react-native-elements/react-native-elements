@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { useTheme } from '@rneui/themed';
+import { Tab, useTheme } from '@rneui/themed';
 import DrawerNavigator from './DrawerNavigator';
 import Avatars from '../views/avatars';
 import Cards from '../views/cards';
@@ -70,7 +70,7 @@ function RootNavigator() {
           backgroundColor: theme?.colors?.grey4,
         }}
       >
-        <Drawer.Screen name="Avatars" component={Avatars} />
+        <Drawer.Screen name="Avatars" component={Tabs} />
         <Drawer.Screen name="Badge" component={Badge} />
         <Drawer.Screen name="BottomSheet" component={BottomSheet} />
         <Drawer.Screen name="Buttons" component={Buttons} />

@@ -156,15 +156,14 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     scrollViewPosition.current = event.nativeEvent.contentOffset.x;
   }, []);
 
-  const indicatorTransitionInterpolate = React.useMemo(() => {
+  const getInterpolation = () => {
     const countItems = validChildren.length;
 
     if (countItems < 2 || tabItemPositions.current.length !== countItems) {
-      console.log(countItems, tabItemPositions, 'skipped');
       return 0;
     }
 
-    const interpolate = tabItemPositions.current.reduce(
+    const { inputRange, outputRange } = tabItemPositions.current.reduce(
       (prev, curr, index) => {
         prev.inputRange.push(index);
         prev.outputRange.push(curr.position);
@@ -173,11 +172,15 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
       { inputRange: [], outputRange: [] }
     );
 
-    return animationRef.current.interpolate(interpolate);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [validChildren, tabItemPositions.current.length]);
+    return animationRef.current.interpolate({
+      inputRange,
+      outputRange,
+      extrapolate: 'clamp',
+    });
+  };
 
   const WIDTH = React.useMemo(() => {
+    console.log(tabItemPositions.current);
     return tabItemPositions.current[value]?.width;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value, tabItemPositions.current.length]);
@@ -213,19 +216,18 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                   flex: 1,
                   flexDirection: 'column',
                 }}
-                ref={(node) => {
-                  node?.measure((x, y, width) => {
-                    tabItemPositions.current[index] = {
-                      position: x,
-                      width,
-                    };
-                  });
+                onLayout={({ nativeEvent: { layout } }) => {
+                  tabItemPositions.current[index] = {
+                    position: layout.x,
+                    width: layout.width,
+                  };
                 }}
               >
                 {React.cloneElement(child as React.ReactElement<TabItemProps>, {
                   onPress: () => onChange(index),
                   active: index === value,
                   variant,
+                  // onLayout: ({ nativeEvent: { layout } }) => {},
                   _parentProps: {
                     dense,
                     iconPosition,
@@ -242,7 +244,8 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                   styles.indicator,
                   {
                     backgroundColor: theme?.colors?.secondary,
-                    transform: [{ translateX: indicatorTransitionInterpolate }],
+                    left: 0,
+                    transform: [{ translateX: getInterpolation() }],
                     width: WIDTH,
                   },
                   indicatorStyle,

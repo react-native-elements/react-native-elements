@@ -16,7 +16,7 @@ export default () => {
           value={index}
           onChange={(e) => setIndex(e)}
           indicatorStyle={{
-            backgroundColor: 'red',
+            backgroundColor: 'yellow',
             height: 2,
           }}
           variant="primary"
@@ -51,7 +51,7 @@ export default () => {
           />
         </Tab>
       </View>
-      <Tab
+      {/* <Tab
         value={Math.ceil(index > -1 ? index : 0)}
         onChange={(e) => setIndex(e)}
         indicatorStyle={{
@@ -110,7 +110,7 @@ export default () => {
           titleStyle={{ fontSize: 12 }}
           icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
         />
-      </Tab>
+      </Tab> */}
       {/* <Text>
         {index}
       </Text> */}
