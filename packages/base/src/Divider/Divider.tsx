@@ -66,7 +66,8 @@ export const Divider: RneFunctionComponent<DividerProps> = ({
             : { ...styles.leftInset, ...styles.rightInset }),
         orientation === 'vertical' && styles.vertical,
         // check if width is a number to avoid passing style={{ width: NaN }}
-        (width && !isNaN(width)) &&
+        width &&
+          !isNaN(width) &&
           (orientation === 'horizontal'
             ? { borderBottomWidth: width }
             : { borderRightWidth: width }),
