@@ -32,6 +32,9 @@ export interface HeaderProps extends ViewProps {
   linearGradientProps?: Object;
 
   /** Accepts all props for StatusBar. */
+  hideStatusBar?: Boolean;
+
+  /** Accepts all props for StatusBar. */
   statusBarProps?: StatusBarProps;
 
   /** Sets the color of the status bar text. */
@@ -85,6 +88,7 @@ export interface HeaderProps extends ViewProps {
  * Make sure that you have completed [Step 3](../installation#install-react-native-safe-area-context) in the setup guide before using `Header`.
  */
 export const Header: RneFunctionComponent<HeaderProps> = ({
+  hideStatusBar = false,
   statusBarProps,
   leftComponent,
   centerComponent,
@@ -118,12 +122,14 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
 
   return (
     <>
-      <StatusBar
-        barStyle={barStyle}
-        translucent={true}
-        backgroundColor={backgroundColor || theme?.colors?.primary}
-        {...statusBarProps}
-      />
+      {!hideStatusBar && (
+        <StatusBar
+          barStyle={barStyle}
+          translucent={true}
+          backgroundColor={backgroundColor || theme?.colors?.primary}
+          {...statusBarProps}
+        />
+      )}
       <ViewComponent
         testID="headerContainer"
         {...rest}

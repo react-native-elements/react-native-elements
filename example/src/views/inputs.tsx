@@ -9,6 +9,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   Vibration,
+  Animated,
 } from 'react-native';
 import {
   Input,
@@ -129,6 +130,14 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
             containerStyle={styles.inputContainerStyle}
             placeholder="Input with error message"
             errorMessage="Invalid input"
+            style={InputFieldsStyle}
+          />
+          <InputWithAnimatedErrorMessage
+            {...(inputProps as InputProps)}
+            containerStyle={styles.inputContainerStyle}
+            placeholder="Input with animated error"
+            errorMessage="This field must be left blank."
+            renderErrorMessage={true}
             style={InputFieldsStyle}
           />
           <Input
@@ -432,4 +441,75 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
   },
+});
+
+// This component will show an animated error if anything is typed into it.
+const InputWithAnimatedErrorMessage = React.forwardRef((props: InputProps, ref) => {
+  const errorAnimation = React.useRef(new Animated.Value(props.value?.length > 0 ? 1 : 0)).current;
+  const [displayErrorMessage, setDisplayErrorMessage] = React.useState(props.value?.length > 0);
+
+  React.useEffect(() => {
+    if (displayErrorMessage) {
+      fadeIn();
+    } else {
+      fadeOut();
+    }
+  }, [displayErrorMessage]);
+
+  const fadeIn = () => {
+    setDisplayErrorMessage(true);
+    Animated.timing(errorAnimation, {
+      toValue: displayErrorMessage ? 1 : 0,
+      duration: 500,
+      useNativeDriver: false,
+    }).start();
+  };
+
+  const fadeOut = () => {
+    Animated.timing(errorAnimation, {
+      toValue: 0,
+      duration: 500,
+      useNativeDriver: false,
+    }).start(() => {
+      setDisplayErrorMessage(false);
+    });
+  };
+
+  const errorAnimationStyle = {
+    // Fades the text in and out.
+    opacity: errorAnimation.interpolate({
+      inputRange: [0, 1],
+      outputRange: [0, 1],
+    }),
+    // Animated the text in from the left by 25 px.
+    marginLeft: errorAnimation.interpolate({
+      inputRange: [0, 1],
+      outputRange: [-25, 0],
+    }),
+  };
+
+  return (
+    <Input
+      ref={ref}
+      ErrorComponent={Animated.Text}
+      errorMessage={displayErrorMessage ? (props.errorMessage || '') : ''}
+      errorStyle={[
+        {
+          // marginLeft: 0,
+          //other styles
+        },
+        errorAnimationStyle,
+      ]}
+      {...props}
+      // other props
+      onChangeText={(text) => {
+        if (text.length > 0) {
+          setDisplayErrorMessage(true);
+        } else {
+          fadeOut();
+        }
+        props.onChangeText?.(text);
+      }}
+    />
+  );
 });

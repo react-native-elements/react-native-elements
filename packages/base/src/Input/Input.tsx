@@ -82,6 +82,11 @@ export interface InputProps
    */
   errorMessage?: string;
   /**
+   * component that will be rendered in place of the error message
+   * @type React Component
+   */
+  ErrorComponent?: React.ComponentType | React.ForwardRefExoticComponent<any>;
+  /**
    * add a label on top of the input
    */
   label?: string | React.ReactNode;
@@ -149,6 +154,7 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
       rightIconContainerStyle,
       InputComponent = TextInput,
       inputStyle,
+      ErrorComponent = Text,
       errorProps,
       errorStyle,
       errorMessage,
@@ -248,7 +254,7 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
           )}
         </Animated.View>
 
-        <Text
+        <ErrorComponent
           {...errorProps}
           style={StyleSheet.flatten([
             {
@@ -265,7 +271,7 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
           ])}
         >
           {errorMessage}
-        </Text>
+        </ErrorComponent>
       </View>
     );
   }
