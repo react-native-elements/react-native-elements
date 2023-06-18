@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PricingCard component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 15,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 0.5,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "transparent",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#2089dc",
+            "fontSize": 38.57142857142857,
+            "fontWeight": "800",
+            "textAlign": "center",
+          }
+        }
+        testID="pricingCardTitle"
+      />
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#242424",
+            "fontSize": 51.42857142857143,
+            "fontWeight": "700",
+            "marginBottom": 10,
+            "marginTop": 10,
+            "textAlign": "center",
+          }
+        }
+      />
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        1 User
+      </Text>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Basic Support
+      </Text>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#86939e",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        All Core Features
+      </Text>
+      <View
+        style={
+          [
+            {
+              "overflow": "hidden",
+            },
+            {
+              "borderRadius": 2,
+            },
+            undefined,
+            false,
+          ]
+        }
+        testID="RNE_BUTTON_WRAPPER"
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": false,
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+          testID="RNE__PricingButton"
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#2089dc",
+                "borderColor": "#2089dc",
+                "borderRadius": 2,
+                "borderWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "marginBottom": 10,
+                "marginTop": 15,
+                "padding": 8,
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "overflow": "hidden",
+                }
+              }
+              testID="RNE__ICON__CONTAINER"
+            >
+              <View
+                accessibilityRole="button"
+                android_ripple={
+                  {
+                    "borderless": false,
+                    "color": "rgba(0, 0, 0, 0.3)",
+                    "radius": -5,
+                  }
+                }
+                disabled={false}
+                testID="RNE__ICON__CONTAINER_ACTION"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                    }
+                  }
+                  testID="RNE__ICON"
+                >
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      [
+                        {
+                          "color": "white",
+                          "fontSize": 15,
+                        },
+                        {
+                          "backgroundColor": "transparent",
+                        },
+                        {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        {},
+                      ]
+                    }
+                    testID="RNE__ICON__Component"
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <Text
+              style={
+                {
+                  "color": "white",
+                  "fontSize": 18,
+                  "paddingVertical": 1,
+                  "textAlign": "center",
+                }
+              }
+            >
+              GET STARTED
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PricingCard component should render with props 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      {
+        "backgroundColor": "peru",
+        "borderColor": "#e1e8ee",
+        "borderWidth": 1,
+        "margin": 15,
+        "marginBottom": 15,
+        "padding": 15,
+        "shadowColor": "rgba(0,0,0, .2)",
+        "shadowOffset": {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 0.5,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "peru",
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#2089dc",
+            "fontFamily": "arial",
+            "fontSize": 38.57142857142857,
+            "fontWeight": "800",
+            "textAlign": "center",
+          }
+        }
+        testID="pricingCardTitle"
+      >
+        Free
+      </Text>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#242424",
+            "fontFamily": "arial",
+            "fontSize": 51.42857142857143,
+            "fontWeight": "700",
+            "marginBottom": 10,
+            "marginTop": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        $0
+      </Text>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#86939e",
+            "fontFamily": "arial",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        1 User
+      </Text>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#86939e",
+            "fontFamily": "arial",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        Basic Support
+      </Text>
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "color": "#86939e",
+            "fontFamily": "arial",
+            "fontWeight": "600",
+            "marginBottom": 5,
+            "marginTop": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        All Core Features
+      </Text>
+      <View
+        style={
+          [
+            {
+              "overflow": "hidden",
+            },
+            {
+              "borderRadius": 2,
+            },
+            undefined,
+            false,
+          ]
+        }
+        testID="RNE_BUTTON_WRAPPER"
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": false,
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+          testID="RNE__PricingButton"
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#2089dc",
+                "borderColor": "#2089dc",
+                "borderRadius": 2,
+                "borderWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "marginBottom": 10,
+                "marginTop": 15,
+                "padding": 8,
+                "paddingHorizontal": 10,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "overflow": "hidden",
+                }
+              }
+              testID="RNE__ICON__CONTAINER"
+            >
+              <View
+                accessibilityRole="button"
+                android_ripple={
+                  {
+                    "borderless": false,
+                    "color": "rgba(0, 0, 0, 0.3)",
+                    "radius": -5,
+                  }
+                }
+                disabled={false}
+                testID="RNE__ICON__CONTAINER_ACTION"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                    }
+                  }
+                  testID="RNE__ICON"
+                >
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      [
+                        {
+                          "color": "white",
+                          "fontSize": 15,
+                        },
+                        {
+                          "backgroundColor": "transparent",
+                        },
+                        {
+                          "fontFamily": "Material Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        {},
+                      ]
+                    }
+                    testID="RNE__ICON__Component"
+                  >
+                    
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <Text
+              style={
+                {
+                  "color": "white",
+                  "fontSize": 18,
+                  "paddingVertical": 1,
+                  "textAlign": "center",
+                }
+              }
+            >
+              GET STARTED
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

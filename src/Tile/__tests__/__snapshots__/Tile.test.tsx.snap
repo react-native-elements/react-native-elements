@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "height": 600,
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "backgroundColor": "transparent",
+          "flex": 2,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          {
+            "uri": "http://google.com",
+          }
+        }
+        style={
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image"
+        transitionDuration={360}
+      />
+      <View
+        accessibilityElementsHidden={true}
+        collapsable={false}
+        importantForAccessibility="no-hide-descendants"
+        pointerEvents="none"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#bdbdbd",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+          testID="RNE__Image__placeholder"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image__children__container"
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "color": "#242424",
+            "fontSize": 28.285714285714285,
+            "marginBottom": 5,
+          }
+        }
+        testID="tileTitle"
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Tile component should render tile with icon 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "height": 70,
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "backgroundColor": "transparent",
+          "flex": 2,
+          "height": 70,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          {
+            "uri": "http://google.com",
+          }
+        }
+        style={
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image"
+        transitionDuration={360}
+      />
+      <View
+        accessibilityElementsHidden={true}
+        collapsable={false}
+        importantForAccessibility="no-hide-descendants"
+        pointerEvents="none"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#bdbdbd",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+          testID="RNE__Image__placeholder"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image__children__container"
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "height": 70,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "overflow": "hidden",
+              }
+            }
+            testID="RNE__ICON__CONTAINER"
+          >
+            <View
+              accessibilityRole="button"
+              android_ripple={
+                {
+                  "borderless": false,
+                  "color": "rgba(0, 0, 0, 0.3)",
+                  "radius": -5,
+                }
+              }
+              disabled={false}
+              testID="RNE__ICON__CONTAINER_ACTION"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "justifyContent": "center",
+                  }
+                }
+                testID="RNE__ICON"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    [
+                      {
+                        "color": "#242424",
+                        "fontSize": 24,
+                      },
+                      {
+                        "backgroundColor": "transparent",
+                      },
+                      {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      {},
+                    ]
+                  }
+                  testID="RNE__ICON__Component"
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "height": 70,
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "backgroundColor": "yellow",
+            "color": "#242424",
+            "fontSize": 28.285714285714285,
+            "marginBottom": 5,
+          }
+        }
+        testID="tileTitle"
+      >
+        Lorem ipsum dolor sit amet, consectetur
+      </Text>
+    </View>
+  </View>
+</View>
+`;

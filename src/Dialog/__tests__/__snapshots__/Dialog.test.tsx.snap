@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog Component should render without any children 1`] = `
+<View
+  testID="wrapper"
+>
+  <Modal
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    testID="Internal__Overlay"
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, .4)",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      testID="RNE__Overlay__backdrop"
+    />
+    <View
+      onLayout={[Function]}
+      pointerEvents="box-none"
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          {
+            "paddingBottom": 0,
+          },
+        ]
+      }
+      testID="RNE__Overlay__Container"
+    >
+      <View
+        style={
+          {
+            "backgroundColor": "rgb(0, 0, 0)",
+            "borderRadius": 3,
+            "padding": 20,
+            "shadowColor": "rgba(0, 0, 0, .3)",
+            "shadowOffset": {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowRadius": 4,
+            "width": "75%",
+          }
+        }
+        testID="RNE__Overlay"
+      />
+    </View>
+  </Modal>
+</View>
+`;

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedTitle component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "height": 600,
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "alignItems": "center",
+          "height": 600,
+          "justifyContent": "center",
+          "width": 750,
+        }
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          {
+            "uri": "http://google.com",
+          }
+        }
+        style={
+          [
+            {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            {
+              "height": 600,
+              "width": 750,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "bottom": 0,
+            "flex": 1,
+            "justifyContent": "center",
+            "left": 0,
+            "paddingBottom": 40,
+            "paddingLeft": 25,
+            "paddingRight": 25,
+            "paddingTop": 45,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <Text
+          accessibilityRole="text"
+          style={
+            {
+              "backgroundColor": "rgba(0,0,0,0)",
+              "color": "#ffffff",
+              "fontSize": 28.285714285714285,
+              "marginBottom": 15,
+              "textAlign": "center",
+            }
+          }
+          testID="featuredTileTitle"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

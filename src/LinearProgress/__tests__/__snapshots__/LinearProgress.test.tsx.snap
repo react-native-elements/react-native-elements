@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinearProgress Component should render determinant variant 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessibilityRole="progressbar"
+    accessibilityValue={
+      {
+        "max": 1,
+        "min": 0,
+        "now": 0.4,
+      }
+    }
+    accessible={true}
+    onLayout={[Function]}
+    style={
+      [
+        {
+          "backgroundColor": "rgba(173, 20, 87, 0.4)",
+          "height": 4,
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="RNE__LinearProgress_Bar"
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "#ad1457",
+          "flex": 1,
+          "transform": [
+            {
+              "translateX": -0,
+            },
+            {
+              "scaleX": 0.0001,
+            },
+          ],
+        }
+      }
+      testID="RNE__LinearProgress_Progress"
+    />
+  </View>
+</View>
+`;
+
+exports[`LinearProgress Component should render inDeterminant variant 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessibilityRole="progressbar"
+    accessibilityValue={
+      {
+        "max": 1,
+        "min": 0,
+        "now": 0,
+      }
+    }
+    accessible={true}
+    onLayout={[Function]}
+    style={
+      [
+        {
+          "backgroundColor": "rgba(173, 20, 87, 0.4)",
+          "height": 4,
+          "overflow": "hidden",
+          "position": "relative",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+    testID="RNE__LinearProgress_Bar"
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "#ad1457",
+          "flex": 1,
+          "transform": [
+            {
+              "translateX": -0,
+            },
+            {
+              "scaleX": 0.0001,
+            },
+          ],
+        }
+      }
+      testID="RNE__LinearProgress_Progress"
+    />
+  </View>
+</View>
+`;
