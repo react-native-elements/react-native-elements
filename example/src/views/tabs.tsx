@@ -6,7 +6,7 @@ import { Header } from '../components/header';
 
 const SubComponent = () => {
   const { changeIndex } = useTabsInternal();
-  return <Button onPress={() => changeIndex(2)}>Demo</Button>;
+  return <Button onPress={() => changeIndex(2)}>Jump to Tab 3</Button>;
 };
 
 export default () => {
