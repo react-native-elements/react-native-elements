@@ -19,12 +19,12 @@ export interface SkeletonProps extends ViewProps {
   /**
    * Width of Skeleton View
    */
-  width?: number;
+  width?: ViewStyle['width'];
   /**
    * Height of Skeleton View
    * @default 12
    */
-  height?: number;
+  height?: ViewStyle['height'];
   /**
    * Type of animation
    */
