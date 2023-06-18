@@ -11,6 +11,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
+import { useTabsInternal } from '../Tab/Tab';
 
 export interface TabViewProps {
   /** Child position index value. */
@@ -67,8 +68,6 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
   children,
   onChange = () => {},
   onSwipeStart = () => {},
-  animationType = 'spring',
-  animationConfig = {},
   containerStyle,
   tabItemContainerStyle,
   disableSwipe = false,
@@ -76,25 +75,16 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
   minSwipeRatio = 0.4,
   minSwipeSpeed = 1,
 }) => {
-  const translateX = React.useRef(new Animated.Value(0));
-  const currentIndex = React.useRef(0);
+  const {
+    changeIndex: animate,
+    __translateX: translateX,
+    __currentIndex: currentIndex,
+  } = useTabsInternal();
   const [containerWidth, setContainerWidth] = React.useState(1);
 
   const childCount = React.useMemo(
     () => React.Children.toArray(children).length,
     [children]
-  );
-
-  const animate = React.useCallback(
-    (toValue: number) => {
-      Animated[animationType](translateX.current, {
-        toValue,
-        useNativeDriver: true,
-        easing: Easing.ease,
-        ...animationConfig,
-      }).start();
-    },
-    [animationConfig, animationType]
   );
 
   const releaseResponder = React.useCallback(
@@ -103,10 +93,18 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
       const shouldSwipe =
         Math.abs(position) > minSwipeRatio || Math.abs(vx) > minSwipeSpeed;
       currentIndex.current += shouldSwipe ? Math.sign(position) : 0;
+      // if (hue?.current) hue.current.setValue(currentIndex.current);
       animate(currentIndex.current);
       onChange(currentIndex.current);
     },
-    [animate, containerWidth, minSwipeRatio, minSwipeSpeed, onChange]
+    [
+      animate,
+      containerWidth,
+      currentIndex,
+      minSwipeRatio,
+      minSwipeSpeed,
+      onChange,
+    ]
   );
 
   const panResponder = React.useMemo(
@@ -135,7 +133,7 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
         onPanResponderRelease: releaseResponder,
         onPanResponderTerminate: releaseResponder,
       }),
-    [childCount, containerWidth, onSwipeStart, releaseResponder]
+    [childCount, containerWidth, onSwipeStart, releaseResponder, translateX]
   );
 
   React.useEffect(() => {
