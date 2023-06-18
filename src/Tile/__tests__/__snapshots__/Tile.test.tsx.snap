@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile component should render 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    replaceTheme={[Function]}
+    style={
+      {
+        "height": 600,
+        "width": 750,
+      }
+    }
+    updateTheme={[Function]}
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        {
+          "backgroundColor": "transparent",
+          "flex": 2,
+          "overflow": "hidden",
+          "position": "relative",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          {
+            "uri": "http://google.com",
+          }
+        }
+        style={
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image"
+        transitionDuration={360}
+      />
+      <View
+        accessibilityElementsHidden={true}
+        collapsable={false}
+        importantForAccessibility="no-hide-descendants"
+        pointerEvents="none"
+        style={
+          {
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#bdbdbd",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+          testID="RNE__Image__placeholder"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+        testID="RNE__Image__children__container"
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "paddingBottom": 5,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 15,
+        }
+      }
+    >
+      <Text
+        accessibilityRole="text"
+        style={
+          {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "color": "#242424",
+            "fontSize": 28.285714285714285,
+            "marginBottom": 5,
+          }
+        }
+        testID="tileTitle"
+      />
+    </View>
+  </View>
+</View>
+`;
