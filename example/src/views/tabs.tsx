@@ -1,97 +1,65 @@
-import React, { useRef } from 'react';
-import { Header } from '../components/header';
-import { Tab, Text, TabView, Button } from '@rneui/themed';
-import { Animated, ScrollView, View } from 'react-native';
 import { Tabs, useTabsInternal } from '@rneui/base/dist/Tab/Tab';
+import { Button, Tab as TabBar, TabView, Text } from '@rneui/themed';
+import React from 'react';
+import { ScrollView } from 'react-native';
+import { Header } from '../components/header';
 
-const Huehue = () => {
+const SubComponent = () => {
   const { changeIndex } = useTabsInternal();
   return <Button onPress={() => changeIndex(2)}>Demo</Button>;
 };
 
 export default () => {
-  // const [index, setIndex] = React.useState(1);
-  const ref = useRef(new Animated.Value(0));
-
-  console.log('tabs re render');
   return (
     <>
       <Header title="Tab" />
-      <Tabs>
-        <Tab
-          // value={Math.ceil(index > -1 ? index : 0)}
-          // onChange={(e) => setIndex(e)}
+      <Tabs onChange={console.log} value={1}>
+        <TabBar
           indicatorStyle={{
             backgroundColor: 'white',
             height: 3,
           }}
           scrollable
-          variant="primary"
         >
-          <Tab.Item
-            containerStyle={{
-              width: 180,
-            }}
+          <TabBar.Item
             title="Recent"
             titleStyle={{ fontSize: 12 }}
             icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
           />
-          <Tab.Item
+          <TabBar.Item
             title="Custom"
             containerStyle={(active) => ({
               backgroundColor: active ? '#208990' : 'transparent',
-              width: 180,
             })}
             titleStyle={{ fontSize: 12 }}
             icon={{ name: 'heart', type: 'ionicon', color: 'white' }}
           />
-          <Tab.Item
-            containerStyle={{
-              width: 180,
-            }}
+          <TabBar.Item
             title="Cart"
             titleStyle={{ fontSize: 12 }}
             icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
           />
-          <Tab.Item
-            containerStyle={{
-              width: 180,
-            }}
+          <TabBar.Item
             title="Example tab 1"
             titleStyle={{ fontSize: 12 }}
             icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
           />
-          <Tab.Item
-            containerStyle={{
-              width: 180,
-            }}
+          <TabBar.Item
             title="Example tab 2"
             titleStyle={{ fontSize: 12 }}
             icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
           />
-          <Tab.Item
-            containerStyle={{
-              width: 180,
-            }}
+          <TabBar.Item
             title="Example tab 3"
             titleStyle={{ fontSize: 12 }}
             icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
           />
-        </Tab>
+        </TabBar>
 
-        <TabView
-          onSwipeStart={(e) => console.log(e)}
-          // value={index}
-          // onChange={setIndex}
-          animationType="spring"
-          // hue={(cb) => (ref.current = cb)}
-          // hue={console.log}
-          hue={ref}
-          // containerStyle={{ width: 240, height: 200 }}
-        >
+        <TabView onSwipeStart={console.log}>
           <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
             <ScrollView>
-              <Huehue />
+              <SubComponent />
               <Text h1>{Math.random()}</Text>
               <Text h1>Recent 0</Text>
               <Text h1>Recent 0</Text>

@@ -134,13 +134,14 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
   onChange = () => {},
   indicatorStyle,
   disableIndicator,
-  variant = 'default',
+  variant = 'primary',
   style,
   dense,
   iconPosition,
   buttonStyle,
   titleStyle,
   containerStyle,
+  defaultActive = 0,
   ...rest
 }) => {
   const {
@@ -193,7 +194,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
             (scrollCurrentPosition + tabContainerCurrentWidth);
         }
 
-        scrollViewRef.current!.scrollTo({
+        scrollViewRef.current?.scrollTo({
           x: scrollX,
           y: 0,
           animated: true,
@@ -207,6 +208,8 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     scrollViewPosition.current = event.nativeEvent.contentOffset.x;
   }, []);
 
+  const indicatorWidth = tabItemPositions.current[defaultActive]?.width;
+
   const indicatorTranslateX = () => {
     const countItems = validChildren.length;
 
@@ -217,7 +220,9 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     const { inputRange, outputRange } = tabItemPositions.current.reduce(
       (prev, curr, index) => {
         prev.inputRange.push(index);
-        prev.outputRange.push(curr.position);
+        prev.outputRange.push(
+          curr.position + curr.width / 2 - indicatorWidth / 2
+        );
         return prev;
       },
       { inputRange: [], outputRange: [] }
@@ -230,7 +235,29 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
     });
   };
 
-  const indicatorWidth = tabItemPositions.current[value]?.width;
+  const indicatorScaleX = () => {
+    const countItems = validChildren.length;
+
+    if (countItems < 2 || tabItemPositions.current.length !== countItems) {
+      return 0;
+    }
+
+    const inputRange = [];
+    const outputRange = [];
+
+    tabItemPositions.current.reduce((prev, curr, index) => {
+      inputRange.push(index);
+
+      outputRange.push(curr.width / prev.width);
+      return prev;
+    }, tabItemPositions.current[defaultActive]);
+
+    return translateX.current.interpolate({
+      inputRange,
+      outputRange,
+      extrapolate: 'extend',
+    });
+  };
 
   return (
     <View
@@ -272,10 +299,7 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
               >
                 {React.cloneElement(child as React.ReactElement<TabItemProps>, {
                   onPress: () => {
-                    animate(index, (value) => {
-                      if (scrollable)
-                        requestAnimationFrame(() => scrollHandler(value));
-                    });
+                    animate(index);
                     onChange(index);
                   },
                   active: index === currentIndex.current,
@@ -296,8 +320,10 @@ export const TabBase: RneFunctionComponent<TabProps> = ({
                   styles.indicator,
                   {
                     backgroundColor: theme?.colors?.secondary,
-                    left: 0,
-                    transform: [{ translateX: indicatorTranslateX() }],
+                    transform: [
+                      { translateX: indicatorTranslateX() },
+                      { scaleX: indicatorScaleX() },
+                    ],
                     width: indicatorWidth,
                   },
                   indicatorStyle,
