@@ -1,20 +1,24 @@
 import React from 'react';
-import { Animated, Easing, PanResponder, View, StyleSheet, } from 'react-native';
-export const TabViewBase = ({ value = 0, children, onChange = () => { }, onSwipeStart = () => { }, animationType = 'spring', animationConfig = {}, containerStyle, tabItemContainerStyle, disableSwipe = false, disableTransition = false, minSwipeRatio = 0.4, minSwipeSpeed = 1, }) => {
-    const translateX = React.useRef(new Animated.Value(0));
-    const currentIndex = React.useRef(0);
+import { Animated, PanResponder, View, StyleSheet, } from 'react-native';
+import { useTabsInternal } from '../Tab/Tab';
+export const TabViewBase = ({ value = 0, children, onChange = () => { }, onSwipeStart = () => { }, containerStyle, tabItemContainerStyle, disableSwipe = false, disableTransition = false, minSwipeRatio = 0.4, minSwipeSpeed = 1, }) => {
+    const { changeIndex: animate, __translateX: translateX, __currentIndex: currentIndex, } = useTabsInternal();
     const [containerWidth, setContainerWidth] = React.useState(1);
     const childCount = React.useMemo(() => React.Children.toArray(children).length, [children]);
-    const animate = React.useCallback((toValue) => {
-        Animated[animationType](translateX.current, Object.assign({ toValue, useNativeDriver: true, easing: Easing.ease }, animationConfig)).start();
-    }, [animationConfig, animationType]);
     const releaseResponder = React.useCallback((_, { dx, vx }) => {
         const position = dx / -containerWidth;
         const shouldSwipe = Math.abs(position) > minSwipeRatio || Math.abs(vx) > minSwipeSpeed;
         currentIndex.current += shouldSwipe ? Math.sign(position) : 0;
         animate(currentIndex.current);
         onChange(currentIndex.current);
-    }, [animate, containerWidth, minSwipeRatio, minSwipeSpeed, onChange]);
+    }, [
+        animate,
+        containerWidth,
+        currentIndex,
+        minSwipeRatio,
+        minSwipeSpeed,
+        onChange,
+    ]);
     const panResponder = React.useMemo(() => PanResponder.create({
         onPanResponderGrant: (_, { vx }) => {
             onSwipeStart(vx > 0 ? 'left' : 'right');
@@ -32,7 +36,7 @@ export const TabViewBase = ({ value = 0, children, onChange = () => { }, onSwipe
         },
         onPanResponderRelease: releaseResponder,
         onPanResponderTerminate: releaseResponder,
-    }), [childCount, containerWidth, onSwipeStart, releaseResponder]);
+    }), [childCount, containerWidth, onSwipeStart, releaseResponder, translateX]);
     React.useEffect(() => {
         if (Number.isInteger(value) && value !== currentIndex.current) {
             animate(value);
