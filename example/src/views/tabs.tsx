@@ -1,19 +1,16 @@
-import { Tabs, useTabsInternal } from '@rneui/base/dist/Tab/Tab';
+import { Tabs, TabsRef } from '@rneui/base/dist/Tab/Tab';
 import { Button, Tab as TabBar, TabView, Text } from '@rneui/themed';
-import React from 'react';
+import React, { useRef } from 'react';
 import { ScrollView } from 'react-native';
 import { Header } from '../components/header';
 
-const SubComponent = () => {
-  const { changeIndex } = useTabsInternal();
-  return <Button onPress={() => changeIndex(2)}>Jump to Tab 3</Button>;
-};
-
 export default () => {
+  const tabRef = useRef<TabsRef>();
+
   return (
     <>
       <Header title="Tab" />
-      <Tabs onChange={console.log} value={1}>
+      <Tabs ref={tabRef}>
         <TabBar
           indicatorStyle={{
             backgroundColor: 'white',
@@ -59,7 +56,9 @@ export default () => {
         <TabView onSwipeStart={console.log}>
           <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
             <ScrollView>
-              <SubComponent />
+              <Button onPress={() => tabRef.current.changeIndex(2)}>
+                Jump to Tab 3
+              </Button>
               <Text h1>{Math.random()}</Text>
               <Text h1>Recent 0</Text>
               <Text h1>Recent 0</Text>
