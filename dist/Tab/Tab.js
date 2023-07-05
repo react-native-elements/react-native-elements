@@ -9,19 +9,53 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React from 'react';
-import { View, Animated, StyleSheet, ScrollView, } from 'react-native';
+import React, { forwardRef, useImperativeHandle } from 'react';
+import { Animated, Easing, ScrollView, StyleSheet, View, } from 'react-native';
 import { defaultTheme } from '../helpers';
+const TabContext = React.createContext({});
+export const Tabs = forwardRef(({ children, animationType = 'spring', animationConfig = {} }, ref) => {
+    const translateX = React.useRef(new Animated.Value(0));
+    const currentIndex = React.useRef(0);
+    const onIndexChangeRef = React.useRef((value) => value);
+    useImperativeHandle(ref, () => ({
+        changeIndex: (toValue) => {
+            animate(toValue);
+        },
+    }));
+    const animate = React.useCallback((toValue, onDone = () => { }) => {
+        var _a;
+        currentIndex.current = toValue;
+        (_a = onIndexChangeRef.current) === null || _a === void 0 ? void 0 : _a.call(onIndexChangeRef, toValue);
+        Animated[animationType](translateX.current, Object.assign({ toValue, useNativeDriver: true, easing: Easing.inOut(Easing.ease), duration: 150 }, animationConfig)).start();
+        onDone === null || onDone === void 0 ? void 0 : onDone(toValue);
+    }, [animationConfig, animationType]);
+    return (React.createElement(TabContext.Provider, { value: {
+            changeIndex: animate,
+            __translateX: translateX,
+            __currentIndex: currentIndex,
+            __onIndexChangeRef: onIndexChangeRef,
+        } }, children));
+});
+export const useTabsInternal = () => React.useContext(TabContext);
 export const TabBase = (_a) => {
-    var _b, _c;
-    var { theme = defaultTheme, children, value = 0, scrollable = false, onChange = () => { }, indicatorStyle, disableIndicator, variant = 'default', style, dense, iconPosition, buttonStyle, titleStyle, containerStyle } = _a, rest = __rest(_a, ["theme", "children", "value", "scrollable", "onChange", "indicatorStyle", "disableIndicator", "variant", "style", "dense", "iconPosition", "buttonStyle", "titleStyle", "containerStyle"]);
-    const animationRef = React.useRef(new Animated.Value(0));
+    var _b, _c, _d;
+    var { theme = defaultTheme, children, value = 0, scrollable = false, onChange = () => { }, indicatorStyle, disableIndicator, variant = 'primary', style, dense, iconPosition, buttonStyle, titleStyle, containerStyle, defaultActive = 0 } = _a, rest = __rest(_a, ["theme", "children", "value", "scrollable", "onChange", "indicatorStyle", "disableIndicator", "variant", "style", "dense", "iconPosition", "buttonStyle", "titleStyle", "containerStyle", "defaultActive"]);
+    const { changeIndex: animate, __translateX: translateX, __currentIndex: currentIndex, __onIndexChangeRef, } = useTabsInternal();
     const scrollViewRef = React.useRef(null);
     const scrollViewPosition = React.useRef(0);
     const validChildren = React.useMemo(() => React.Children.toArray(children), [children]);
+    React.useEffect(() => {
+        if (__onIndexChangeRef) {
+            __onIndexChangeRef.current = (value) => {
+                scrollHandler(value);
+                setActiveIndex(value);
+            };
+        }
+    }, [__onIndexChangeRef, scrollHandler]);
     const tabItemPositions = React.useRef([]);
     const [tabContainerWidth, setTabContainerWidth] = React.useState(0);
     const scrollHandler = React.useCallback((currValue) => {
+        var _a;
         if (tabItemPositions.current.length > currValue) {
             let itemStartPosition = currValue === 0
                 ? 0
@@ -39,46 +73,55 @@ export const TabBase = (_a) => {
                     itemEndPosition -
                         (scrollCurrentPosition + tabContainerCurrentWidth);
             }
-            scrollViewRef.current.scrollTo({
+            (_a = scrollViewRef.current) === null || _a === void 0 ? void 0 : _a.scrollTo({
                 x: scrollX,
                 y: 0,
                 animated: true,
             });
         }
     }, [tabContainerWidth]);
-    React.useEffect(() => {
-        Animated.timing(animationRef.current, {
-            toValue: value,
-            useNativeDriver: true,
-            duration: 170,
-        }).start();
-        scrollable && requestAnimationFrame(() => scrollHandler(value));
-    }, [animationRef, scrollHandler, value, scrollable]);
     const onScrollHandler = React.useCallback((event) => {
         scrollViewPosition.current = event.nativeEvent.contentOffset.x;
     }, []);
-    const indicatorTransitionInterpolate = React.useMemo(() => {
+    const indicatorWidth = (_b = tabItemPositions.current[defaultActive]) === null || _b === void 0 ? void 0 : _b.width;
+    const indicatorTranslateX = () => {
         const countItems = validChildren.length;
-        if (countItems < 2 || !tabItemPositions.current.length) {
+        if (countItems < 2 || tabItemPositions.current.length !== countItems) {
             return 0;
         }
-        const inputRange = Array.from(Array(countItems + 1).keys());
-        const outputRange = tabItemPositions.current.map(({ position }) => position);
-        if (inputRange.length - 1 !== outputRange.length) {
-            return 0;
-        }
-        return animationRef.current.interpolate({
+        const { inputRange, outputRange } = tabItemPositions.current.reduce((prev, curr, index) => {
+            prev.inputRange.push(index);
+            prev.outputRange.push(curr.position + curr.width / 2 - indicatorWidth / 2);
+            return prev;
+        }, { inputRange: [], outputRange: [] });
+        return translateX.current.interpolate({
             inputRange,
-            outputRange: [0, ...outputRange],
+            outputRange,
+            extrapolate: 'clamp',
         });
-    }, [animationRef, validChildren, tabItemPositions.current.length]);
-    const WIDTH = React.useMemo(() => {
-        var _a;
-        return (_a = tabItemPositions.current[value]) === null || _a === void 0 ? void 0 : _a.width;
-    }, [value, tabItemPositions.current.length]);
+    };
+    const indicatorScaleX = () => {
+        const countItems = validChildren.length;
+        if (countItems < 2 || tabItemPositions.current.length !== countItems) {
+            return 0;
+        }
+        const inputRange = [];
+        const outputRange = [];
+        tabItemPositions.current.reduce((prev, curr, index) => {
+            inputRange.push(index);
+            outputRange.push(curr.width / prev.width);
+            return prev;
+        }, tabItemPositions.current[defaultActive]);
+        return translateX.current.interpolate({
+            inputRange,
+            outputRange,
+            extrapolate: 'extend',
+        });
+    };
+    const [activeIndex, setActiveIndex] = React.useState(currentIndex.current);
     return (React.createElement(View, Object.assign({}, rest, { accessibilityRole: "tablist", style: [
             variant === 'primary' && {
-                backgroundColor: (_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.primary,
+                backgroundColor: (_c = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _c === void 0 ? void 0 : _c.primary,
             },
             styles.viewStyle,
             style,
@@ -90,39 +133,38 @@ export const TabBase = (_a) => {
         onScroll: onScrollHandler,
         showsHorizontalScrollIndicator: false,
     })), { children: (React.createElement(React.Fragment, null,
-            validChildren.map((child, index) => {
-                return React.cloneElement(child, {
-                    onPress: () => onChange(index),
-                    onLayout: (event) => {
-                        var _a;
-                        const { width } = event.nativeEvent.layout;
-                        const previousItemPosition = ((_a = tabItemPositions.current[index - 1]) === null || _a === void 0 ? void 0 : _a.position) || 0;
-                        tabItemPositions.current[index] = {
-                            position: previousItemPosition + width,
-                            width,
-                        };
-                    },
-                    active: index === value,
-                    variant,
-                    _parentProps: {
-                        dense,
-                        iconPosition,
-                        buttonStyle,
-                        containerStyle,
-                        titleStyle,
-                    },
-                });
-            }),
+            validChildren.map((child, index) => (React.createElement(View, { key: index, style: {
+                    flex: 1,
+                    flexDirection: 'column',
+                }, onLayout: ({ nativeEvent: { layout } }) => {
+                    tabItemPositions.current[index] = {
+                        position: layout.x,
+                        width: layout.width,
+                    };
+                } }, React.cloneElement(child, {
+                onPress: () => {
+                    animate(index, setActiveIndex);
+                    onChange === null || onChange === void 0 ? void 0 : onChange(index);
+                },
+                active: index === activeIndex,
+                variant,
+                _parentProps: {
+                    dense,
+                    iconPosition,
+                    buttonStyle,
+                    containerStyle,
+                    titleStyle,
+                },
+            })))),
             !disableIndicator && (React.createElement(Animated.View, { style: [
                     styles.indicator,
                     {
-                        backgroundColor: (_c = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _c === void 0 ? void 0 : _c.secondary,
+                        backgroundColor: (_d = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _d === void 0 ? void 0 : _d.secondary,
                         transform: [
-                            {
-                                translateX: indicatorTransitionInterpolate,
-                            },
+                            { translateX: indicatorTranslateX() },
+                            { scaleX: indicatorScaleX() },
                         ],
-                        width: WIDTH,
+                        width: indicatorWidth,
                     },
                     indicatorStyle,
                 ] })))) }))));
