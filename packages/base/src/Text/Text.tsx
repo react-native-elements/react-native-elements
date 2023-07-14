@@ -42,7 +42,7 @@ export interface TextProps extends TextProperties {
 
 /** Text displays words and characters of various sizes.
  */
-export const Text: RneFunctionComponent<TextProps> =React.forwardRef(({
+export const Text: RneFunctionComponent<TextProps> = React.forwardRef<NativeText, TextProps>(({
   style = {},
   h1 = false,
   h2 = false,
