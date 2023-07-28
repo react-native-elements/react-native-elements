@@ -1,0 +1,47 @@
+---
+id: dialog_loading
+title: Dialog.Loading
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+
+<IconsStyle />
+
+`DialogLoader` allows adding loader to the Dialog. Loader is simply ActivityIndicator.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Dialog } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`DialogLoading`}</CodeBlock>
+  </div>
+</div>
+
+## Props
+
+<div class='table-responsive'>
+
+| Name           | Type                   | Default             | Description                                          |
+| -------------- | ---------------------- | ------------------- | ---------------------------------------------------- |
+| `loadingProps` | ActivityIndicatorProps | `{ size: 'large' }` | Add additional props for ActivityIndicator component |
+| `loadingStyle` | View Style             |                     | Add additional styling for loading component.        |
+
+</div>
