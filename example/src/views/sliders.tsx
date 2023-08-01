@@ -30,7 +30,7 @@ const Sliders: React.FunctionComponent<SlidersComponentProps> = () => {
         <Slider
           value={value}
           onValueChange={setValue}
-          maximumValue={10}
+          maximumValue={100}
           minimumValue={0}
           step={1}
           allowTouchTrack
