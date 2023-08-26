@@ -169,6 +169,50 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
     delete imageProps.containerStyle;
   }
 
+  let componentToRender;
+
+  if (source) {
+    componentToRender = (
+      <Image
+        testID="RNE__Avatar__Image"
+        containerStyle={imageContainerStyle as StyleProp<TextStyle>}
+        source={source}
+        borderRadius={rounded ? width / 2 : undefined}
+        {...imageProps}
+        style={StyleSheet.flatten([
+          styles.avatar,
+          imageProps && imageProps.style,
+          avatarStyle,
+        ])}
+        ImageComponent={ImageComponent}
+      />
+    );
+  } else if (title) {
+    componentToRender = (
+      <Text
+        style={StyleSheet.flatten([
+          styles.title,
+          { fontSize: titleSize },
+          titleStyle,
+        ])}
+      >
+        {title}
+      </Text>
+    );
+  } else if (icon) {
+    componentToRender = (
+      <Icon
+        style={StyleSheet.flatten([iconStyle])}
+        color={icon.color || 'white'}
+        name={icon.name || 'account'}
+        size={icon.size || iconSize}
+        type={icon.type || 'material-community'}
+      />
+    );
+  } else if (renderCustomContent) {
+    componentToRender = renderNode(undefined, renderCustomContent);
+  }
+
   return (
     <Component
       style={StyleSheet.flatten([
@@ -186,42 +230,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
         ...rest,
       }}
     >
-      {renderCustomContent && renderNode(undefined, renderCustomContent)}
-      {icon && (
-        <Icon
-          style={StyleSheet.flatten([iconStyle])}
-          color={icon.color || 'white'}
-          name={icon.name || 'account'}
-          size={icon.size || iconSize}
-          type={icon.type || 'material-community'}
-        />
-      )}
-      {title && (
-        <Text
-          style={StyleSheet.flatten([
-            styles.title,
-            { fontSize: titleSize },
-            titleStyle,
-          ])}
-        >
-          {title}
-        </Text>
-      )}
-      {source && (
-        <Image
-          testID="RNE__Avatar__Image"
-          containerStyle={imageContainerStyle as StyleProp<TextStyle>}
-          source={source}
-          borderRadius={rounded ? width / 2 : undefined}
-          {...imageProps}
-          style={StyleSheet.flatten([
-            styles.avatar,
-            imageProps && imageProps.style,
-            avatarStyle,
-          ])}
-          ImageComponent={ImageComponent}
-        />
-      )}
+      {componentToRender}
       {children}
     </Component>
   );
@@ -229,8 +238,6 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
   },
   avatar: {
