@@ -177,6 +177,17 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
         testID="RNE__Avatar__Image"
         containerStyle={imageContainerStyle as StyleProp<TextStyle>}
         source={source}
+        PlaceholderContent={
+          icon && (
+            <Icon
+              style={StyleSheet.flatten([iconStyle])}
+              color={icon.color || 'white'}
+              name={icon.name || 'account'}
+              size={icon.size || iconSize}
+              type={icon.type || 'material-community'}
+            />
+          )
+        }
         borderRadius={rounded ? width / 2 : undefined}
         {...imageProps}
         style={StyleSheet.flatten([
