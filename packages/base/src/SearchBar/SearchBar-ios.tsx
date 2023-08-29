@@ -209,7 +209,8 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
           ])}
         />
 
-        <View
+        {showCancel && (
+          <View
           style={StyleSheet.flatten([
             styles.cancelButtonContainer,
             {
@@ -251,6 +252,9 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
             </View>
           </Pressable>
         </View>
+        )}
+
+        
       </View>
     );
   }
