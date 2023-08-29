@@ -44,6 +44,7 @@ of items directly impacts a user's ability to find one of them.
 - [`rightIconContainerStyle`](#righticoncontainerstyle)
 - [`round`](#round-platformdefault-only) (**`platform="default"` only**)
 - [`searchIcon`](#searchicon)
+- [`omitCancel`](#omitcancel-platformios-only) (**`platform="ios"` only**)
 - [`showCancel`](#showcancel-platformios-only) (**`platform="ios"` only**)
 - [`showLoading`](#showloading)
 - [`underlineColorAndroid`](#underlinecolorandroid)
@@ -297,6 +298,16 @@ This props allows to override the `Icon` props or use a custom component. Use
 |                          Type                           | Default |
 | :-----------------------------------------------------: | :-----: |
 | {[...Icon props](icon#props)}<br/>**OR**<br/> component |  none   |
+
+---
+
+### `omitCancel` (**`platform="ios"` only**)
+
+When `true` the cancel will be omitted from the SearchBar, regardless of showCancel prop
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
 
 ---
 

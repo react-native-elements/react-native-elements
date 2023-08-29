@@ -83,6 +83,11 @@ const SearchBarPlayground = () => {
         value: false,
         description: 'Default (platform) only ',
       },
+      omitCancel: {
+        type: PropTypes.Boolean,
+        value: false,
+        description: 'ios (platform) only ',
+      },
       showCancel: {
         type: PropTypes.Boolean,
         value: false,

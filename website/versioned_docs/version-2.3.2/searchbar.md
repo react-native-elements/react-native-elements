@@ -76,6 +76,7 @@ export default class App extends React.Component {
 - [`placeholder`](#placeholder)
 - [`placeholderTextColor`](#placeholdertextcolor)
 - [`round`](#round-platformdefault-only) (**`platform="default"` only**)
+- [`omitCancel`](#omitcancel-platformios-only) (**`platform="ios"` only**)
 - [`showCancel`](#showcancel-platformios-only) (**`platform="ios"` only**)
 - [`showLoading`](#showloading)
 - [`underlineColorAndroid`](#underlinecolorandroid)
@@ -243,6 +244,16 @@ set the color of the placeholder text
 ### `round` (**`platform="default"` only**)
 
 change TextInput styling to rounded corners
+
+|  Type   | Default |
+| :-----: | :-----: |
+| boolean |  false  |
+
+---
+
+### `omitCancel` (**`platform="ios"` only**)
+
+When `true` the cancel will be omitted from the SearchBar, regardless of showCancel prop
 
 |  Type   | Default |
 | :-----: | :-----: |
