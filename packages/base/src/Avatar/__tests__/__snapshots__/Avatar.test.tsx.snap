@@ -64,7 +64,7 @@ exports[`Avatar Component should match snapshot 1`] = `
           style={
             {
               "alignItems": "center",
-              "backgroundColor": "#bdbdbd",
+              "backgroundColor": "transparent",
               "flex": 1,
               "justifyContent": "center",
             }

@@ -222,6 +222,10 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
           )) ||
           (icon && <AvatarIcon icon={icon} iconStyle={iconStyle} size={size} />)
         }
+        placeholderStyle={StyleSheet.flatten([
+          styles.placeholderStyle,
+          imageProps && imageProps.placeholderStyle,
+        ])}
         borderRadius={rounded ? width / 2 : undefined}
         {...imageProps}
         style={StyleSheet.flatten([
@@ -282,6 +286,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     textAlign: 'center',
     zIndex: 1,
+  },
+  placeholderStyle: {
+    backgroundColor: 'transparent',
   },
 });
 
