@@ -303,17 +303,6 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     [containerSize.width, maximumValue, minimumValue, step, thumbSize.width]
   );
 
-  // get value of where some touched on slider.
-  const getOnTouchValue = useCallback(
-    ({ nativeEvent }: GestureResponderEvent) => {
-      const location = isVertical
-        ? nativeEvent.locationY
-        : nativeEvent.locationX;
-      return getValueForTouch(location);
-    },
-    [getValueForTouch, isVertical]
-  );
-
   const getThumbLeft = useCallback(
     (v: number) => {
       const ratio = (v - minimumValue) / (maximumValue - minimumValue);
@@ -366,6 +355,18 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
     thumbTouchSize.height,
     thumbTouchSize.width,
   ]);
+
+  // get value of where some touched on slider.
+  const getOnTouchValue = useCallback(
+    ({ nativeEvent }: GestureResponderEvent) => {
+      const { width: thumbWidth, height: thumbHeight } = getThumbTouchRect();
+      const location = isVertical
+        ? nativeEvent.locationY - thumbHeight / 2
+        : nativeEvent.locationX - thumbWidth / 2;
+      return getValueForTouch(location);
+    },
+    [getValueForTouch, isVertical, getThumbTouchRect]
+  );
 
   const getValue = useCallback(
     (gestureState: PanResponderGestureState) => {
@@ -432,13 +433,17 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
 
   const handleStartShouldSetPanResponder = useCallback(
     (e: GestureResponderEvent /* gestureState: Object */) => {
-      // Should we become active when the user presses down on the thumb?
-      if (!allowTouchTrack) {
-        return thumbHitTest(e);
+      // If the user presses on the thumb, become active
+      const thumbHit = thumbHitTest(e);
+      if (thumbHit) {
+        return true;
+      } else if (allowTouchTrack) {
+        setCurrentValue(getOnTouchValue(e));
+        fireChangeEvent(EventTypes.onValueChange);
+        return true;
+      } else {
+        return false;
       }
-      setCurrentValue(getOnTouchValue(e));
-      fireChangeEvent(EventTypes.onValueChange);
-      return true;
     },
     [
       allowTouchTrack,

@@ -1,0 +1,51 @@
+---
+id: listitem_title
+title: ListItem.Title
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+
+<IconsStyle />
+
+This allows adding Title to the ListItem.
+This, Receives all [Text](text#props) props.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { ListItem } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`ListItemTitle`}</CodeBlock>
+  </div>
+</div>
+
+## Props
+
+:::note
+Includes all [Text](https://reactnative.dev/docs/text#props) props.
+:::
+
+<div class='table-responsive'>
+
+| Name    | Type    | Default | Description      |
+| ------- | ------- | ------- | ---------------- |
+| `right` | boolean |         | Add right title. |
+
+</div>

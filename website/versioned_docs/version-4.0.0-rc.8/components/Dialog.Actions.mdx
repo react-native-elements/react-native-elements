@@ -1,0 +1,46 @@
+---
+id: dialog_actions
+title: Dialog.Actions
+---
+
+import { IconsStyle } from "@site/src/components/Docs_Icons";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+import { BiInfoCircle } from "react-icons/bi";
+
+<IconsStyle />
+
+Define Dialog Actions using this component.
+
+## Usage
+
+<div class="row inline-flex-center">
+  <div class="col col--3">
+    <h4>Import</h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`import { Dialog } from '@rneui/themed';`}</CodeBlock>
+  </div>
+  <div class="col col--3">
+    <h4>
+      Theme Key{" "}
+      <a href="../customizing#using-themeprovider">
+        <BiInfoCircle />
+      </a>
+    </h4>
+  </div>
+  <div class="col col--9">
+    <CodeBlock>{`DialogActions`}</CodeBlock>
+  </div>
+</div>
+
+## Props
+
+<div class='table-responsive'>
+
+| Name       | Type      | Default | Description                                         |
+| ---------- | --------- | ------- | --------------------------------------------------- |
+| `children` | ReactNode |         | Add Enclosed components as an action to the dialog. |
+
+</div>
