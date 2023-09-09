@@ -7,7 +7,7 @@ import {
   TextStyle,
   StyleProp,
 } from 'react-native';
-import { fonts } from '../helpers';
+import { ThemedProps, fonts } from '../helpers';
 import { defaultTheme, patchWebProps, RneFunctionComponent } from '../helpers';
 import normalize from '../helpers/normalizeText';
 
@@ -42,45 +42,54 @@ export interface TextProps extends TextProperties {
 
 /** Text displays words and characters of various sizes.
  */
-export const Text: RneFunctionComponent<TextProps> = ({
-  style = {},
-  h1 = false,
-  h2 = false,
-  h3 = false,
-  h4 = false,
-  h1Style = {},
-  h2Style = {},
-  h3Style = {},
-  h4Style = {},
-  children = '',
-  theme = defaultTheme,
-  ...rest
-}) => {
-  return (
-    <NativeText
-      accessibilityRole="text"
-      style={StyleSheet.flatten([
-        {
-          ...Platform.select({
-            android: {
-              ...(fonts.android.regular as TextStyle),
-            },
-          }),
-          color: theme?.colors?.black,
-        },
-        style,
-        (h1 || h2 || h3 || h4) && (styles.bold as TextStyle),
-        h1 && StyleSheet.flatten([{ fontSize: normalize(40) }, h1Style]),
-        h2 && StyleSheet.flatten([{ fontSize: normalize(34) }, h2Style]),
-        h3 && StyleSheet.flatten([{ fontSize: normalize(28) }, h3Style]),
-        h4 && StyleSheet.flatten([{ fontSize: normalize(22) }, h4Style]),
-      ])}
-      {...patchWebProps(rest)}
-    >
-      {children}
-    </NativeText>
-  );
-};
+export const Text: RneFunctionComponent<TextProps> = React.forwardRef<
+  NativeText,
+  ThemedProps<TextProps>
+>(
+  (
+    {
+      style = {},
+      h1 = false,
+      h2 = false,
+      h3 = false,
+      h4 = false,
+      h1Style = {},
+      h2Style = {},
+      h3Style = {},
+      h4Style = {},
+      children = '',
+      theme = defaultTheme,
+      ...rest
+    },
+    ref
+  ) => {
+    return (
+      <NativeText
+        ref={ref}
+        accessibilityRole="text"
+        style={StyleSheet.flatten([
+          {
+            ...Platform.select({
+              android: {
+                ...(fonts.android.regular as TextStyle),
+              },
+            }),
+            color: theme?.colors?.black,
+          },
+          style,
+          (h1 || h2 || h3 || h4) && (styles.bold as TextStyle),
+          h1 && StyleSheet.flatten([{ fontSize: normalize(40) }, h1Style]),
+          h2 && StyleSheet.flatten([{ fontSize: normalize(34) }, h2Style]),
+          h3 && StyleSheet.flatten([{ fontSize: normalize(28) }, h3Style]),
+          h4 && StyleSheet.flatten([{ fontSize: normalize(22) }, h4Style]),
+        ])}
+        {...patchWebProps(rest)}
+      >
+        {children}
+      </NativeText>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   bold: {

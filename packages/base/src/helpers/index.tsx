@@ -5,7 +5,7 @@ import getIconType, { registerCustomIconType } from './getIconType';
 import normalizeText from './normalizeText';
 import { Colors, lightColors, darkColors } from './colors';
 import { InlinePressableProps } from './InlinePressableProps';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 const Screen = Dimensions.get('window');
 const ScreenWidth = Screen.width;
@@ -15,11 +15,14 @@ const getBehaviorType = Platform.OS === 'ios' ? 'padding' : 'height';
 
 export type StringOmit<K extends string> = K | Omit<string, K>;
 
+export type ThemedProps<T> = T & {
+  theme?: Theme;
+};
+
+export type ThemedPropsWithChildren<T> = PropsWithChildren<ThemedProps<T>>;
+
 export type RneFunctionComponent<T> = React.FunctionComponent<
-  T & {
-    theme?: Theme;
-    children?: React.ReactNode | undefined;
-  }
+  ThemedPropsWithChildren<T>
 >;
 
 export interface ThemeSpacing {
