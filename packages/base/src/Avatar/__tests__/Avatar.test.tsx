@@ -106,12 +106,7 @@ describe('Avatar Component', () => {
 
   describe('Title Avatars', () => {
     it('should renders title if given', () => {
-      const { wrapper } = renderWithWrapper(
-        <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
-          title="John"
-        />
-      );
+      const { wrapper } = renderWithWrapper(<Avatar title="John" />);
       expect(wrapper.findByType(Text).props.children).toBe('John');
     });
   });
@@ -159,7 +154,6 @@ describe('Avatar Component', () => {
     it('should renders custom renderCustomContent', () => {
       const { wrapper } = renderWithWrapper(
         <Avatar
-          source={{ uri: 'https://i.imgur.com/0y8Ftya.jpg' }}
           renderCustomContent={<Text testID="my-custom-placeholder">Hey</Text>}
         />,
         'my-custom-placeholder'
