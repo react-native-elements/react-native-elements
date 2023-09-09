@@ -62,14 +62,16 @@ usage(
           <CheckBox
             checked={selectedIndex === 0}
             onPress={() => setIndex(0)}
-            checkedIcon="dot-circle-o"
-            uncheckedIcon="circle-o"
+            iconType="material-community"
+            checkedIcon="radiobox-marked"
+            uncheckedIcon="radiobox-blank"
           />
           <CheckBox
             checked={selectedIndex === 1}
             onPress={() => setIndex(1)}
-            checkedIcon="dot-circle-o"
-            uncheckedIcon="circle-o"
+            iconType="material-community"
+            checkedIcon="radiobox-marked"
+            uncheckedIcon="radiobox-blank"
           />
         </Stack>
       );
