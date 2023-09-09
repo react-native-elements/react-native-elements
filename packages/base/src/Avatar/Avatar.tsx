@@ -122,6 +122,48 @@ export interface AvatarProps extends InlinePressableProps {
   ImageComponent?: React.ComponentClass;
 }
 
+const AvatarTitle = ({
+  size,
+  title,
+  titleStyle,
+}: Pick<AvatarProps, 'title' | 'titleStyle' | 'size'>) => {
+  const width =
+    typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
+  const titleSize = width / 2;
+
+  return (
+    <Text
+      style={StyleSheet.flatten([
+        styles.title,
+        { fontSize: titleSize },
+        titleStyle,
+      ])}
+    >
+      {title}
+    </Text>
+  );
+};
+
+const AvatarIcon = ({
+  icon,
+  iconStyle,
+  size,
+}: Pick<AvatarProps, 'icon' | 'iconStyle' | 'size'>) => {
+  const width =
+    typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
+  const iconSize = width / 2;
+
+  return (
+    <Icon
+      style={StyleSheet.flatten([iconStyle])}
+      color={icon.color || 'white'}
+      name={icon.name || 'account'}
+      size={icon.size || iconSize}
+      type={icon.type || 'material-community'}
+    />
+  );
+};
+
 /**
  * Avatars are found all over ui design from lists to profile screens.
  * They are commonly used to represent a user and can contain photos, icons, or even text.
@@ -153,10 +195,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 }) => {
   const width =
     typeof size === 'number' ? size : avatarSizes[size] || avatarSizes.small;
-
   const height = width;
-  const titleSize = width / 2;
-  const iconSize = width / 2;
 
   const imageContainerStyle = StyleSheet.flatten([
     styles.overlayContainer,
@@ -167,6 +206,46 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 
   if (imageProps && imageProps.containerStyle) {
     delete imageProps.containerStyle;
+  }
+
+  let componentToRender;
+
+  if (source) {
+    componentToRender = (
+      <Image
+        testID="RNE__Avatar__Image"
+        containerStyle={imageContainerStyle as StyleProp<TextStyle>}
+        source={source}
+        PlaceholderContent={
+          (title && (
+            <AvatarTitle title={title} titleStyle={titleStyle} size={size} />
+          )) ||
+          (icon && <AvatarIcon icon={icon} iconStyle={iconStyle} size={size} />)
+        }
+        placeholderStyle={StyleSheet.flatten([
+          styles.placeholderStyle,
+          imageProps && imageProps.placeholderStyle,
+        ])}
+        borderRadius={rounded ? width / 2 : undefined}
+        {...imageProps}
+        style={StyleSheet.flatten([
+          styles.avatar,
+          imageProps && imageProps.style,
+          avatarStyle,
+        ])}
+        ImageComponent={ImageComponent}
+      />
+    );
+  } else if (title) {
+    componentToRender = (
+      <AvatarTitle title={title} titleStyle={titleStyle} size={size} />
+    );
+  } else if (icon) {
+    componentToRender = (
+      <AvatarIcon icon={icon} iconStyle={iconStyle} size={size} />
+    );
+  } else if (renderCustomContent) {
+    componentToRender = renderNode(undefined, renderCustomContent);
   }
 
   return (
@@ -186,42 +265,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
         ...rest,
       }}
     >
-      {renderCustomContent && renderNode(undefined, renderCustomContent)}
-      {icon && (
-        <Icon
-          style={StyleSheet.flatten([iconStyle])}
-          color={icon.color || 'white'}
-          name={icon.name || 'account'}
-          size={icon.size || iconSize}
-          type={icon.type || 'material-community'}
-        />
-      )}
-      {title && (
-        <Text
-          style={StyleSheet.flatten([
-            styles.title,
-            { fontSize: titleSize },
-            titleStyle,
-          ])}
-        >
-          {title}
-        </Text>
-      )}
-      {source && (
-        <Image
-          testID="RNE__Avatar__Image"
-          containerStyle={imageContainerStyle as StyleProp<TextStyle>}
-          source={source}
-          borderRadius={rounded ? width / 2 : undefined}
-          {...imageProps}
-          style={StyleSheet.flatten([
-            styles.avatar,
-            imageProps && imageProps.style,
-            avatarStyle,
-          ])}
-          ImageComponent={ImageComponent}
-        />
-      )}
+      {componentToRender}
       {children}
     </Component>
   );
@@ -229,8 +273,6 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
   },
   avatar: {
@@ -244,6 +286,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     textAlign: 'center',
     zIndex: 1,
+  },
+  placeholderStyle: {
+    backgroundColor: 'transparent',
   },
 });
 
