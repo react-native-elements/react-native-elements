@@ -15,11 +15,11 @@ export const makeStyles =
           props: V
         ) => T)
   ) =>
-  (props: V = {} as any): T => {
+  (props: V): T => {
     const { theme } = useTheme();
 
     return useMemo(() => {
-      const css = typeof styles === 'function' ? styles(theme, props) : styles;
+      const css = typeof styles === 'function' ? styles(theme, props ?? ({} as any)) : styles;
       return StyleSheet.create(css);
     }, [props, theme]);
   };
