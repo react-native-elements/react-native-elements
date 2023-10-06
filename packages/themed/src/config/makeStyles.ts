@@ -15,7 +15,7 @@ export const makeStyles =
           props: V
         ) => T)
   ) =>
-  (props: V): T => {
+  (props?: V): T => {
     const { theme } = useTheme();
 
     return useMemo(() => {
