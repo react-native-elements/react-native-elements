@@ -2,7 +2,7 @@
   "name": "rneui",
   "displayName": "React Native Elements UI Toolkit",
   "private": true,
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@4.0.2",
   "workspaces": {
     "packages": [
       "packages/*",
