@@ -14,8 +14,8 @@ export const makeStyles =
           } & Theme,
           props: V
         ) => T)
-  ) =>
-  (props: V = {} as any): T => {
+  ): keyof V extends undefined ? (props?: V) => T : (props: V) => T =>
+  (props: V | undefined): T => {
     const { theme } = useTheme();
 
     return useMemo(() => {
