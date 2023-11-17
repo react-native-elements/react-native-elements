@@ -2,7 +2,7 @@
   "name": "rneui",
   "displayName": "React Native Elements UI Toolkit",
   "private": true,
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@4.0.2",
   "workspaces": {
     "packages": [
       "packages/*",
@@ -11,8 +11,10 @@
     ]
   },
   "scripts": {
-    "build": "lerna run build",
+    "build": "yarn workspaces foreach -Ap --topological-dev run build",
     "build:docs-api": "yarn workspace @rneui/doc-gen build",
+    "create-packages": "yarn run build && yarn workspaces foreach -Ap --include '@rneui/*' pack --out %s-%v.tgz",
+    "create-git-packages": "yarn run build && yarn workspaces foreach -Ap --include '@rneui/*' pack --out %s-%v-r$(git log $(git describe --tags --abbrev=0)..HEAD --oneline | wc -l)-$(git rev-parse --short HEAD).tgz",
     "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
     "docs-build-api": "yarn workspace @rneui/doc-gen build",
@@ -22,8 +24,8 @@
     "lint-staged": "lint-staged",
     "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
     "postinstall": "husky install",
-    "test": "lerna run test",
-    "test:update": "lerna run test -- -u",
+    "test": "yarn workspaces foreach -Ap run test",
+    "test:update": "yarn workspaces foreach -Ap run test -u",
     "typescript": "tsc --noEmit --composite false"
   },
   "devDependencies": {

@@ -30,13 +30,13 @@
     "bootstrap"
   ],
   "scripts": {
-    "build": "tsc --composite false",
-    "test": "jest",
-    "test:update": "jest -u",
-    "test:ci": "jest --runInBand",
-    "test:watch": "jest --watch",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "clean-install": "rimraf node_modules && yarn"
+    "build": "yarn run -T tsc --composite false",
+    "test": "yarn run -T jest",
+    "test:update": "yarn run -T jest -u",
+    "test:ci": "yarn run -T jest --runInBand",
+    "test:watch": "yarn run -T jest --watch",
+    "lint": "yarn run -T eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "yarn run -T rimraf node_modules && yarn"
   },
   "author": "RNE Core Team",
   "license": "MIT",
@@ -50,10 +50,10 @@
     "logo": "https://opencollective.com/react-native-elements/logo.txt"
   },
   "peerDependencies": {
-    "@rneui/base": "4.0.0-rc.7"
+    "@rneui/base": "4.0.0-rc.8"
   },
   "devDependencies": {
-    "@rneui/base": "4.0.0-rc.7"
+    "@rneui/base": "4.0.0-rc.8"
   },
   "repository": {
     "type": "git",

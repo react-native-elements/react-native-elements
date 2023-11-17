@@ -14,8 +14,8 @@
     "eject": "expo eject",
     "build:web": "expo build:web --config ./app.web-build.json --polyfill",
     "deploy": "gh-pages -d web-build",
-    "prettify": "prettier --write .  --config ./.prettierrc",
-    "lint": "eslint --ext js,ts,tsx ."
+    "prettify": "yarn run -T prettier --write .  --config ./.prettierrc",
+    "lint": "yarn run -T eslint --ext js,ts,tsx ."
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.16.7",
