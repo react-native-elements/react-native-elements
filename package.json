@@ -11,7 +11,7 @@
     ]
   },
   "scripts": {
-    "build": "lerna run build",
+    "build": "yarn workspaces foreach -Ap --topological-dev run build",
     "build:docs-api": "yarn workspace @rneui/doc-gen build",
     "clean-build": "rm -rf packages/*/dist",
     "clean-install": "rimraf node_modules && yarn",
@@ -22,8 +22,8 @@
     "lint-staged": "lint-staged",
     "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
     "postinstall": "husky install",
-    "test": "lerna run test",
-    "test:update": "lerna run test -- -u",
+    "test": "yarn workspaces foreach -Ap run test",
+    "test:update": "yarn workspaces foreach -Ap run test -u",
     "typescript": "tsc --noEmit --composite false"
   },
   "devDependencies": {
