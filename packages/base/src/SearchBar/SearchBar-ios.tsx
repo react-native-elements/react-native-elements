@@ -52,6 +52,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
     searchIcon: { name: 'ios-search' },
     clearIcon: { name: 'ios-close-circle' },
     showCancel: false,
+    omitCancel: false,
   };
 
   constructor(props: SearchBarIosProps) {
@@ -130,6 +131,7 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
       loadingProps,
       searchIcon,
       showCancel,
+      omitCancel,
       ...attributes
     } = this.props;
     const { hasFocus, isEmpty } = this.state;
@@ -209,7 +211,8 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
           ])}
         />
 
-        <View
+        {!omitCancel && (
+          <View
           style={StyleSheet.flatten([
             styles.cancelButtonContainer,
             {
@@ -251,6 +254,9 @@ export class SearchBarIOS extends Component<SearchBarIosProps, SearchBarState> {
             </View>
           </Pressable>
         </View>
+        )}
+
+        
       </View>
     );
   }

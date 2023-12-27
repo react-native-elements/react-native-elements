@@ -35,6 +35,7 @@ export type SearchBarIosProps = SearchBarBaseProps & {
   /**
    * Show cancel
    */
+  omitCancel?: boolean;
   showCancel?: boolean;
   /**
    * Icon for search
