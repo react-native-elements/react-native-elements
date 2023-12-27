@@ -8,7 +8,6 @@ let cachedFonts: CacheFontType = {};
 const cacheFont = (name: string, link: string) => {
   const styleBody = `@font-face { src: url(${link}); font-family: ${name}; }`;
   const style: HTMLStyleElement = document.createElement('style');
-  style.type = 'text/css';
   if (style.style) {
     style.style.cssText = styleBody;
   } else {
