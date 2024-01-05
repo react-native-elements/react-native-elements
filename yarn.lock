@@ -17973,6 +17973,7 @@ __metadata:
     react-test-renderer: 18.0.0
     rimraf: ^3.0.2
     typescript: ^4.6.4
+    yarn: ^1.22.21
   languageName: unknown
   linkType: soft
 
@@ -21192,6 +21193,16 @@ __metadata:
     y18n: ^5.0.5
     yargs-parser: ^21.1.1
   checksum: 47da1b0d854fa16d45a3ded57b716b013b2179022352a5f7467409da5a04a1eef5b3b3d97a2dfc13e8bbe5f2ffc0afe3bc6a4a72f8254e60f5a4bd7947138643
+  languageName: node
+  linkType: hard
+
+"yarn@npm:^1.22.21":
+  version: 1.22.21
+  resolution: "yarn@npm:1.22.21"
+  bin:
+    yarn: bin/yarn.js
+    yarnpkg: bin/yarn.js
+  checksum: 791fab07ad55351049361686bcdd25c64a46e2afe2f2fc7587e666aa4f758d7eef80235b921aa09415557ac580ab23305c0181c1b43fed45f357a0c7a77322a1
   languageName: node
   linkType: hard
 
