@@ -67,8 +67,8 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   ...rest
 }) => {
   const animations = React.useRef<Animated.Value[]>(
-    [...new Array(React.Children.count(children))].map(
-      () => new Animated.Value(Number(isOpen))
+    Array.from({length: React.Children.count(children)}).map(
+      () => new Animated.Value(Number(isOpen)),
     )
   );
 
