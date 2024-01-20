@@ -20,10 +20,10 @@ describe('Dialog Component', () => {
     expect(wrapper.props.transparent).toBeFalsy();
   });
   it.each`
-   mode | expectedColor
-   ${'dark'} | ${darkColors.black}
-   ${'light'} | ${lightColors.black}
-  `('should apply $mode theme mode to Dialog', ({mode, expectedColor}) => {
+    mode       | expectedColor
+    ${'dark'}  | ${darkColors.black}
+    ${'light'} | ${lightColors.black}
+  `('should apply $mode theme mode to Dialog', ({ mode, expectedColor }) => {
     const theme: Partial<CreateThemeOptions> = {
       lightColors,
       darkColors,
@@ -37,6 +37,6 @@ describe('Dialog Component', () => {
       theme
     );
     const textComponent = getByText('Unit Test Title');
-    expect(textComponent.props.style.color).toEqual(expectedColor)
+    expect(textComponent.props.style.color).toEqual(expectedColor);
   });
 });
