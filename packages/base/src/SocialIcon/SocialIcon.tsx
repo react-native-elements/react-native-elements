@@ -212,9 +212,9 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
             borderRadius: iconSize * 2,
           },
         { backgroundColor: type && colors[type] },
-        {
+        { height: iconSize * 2 + 4 },
+        !button && {
           width: iconSize * 2 + 4,
-          height: iconSize * 2 + 4,
           borderRadius: iconSize * 2,
         },
         light && { backgroundColor: 'white' },
@@ -274,8 +274,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    paddingTop: 14,
-    paddingBottom: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 21,
   },
   raised: {
     ...Platform.select({
