@@ -54,6 +54,7 @@ const colors = {
   youtube: '#bb0000',
   microsoft: '#46A4F2',
   reddit: '#ed452f',
+  apple: '#000000',
 };
 
 export type SocialMediaType =
@@ -86,7 +87,8 @@ export type SocialMediaType =
   | 'weibo'
   | 'vk'
   | 'microsoft'
-  | 'reddit';
+  | 'reddit'
+  | 'apple';
 
 export interface SocialIconProps extends InlinePressableProps {
   /** Type of button.
