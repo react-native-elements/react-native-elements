@@ -54,6 +54,7 @@ const colors = {
   youtube: '#bb0000',
   microsoft: '#46A4F2',
   reddit: '#ed452f',
+  apple: '#000000',
 };
 
 export type SocialMediaType =
@@ -86,7 +87,8 @@ export type SocialMediaType =
   | 'weibo'
   | 'vk'
   | 'microsoft'
-  | 'reddit';
+  | 'reddit'
+  | 'apple';
 
 export interface SocialIconProps extends InlinePressableProps {
   /** Type of button.
@@ -210,9 +212,9 @@ export const SocialIcon: RneFunctionComponent<SocialIconProps> = ({
             borderRadius: iconSize * 2,
           },
         { backgroundColor: type && colors[type] },
-        {
+        { height: iconSize * 2 + 4 },
+        !button && {
           width: iconSize * 2 + 4,
-          height: iconSize * 2 + 4,
           borderRadius: iconSize * 2,
         },
         light && { backgroundColor: 'white' },
@@ -272,8 +274,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    paddingTop: 14,
-    paddingBottom: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 21,
   },
   raised: {
     ...Platform.select({
