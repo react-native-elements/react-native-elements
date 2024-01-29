@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, TextStyle, StyleProp, Platform } from 'react-native';
-import { RneFunctionComponent } from '../helpers';
-import { TextProps } from '../Text';
+import { StyleSheet, TextStyle, StyleProp, Platform } from 'react-native';
+import { defaultTheme, RneFunctionComponent } from '../helpers';
+import { TextProps, Text } from '../Text';
 
 export interface DialogTitleProps {
   /** Add Dialog title. */
@@ -19,11 +19,13 @@ export const DialogTitle: RneFunctionComponent<DialogTitleProps> = ({
   title,
   titleStyle,
   titleProps,
+  theme = defaultTheme,
 }) => {
   return (
     <Text
       style={StyleSheet.flatten([styles.title, titleStyle])}
       testID="Dialog__Title"
+      theme={theme}
       {...titleProps}
     >
       {title}
