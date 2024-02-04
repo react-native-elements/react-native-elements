@@ -30,6 +30,8 @@ const BottomSheetComponent: React.FunctionComponent<
       />
       <BottomSheet
         modalProps={{}}
+        animationType="slide"
+        animationDuration={300}
         onBackdropPress={() => setIsVisible(false)}
         isVisible={isVisible}
       >

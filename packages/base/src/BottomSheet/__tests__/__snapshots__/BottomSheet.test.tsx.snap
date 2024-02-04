@@ -5,7 +5,7 @@ exports[`BottomSheet Component renders correctly 1`] = `
   testID="wrapper"
 >
   <Modal
-    animationType="slide"
+    animationType="none"
     hardwareAccelerated={false}
     onRequestClose={[Function]}
     transparent={true}
@@ -25,16 +25,15 @@ exports[`BottomSheet Component renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        [
-          {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-          undefined,
-        ]
+        {
+          "backgroundColor": "rgba(0,0,0,0.2)",
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
       }
       testID="RNE__Overlay__backdrop"
     />
@@ -50,13 +49,25 @@ exports[`BottomSheet Component renders correctly 1`] = `
       pointerEvents="box-none"
       style={
         {
-          "backgroundColor": "rgba(0,0,0,0.2)",
           "flex": 1,
           "flexDirection": "column-reverse",
+          "opacity": 0,
         }
       }
     >
-      <View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+        style={
+          {
+            "transform": [
+              {
+                "translateY": 0,
+              },
+            ],
+          }
+        }
+      >
         <RCTScrollView>
           <View>
             <View>
