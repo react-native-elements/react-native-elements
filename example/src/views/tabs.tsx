@@ -1,123 +1,100 @@
-import React from 'react';
-import { Header } from '../components/header';
-import { Tab, Text, TabView } from '@rneui/themed';
+import { Tabs, TabsRef } from '@rneui/base/dist/Tab/Tab';
+import { Button, Tab as TabBar, TabView, Text } from '@rneui/themed';
+import React, { useRef } from 'react';
 import { ScrollView } from 'react-native';
+import { Header } from '../components/header';
 
 export default () => {
-  const [index, setIndex] = React.useState(0);
+  const tabRef = useRef<TabsRef>();
 
-  console.log('tabs re render');
   return (
     <>
       <Header title="Tab" />
-      <Tab
-        value={Math.ceil(index > -1 ? index : 0)}
-        onChange={(e) => setIndex(e)}
-        indicatorStyle={{
-          backgroundColor: 'white',
-          height: 3,
-        }}
-        scrollable
-        variant="primary"
-      >
-        <Tab.Item
-          containerStyle={{
-            width: 180,
+      <Tabs ref={tabRef}>
+        <TabBar
+          indicatorStyle={{
+            backgroundColor: 'white',
+            height: 3,
           }}
-          title="Recent"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
-        />
-        <Tab.Item
-          title="Custom"
-          containerStyle={(active) => ({
-            backgroundColor: active ? '#208990' : 'transparent',
-            width: 180,
-          })}
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'heart', type: 'ionicon', color: 'white' }}
-        />
-        <Tab.Item
-          containerStyle={{
-            width: 180,
-          }}
-          title="Cart"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
-        />
-        <Tab.Item
-          containerStyle={{
-            width: 180,
-          }}
-          title="Example tab 1"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
-        />
-        <Tab.Item
-          containerStyle={{
-            width: 180,
-          }}
-          title="Example tab 2"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
-        />
-        <Tab.Item
-          containerStyle={{
-            width: 180,
-          }}
-          title="Example tab 3"
-          titleStyle={{ fontSize: 12 }}
-          icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
-        />
-      </Tab>
-      {/* <Text>
-        {index}
-      </Text> */}
+          scrollable
+        >
+          <TabBar.Item
+            title="Recent"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'timer', type: 'ionicon', color: 'white' }}
+          />
+          <TabBar.Item
+            title="Custom"
+            containerStyle={(active) => ({
+              backgroundColor: active ? '#208990' : 'transparent',
+            })}
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'heart', type: 'ionicon', color: 'white' }}
+          />
+          <TabBar.Item
+            title="Cart"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+          />
+          <TabBar.Item
+            title="Example tab 1"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+          />
+          <TabBar.Item
+            title="Example tab 2"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+          />
+          <TabBar.Item
+            title="Example tab 3"
+            titleStyle={{ fontSize: 12 }}
+            icon={{ name: 'cart', type: 'ionicon', color: 'white' }}
+          />
+        </TabBar>
 
-      <TabView
-        onSwipeStart={(e) => console.log(e)}
-        value={index}
-        onChange={setIndex}
-        animationType="spring"
-        // containerStyle={{ width: 240, height: 200 }}
-      >
-        <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
-          <ScrollView>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-            <Text h1>Recent 0</Text>
-          </ScrollView>
-        </TabView.Item>
-        <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
-          <Text h1>Favorite 1</Text>
-        </TabView.Item>
-        <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
-          <Text h1>Cart 2${Math.random()}</Text>
-        </TabView.Item>
-        <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
-          <Text h1>Example 3</Text>
-        </TabView.Item>
-        <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
-          <Text h1>Example 4</Text>
-        </TabView.Item>
-        <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
-          <Text h1>Example 5</Text>
-        </TabView.Item>
-      </TabView>
+        <TabView onSwipeStart={console.log}>
+          <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
+            <ScrollView>
+              <Button onPress={() => tabRef.current.changeIndex(2)}>
+                Jump to Tab 3
+              </Button>
+              <Text h1>{Math.random()}</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+              <Text h1>Recent 0</Text>
+            </ScrollView>
+          </TabView.Item>
+          <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
+            <Text h1>Favorite 1</Text>
+          </TabView.Item>
+          <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
+            <Text h1>Cart 2${Math.random()}</Text>
+          </TabView.Item>
+          <TabView.Item style={{ backgroundColor: 'red', width: '100%' }}>
+            <Text h1>Example 3</Text>
+          </TabView.Item>
+          <TabView.Item style={{ backgroundColor: 'blue', width: '100%' }}>
+            <Text h1>Example 4</Text>
+          </TabView.Item>
+          <TabView.Item style={{ backgroundColor: 'green', width: '100%' }}>
+            <Text h1>Example 5</Text>
+          </TabView.Item>
+        </TabView>
+      </Tabs>
     </>
   );
 };
