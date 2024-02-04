@@ -96,5 +96,8 @@
       "themed": "@rneui/themed",
       "website/docs": "Docs"
     }
+  },
+  "dependencies": {
+    "yarn": "^1.22.21"
   }
 }
