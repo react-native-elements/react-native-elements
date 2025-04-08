@@ -36,7 +36,7 @@ export type IconType =
   | 'entypo'
   | 'antdesign'
   | 'font-awesome-5'
-  | string;
+  | (string & {});
 
 export interface IconObject {
   /** Test ID of icon. */
