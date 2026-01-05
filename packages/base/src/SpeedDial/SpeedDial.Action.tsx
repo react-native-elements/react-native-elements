@@ -6,6 +6,9 @@ import { RneFunctionComponent } from '../helpers';
 export interface SpeedDialActionProps extends Omit<FABProps, 'size'> {
   /** onPress on Label Press */
   labelPressable?: boolean;
+
+  /** testID for testing */
+  testID?: string;
 }
 
 /** Adds Action to the SpeedDial.
@@ -16,10 +19,12 @@ export const SpeedDialAction: RneFunctionComponent<SpeedDialActionProps> = ({
   placement,
   labelPressable,
   onPress,
+  testID,
   ...actionProps
 }) => {
   return (
     <Pressable
+      testID={testID}
       onPress={labelPressable ? onPress : undefined}
       style={[
         styles.action,
