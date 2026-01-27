@@ -434,6 +434,10 @@ nav.menu {
   width: 21px;
 }
 
+.navbar-sidebar{
+  height: calc(100vh - 50px)
+}
+
 .navbar-sidebar__brand .navbar__brand {
   flex: 1 0;
 }
