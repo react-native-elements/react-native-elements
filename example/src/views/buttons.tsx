@@ -266,11 +266,28 @@ const Buttons: React.FunctionComponent<ButtonsComponentProps> = () => {
             }}
             containerStyle={{ marginBottom: 20 }}
           />
+          <ButtonGroup
+            buttons={accessibilityButtons}
+            selectedIndex={selectedIndex}
+            onPress={(value) => {
+              setSelectedIndex(value);
+            }}
+            containerStyle={{ marginBottom: 20 }}
+          />
         </View>
       </ScrollView>
     </>
   );
 };
+
+const accessibilityButtons = [
+  <Text accessibilityLabel="Podcast" accessibilityHint="Tap podcast">
+    Podcast
+  </Text>,
+  <Text accessibilityLabel="Host" accessibilityHint="Tap host">
+    Host
+  </Text>,
+];
 
 const CustomTitle = () => {
   return (
