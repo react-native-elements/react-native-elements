@@ -1,0 +1,77 @@
+{
+  "name": "@rneui/themed",
+  "version": "5.0.0",
+  "description": "Cross Platform React Native UI Toolkit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc --composite false",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/react-native-elements"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react native",
+    "react-native",
+    "React Native Elements",
+    "react native elements",
+    "react native elements themed",
+    "rneui",
+    "themed",
+    "theme",
+    "theming",
+    "theme provider",
+    "dark mode",
+    "light mode",
+    "ui library",
+    "ui toolkit",
+    "design system",
+    "react native ui",
+    "react native components",
+    "mobile ui",
+    "cross-platform",
+    "ios",
+    "android",
+    "typescript",
+    "expo",
+    "components"
+  ],
+  "scripts": {
+    "build": "yarn run -T tsc --composite false",
+    "test": "yarn run -T jest  --coverage",
+    "test:update": "yarn run -T jest -u  --coverage",
+    "test:ci": "yarn run -T jest --runInBand  --coverage",
+    "test:watch": "yarn run -T jest --watch  --coverage",
+    "lint": "yarn run -T eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "yarn run -T rimraf node_modules && yarn"
+  },
+  "author": "RNE Core Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-elements/react-native-elements/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22pkg%3A+themed%22+"
+  },
+  "homepage": "https://reactnativeelements.com/",
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-native-elements",
+    "logo": "https://opencollective.com/react-native-elements/logo.txt"
+  },
+  "peerDependencies": {
+    "@rneui/base": "5.0.0"
+  },
+  "devDependencies": {
+    "@rneui/base": "5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git",
+    "directory": "packages/themed"
+  }
+}
