@@ -1,0 +1,75 @@
+{
+  "name": "@rneui/base",
+  "version": "5.0.0",
+  "description": "Cross Platform React Native UI Toolkit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc --composite false",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/react-native-elements"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react native",
+    "react native elements",
+    "rneui",
+    "react native ui",
+    "react native components",
+    "ui library",
+    "ios",
+    "android",
+    "bootstrap"
+  ],
+  "scripts": {
+    "build": "yarn run -T tsc --composite false && yarn run -T copyfiles -u 1 \"src/**/images/**\" dist",
+    "test": "yarn run -T jest  --coverage",
+    "test:update": "yarn run -T jest -u  --coverage",
+    "test:ci": "yarn run -T jest --runInBand  --coverage",
+    "test:watch": "yarn run -T jest --watch  --coverage",
+    "lint": "yarn run -T eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-install": "yarn run -T rimraf node_modules && yarn"
+  },
+  "author": "RNE Core Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-elements/react-native-elements/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+-label%3A%22pkg%3A+circular-slider%22+-label%3A%22pkg%3A+themed%22+"
+  },
+  "homepage": "https://reactnativeelements.com/",
+  "dependencies": {
+    "color": "^3.2.1",
+    "deepmerge": "^4.2.2",
+    "hoist-non-react-statics": "^3.3.2",
+    "react-native-size-matters": "^0.4.0"
+  },
+  "devDependencies": {
+    "@react-native-vector-icons/feather": "^12.3.0",
+    "@react-native-vector-icons/fontawesome": "^12.3.0",
+    "@react-native-vector-icons/ionicons": "^12.3.0",
+    "@react-native-vector-icons/material-design-icons": "^12.3.0",
+    "@react-native-vector-icons/material-icons": "^12.3.0",
+    "@react-native-vector-icons/octicons": "^20.3.0",
+    "@types/color": "^3.0.3",
+    "@types/hoist-non-react-statics": "^3.3.1",
+    "@types/react-native-vector-icons": "^6.4.10",
+    "metro-react-native-babel-preset": "^0.70.2",
+    "react-native-safe-area-context": "4.14.0"
+  },
+  "peerDependencies": {
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.2.0",
+    "react-native-safe-area-context": ">= 3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-elements/react-native-elements.git",
+    "directory": "packages/base"
+  }
+}

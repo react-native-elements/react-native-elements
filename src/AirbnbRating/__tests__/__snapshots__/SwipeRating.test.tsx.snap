@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwipeRating should match snapshot 1`] = `
+<View
+  pointerEvents="auto"
+  testID="RNEUI__SwipeRating"
+>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+    testID="RNEUI__SwipeRating-pan"
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "bottom": 0,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "#f1c40f",
+            "height": 50,
+            "width": 125,
+          }
+        }
+      />
+      <View
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "white",
+            "height": 50,
+            "width": 125,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        source=""
+        style={
+          {
+            "height": 50,
+            "tintColor": undefined,
+            "width": 50,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        source=""
+        style={
+          {
+            "height": 50,
+            "tintColor": undefined,
+            "width": 50,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        source=""
+        style={
+          {
+            "height": 50,
+            "tintColor": undefined,
+            "width": 50,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        source=""
+        style={
+          {
+            "height": 50,
+            "tintColor": undefined,
+            "width": 50,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        source=""
+        style={
+          {
+            "height": 50,
+            "tintColor": undefined,
+            "width": 50,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+  </View>
+</View>
+`;

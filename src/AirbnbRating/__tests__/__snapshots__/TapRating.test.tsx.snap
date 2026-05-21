@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TapRating Aka AirbnbRating should match snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+  testID="RNEUI__TapRating"
+>
+  <Text
+    style={
+      {
+        "color": "rgba(230, 196, 46, 1)",
+        "fontSize": 25,
+        "fontWeight": "bold",
+        "margin": 10,
+      }
+    }
+    testID="RNEUI__TapRating-showRating"
+  >
+    Okay
+  </Text>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+    testID="RNEUI__TapRating-starContainer"
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        collapsable={false}
+        source=""
+        style={
+          {
+            "height": 40,
+            "margin": 3,
+            "tintColor": "#f1c40f",
+            "transform": [
+              {
+                "scale": 1,
+              },
+            ],
+            "width": 40,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        collapsable={false}
+        source=""
+        style={
+          {
+            "height": 40,
+            "margin": 3,
+            "tintColor": "#f1c40f",
+            "transform": [
+              {
+                "scale": 1,
+              },
+            ],
+            "width": 40,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        collapsable={false}
+        source=""
+        style={
+          {
+            "height": 40,
+            "margin": 3,
+            "tintColor": "#f1c40f",
+            "transform": [
+              {
+                "scale": 1,
+              },
+            ],
+            "width": 40,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        collapsable={false}
+        source=""
+        style={
+          {
+            "height": 40,
+            "margin": 3,
+            "tintColor": "#BDC3C7",
+            "transform": [
+              {
+                "scale": 1,
+              },
+            ],
+            "width": 40,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="RNEUI__Star"
+    >
+      <Image
+        collapsable={false}
+        source=""
+        style={
+          {
+            "height": 40,
+            "margin": 3,
+            "tintColor": "#BDC3C7",
+            "transform": [
+              {
+                "scale": 1,
+              },
+            ],
+            "width": 40,
+          }
+        }
+        testID="RNEUI__Star-image"
+      />
+    </View>
+  </View>
+</View>
+`;

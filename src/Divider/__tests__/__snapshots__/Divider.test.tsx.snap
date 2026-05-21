@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider Component should match snapshot 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      {
+        "borderBottomColor": "#bcbbc1",
+        "borderBottomWidth": 0.5,
+      }
+    }
+    testID="RNE__Divider"
+  />
+</View>
+`;
+
+exports[`Divider Component should render with subHeader and subHeaderStyle 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      {
+        "borderBottomColor": "#bcbbc1",
+        "borderBottomWidth": 0.5,
+      }
+    }
+    testID="RNE__Divider"
+  />
+  <Text
+    style={
+      {
+        "color": "blue",
+        "includeFontPadding": false,
+      }
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
+
+exports[`Divider Component should render with subHeader and subHeaderStyle and inset true 1`] = `
+<View
+  testID="wrapper"
+>
+  <View
+    style={
+      {
+        "borderBottomColor": "#bcbbc1",
+        "borderBottomWidth": 0.5,
+        "marginLeft": 72,
+      }
+    }
+    testID="RNE__Divider"
+  />
+  <Text
+    style={
+      {
+        "color": "blue",
+        "includeFontPadding": false,
+        "marginLeft": 72,
+      }
+    }
+  >
+    Test
+  </Text>
+</View>
+`;
