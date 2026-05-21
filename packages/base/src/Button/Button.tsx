@@ -84,7 +84,7 @@ export interface ButtonProps extends PressableProps {
   TouchableComponent?: typeof React.Component;
 
   /** Component for container. */
-  ViewComponent?: typeof React.Component;
+  ViewComponent?: React.ComponentType<any>;
 
   /** Disables user interaction. */
   disabled?: boolean;
@@ -268,8 +268,9 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
               borderRadius,
               // flex direction based on iconPosition
               // if iconRight is true, default to right
-              flexDirection:
-                positionStyle[iconRight ? 'right' : iconPosition] || 'row',
+              flexDirection: positionStyle[
+                iconRight ? 'right' : iconPosition
+              ] as 'column' | 'column-reverse' | 'row' | 'row-reverse',
               backgroundColor:
                 type === 'solid'
                   ? theme.colors[buttonColor as PropertyKey] ||
