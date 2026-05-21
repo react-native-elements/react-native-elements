@@ -1,0 +1,25 @@
+import React from 'react';
+import { type StyleProp, type ViewStyle } from 'react-native';
+export type SwipeRatingProps = {
+    type?: 'star' | 'heart' | 'rocket' | 'bell' | 'custom';
+    ratingImage?: React.ReactNode;
+    ratingColor?: string;
+    ratingBackgroundColor?: string;
+    ratingCount?: number;
+    ratingTextColor?: string;
+    imageSize?: number;
+    onStartRating?: (value: number) => void;
+    onFinishRating?: (value: number) => void;
+    showRating?: boolean;
+    style?: StyleProp<ViewStyle>;
+    readonly?: boolean;
+    showReadOnlyText?: boolean;
+    startingValue?: number;
+    fractions?: number;
+    minValue?: number;
+    onSwipeRating?: (value: number) => void;
+    tintColor?: string;
+    jumpValue?: number;
+};
+declare const SwipeRating: React.FC<SwipeRatingProps>;
+export default SwipeRating;

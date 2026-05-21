@@ -1,0 +1,21 @@
+import React from 'react';
+import { type ImageStyle, type StyleProp, type ViewStyle } from 'react-native';
+export type TapRatingProps = {
+    count?: number;
+    reviews?: string[];
+    showRating?: boolean;
+    reviewColor?: string;
+    reviewSize?: number;
+    defaultRating?: number;
+    starContainerStyle?: StyleProp<ViewStyle>;
+    ratingContainerStyle?: StyleProp<ViewStyle>;
+    onFinishRating?: (value: number) => void;
+    isDisabled?: boolean;
+    selectedColor?: string;
+    unSelectedColor?: string;
+    size?: number;
+    starImage?: string;
+    starStyle?: ImageStyle;
+};
+declare const TapRating: React.FunctionComponent<TapRatingProps>;
+export default TapRating;
