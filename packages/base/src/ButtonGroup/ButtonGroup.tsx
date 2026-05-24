@@ -24,6 +24,11 @@ type ButtonObject = {
   element: React.ElementType<any & { isSelected?: boolean }>;
 };
 
+type AccessibilityProps = {
+  accessibilityLabel?: string;
+  accessibilityHint?: string;
+};
+
 export interface ButtonGroupProps extends InlinePressableProps {
   /** Button for the component. */
   button?: object;
@@ -156,6 +161,14 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
         const isDisabled =
           disabled === true ||
           (Array.isArray(disabled) && disabled.includes(i));
+        const isReactElement = React.isValidElement(button);
+
+        const elementProps = isReactElement
+          ? (button.props as AccessibilityProps)
+          : undefined;
+
+        const accessibilityLabel = elementProps?.accessibilityLabel;
+        const accessibilityHint = elementProps?.accessibilityHint;
         return (
           <View
             key={i}
@@ -184,6 +197,8 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
               accessibilityState={{
                 disabled: isDisabled,
               }}
+              {...(accessibilityLabel && { accessibilityLabel })}
+              {...(accessibilityHint && { accessibilityHint })}
               activeOpacity={activeOpacity}
               setOpacityTo={setOpacityTo}
               onHideUnderlay={onHideUnderlay}
