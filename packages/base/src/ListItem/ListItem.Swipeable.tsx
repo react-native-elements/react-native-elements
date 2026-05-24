@@ -71,6 +71,7 @@ export const ListItemSwipeable: RneFunctionComponent<
   onSwipeBegin,
   onSwipeEnd,
   animation = { type: 'spring', duration: 200 },
+  testID,
   ...rest
 }) => {
   const translateX = React.useRef(new Animated.Value(0));
@@ -144,7 +145,7 @@ export const ListItemSwipeable: RneFunctionComponent<
   );
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID={testID}>
       <View style={styles.actions}>
         <View
           style={[
