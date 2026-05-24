@@ -19,6 +19,7 @@ export const OpenCollective: React.FC<{}> = () => (
             href="https://opencollective.com/react-native-elements#backers"
             target="_blank"
             rel="noopener noreferrer"
+            className="backers-image"
           >
             <img src="https://opencollective.com/react-native-elements/backers.svg?width=695" />
           </a>
@@ -30,7 +31,7 @@ export const OpenCollective: React.FC<{}> = () => (
           <h3>Sponsors</h3>
           <p className="p--desc ">
             Become a sponsor and get your logo on our README on GitHub with a
-            link to your site.
+            link to your site. 
             <a href="https://opencollective.com/react-native-elements#sponsor">
               Become a sponsor
             </a>
@@ -40,6 +41,7 @@ export const OpenCollective: React.FC<{}> = () => (
             href="https://opencollective.com/react-native-elements#sponsors"
             target="_blank"
             rel="noopener noreferrer"
+            className="backers-image"
           >
             <img src="https://opencollective.com/react-native-elements/sponsors.svg" />
           </a>

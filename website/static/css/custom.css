@@ -213,6 +213,10 @@ footer.nav-footer {
   margin-bottom: 30px;
 }
 
+.backers-images {
+  display: block;
+}
+
 .mainContainer .wrapper blockquote p:first-child {
   padding-top: 0;
 }
