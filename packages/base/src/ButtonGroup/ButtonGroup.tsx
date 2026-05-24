@@ -232,6 +232,8 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                   <button.element isSelected={isSelected} />
                 ) : (
                   <Text
+                    accessibilityRole="button"
+                    accessibilityState={{selected: isSelected}}
                     testID="buttonGroupItemText"
                     style={StyleSheet.flatten([
                       {
