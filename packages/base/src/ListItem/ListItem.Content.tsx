@@ -1,9 +1,8 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ViewProps } from 'react-native';
 import { RneFunctionComponent } from '../helpers';
-import { TextProps } from '../Text';
 
-export interface ListItemContentProps extends TextProps {
+export interface ListItemContentProps extends ViewProps {
   right?: boolean;
 }
 
