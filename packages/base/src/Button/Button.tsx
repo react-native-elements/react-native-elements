@@ -44,6 +44,10 @@ export interface ButtonProps extends PressableProps {
   /** Add button title. */
   title?: string | React.ReactElement<{}>;
 
+  /** Button content. Narrows the render-prop `children` inherited from
+   * `PressableProps`, which the Button component does not use. */
+  children?: React.ReactNode;
+
   /** Add additional styling for title component. */
   titleStyle?: StyleProp<TextStyle>;
 
