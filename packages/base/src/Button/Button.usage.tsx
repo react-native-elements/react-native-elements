@@ -1,6 +1,7 @@
+import { Stack, info, meta, usage } from '@rneui/doc-gen';
 import React from 'react';
+import { View } from 'react-native';
 import { Button, Icon } from '..';
-import { usage, Stack, info, meta } from '@rneui/doc-gen';
 
 info(
   'Buttons are touchable elements used to interact with the screen and to perform and operation.',
@@ -48,18 +49,64 @@ usage('Disabled', '', () => (
   </Stack>
 ));
 
-usage('Linear Gradient', '', (LinearGradient) => (
-  <Button
-    ViewComponent={LinearGradient} // Don't forget this!
-    linearGradientProps={{
-      colors: ['#FF9800', '#F44336'],
-      start: { x: 0, y: 0.5 },
-      end: { x: 1, y: 0.5 },
-    }}
-  >
-    Linear Gradient
-  </Button>
-));
+usage(
+  'Linear Gradient',
+  'Requires an external library like expo-linear-gradient',
+  (LinearGradient) => (
+    <Stack row align="center" spacing={4}>
+      <Button
+        title="Linear Gradient"
+        ViewComponent={LinearGradient}
+        linearGradientProps={{
+          colors: ['#FF9800', '#F44336'],
+          start: { x: 0, y: 0.5 },
+          end: { x: 1, y: 0.5 },
+        }}
+      />
+    </Stack>
+  )
+);
+
+usage(
+  'Custom ViewComponent',
+  'You can pass a custom component to the ViewComponent prop. This component will receive linearGradientProps as standard props.',
+  () => {
+    // Defining this INSIDE ensures it appears in the documentation source snippet
+    const CustomBox = ({
+      colors = ['#e1e1e1', '#ccc'],
+      children,
+      style,
+      ...props
+    }: any) => (
+      <View
+        {...props}
+        style={[
+          {
+            backgroundColor: colors[0],
+            borderColor: colors[1],
+            borderWidth: 2,
+            borderStyle: 'dashed',
+          },
+          style,
+        ]}
+      >
+        {children}
+      </View>
+    );
+
+    return (
+      <Stack row align="center" spacing={4}>
+        <Button
+          title="Custom Component"
+          ViewComponent={CustomBox}
+          linearGradientProps={{
+            colors: ['#3ff', '#33f'],
+          }}
+        />
+      </Stack>
+    );
+  }
+);
 
 usage(
   'Icon Button',
