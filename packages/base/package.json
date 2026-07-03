@@ -56,6 +56,8 @@
     "@react-native-vector-icons/material-design-icons": "^12.3.0",
     "@react-native-vector-icons/material-icons": "^12.3.0",
     "@react-native-vector-icons/octicons": "^20.3.0",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.2.0",
     "@types/color": "^3.0.3",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/react-native-vector-icons": "^6.4.10",
@@ -63,8 +65,6 @@
     "react-native-safe-area-context": "4.14.0"
   },
   "peerDependencies": {
-    "@testing-library/jest-native": "^5.4.3",
-    "@testing-library/react-native": "^13.2.0",
     "react-native-safe-area-context": ">= 3.0.0"
   },
   "repository": {
