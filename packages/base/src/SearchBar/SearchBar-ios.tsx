@@ -191,7 +191,6 @@ const SearchBarIOS = forwardRef<SearchBarRef, SearchBarIosProps>(
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon(theme),
-                  key: 'cancel',
                   onPress: handleClear,
                 })}
             </View>
