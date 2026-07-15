@@ -163,7 +163,6 @@ const SearchBarDefault = forwardRef<SearchBarRef, SearchBarDefaultProps>(
               {!isEmpty &&
                 renderNode(Icon, clearIcon, {
                   ...defaultClearIcon(theme as Theme),
-                  key: 'cancel',
                   onPress: () => {
                     inputRef.current?.clear();
                     handleChangeText('');
