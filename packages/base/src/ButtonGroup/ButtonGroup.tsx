@@ -8,6 +8,7 @@ import {
   StyleProp,
   TextStyle,
   Pressable,
+  AccessibilityProps,
 } from 'react-native';
 import {
   normalizeText,
@@ -20,6 +21,10 @@ import {
 import { Text } from '../Text';
 
 type ButtonComponent = React.ReactElement;
+type ButtonAccessibilityProps = Pick<
+  AccessibilityProps,
+  'accessibilityHint' | 'accessibilityLabel'
+>;
 type ButtonObject = {
   element: React.ElementType<any & { isSelected?: boolean }>;
 };
@@ -209,6 +214,7 @@ export const ButtonGroup: RneFunctionComponent<ButtonGroupProps> = ({
                 onPressOut,
                 onLongPress,
                 ...pressableProps,
+                ...getButtonAccessibilityProps(button),
               }}
             >
               <View
@@ -308,4 +314,18 @@ const hasElementKey = (
   return (
     typeof button === 'object' && Boolean((button as ButtonObject).element)
   );
+};
+
+const getButtonAccessibilityProps = (
+  button: string | ButtonComponent | ButtonObject
+): ButtonAccessibilityProps => {
+  if (!React.isValidElement<ButtonAccessibilityProps>(button)) {
+    return {};
+  }
+
+  const { accessibilityHint, accessibilityLabel } = button.props;
+  return {
+    ...(accessibilityHint !== undefined && { accessibilityHint }),
+    ...(accessibilityLabel !== undefined && { accessibilityLabel }),
+  };
 };

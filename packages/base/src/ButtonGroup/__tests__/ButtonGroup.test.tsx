@@ -81,6 +81,34 @@ describe('ButtonGroup Component', () => {
     expect(onPress).toBeCalledWith(1);
   });
 
+  it('should forward accessibility metadata to each button', () => {
+    const accessibleButtons = [
+      <Text
+        key="first"
+        accessibilityLabel="First choice"
+        accessibilityHint="Selects first"
+      >
+        First
+      </Text>,
+      <Text
+        key="second"
+        accessibilityLabel="Second choice"
+        accessibilityHint="Selects second"
+      >
+        Second
+      </Text>,
+    ];
+    const { queryAllByTestId } = renderWithWrapper(
+      <ButtonGroup buttons={accessibleButtons} />
+    );
+
+    const renderedButtons = queryAllByTestId('RNE__ButtonGroupItem');
+    expect(renderedButtons[0].props.accessibilityLabel).toBe('First choice');
+    expect(renderedButtons[0].props.accessibilityHint).toBe('Selects first');
+    expect(renderedButtons[1].props.accessibilityLabel).toBe('Second choice');
+    expect(renderedButtons[1].props.accessibilityHint).toBe('Selects second');
+  });
+
   it('should render selectedIndex', () => {
     const { queryAllByTestId } = renderWithWrapper(
       <ButtonGroup
