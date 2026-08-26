@@ -9,11 +9,10 @@ import {
   Pressable,
   ColorValue,
   Text,
+  TextProps,
+  TouchableHighlightProps,
+  TouchableNativeFeedbackProps,
 } from 'react-native';
-import {
-  type IconButtonProps,
-  type IconProps as VectorIconProps,
-} from 'react-native-vector-icons/Icon';
 import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
@@ -23,6 +22,17 @@ import {
   InlinePressableProps,
   RneFunctionComponent,
 } from '../helpers';
+
+interface VectorIconProps extends TextProps {
+  /** Name of icon. */
+  name: string;
+
+  /** Size of icon. */
+  size?: number;
+
+  /** Color of icon. */
+  color?: ColorValue | number;
+}
 
 /**
  * @deprecated Use 'material-design' instead.
@@ -71,9 +81,37 @@ export interface IconObject {
 
 export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 
-export interface IconProps extends InlinePressableProps, IconButtonProps {
+export interface IconProps
+  extends InlinePressableProps,
+    Omit<
+      TextProps,
+      keyof TouchableHighlightProps | keyof TouchableNativeFeedbackProps
+    >,
+    TouchableHighlightProps,
+    TouchableNativeFeedbackProps {
   /** Test ID of icon. */
   testID?: string;
+
+  /** Name of icon. */
+  name: string;
+
+  /** Size of icon. */
+  size?: number;
+
+  /** Color of icon. */
+  color?: ColorValue | number;
+
+  /** Border radius of the icon container. */
+  borderRadius?: number;
+
+  /** Style applied to the icon. */
+  iconStyle?: TextStyle;
+
+  /** Style applied to the icon button. */
+  style?: ViewStyle | TextStyle;
+
+  /** Background color of the icon container. */
+  backgroundColor?: ColorValue | number;
 
   /** Type of icon set. [Supported sets here](#available-icon-sets). */
   type?: IconType;
