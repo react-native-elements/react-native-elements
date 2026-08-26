@@ -5298,7 +5298,6 @@ __metadata:
     "@react-native-vector-icons/octicons": "npm:^20.3.0"
     "@types/color": "npm:^3.0.3"
     "@types/hoist-non-react-statics": "npm:^3.3.1"
-    "@types/react-native-vector-icons": "npm:^6.4.10"
     color: "npm:^3.2.1"
     deepmerge: "npm:^4.2.2"
     hoist-non-react-statics: "npm:^3.3.2"
@@ -5846,16 +5845,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-native-vector-icons@npm:^6.4.10":
-  version: 6.4.18
-  resolution: "@types/react-native-vector-icons@npm:6.4.18"
-  dependencies:
-    "@types/react": "npm:*"
-    "@types/react-native": "npm:^0.70"
-  checksum: 10/1ef458cb5e7a37f41eb400e3153940b1b152e4df76a7c06c7a47c712dbfe46e14b9999f04dde1bd074f338f850e161c6c925174ddea33386b74f8112c940065b
-  languageName: node
-  linkType: hard
-
 "@types/react-native-web@npm:^0":
   version: 0.19.2
   resolution: "@types/react-native-web@npm:0.19.2"
@@ -5863,15 +5852,6 @@ __metadata:
     "@types/react": "npm:*"
     react-native: "npm:*"
   checksum: 10/bc27ccb2737283b78b41dacf605fc99b137091b49cd9b0b1bd2fab8c7950107314a04fc2351b0fcaaaeddea9ec101937fb6df24014f221a275a58666f60cfda0
-  languageName: node
-  linkType: hard
-
-"@types/react-native@npm:^0.70":
-  version: 0.70.19
-  resolution: "@types/react-native@npm:0.70.19"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10/43b280990f7a3c45cd707098d686ddbf353270cc463c9bb4306a5f675e3fe84010a32e344274b00b8a11629d73a8df1a1075af267d182a0f7094599616ae622c
   languageName: node
   linkType: hard
 
