@@ -63,7 +63,12 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
   theme = defaultTheme,
   placement,
   labelPressable,
-  backdropPressableProps: pressableProps,
+  backdropPressableProps: {
+    children: backdropChildren,
+    onPress: onBackdropPress,
+    style: backdropStyle,
+    ...backdropPressableProps
+  } = {},
   ...rest
 }) => {
   const animations = React.useRef<Animated.Value[]>(
@@ -87,26 +92,52 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
     ).start();
   }, [isOpen, animations, children, transitionDuration]);
 
+  const backdropPressableStyle: PressableProps['style'] =
+    typeof backdropStyle === 'function'
+      ? (state) => [StyleSheet.absoluteFillObject, backdropStyle(state)]
+      : backdropStyle === undefined
+      ? [StyleSheet.absoluteFillObject]
+      : [StyleSheet.absoluteFillObject, backdropStyle];
+
+  const backdropOverlay = (
+    <Animated.View
+      style={[
+        StyleSheet.absoluteFillObject,
+        {
+          opacity: animations.current[0],
+          backgroundColor:
+            overlayColor ||
+            Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
+        },
+      ]}
+    />
+  );
+
   return (
     <View style={[styles.container, style]} pointerEvents="box-none">
       {/* For overlay  */}
       <Pressable
-        {...pressableProps}
-        onPress={onClose}
-        style={[StyleSheet.absoluteFillObject]}
+        {...backdropPressableProps}
+        onPress={(event) => {
+          onClose();
+          onBackdropPress?.(event);
+        }}
+        style={backdropPressableStyle}
         pointerEvents={isOpen ? 'auto' : 'none'}
       >
-        <Animated.View
-          style={[
-            StyleSheet.absoluteFillObject,
-            {
-              opacity: animations.current[0],
-              backgroundColor:
-                overlayColor ||
-                Color(theme?.colors?.black).alpha(0.6).rgb().toString(),
-            },
-          ]}
-        />
+        {typeof backdropChildren === 'function' ? (
+          (state) => (
+            <>
+              {backdropOverlay}
+              {backdropChildren(state)}
+            </>
+          )
+        ) : (
+          <>
+            {backdropOverlay}
+            {backdropChildren}
+          </>
+        )}
       </Pressable>
 
       <SafeAreaView
