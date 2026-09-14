@@ -78,6 +78,27 @@ describe('ListItem component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  it('should not warn about missing keys with multiple children', () => {
+    const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    try {
+      renderWithWrapper(
+        <ListItem>
+          <ListItem.Title>title</ListItem.Title>
+          <ListItem.Subtitle>subtitle</ListItem.Subtitle>
+        </ListItem>
+      );
+
+      expect(
+        errorSpy.mock.calls.some(([message]) =>
+          String(message).includes('unique "key" prop')
+        )
+      ).toBe(false);
+    } finally {
+      errorSpy.mockRestore();
+    }
+  });
+
   it('should warn the user when using linearGradient without it installed', () => {
     console.warn = jest.fn();
     renderWithWrapper(

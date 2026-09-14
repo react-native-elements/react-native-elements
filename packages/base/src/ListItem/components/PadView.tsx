@@ -23,12 +23,20 @@ export const PadView: React.FC<PadViewProps> = ({
       {React.Children.map(
         children,
         (child, index) =>
-          child && [
-            child,
-            index !== length - 1 && (
-              <View style={{ paddingLeft: pad }} key={`PadView-${index}`} />
-            ),
-          ]
+          child && (
+            <React.Fragment
+              key={
+                React.isValidElement(child) && child.key != null
+                  ? child.key
+                  : `PadView-${index}`
+              }
+            >
+              {child}
+              {index !== length - 1 && (
+                <View style={{ paddingLeft: pad }} />
+              )}
+            </React.Fragment>
+          )
       )}
     </Container>
   );
