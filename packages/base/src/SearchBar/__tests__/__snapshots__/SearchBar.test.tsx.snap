@@ -32,8 +32,8 @@ exports[`SearchBar wrapper component should match snapshot 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "#303337",
+            "borderBottomColor": "#86939e",
             "borderBottomWidth": 0,
-            "borderColor": "#86939e",
             "borderRadius": 3,
             "flexDirection": "row",
             "minHeight": 30,
@@ -200,8 +200,8 @@ exports[`SearchBar wrapper component should render an Android SearchBar 1`] = `
         style={
           {
             "alignItems": "center",
+            "borderBottomColor": "#86939e",
             "borderBottomWidth": 0,
-            "borderColor": "#86939e",
             "flexDirection": "row",
             "transform": [
               {
@@ -372,8 +372,8 @@ exports[`SearchBar wrapper component should render an iOS SearchBar 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "#dcdce1",
+            "borderBottomColor": "#86939e",
             "borderBottomWidth": 0,
-            "borderColor": "#86939e",
             "borderRadius": 9,
             "flexDirection": "row",
             "marginLeft": 8,

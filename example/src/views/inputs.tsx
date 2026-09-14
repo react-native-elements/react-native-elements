@@ -99,6 +99,16 @@ const Inputs: React.FunctionComponent<InputsComponentProps> = () => {
           />
           <Input
             {...(inputProps as InputProps)}
+            containerStyle={styles.inputContainerStyle}
+            placeholder="Custom bottom border color"
+            inputContainerStyle={{
+              borderBottomWidth: 2,
+              borderBottomColor: 'red',
+            }}
+            style={InputFieldsStyle}
+          />
+          <Input
+            {...(inputProps as InputProps)}
             leftIcon={
               <Icon
                 name="map-marker"
