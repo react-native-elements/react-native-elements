@@ -18,8 +18,8 @@ exports[`Input component should match snapshot 1`] = `
       style={
         {
           "alignItems": "center",
+          "borderBottomColor": "#86939e",
           "borderBottomWidth": 1,
-          "borderColor": "#86939e",
           "flexDirection": "row",
           "transform": [
             {

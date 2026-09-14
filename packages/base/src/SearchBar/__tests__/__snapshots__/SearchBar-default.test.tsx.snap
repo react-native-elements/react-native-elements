@@ -32,8 +32,8 @@ exports[`Default SearchBar component should match snapshot 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "#303337",
+            "borderBottomColor": "#86939e",
             "borderBottomWidth": 0,
-            "borderColor": "#86939e",
             "borderRadius": 3,
             "flexDirection": "row",
             "minHeight": 30,

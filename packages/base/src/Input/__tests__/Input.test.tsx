@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput, Image, Animated } from 'react-native';
+import { View, TextInput, Image, Animated, StyleSheet } from 'react-native';
 import { Input } from '../index';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { fireEvent } from '@testing-library/react-native';
@@ -30,6 +30,24 @@ describe('Input component', () => {
       const component = queryByTestId('RNE__Input__view-wrapper');
       const inputTree = component.findByType(Animated.View);
       expect(inputTree.props.style.width).toBe(200);
+    });
+
+    it('allows Android per-side bottom border color overrides', () => {
+      const { queryByTestId } = renderWithWrapper(
+        <Input
+          inputContainerStyle={{
+            borderBottomWidth: 2,
+            borderBottomColor: 'red',
+          }}
+        />
+      );
+      const component = queryByTestId('RNE__Input__view-wrapper');
+      const inputTree = component.findByType(Animated.View);
+      const flatStyle = StyleSheet.flatten(inputTree.props.style);
+
+      expect(flatStyle.borderColor).toBeUndefined();
+      expect(flatStyle.borderBottomColor).toBe('red');
+      expect(flatStyle.borderBottomWidth).toBe(2);
     });
 
     it('inputStyle', () => {

@@ -32,8 +32,8 @@ exports[`iOS SearchBar component should match snapshot 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "#dcdce1",
+            "borderBottomColor": "#86939e",
             "borderBottomWidth": 0,
-            "borderColor": "#86939e",
             "borderRadius": 9,
             "flexDirection": "row",
             "marginLeft": 8,

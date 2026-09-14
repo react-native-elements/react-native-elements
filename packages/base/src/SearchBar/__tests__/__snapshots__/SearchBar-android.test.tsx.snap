@@ -28,8 +28,8 @@ exports[`Android SearchBar component should match snapshot 1`] = `
         style={
           {
             "alignItems": "center",
+            "borderBottomColor": "#86939e",
             "borderBottomWidth": 0,
-            "borderColor": "#86939e",
             "flexDirection": "row",
             "transform": [
               {

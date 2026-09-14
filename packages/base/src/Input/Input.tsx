@@ -202,7 +202,7 @@ export class Input extends React.Component<InputProps & { theme?: Theme }> {
               flexDirection: 'row',
               borderBottomWidth: 1,
               alignItems: 'center',
-              borderColor: theme?.colors?.grey3,
+              borderBottomColor: theme?.colors?.grey3,
             },
             inputContainerStyle,
             { transform: [{ translateX }] },
