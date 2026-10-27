@@ -106,7 +106,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
         accessibilityElementsHidden={hasImage}
         importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
         style={[
-          StyleSheet.absoluteFillObject,
+          StyleSheet.absoluteFill,
           {
             opacity: hasImage ? placeholderOpacity.current : 1,
           },

@@ -177,8 +177,8 @@ export const TabViewBase: RneFunctionComponent<TabViewProps> = ({
     >
       <Animated.View
         testID="RNE__TabView"
-        style={StyleSheet.flatten([
-          StyleSheet.absoluteFillObject,
+        style={StyleSheet.flatten<ViewStyle>([
+          StyleSheet.absoluteFill,
           styles.container,
           {
             width: containerWidth * childCount,

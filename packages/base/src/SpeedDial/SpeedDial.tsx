@@ -93,12 +93,12 @@ export const SpeedDial: RneFunctionComponent<SpeedDialProps> = ({
       <Pressable
         {...pressableProps}
         onPress={onClose}
-        style={[StyleSheet.absoluteFillObject]}
+        style={[StyleSheet.absoluteFill]}
         pointerEvents={isOpen ? 'auto' : 'none'}
       >
         <Animated.View
           style={[
-            StyleSheet.absoluteFillObject,
+            StyleSheet.absoluteFill,
             {
               opacity: animations.current[0],
               backgroundColor:
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   container: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.flatten(StyleSheet.absoluteFill),
     justifyContent: 'flex-end',
   },
   fab: {

@@ -159,7 +159,7 @@ export const Tile: RneFunctionComponent<TileProps> = ({
           imageContainerStyle && imageContainerStyle,
         ])}
         style={{
-          ...StyleSheet.absoluteFillObject,
+          ...StyleSheet.flatten(StyleSheet.absoluteFill),
           alignItems: 'center',
           justifyContent: 'center',
         }}
