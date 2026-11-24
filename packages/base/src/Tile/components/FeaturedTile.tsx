@@ -34,7 +34,7 @@ const FeaturedTile: RneFunctionComponent<TileProps> = ({
   iconContainerStyle,
   titleStyle,
   captionStyle,
-  ImageComponent = BackgroundImage,
+  ImageComponent = BackgroundImage as typeof React.Component,
   imageProps = {},
   width = Dimensions.get('window').width,
   height = width * 0.8,
