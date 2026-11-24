@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../index';
-import { Button, ImageBackground, StatusBar, View } from 'react-native';
+import { Button, Image, StatusBar, StyleSheet, View } from 'react-native';
 import { renderWithWrapper } from '../../../.ci/testHelper';
 import { describe, it, expect } from '@jest/globals';
 
@@ -115,7 +115,7 @@ describe('Header Component', () => {
     const { wrapper } = renderWithWrapper(
       <Header backgroundImage={{ uri: 'http://google.com' }} />
     );
-    expect(wrapper.findByType(ImageBackground).props.source).toEqual({
+    expect(wrapper.findByType(Image).props.source).toEqual({
       uri: 'http://google.com',
     });
   });
@@ -127,8 +127,8 @@ describe('Header Component', () => {
         backgroundImageStyle={{ opacity: 0.1 }}
       />
     );
-    expect(wrapper.findByType(ImageBackground).props.imageStyle).toMatchObject({
-      opacity: 0.1,
-    });
+    expect(
+      StyleSheet.flatten(wrapper.findByType(Image).props.style)
+    ).toMatchObject({ opacity: 0.1 });
   });
 });

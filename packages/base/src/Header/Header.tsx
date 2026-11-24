@@ -4,7 +4,6 @@ import {
   StatusBar,
   StyleSheet,
   View,
-  ImageBackground,
   StyleProp,
   TextProps,
   ViewProps,
@@ -15,7 +14,11 @@ import {
   ViewStyle,
 } from 'react-native';
 import { SafeAreaView, Edge } from 'react-native-safe-area-context';
-import { defaultTheme, RneFunctionComponent } from '../helpers';
+import {
+  BackgroundImage,
+  defaultTheme,
+  RneFunctionComponent,
+} from '../helpers';
 import { Children } from './components/HeaderChildren';
 import { HeaderIcon } from './components/HeaderIcon';
 
@@ -106,7 +109,7 @@ export const Header: RneFunctionComponent<HeaderProps> = ({
   linearGradientProps,
   ViewComponent = linearGradientProps || !backgroundImage
     ? View
-    : ImageBackground,
+    : (BackgroundImage as typeof React.Component),
   theme = defaultTheme,
   elevated,
   edges = ['left', 'top', 'right'],

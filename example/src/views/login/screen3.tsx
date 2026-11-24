@@ -4,7 +4,7 @@ import {
   StyleSheet,
   View,
   Text,
-  ImageBackground,
+  Image,
   Dimensions,
   LayoutAnimation,
   UIManager,
@@ -41,7 +41,7 @@ type LoginScreen3Props = {};
 const LoginScreen3: React.FunctionComponent<LoginScreen3State> = (
   props: LoginScreen3Props
 ) => {
-  const { } = props;
+  const {} = props;
   const [isLoading, setLoading] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [isEmailValid, setEmailValid] = useState<boolean>(true);
@@ -76,7 +76,7 @@ const LoginScreen3: React.FunctionComponent<LoginScreen3State> = (
     setTimeout(() => {
       const isEmailValidFlag = validateEmail(email);
       const isPasswordValidFlag = password.length >= 8;
-      
+
       if (!isEmailValidFlag) emailInput.current?.shake();
       if (!isPasswordValidFlag) passwordInput.current?.shake();
 
@@ -97,7 +97,7 @@ const LoginScreen3: React.FunctionComponent<LoginScreen3State> = (
       const isEmailValidFlag = validateEmail(email);
       const isPasswordValidFlag = password.length >= 8;
       const isConfirmPasswordValidFlag = password === confirmPassword;
-      
+
       if (!isEmailValidFlag) emailInput.current?.shake();
       if (!isPasswordValidFlag) passwordInput.current?.shake();
       if (!isConfirmPasswordValidFlag) confirmationInput.current?.shake();
@@ -119,7 +119,12 @@ const LoginScreen3: React.FunctionComponent<LoginScreen3State> = (
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={BG_IMAGE} style={styles.bgImage}>
+      <View style={styles.bgImage}>
+        <Image
+          source={BG_IMAGE}
+          resizeMode="cover"
+          style={StyleSheet.absoluteFill}
+        />
         <View>
           <View style={styles.titleContainer}>
             <View>
@@ -274,7 +279,7 @@ const LoginScreen3: React.FunctionComponent<LoginScreen3State> = (
             />
           </View>
         </View>
-      </ImageBackground>
+      </View>
     </View>
   );
 };
