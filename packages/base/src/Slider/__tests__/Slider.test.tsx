@@ -1,7 +1,8 @@
 import React from 'react';
 import { Slider } from '../index';
 import { act, fireEvent, renderWithWrapper } from '../../../.ci/testHelper';
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect, jest } from '@jest/globals';
+import { PanResponder } from 'react-native';
 
 describe('Slider component', () => {
   it('should match snapshot', () => {
@@ -131,4 +132,50 @@ describe('Slider component', () => {
     component.rerender(<Slider value={5} maximumValue={10} minimumValue={1} />);
     expect(component.toJSON()).toMatchSnapshot();
   });
+});
+
+it('bounds a retained release callback after maximumValue changes', () => {
+  const create = PanResponder.create;
+  let drag: any;
+  const spy = jest
+    .spyOn(PanResponder, 'create')
+    .mockImplementation((config) => {
+      drag = config;
+      return create(config);
+    });
+  const onSlidingComplete = jest.fn();
+  try {
+    const component = renderWithWrapper(
+      <Slider
+        value={0}
+        minimumValue={0}
+        maximumValue={100}
+        onSlidingComplete={onSlidingComplete}
+      />
+    );
+    for (const [id, width, height] of [
+      ['RNE__Slider_Container', 110, 20],
+      ['RNE__Slider_Thumb', 10, 10],
+      ['RNE__Slider_Track_maximum', 110, 4],
+    ] as const) {
+      fireEvent(component.getByTestId(id), 'layout', {
+        nativeEvent: { layout: { width, height } },
+      });
+    }
+    const retained = drag;
+    act(() => retained.onPanResponderGrant({}, { x0: 0, y0: 0 }));
+    act(() => retained.onPanResponderMove({}, { moveX: 80, moveY: 0 }));
+    component.rerender(
+      <Slider
+        value={0}
+        minimumValue={0}
+        maximumValue={60}
+        onSlidingComplete={onSlidingComplete}
+      />
+    );
+    act(() => retained.onPanResponderRelease());
+    expect(onSlidingComplete).toHaveBeenLastCalledWith(60);
+  } finally {
+    spy.mockRestore();
+  }
 });

@@ -177,6 +177,10 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
 }) => {
   const propValue = getBoundedValue(_propValue, maximumValue, minimumValue);
   const prevPropValue = useRef(propValue);
+  const boundsRef = useRef({ maximumValue, minimumValue });
+  useEffect(() => {
+    boundsRef.current = { maximumValue, minimumValue };
+  }, [maximumValue, minimumValue]);
   const animatedValue = useRef(new Animated.Value(propValue));
   const _previousLeft = useRef(0);
   const gestureStartPosition = useRef(0);
@@ -329,7 +333,12 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
   );
 
   const getCurrentValue = useCallback(
-    () => (animatedValue.current as any).__getValue(),
+    () =>
+      getBoundedValue(
+        (animatedValue.current as any).__getValue(),
+        boundsRef.current.maximumValue,
+        boundsRef.current.minimumValue
+      ),
     []
   );
 
@@ -416,9 +425,10 @@ export const Slider: RneFunctionComponent<SliderProps> = ({
 
   const handlePanResponderEnd = useCallback(() => {
     if (!disabled) {
+      setCurrentValue(getCurrentValue());
       fireChangeEvent(EventTypes.onSlidingComplete);
     }
-  }, [disabled, fireChangeEvent]);
+  }, [disabled, fireChangeEvent, getCurrentValue, setCurrentValue]);
 
   const thumbHitTest = useCallback(
     ({ nativeEvent }: GestureResponderEvent) => {
